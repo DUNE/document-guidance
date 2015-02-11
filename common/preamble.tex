@@ -1,0 +1,32 @@
+% This file is to hold any special settings for a particular CDR
+% Things that are generic to CDRs in general go in cdr.cls.
+% Probably no \usepackages should be here.
+
+%\usepackage[pdftex,pdfpagelabels,bookmarks]{hyperref}
+
+
+
+\input{common/defs.tex}
+\input{common/units.tex}
+
+
+% Set the major title, consistently across all volumes
+\renewcommand\thevolumetitle{Conceptual Design Report \\ \explong}
+
+% Do this here to make use of the experiment name and title macro
+\hypersetup{
+    pdftitle={\expshort CDR \thevolumesubtitle},
+    pdfauthor={\expshort Collaboration},
+    final=true,
+    colorlinks=false,
+    linktocpage=true,
+    linkbordercolor=blue,
+    citebordercolor=green,
+    urlbordercolor=magenta,
+    filecolor=black,
+    pdfpagemode=UseOutlines,
+    pdfborderstyle={/S/U},  
+}
+
+
+

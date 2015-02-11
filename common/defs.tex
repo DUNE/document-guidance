@@ -1,0 +1,43 @@
+% This holds definitions of macros to enforce consistency in names.
+
+% This file is the sole location for such definitions.  Check here to
+% learn what there is and add new ones only here.  
+
+% also see units.tex for units.
+
+%%% Common terms
+
+% Check here first, don't reinvent existing ones, add any novel ones.
+% Use \xspace.
+
+\def\expshort{LBN\xspace}
+\def\explong{The Neutrino Experiment\xspace}
+
+
+% Things about oscillation
+%
+% example: \dm{12}
+\newcommand{\dm}[1]{$\delta m^2_{#1}$\xspace}
+% example \sinstt{12}
+\newcommand{\sinstt}[1]{$\sin^22\theta_{#1}$\xspace}
+% example \deltacp
+\newcommand{\deltacp}{$\delta_{\rm CP}$\xspace}
+% example \nuxtonux{\mu}{e}
+\newcommand{\nuxtonux}[2]{$\nu_{#1} \to \nu_{#2}$\xspace}
+\newcommand{\numutonumu}{\nuxtonux{\mu}{\mu}}
+\newcommand{\numutonue}{\nuxtonux{\mu}{e}}
+\newcommand{\numu}{$\nu_\mu$\xspace}
+\newcommand{\nue}{$\nu_e$\xspace}
+\newcommand{\anumu}{$\bar\nu_\mu$\xspace}
+\newcommand{\anue}{$\bar\nu_e$\xspace}
+
+% Names
+\newcommand{\cherenkov}{Cherenkov\xspace}
+\newcommand{\kamland}{KamLAND\xspace}
+\newcommand{\kamiokande}{Kamiokande\xspace}
+\newcommand{\superk}{Super--Kamiokande\xspace}
+\newcommand{\miniboone}{MiniBooNE\xspace}
+\newcommand{\minerva}{MINER$\nu$A\xspace}
+\newcommand{\nova}{NO$\nu$A\xspace}
+\newcommand{\SURF}{Sanford Underground Research Facility\xspace}
+

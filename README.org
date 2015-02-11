@@ -1,0 +1,115 @@
+#+TITLE: Guidance For Documents
+
+This repository holds the source for a document to provide guidance on writing
+
+- [The LBNE Far Detector Closeout](https://github.com/LBNE/lbne-fd-closeout)
+- [The ELBNF (name subject to change) CDR](https://github.com/LBNE/lbn-cdr)
+
+These and other documents, including the
+[[https://github.com/LBNE/cern-prototype-proposal][Proposal for a Full-Scale, Single-Phase Prototype at CERN]] are organized through the
+[[https://web.fnal.gov/project/LBNF/ReviewsAndAssessments/CD-1Preparation/SitePages/CD-1%20Preparation%20Home.aspx][CD-1 Preparation Page]].
+
+This guidance is in the form of a LaTeX document which tries to follow its own guidance and thus can be used as an extended example.  Built PDFs of the guidance document are available from the [[https://github.com/LBNE/document-guidance/releases][GitHub releases area for this repository]].
+
+* Getting started
+
+This section describes how to check out the source to this document,
+edit and build it and to push commits back.  Substitute the actual document repository name for =document-guidance= in the following examples:
+
+Clone the repository:
+
+    git clone https://github.com/LBNE/document-guidance.git
+    cd document-guidance
+
+To build the documents you need `pdflatex` and `bibtex`.  In each repository there will be one or more main LaTeX file with a correspondingly named sub-directory holding the bulk of the =.tex= files.  
+
+#+BEGIN_EXAMPLE
+  $ pdflatex document-guidance
+  $ bibtex document-guidance
+  $ pdflatex document-guidance
+  $ pdflatex document-guidance
+#+END_EXAMPLE
+
+Unless references change, it is usually sufficient for subsequent
+builds to run only:
+
+#+BEGIN_EXAMPLE
+  $ pdflatex document-guidance
+#+END_EXAMPLE
+
+You may need to run this command twice to get the paging and numbering
+correct.
+
+The documents use the [[./cdr.cls][cdr.cls]] class are by default built with editing
+markup.  The technical editors are responsible for producing a clean
+and properly built version of any document for internal and final
+release but anyone may attempt to produce a "final" version themselves.
+To do that, replace each =pdflatex document-guidance= command
+with this one like:
+
+    pdflatex "\def\isfinal{1} \input{document-guidance}"
+
+* Repository
+
+It is strongly recommended that any changes made to a document be
+committed to your local git clone and then pushed back to GitHub.  To
+get "push" access to this repository send your GitHub user name to
+Brett (see contacts below) and indicate to which repository you need
+access.  (If you instead prefer to fork and issue pull requests that
+can likely be accommodated.  Check with the document technical
+editors.)
+
+** General git procedure:
+
+#+BEGIN_EXAMPLE
+  $ cd lbn-cdr
+  # now edit away!
+  $ git commit -a -m "Some commit message"
+  $ git push
+#+END_EXAMPLE
+
+If you have made a new file you need to first add it:
+
+#+BEGIN_EXAMPLE
+  $ git add the-new-file.tex
+  $ git commit -a -m "Some commit message"
+  $ git push
+#+END_EXAMPLE
+
+** Pull to push
+
+You bring down new commits that have been pushed by others with:
+
+#+BEGIN_EXAMPLE
+  $ git pull
+#+END_EXAMPLE
+
+If any commits have been pushed by others since the last time you did a =git pull= (or since your initial =git clone=) then git will not allow you to =push= until you have done a fresh =git pull=.  It is also a good idea to go a =git pull= before starting an editing session to minimize the chance of having to deal with resolving conflicts.
+
+** Git-phobic
+
+Git works on all major computing platforms and many minor ones and is
+successfully used by all manner of people, even Physicists.  If for
+some reason you are incapable to use Git you will be accommodated at
+the cost of additional burden placed on the technical editors.  To
+submit contributions outside of Git, follow this procedure:
+
+- Start editing from the most recent tagged release:
+  -  [[https://github.com/LBNE/lbn-cdr/releases][lbn-cdr]]
+  -  [[https://github.com/LBNE/lbne-fd-closeout/releases][lbne-fd-closeout]]
+  -  [[https://github.com/LBNE/document-guidance/releases][document-guidance]]
+
+- Unpack the release archive (.zip or .tar.gz) on your computer.
+- Make your edits inside the directory/folder that is created.
+- When you have finished, remove any generated files (eg, =*.pdf=).
+- Repack the directory (as `.zip` or `.tar.gz`).
+- Upload this archive to the [[https://web.fnal.gov/project/LBNF/ReviewsAndAssessments/CD-1Preparation/Shared%20Documents/Forms/AllItems.aspx][FNAL document archive]]. ([[https://fermi.service-now.com/kb_view.do?sysparm_article=KB0010542][FNAL
+Services account]] required)
+
+If you are unable to edit in LaTeX, please talk to Anne (see contacts below).
+
+* Contacts
+
+- Anne Heavey <aheavey@fnal.gov> 630-840-8039 (technical editor, content)
+
+- Brett Viren <bv@bnl.gov> (technical editor, LaTeX machinery and repository)

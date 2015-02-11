@@ -1,0 +1,106 @@
+% This should be \input first thing after \begin{document}
+
+
+\pagestyle{empty}
+
+\begin{center}
+  {\Huge  \thevolumetitle}
+
+  \vspace{5mm}
+
+  {\LARGE \thevolumesubtitle}
+
+  \vspace{5mm}
+
+  \today
+
+  \vspace{5mm}
+
+%  \titleextra
+\end{center}
+
+
+\begin{editornote}
+Editor's Note: This document has been prepared in an ad hoc
+manner to provide a summary of the scope of the LBNE project as of
+January 2015. 
+It pulls content from version 8 of LBNE's CDR vol 4 and includes some
+changes made since 2012, with notes added; the changes may not be
+reflected consistently throughout the document, as a thorough editing
+pass has not been made. 
+It is planned to update this document in 2015 consistent with the plan
+resulting from the iIEB's efforts. 
+Changes to note in particular about the current plan relative to the 2012 design include: \\
+\begin{itemize}
+\item House two detectors, of fiducial mass 10 kton and 30 kton,
+  respectively, in separate, parallel caverns. 
+  Outfit the smaller cavern as soon as possible and outfit the larger
+  in a later phase of work. 
+  (The 30-kton detector was not part of the 2012 design; its
+  configuration, to be determined by the international collaboration,
+  is not discussed in this interim report.)
+\item Place the compressors for the nitrogen refrigeration system on
+  the surface, and place the remainder of the refrigeration system in
+  the 10-kton cavern. 
+  Deliver argon and nitrogen in gas form to the smaller cavern, where
+  liquification will take place.
+  Liquid will be transferred to and from the detector in the 30-kton
+  cavern.
+\item Make detector shallower and longer. 
+  Build APAs of width 2.3~m and height 6~m (2012 dimensions were 2.5~m
+  $\times$ 7~m). 
+  Increase the length of the 10-ton detector from 25~m to 30~m.
+\item Replace the far detector prototyping plan known as LAr1 by a
+  plan to build and test a prototype with full-size TPC components at
+  CERN.
+\end{itemize}
+\end{editornote}
+
+
+\cleardoublepage
+
+\pagestyle{plain} 
+
+\renewcommand{\familydefault}{\sfdefault}
+\renewcommand{\thepage}{\roman{page}}
+\setcounter{page}{1}
+\cleardoublepage
+
+\setcounter{tocdepth}{3}
+\textsf{\tableofcontents}
+\cleardoublepage
+
+%For acronym list to appear just after TOC
+\printnomenclature
+\cleardoublepage
+
+\textsf{\listoffigures}
+\cleardoublepage
+
+\textsf{\listoftables}
+\clearpage
+
+\iffinal\else
+\textsf{\listoftodos}
+\clearpage
+\fi
+
+\renewcommand{\thepage}{\arabic{page}}
+\setcounter{page}{1}
+
+\pagestyle{fancy}
+
+% Set how header/footers look
+\renewcommand{\chaptermark}[1]{%
+\markboth{Chapter \thechapter:\ #1}{}}
+\fancyhead{}
+\fancyhead[RO,LE]{\textsf{\footnotesize \thechapter--\thepage}}
+\fancyhead[LO,RE]{\textsf{\footnotesize \leftmark}}
+
+\fancyfoot{}
+\fancyfoot[RO]{\textsf{\footnotesize LBNE Conceptual Design Report}}
+\fancyfoot[LE]{\textsf{\footnotesize \thevolumetitle}}
+\fancypagestyle{plain}{}
+
+\renewcommand{\headrule}{\vspace{-4mm}\color[gray]{0.5}{\rule{\headwidth}{0.5pt}}}
+

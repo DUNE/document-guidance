@@ -1,0 +1,116 @@
+\chapter{Generalities}
+\label{ch:generalities}
+
+This volume gives guidance to authors and editors of the CDR volumes. It collects ``wisdom'' learned 
+producing earlier documents, in particular the LBNE CDR and science document, and we will appreciate 
+very much if everyone follows it!  It tries to follows its own guidance, so looking at its \LaTeX{} source can 
+provide an example.  
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Files}
+\label{sec:files}
+
+The entire CDR consists of a number of volumes, some of which are written in \LaTeX{}. These instructions apply only to the \LaTeX{} volumes.  You will find the \LaTeX{} and figure content for a given volume arranged like:
+
+\begin{description}
+\item[\texttt{volume-VNAME.tex}] the main file and is found in the top-level directory. It generally has no content itself but includes content through other files, some shared among the volumes and the bulk that makes each volume unique. 
+\item[\texttt{figures/}] top-level subdirectory for any static figures shared by more than one volume
+\item[\texttt{volume-VNAME/}] subdirectory holding all content for the volume
+\item[\texttt{volume-VNAME/chapter-CNAME.tex}] holds the content for a chapter
+\item[\texttt{volume-VNAME/figures/}] subdirectory holding any static volume-specific figures
+\item[\texttt{volume-VNAME/generated/}] subdirectory holding any generated figures (see Section~\ref{sec:figures} for info on generated files)
+\end{description}
+
+Where \texttt{VNAME} is some label for the volume (this volume is called ``\texttt{readme}'') and 
+\texttt{CNAME} is some label for the chapter (this current one is ``\texttt{general}'').  
+Some general guidance:
+
+\begin{itemize}
+\item Do not include a volume number in the ``\texttt{NAME}'' nor a chapter number in ``\texttt{NAME}''.  The numbers will be determined by editors. 
+\item Except for adding chapters to \texttt{volume-NAME.tex} please avoid any other changes to this file.   (the editors will probably take care of this anyway)
+\item Use the \texttt{figures/} subdirectory for static figures (see Section~\ref{sec:figures}). For how to include generated figures see Section~\ref{sec:plots}.
+\item If you find something inadequate or have questions, consult with either: \\
+Anne Heavey, aheavey@fnal.gov, 630-840-8039 (technical editor)\\
+Brett Viren, bv@bnl.gov (\LaTeX{}, graphics and git guru  -- so dubbed by Anne)
+\end{itemize}
+
+Files can get very big.  If they become unwieldy, we may want to separate out sections into 
+separate tex documents and ``include'' them in the chapter document. Do this via an input 
+statement, e.g.,
+\begin{verbatim}
+\input{chap-blah-section-blah}
+\end{verbatim}
+
+Even if your file isn't too long, please make it easier to navigate by using these long comment lines
+to delineate the beginning of a new section, half the length for a subsection and a quarter the
+length for a subsubsection.  
+
+\begin{verbatim}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{My Section}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{My Subsection}
+
+%%%%%%%%%%%%%%%%
+\subsubsection{My Subsubsection}
+\end{verbatim}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Figure Format}
+\label{sec:figure-format}
+
+It is essential to use high-quality, efficiently sized figures (aka ``graphics'').  You will be asked to redo 
+them if they do not meet some basic standards.   
+The standards are in place to avoid sub-optimal figures, bloated files sizes, and delayed publishing schedules.  
+
+This section provides guidance on how to create figures 
+according to the standards.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Graphic Types}
+\label{sec:graphic-types}
+
+There two basic graphic content types; these are important to understand:
+
+\begin{description}
+\item[raster] a two dimensional array of pixels
+\item[vector] a two dimensional drawing description language
+\end{description}
+
+The CDR volumes compile with \texttt{pdflatex} and so can use graphics in PDF, JPEG or PNG file formats.  In general:
+
+\begin{description}
+\item[JPEG] use for photographs
+\item[PDF] use of any line drawings, plots, illustrations
+\item[PNG] use due to some inability to produce proper JPEG or PDF (contact editors)
+\end{description}
+
+It is possible (though unwise) to store inherently raster information in PDF or to rasterize inherently vector information into JPEG or PNG.  \textbf{This is the main cause for bloated, low-quality graphics.}  Here are some guidelines to avoid this:
+
+\begin{itemize}
+\item Only save photographic images to JPEG.
+\item Save line drawings, plots or illustrations directly to vector PDF.
+\item Follow special guidance on annotation (see Section~\ref{sec:annotate}).
+\item Never convert any raster data (JPEG/PNG) to PDF.
+\item Never raster what is really vector data in to a JPEG/PNG.
+\item Never use MicroSoft PowerPoint for any figure as it tends to lead to poor quality and bloated files.
+\item Do save using native application formats for later modification or conversion by experts.
+\item Consider providing plots as ROOT, Python or other scripts.  (see Section~\ref{sec:plots})
+\end{itemize}
+
+\noindent If authors find these guidelines can not be followed, please contact the technical editors.   
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Plots}
+\label{sec:plots}
+
+Where possible, it is recommended that any plots be submitted in a form that can be built along with the \LaTeX.  This allows editors to apply consistent in-plot fonts, colors, wording.  More info to be added.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Annotated Figures}
+\label{sec:annotate}
+
+One common figure type is to take a figure and annotate it with arrows or labels.  Ideally you will do this in 
+LaTeX, for example using TikZ.  If you can't do that, then take care not to produce a bloated, low-quality graphic, and please choose fonts and colors that ``work'' with the document.  If the underlying graphic is JPEG then produce the final version in JPEG and never save as PNG.  If the annotation is on top of an original vector drawing and your annotation software will not raster it, save it as PDF.
+

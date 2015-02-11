@@ -1,0 +1,29 @@
+\documentclass{article}
+
+\newcommand{\templabel}{}% stores the label
+\newcommand{\tempcaption}{}% stores the caption
+
+\newenvironment{mytable}[3]
+{
+  \gdef\templabel{#1}
+  \gdef\tempcaption{#2}
+  \begin{table}[hbtp]
+    \centering
+      \begin{tabular}{#3}
+}
+{
+      \end{tabular}
+      \caption{\tempcaption}
+      \label{\templabel}
+  \end{table}
+}
+
+\begin{document}
+
+\begin{mytable}{tab:example}{This is the caption for my example table.}{cc}
+  Row 1 & First \\
+  Row 2 & Second \\
+  Row 3 & Third \\
+\end{mytable}
+
+\end{document}

@@ -1,0 +1,2603 @@
+Formatted according to: http://en.wikipedia.org/wiki/Bibtex (BV, AH Aug 2010)
+                  
+CONVENTIONS:
+
+Please follow these:
+
+  List DocDB notes like:
+
+  note = {LBNE DocDB 1234}
+
+or
+
+  note = {LBNE DocDB 1234-v5}
+
+A note on comments.  EVERYTHING outside of an "at" block is a comment.
+You can comment out an "at" block by deleting the "at" character.
+Do not put any type of comments inside an "at" block. They are not allowed.
+
+You will see indications below about vol/chapter numbers but the order 
+in this file does not actually matter.                  
+                  
+A note on authors, spell out the full names and separate them with 
+the word "and".  If the author list is too long to write everyone then
+end it with "and others" and NOT "et al".  The style will take care of 
+things like only showing first initial and changing "and others" to 
+"et al".  To make anything literal surround it in {}'s.
+
+For help with bibtex see:
+
+http://nwalsh.com/tex/texhelp/bibtx-23.html
+http://amath.colorado.edu/documentation/LaTeX/reference/faq/bibstyles.html
+http://amath.colorado.edu/documentation/LaTeX/reference/faq/bibstyles.pdf
+                  
+
+
+
+@BOOK{dummy,
+   author = {Dr Nobody},
+   title = "{Abscence}",
+   publisher = {Three Sheets to the Wind},
+   edition = {Zero},
+   year = 1970
+   }
+                  
+@BOOK{strunk,
+   author = {Strunk, Jr., William and E. B. White},
+   title = "{The Elements of Style}",
+   publisher = {Macmillan},
+   edition = {Third},
+   year = 1979
+   }
+@UNPUBLISHED{btxdoc,
+   author = {Oren Patashnik},
+   title = "{Using BibTeX}",
+   note = {Documentation for general BibTeX users},
+   month = jan,
+   year = 1988
+   }
+@BOOK{texbook,
+   author = {Donald E. Knuth},
+   title= {The {{\TeX}book}},
+   publisher = {Addison-Wesley},
+   year = 1984
+   }
+
+@BOOK{latexbook,
+   author = {Leslie Lamport},
+   title = "{{\LaTeX \rm:} {A} Document Preparation System}",
+   publisher = {Addison-Wesley},
+   year = 1986
+   }
+   
+
+
+vol 1 Intro
+
+@techreport{CD0,
+author = "{DOE Office of High Energy Physics}", 
+title = "{Mission Need Statement for a Long-Baseline Neutrino Experiment (LBNE)}",
+institution = {DOE},
+year = {2009},
+note = {LBNE-doc-6259}
+}
+
+@techreport{PMP-2453,
+title = "{LBNE Project Management Plan}",
+author = {{LBNE Project Office}},
+institution = {FNAL},
+year = {2011},
+note = {LBNE Doc 2453}
+}
+
+@misc{sdsta-fnal-mou,
+title = "{SDSTA-Fermilab-LBNL MOU regarding the LBNE Project}",
+note = "\url{http://lbne2-docdb.fnal.gov:8080/cgi-bin/ShowDocument?docid=2452}",
+year = {2012},
+}
+
+@techreport{docdb-3056-v1,
+title = "{Key Assumptions: Physics Research Goals of the LBNE Project}",
+author = {{LBNE Project Office}},
+institution = {FNAL},
+year = {2010},
+note = {LBNE Doc 3056v1}
+}
+
+@techreport{docdb-3056,
+title = "{Physics Research Goals before Reconfiguration}",
+author = {{LBNE Project Office}},
+institution = {FNAL},
+year = {2012},
+note = {LBNE Doc 3056v5}
+}
+
+@techreport{LBNE-PEP,
+title = "{LBNE Project Execution Plan}",
+author = {{DOE-OHEP}},
+institution = {DOE},
+year = {2011},
+note = {will be drafted soon}
+}
+
+
+
+@article{WCD-CS-4342,
+      author         = {{LBNE Collaboration}},
+      title          = "{The 2010 Interim Report of the Long-Baseline Neutrino Experiment Collaboration Physics Working Groups}",
+      year           = {2011},
+      reportNumber   = {FERMILAB-FN-0941-PPD,LBNE-PWG-004},
+      note           = {arXiv:1110.6249 [hep-ex]},
+}
+
+
+
+@article{MINOSPRD,
+author = {P. Adamson and others},
+collaboration = {MINOS Collaboration},
+title = "{Improved search for muon-neutrino to electron-neutrino oscillations in MINOS}",
+journal = {Phys. Rev. D.},
+volume = {77}, 
+pages = {072002},
+year = {2008},
+}
+
+
+@article{NA49,
+author = {M. Makariev},
+collaboration = {NA49 Collaboration},
+title = "{Pion production in p + C collisions at 158-GeV/c beam momentum.}",
+journal = {AIP Conf.Proc.},
+volume = {899}, 
+pages = {203},
+year = {2007},
+}
+
+@article{NUMIMUON,
+author = {S. Kopp and others},
+title = "{Secondary beam monitors for the NuMI facility at FNAL}",
+journal = {Nucl. Instrum. Meth. A},
+volume = {568}, 
+pages = {503},
+year = {2006},
+reportNumber = {FERMILAB-PUB-06-007-AD, BNL-76776-2006-JA},
+}
+
+@PHDTHESIS{loiacono:thesis,
+    title = "{Measurement of the muon neutrino inclusive charged current cross section on iron using the MINOS detector}",
+    author = {L. Loiacono},
+    school = {University of Texas, Austin},
+    year={2010},       
+    reportNumber = {Fermilab-Thesis-2011-06, MINOS-doc-8096},
+}
+
+
+@article{FLUKA1,
+author = {A. Ferrari and others},
+title = "{FLUKA: a multi-particle transport code}",
+reportNumber = {CERN 2005-10, INFN/TC_05/11, SLAC-R-773},
+year={2005},
+}
+
+@article{FLUKA2,
+author = {G. Battistoni and others},
+title = "{The FLUKA code: Description and benchmarking}",
+journal = {AIP Conference Proceeding},
+volume = {896}, 
+pages = {31},
+year={2007},
+}
+
+
+
+@misc{t2k-2km-det,
+title = "{A Proposal for a Detector 2 km Away from the T2K Neutrino Source}",
+note = {\url{http://www.phy.duke.edu/~cwalter/nusag-members/2km-proposal-05-05-30.pdf}},
+year = {2005},
+}
+
+@techreport{FERMILAB-FN-0776-E,
+title = "{A Large Liquid Argon Time Projection  
+         Chamber for Long-baseline Off-Axis Neutrino Oscillation Physics with  
+         the NuMI Beam}", 
+note = {Submitted to the NuSAG committee; inspirehep.net FERMILAB-FN-0776-E},
+year = {2005}, 
+}
+
+@techreport{2008-hand-scan,
+author = {B. Baller and others},
+note   = {LBNE-doc-266-v1, LBNE-doc-3414-v2},
+}
+
+@techreport{2011-hand-scan,
+author = {J. Raaf and others},
+title = "{LAr Hand Scan}",
+institution = {FNAL, IMsA},
+year = {2012},
+note   = {LBNE-doc-5446},
+}
+
+
+
+@article{MINOS-nue,
+author = {P. Adamson and others},
+collaboration = {MINOS Collaboration},
+title = "{Improved search for muon-neutrino to electron-neutrino oscillations in MINOS}",
+journal = {Phys. Rev. Lett.},
+volume = {107}, 
+pages = {181802},
+reportNumber = {FERMILAB-PUB-11-357-PPD, BNL-96122-2011-JA},
+year = {2011},
+}
+
+@article{ICARUS-pizero,
+author = {A. Ankowski and others},
+collaboration = {ICARUS Collaboration},
+title = {},
+journal = {Acta Physica Polonica},
+volume = {B41}, 
+pages = {103},
+year = {2010},
+}
+    
+@misc{icarus-url,
+collaboration = {{ICARUS}},
+note={\url{http://icarus.lngs.infn.it/}},
+}
+
+@misc{ua1,
+author = {{UA1 Collaboration}},
+collaboration = {{UA1}},
+note={\url{http://library.web.cern.ch/library/archives/isad/isaua1.html}},
+}
+
+@misc{nutev-url,
+collaboration = {{NuTeV}},
+note={\url{http://www-e815.fnal.gov/}},
+}
+
+@article{ICARUSes,
+author = {S.Amoruso and others},
+title = {},
+journal = {Eur. Phys. J.},
+volume = {C33}, 
+pages = {233},
+year = {2004},
+}
+         
+@article{ICARUSmuons,
+author = {A. Ankowski and others},
+collaboration = {ICARUS Collaboration},
+title = {Measurement of through-going particle momentum by means of multiple scattering with the ICARUS T600 TPC.},
+journal = {Eur. Phys. J.},
+volume = {C48}, 
+pages = {667},
+year = {2006},
+}
+         
+@unpublished{OPERA-tau,
+author        = {Umut Kose},
+collaboration = {OPERA Collaboration},
+title         = "{Search for $\nu_\mu \to \nu_\tau$ oscillations in appearance mode in the OPERA experiment.}",
+year = {2011},
+note = {arXiv:1106.3871 [hep-ex] }
+}
+
+@article{MINOS_disap,
+author = {P. Adamson and others},
+collaboration = {MINOS Collaboration},
+title = "{Search for the disappearance of muon antineutrinos in the NuMI neutrino beam.}",
+journal = {Phys. Rev. D.},
+volume = {84}, 
+pages = {071103},
+year = {2011},
+reportNumber   = {FERMILAB-PUB-11-357-PPD, BNL-96122-2011-JA},
+note = {arXiv:1108.1509 [hep-ex] }
+}
+
+@unpublished{Davidson:2003ha,
+author = "{S. Davidson, C. Pena-Garay, N. Rius, and A. Santamaria}",
+year = {2003},
+note = {hep-ph/0302093},
+}
+
+@article{GonzalezGarcia:2007ib,
+author = "{M.C. Gonzalez-Garcia, and M. Maltoni}",
+title = "{Phenomenology with Massive Neutrinos}",
+journal = {Phys. Rept.},
+volume = {460},
+pages = {1},
+year = {2008},
+note = {arXiv:0704.1800 [hep-ph]},
+}
+
+@article{Biggio:2009nt,
+}
+
+@article{DAVOUD2011,
+author = {H. Davoudiasl and others},
+title = "{Long-Range Lepton Flavor Interactions and Neutrino Oscillations.}",
+journal = {Phys. Rev. D.},
+volume = {84},  
+pages = {013009},
+year = {2011},
+note = {arXiv:1102.5352 [hep-ph]},
+}
+
+@article{MINOSNC2010,
+author = {P. Adamson and others},
+collaboration = {MINOS Collaboration},
+title = "{Search for sterile neutrino mixing in the MINOS long baseline experiment}",
+journal = {Phys. Rev. D.},
+volume = {81},  
+pages = {052004},
+year = {2010},
+note = {arXiv:1001.0336 [hep-ex]},
+}
+
+@unpublished{NSI-KOPP,
+author  = "{P. Huber and J. Kopp}",
+title = "{Two experiments for the price of one? The role of the second oscillation maximum in long baseline neutrino experiments}",
+year = {2011},
+note    = {arXiv:1010.3706}
+}
+
+@misc{larsoft,
+author = "{The LArSoft Collaboration}",
+note = "\url{https://plone4.fnal.gov:4430/P1/Main/wiki/LArSoft/LArSoft}"
+}
+
+@article{bueno-1,
+author = {A.Bueno and others},
+title = {},
+journal = {JHEP},
+volume = {0704}, 
+pages = {041},
+year = {2007},
+} 
+
+@article{livermore,
+author = {T.Totani and others},
+title = {Future Detection of Supernova Neutrino Burst and Explosion Mechanism},
+journal = {Astrophys. J.},
+volume = {496},
+pages = {216},
+year = {1998},
+}
+
+@article{GKVM,
+author = {J. Gava, J. Kneller, C. Volpe and G. C. McLaughlin},
+title = {},
+journal = {Phys. Rev. Lett.},
+volume = {103},
+pages = {071101},
+year = {2009},
+note = {arXiv:0902.0317 [hep-ph]},
+}
+
+@article{arXiv:1202.5000v1,
+author = {D. Barker and others},
+title = {Muon-Induced Background Study for an Argon-Based Long Baseline Neutrino Experiment},
+year = {2012},
+note = {arXiv:1202.5000v1 [physics.ins-det]}
+}
+
+@article{MANN2010,
+author = {W. Anthony Mann and others},
+title = "{Apparent multiple $\Delta m^2_{32}$ in muon anti-neutrino and muon neutrino survival oscillations from non-standard interaction matter effect}",
+journal = {Phys. Rev. D.},
+volume = {82},
+pages = {113010},
+year = {2010},
+}
+
+@article{Coleman:PLB405,
+author = {S. Coleman and S. Glashow},
+journal = {Phys. Rev. Lett.},
+volume = {B405},
+pages = {249},
+year = {1997},
+}
+
+@article{KlinkHamer:IJ20,
+author = {F. Klinkhamer and G. Volovik},
+journal = {Intl. Jour. of Mod. Phys.},
+volume = {A20},
+pages = {2795},
+year = {2005},
+}
+
+@article{Colladay:PRD116002,
+author = {D. Colladay and V. Kostelecky},
+journal = {Phys. Rev. D.},
+volume = {},
+pages = {116002},
+year = {1998},
+}
+
+@article{Grossman:PRD72,
+author = {Y. Grossman and others},
+journal = {Phys. Rev. D.},
+volume = {72},
+pages = {125001},
+year = {2005},
+}
+
+@article{GonzalezGarcia:NPB573,
+author = {M. C. Gonzalez-Garcia and others},
+journal = {Nucl. Phys. B},
+volume = {573},
+pages = {3},
+year = {2000},
+}
+
+@article{Kaplan:PRL93,
+author = {D. Kaplan and others},
+journal = {Phys. Rev. Lett},
+volume = {93},
+pages = {091801},
+year = {2004},
+}
+
+@article{Abe:PRD77,
+author = {K. Abe and others},
+journal = {Phys. Rev. D},
+volume = {77},
+pages = {052001},
+year = {2008},
+}
+
+@PHDTHESIS{Wang:thesis,
+    author = "W. Wang",
+    year="2007",	
+}
+
+@PHDTHESIS{Mitsuka:thesis,
+    title = "Study of Non-Standard Neutrino Interactions with Atmospheric Neutrino Data in Super-Kamiokande",
+    author = "G. Mitsuka",
+    school = "University of Tokyo",
+    year="2009",	
+}
+
+@article{Conrad:1008,
+author = {J. Conrad and others},
+title = {Atmospheric Tau Neutrinos in a Multi-kiloton Liquid Argon Detector},
+year = {2010},
+note = {arXiv:1008.2984/hep-ph}
+}
+
+@misc{ICARUS_THRESH,
+author = {A. Gugliemi},
+title = {Talk at XXIV Neutrino Conference (Neutrino 2010)},
+year = {2010},
+}
+
+@article{NUANCE,
+author = "D. Casper",
+title = "The Nuance neutrino physics simulation, and the future.",
+journal = {Nucl.Phys.Proc.Suppl.},
+volume = {112},
+pages = {161},
+year = {2002},
+}
+
+
+@techreport{DOCDB740,
+note = {LBNE-doc-740}
+}
+
+@techreport{DOCDB783,
+note = {LBNE-doc-783}
+}
+
+
+@article{Abe:2011ky,
+author = {K.~Abe and others},
+collaboration = "{Super-Kamiokande Collaboration}",
+title = "{The search for n-nbar oscillation in Super-Kamiokande I}",
+note = {{  arXiv:1109.4227 [hep-ex]}}
+}
+
+
+
+@article{BaldoCeolin:1994jz,
+author = {M. Baldo-Ceolin and others},
+title = {A New experimental limit on neutron - anti-neutron oscillations},
+journal = {Z. Phys.  C 63}, 
+pages = {409},
+year = {1994}
+}
+
+@article{Scholberg:2007nu,
+author = {K. Scholberg},
+title = {Supernova Neutrino Detection},
+journal = {Nucl.Phys.Proc.Suppl.}, 
+volume = {221},
+pages = {248},
+year = {2011},
+note = {astro-ph/0701081},
+}
+
+@article{Dighe:2008dq,
+author = {A. Dighe},
+title = {Physics potential of future supernova neutrino observations},
+journal = {J.Phys.Conf.Ser.}, 
+volume = {136},
+pages = {022041},
+year = {2008},
+note = {arXiv:0809.2977 [hep-ph]},
+}
+
+
+@techreport{DOCDB5904,
+author = {V. Kudryavtsev and others},
+title = {Cosmic rays and cosmogenics. Report to the LBNE Collaboration.},
+year = {2012},
+note = {LBNE-doc-5904},
+}
+
+vol 2 beam
+
+@unpublished{docdb-4382,
+title={{Alternatives Analysis}},
+year={2012},
+note={LBNE Project Management Team - LBNE Doc 4382}
+}
+
+@techreport{fnal-eng,
+title={{Fermilab Engineering Manual, v07/10}},
+year={2010},
+note={\url{http://www.fnal.gov/directorate/documents/FNAL_Engineering_Manual.pdf}},
+}
+
+
+
+@misc{AD_performance,
+title={{Accelerator Performance Charts}},
+institution={Fermilab},
+note={\url{http://www-bd.fnal.gov/pplot/}},
+}
+
+
+@misc{baffle_1,
+author={V.Zarucheisky and others},
+title={{NOvA Target Hall Baffle Specification}},
+institution={IHEP},
+year={2010},
+}
+
+@misc{bm-rh-list,
+author={Patrick Hurh},
+title={{LBNE Remote Handling Component List and Shielding Calculations}},
+institution={FNAL},
+year={2012},
+}
+
+
+@techreport{baffle_2,
+author={M.Martens and J.Hylen and K.Anderson},
+title={{Target and Horn Configuration for the NOvA Experiment}},
+year={2009},
+note = {\url{http://www.fnal.gov/directorate/documents/FNAL_Engineering_Manual.pdf}},
+}
+@techreport{baffle_3,
+author={C.Densham and others},
+title={{Conceptual Design Study of the LBNE Target and Beam Window}},
+year={2010},
+note = {LBNE Doc 2400},
+}
+
+@techreport{blip,
+author={N.Simos and others},
+title={{Long Baseline Neutrino Experiment (LBNE) Target Material Radiation Damage from Energetic Protons of the Brookhaven Linear Isotope Production (BLIP) Facility}},
+year={2012},
+note = {LBNE Doc 5724},
+}
+
+@techreport{ral-final-rpt,
+author={C.Densham and others},
+title={{Conceptual Design Study of the LBNE Target and Beam Window}},
+year={2010},
+note = {LBNE Doc 2400},
+}
+
+@techreport{target_1,
+author={V.Garkusha and others},
+title={{Design Study of the NuMI Target for 2 MW Upgrades}},
+year={2005},
+note={LBNE Doc 2425},
+}
+@techreport{target_2,
+author={V.Garkusha and others},
+title={{700 kW target design study - IHEP 2009 Accord report}},
+year={2010},
+note={LBNE Doc 2423},
+}
+
+@techreport{horns_1,
+author={B.Lundberg},
+title={{Specifications for Beam Simulations}},
+year={2009},
+note={LBNE Doc 2161},
+}
+@techreport{horns_2,
+title={{NuMI Technical Design Handbook, Sec. 4.2.4}},
+year={2003},
+}
+
+@techreport{numi-absorber-shielding,
+title={{NuMI Technical Design Handbook, Sec. 4.4}},
+year={2003},
+note={\url{http://www-numi.fnal.gov/numwork/tdh/tdh_index.html}},
+}
+
+@misc{natinst,
+title={National Instruments},
+note={\url{http://www.ni.com/}},
+}
+
+@techreport{abs_1,
+author={N.Mokhov},
+title={{The Mars Code System User's Guide}},
+year={2009},
+note={Fermilab-FN-628},
+}
+@misc{abs_2,
+title={{ANSYS Engineering Simulation}},
+note={\url{http://www.ansys.com}},
+}
+@techreport{abs_3,
+author={N.Mokhov and others},
+title={{LBNE Target Station, Decay Volume and Hadron Absorber: Radiation and  Thermal Analysis Modeling}},
+year={2011},
+note={LBNE Doc 2241}
+}
+@techreport{abs_4,
+author={E.Rivera},
+title={{NuMI Hadron Absorber Finite Element Analysis for NOvA Beam Energy'}},
+year={2010},
+}
+@techreport{tritium_1,
+title={{Fermilab Radiological Control Manual, and references therein}},
+note={/url{http://esh.fnal.gov/xms/FRCM}},
+}
+@techreport{tritium_2,
+title={{LBL Consultant Report on NuMI Tritium in Beampipe Shielding}},
+note={LBNE Doc 2533},
+}
+@techreport{remote_1,
+author={V.Graves and A.Carroll and T.Burgess},
+title={{Conceptual Design of the Remote Handling Facilities for the Long-Baseline Neutrino Experiment}},
+year={2010},
+note={ORNL/TM-2010/125,  LBNE DocDB 2483},
+}
+@techreport{remote_2,
+author={V.Graves and A.Carroll and T.Burgess},
+title={Conceptual Design of the Target Handling System for the Long-Basline Neutrino Experiment},
+year={2010},
+note={ORNL/TM-2010/00,  LBNE DocDB 2627},
+}
+@techreport{model_1,
+author={N.V. Mokhov and S.I. Striganov},
+title={{MARS15 Overview, Hadronic Shower Simulation Workshop AIP Proceedings 896}},
+year={2007},
+note={Fermilab-Conf-07-008-AD},
+}
+@techreport{model_2,
+author={N.V. Mokhov},
+title={{Recent MARS15 Developments}},
+year={2010},
+note={Fermilab-Conf-10-518-APC},
+}
+
+@techreport{AD_performance,
+title={A Statistical Study of Proton Source Downtime},
+author={D. McGinnis},
+year={2010},
+note={\url{http://beamdocs.fnal.gov/AD/DocDB/0037/003766/001/ProtonSourceDownTime.pdf}}
+}
+
+@techreport{Beam_power,
+title={{MI Beam Power for Different Energies}},
+author={I. Kourbanis},
+year={2010},
+note={LBNE Doc 3716 \url{http://beamdocs.fnal.gov/AD-public/DocDB/ShowDocument?docid=3716}}
+}
+
+@BOOK{horns_goodman,
+author={J. Goodman},
+title={Mechanics Applied to Engineering},
+year={1889},
+publisher={Longman, Green and Company, London}
+}
+
+@techreport{beam_requirements_doc,
+title={{Beamline Requirements Documentation}},
+note={LBNE Doc 4335 \url{http://lbne2-docdb.fnal.gov:8080/cgi-bin/ShowDocument?docid=4335}}
+}
+
+@misc{optics_1,
+author="{D.Harding}",
+note={{Magnet Test Facility measurement database private communication  (Fermilab AD) }}
+}
+
+@techreport{docdb2193,
+title={{Remote Handling Component List}},
+author={{Patrick Hurh}},
+year={2010},
+note={LBNE DocDB 2193 \url{http://beamdocs.fnal.gov/AD-public/DocDB/ShowDocument?docid=2193}}
+}
+
+
+
+@misc{optics_2,
+note={V. Bocean (Fermilab PPD/Alignment) private communication}
+}
+
+@misc{optics_mad,
+title={{Methodical Accelerator Design (MAD)}},
+note={CERN - Accelerator Beam Physics Group \url{http://mad.home.cern.ch/mad/}}
+}
+
+@misc{beam_list,
+note={The list includes Main Ring SY Neutrino Beam (15-foot bubble chamber), the NuMI neutrino beam (to MINOS),
+the Booster neutrino beam (to MiniBooNE)}
+}
+
+@techreport{tritium_3,
+title={{LBNE Groundwater Shielding Requirements for Shallow and Deep Beam}},
+author={D. Reitzner and K. Vaziri},
+note={LBNE Doc 4052 \url{http://lbne2-docdb.fnal.gov:8080/0040/004052/004/ShieldingRequirementsGroundwater5.docx}},
+institution={Fermilab}
+}
+
+@misc{docdb2205,
+title={{LBNE Absorber MARS Studies}},
+author={N. Mokhov},
+institution={Fermilab},
+note={LBNE Doc 2205 \url{http://lbne2-docdb.fnal.gov:8080/0022/002205/001/LBNE_ABS_norm_mokhov_031610.pdf}}
+}
+
+@misc{docdb4199,
+title={{Muon Range-out at LBNE}},
+author={N. Mokhov},
+institution={Fermilab},
+note={LBNE Doc 4199 \url{http://lbne2-docdb.fnal.gov:8080/0041/004199/001/LBNE_range_out_mokhov_082411.ppt}}
+}
+
+@misc{docdb3216,
+title={{Target Chase MARS Calculations}},
+author={N. Mokhov},
+institution={Fermilab},
+note={LBNE Doc 3216 \url{http://lbne2-docdb.fnal.gov:8080/0032/003216/001/LBNE-doc-3216-mokhov-120810.pdf}}
+}
+
+@misc{docdb4128,
+title={{LBNE Dose at Site Boundary}},
+author={D. Reitzner},
+institution={Fermilab},
+note={LBNE Doc 4128 \url{http://lbne2-docdb.fnal.gov:8080/0041/004128/002/skyshine_on_axis_MI10_revisited.pptx}}
+}
+
+@misc{STRUCT,
+author={ I.Baishev and A.Drozhdin and N.Mokhov and X.Yang},
+title={{STRUCT Program User's Reference Manual}},
+year={1994},
+note={SSC Doc: SSCL--MAN--0034 \url{http://www-ap.fnal.gov/users/drozhdin/}}
+}
+
+
+Vol 3 Near Detector
+
+ch1  intro
+
+ch 2  measurement strategy
+
+ch 3 beamline measurements
+
+@Article{ref:NuMIBeamMonitors,
+     author    = "Kopp, S. and others",
+     title     = "{Secondary beam monitors for the NuMI facility at FNAL}",
+     journal   = "Nucl. Instrum. Meth.",
+     volume    = "A568",
+     year      = "2006",
+     pages     = "503-519",
+     eprint    = "physics/0607229",
+     archivePrefix = "arXiv",
+     doi       = "10.1016/j.nima.2006.07.062",
+     SLACcitation  = "%%CITATION = PHYSICS/0607229;%%"
+}
+
+@techreport{nd_requirements_doc,
+title={{Near Detectors Requirements Documentation}},
+note={LBNE Doc 5579 \url{http://lbne2-docdb.fnal.gov:8080/cgi-bin/ShowDocument?docid=5579}}
+}
+
+
+
+@Article{ref:k2k,
+     author    = "Ahn, M. H. and others",
+     collaboration = "K2K",
+     title     = "{Measurement of Neutrino Oscillation by the K2K Experiment}",
+     journal   = "Phys. Rev.",
+     volume    = "D74",
+     year      = "2006",
+     pages     = "072003",
+     eprint    = "hep-ex/0606032",
+     archivePrefix = "arXiv",
+     doi       = "10.1103/PhysRevD.74.072003",
+     SLACcitation  = "%%CITATION = HEP-EX/0606032;%%"
+}
+
+@PHDTHESIS{ref:Maruyama,
+    title="First Observation of Accelerator Origin Neutrino Beam After Passing Through 250km of Earth",
+    author = " Maruyama, T.",
+    school="Tohuku University",
+    year="2000",	
+ }
+
+@Article{ref:T2KMuIon,
+     author    = "Matsuoka, K. and others",
+     title     = "{Development and production of the ionization chamber for
+                  the T2K muon monitor}",
+     journal   = "Nucl. Instrum. Meth.",
+     volume    = "A623",
+     year      = "2010",
+     pages     = "385-387",
+     doi       = "10.1016/j.nima.2010.03.010",
+     SLACcitation  = "%%CITATION = NUIMA,A623,385;%%"
+}
+
+@Article{ref:T2KMuMon,
+     author    = "Kubo, H. and others",
+     title     = "{Development of the muon beam monitor for the T2K Long Baseline Neutrino Oscillation experiment}",
+     journal   = "2008 IEEE Nuclear Science Symposium Proceedings",
+     year      = "2008",
+     pages     = "2315-2318",
+}
+
+@Article{ref:RD42A,
+     title = "{Proton irradiation of CVD diamond detectors for high-luminosity experiments at the LHC}",
+     author    =  "Meier, D. and others",
+     collaboration = "RD42",
+     journal   = "Nucl. Instrum. Meth.",
+     volume    = "A426",
+     year      = "1999",
+     pages     = "173",
+}
+
+@Article{ref:RD42B,
+     author    = "Adam, W. and others",
+ collaboration = "RD42",
+     title     = "{Radiation hard diamond sensors for future tracking
+                  applications}",
+     journal   = "Nucl. Instrum. Meth.",
+     volume    = "A565",
+     year      = "2006",
+     pages     = "278-283",
+     doi       = "10.1016/j.nima.2006.05.127",
+     SLACcitation  = "%%CITATION = NUIMA,A565,278;%%"
+}
+
+@INPROCEEDINGS{ref:K2KMuDecayMon,
+	author="Hiraide, K.",
+	title="{Muon Monitoring Using the Decay Electrons}", 
+	booktitle="4th Workshop on Neutrino Beams and Instrumentation (NBI2003)",
+	year="2003",
+}
+
+@Article{ref:HighRateCounting,
+     title       = "Effect of light flash on photocathodes",
+     author    = "Semertzidis, Y.K. and F.J.M. Farley",
+     journal   = "Nucl. Instrum. Meth.",
+     volume    = "A394",
+     year      = "1997",
+     pages     = "7",
+}
+
+@TECHREPORT{ref:G2,
+  author="Ouyang, J. and Earle, W.",
+  title="Muon g-2 Note No. 202", 
+  institution="BNL", 
+  year="1994",
+}
+
+@article{ref:SPY,
+      author         = "Ambrosini, G. and others",
+      title          = "{Pion yield from 450-GeV/c protons on beryllium}",
+      collaboration  = "SPY Collaboration",
+      journal        = "Phys.Lett.",
+      volume         = "B425",
+      pages          = "208-214",
+      doi            = "10.1016/S0370-2693(98)00237-8",
+      year           = "1998",
+      reportNumber   = "CERN-EP-98-065, CERN-EP-98-65",
+      SLACcitation   = "%%CITATION = PHLTA,B425,208;%%",
+}
+
+@Article{ref:HARP,
+      author         = "Catanesi, M.G. and others",
+      title          = "{{Measurement of the production cross-section of positive
+                        pions in p-Al collisions at 12.9-GeV/c}}",
+      collaboration  = "HARP Collaboration",
+      journal        = "Nucl.Phys.",
+      volume         = "B732",
+      pages          = "1-45",
+      doi            = "10.1016/j.nuclphysb.2005.10.016",
+      year           = "2006",
+      eprint         = "hep-ex/0510039",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ex",
+      reportNumber   = "IFIC-05-53",
+      SLACcitation   = "%%CITATION = HEP-EX/0510039;%%",
+}
+
+@Article{Isenhower:2006zp,
+      author         = "Isenhower, D. and others",
+      title          = "{Proposal to upgrade the MIPP experiment}",
+      collaboration  = "MIPP Collaboration",
+      year           = "2006",
+      note           = "hep-ex/0609057",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ex",
+      reportNumber   = "FERMILAB-PROPOSAL-0960",
+      journal   = "unpublished",
+      SLACcitation   = "%%CITATION = HEP-EX/0609057;%%",
+}
+
+@article{Abgrall:2011ae,
+      author         = "Abgrall, N and others",
+      title          = "{Measurements of Cross Sections and Charged Pion Spectra
+                        in Proton-Carbon Interactions at 31 GeV/c}",
+      collaboration  = "NA61/SHINE Collaboration",
+      journal        = "Phys.Rev.",
+      volume         = "C84",
+      pages          = "034604",
+      doi            = "10.1103/PhysRevC.84.034604",
+      year           = "2011",
+      eprint         = "1102.0983",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ex",
+      reportNumber   = "CERN-PH-EP-2011-005",
+      SLACcitation   = "%%CITATION = ARXIV:1102.0983;%%",
+}
+
+@Article{MIPP_NIM,
+     author    = "Raja, Rajendran",
+     title     = "{The main injector particle production experiment (MIPP) at
+                  Fermilab}",
+     journal   = "Nucl. Instrum. Meth.",
+     volume    = "A553",
+     year      = "2005",
+     pages     = "225-230",
+     eprint    = "hep-ex/0501005",
+     archivePrefix = "arXiv",
+     doi       = "10.1088/1742-6596/9/1/058",
+     SLACcitation  = "%%CITATION = HEP-EX/0501005;%%"
+}
+
+@misc{Geant3,
+     author    = "Brun, R. and Bruyant, F. and Maire, M. and McPherson, A. C.
+                  and Zanarini, P.",
+     title     = "{GEANT3}",
+     note     = "CERN-DD-EE-84-1"
+}
+
+
+ch 4 neutrino detectors
+
+@Article{nomad,
+     title = "{The NOMAD experiment at the CERN SPS}",
+     author    = "J.~Altegoer and others",
+     journal   = "Nucl. Instrum. Meth.",
+     volume    = "A404",
+     year      = "1998",
+     pages     = "96",
+}
+
+@unpublished{t2k,
+  author = {K.~Abe and others},
+  title = "{The T2K Experiment}",
+  year = {2011},
+  note = {arXiv:1106.1238 [phys.ins-det]}
+  }
+
+@unpublished{minerva,
+  author = {Osmanov, B.},
+  collaboration = {MINERvA collaboration},
+  title = "{MINERvA Detector: Description and Performance}",
+  year = {2011},
+  note = {arXiv:1109.2855 [hep-ex]}
+  }
+
+@unpublished{microboone,
+  author = {Katori, T.},
+  collaboration = {MicroBooNE collaboration},
+  title = "{MicroBooNE, A Liquid Argon Time Projection Chamber (LArTPC) Neutrino Experiment}",
+  year = {2011},
+  note = {arXiv:1107.5112 [hep-ex]}
+  }
+
+@unpublished{lbne-doc-4185,
+title={{LAr1 TPC Cold Electronics Design Summary}},
+author={C. Thorn},
+year={2011},
+note={LBNE DocDB 4185-v4}
+}
+
+@unpublished{lbne-doc-5063,
+title={{LAr40 Cold Electronics Review}},
+author={C. Thorn},
+year={2011},
+note={LBNE DocDB 5063-v3}
+}
+
+@Article{lar_magnetized,
+      author         = {A.~Badertscher},
+      journal        = "New J. Phys.",
+      volume         = "7",
+      year           = "2005",
+      pages          = "63",
+      note           = {arXiv:physics/0412080v1},
+}
+
+@unpublished{lbne-doc-5337,
+title={{Expected Event Rates for an LBNE Near Detector at 459m}},
+author={G.P.~Zeller},
+year={2011},
+note={LBNE-doc-5337-v2}
+}
+
+
+ch 5 magnet=
+
+ch6 DAQ
+
+@Article{ref:T2KNDDAQ,
+      author         = {M.~Thorpe and others},
+      title          = "{The T2K Near Detector Data Acquisition Systems}",
+      journal        = "Real Time Conference (RT), 2010 17th IEEE-NPSS",
+      doi            = "10.1109/RTC.2010.5750358",
+      year           = "2010"
+}
+
+
+
+vol 4 WCD
+
+ch1 intro
+
+                  
+v4a1 [4] is docdb-4382
+
+v4a1 []
+@article{sanford_esh,
+	author={{Sanford Laboratory}},
+	title="{ESH Standards for Sanford Laboratory}",
+	year={2010},
+	note={EHS-1000-L6-01/document-73205, \url{https://docs.sanfordlab.org/docushare/dsweb/View/Collection-7391}}
+}
+
+
+v4a1 [5]
+@article{dusel:lcab,
+	author = {{DUSEL Large Cavern Advisory Board}},
+	title = "{Report No. 5}",
+	year = {2011},
+	note = {LBNE:DocDB-3718}
+}
+@article{dusel:pdr,
+	author = {{Deep Underground Science and Engineering Laboratory}},
+	title = "{Preliminary Design Report}",
+	year = {2011},
+	note = {LBNE:DocDB-2417}
+}
+                  
+v4a1 [6]
+@misc{homestake:geology,
+     author    = {{Thomas J. Campbell}},
+     title     = "{Synopsis of Homestake Mine Geology}",
+     note     = "{http://homestake.sdsmt.edu/Geology/geology.htm}"
+}
+
+v4a1 [7]
+@article{felice:geoeng,
+	author="{Lachel Felice \& Associates}",
+	title="{Geotechnical Engineering Services Final Report for 4850L Mapping}",
+	year={2009},
+	note={LBNE:DocDB-2417}
+}
+                  
+v4a1 [8]
+@article{golder:excavationcd,
+	author={{Golder Associates}},
+	title="{LBNE Far Site Detector Excavation Conceptual Design: WCD Reference Design Final Report}",
+	year={2011},
+	note={LBNE:DocDB-4338}
+}
+
+v4a1 [9]
+@article{golder:stress,
+	author={{Golder Associates}},
+	title="{In Situ Stress Measurement Deep Underground Science and Engineering Laboratory}",
+	year={2010},
+	note={LBNE:DocDB-4417}
+}
+
+v4a1 [10]
+@article{davis:hydro,
+	author={A. Davis and C.J. Webb and F. Beaver},
+	title="{Hydrology of the Proposed National Underground Science Laboratory at the Homestake Mine in Lead, South Dakota}",
+	year={2003}
+}
+                  
+v4a1 [11]
+@article{hdr:sanford4850,
+	author={{HDR}},
+	title="{WCD 4850L Final Conceptual Design Report for LBNE Surface Facilities at Sanford Lab}",
+	year={2011},
+	note={LBNE:DocDB-4338}
+}
+
+v4a1 [12]
+@article{lbne:larfdreq,
+	author={{LBNE}},
+	title="{LBNE LAr-FD Requirements}",
+	note={LBNE doc 3747}
+}
+
+v4a1 [13]
+@article{golder:excavationdraw,
+	author={{Golder Associates}},
+	title="{WCD Conceptual Design Excavation Drawings}",
+	year={2011},
+	note={LBNE:DocDB-4338}
+}
+
+v4a1 [14]
+@article{lbne:l2req,
+	author={{LBNE}},
+	title="{WCD Level 2 Requirements}",
+	year={2011},
+	note={LBNE:DocDB-687}
+}
+
+v4a1 [15]
+@article{homestake:depth,
+	author={A.~Bernstein and others},
+	title="{Report on the Depth Requirements for a Massive Detector at Homestake (LBNE:DocDB-34)}",
+     year      = "2009",
+     note      = {arXiv:0907.4183 [hep-ex]},
+     eprint    = "0907.4183",
+     archivePrefix = {arXiv},
+     primaryClass  =  {hep-ex},
+     SLACcitation  = "%%CITATION = 0907.4183;%%"
+}
+
+v4a1 [16]
+@article{lbne:bulkhead,
+	author={{LBNE}},
+	title="{4850L Bulkhead Design Option Report}",
+	year={2011},
+	note={LBNE:DocDB-4338}
+}
+
+v4a1 [17]
+@article{arup:cdrwcd4850,
+	author={{Arup}},
+	title="{LBNE 100\% Concept Design Report Task 1a: WCD at 4850L}",
+	year={2011},
+	note={LBNE:DocDB-4338}
+}                  
+	
+v4a1 [18]
+@article{aon:firerisk,
+	author={{Aon Risk Solutions}},
+	title="{Fire Protection/Life Safety Assessment for the Conceptual Design of the Far Site of the Long Baseline Neutrino Experiement}",
+	year={2011},
+	note={LBNE:DocDB-4395}
+}
+
+v4a1 [19]
+@article{tiley:fea,
+	author={{G.L.~Tiley}},
+	title="{Finite Element Analysis}"
+}
+
+
+@article{Abe:2011sj,
+      author         = {K. Abe and others},
+      title          = "{Indication of Electron Neutrino Appearance from an Accelerator-produced Off-axis Muon Neutrino Beam}",
+      journal        = {Phys.Rev.Lett.},
+      volume         = {107},
+      pages          = {041801},
+      year           = {2011},
+      note           = {arXiv:1106.2822 [hep-ex]},
+}
+
+@article{Abe:2011fz,
+      author         = {Y. Abe and others},
+      title          = "{Indication for the disappearance of reactor electron antineutrinos in the Double Chooz experiment}",
+      year           = {2011},
+      note           = {arXiv:1112.6353 [hep-ex]},
+}
+
+@article{PDG,
+title =  "{Review of Particle Physics}",
+author = {J. Beringer and others},
+collaboration = {Particle Data Group},
+journal        = {Phys.Rev.D.},
+volume         = {86},
+pages          = {010001},
+year = {2012},
+}
+
+@article{FOGLI12,
+title =  "{Global analysis of neutrino masses, mixings and phases: entering the era of leptonic CP violation searches}",
+author = {G.L. Fogli and others},
+journal        = {Phys.Rev.D.},
+volume         = {86},
+pages          = {013012},
+year = {2012},
+}
+@article{dayabay,
+title =  "{Observation of electron-antineutrino disappearance at Daya Bay}",
+author = {F.P. An and others},
+journal        = {Phys.Rev.Lett.},
+volume         = {108},
+pages          = {171803},
+year = {2012},
+note = {arXiv:1203.1669 [hep-ex]},
+}
+
+@article{Gando:2010aa,
+      author         = {A.~Gando and others},
+      title          = "{Constraints on $\theta_{13}$ from A Three-Flavor Oscillation Analysis of Reactor Antineutrinos at KamLAND}",
+      journal        = {Phys.Rev.D},
+      volume         = {83},
+      pages          = {052002},
+      year           = {2011},
+      note           = {arXiv:1009.4771 [hep-ex]},
+}
+
+@misc{dayabaytalk,
+author = {C. Zhang},
+institution = {BNL},
+title = "{Observation of electron-antineutrino disappearance at Daya Bay}",
+     howpublished = {BNL HEP Seminar},
+year={2012},
+note={\url{http://www.phy.bnl.gov/~partsem/fy12/DayaBayFirstResult_BNL_20120308.pdf}}
+}
+
+@phdthesis{dufour,
+author = {Fanny Dufour},
+title =  "{Precise Study of the Atmospheric Neutrino Oscillation Pattern Using Super-Kamiokande I and II}",
+school = {Boston University},
+note = {\url{http://www-sk.icrr.u-tokyo.ac.jp/sk/pub/fdufour-thesis.pdf}},
+year = 2009
+}
+
+
+@unpublished{Barger:2007yw,
+  author = {V.~Barger and others},
+  title = "{Report of the US long baseline neutrino experiment study}",
+  institution = {BNL},
+  year = {2007},
+  note = {arXiv:0705.4396 [hep-ph]}
+  }
+
+@phdthesis{iida,
+author = {Takashi Iida},
+title = "{Search for Supernova Relic Neutrino At Super-Kamiokande}",
+school = {The University of Tokyo},
+year = {2009},
+note = {\url{http://www-sk.icrr.u-tokyo.ac.jp/sk/pub/iida-doctor_edited.pdf}}
+}
+
+@unpublished{Yanagisawa:2010qi,
+title =  "{Background Study on $\nu_e$ Appearance from a $\nu_\mu$ Beam in Very Long Baseline Neutrino Oscillation Experiments with a Large Water Cherenkov Detector}",
+author = {Chiaki Yanagisawa and Chang Kee Jung and Throng Le and Brett Viren},
+year = {2010},
+note = {arXiv:1008.1019 [hep-ex]}
+}
+
+@unpublished{Kearns,
+title = "{Study of FNAL to DUSEL Long Baseline Neutrino Oscillation Experiment with a Large Water Cherenkov Detector}",
+author = {Fanny Dufour and Ed Kearns},
+year = {2007},
+note = {\url{http://nwg.phy.bnl.gov/~diwan/nwg/fnal-bnl/docs/dufour_fnallb_study.pdf}}
+}
+
+@article{2008zn,
+title = "{Solar neutrino measurements in Super-Kamiokande-II}",
+author = {J.~P.~Cravens and others },
+journal = {Phys. Rev.},
+volume = {D},
+number = {78, 032002},
+year = {2008},
+note = {arXiv:0803.4312 [hep-ex]},
+}
+
+@misc{sno,
+note = {Personal communication},
+}  
+
+@article{docdb687,
+	author = {Jeffrey Dolph},
+	title  = "{LBNE Water Cherenkov Detector Requirements}",
+        institution = {BNL},
+	year   = {2010},
+	note   = {LBNE:DocDB-687}
+}
+
+
+@article{2009gd,
+author = {Haruki Nishino and S. Clark and others},
+title = "{Search for Proton Decay via $p \to e^+ \pi^0$ and $p \to \mu^+ \pi^0$ in a Large Water Cherenkov Detector}",
+journal = {Phys. Rev. Lett.},
+number = {102:141801},
+year = {2009},
+note = {arXiv:0903.0676 [hep-ex]}
+}
+                  
+@article {Kobayashi:2005pe,
+title = "{Search for nucleon decay via modes favored by supersymmetric grand unification models in Super-Kamiokande-I}",
+author = {K.~Kobayashi and others},
+collaboration = {Super--Kamiokande},
+journal = {Phys. Rev.},
+volume = {D},
+number = {72, 052007},
+year = {2005},
+note = {arXiv:hep-ex/0502026}
+}
+
+@article {Malek:2002ns,
+title = "{Search for supernova relic neutrinos at Super-Kamiokande}",
+author = {M.~Malek and others},
+collaboration = {Super--Kamiokande},
+journal = {Phys. Rev. Lett.},
+number = {90:061101},
+year = {2003},
+note = {arXiv:hep-ex/0209028}
+}
+
+@unpublished{Lunardini:2010ab,
+title =  "{Diffuse supernova neutrinos at underground laboratories}",
+author = {C.~Lunardini},
+year = {2010},
+note = {arXiv:1007.3252 [astro-ph.CO]}
+}
+
+@techreport{xyz,
+title = "{LBNE Water Containment Vessel Phase 1 Report}",
+author = {Simpson and Gumpertz and Heger},
+note = {CNA Consulting Engineers},
+institution = {Hatch Mott MacDonald},
+year = {2010}
+}
+
+@Article{Turner2007,
+     author = {S. E. Turner},
+     title = "{Underwater Implosion of Glass Spheres}",
+     journal = {J. Acoust. Soc. Am.},
+     volume = "121",
+     year = "2007",
+     pages = "844--852"
+}
+
+@article{vavra,
+     author = {P. Bourgeios and J. Vavra},
+     title = "{Corrosion of Glass Windows in DIRC PMTs}",
+     note = {SLAC-PUB-8877},
+     institution = {SLAC},
+     year = "2001"
+}
+
+@BOOK{glassscience,
+     author = {L.D. Pye and H.J. Stevens and W.C. LaCourse},
+     title = "{Introduction to Glass Science}",
+     publisher = {Plenum Press},
+     year = "1972"
+}
+
+@article{jiajiepaper,
+     author = {M. Diwan and others},
+     title = "{Underwater Implosions of Large Format Photo-multiplier Tubes}",
+     note = {LBNE:DocDB-4221},
+     institution = {BNL},
+     year = "2011"
+}
+
+@misc{DYSMAS,
+     title = "{DYSMAS}",
+     note = {\url{http://www.stormingmedia.us.94.9451.A945142.html}}
+}
+
+
+ch4-- none as of 8/24
+
+ch5-- copied from calib.refs
+
+@article{Fukuda:2002uc,
+     author    = {Y. Fukuda and others},
+     title     = "{The Super-Kamiokande detector}",
+     journal   = {Nucl. Instrum. Meth.},
+     volume    = "A501",
+     year      = "2003",
+     pages     = "418--462",
+     SLACcitation  = "%%CITATION = NUIMA,A501,418;%%"
+}
+@Article{H2OAbsorption-II,
+     author    = {Pope,  Robin M. and Fry, Edward S.},
+     title     = "{Absorption spectrum (380--700~nm) of pure water. II. Integrating cavity measurements}",
+     journal   = {Applied Optics},
+     volume    = "36",
+     year      = "1997",
+     pages     = "8710--8723"
+}
+@Article{Ashie:2005ik,
+     author    = {Y. Ashie and others},
+ collaboration = {Super-Kamiokande},
+     title     = "{A Measurement of Atmospheric Neutrino Oscillation
+                  Parameters by Super-Kamiokande I}",
+     journal   = {Phys. Rev.},
+     volume    = {D71},
+     year      = "2005",
+     pages     = "112005",
+     eprint    = {hep-ex/0501064},
+     archivePrefix = {arXiv},
+     doi       = {10.1103/PhysRevD.71.112005},
+     SLACcitation  = "%%CITATION = HEP-EX/0501064;%%"
+}
+@Article{Hosaka:2006zd,
+     author    = {J. Hosaka and others},
+ collaboration = {Super-Kamiokande},
+     title     = "{Three flavor neutrino oscillation analysis of atmospheric
+                  neutrinos in  Super-Kamiokande}",
+     journal   = {Phys. Rev.},
+     volume    = {D74},
+     year      = {2006},
+     pages     = "032002",
+     eprint    = {hep-ex/0604011},
+     archivePrefix = {arXiv},
+     doi       = {10.1103/PhysRevD.74.032002},
+     SLACcitation  = "%%CITATION = HEP-EX/0604011;%%"
+}
+@Article{Leemans:2006ui,
+     author    = {Leemans, W. and Downer, M. and Siders, C.},
+     title     = "{Summary report of working group 6: Laser-plasma
+                  acceleration}",
+     journal   = {AIP Conf. Proc.},
+     volume    = "877",
+     year      = "2006",
+     pages     = "175--182",
+     doi       = "10.1063/1.2409132",
+     SLACcitation  = "%%CITATION = APCPC,877,175;%%"
+}
+@misc{T2K2kmprop,
+   author = {{T2K Collaboration}},
+    title = "{Proposal to Extend T2K with a detector 2km Away from the JPARC Neutrino Source}",
+    pages = "36",
+    year = "2007",
+    note = {\url{http://neutrino.cgi.phy.duke.edu/2km/wiki/index.cgi/}},
+}
+
+@Article{Boger:1999bb,
+     author    = {Boger, J. and others},
+ collaboration = {SNO},
+     title     = "{The Sudbury Neutrino Observatory}",
+     journal   = {Nucl. Instrum. Meth.},
+     volume    = {A449},
+     year      = "2000",
+     pages     = "172--207",
+     eprint    = {nucl-ex/9910016},
+     SLACcitation  = "%%CITATION = NUCL-EX 9910016;%%"
+}
+@Article{Takeuchi:1999zq,
+     author    = {Takeuchi, Y. and others},
+ collaboration = {Super--Kamiokade},
+     title     = "{Measurement of radon concentrations at Super-Kamiokande}",
+     journal   = {Phys. Lett.},
+     volume    = {B452},
+     year      = "1999",
+     pages     = "418--424",
+     eprint    = {hep-ex/9903006},
+     archivePrefix = {arXiv},
+     doi       = "10.1016/S0370-2693(99)00311-1",
+     SLACcitation  = "%%CITATION = HEP-EX/9903006;%%"
+}
+
+ch6-- three added 9/7
+
+@unpublished{docdb196,
+title = "{WCD Water System Physics Requirements}",
+note = {LBNE:DocDB-196}
+}
+
+@Article{IMB-det,
+     author = {R. Becker-Szendy and others},
+collaboration = {The IMB Collaboration},
+     title = "{A Large Water Cherenkov Detector for Nucleon Decay and Neutrino Interactions}",
+     journal = {Nuclear Instruments and Methods},
+     volume = {A324},
+     year = {1993},
+     pages = {363--382}
+}
+@Article{SK-det,
+     author = {{The Super--Kamiokande Collaboration}},
+collaboration = {Super--Kamiokande},
+     title = "{The Super--Kamiokande Detector}",
+     journal = {Nuclear Instruments and Methods},
+     volume = {A501},
+     year = {2003},
+     pages = {418--462}
+}
+@Article{K2K-det,
+     author = {M.H. Ahn and others},
+collaboration = {K2K},
+     title = "{Measurement of Neutrino Oscillation by the K2K Experiment}",
+     journal = {Phys. Rev. D},
+     volume = {74},
+     year = {2006},
+     pages = {072003}
+}
+
+ch6-- three restored 9/17
+
+@Article{Price:2004,
+        author = {Price, P. B. and Sowers, T.},
+        title      = "{Temperature dependence of metabolic rate for microbial growth, maintenance, and survival}",
+        journal = {Proc. of the National Acad. of Sci.},
+        volume = "101",
+        year        = "2004",
+        pages  = {4631--4636}
+        }
+
+@misc{Blakely:2010,
+             author = "Blakely, B.",
+     howpublished = {Private communication},
+     year = "2010"
+}
+@Article{Takeuchi:1999,
+        author = {Takeuchi, Y. and others},
+        title = {Development of high sensitivity radon detectors},
+        journal = {Nucl. Instrum. Meth.},
+        volume = "A421",
+        year = "1999",
+        pages = "334--341"
+        }
+
+
+ch7
+
+@article{GEANT4:NIM,
+author = {S. Agostinelli and others},
+collaboration = {GEANT4},
+title = "{GEANT4 --- A Simulation Toolkit}",
+journal = {Nucl. Instrum. Methods},
+volume = {A},
+number = {506},
+pages = {250--303},
+year = {2003}
+}
+@article{GEANT4,
+author = {J. Allison and others},
+collaboration = {GEANT4},
+title = "{GEANT4 developments and applications}",
+journal = {IEEE Trans. Nucl. Sci.},
+volume = {53},
+number = {1},
+pages = {270--278},
+year = {2006}
+}
+
+@article{GENIE,
+title = "{The GENIE Neutrino Monte Carlo Generator}",
+author = {C.~Andreopoulos and others},
+journal = {Nucl. Instrum. Methods},
+volume = {A},
+number = {614},
+pages = {87--104},
+year = {2010}
+}
+
+@misc{GNUMI,
+title = "{GNUMI NuMI Beamline Simulation Code}",
+note = {\url{http://www.hep.utexas.edu/numi/beamMC/MC-code.html}}
+}
+
+@article{gnumi-validation,
+title = "{Measurement of Neutrino Oscillations with the MINOS Detectors in the NuMI Beam}",
+author =  {{MINOS Collaboration}},
+collaboration = {MINOS},
+journal = {Phys.Rev.Lett.},
+number = {101:131802},
+year = {2008}
+}
+
+@article{SUPERKRECON,
+title = "{Measurement of atmospheric neutrino oscillation parameters by Super-Kamiokande I}",
+author =  {Y. Ashie and others},
+collaboration = {Super-Kamiokande},
+journal = {Phys. Rev.},
+volume = {D},
+number = {71, 112005},
+year = {2005},
+}
+
+@misc{condorbatch,
+title = "{Condor Batch System}",
+note = {\url{http://www.cs.wisc.edu/condor/}}
+}
+
+
+@inproceedings{pandabatch,
+title = "{PanDA: Distributed Production and Distributed Analysis System for ATLAS}",
+author =  {T. Maeno},
+booktitle = {CHEP 07},
+year = {2007},
+note = {\url{https://twiki.cern.ch/twiki/pub/Atlas/PanDA/TadashiMaeno-CHEP2007.pdf}}
+}
+
+
+@inproceedings{comp:icetray,
+title = "{IceTray: A Software Framework For IceCube}",
+author =  {T. DeYoung},
+booktitle = {CHEP 04},
+year = {2004},
+note = {\url{http://indico.cern.ch/contributionDisplay.py?contribId=292&sessionId=6&confId=0}}
+}
+
+
+
+@inproceedings{comp:icecube-live,
+title = "{Searching for Neutrinos Using Python at the Bottom of the World}",
+author = {K.~S.~Beattie and D.~Glowacki},
+booktitle = {PyCon 2009},
+year = 2009,
+note = {\url{http://us.pycon.org/2009/conference/schedule/event/19/}},
+}
+
+fixme: add a more suitable reference.
+@Article{snews,
+     author    = "Antonioli, Pietro and others",
+     title     = "{SNEWS: The SuperNova Early Warning System}",
+     journal   = "New J. Phys.",
+     volume    = "6",
+     year      = "2004",
+     pages     = "114",
+     eprint    = "astro-ph/0406214",
+     archivePrefix = "arXiv",
+     doi       = "10.1088/1367-2630/6/1/114",
+     SLACcitation  = "%%CITATION = ASTRO-PH/0406214;%%"
+}
+
+
+@unpublished{comp:RAT,
+title = "{RAT Simulation and Analysis Tool}",
+author =  {J. Klein},
+note = {LBNE:DocDB-246}
+}
+
+@inproceedings{comp:gaudi,
+title = "{Recent developments in the LHCb software framework, Gaudi}",
+author =  {Marco Clemencic and others},
+booktitle = {J. Phys: Conf. Ser. 219 042006},
+year = {2010}
+}
+
+@misc{comp:mailman,
+title = "{Mailman home page}",
+note = {\url{http://www.gnu.org/software/mailman}}
+}
+
+
+@misc{comp:trac,
+title = "{Trac home page}",
+note = {\url{http://trac.edgewall.org}}
+}
+
+
+@misc{comp:svn,
+title = "{Subversion home page}",
+note = {\url{http://subversion.tigris.org}}
+}
+
+
+@misc{comp:elog,
+title = "{ELOG home page}",
+note = {\url{https://midas.psi.ch/elog/}}
+}
+
+@misc{comp:cvs,
+title = "{Concurrent Version System}",
+note = {\url{http://www.cyclic.com/}}
+}
+
+@misc{comp:git,
+title = "{Git version control system, home page}",
+note = {\url{http://git-scm.com/}}
+}
+
+@misc{comp:mysql,
+title = "{MySQL Database home page}",
+note = {\url{http://www.mysql.com/}}
+}
+
+@misc{comp:postgresql,
+title = "{Postgres Database home page}",
+note = {\url{http://www.postgresql.org/}}
+}
+
+@misc{comp:wiki,
+title = "{MediaWiki home page}",
+note = {\url{http://www.mediawiki.org/}}
+}
+
+
+@misc{comp:hpss,
+title = "{High Performance Storage System home page}",
+note = {\url{http://www.hpss-collaboration.org/}}
+}
+
+@unpublished{comp:prelim-req,
+title = "{LBNE WC Computing (1.4.7) Preliminary Requirements}",
+institution = {BNL},
+note = {LBNE:DocDB-587}
+}
+
+@unpublished{comp:jaffe-estimate,
+title = "{Water Cherenkov detector offline computing time estimate}",
+institution = {BNL},
+note = {LBNE:DocDB-506}
+}
+
+@article{docdb4772,
+title = "{LBNE Science Objectives}",
+author = {{LBNE Project Office}},
+institution = {BNL},
+year = {2011},
+note = {LBNE:DocDB-4772}
+}
+
+@article{docdb3781,
+title = "{LBNE Global Science Requirements}",
+author = {Jeffrey Dolph},
+institution = {BNL},
+year = {2011},
+note = {LBNE:DocDB-3781}
+}
+
+ch8 -- none as of 8/24
+
+ch9 -- none as of 8/24
+
+@misc{ref:lappd,
+author = {J.~Anderson and others},
+collaboration = "LAPPD Collaboration",
+title =  "{The Development of Large-Area Fast Photo-detector. Proposal to DOE (2009)}",
+year = {2009},
+note = {\url{http://psec.uchicago.edu/other/Project_description_nobudgets.pdf}},
+}
+
+@misc{ref:lappd2,
+author = {J.~Anderson and others},
+collaboration = "LAPPD Collaboration",
+title =  "{Technical Design Report for the frugal MCP}",
+year = {2010},
+note = {\url{http://psec.uchicago.edu/library/doe_reports/TDR.pdf}},
+}
+
+
+@inproceedings{ref:MSlappd,
+author = {M. Sanchez and M. Wetstein},
+title = "{Using Large Area Micro-channel Plate Photodetectors in the Next Generation Water Cherenkov Neutrino Detectors}",
+booktitle = {XXIV International Conference on Neutrino Physics and Astrophysics (Neutrino 2010)},
+month = {June},
+year = {2010},
+}
+
+ch rejected alternatives
+
+@article{docdb3538,
+title = "{LBNE VALUE ENGINEERING PROPOSAL: Use wire rope deployment for the wall PMTs}",
+author = {T. Russo},
+institution = {BNL},
+year = {2011},
+note = {LBNE:DocDB-3538}
+}
+
+@article{docdb3119,
+title = "{LBNE VALUE ENGINEERING PROPOSAL: Multiple-length cables to the PMTs}",
+author = {J. Stewart},
+institution = {BNL},
+year = {2011},
+note = {LBNE:DocDB-3119}
+}
+
+
+ch 10 - 1 restored 9/17
+
+@Article{Eguchi:2002dm,
+     author    = "Eguchi, K. and others",
+ collaboration = "KamLAND",
+     title     = "{First results from KamLAND: Evidence for reactor anti-
+                  neutrino disappearance}",
+     journal   = "Phys. Rev. Lett.",
+     volume    = "90",
+     year      = "2003",
+     pages     = "021802",
+     eprint    = "hep-ex/0212021",
+     archivePrefix = "arXiv",
+     doi       = "10.1103/PhysRevLett.90.021802",
+     SLACcitation  = "%%CITATION = HEP-EX/0212021;%%"
+}
+
+@misc{ref:SkGdCapture,
+note = {Personal communication, Bob Svoboda},
+}  
+
+ch10 
+
+@article{docdb4874,
+        author = {J. Stewart and others},
+        title = "{Leak Rate Higher than expected WCD-019 Risk}",
+        year = {2011},
+        note = {LBNE:DocDB-4874}
+}
+
+ch11 -- none as of 8/24
+
+ch12 es&h
+
+
+@unpublished{esh:phad,
+title="{Preliminary Hazard Analysis for the Water Cherenkov Detector}",
+author={R. L. Gill},
+note={LBNE:DocDB-511}
+}
+
+@unpublished{docdb4514,
+title="{LBNE Integrated Environment, Safety, and Health Management Plan}",
+author={M. Andrews},
+note={LBNE:DocDB-4514}
+}
+
+@unpublished{docdb4513,
+title="{LBNE Project Preliminary Hazard Analysis Report}",
+author={M. Andrews},
+note={LBNE:DocDB-4513}
+}
+
+ch13 -- none as of 8/24
+
+@article{risks:superk,
+title = "{The \superk Collaboration}",
+author =  {{The \superk Collaboration}},
+collaboration = {\superk},
+journal = {Phys. Rev.},
+volume = {D},
+number = {73},
+year = {2006},
+note = {}
+}
+
+@article{risks:sno,
+title = "{The SNO Collaboration}",
+author =  {{The SNO Collaboration}},
+collaboration =  {SNO},
+journal = {Phys. Rev.},
+volume = {C},
+number = {72},
+year = {2005},
+note = {}
+}
+                  
+
+vol 5 LAr
+
+
+ch 1
+
+@techreport{docdb355,
+title = {{LAr20 Cryostat Configuration Cost Comparison}},
+author = {Bruce Baller},
+institution = {{FNAL}},
+year = {2009},
+note = {LBNE Doc 355}
+}
+
+ 
+
+@misc{p5report,
+author = {{Particle Physics Project Prioritization Panel}},
+title =  "{US Particle Physics: Scientific Opportunities; A Strategic Plan for the Next Ten Years}",
+year = {2008},
+note = {\url{http://science.energy.gov/~/media/hep/pdf/files/pdfs/p5_report_06022008.pdf}},
+}
+
+@unpublished{lanndd-report,
+author = {{UCLA ICARUS Group}},
+title =  "{Modular LANNDD 20kton detector design report}",
+year = {2010},
+note = {LBNE Doc 2847},
+}
+
+@misc{DoL-rates,
+author = {Bureau of Labor Statistics},
+note = {\url{http://www.bls.gov/iif/oshcfoi1.htm/\#rates}},
+}
+
+
+@proceedings{CMOS-lifetime,
+author = {J. Srinivasan and S. V. Adve and P. Bose, and J. A. Rivers},
+title = "{The impact of technology scaling on lifetime reliability}",
+organization = {IEEE The International Conference on Dependable Systems and Networks (DSN-04)},
+month = {June},
+year = {2004},
+}
+
+
+@article{PMOS-model,
+author = {{M. A. Alam and S. Mahapatra}},
+title = "{A comprehensive model of PMOS NBTI degradation}",
+journal = {Microelectronics Reliability},
+volume = {45},
+number = {1},
+pages = {71--81},
+year = {2005},
+}
+
+
+@proceedings{CMOS-reliability,
+author = {T. Chen and others},
+title = "{CMOS device reliability for emerging cryogenic space electronics applications}",
+organization = {IEEE International Semiconductor Device Research Symposium},
+year = {2005},
+}
+
+@article{LArCMOS,
+author = {G. {De Geronimo} and others},
+title = "{Front-end ASIC for Liquid Argon TPCs}",
+journal = {2010 IEEE Nuclear Science Symposium Conference Record, in press},
+year = {2010},
+}
+
+@misc{projectdocs,
+author = {{LBNE Project Office}},
+title =  "{Description and Estimates for the LBNE Experiment using a 
+   Liquid Argon Far Detector}",
+year = {2011},
+note = {note = {LBNE Doc 3547, v12}},
+}
+
+ch 2 Cryo
+
+AH 11/8/11 All appear to be taken out of chapter content for ch 2
+
+@techreport{docdb3096,
+title = "{LBNE VALUE ENGINEERING PROPOSAL: Remove back up refrigerator, replace with larger LN2 storage}",
+author = {R.~Rucinski},
+institution = {FNAL},
+year = {2010},
+note = {LBNE Doc 3096}
+}
+
+
+@techreport{docdb2485,
+title = "{Modeling Liquid Circulation in LBNE}",
+author = {E. Voirin},
+institution = {FNAL},
+year = {2011},
+note = {LBNE Doc 2485}
+}
+
+@unpublished{wire-orientation,
+author = {B.~Baller},
+title = "{TPC Wire Angle Optimization}",
+year = {2010},
+note = {LBNE Doc 2836},
+
+}
+
+ 
+
+
+@techreport{docdb4380,
+title = "{LAPD Purge Results}",
+author = {B. Rebel},
+institution = {FNAL},
+year = {2011},
+note = {LBNE Doc 4380}
+}
+
+@techreport{docdb4314,
+title = "{Concept Report LAr40 at 800L}",
+author = {{Arup USA, Inc.}},
+institution = {},
+year = {2011},
+note = {LBNE Doc 4314}
+}
+
+@techreport{freedonia,
+title = "{{Executive Summary - Specialty Gases to 2013}}",
+author = {{Freedonia Group}},
+institution = {},
+year = {2010},
+note = {LBNE Doc 2371}
+}
+
+
+@misc{lar-fd-req,
+author={{LBNE LAr-FD L2 Project}},
+title={{LAr-FD Requirements spreadsheets}},
+institution={Fermilab},
+note={LBNE Doc 3747},
+}
+
+@misc{lar-fd-req-traceback,
+author={{LBNE LAr-FD L2 Project}},
+title={{LAr-FD Requirements traceback reports}},
+institution={Fermilab},
+note={LBNE Doc 5185},
+}
+
+@misc{lar-fd-params,
+author={{LBNE LAr-FD L2 Project}},
+title={{LAr-FD Parameter Tables}},
+institution={Fermilab},
+note={LBNE Doc 3383},
+}
+
+
+@misc{feshm,
+author={Fermilab},
+title={{Fermilab ES\&H Manual }},
+institution={Fermilab},
+note={\url{http://esh.fnal.gov/xms/FESHM}}
+}
+
+@unpublished{microboonetdr,
+author = {{MicroBooNE Collaboration}},
+collaboration = {MicroBooNE},
+title =  "{The MicroBooNE Technical Design Report}",
+year = {2012},
+note = {\url{http://microboone-docdb.fnal.gov/cgi-bin/ShowDocument?docid=1821}}
+}
+
+
+ch 3 TPC
+
+AH: this one gone
+@article{Icarus-T600,
+author = {S. Amerio and others},
+title = "{Design, construction and tests of the ICARUS T600 detector}",
+journal = {Nucl. Instrum. Meth. A},
+number = {527, 329},
+year = {2004},
+}
+
+
+@unpublished{LBNE-docdb-3037},
+author = {H. Jostlein},
+title =  "{FNAL APA prototype and wire holding tests}",
+year = {2010},
+note = {LBNE Doc 3037},
+}
+@techreport{FNAL-proto-APA,
+title = "{Be-Cu wire properties and recent epoxy wire holding tests}",
+author = {{H.~Jostlein}},
+institution = {FNAL},
+year = {2011},
+note = {LBNE:DocDB-3657},
+}
+
+@unpublished{requirement-parameters,
+author = {B.~Baller},
+title =  "{LAr20 Requirements and Parameters document}",
+year = {2010},
+note = {LBNE Doc 2843},
+}
+
+AH this one gone
+@unpublished{requirement-parameterwire-bias-study,
+author = {B.~Yu},
+title =  "{Estimation of the wire bias voltages for the LBNE LArTPC}",
+year = {2010},
+note = {LBNE Doc 2833},
+}
+
+@article{CMOS-Compton,
+author = {G. {De Geronimo} and others},
+title = "{Front-end ASIC for a Si Compton telescope}",
+journal = {IEEE Trans. Nucl. Sci.,},
+volume = {55},
+number = {4},
+year = {2008},
+}
+
+ch4 DAQ
+
+@unpublished{novatdr,
+author = {{NOvA Collaboration}},
+collaboration = {NOVA},
+title =  "{The NOvA Experiment Technical Design Report}",
+year = {2007},
+note = {\url{http://lss.fnal.gov/archive/design/fermilab-design-2007-01.pdf}},
+}
+
+@Misc{microboone-url,
+collaboration={{MicroBooNE}},
+note={\url{http://www-microboone.fnal.gov/}}
+}
+
+@Misc{miniboone-url,
+  collaboration={{MiniBooNE}},
+  note={\url{http://www-boone.fnal.gov/}}
+}
+
+@Misc{minos-numi-url,
+  collaboration={{NumI-MINOS}},
+  note={\url{http://www-numi.fnal.gov/}}
+}
+
+
+@Misc{argoneut-url,
+  note={\url{http://t962.fnal.gov/}}
+}
+
+@techreport{docdb4303,
+title = "{Cryostat Insulation Purge Design Basis and Sizing}",
+author = {M. Adamowski},
+institution = {FNAL},
+year = {2011},
+note = {LBNE Doc 4303}
+}
+
+
+
+@unpublished{microboonecdr,
+author = {{MicroBooNE Collaboration}},
+collaboration = {MicroBooNE},
+title =  "{The MicroBooNE Conceptual Design Report}",
+year = {2010},
+note = {\url{http://microboone-docdb.fnal.gov/cgi-bin/ShowDocument?docid=1821}},
+}
+
+ch6 photon detection
+
+@Article{CG,
+     author    = {Compton, A. and Getting, I.A.},
+     journal   = {Phys. Rev.},
+     volume    = {47},
+     year      = {1935},
+     pages     = {817},
+}
+
+@Article{numPhotons,
+     author    = "Doke, T. and others",
+     journal   = "Nucl.Instr. and Meth. A",
+     volume    = "291",
+     year      = "1990",
+     pages     = "617",
+}
+
+@Article{lightguides,
+     author    = "Bugel, L. and others",
+     journal   = "Nucl.Instr. and Meth. A",
+     volume    = "640",
+     year      = "2011",
+     pages     = "69",
+}
+
+@Misc{baller,
+  note="B. Baller, LAr40 Photon Detection Ruminations, August 2011"
+  }
+
+@Misc{caseStudy,
+  author ="{LBNE Science Collaboration}", 
+  title = "{LBNE Case Study Report, Liquid Argon TPC Far Detector, Draft Version 1.2}",
+  year = {2011},
+  }
+
+@Article{bkds,
+     author    = "Benetti, P. and others",
+     journal   = "Nucl.Instr. and Meth. A",
+     volume    = "574",
+     year      = "2007",
+     pages     = "83",
+}
+
+@Article{TPB1,
+     author    = "Gehman, V.M. and others",
+     title     = "{Fluorescence Efficiency and Visible Re-emission Spectrum of Tetraphenyl Butadiene Fils at Extreme Ultraviolet Wavelengths}",
+     journal   = "Nucl.Instr. and Meth. A",
+     volume    = "654",
+     year      = "2011",
+     pages     = "1",
+     eprint    = "astro-ph.IM/1104.3259",
+  }
+
+@Article{TPB2,
+     author    = "Pollman, T. and Boulay, M. and Kuzniak, M.",
+     title     = "Scintillation of thin teraphenyl butadiene fils under alpha particle excitation",
+     year      = "2010",
+     eprint    = "physics.ins-det/1011.1012",
+  }
+
+@Article{CG,
+     author    = "Compton, A. and Getting, I.A.",
+     journal   = "Phys. Rev.",
+     volume    = "47",
+     year      = "1935",
+     pages     = "817",
+}
+
+@Article{TOF,
+     author    = "Adamson, P. and others",
+     collaboration = "MINOS",
+     title     = "{Measurement of Neutrino Velocity with the MINOS Detectors and NuMI Neutrino Beam}",
+     journal   = "Phys. Rev. D",
+     volume    = "76",
+     year      = "2007",
+     pages     = "052003",
+}
+
+@Article{OPERA,
+     author    = "Adam, T. and others",
+     collaboration = "OPERA",
+     title     = "{Measurement of the Neutrino Velocity with the OPERA Detector in the CNGS Beam}",
+     year      = "2011",
+     eprint    = "hep-ex 1109.4897",
+  }
+
+@Misc{cngs-beam,
+  collaboration={{CERN Neutrinos to Gran Sasso (CNGS)}},
+  note={\url{http://proj-cngs.web.cern.ch/proj-cngs/}}
+}
+
+
+
+@Article{theta13,
+     author    = "Adamson, P. and others",
+     collaboration = "MINOS",
+     journal   = "Phys. Rev. Lett.",
+     volume    = "101",
+     year      = "2008",
+     pages     = "131802",
+}
+
+@Article{ellis,
+     author    = "Alexandre, J. and Ellis, J. and Mavromatos, N.E.",
+     title     = "On the Possibility of Superluminal Neutrino Propagation",
+     year      = "2011",
+     eprint    = "hep-ph 1109.6296",
+  }
+
+@Article{rubbia,
+     author    = "Bueno, A. and Gil-Botella, I. and Rubbia, A.",
+     title     = "Supernova Neutrino Detection n a liquid Argon TPC",
+     year      = "2003",
+     eprint    = "hep-ph 0307222",
+  }
+
+@Article{SiPM,
+     author    = "Lightfoot, P.~K. and others",
+     journal   = "JINST",
+     volume    = "4",
+     year      = "2009",
+     pages     = "P04002",
+}
+
+
+ch7 veto
+
+@article{bueno-pdk,
+  author={Antonio Bueno and Antonio J. Melgarejo and Sergio Navas and Zuxiang D\
+ai and Yuanyuan Ge and Marco Laffranchi and Anselmo M
+Meregaglia and Andre Rubbia},
+  title={{Nucleon decay searches with large liquid Argon TPC detectors at shallow depths: atmospheric neutrinos and cosmogenic backgrounds}},
+  journal={Journal of High Energy Physics},
+  volume={2007},
+  number={04},
+  pages={041},
+  url={http://stacks.iop.org/1126-6708/2007/i=04/a=041},
+  year={2007}
+}
+@unpublished{NOvA-docdb3290,
+author = {Ryan Patterson},
+title =  "{Bringing PhotonTransport to Life}",
+year = {2008},
+note = {Internal NOvA document}
+}
+
+ch 8 alt
+
+ch 9 VE
+
+@techreport{docdb3093,
+title = "{LBNE VALUE ENGINEERING PROPOSAL: Eliminate the Photon Detection system WBS}",
+author = {B.!Baller},
+institution = {FNAL},
+year = {2010},
+note = {LBNE Doc 3093}
+}
+
+@techreport{docdb3097,
+title = "{LBNE VALUE ENGINEERING PROPOSAL:  Construct the LAr20 detector(s) in a surface building}",
+author = {B.~Baller},
+institution = {FNAL},
+year = {2010},
+note = {LBNE Doc 3097}
+}
+
+@techreport{docdb3106,
+title = "{LBNE VALUE ENGINEERING PROPOSAL:  Reduce the detector length by one row of APAs}",
+author = {B.~Baller},
+institution = {FNAL},
+year = {2010},
+note = {LBNE Doc 3106}
+}
+
+@techreport{docdb3124,
+title = "{LBNE VALUE ENGINEERING PROPOSAL:  Reduce Access Drift size and upper LAr Cavern size}",
+author = {E.~McCluskey and T.~Lundin},
+institution = {FNAL},
+year = {2010},
+note = {LBNE Doc 3124}
+}
+
+@techreport{docdb3136,
+title = "{LBNE VALUE ENGINEERING PROPOSAL:  Reduce Access Drift size and upper LAr Cavern size}",
+author = {R.~Rucinski},
+institution = {FNAL},
+year = {2010},
+note = {LBNE Doc 3136}
+}
+
+
+@techreport{docdb3132,
+title = "{LBNE VALUE ENGINEERING PROPOSAL:  Increase TPC wire spacing from 3mm to 5mm}",
+author = {B.~Baller},
+institution = {FNAL},
+year = {2010},
+note = {LBNE Doc 3132}
+}
+
+@techreport{docdb3137,
+title = "{LBNE VALUE ENGINEERING PROPOSAL:  Eliminate the APA grid plane}",
+author = {B.~Baller},
+institution = {FNAL},
+year = {2010},
+note = {LBNE Doc 3137}
+}
+
+@techreport{docdb3139,
+title = "{LBNE VALUE ENGINEERING PROPOSAL:  Eliminate the Veto System}",
+author = {B.~Baller},
+institution = {FNAL},
+year = {2010},
+note = {LBNE Doc 3139}
+}
+
+@techreport{docdb3141,
+title = "{LBNE VALUE ENGINEERING PROPOSAL: Increase the TPC electron drift distance from 2.5m to 3.78m}",
+author = {B.~Baller},
+institution = {FNAL},
+year = {2010},
+note = {LBNE Doc 3141}
+}
+
+
+@techreport{docdb3146,
+title = "{LBNE VALUE ENGINEERING PROPOSAL: Fill 2nd Detector with Lar after CD-4- 2 Lar Detectors}",
+author = {B.~Baller},
+institution = {FNAL},
+year = {2010},
+note = {LBNE Doc 3146}
+}
+
+@techreport{docdb3125,
+title = "{LBNE VALUE ENGINEERING PROPOSAL: Eliminate Drive-in Access}",
+author = {E.~McCluskey and T.~Lundin},
+institution = {FNAL},
+year = {2010},
+note = {LBNE Doc 3125}
+}
+
+@Article{Patterson:2009ki,
+     author = {R. B. Patterson and others},
+     title = "{The Extended-Track Event Reconstruction for MiniBooNE}",
+     journal = {Nuclear Instruments and Methods},
+     volume = {A608},
+     year = {2009},
+     pages = {206--224}
+}
+
+@article{Shiozawa:1999sd,
+      author         = "Shiozawa, M.",
+      title          = "{Reconstruction algorithms in the Super-Kamiokande large
+                        water Cherenkov detector}",
+      journal = {Nuclear Instruments and Methods},
+      volume         = {A433},
+      pages          = {240--246},
+      year           = {1999}
+}
+
+
+@article{docdb3945,
+title = "{Fast Optical Monte Carlo Simulation with Surface-Based Geometries Using Chroma}",
+author = {S. Seibert and A. LaTorre},
+institution = {Penn},
+year = {2011},
+note = {LBNE:DocDB-3945}
+}
+
+@misc{DocDB-2639,
+             author = "Raff, J.",
+             title = "{Updated Veto Studies}",
+     howpublished = {Presentation at LBNE Collaboration meeting},
+     year = {2010},
+     note = {LBNE:DocDB-2639}
+}
+
+@misc{DocDB-460,
+             author = "J. Raff and E. Kearns",
+             title = "{Do We Want a Veto Region: Initial Studies}",
+     year = {2009},
+     note = {LBNE:DocDB-460}
+}
+
+@misc{DocDB-2926,
+             author = "Felde, J. and Stavro, J.",
+	     institution = {UC Davis},
+             title = "{An overview of the Magnetic filed test stand at Davis}",
+             note = {LBNE:DocDB-2926}
+}
+
+
+@misc{DocDB-3678,
+             author = "Dhooge, J. and Felde, J. and Stavro, J.",
+	     institution = {UC Davis},
+             title = "{Lab tests of Hamamatsu 10 inch HQE in the UC Davis MagLab}",
+             note = {LBNE:DocDB-3678}
+}
+
+
+@misc{DocDB-3990,
+             author = "Dhooge, J.",
+	     institution = {UC Davis},
+             title = "{Magnetic Field Studies on 10 in PMT for July 2011 collaboration Meeting PMT Parallel Session}",
+             howpublished = {Presentation at LBNE Collaboration meeting},
+             note = {LBNE:DocDB-3990}
+}
+
+@misc{DocDB-3150,
+             author = "Peterson, L.",
+	    institution = {CNA},
+             title = "{WCD Water Containment Vessel}",
+             note = {LBNE:DocDB-3150}
+}
+
+
+
+ch 10 r and d
+
+@techreport{IP,
+title = "{Integrated Plan for LArTPC Neutrino Detectors in the US}",
+author = {{B.~Baller, B.~Fleming}},
+institution = {FNAL},
+year = {2010},
+note = {LBNE:DocDB-2113}
+}
+
+
+@article{MTS,
+      author         = "Shiozawa, M.",
+      title          = "{Reconstruction algorithms in the Super-Kamiokande large
+                        water Cherenkov detector}",
+      journal = {Nuclear Instruments and Methods},
+      volume         = {A433},
+      pages          = {240--246},
+      year           = {1999}
+}
+
+new fall 2012
+TPC chap
+
+@techreport{docdb6140,
+title = "{Liquid Argon Circulation, Temperature Profile, and Impurity Distribution in the 10kT LBNE Cryostat}",
+author = {{E.~Voirin}},
+institution = {FNAL},
+year = {2012},
+note = {LBNE:DocDB-6140}
+}
+
+@techreport{docdb2117,
+title = "{LAr20 Reference Design 1a: Modified MicroBooNE TPC Modules in a Membrane Cryostat at Shallow Depth}",
+institution = {FNAL},
+year = {2010},
+note = {LBNE:DocDB-2117}
+}
+
+@techreport{docdb644,
+title = "{LAr20 Reference Design 2a: Membrane Cryostat with Wrapped TPC Modules and Accessible Electronics in a Deep Cavern}",
+institution = {FNAL},
+year = {2010},
+note = {LBNE:DocDB-644},
+}
+
+
+@techreport{docdb3609,
+title = "{Purification Design Basis and Filter Sizing}",
+author = {{M.~Adamowski}},
+institution = {FNAL},
+year = {2011},
+note = {LBNE:DocDB-3609},
+}
+
+@misc{lbne-fnal-mou,
+title = "{Draft MOU between LBNE and the Fermilab Directorate}",
+note = {\url{http://lbne2-docdb.fnal.gov:8080/cgi-bin/ShowDocument?docid=6319}},
+year = {2012},
+}
+
+@techreport{docdb5122,
+title = "{Decision on the depth and extraction point of the LBNE Neutrino Beamline}",
+author = {{V.~Papadimitriou}},
+institution = {FNAL},
+year = {2011},
+note = {LBNE:DocDB-5122},
+}
+
+@misc{mohapatra2005,
+title = "{Theory of Neutrinos: A White Paper}",
+author = {R. N. Mohapatra and others},
+year = {2005},
+note = {arXiv:hep-ph/0510213v2},
+}
+
+@misc{LBNEreconfig,
+title = "{LBNE Reconfiguration: Steering Committee Report}",
+author = {Y. K. Kim and others},
+year = {2012},
+note = {\url{http://www.fnal.gov/directorate/lbne_reconfiguration/index.shtml}},
+}
+
+@misc{LBNEreconfigPWG,
+title = "{Physics Working Group Report to the LBNE Reconfiguration Steering Committee}",
+author = {J. Appel and others},
+year = {2012},
+note = {\url{http://www.fnal.gov/directorate/lbne_reconfiguration/files/LBNE-Reconfiguration-PhysicsWG-Report-August2012.pdf}},
+}
+
+@unpublished{pwg-int-report,
+author = {T. Akiri and others},
+title = "{The 2010 Interim Report of the Long Baseline Neutrino Experiment Collaboration Physics Working Groups}",
+note = {arXiv:1110.6249},
+}
+
+
+@misc{DOCDB6251,
+title = "{The Science and Strategy for a Long-Baseline Neutrino Experiment}",
+author = {M.Bishai and others},
+year = {2012},
+note = {\url{http://www.fnal.gov/directorate/lbne_reconfiguration/index.shtml}}
+}
+
+@misc{COSMICBKGD,
+title = "{Muon-induced background for beam neutrinos at the surface}",
+author = {D. Barker and others},
+year = {2012},
+note = {LBNE-doc-6232},
+}
+
+@article{LED,
+title = "{Testing for Large Extra Dimensions with Neutrino Oscillations}",
+author = {P. A. N. Machado and others},
+journal = {Phys. Rev. D.},
+volume = {84},
+pages = {013003},
+year = {2011},
+note = {arXiv:1101.003 [hep-ex]},
+}

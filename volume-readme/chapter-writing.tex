@@ -1,0 +1,315 @@
+
+\chapter{Writing \LaTeX}
+
+This is the start of a chapter and gives some introduction before its first section.  This chapter describes basic \LaTeX{} you need to know.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Sectioning}
+\label{sec:sectioning}
+
+The following sectioning macros are available, ordered in descending
+importance:
+
+\begin{verbatim}
+\chapter{A Chapter}
+\section{A Section}
+\subsection{A Sub Section}
+\subsubsection{A Sub Sub Section}
+\subsubsubsection{A Sub Sub Sub Section}
+\end{verbatim}
+
+Three-sub's is all you get.  
+Consult with the technical editors if you feel finer grained
+sectioning is required.
+Starting from \verb|\subsection|, this produces the following:
+
+\subsection{A Sub Section}
+
+This is a subsection.
+
+\subsubsection{A Sub Sub Section}
+
+This is a subsubsection.
+
+\subsubsubsection{A Sub Sub Sub Section}
+
+This is a subsubsubsection and is getting to be a bit too fine-grained. It will not appear in 
+the table of contents, which will show entries as low as subsubsection only.
+
+\subsection{Section Labels}
+
+Just after defining a chapter and any significant section a
+\verb|\label| should be added so it can be referenced.
+A label can be added later for a `'less significant'' section that
+turns out to need one. You can label them all. 
+
+For example:
+
+\begin{verbatim}
+\chapter{A Chapter}
+\label{ch:a-chapter}
+
+\section{A Section}
+\label{sec:a-section}
+
+\subsection{A Sub Section}
+\label{subsec:a-subsection}
+\end{verbatim}
+
+See Section~\ref{sec:refs} for how to reference labeled sections.
+
+\FloatBarrier
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Figures}
+\label{sec:figures}
+
+See Section~\ref{sec:figure-format} for guidelines on the graphics files themselves.
+Instead of using the usual \texttt{figure} environment a custom \texttt{cdrfigure}
+environment is used in order to provide for a consistent presentation.
+The environment is called with one optional and two required
+arguments:
+
+\begin{enumerate}
+\item An initial, optional short caption for the List Of Figures, in square brackets.
+\item A label for referencing (it will have \texttt{fig:} prepended). Curly brackets.
+\item The full caption. Curly brackets, again.
+\end{enumerate}
+
+This is followed by including the graphic file.
+
+\begin{cdrfigure}[Short ToF caption]{aerial}{An aerial photograph of Fermilab
+    showing Wilson Hall and surrounding accelerator rings (Fermilab
+    Visual Media Services)}
+  \includegraphics[width=0.8\textwidth]{fermilab-aerial.jpg}
+\end{cdrfigure}
+
+
+When the figure contains a graphic,  usually \texttt{includegraphics} is used.
+The filename is assumed relative to a volume-specific \texttt{graphicspath} as
+described in Section~\ref{sec:files} and as such one typically should
+\textbf{not} specify any directory parts in its name.
+The file's extension may be omitted.
+An example can be seen in Figure~\ref{fig:aerial}, which is created
+with the following \LaTeX shown in Figure~\ref{fig:aerial-latex}
+
+\begin{cdrfigure}{aerial-latex}{\LaTeX{} showing how to do include a figure.}
+\begin{verbatim}
+\begin{cdrfigure}[Short ToF caption.]{aerial}{An aerial photograph of Fermilab
+    showing Wilson Hall and surrounding accelerator rings (Fermilab
+    Visual Media Services)}
+  \includegraphics[width=0.8\textwidth]{fermilab-aerial.jpg}
+\end{cdrfigure}
+\end{verbatim}
+\end{cdrfigure}
+
+\FloatBarrier
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Tables}
+\label{sec:tables}
+
+Like figures, we use a special environment, \texttt{cdrtable} for
+tables to achieve a degree of consistency.
+This is instead of the usual double \texttt{table} + \texttt{tabular} environments.
+The \texttt{cdrtable} environment takes one optional and three
+required arguments:
+
+\begin{enumerate}
+\item An initial, optional short caption for the List of Tables. Square brackets.
+\item The tabular column specification. Curly brackets for the last three.
+\item A label for referencing (it will have \texttt{tab:} appended)
+\item The full caption.
+\end{enumerate}
+
+Inside the actual contents of the table you are required to provide a
+initial row containing the headings for the table's rows followed by a
+\texttt{toprowrule} macro.
+Following every regular row (except the last) you should include a
+\texttt{colline} macro.
+Both of these take the place of the usual \texttt{hline}.
+
+\begin{cdrtable}[The LoT caption]{cc}{example}
+{This is an example table. We will use better colors, don't worry.}
+  Rows & Counts \\ \toprowrule
+  Row 1 & First \\ \colhline
+  Row 2 & Second \\ \colhline
+  Row 3 & Third \\ 
+\end{cdrtable}
+
+\noindent Table~\ref{tab:example} is thus made like (arguments can span lines):
+
+\begin{verbatim}
+\begin{cdrtable}[The LoT caption]{cc}{example}
+{This is an example table. We will use better colors, don't worry.}
+  Rows & Counts \\ \toprowrule
+  Row 1 & First \\ \colhline
+  Row 2 & Second \\ \colhline
+  Row 3 & Third \\ 
+\end{cdrtable}
+\end{verbatim}
+
+Table~\ref{tab:pdecay} shows a more complex example.
+See the source for how it is written.
+Note that special column specifications are used.
+
+\begin{cdrtable}[Efficiencies and background rates for nucleon decay
+  modes]{$L^c^c^c^c}{pdecay}{Efficiencies and background rates for
+    nucleon decay channels of interest for a large underground LArTPC,
+    and comparison with water Cherenkov detector capabilities} %$
+  Decay Mode & \multicolumn{2}{^c}{Water Cherenkov} & 
+\multicolumn{2}{^c}{Liquid Argon TPC} \\
+\rowtitlestyle
+& Efficiency & Background & Efficiency & Background \\ \toprowrule
+$p \rightarrow K^+ \overline{\nu}$ & 19\% & 4 & 97\% & 1 \\ \colhline
+$p \rightarrow K^0 \mu^+$ & 10\% & 8 & 47\% & $<2 $ \\ \colhline
+$p \rightarrow K^+ \mu^- \pi^+$ & & & 97\% & 1 \\ \colhline
+$n \rightarrow K^+ e^- $ & 10\% & 3 & 96\% & $<2$ \\ \colhline
+$n \rightarrow e^+\pi^-$ & 19\% & 2 & 44\% & 0.8 \\
+\end{cdrtable}
+
+\FloatBarrier
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Referencing and Citations}
+\label{sec:refs}
+
+Note: if you see a grey label blox containing \texttt{sec:refs}
+between this paragraph and the section heading (or in general
+elsewhere in chapters, sections, figures, etc), it means this document
+was built in draft mode.  
+These artifacts show up to help you know what label was used to
+reference each particular thing.
+
+
+\subsection{Intra-document References}
+
+Assume that any chapter, section or important sub-, subsub-, section
+or within any figure or table environment may need to be referenced
+elsewhere in the text. As described in Section~\ref{sec:sectioning},
+define a label (\verb|\label{...}| for these items.
+Use the defined label in a \verb|\ref{...}| in order to make reference
+to the chapter, section, figure, etc.
+For example:
+
+\begin{verbatim}
+\chapter{Some Chapter}
+\label{ch:some-chapter}
+
+\subsection{Some Sub Section}
+\label{subsec:some-sub-section}
+
+...
+
+As described in Chapter~\ref{ch:some-chapter} ...
+
+As shown in Figure~\ref{fig:fermilab-aerial} ...
+\end{verbatim}
+
+When you reference a chapter, section, subsection, figure, table,
+etc., capitalize the word ``Chapter'' or whatever it is, e.g., ``as
+shown in Section~\ref{sec:plots}.''
+Use the word ``Section'' even if it's a subsection or subsubsection,
+and use the tilde sign to keep the number on the same line as the word
+that precedes it.
+
+Examples for figures and tables have been given above.  Here I
+reference this section:~\ref{sec:refs}.  
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Citations}
+
+Referencing citations is done like \verb|\cite{strunk}| which gives \cite{strunk}.
+(Compiling the bibliography entries into the document requires an extra step: run ``bibtex'' on
+ volume-readme.tex, then run pdflatex on it again a couple of times. Otherwise you'll see [?] here 
+ and no bibliography entry at the end.) 
+The key \texttt{strunk} matches an entry in the \texttt{common/citedb.bib}
+file (as relative to the top-level directory).
+
+
+The \texttt{citedb.bib} file is in BibTex format.
+This is \textbf{not} \LaTeX{} format and in particular does not
+indicate comments via \texttt{\%} characters.
+The content and order of entries in this file is not reflected in the
+generated Bibliography.
+However, manual care must be taken to avoid duplication.
+Before adding any entry to \texttt{citedb.bib} read/search through it
+to ascertain that the entry you wish to add is not already there.
+
+\section{Common Names}
+
+To enforce consistency, use a \LaTeX{} macro in place of any name or
+term which is frequently used.
+It is especially important to do this if the name or term is subject
+to multiple ``spellings''.
+The file \texttt{common/defs.tex} is where all such macros should be defined.
+
+Some examples:
+
+\begin{itemize}
+\item \dm{21} is written as \verb|\dm{21}|.
+\item \SURF is written as \verb|\SURF|.
+\end{itemize}
+
+\section{Numbers and Units}
+
+\textbf{All} numerical quantities expressed as literal number
+\textbf{must} have units unless they are inherently do not have a unit.
+In order to enforce consistency the \texttt{siunitx} package is used
+and a collection of common units are defined in
+\texttt{common/units.tex}.
+
+\subsection{Bare Numbers}
+
+To enforce consistent writing of numbers encase them in the
+\verb|\num{}| command:
+
+\begin{itemize}
+\item ``\num{100}'' is written as \verb|\num{100}|.
+\item ``\num{1000}'' is written as \verb|\num{1000}|.
+\item ``\num{123.456}'' is written as \verb|\num{123.456}|.
+\end{itemize}
+
+\subsection{Bare Units}
+
+If you need to write a bare unit, one with not associated number, use
+\verb|\si{}| (lower case ``si'')
+
+\begin{itemize}
+\item ``\si{m}'' is written \verb|\si{m}|.
+\item ``\si{pc}'' is written \verb|\si{pc}|.
+\end{itemize}
+
+\subsection{Numbers and Units}
+
+When a quantity has a unit write both the numerical part and the unit
+using the \verb|\SI{}{}| command like:
+
+\begin{itemize}
+\item ``\SI{120}{GeV}'' is written as \verb|\SI{120}{GeV}|.
+\item ``\SI{4850}{foot}'' is written as \verb|\SI{4850}{foot}|
+\end{itemize}
+
+\subsection{Adjective Quantities}
+
+Some language uses quantities as adjectives.
+These require proper outfitting with a dash which is easy to forget.
+To accommodate this a set of ``adjective quantities'' commands are defined.
+A generic \verb|\SIadj| is provided as are some commonly used ones.
+For example:
+
+\begin{itemize}
+\item ``The \SIadj{4850}{ft} level'' is written as \verb|The \SIadj{4850}{ft} level|.
+\item ``The \ftadj{4850} level'' is written as \verb|The \ftadj{4850} level|.
+\item ``A typical \GeVadj{2} event'' is written as \verb|A typical \GeVadj{2} event|.
+\item 
+\end{itemize}
+
+\subsection{Common compound units}
+
+There are some common units that rather long to type out each time
+especially when we require nice formatting.
+
+\begin{itemize}
+\item ``per \msr'' is written as \verb|per \msr|
+\item ``exposure in \ktmwyr{}s'' is written as \verb|exposure in \ktmwyr{}s|
+\end{itemize}
+

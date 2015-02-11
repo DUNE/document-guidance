@@ -1,0 +1,31 @@
+\ifdefined\isfinal\documentclass[final]{cdr}\else\documentclass{cdr}\fi
+\pdfoutput=1            % must be in first 5 lines so arXiv finds it
+
+% Edit: set this line to match this volume's sub-directories holding figures
+\graphicspath{ {figures/}{volume-readme/figures/}{volume-readme/generated/} }
+
+% Leave as is.
+% This includes all common settings which are related to this
+% particular CDR's set of volumes.
+\input{common/preamble}
+
+% Edit: set this to the subtitle specific to this volume
+\renewcommand\thevolumesubtitle{Volume: README}
+
+\begin{document}
+% Leave as is. Initial content common to all volumes.
+\input{common/init}
+
+% Edit: input each chapter file in order
+
+\input{volume-readme/chapter-general}
+
+\input{volume-readme/chapter-writing}
+
+\input{volume-readme/chapter-editing}
+
+\input{volume-readme/chapter-technical}
+
+% Leave as is: Any final content common to all volumes.
+\input{common/final}
+\end{document}

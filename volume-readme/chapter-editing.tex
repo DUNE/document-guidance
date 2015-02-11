@@ -1,0 +1,41 @@
+\chapter{Reviewing and Editing}
+
+
+\section{Markup}
+
+While reviewing, it is possible to mark up the document with simple
+\LaTeX{} macros as provided by the ``todonotes'' class.
+This class has many features but a few are more important.
+
+Note: if you do not see the examples in this section your copy may
+have been built with the ``\texttt{final}'' option turned on.
+
+
+\subsection{Inline Fixme}
+
+You may prefer to place an inline note to mark up the text.
+This can be accomplished with a \fixme{Think of something critical
+  about this sentence} \verb|\fixme{...}| command.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Margin notes}
+
+You can add notes to the \todo{run spell checker}margine easily which
+are associated with some text using:
+
+\begin{verbatim}
+\todo{run spell checker.}
+\end{verbatim}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Highlighting}
+
+If you wish to make add a comment on some section of text you may
+\hlfix{highlight it}{This shows how.}with a comment.
+
+
+\begin{verbatim}
+\hlfix{highlight it}{This shows how.}
+\end{verbatim}
+
+
