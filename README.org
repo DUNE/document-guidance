@@ -24,17 +24,17 @@ Clone the repository:
 To build the documents you need `pdflatex` and `bibtex`.  In each repository there will be one or more main LaTeX file with a correspondingly named sub-directory holding the bulk of the =.tex= files.  
 
 #+BEGIN_EXAMPLE
-  $ pdflatex document-guidance
-  $ bibtex document-guidance
-  $ pdflatex document-guidance
-  $ pdflatex document-guidance
+  $ pdflatex guidance
+  $ bibtex guidance
+  $ pdflatex guidance
+  $ pdflatex guidance
 #+END_EXAMPLE
 
 Unless references change, it is usually sufficient for subsequent
 builds to run only:
 
 #+BEGIN_EXAMPLE
-  $ pdflatex document-guidance
+  $ pdflatex guidance
 #+END_EXAMPLE
 
 You may need to run this command twice to get the paging and numbering
@@ -44,10 +44,10 @@ The documents use the [[./cdr.cls][cdr.cls]] class are by default built with edi
 markup.  The technical editors are responsible for producing a clean
 and properly built version of any document for internal and final
 release but anyone may attempt to produce a "final" version themselves.
-To do that, replace each =pdflatex document-guidance= command
+To do that, replace each =pdflatex guidance= command
 with this one like:
 
-    pdflatex "\def\isfinal{1} \input{document-guidance}"
+    pdflatex "\def\isfinal{1} \input{guidance}"
 
 * Repository
 
