@@ -6,51 +6,63 @@ This chapter describes some of the more technical aspects of the CDR.
 \section{Getting the Files and Compiling after your Changes}
 \label{sec:getfiles-compile}
 
-Instructions for getting the files and compiling a volume are given on the home page of the repository, at
-\href{https://github.com/LBNE/lbn-cdr}{https://github.com/LBNE/lbn-cdr}. Scroll down to 
-``Guidance'' and ``Getting Started.''
+Detailed instructions for getting the files and compiling a volume are
+given on main GitHub page for the repository supplying this document at
+\url{https://github.com/LBNE/document-guidance}.
 
-Note that any acronyms list that a volume has requires an extra step to be included; this step
-is not documented there.
-The technical editors will take care of it.
+\fixme{Note that any acronyms list that a volume has requires an extra
+  step to be included; this step is not documented there.
+  The technical editors will take care of it.}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{The \LaTeX{} CDR class}
 
-All of the \LaTeX{} configuration for the document that pertains to the general CDR style and not to the actual content is in the \texttt{cdr.cls} file.  The class takes some options that control high-level style:
+All of the \LaTeX{} configuration for the document that pertains to
+the general ``CDR'' style is in the
+\texttt{cdr.cls} file.
+The class takes some options that control high-level style:
 
 \begin{description}
-\item[\texttt{draft}] produce markup to assist in editing (line numbers, draft water mark, label tags)
-\item[\texttt{print}] print quality (remove editing markup)
+\item[\texttt{final}] this removes all extra markup useful during
+  editing phase.
 \end{description}
-
-Instructions for producing one or the other are listed on the GitHub site referenced in Section~\ref{sec:getfiles-compile}.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Volume-generic \LaTeX{} files}
 
-There are several files specific to the topic of the CDR but used for all the volumes, hence 
-they are in the \texttt{common} directory:
-
+Multi-volume documents are supported and should use the
+\texttt{common/} subdirectory to house any information that is to be
+shared between volumes.
+Single-volume documents will also supply some files here.
+The expected ``common'' files include:
 \begin{description}
-\item[\texttt{common/preamble.tex}] placed before the document begins and should provide all macros to define common terms or units.
-\item[\texttt{common/init.tex}] placed immediately after the document starts and should provide things like title page, author list, toc/lof/lot, etc.
-\item[\texttt{common/final.tex}] placed immediately before the document ends and should provide the bibliography setup or any other common trailing matter.
-\item[\texttt{common/defs.tex}] (input to the preamble) contains macros for some commonly 
-used terms and expressions. Please review this file and use the definitions to help ensure consistency
-throughout the document.
+\item[\texttt{defs.tex}] macros defining common terms.
+\item[\texttt{units.tex}] macros defining how to use quantities and units.
+\item[\texttt{preamble.tex}] largely including the above to files but
+  any extra \LaTeX{} configuration that goes before the document
+  environment begins.
+\item[\texttt{citedb.bib}] the BitTeX database.
+\item[\texttt{init.tex}] Any content that goes in the document
+  environment but before the first chapter.
+  It typically should contain title page, ToC/LoF/LoT.
+\item[\texttt{final.tex}] Any content that goes in the document after
+  the last chapter.
+  It typically should contain the commands related to producing the
+  bibliography.
 \end{description}
 
-Also in the \texttt{common} directory are two content-related files: \texttt{intro.tex} and \\
-\texttt{supp-doc-list.tex}.  All volumes except the introductory volume will share the introduction
-contained in \texttt{intro.tex}.  The other is a list of supporting documents that this
-introduction file pulls in.
+The content of many of these files should in part be kept in sync
+across all document repositories.
+
+Specific documents may place additional files in this \texttt{common/}
+directory that should be shared among the document's volumes.
+For example, all volumes of the CDR include an \texttt{intro.tex}
+(which further includes \texttt{supp-doc-list.tex}).
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{The volume-(name).tex file}
+\section{The main file}
 
-\hlfix{Contributors do not need to do this!} \\
-
+A new main file will likely be started only by the technical editors.
 To start a new volume, copy the \texttt{guidance.tex} to a new
 name and edit as directed by the comments.  
 
