@@ -2,8 +2,8 @@
 
 This repository holds the source for a document to provide guidance on writing
 
-- [The LBNE Far Detector Closeout](https://github.com/LBNE/lbne-fd-closeout)
-- [The ELBNF (name subject to change) CDR](https://github.com/LBNE/lbn-cdr)
+- [[https://github.com/LBNE/lbne-fd-closeout][The LBNE Far Detector Closeout]]
+- [[https://github.com/LBNE/lbn-cdr][The ELBNF (name subject to change) CDR]]
 
 These and other documents, including the
 [[https://github.com/LBNE/cern-prototype-proposal][Proposal for a Full-Scale, Single-Phase Prototype at CERN]] are organized through the
@@ -16,10 +16,24 @@ This guidance is in the form of a LaTeX document which tries to follow its own g
 This section describes how to check out the source to this document,
 edit and build it and to push commits back.  Substitute the actual document repository name for =document-guidance= in the following examples:
 
-Clone the repository:
+** Initial clone
 
-    git clone https://github.com/LBNE/document-guidance.git
-    cd document-guidance
+To start with you must "clone" the remote repository from GitHub.  Each GitHub repository web site provides a URL on the right-hand sidebar.  The HTTPS URL can be used for anonymous clone and then later can be pushed to (see below) by supplying your GItHub password.  The SSH URL requires uploading a public key to GitHub but then no password need be given.  Pick the URL you like and then cloning is simple:
+
+#+BEGIN_EXAMPLE
+  $ cd /my/work/area
+  $ git clone <URL>
+#+END_EXAMPLE
+
+For example, to clone this repository using the HTTPS URL one would do:
+
+#+BEGIN_EXAMPLE
+  $ cd /my/work/area
+  $ git clone https://github.com/LBNE/document-guidance.git
+  $ cd document-guidance
+#+END_EXAMPLE
+
+** Building the documents
 
 To build the documents you need `pdflatex` and `bibtex`.  In each repository there will be one or more main LaTeX file with a correspondingly named sub-directory holding the bulk of the =.tex= files.  
 
@@ -47,7 +61,9 @@ release but anyone may attempt to produce a "final" version themselves.
 To do that, replace each =pdflatex guidance= command
 with this one like:
 
-    pdflatex "\def\isfinal{1} \input{guidance}"
+#+BEGIN_EXAMPLE
+   $ pdflatex "\def\isfinal{1} \input{guidance}"
+#+END_EXAMPLE
 
 * Repository
 
