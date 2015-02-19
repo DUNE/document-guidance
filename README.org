@@ -18,7 +18,7 @@ edit and build it and to push commits back.  Substitute the actual document repo
 
 ** Initial clone
 
-To start with you must "clone" the remote repository from GitHub.  Each GitHub repository web site provides a URL on the right-hand sidebar.  The HTTPS URL can be used for anonymous clone and then later can be pushed to (see below) by supplying your GItHub password.  The SSH URL requires uploading a public key to GitHub but then no password need be given.  Pick the URL you like and then cloning is simple:
+To start with you must "clone" each remote repository that you need from GitHub.  Each GitHub repository web site provides a URL on the right-hand sidebar.  The HTTPS URL can be used for anonymous clone and then later can be pushed to (see below) by supplying your GItHub password.  The SSH URL requires uploading a public key to GitHub but then no password need be given.  Pick the URL you like and then cloning is simple:
 
 #+BEGIN_EXAMPLE
   $ cd /my/work/area
@@ -79,28 +79,30 @@ editors.)
 
 #+BEGIN_EXAMPLE
   $ cd lbn-cdr
-  # now edit away!
-  $ git commit -a -m "Some commit message"
-  $ git push
-#+END_EXAMPLE
-
-If you have made a new file you need to first add it:
-
-#+BEGIN_EXAMPLE
-  $ git add the-new-file.tex
-  $ git commit -a -m "Some commit message"
-  $ git push
-#+END_EXAMPLE
-
-** Pull to push
-
-You bring down new commits that have been pushed by others with:
-
-#+BEGIN_EXAMPLE
+  # Before you start, it's wise to pull down the latest commits from others
   $ git pull
+  # Edit your files, save your changes, and test that the document compiles.
+  # If any of your files are new, add it/them before committing, e.g.,:
+  $ git add volume-x/the-new-file.tex
+  $ git add volume-x/figures/the-new-picture.pdf
+  ...
+  $ git commit -a -m "Some commit message"
+  $ git push
 #+END_EXAMPLE
 
-If any commits have been pushed by others since the last time you did a =git pull= (or since your initial =git clone=) then git will not allow you to =push= until you have done a fresh =git pull=.  It is also a good idea to go a =git pull= before starting an editing session to minimize the chance of having to deal with resolving conflicts.
+If any commits have been pushed by others since the last time you did a =git pull= (or since your initial =git clone=) then git will not allow you to =push= until you have done a fresh =git pull=.  
+
+If =git pull= doesn't work due to a conflict, "stash" your changes, pull in the latest commits (it should work after git stash), then "unstash" or "pop" your changes back in and resolve conflicts.
+
+#+BEGIN_EXAMPLE
+  $ git stash
+  $ git pull
+  $ git stash pop
+  # Resolve the conflicts in the affected file(s)
+  # Make sure the entire document compiles
+  $ git commit -a -m "Some commit message"
+  $ git push
+#+END_EXAMPLE
 
 ** Git-phobic
 
