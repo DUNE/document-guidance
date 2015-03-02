@@ -65,6 +65,12 @@ with this one like:
    $ pdflatex "\def\isfinal{1} \input{guidance}"
 #+END_EXAMPLE
 
+* Autobuilder
+
+A PDF of the documented is generated through the services of [[https://www.sharelatex.com][ShareLaTeX]]:
+
+  https://www.sharelatex.com/github/repos/LBNE/document-guidance
+
 * Repository
 
 It is strongly recommended that any changes made to a document be
