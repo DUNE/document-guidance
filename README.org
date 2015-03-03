@@ -13,11 +13,65 @@ This guidance is in the form of a LaTeX document which tries to follow its own g
 
 * Getting started
 
-This section describes how to check out the source to this document,
+This section first describes how to install git on a Mac. (In response to people who were having trouble with it. If you have trouble
+on another platform, please contact Anne.) Then it describes how to check out the source to this document-guidance document,
 edit and build it and to push commits back.  Substitute the actual document repository name for =document-guidance= in the following examples:
+
+
+** Install git on a Mac (git from GitHub)
+
+First install Xcode if you don’t already have it (under Applications folder)
+In your browser go to [[https://developer.apple.com/xcode/downloads/][https://developer.apple.com/xcode/downloads/]
+Under “download Xcode for free” click “view in mac app store”
+Sign in with your apple ID (yes, it assumes you have one)
+It should install in your Applications directory (takes several minutes; it's 5.6 GB!)
+Then open it up and agree to the license. (Requires admin privileges.)
+
+Now install git from github:
+Go to [[https://mac.github.com][https://mac.github.com]]
+Click the download button..
+
+In a few seconds it turned my download icon in the apps bar into the purple cat icon.
+Click on GitHub (cat) icon.
+It comes up with a setup screen
+Click ‘continue’
+Login to github (create a login at this point if you don't have one already)
+Click continue.
+Provide email address.
+Do you want the command line tools? Yes, you do, so click:
+Install command line tools (requires mac login/admin pw)
+Click continue
+It asks: which repositories to use
+you don’t have any yet, so click "Done"
+Then the github window comes up and says "find repositories”
+
+Leave that for now and go back to browser.
+Go to [[https://github.com/LBNE][https://github.com/LBNE]]
+Choose the repository you want (e.g., line-fd-closeout)
+In bottom right, see button: Clone in Desktop
+Click it.
+The GitHub app comes up with a popup to Clone it. Check if the target directory is ok, change it if you want, then click Clone.
+It’s there!
+
+Go to your terminal window.
+Navigate to your new repository, e.g., Documents/lbne-fd-closeout
+You should find everything there.
+
+Do a “git pull” before you begin just in case anything has changed. 
+See the popup that says you should install the command line developer tools.
+Do so. (Even if you thought you already had.)
+if you haven't installed Xcode, you will get this error:
+ERROR: "no developer tools were found at '/Applications/Xcode.app', requesting install. 
+Choose an option in the dialog to download the command line developer tools."
+
+Stop and install Xcode, if needed (see instructions above)
+
+Try "git pull" again
+Now you should have it all set up.
 
 ** Initial clone
 
+If you've just gone through the "Install on Mac" procedure, skip this step.
 To start with you must "clone" each remote repository that you need from GitHub.  Each GitHub repository web site provides a URL on the right-hand sidebar.  The HTTPS URL can be used for anonymous clone and then later can be pushed to (see below) by supplying your GItHub password.  The SSH URL requires uploading a public key to GitHub but then no password need be given.  Pick the URL you like and then cloning is simple:
 
 #+BEGIN_EXAMPLE
@@ -82,6 +136,9 @@ can likely be accommodated.  Check with the document technical
 editors.)
 
 ** General git procedure:
+
+If you installed the GitHub for Mac (instructions above), you can use the GUI provided to
+pull, commit and push, if you prefer.
 
 #+BEGIN_EXAMPLE
   $ cd lbn-cdr
