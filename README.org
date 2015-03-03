@@ -20,53 +20,73 @@ edit and build it and to push commits back.  Substitute the actual document repo
 
 ** Install git on a Mac (git from GitHub)
 
-First install Xcode if you don’t already have it (under Applications folder)
-In your browser go to [[https://developer.apple.com/xcode/downloads/][https://developer.apple.com/xcode/downloads/]
-Under “download Xcode for free” click “view in mac app store”
-Sign in with your apple ID (yes, it assumes you have one)
-It should install in your Applications directory (takes several minutes; it's 5.6 GB!)
+First install Xcode if you don’t already have it (under Applications folder). 
+
+In your browser go to [[https://developer.apple.com/xcode/downloads/][https://developer.apple.com/xcode/downloads/].
+
+Under “download Xcode for free” click “view in mac app store”.
+
+Sign in with your apple ID (yes, it assumes you have one).
+
+It should install in your Applications directory (takes several minutes; it's 5.6 GB!). 
 Then open it up and agree to the license. (Requires admin privileges.)
 
 Now install git from github:
-Go to [[https://mac.github.com][https://mac.github.com]]
-Click the download button..
+
+Go to [[https://mac.github.com][https://mac.github.com]], and 
+click the download button..
 
 In a few seconds it turned my download icon in the apps bar into the purple cat icon.
-Click on GitHub (cat) icon.
-It comes up with a setup screen
-Click ‘continue’
+
+Click on GitHub (cat) icon. It comes up with a setup screen.
+
+Click ‘continue’.
+
 Login to github (create a login at this point if you don't have one already)
 Click continue.
+
 Provide email address.
+
 Do you want the command line tools? Yes, you do, so click:
-Install command line tools (requires mac login/admin pw)
-Click continue
-It asks: which repositories to use
-you don’t have any yet, so click "Done"
+"Install command line tools" (requires mac login/admin pw)
+
+Click continue.
+
+It asks: "which repositories to use". 
+You don’t have any yet, so click "Done".
+
 Then the github window comes up and says "find repositories”
 
 Leave that for now and go back to browser.
-Go to [[https://github.com/LBNE][https://github.com/LBNE]]
-Choose the repository you want (e.g., line-fd-closeout)
-In bottom right, see button: Clone in Desktop
+
+Go to [[https://github.com/LBNE][https://github.com/LBNE]].
+
+Choose the repository you want (e.g., line-fd-closeout).
+
+In bottom right, see button: Clone in Desktop. 
 Click it.
+
 The GitHub app comes up with a popup to Clone it. Check if the target directory is ok, change it if you want, then click Clone.
 It’s there!
 
-Go to your terminal window.
+Go to your terminal window. 
 Navigate to your new repository, e.g., Documents/lbne-fd-closeout
+
 You should find everything there.
 
 Do a “git pull” before you begin just in case anything has changed. 
+
 See the popup that says you should install the command line developer tools.
+
 Do so. (Even if you thought you already had.)
-if you haven't installed Xcode, you will get this error:
+
+If you haven't installed Xcode, you will get this error:
 ERROR: "no developer tools were found at '/Applications/Xcode.app', requesting install. 
 Choose an option in the dialog to download the command line developer tools."
 
 Stop and install Xcode, if needed (see instructions above)
 
-Try "git pull" again
+Try "git pull" again. 
 Now you should have it all set up.
 
 ** Initial clone
