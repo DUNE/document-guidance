@@ -1,5 +1,6 @@
 #+TITLE: Guidance For Documents
 
+
 This repository holds the source for a document to provide guidance on writing
 
 - [[https://github.com/LBNE/lbne-fd-closeout][The LBNE Far Detector Closeout]]
