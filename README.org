@@ -132,8 +132,7 @@ submit contributions outside of Git, follow this procedure:
 - Make your edits inside the directory/folder that is created.
 - When you have finished, remove any generated files (eg, =*.pdf=).
 - Repack the directory (as `.zip` or `.tar.gz`).
-- Upload this archive to the 
-[[https://web.fnal.gov/project/LBNF/ReviewsAndAssessments/CD-1Preparation/Shared%20Documents/Forms/AllItems.aspx][Contributions Library]]. ([[https://fermi.service-now.com/kb_view.do?sysparm_article=KB0010542][FNAL Services account]] required)
+- Upload this archive to the [[https://web.fnal.gov/project/LBNF/ReviewsAndAssessments/CD-1Preparation/Shared%20Documents/Forms/AllItems.aspx][Contributions Library]]. ([[https://fermi.service-now.com/kb_view.do?sysparm_article=KB0010542][FNAL Services account]] required)
 
 If you are unable to edit in LaTeX, please talk to Anne (see contacts below).
 
