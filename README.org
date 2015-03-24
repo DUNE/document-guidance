@@ -3,14 +3,14 @@
 
 This repository holds the source for a document to provide guidance on writing
 
-- [[https://github.com/LBNE/lbne-fd-closeout][The LBNE Far Detector Closeout]]
-- [[https://github.com/LBNE/lbn-cdr][The ELBNF (name subject to change) CDR]]
+- [[https://github.com/DUNE/lbne-fd-closeout][The DUNE Far Detector Closeout]]
+- [[https://github.com/DUNE/lbn-cdr][The DUNE CDR]]
 
 These and other documents, including the
-[[https://github.com/LBNE/cern-prototype-proposal][Proposal for a Full-Scale, Single-Phase Prototype at CERN]] are organized through the
+[[https://github.com/DUNE/cern-prototype-proposal][Proposal for a Full-Scale, Single-Phase Prototype at CERN]] are organized through the
 [[https://web.fnal.gov/project/LBNF/ReviewsAndAssessments/CD-1Preparation/SitePages/CD-1%20Preparation%20Home.aspx][CD-1 Preparation Page]].
 
-This guidance is in the form of a LaTeX document which tries to follow its own guidance and thus can be used as an extended example.  Built PDFs of the guidance document are available from the [[https://github.com/LBNE/document-guidance/releases][GitHub releases area for this repository]].
+This guidance is in the form of a LaTeX document which tries to follow its own guidance and thus can be used as an extended example.  Built PDFs of the guidance document are available from the [[https://github.com/DUNE/document-guidance/releases][GitHub releases area for this repository]].
 
 * Getting started
 
@@ -31,7 +31,7 @@ For example, to clone this repository using the HTTPS URL one would do:
 
 #+BEGIN_EXAMPLE
   $ cd /my/work/area
-  $ git clone https://github.com/LBNE/document-guidance.git
+  $ git clone https://github.com/DUNE/document-guidance.git
   $ cd document-guidance
 #+END_EXAMPLE
 
@@ -71,7 +71,7 @@ with this one like:
 
 A PDF of the documented is generated through the services of [[https://www.sharelatex.com][ShareLaTeX]]:
 
-  https://www.sharelatex.com/github/repos/LBNE/document-guidance
+  https://www.sharelatex.com/github/repos/DUNE/document-guidance
 
 * Repository
 
@@ -124,9 +124,9 @@ the cost of additional burden placed on the technical editors.  To
 submit contributions outside of Git, follow this procedure:
 
 - Start editing from the most recent tagged release:
-  -  [[https://github.com/LBNE/lbn-cdr/releases][lbn-cdr]]
-  -  [[https://github.com/LBNE/lbne-fd-closeout/releases][lbne-fd-closeout]]
-  -  [[https://github.com/LBNE/document-guidance/releases][document-guidance]]
+  -  [[https://github.com/DUNE/lbn-cdr/releases][lbn-cdr]]
+  -  [[https://github.com/DUNE/lbne-fd-closeout/releases][lbne-fd-closeout]]
+  -  [[https://github.com/DUNE/document-guidance/releases][document-guidance]]
 
 - Unpack the release archive (.zip or .tar.gz) on your computer.
 - Make your edits inside the directory/folder that is created.
