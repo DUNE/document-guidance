@@ -1,70 +1,60 @@
+#+TITLE: Install git on a Mac (git from GitHub)
 
-
-* Install git on a Mac (git from GitHub)
+* Prerequisites
 
 First install Xcode if you don’t already have it (under Applications folder). 
 
-In your browser go to [[https://developer.apple.com/xcode/downloads/][https://developer.apple.com/xcode/downloads/].
+1) In your browser go to [[https://developer.apple.com/xcode/downloads/]]
 
-Under “download Xcode for free” click “view in mac app store”.
+2) Under “download Xcode for free” click “view in mac app store”.
 
-Sign in with your apple ID (yes, it assumes you have one).
+3) Sign in with your apple ID (yes, it assumes you have one).
 
-It should install in your Applications directory (takes several minutes; it's 5.6 GB!). 
+4) It should install in your Applications directory (takes several minutes; it's 5.6 GB!). 
 Then open it up and agree to the license. (Requires admin privileges.)
+
+* Install Git
 
 Now install git from github:
 
-Go to [[https://mac.github.com][https://mac.github.com]], and 
-click the download button..
+1) Go to [[https://mac.github.com][https://mac.github.com]], and click the download button. In a few seconds it turned my download icon in the apps bar into the purple cat icon.
 
-In a few seconds it turned my download icon in the apps bar into the purple cat icon.
+2) Click on GitHub (cat) icon. It comes up with a setup screen.
 
-Click on GitHub (cat) icon. It comes up with a setup screen.
+3) Click ‘continue’.
 
-Click ‘continue’.
+4) Login to github (create a login at this point if you don't have one already) and click continue.
 
-Login to github (create a login at this point if you don't have one already)
-Click continue.
+5) Provide email address.
 
-Provide email address.
+6) Do you want the command line tools? Yes, you do, so click: "Install command line tools" (requires mac login/admin pw)
 
-Do you want the command line tools? Yes, you do, so click:
-"Install command line tools" (requires mac login/admin pw)
+7) Click continue.
 
-Click continue.
+8) It asks: "which repositories to use".   You don’t have any yet, so click "Done".
 
-It asks: "which repositories to use". 
-You don’t have any yet, so click "Done".
+9) Then the github window comes up and says "find repositories”.  Leave that for now and go back to browser.
 
-Then the github window comes up and says "find repositories”
+10) Go to [[https://github.com/DUNE]].
 
-Leave that for now and go back to browser.
+11) Choose the repository you want (e.g., line-fd-closeout).
 
-Go to [[https://github.com/LBNE][https://github.com/LBNE]].
+12) In bottom right, see button: Clone in Desktop.  Click it.
 
-Choose the repository you want (e.g., line-fd-closeout).
+13) The GitHub app comes up with a popup to Clone it. Check if the target directory is ok, change it if you want, then click Clone. It’s there!
 
-In bottom right, see button: Clone in Desktop. 
-Click it.
+14) Go to your terminal window.  Navigate to your new repository, e.g., Documents/lbne-fd-closeout. You should find everything there.
 
-The GitHub app comes up with a popup to Clone it. Check if the target directory is ok, change it if you want, then click Clone.
-It’s there!
+15) Do a “git pull” before you begin just in case anything has changed. 
 
-Go to your terminal window. 
-Navigate to your new repository, e.g., Documents/lbne-fd-closeout
+16) See the popup that says you should install the command line developer tools. Do so. (Even if you thought you already had.)
 
-You should find everything there.
+Note, If you haven't installed Xcode, you will get this error:
 
-Do a “git pull” before you begin just in case anything has changed. 
-
-See the popup that says you should install the command line developer tools.
-
-Do so. (Even if you thought you already had.)
-
-If you haven't installed Xcode, you will get this error:
+#+BEGIN_QUOTE
 ERROR: "no developer tools were found at '/Applications/Xcode.app', requesting install. 
 Choose an option in the dialog to download the command line developer tools."
+#+END_QUOTE
 
 Stop and install Xcode, if needed (see instructions above)
 
