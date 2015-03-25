@@ -69,9 +69,11 @@ with this one like:
 
 * Autobuilder
 
-A PDF of the documented is generated through the services of [[https://www.sharelatex.com][ShareLaTeX]]:
+A PDF of the documented is generated through the services of [[https://www.sharelatex.com][ShareLaTeX]]
 
   https://www.sharelatex.com/github/repos/DUNE/document-guidance
+
+An alternative auto-built PDF is available [[https://dune.bnl.gov/tmp/][here]].
 
 * Repository
 
