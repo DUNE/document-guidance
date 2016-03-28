@@ -3,24 +3,37 @@
 
 This repository holds the source for a document to provide guidance on writing
 
+- [[https://github.com/DUNE/protodune-tdr][The ProtoDUNE-SP TDR]]
 - [[https://github.com/DUNE/lbne-fd-closeout][The DUNE Far Detector Closeout]]
 - [[https://github.com/DUNE/lbn-cdr][The DUNE CDR]]
 
-These and other documents, including the
-[[https://github.com/DUNE/cern-prototype-proposal][Proposal for a Full-Scale, Single-Phase Prototype at CERN]] are organized through the
-[[https://web.fnal.gov/project/LBNF/ReviewsAndAssessments/CD-1Preparation/SitePages/CD-1%20Preparation%20Home.aspx][CD-1 Preparation Page]].
+The
+[[https://web.fnal.gov/project/LBNF/ReviewsAndAssessments/CD-1Preparation/SitePages/CD-1%20Preparation%20Home.aspx][CD-1 Preparation Page]]
+was created in 2015 to help organize these and other documents, including the [[https://github.com/DUNE/cern-prototype-proposal][Proposal for a Full-Scale, 
+Single-Phase Prototype at CERN]]; this page can still serve as a reference.
+
 
 This guidance is in the form of a LaTeX document which tries to follow its own guidance and thus can be used as an extended example.  Built PDFs of the guidance document are available from the [[https://github.com/DUNE/document-guidance/releases][GitHub releases area for this repository]].
 
 * Getting started
 
-This section describes how to check out the source to this document-guidance document,
-edit and build it and to push commits back.  Substitute the actual document repository name for =document-guidance= in the following examples:
+This section describes how to (1) check out the source to this document-guidance document,
+(2) edit and (3) build it and (4) push commits back.  When working on a "real" document, substitute the actual document repository name for =document-guidance= in the following examples.
+
+To get "push" access to this repository decide on a GitHub user name, send it to
+Brett Viren (see contacts below) and indicate which repository(ies) you need to
+access.  (If you instead prefer to fork and issue pull requests that
+can likely be accommodated.  Check with the document technical
+editors.)
+
 
 ** Initial clone
 
 If you've just gone through the "Install on Mac" procedure, skip this step.
-To start with you must "clone" each remote repository that you need from GitHub.  Each GitHub repository web site provides a URL on the right-hand sidebar.  The HTTPS URL can be used for anonymous clone and then later can be pushed to (see below) by supplying your GItHub password.  The SSH URL requires uploading a public key to GitHub but then no password need be given.  Pick the URL you like and then cloning is simple:
+You will "clone" each remote repository that you need from GitHub into a directory on your local machine. First, set up a directory, e.g., /my/work/area.
+
+
+Each GitHub repository web site provides a URL above the list of files; it starts with "https" and ends with ".git".  The HTTPS URL can be used for anonymous clone and then later can be pushed to (see below) by supplying your GItHub password.  The SSH URL requires uploading a public key to GitHub but then no password need be given.  Pick the URL you like and then cloning is simple:
 
 #+BEGIN_EXAMPLE
   $ cd /my/work/area
@@ -35,9 +48,10 @@ For example, to clone this repository using the HTTPS URL one would do:
   $ cd document-guidance
 #+END_EXAMPLE
 
-** Building the documents
+** Building a draft document
 
-To build the documents you need `pdflatex` and `bibtex`.  In each repository there will be one or more main LaTeX file with a correspondingly named sub-directory holding the bulk of the =.tex= files.  
+To make it easier to work as a team, we want to make it easy to add and see comments, and to refer to line numbers.  These features will appear by default when you compile. 
+To build the documents you need to run `pdflatex` and `bibtex` on the tex file "guidance.tex".  In each repository there will be one or more main LaTeX file with a correspondingly named sub-directory holding the bulk of the =.tex= files.  
 
 #+BEGIN_EXAMPLE
   $ pdflatex guidance
@@ -56,16 +70,30 @@ builds to run only:
 You may need to run this command twice to get the paging and numbering
 correct.
 
-The documents use the [[./cdr.cls][cdr.cls]] class are by default built with editing
-markup.  The technical editors are responsible for producing a clean
+For documents with an acronym list, we a script that includes a "makeindex" command that compiles it in. To get the document with its acronym list, run:
+
+#+BEGIN_EXAMPLE
+compileitdraft guidance
+#+END_EXAMPLE
+
+** Building a print-ready document
+
+The technical editors are responsible for producing a clean
 and properly built version of any document for internal and final
-release but anyone may attempt to produce a "final" version themselves.
+release but anyone may compile a clean version.
 To do that, replace each =pdflatex guidance= command
 with this one like:
 
 #+BEGIN_EXAMPLE
    $ pdflatex "\def\isfinal{1} \input{guidance}"
 #+END_EXAMPLE
+
+There is also a "compileitprint" script that produces a clean copy.  To compile the document you would run, e.g.,
+
+#+BEGIN_EXAMPLE
+compileitdraft guidance
+#+END_EXAMPLE
+
 
 * Autobuilder
 
@@ -77,13 +105,8 @@ An alternative auto-built PDF is available [[https://dune.bnl.gov/tmp/][here]].
 
 * Repository
 
-It is strongly recommended that any changes made to a document be
-committed to your local git clone and then pushed back to GitHub.  To
-get "push" access to this repository send your GitHub user name to
-Brett (see contacts below) and indicate to which repository you need
-access.  (If you instead prefer to fork and issue pull requests that
-can likely be accommodated.  Check with the document technical
-editors.)
+We strongly recommend that as you make changes to a document, you compile it periodically to make sure you haven't introduced errors. Check again when you are done with your changes. Then commit the changes to your local git clone and please push them to GitHub immediately so that they are available to your colleagues.  
+
 
 ** General git procedure:
 
@@ -117,26 +140,16 @@ If =git pull= doesn't work due to a conflict, "stash" your changes, pull in the 
   $ git push
 #+END_EXAMPLE
 
-** Git-phobic
+** Git-phobic and/or LaTeX-phobic
 
 Git works on all major computing platforms and many minor ones and is
-successfully used by all manner of people, even Physicists.  If for
-some reason you are incapable to use Git you will be accommodated at
-the cost of additional burden placed on the technical editors.  To
-submit contributions outside of Git, follow this procedure:
+successfully used by all manner of people, even physicists(!)  If for
+some reason you don't want to use Git you will be accommodated at
+the cost of additional burden placed on the technical editors. 
 
-- Start editing from the most recent tagged release:
-  -  [[https://github.com/DUNE/lbn-cdr/releases][lbn-cdr]]
-  -  [[https://github.com/DUNE/lbne-fd-closeout/releases][lbne-fd-closeout]]
-  -  [[https://github.com/DUNE/document-guidance/releases][document-guidance]]
+If you are willing and able to edit in LaTeX, grab the latest file from the repository, edit it and send it to Anne (see contacts below).
 
-- Unpack the release archive (.zip or .tar.gz) on your computer.
-- Make your edits inside the directory/folder that is created.
-- When you have finished, remove any generated files (eg, =*.pdf=).
-- Repack the directory (as `.zip` or `.tar.gz`).
-- Upload this archive to the [[https://web.fnal.gov/project/LBNF/ReviewsAndAssessments/CD-1Preparation/Shared%20Documents/Forms/AllItems.aspx][Contributions Library]]. ([[https://fermi.service-now.com/kb_view.do?sysparm_article=KB0010542][FNAL Services account]] required)
-
-If you are unable to edit in LaTeX, please talk to Anne (see contacts below).
+If you are unable to edit in LaTeX, please talk to Anne.
 
 * Contacts
 
