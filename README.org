@@ -17,7 +17,7 @@ Please look at the tex files under the "guidance" directory to see how to make h
 This section describes how to (1) check out the source to this document-guidance document,
 (2) build it (after you edit it), and (3) push commits back to GitHub.  When working on a "real" document, substitute the actual document repository name for =document-guidance= in the examples on this page.
 
-To get "push" access to a repository, decide on a GitHub user name, send it to
+To get "push" access to a repository, sign up for a GitHub account if you do not yet have one and send the user name to
 Brett Viren (see contacts below) and indicate which repository(ies) you need to
 access.  (If you instead prefer to fork and issue pull requests that
 can likely be accommodated.  Check with the document technical
