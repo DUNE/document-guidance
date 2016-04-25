@@ -1,13 +1,57 @@
 \chapter{Generalities}
 \label{ch:generalities}
 
-This volume gives guidance to authors and editors of the CDR volumes. It collects ``wisdom'' learned 
-producing earlier documents, in particular the CDR and science document, and we will appreciate 
+This volume gives guidance to authors and editors of DUNE and LBNF documents such as the CDR, TDRs, and so on. It collects ``wisdom'' learned 
+producing earlier documents, in particular the LBNE CDR and science document, and we will appreciate 
 very much if everyone follows it!  It tries to follows its own guidance, so looking at its \LaTeX{} source can 
 provide an example.  
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Files}
 \label{sec:files}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{For the ProtoDUNE-SP TDR (2016)}
+\label{ssec:files-pdunesp-tdr}
+
+You will find the \LaTeX{} and figure content for this TDR
+arranged under your top ``protodune-tdr'' directory as follows:
+
+\begin{description}
+\item[\texttt{protodune-tdr.tex}] the main file and is found in the top-level
+  directory. It sets the document class, sets a graphics path (including all directories that may include image files; here it should only include ``figures''), does a couple of other things, then pulls in each of the chapter content files in the right order.
+\item[\texttt{figures/}] top-level subdirectory for any static figures.
+\item[\texttt{generated/}] subdirectory holding any generated
+  figures (see Section~\ref{sec:figures} for info on generated files)
+\item[\texttt{somechapter.tex}] file that holds the LaTeX source (content) for one
+  chapter of the document. The main file contains a line to input each of these chapter files.
+\end{description}
+
+Some general guidance on choosing file names:
+
+\begin{itemize}
+\item Editors may elect to further break up content for a chapter into per-section
+  files.
+  If so, follow a naming convention such as
+  ``\texttt{somechapter-somesection.tex}''.
+\item Do not include a chapter or section number in any file
+  name.
+  Their actual numbers will be determined by high-level ordering by
+  the editors. 
+\item The editors are expected to maintain the top level
+  \texttt{protodune-tdr.tex} files.  Authors should please avoid modifying it.
+\item Use the \texttt{figures/} subdirectory for static figures (see
+  Section~\ref{sec:figures}). For how to include generated figures, see
+  Section~\ref{sec:plots}.
+\item If you find something inadequate or have questions, consult with either: \\
+  Anne Heavey, aheavey@fnal.gov, 630-840-8039 (technical editor)\\
+  Brett Viren, bv@bnl.gov (help on graphics, \LaTeX{} and git machinery)
+\end{itemize}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{For the CDR (2015)}
+\label{ssec:files-cdr}
 
 An entire document may consist of one or more \textit{volumes} (eg,
 the CDR consists of several, only some of which are written in
@@ -52,10 +96,12 @@ Some general guidance on choosing these file names:
 \item Use the \texttt{figures/} subdirectory for static figures (see
   Section~\ref{sec:figures}). For how to include generated figures see
   Section~\ref{sec:plots}.
-\item If you find something inadequate or have questions, consult with either: \\
+\end{itemize}
+
+If you find something inadequate or have questions, consult with either: \\
   Anne Heavey, aheavey@fnal.gov, 630-840-8039 (technical editor)\\
   Brett Viren, bv@bnl.gov (help on graphics, \LaTeX{} and git machinery)
-\end{itemize}
+
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -64,7 +110,7 @@ Some general guidance on choosing these file names:
 
 It is essential to use high-quality, efficiently sized figures (aka
 ``graphics'').
-You may be asked to re make any that egregiously violate some some
+You may be asked to re-make any that egregiously violate some some
 basic standards.
 These standards are in place to avoid sub-optimal figures, bloated
 files sizes, and delayed publishing schedules.  

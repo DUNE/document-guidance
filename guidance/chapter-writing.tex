@@ -7,8 +7,17 @@ This is the start of a chapter and gives some introduction before its first sect
 \section{Sectioning}
 \label{sec:sectioning}
 
-The following sectioning macros are available, ordered in descending
-importance:
+About subdividing a document into chapters, sections, subsections, and so on:
+
+\begin{itemize}
+\item A subdivision of a larger portion should have content that relates to some aspect of the larger portion. 
+\item  If you subdivide, create at least two subdivisions, one for each comparable aspect. Otherwise, the topic of your one subdivision is (by definition) the same as that of the larger portion.
+\item In your \LaTeX{} source, add lines of percent signs (comments) to make it easy to find where sections begin and end (as illustrated in this file).
+\item {}
+\end{itemize}
+
+
+The following sectioning macros are available, ordered from bigger to smaller:
 
 \begin{verbatim}
 \chapter{A Chapter}
@@ -18,24 +27,28 @@ importance:
 \subsubsubsection{A Sub Sub Sub Section}
 \end{verbatim}
 
-Three-sub's is all you get.  
+Three sub's is all you get.  
 Consult with the technical editors if you feel finer grained
 sectioning is required.
 Starting from \verb|\subsection|, this produces the following:
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{A Sub Section}
 
 This is a subsection.
 
+%%%%%%%%%%%%%%%%%%%
 \subsubsection{A Sub Sub Section}
 
 This is a subsubsection.
 
+%%%%%%%%%
 \subsubsubsection{A Sub Sub Sub Section}
 
 This is a subsubsubsection and is getting to be a bit too fine-grained. It will not appear in 
 the table of contents, which will show entries as low as subsubsection only.
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Section Labels}
 
 Just after defining a chapter and any significant section a
@@ -59,6 +72,7 @@ For example:
 See Section~\ref{sec:refs} for how to reference labeled sections.
 
 \FloatBarrier
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Figures}
 \label{sec:figures}
@@ -71,11 +85,11 @@ arguments:
 
 \begin{enumerate}
 \item An initial, optional short caption for the List Of Figures, in square brackets.
-\item A label for referencing (it will have \texttt{fig:} prepended). Curly brackets.
-\item The full caption. Curly brackets, again.
+\item A (required) label for referencing (do not prepend \texttt{fig:} --  \LaTeX{} will do that automatically). Curly brackets. It is helpful to have this label match the filename of the figure. 
+\item The (required) full caption. Curly brackets, again.
 \end{enumerate}
 
-This is followed by including the graphic file.
+This is followed by including the graphic file. Here is an example:
 
 \begin{cdrfigure}[Short ToF caption]{aerial}{An aerial photograph of Fermilab
     showing Wilson Hall and surrounding accelerator rings (Fermilab
@@ -85,24 +99,27 @@ This is followed by including the graphic file.
 
 
 When the figure contains a graphic,  usually \texttt{includegraphics} is used.
-The filename is assumed relative to a volume-specific \texttt{graphicspath} as
-described in Section~\ref{sec:files} and as such one typically should
+The filename is assumed relative to a \texttt{graphicspath} as
+mentioned in Section~\ref{ssec:files-pdunesp-tdr} and as such, one typically should
 \textbf{not} specify any directory parts in its name.
 The file's extension may be omitted.
 An example can be seen in Figure~\ref{fig:aerial}, which is created
-with the following \LaTeX shown in Figure~\ref{fig:aerial-latex}
+with the following \LaTeX{} and is shown in Figure~\ref{fig:aerial-latex}.  Notice that in these references to the figures, we need to prepend \texttt{fig:} to the label.
 
-\begin{cdrfigure}{aerial-latex}{\LaTeX{} showing how to do include a figure.}
+\begin{cdrfigure}[]{aerial-latex}{\LaTeX{} showing how to include a figure.}
+
 \begin{verbatim}
-\begin{cdrfigure}[Short ToF caption.]{aerial}{An aerial photograph of Fermilab
-    showing Wilson Hall and surrounding accelerator rings (Fermilab
-    Visual Media Services)}
-  \includegraphics[width=0.8\textwidth]{fermilab-aerial.jpg}
-\end{cdrfigure}
+    \begin{cdrfigure}[Short ToF caption.]{aerial}{An aerial photograph
+      of Fermilab showing Wilson Hall and surrounding accelerator rings 
+      (Fermilab Visual Media Services)}
+      \includegraphics[width=0.8\textwidth]{fermilab-aerial.jpg}
+    \end{cdrfigure}
 \end{verbatim}
+
 \end{cdrfigure}
 
 \FloatBarrier
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Tables}
 \label{sec:tables}
@@ -116,7 +133,7 @@ required arguments:
 \begin{enumerate}
 \item An initial, optional short caption for the List of Tables. Square brackets.
 \item The tabular column specification. Curly brackets for the last three.
-\item A label for referencing (it will have \texttt{tab:} appended)
+\item A label for referencing (it will have \texttt{tab:} prepended automatically)
 \item The full caption.
 \end{enumerate}
 
@@ -128,7 +145,7 @@ Following every regular row (except the last) you should include a
 Both of these take the place of the usual \texttt{hline}.
 
 \begin{cdrtable}[The LoT caption]{cc}{example}
-{This is an example table. We will use better colors, don't worry.}
+{This is an example table.}
   Rows & Counts \\ \toprowrule
   Row 1 & First \\ \colhline
   Row 2 & Second \\ \colhline
@@ -139,7 +156,7 @@ Both of these take the place of the usual \texttt{hline}.
 
 \begin{verbatim}
 \begin{cdrtable}[The LoT caption]{cc}{example}
-{This is an example table. We will use better colors, don't worry.}
+{This is an example table.}
   Rows & Counts \\ \toprowrule
   Row 1 & First \\ \colhline
   Row 2 & Second \\ \colhline
@@ -167,18 +184,21 @@ $n \rightarrow e^+\pi^-$ & 19\% & 2 & 44\% & 0.8 \\
 \end{cdrtable}
 
 \FloatBarrier
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Referencing and Citations}
 \label{sec:refs}
 
-Note: if you see a grey label blox containing \texttt{sec:refs}
+Note: if you see a faint grey label containing \texttt{sec:refs}
 between this paragraph and the section heading (or in general
-elsewhere in chapters, sections, figures, etc), it means this document
-was built in draft mode.  
+elsewhere in chapters, sections, figures, etc.), it means this document
+was built in draft mode.  The web page \url{https://github.com/DUNE/document-guidance} discusses
+compilation in ``draft'' vs ``print'' mode.
 These artifacts show up to help you know what label was used to
-reference each particular thing.
+reference each particular thing.  Again, it's easiest to trace things when the labels are meaningful, and for figures, when they match the image filename.
 
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Intra-document References}
 
 Assume that any chapter, section or important sub-, subsub-, section
@@ -210,11 +230,10 @@ Use the word ``Section'' even if it's a subsection or subsubsection,
 and use the tilde sign to keep the number on the same line as the word
 that precedes it.
 
-Examples for figures and tables have been given above.  Here I
-reference this section:~\ref{sec:refs}.  
+For figures, the reference needs to include ``fig'' before the label name, as discussed in Section~\ref{sec:figures}, and for tables, ``tab'' must be prepended (Section~\ref{sec:tables}).
 
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Citations}
 
 Referencing citations is done like \verb|\cite{strunk}| which gives \cite{strunk}.
@@ -234,6 +253,7 @@ However, manual care must be taken to avoid duplication.
 Before adding any entry to \texttt{citedb.bib} read/search through it
 to ascertain that the entry you wish to add is not already there.
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Common Names}
 
 To enforce consistency, use a \LaTeX{} macro in place of any name or
@@ -249,6 +269,7 @@ Some examples:
 \item \SURF is written as \verb|\SURF|.
 \end{itemize}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Numbers and Units}
 
 \textbf{All} numerical quantities expressed as literal number
@@ -257,6 +278,7 @@ In order to enforce consistency the \texttt{siunitx} package is used
 and a collection of common units are defined in
 \texttt{common/units.tex}.
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Bare Numbers}
 
 To enforce consistent writing of numbers encase them in the
@@ -268,6 +290,7 @@ To enforce consistent writing of numbers encase them in the
 \item ``\num{123.456}'' is written as \verb|\num{123.456}|.
 \end{itemize}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Bare Units}
 
 If you need to write a bare unit, one with not associated number, use
@@ -278,6 +301,7 @@ If you need to write a bare unit, one with not associated number, use
 \item ``\si{pc}'' is written \verb|\si{pc}|.
 \end{itemize}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Numbers and Units}
 
 When a quantity has a unit write both the numerical part and the unit
@@ -288,6 +312,7 @@ using the \verb|\SI{}{}| command like:
 \item ``\SI{4850}{foot}'' is written as \verb|\SI{4850}{foot}|
 \end{itemize}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Adjective Quantities}
 
 Some language uses quantities as adjectives.
@@ -303,6 +328,7 @@ For example:
 \item 
 \end{itemize}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Common compound units}
 
 There are some common units that rather long to type out each time

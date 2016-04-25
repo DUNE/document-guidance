@@ -120,8 +120,9 @@
     \boldmath
   }l}%
 
+\definecolor{lightblue}{RGB}{212,236,244}
 \newcommand{\rowtitlestyle}{
-  \rowcolor{Apricot}
+  \rowcolor{lightblue}
   \rowstyle{\bfseries \boldmath} 
 }
 
@@ -132,7 +133,7 @@
 }
 
 \newcommand{\toprowrule}{
-  \arrayrulecolor{red}
+  \arrayrulecolor{gray}
   \specialrule{1.2pt}{0pt}{1pt}
   \arrayrulecolor{black}
 }
