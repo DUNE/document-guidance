@@ -6,19 +6,22 @@
 \ProvidesClass{cdr}[2015/02/02]
 \LoadClass[12pt,letterpaper]{report}
 
-\RequirePackage[letterpaper,margin=2cm]{geometry}
+\RequirePackage[letterpaper]{geometry}
 
 % Required values and their setters
-\newcommand\thedoctitle{DRAFT Conceptual Design Report}
-\newcommand\thedocsubtitle{Deep Underground Neutrino Experiment (DUNE) and Long-Baseline Neutrino Facility (LBNF)}
-\def\titleextra{ }
-
-%added because defs.tex asks for it
 \newcommand\thevolumetitle{Conceptual Design Report}
 \newcommand\thevolumesubtitle{}
 
 
 % Provide finer-grained sectioning.
+\renewcommand\thesubsubsection{\thesubsection .\@arabic\c@subsubsection}
+\newcommand\thesubsubsubsection  {\thesubsubsection.\@arabic\c@subsubsubsection}
+\renewcommand\subsubsection{\@startsection{subsubsection}{3}{\z@}%
+                                     {-3.25ex\@plus -1ex \@minus -.2ex}%
+                                     {1.5ex \@plus .2ex}%
+                                     {\normalfont\normalsize\bfseries}}
+
+
 \newcounter{subsubsubsection}[subsubsection]
 \def\subsubsubsectionmark#1{}
 \def\thesubsubsubsection {\thesubsubsection
@@ -36,16 +39,11 @@
 \RequirePackage{graphicx}
 \RequirePackage[T1]{fontenc}
 \RequirePackage{lmodern}
-% Anne adds parskip 5/7/15
-\RequirePackage{parskip}
-\setlength{\parskip}{\baselineskip}
-
 
 % Smart end-of-macro spacing
 \RequirePackage{xspace}
-% Let's use units properly and consistently!
-\RequirePackage[detect-all=true,group-digits=true,group-separator={,},binary-units=true]{siunitx}
-% this option trips up some people (eg, tom junk): group-minimum-digits=4,
+% Must use units properly and consistently
+\RequirePackage[detect-all=true,group-digits=true,group-separator={,},group-minimum-digits=4]{siunitx}
 
 % Long table is long
 \RequirePackage{longtable}
@@ -53,7 +51,7 @@
 % For abbrev/acronym lists
 \RequirePackage[intoc]{nomencl}
 \makenomenclature  % does this belong here or outside of the class?
-\renewcommand{\nomname}{Acronyms, Abbreviations and Terms}
+\renewcommand{\nomname}{Acronyms, Abbreviations and Units}
 \setlength{\nomlabelwidth}{0.2\textwidth}
 
 % Tighter control of floats.
@@ -99,7 +97,6 @@
   \renewcommand{\headrulewidth}{0pt}
   \renewcommand{\footrulewidth}{0pt}
   \fancyhead[RO]{\titlepagecornerblock}
-%  \fancyfoot[C]{\includegraphics[width=0.4\textwidth]{dunelogo_colorhoriz}}
 }
 \fancypagestyle{plain}{
   \fancyhf{}
@@ -196,8 +193,6 @@
   \end{table}
 }
 
-\usepackage{tablefootnote}
-
 \newcommand{\cdrfiglabel}{}% stores the label
 \newcommand{\cdrfigcaption}{}% stores the caption
 \newcommand{\cdrfigcaptionshort}{}% stores an optional short caption
@@ -245,8 +240,6 @@
 % Hyperref typically needs to come at the end of all \usepackages 
 \RequirePackage[pdftex,bookmarks]{hyperref}
 
-% Use to import pdf files (Anne 4/28/15)
-\RequirePackage{pdfpages}
 
 % this seems overly tortured
 \newif\iffinal
@@ -271,5 +264,4 @@
 \linenumbers
 \fi
 
-%add TOC, TOF, TOT, Ref to TOC (show up in PDF sidebar for easy navigation)
-\RequirePackage{tocbibind}
+

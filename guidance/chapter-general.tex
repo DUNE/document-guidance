@@ -1,10 +1,34 @@
 \chapter{Generalities}
 \label{ch:generalities}
 
-This volume gives guidance to authors and editors of DUNE and LBNF documents such as the CDR, TDRs, and so on. It collects ``wisdom'' learned 
-producing earlier documents, in particular the LBNE CDR and science document, and we will appreciate 
+This volume gives guidance to authors and editors of DUNE and LBNF documents such as the CDR, TDRs, and so on. It collects ``wisdom'' learned from 
+producing earlier documents, starting with the LBNE CDR and science document, and we will appreciate 
 very much if everyone follows it!  It tries to follows its own guidance, so looking at its \LaTeX{} source can 
 provide an example.  
+
+This has been updated for the ProtoDUNE-SP TDR, which will not have multiple volumes. Earlier versions of this guidance document discuss splitting a document into volumes, in particular, the release ``lbnfdune-cdr-CD1R,'' written for said effort.  It can be found at \url{https://github.com/DUNE/document-guidance/releases/tag/lbnfdune-cdr-CD1R}.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Information on the Document Guidance Web Page}
+\label{ssec:files-webpage}
+
+Some guidance is on the web page \url{https://github.com/DUNE/document-guidance}:
+
+\begin{itemize}
+\item How to get started with GitHub and get the files that you need to edit. See both ``Getting Started'' (at the top) and ``Repository'' further down.  ``Repository'' provides commands to use for interacting with GitHub.
+\item How to build the document, in draft format (with extra markup) after you have it downloaded to your local machine.
+\item How to build a print-ready document -- even though in principle you don't need to do this, you may want to see how it looks. The technical editors will build the final document.
+\item How to access builds of the document run automatically from the content on GitHub.
+\item How to get away without authoring in \LaTeX{}...
+\end{itemize}
+
+Note about Draft vs. Print format: 
+
+Draft format gives you line numbers, ``fixme'' and other markup notes (see Chapter~\ref{ch:review}), 
+faint grey notes (enclosed in a box) near labeled items (headings, figures, tables, etc.) to help you know 
+what label was used to reference each particular thing.  
+It's easiest to trace things when the labels are meaningful, and for figures, when they match the image filename, so please choose labels carefully. Labels are discussed in Section~\ref{sec:intra-doc-ref}.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Files}
@@ -15,16 +39,16 @@ provide an example.
 \label{ssec:files-pdunesp-tdr}
 
 You will find the \LaTeX{} and figure content for this TDR
-arranged under your top ``protodune-tdr'' directory as follows:
+arranged under your top\\ \verb|\my\work\area\protodune-tdr| directory as follows:
 
 \begin{description}
-\item[\texttt{protodune-tdr.tex}] the main file and is found in the top-level
-  directory. It sets the document class, sets a graphics path (including all directories that may include image files; here it should only include ``figures''), does a couple of other things, then pulls in each of the chapter content files in the right order.
+\item[\texttt{protodune-tdr.tex}] the main file is found in the top-level
+  directory. It sets the document class, sets a graphics path (including all directories that may include image files; here it should only include ``figures''), does a couple of other things, then pulls in each of the chapter content files in the right order.  This is the file that you compile, e.g., \verb|pdflatex protodune-tdr|.
 \item[\texttt{figures/}] top-level subdirectory for any static figures.
 \item[\texttt{generated/}] subdirectory holding any generated
-  figures (see Section~\ref{sec:figures} for info on generated files)
-\item[\texttt{somechapter.tex}] file that holds the LaTeX source (content) for one
-  chapter of the document. The main file contains a line to input each of these chapter files.
+  figures. See Section~\ref{sec:figures} for info on generated files. For how to include generated figures, see Section~\ref{sec:plots}.
+\item[\texttt{somechapter.tex}] file that holds the \LaTeX{} source (content) for one
+  chapter of the document. It gets pulled into the main file \texttt{protodune-tdr.tex}.
 \end{description}
 
 Some general guidance on choosing file names:
@@ -32,75 +56,20 @@ Some general guidance on choosing file names:
 \begin{itemize}
 \item Editors may elect to further break up content for a chapter into per-section
   files.
-  If so, follow a naming convention such as
+  If so, the files will follow a naming convention such as
   ``\texttt{somechapter-somesection.tex}''.
 \item Do not include a chapter or section number in any file
   name.
   Their actual numbers will be determined by high-level ordering by
-  the editors. 
+  the editors.  E.g., \verb|highvoltage.tex| is ok; \verb|ch3-highvoltage.tex| is not.
 \item The editors are expected to maintain the top level
-  \texttt{protodune-tdr.tex} files.  Authors should please avoid modifying it.
-\item Use the \texttt{figures/} subdirectory for static figures (see
-  Section~\ref{sec:figures}). For how to include generated figures, see
-  Section~\ref{sec:plots}.
-\item If you find something inadequate or have questions, consult with either: \\
-  Anne Heavey, aheavey@fnal.gov, 630-840-8039 (technical editor)\\
-  Brett Viren, bv@bnl.gov (help on graphics, \LaTeX{} and git machinery)
+  \texttt{protodune-tdr.tex} file.  Authors should please avoid modifying it.
 \end{itemize}
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{For the CDR (2015)}
-\label{ssec:files-cdr}
-
-An entire document may consist of one or more \textit{volumes} (eg,
-the CDR consists of several, only some of which are written in
-\LaTeX{}.
-You will find the \LaTeX{} and figure content for a given volume
-arranged like:
-
-\begin{description}
-\item[\texttt{NAME.tex}] the main file and is found in the top-level
-  directory. It generally has no significant content itself but
-  includes content through other chapter or other files.
-\item[\texttt{figures/}] top-level subdirectory for any static figures
-  shared by more than one volume in the repository.
-\item[\texttt{NAME/}] subdirectory holding all content for one particular volume.
-\item[\texttt{NAME/chapter-CHAPTERNAME.tex}] holds the content for one
-  chapter of a volume.
-\item[\texttt{NAME/figures/}] subdirectory holding any static volume-specific figures
-\item[\texttt{NAME/generated/}] subdirectory holding any generated
-  figures (see Section~\ref{sec:figures} for info on generated files)
-\end{description}
-
-Where \texttt{NAME} is some label for the volume (the name for the
-volume you are reading now is ``\texttt{guidance}'').
-Multi-volume documents may pick some file naming convention (eg, the
-CDR uses ``\texttt{volume-VOLUMENAME}''.
-Specific files hold chapter-level content an are named after some
-short, descriptive label.
-The file holding this sentence is ``\texttt{guidance/chapter-general.tex}''.
-Some general guidance on choosing these file names:
-
-\begin{itemize}
-\item Editors may elect to further break up content into per-section
-  files.
-  If so, follow a naming convention such as
-  ``\texttt{chapter-CHAPTERNAME-section-SECTIONNAME.tex}''.
-\item Do not include a volume, chapter or section numbers in any file
-  name.
-  Their actual numbers will be determined by high-level ordering by
-  the editors. 
-\item The editors are expected to maintain the top level
-  \texttt{NAME.tex} files. General authors should avoid modifying it.
-\item Use the \texttt{figures/} subdirectory for static figures (see
-  Section~\ref{sec:figures}). For how to include generated figures see
-  Section~\ref{sec:plots}.
-\end{itemize}
-
 If you find something inadequate or have questions, consult with either: \\
   Anne Heavey, aheavey@fnal.gov, 630-840-8039 (technical editor)\\
   Brett Viren, bv@bnl.gov (help on graphics, \LaTeX{} and git machinery)
+
+
 
 
 
@@ -182,7 +151,7 @@ in-plot fonts, colors, wording.
 
 One common figure type is to take a figure and annotate it with
 arrows, labels, etc.
-Ideally you will do this directly in LaTeX, for example using TikZ.
+Ideally you will do this directly in \LaTeX{}, for example using TikZ.
 If you can't do that, then take care not to produce a bloated,
 low-quality graphic, and please choose fonts and colors that ``work''
 with the document.

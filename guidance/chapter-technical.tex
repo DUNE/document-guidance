@@ -1,6 +1,77 @@
 \chapter{Technical}
 
-This chapter describes some of the more technical aspects of the CDR.
+This chapter describes some of the more technical aspects of the LBNF/DUNE \LaTeX setup. Various aspects of the configuration are pulled out into separate files to keep things well organized.  In general, authors should 
+not edit the files described in this chapter. Often authors need to include citations, and occasionally may want to add acronyms or definitions. This is ok; just please don't touch any other configuration-related files!
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{The main file}
+\label{sec:mainfile}
+
+A new main file will likely be started only by the technical editors. The main file
+
+\begin{enumerate}
+\item set the document class (see Section~\ref{sec:classfile};
+\item set the graphics path;
+\item inputs the preamble;
+\item opens the document environment;
+\item inputs the ``init'' file;
+%\item Redefine the volumes sub-title -- when document is split into volumes; this TDR is not
+\item inputs each chapter file;
+\item inputs the ``final'' file (which provides the bibliographical information); and
+\item closes the document environment.
+\end{enumerate}
+
+To start a new document, you would copy the \texttt{guidance.tex} to a new
+name and edit as directed by the comments.  For the ProtoDUNE TDR, this file is called \texttt{protodune-tdr.tex}. (Please don't touch it!) 
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{The \LaTeX{} class file}
+\label{sec:classfile}
+
+All of the \LaTeX{} configuration for the document that pertains to
+the general LBNF/DUNE style is in the
+\texttt{td-pdr.cls} file. (The name of this file may change from document to document; it will be the only \texttt{xxx.cls} file.)
+The class takes some options that control high-level style:
+
+\begin{description}
+\item[\texttt{final}] this removes all extra markup used during the
+  editing phase.
+\end{description}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Document-wide \LaTeX{} files in \texttt{common/}}
+
+Multi-volume documents are supported and should use the
+\texttt{common/} subdirectory to house any information that is to be
+shared between volumes.
+Single-volume documents (e.g., the ProtoDUNE-SP TDR) will also supply some files here.
+The expected ``common'' files include:
+\begin{description}
+\item[\texttt{defs.tex}] macros defining common terms.
+\item[\texttt{units.tex}] macros defining how to use quantities and units.
+\item[\texttt{preamble.tex}] a file that largely includies the above files along with
+  any extra \LaTeX{} configuration that goes before the document
+  environment begins.
+\item[\texttt{acronyms.tex}] containing acronyms, abbreviations and so on; there may be separate ones per volume.
+\item[\texttt{citedb.bib}] the BibTeX database (name may change; `bib' will remain the same).
+\item[\texttt{init.tex}] Any content that goes in the document
+  environment but before the first chapter.
+  It typically should set the title page, ToC/LoF/LoT.
+\item[\texttt{final.tex}] Any content that goes in the document after
+  the last chapter.
+  It typically contains the commands related to producing the
+  bibliography.
+\end{description}
+
+The content of many of these files should in part be kept in sync
+across all document repositories.
+
+Specific documents may place additional files in this \texttt{common/}
+directory that should be shared document-wide.
+For example, most (all but intro) volumes of the CDR include a standard \texttt{common/intro.tex}.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Getting the Files and Compiling after your Changes}
@@ -9,66 +80,4 @@ This chapter describes some of the more technical aspects of the CDR.
 Detailed instructions for getting the files and compiling a volume are
 given on main GitHub page for the repository supplying this document at
 \url{https://github.com/DUNE/document-guidance}.
-
-\fixme{Note that any acronyms list that a volume has requires an extra
-  step to be included; this step is not documented there.
-  The technical editors will take care of it.}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{The \LaTeX{} CDR class}
-
-All of the \LaTeX{} configuration for the document that pertains to
-the general ``CDR'' style is in the
-\texttt{cdr.cls} file. (The name of this file may change to \texttt{tdr.cls} or other name; it will be the only \texttt{xxx.cls} file.)
-The class takes some options that control high-level style:
-
-\begin{description}
-\item[\texttt{final}] this removes all extra markup useful during
-  editing phase.
-\end{description}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Volume-generic \LaTeX{} files}
-
-Multi-volume documents are supported and should use the
-\texttt{common/} subdirectory to house any information that is to be
-shared between volumes.
-Single-volume documents will also supply some files here.
-The expected ``common'' files include:
-\begin{description}
-\item[\texttt{defs.tex}] macros defining common terms.
-\item[\texttt{units.tex}] macros defining how to use quantities and units.
-\item[\texttt{preamble.tex}] largely including the above to files but
-  any extra \LaTeX{} configuration that goes before the document
-  environment begins.
-\item[\texttt{citedb.bib}] the BitTeX database.
-\item[\texttt{init.tex}] Any content that goes in the document
-  environment but before the first chapter.
-  It typically should contain title page, ToC/LoF/LoT.
-\item[\texttt{final.tex}] Any content that goes in the document after
-  the last chapter.
-  It typically should contain the commands related to producing the
-  bibliography.
-\end{description}
-
-The content of many of these files should in part be kept in sync
-across all document repositories.
-
-Specific documents may place additional files in this \texttt{common/}
-directory that should be shared among the document's volumes.
-For example, all volumes of the CDR include an \texttt{intro.tex}
-(which further includes \texttt{supp-doc-list.tex}).
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{The main file}
-
-A new main file will likely be started only by the technical editors.
-To start a new volume, copy the \texttt{guidance.tex} to a new
-name and edit as directed by the comments.  
-
-\begin{enumerate}
-\item Set the graphics path
-\item Redefine the volumes sub-title
-\item Input each chapter file.
-\end{enumerate}
-
+  
