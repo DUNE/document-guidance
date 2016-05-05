@@ -7,19 +7,18 @@ This repository holds the source for a document to provide guidance on writing
 - [[https://github.com/DUNE/lbne-fd-closeout][The DUNE Far Detector Closeout]]
 - [[https://github.com/DUNE/lbn-cdr][The DUNE CDR]]
 
-
 This guidance is in the form of a LaTeX document which tries to follow its own guidance and thus can be used as an extended example.  Built PDFs of the guidance document are available from the [[https://github.com/DUNE/document-guidance/releases][GitHub releases area for this repository]].
 
-Please look at the tex files under the "guidance" directory to see how to make headings, labels, tables, figures, etc. according to standards we've set.
+Please look at the tex files under the "guidance" directory to see how to make headings, labels, tables, figures, etc., according to standards we've set.
 
 * Getting started
 
-This section describes how to (1) check out the source to this document-guidance document,
-(2) build it (after you edit it), and (3) push commits back to GitHub.  When working on a "real" document, substitute the actual document repository name for =document-guidance= in the examples on this page.
+This section describes how to (1) check out the source to this document-guidance document from GitHub,
+(2) build it (after you edit it -- editing information is in document-guidance itself), and (3) push commits back to GitHub.  When working on a "real" document, substitute the actual document repository name for =document-guidance= in the examples on this page.
 
-To get "push" access to a repository, sign up for a GitHub account if you do not yet have one and send the user name to
+To get "push" access to a repository, [[https://help.github.com/articles/signing-up-for-a-new-github-account/][sign up for a GitHub account]] if you do not yet have one, then send the user name to
 Brett Viren (see contacts below) and indicate which repository(ies) you need to
-access.  (If you instead prefer to fork and issue pull requests that
+access.  (If you instead prefer to fork and issue pull requests, that
 can likely be accommodated.  Check with the document technical
 editors, listed below.)
 
@@ -152,18 +151,12 @@ If all else fails, save your changed files somewhere, blow away the repository a
 ** Git-phobic and/or LaTeX-phobic
 
 Git works on all major computing platforms and many minor ones and is
-successfully used by all manner of people, even physicists(!)  If for
-some reason you don't want to use Git you will be accommodated at
-the cost of additional burden placed on the technical editors. 
+successfully used by all manner of people.  If for
+some reason you don't want to use Git we can work around that, however you need to always start from the latest files that you download from GitHub.
 
 If you are willing and able to edit in LaTeX, grab the latest file from the repository, edit it and send it to Anne (see contacts below).
 
-If you are unable to edit in LaTeX, please talk to Anne.
-
-The
-[[https://web.fnal.gov/project/LBNF/ReviewsAndAssessments/CD-1Preparation/SitePages/CD-1%20Preparation%20Home.aspx][CD-1 Preparation Page]]
-was created in 2015 to help organize these and other documents, including the [[https://github.com/DUNE/cern-prototype-proposal][Proposal for a Full-Scale, 
-Single-Phase Prototype at CERN]]; this page can still serve as a reference.
+If you don't want to edit in LaTeX, please talk to Anne.
 
 
 
