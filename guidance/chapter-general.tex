@@ -3,8 +3,8 @@
 
 This volume gives guidance to authors and editors of DUNE and LBNF documents such as the CDR, TDRs, and so on. It collects ``wisdom'' learned from 
 producing earlier documents, starting with the LBNE CDR and science document, and we will appreciate 
-very much if everyone follows it!  It tries to follows its own guidance, so looking at its \LaTeX{} source can 
-provide an example.  
+very much if everyone follows it!  It tries to follows its own guidance, so its \LaTeX{} source
+provides an example.  
 
 This has been updated for the ProtoDUNE-SP TDR, which will not have multiple volumes. Earlier versions of this guidance document discuss splitting a document into volumes, in particular, the release ``lbnfdune-cdr-CD1R,'' written for said effort.  It can be found at \url{https://github.com/DUNE/document-guidance/releases/tag/lbnfdune-cdr-CD1R}.
 
@@ -31,14 +31,11 @@ what label was used to reference each particular thing.
 It's easiest to trace things when the labels are meaningful, and for figures, when they match the image filename, so please choose labels carefully. Labels are discussed in Section~\ref{sec:intra-doc-ref}.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Files}
+\section{Files for the ProtoDUNE-SP TDR (2016)}
 \label{sec:files}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{For the ProtoDUNE-SP TDR (2016)}
-\label{ssec:files-pdunesp-tdr}
 
-You will find the \LaTeX{} and figure content for this TDR
+The \LaTeX{} and figure content for this TDR should be
 arranged under your top\\ \verb|\my\work\area\protodune-tdr| directory as follows:
 
 \begin{description}
@@ -51,7 +48,7 @@ arranged under your top\\ \verb|\my\work\area\protodune-tdr| directory as follow
   chapter of the document. It gets pulled into the main file \texttt{protodune-tdr.tex}.
 \end{description}
 
-Some general guidance on choosing file names:
+The editors will usually provide all the starting files, but in case you need to create a new file, here is some general guidance on file names:
 
 \begin{itemize}
 \item Editors may elect to further break up content for a chapter into per-section
@@ -63,9 +60,9 @@ Some general guidance on choosing file names:
   Their actual numbers will be determined by high-level ordering by
   the editors.  E.g., \verb|highvoltage.tex| is ok; \verb|ch3-highvoltage.tex| is not.
 \item The editors are expected to maintain the top level
-  \texttt{protodune-tdr.tex} file.  Authors should please avoid modifying it.
+  \texttt{protodune-tdr.tex} file.  Please do not modify it!
 \end{itemize}
-If you find something inadequate or have questions, consult with either: \\
+If something seems inadequate or you have questions, please consult with either: \\
   Anne Heavey, aheavey@fnal.gov, 630-840-8039 (technical editor)\\
   Brett Viren, bv@bnl.gov (help on graphics, \LaTeX{} and git machinery)
 
