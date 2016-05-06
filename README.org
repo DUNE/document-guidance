@@ -7,9 +7,30 @@ This repository holds the source for a document to provide guidance on writing
 - [[https://github.com/DUNE/lbne-fd-closeout][The DUNE Far Detector Closeout]]
 - [[https://github.com/DUNE/lbn-cdr][The DUNE CDR]]
 
-This guidance is in the form of a LaTeX document which tries to follow its own guidance and thus can be used as an extended example.  Built PDFs of the guidance document are available from the [[https://github.com/DUNE/document-guidance/releases][GitHub releases area for this repository]].
+This page tells you how to access and build the LaTeX guidance document contained in this repository. The instructions on this page are also valid for accessing and building the document that you will be contributing to, e.g., the ProtoDUNE-SP TDR. 
 
-Please look at the tex files under the "guidance" directory to see how to make headings, labels, tables, figures, etc., according to standards we've set.
+This page also provides all the instructions you will need for interacting with git as you pull and push document files.
+
+The document-guidance document provides guidance on editing in LaTeX according to the standards that we've set up for DUNE and LBNF.
+
+Four important guidelines that will help avoid headaches:
+
+-PLEASE ALWAYS DO A PULL IMMEDIATELY BEFORE YOU BEGIN WORKING ON A FILE JUST IN CASE SOMEONE ELSE MODIFIED IT RECENTLY.
+-WE RECOMMEND THAT YOU COMPILE FREQUENTLY AS YOU COMPOSE AND EDIT; IT WILL BE EASIER TO RESOLVE ANY COMPILATION PROBLEMS.
+-COMMIT AND PUSH IMMEDIATELY AFTER YOU'VE FINISHED YOUR EDITS SO THAT OTHERS HAVE THE BEST CHANCE OF PICKING UP YOUR CHANGES BEFORE THEY EDIT. (Yes, git can resolve conflicts, but it's better to avoid them.)
+-PLEASE MAKE SURE THE DOCUMENT COMPILES BEFORE YOU COMMIT IT AND PUSH IT TO THE REPOSITORY!  IF IT DOESN'T, DO NOT COMMIT OR PUSH IT. SEND IT TO ANNE INSTEAD.
+
+* How the guidance document should be used
+
+The documentation is in the form of a LaTeX document which tries to follow its own guidance and thus can be used as an extended example. Please read through it once when you start contributing content, and bookmark it for reference.  Don't worry about following it to the letter, the editor will fix things.  (But the less she has to fix, the quicker it goes!)
+
+Please look at the tex files under the "guidance" directory to see how to make headings, labels, tables, figures, etc., according to standards we've set. Compare it to the built PDF of the document, which you can find at the [[https://github.com/DUNE/document-guidance/releases][GitHub releases area for this repository]].
+
+A PDF of this guidance document is also generated through the services of [[https://www.sharelatex.com][ShareLaTeX]]
+
+  https://www.sharelatex.com/github/repos/DUNE/document-guidance
+
+Click "Previous Builds," click on the version's tag (at left), and on that second page, click the "Download PDF" button in front of "Build was successful!" (The "Download PDF" buttons on the first page don't work.)
 
 * Getting started
 
@@ -28,8 +49,7 @@ editors, listed below.)
 If you've just gone through the "Install on Mac" procedure, skip this step.
 You will "clone" each remote repository that you need from GitHub into a dedicated directory on your local machine. First, set up a "parent" directory, e.g., /my/work/area.
 
-
-Each GitHub repository web site provides a URL above the list of files; it starts with "https" and ends with ".git".  The HTTPS URL can be used for anonymous clone and then later can be pushed to (see below) by supplying your GItHub password.  The SSH URL requires uploading a public key to GitHub but then no password need be given.  Pick the URL you like and then cloning is simple:
+Each GitHub repository web site provides a URL above the list of files; it starts with "https" and ends with ".git".  The HTTPS URL can be used for anonymous clone and then later can be pushed to (see below) by supplying your GitHub password.  The SSH URL requires uploading a public key to GitHub but then no password need be given.  Pick the URL you like and then cloning is simple:
 
 #+BEGIN_EXAMPLE
   $ cd /my/work/area
@@ -96,20 +116,10 @@ There is also a "compileitprint" script that produces a clean copy.  To compile 
 $ compileitdraft guidance
 #+END_EXAMPLE
 
+ 
+* Interacting with the repository
 
-* Autobuilder
-
-A PDF of the documented is generated through the services of [[https://www.sharelatex.com][ShareLaTeX]]
-
-  https://www.sharelatex.com/github/repos/DUNE/document-guidance
-
-An alternative auto-built PDF is available [[https://dune.bnl.gov/tmp/][here]].
-
-Ask Brett about this.
-
-* Repository
-
-We strongly recommend that as you make changes to a document, you compile it periodically to make sure you haven't introduced errors. Check again when you are done with your changes. Then commit the changes to your local cloned directory and please push them to GitHub immediately so that they are available to your colleagues.  
+Again, we strongly recommend that as you make changes to a document, you compile it periodically to make sure you haven't introduced errors. Verify that it compiles when you are done with your changes. Then commit the changes to your local cloned directory and please push them to GitHub immediately so that they are available to your colleagues.  
 
 ** General git procedure:
 
