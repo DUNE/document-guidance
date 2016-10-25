@@ -26,20 +26,16 @@ The documentation is in the form of a LaTeX document which tries to follow its o
 
 Please look at the tex files under the "guidance" directory to see how to make headings, labels, tables, figures, etc., according to standards we've set. Compare it to the built PDF of the document, which you can find at the [[https://github.com/DUNE/document-guidance/releases][GitHub releases area for this repository]].
 
-A PDF of this guidance document is also generated through the services of [[https://www.sharelatex.com][ShareLaTeX]]
-
-  https://www.sharelatex.com/github/repos/DUNE/document-guidance
-
-Click "Previous Builds," click on the version's tag (at left), and on that second page, click the "Download PDF" button in front of "Build was successful!" (The "Download PDF" buttons on the first page don't work.)
 
 * Getting started
 
 This section describes how to 
 
-1. check out the source to this document-guidance document from GitHub,
-2. build it (after you edit it; editing information is in document-guidance itself), and 3. push commits back to GitHub.  
+1. check out the source to a document from GitHub,
+2. build it, and
+3. push commits back to GitHub.  
 
-When working on a "real" document, substitute the actual document repository name for =document-guidance= in the examples on this page.
+We use the =document-guidance= document as an example. Note that you don't have permissions to push anything to this repository. When working on a "real" document, substitute the actual document repository name for =document-guidance= in the commands shown on this page.
 
 To get "push" access to a repository, [[https://help.github.com/articles/signing-up-for-a-new-github-account/][sign up for a GitHub account]] if you do not yet have one, then send the user name to
 Brett Viren (see contacts below) and indicate which repository(ies) you need to
@@ -50,30 +46,35 @@ editors, listed below.)
 
 ** Initial clone
 
-If you've just gone through the "Install on Mac" procedure, skip this step.
-You will "clone" each remote repository that you need from GitHub into a dedicated directory on your local machine. First, set up a "parent" directory, e.g., /my/work/area.
+(There is an "Install on Mac" procedure documented in a file in the repository; if you complete that, then skip this step.)
 
-Each GitHub repository web site provides a URL above the list of files; it starts with "https" and ends with ".git".  The HTTPS URL can be used for anonymous clone and then later can be pushed to (see below) by supplying your GitHub password.  The SSH URL requires uploading a public key to GitHub but then no password need be given.  Pick the URL you like and then cloning is simple:
+You will "clone" each desired remote repository from GitHub into a dedicated directory on your local machine. First, set up a "parent" directory to contain the repository(ies), e.g., /my/work/area.
+
+Each GitHub repository web site provides a URL above the list of files; it starts with "https" and ends with ".git".  The HTTPS URL can be used for anonymous cloning and then later can be pushed to (see below) by supplying your GitHub password.  The SSH URL requires uploading a public key to GitHub but then no password need be given.  Pick the URL you like and then cloning is simple:
 
 #+BEGIN_EXAMPLE
   $ cd /my/work/area
   $ git clone <URL>
 #+END_EXAMPLE
 
-For example, to clone this repository using the HTTPS URL, do:
+For example, to clone this =document-guidance= repository using the HTTPS URL, do:
 
 #+BEGIN_EXAMPLE
   $ cd /my/work/area
   $ git clone https://github.com/DUNE/document-guidance.git
-  $ cd document-guidance
 #+END_EXAMPLE
 
-You should now have 
+You should now have the reposo
 #+BEGIN_EXAMPLE
   /my/work/area/document-guidance
 #+END_EXAMPLE
 
-that includes the directories and files in this repository.
+that includes the directories and files in this repository. Now you can start editing.
+
+#+BEGIN_EXAMPLE
+  $ cd document-guidance
+#+END_EXAMPLE
+
 
 ** Building a draft document
 
@@ -99,7 +100,7 @@ It needs to be run twice to pick up any changes to the paging and numbering.
 For documents with an acronym list, we provide a "compileitdraft" script that includes a "makeindex" command. Run:
 
 #+BEGIN_EXAMPLE
- $ compileitdraft guidance
+ $ ./compileitdraft guidance
 #+END_EXAMPLE
 
 ** Building a print-ready document
@@ -117,13 +118,13 @@ with this one like:
 There is also a "compileitprint" script that produces a clean copy.  To compile the document you would run, e.g.,
 
 #+BEGIN_EXAMPLE
-$ compileitdraft guidance
+$ ./compileitprint guidance
 #+END_EXAMPLE
 
  
 * Interacting with the repository
 
-Again, we strongly recommend that as you make changes to a document, you compile it periodically to make sure you haven't introduced errors. Verify that it compiles when you are done with your changes. Then commit the changes to your local cloned directory and please push them to GitHub immediately so that they are available to your colleagues.  
+Again, we strongly recommend that as you make changes to a document, you compile it frequently to easily catch and correct any errors you may have introduced. Please verify that it compiles when you are done with your changes. Then commit the changes to your local cloned directory and please push them to GitHub immediately so that they are available to your colleagues. 
 
 ** General git procedure:
 
@@ -134,7 +135,7 @@ pull, commit and push, if you prefer.  If you use a terminal command line, here 
   $ cd /my/work/area/document-guidance
   # Pull down the latest commits from others just before you start.
   $ git pull
-  # If this fails, see below.
+  # If this fails, see below. If it works, continue:
   # Edit your files, save your changes, and verify that the document compiles.
   # If any of your files are new, add it/them before committing, e.g.,:
   $ git add path/to/the-new-file.tex
@@ -145,7 +146,7 @@ pull, commit and push, if you prefer.  If you use a terminal command line, here 
   # If this fails, see below.
 #+END_EXAMPLE
 
-Sometimes =git pull= fails due to a conflict. If =git pull= doesn't work, "stash" your changes, try to pull again to get the latest commits (it should work after git stash), then "unstash" or "pop" your changes back in and resolve conflicts.
+Sometimes =git pull= fails due to a conflict. If =git pull= doesn't work, "stash" your changes, then try to "pull" again to get the latest commits (it should work after =git stash=), then "unstash" (or "pop" your changes back in) and resolve conflicts. Here is the procedure:
 
 #+BEGIN_EXAMPLE
   $ git stash
@@ -158,9 +159,9 @@ Sometimes =git pull= fails due to a conflict. If =git pull= doesn't work, "stash
   $ git push
 #+END_EXAMPLE
 
-If any commits have been pushed by others since the last time you did a =git pull= (or since your initial =git clone=) then git will not allow you to =push= until you have done a fresh =git pull=.  
+If any commits have been pushed by others since the last time you did a =git pull= (or since your initial =git clone= if you haven't yet pulled) then git will not allow you to =push= until you have done a fresh =git pull=.  
 
-If all else fails, save your changed files somewhere, blow away the repository and reclone it, then remake your edits.
+If all else fails, save your changed files somewhere, blow away the repository and reclone it. Then remake your edits.
 
 ** Git-phobic and/or LaTeX-phobic
 
@@ -168,11 +169,9 @@ Git works on all major computing platforms and many minor ones and is
 successfully used by all manner of people.  If for
 some reason you don't want to use Git we can work around that, however you need to always start from the latest files that you download from GitHub.
 
-If you are willing and able to edit in LaTeX, grab the latest file from the repository, edit it and send it to Anne (see contacts below).
+If you are willing and able to edit in LaTeX, but don't want to deal with Git, grab the latest file from the repository, edit it and send it to Anne (see contacts below).
 
 If you don't want to edit in LaTeX, please talk to Anne.
-
-
 
 * Contacts
 
