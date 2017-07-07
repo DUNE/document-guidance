@@ -1,16 +1,16 @@
-\chapter{Generalities}
+\chapter{General Information}
 \label{ch:generalities}
 
 This volume gives guidance to authors and editors of DUNE and LBNF documents such as the CDR, TDRs, and so on. It collects ``wisdom'' learned from 
-producing earlier documents, starting with the LBNE CDR and science document, and we will appreciate 
-very much if everyone follows it!  It tries to follows its own guidance, so its \LaTeX{} source
+producing earlier documents, including the DUNE CDR, and we will appreciate 
+very much if everyone follows it!  It tries to follows its own guidance so that its \LaTeX{} source
 provides an example.  
 
-This has been updated for the ProtoDUNE-SP TDR, which will not have multiple volumes. Earlier versions of this guidance document discuss splitting a document into volumes, in particular, the release ``lbnfdune-cdr-CD1R,'' written for said effort.  It can be found at \url{https://github.com/DUNE/document-guidance/releases/tag/lbnfdune-cdr-CD1R}.
+This has been updated for the DUNE TDR, which will likely have multiple volumes. Earlier versions of this guidance document were updated for other important documents, e.g., the CDR and the ProtoDUNE-SP TDR.  These versions can be found at \url{https://github.com/DUNE/document-guidance/releases/}.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Information on the Document Guidance Web Page}
+\section{What's on the Document Guidance GitHub web page?}
 \label{ssec:files-webpage}
 
 Some guidance is on the web page \url{https://github.com/DUNE/document-guidance}:
@@ -30,48 +30,64 @@ faint grey notes (enclosed in a box) near labeled items (headings, figures, tabl
 what label was used to reference each particular thing.  
 It's easiest to trace things when the labels are meaningful, and for figures, when they match the image filename, so please choose labels carefully. Labels are discussed in Section~\ref{sec:intra-doc-ref}.
 
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Files for the ProtoDUNE-SP TDR (2016)}
+\section{Files and filenames}
 \label{sec:files}
 
-
-The \LaTeX{} and figure content for this TDR should be
-arranged under your top\\ \verb|\my\work\area\protodune-tdr| directory as follows:
+An entire document may consist of one or more \textit{volumes}; e.g.,
+the DUNE/LBNF TDR will likely consist of several, only some of which may be written in
+\LaTeX{}.
+Within the overall TDR directory, you will find the \LaTeX{} and figure content for all the \LaTeX{} volumes. There are subdirectories for each volume. The content for a given volume is
+arranged like:
 
 \begin{description}
-\item[\texttt{protodune-tdr.tex}] the main file is found in the top-level
-  directory. It sets the document class, sets a graphics path (including all directories that may include image files; here it should only include ``figures''), does a couple of other things, then pulls in each of the chapter content files in the right order.  This is the file that you compile, e.g., \verb|pdflatex protodune-tdr|.
-\item[\texttt{figures/}] top-level subdirectory for any static figures.
-\item[\texttt{generated/}] subdirectory holding any generated
-  figures. See Section~\ref{sec:figures} for info on generated files. For how to include generated figures, see Section~\ref{sec:plots}.
-\item[\texttt{somechapter.tex}] file that holds the \LaTeX{} source (content) for one
-  chapter of the document. It gets pulled into the main file \texttt{protodune-tdr.tex}.
+\item[\texttt{volname.tex}] the main file and is found in the top-level
+  directory. It generally has no significant content itself but
+  ``includes'' content contained in other files.
+\item[\texttt{figures/}] top-level subdirectory for any static figures
+  shared by more than one volume in the repository.
+\item[\texttt{volname/}] subdirectory holding all content for one particular volume.
+\item[\texttt{volname/chaptername.tex}] holds the content for one
+  chapter of a volume.
+\item[\texttt{volname/figures/}] subdirectory holding any static volume-specific figures
+\item[\texttt{volname/generated/}] subdirectory holding any generated
+  figures (see Section~\ref{sec:figures} for info on generated files)
 \end{description}
 
-The editors will usually provide all the starting files, but in case you need to create a new file, here is some general guidance on file names:
+\fixme{fix this after we get the structure set}
+Where \texttt{volname} is some label for the volume (the name for the
+volume you are reading now is ``\texttt{guidance}'').
+Multi-volume documents may pick some file naming convention (e.g., the
+TDR may use ``\texttt{volume-VOLUMEname}''.
+Specific files hold chapter-level or section-level content and should be named with some
+short, descriptive label.
+The file holding this sentence is ``\texttt{guidance/chapter-general.tex}''.
+Some general guidance on choosing these file names:
 
 \begin{itemize}
-\item Editors may elect to further break up content for a chapter into per-section
+\item Editors may elect to further break up content into per-section
   files.
-  If so, the files will follow a naming convention such as
-  ``\texttt{somechapter-somesection.tex}''.
-\item Do not include a chapter or section number in any file
+  If so, follow a naming convention such as
+  ``\texttt{chaptername-sectionname.tex}''.
+\item Do not include a volume, chapter or section numbers in any file
   name.
   Their actual numbers will be determined by high-level ordering by
-  the editors.  E.g., \verb|highvoltage.tex| is ok; \verb|ch3-highvoltage.tex| is not.
+  the editors. 
 \item The editors are expected to maintain the top level
-  \texttt{protodune-tdr.tex} file.  Please do not modify it!
-\end{itemize}
-If something seems inadequate or you have questions, please consult with either: \\
+  \texttt{name.tex} files. Other authors should avoid modifying it.
+\item Use the \texttt{figures/} subdirectory for static figures (see
+  Section~\ref{sec:figures}). For how to include generated figures see
+  Section~\ref{sec:plots}.
+\item If you find something inadequate or have questions, consult with either: \\
   Anne Heavey, aheavey@fnal.gov, 630-840-8039 (technical editor)\\
   Brett Viren, bv@bnl.gov (help on graphics, \LaTeX{} and git machinery)
-
-
+\end{itemize}
 
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Figure Format}
+\section{Figure format}
 \label{sec:figure-format}
 
 It is essential to use high-quality, efficiently sized figures (aka
@@ -88,7 +104,7 @@ The rest of this section provides guidance on how to create optimal
 figures.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Graphic Types}
+\subsection{Graphic types}
 \label{sec:graphic-types}
 
 There two basic graphic content types; these are important to understand:
@@ -143,7 +159,7 @@ in-plot fonts, colors, wording.
 (More info to be added.)
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Annotated Figures}
+\subsection{Annotated figures}
 \label{sec:annotate}
 
 One common figure type is to take a figure and annotate it with
@@ -165,9 +181,18 @@ PDF.
 \section{Structuring a design document}
 \label{sec:design-doc}
 
-To make design documents (e.g., CDR, TDR) easier to read, it's a good idea to follow a similar structure in the presentation of each system, subsystem and component. The structure described here assumes that each system of a L2 project item (e.g., far detector, near detector...) gets a dedicated chapter.  Depending on the actual report, this may vary. ``Appropriate level of detail'' may also vary.
+To make design documents (e.g., CDR, TDR) easier to read, it's a good idea to follow a similar structure in the presentation of each system, subsystem and component. The structure described here assumes that each major project item (e.g., far detector, near detector...) gets a dedicated volume, and each major system within the item gets a chapter.  Depending on the actual report, this may vary. ``Appropriate level of detail'' may also vary.
 
-Create an introduction section for the chapter.
+The different volumes of the DUNE TDR should have similar introductory chapters in case someone is only reading that volume. 
+Use common/intro.tex in the intro chapter, then add in 
+The intro chapter should be structured as:
+\begin{itemize}
+\item (per volume) About this volume.
+\end{itemize}
+
+Create an introduction section for each chapter.  For chapters about detector systems, use the APA template as a model.
+\fixme{I need to link it to here}
+
 \begin{itemize}
 \item Begin with: ``The scope of the (name of system) includes the design, procurement, fabrication, testing, delivery and installation (or whatever it includes) of all the subsystems (or components) that comprise it:'' (follow with a list)
 \item Include an image of the overall system, labeling its parts. Show how the system fits into the overall L2 project item.
