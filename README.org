@@ -3,12 +3,10 @@
 
 This *repository* holds the source for a document that provides guidance on writing and editing 
 
+- [[https://github.com/DUNE/DUNE-TDR]][The DUNE TDR]]
 - [[https://github.com/DUNE/protodune-tdr][The ProtoDUNE-SP TDR]]
 - [[https://github.com/DUNE/lbne-fd-closeout][The DUNE Far Detector Closeout]]
 - [[https://github.com/DUNE/lbn-cdr][The DUNE CDR]]
-
-and soon,
-- [[https://github.com/DUNE/DUNE-TDR][The DUNE TDR]]
 
 in LaTeX according to the standards that we've set up for DUNE and LBNF.
 
