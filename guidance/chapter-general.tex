@@ -1,21 +1,22 @@
 \chapter{General information}
 \label{ch:gen}
 
-This volume gives guidance to authors and editors of DUNE and LBNF documents such as the CDR, TDRs, and so on. It collects ``wisdom'' learned from 
+This volume gives guidance to authors and editors of DUNE documents such as the CDR, TDRs, and so on. It collects ``wisdom'' learned from 
 producing earlier documents, including the DUNE CDR, and we will appreciate 
 very much if everyone follows it!  It tries to follows its own guidance so that its \LaTeX{} source
 provides an example.  
 
-This has been updated for the DUNE TDR, which will likely have multiple volumes. Earlier versions of this guidance document were updated for other important documents, e.g., the CDR and the ProtoDUNE-SP TDR.  These versions can be found at \url{https://github.com/DUNE/document-guidance/releases/}.
+This has been updated for the DUNE TDR. Earlier versions of this guidance document were updated for other important documents, e.g., the CDR and the ProtoDUNE-SP TDR.  These versions can be found at \url{https://github.com/DUNE/document-guidance/releases/}.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{What's on the Document Guidance GitHub web page?}
 \label{sec:gen-webpage}
 
-Some guidance is on the web page \url{https://github.com/DUNE/document-guidance}:
+Information about using GitHub and building a document is on the web page \url{https://github.com/DUNE/document-guidance}:
 
 \begin{itemize}
+\item Four important guidelines about interacting with git that will help avoid headaches!
 \item How to get started with GitHub and get the files that you need to edit. See both ``Getting Started'' (at the top) and ``Repository'' further down.  ``Repository'' provides commands to use for interacting with GitHub.
 \item How to build the document, in draft format (with extra markup) after you have it downloaded to your local machine.
 \item How to build a print-ready document -- even though in principle you don't need to do this, you may want to see how it looks. The technical editors will build the final document.
@@ -31,20 +32,25 @@ what label was used to reference each particular thing.
 It's easiest to trace things when the labels are meaningful, and for figures, when they match the image filename, so please choose labels carefully. Labels are discussed in Section~\ref{sec:latex-intra-doc-ref}.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{What's in the Document Guidance repository?}
+\section{What's in the Document Guidance GitHub repository?}
+\label{sec:gen-guidance-repo}
+
+This repository contains code for a document with ``all you need to know'' about writing your documents -- guidance on \LaTeX{} syntax, chapter structure, English standards, abbreviations, figures, and other things. Please read through it so that you understand the LBNF/DUNE style and structure for documents.  There is \LaTeX{} code that you can copy straight from the source for this document and edit for your content.  This is supposed to make it easy!
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{What's in the DUNE TDR GitHub repository?}
 \label{sec:gen-repo}
 
+A document maintained in GitHub pertaining to the overall DUNE enterprise may consist of multiple \textit{volumes}\footnote{Some volumes may be written in MS Word, external to a GitHub repository.}. The DUNE TDR will likely have multiple volumes.  A document repository holds all the files needed to compile each volume of the document (or the document itself, if it's not broken into volumes). This includes both content files and additional files that set up the configuration, 
+contain auxiliary text (e.g., acronym lists, citations), or provide definitions or macros (defs.txt), etc.  Most of these other files are maintained by the technical editor and you should not modify them. You may of course add citations, acronyms, and so forth.   More information on these files is given in Chapter~\ref{ch:tech}.
 
-A document pertaining to the overall LBNF and/or DUNE enterprise may consist of multiple \textit{volumes}\footnote{Some volumes may be written in MS Word, external to a GitHub repository.}.  The repository holds all the files needed to compile each volume of the document (or the document itself, if it's not broken into volumes), both content files and additional files that set up the configuration, 
-contain auxiliary text (e.g., acronym lists, citations), or provide definitions or macros (defs.txt), etc.  Most of these other files are maintained by the technical editor and you should not modify them. You may of course add citations, acronyms, and so forth.  More information on these files is given in Chapter~\ref{ch:tech}.
-
-
-The repository is set up with a subdirectory for each volume -- this is where you will do the bulk of your work. In the following, \texttt{volname} represents a label for the volume. The content for a given volume is
+The DUNE TDR repository will be set up with a subdirectory for each volume -- this is where you will do the bulk of your work. In the following, \texttt{volname} represents a label for the volume. The content for a given volume is
 arranged as follows:
 
 \begin{description}
-\item[\texttt{volname.tex}] the main file (see Section~\ref{sec:tech-mainfile}) for a volume; there will likely be a few of these. They are found in the top-level
-  directory. They are have no significant content themselves; they just use
+\item[\texttt{volname.tex}] the main file (see Section~\ref{sec:tech-mainfile}) for a volume; there will one of these per volume. They are found in the top-level
+  directory. They have no significant content themselves; they just use
   ``includes'' to pull together content contained in their component chapter files. Please do NOT modify any volume file!
 \item[\texttt{figures/}] top-level subdirectory for any static figures
   shared by more than one volume in the repository. Typically your figures will be volume-specific and you won't add them here.
@@ -54,7 +60,6 @@ arranged as follows:
 \item[\texttt{volname/generated/}] subdirectory holding any generated
   figures (see Section~\ref{sec:graphic-plots} for info on generated files). Your ROOT plots, for example, will go here.
 \end{description}
-
 
 Multi-volume documents will have an established file naming convention (e.g., the
 TDR may use ``\texttt{volume-volumename}''.
@@ -70,10 +75,5 @@ Please note:
   Brett Viren, bv@bnl.gov (help on graphics, \LaTeX{} and git machinery)
 \end{itemize}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{What's in this guidance document?}
-\label{sec:gen-doc}
-
-As you might imagine, this document contains GUIDANCE for writing your documents. Guidance on \LaTeX{}, language, abbreviations, figures, and other things. Please read through it so that you understand the LBNF/DUNE style and structure for documents.  There is \LaTeX{} code that you can copy straight from the source for this document and edit to fit your content.  This is supposed to make it easy!
 
 
