@@ -1,17 +1,18 @@
-\chapter{Technical}
+\chapter{Important files in the GitHub document repository}
+\label{ch:tech}
 
 This chapter describes some of the more technical aspects of the LBNF/DUNE \LaTeX setup. Various aspects of the configuration are pulled out into separate files to keep things well organized.  In general, authors should 
 not edit the files described in this chapter. Often authors need to include citations, and occasionally may want to add acronyms or definitions. This is ok; just please don't touch any other configuration-related files!
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{The main file}
-\label{sec:mainfile}
+\label{sec:tech-mainfile}
 
 A new main file will likely be started only by the technical editors. The main file
 
 \begin{enumerate}
-\item set the document class (see Section~\ref{sec:classfile};
-\item set the graphics path;
+\item sets the document class (see Section~\ref{sec:tech-classfile};
+\item sets the graphics path;
 \item inputs the preamble;
 \item opens the document environment;
 \item inputs the ``init'' file;
@@ -22,18 +23,18 @@ A new main file will likely be started only by the technical editors. The main f
 \end{enumerate}
 
 To start a new document, you would copy the \texttt{guidance.tex} to a new
-name and edit as directed by the comments.  For the ProtoDUNE TDR, this file is called \texttt{protodune-tdr.tex}. (Please don't touch it!) 
+name and edit as directed by the comments.  As an example, the main file of the physics volume of the DUNE TDR is \texttt{volume-physics.tex}. (Please don't touch it!) 
 
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{The \LaTeX{} class file}
-\label{sec:classfile}
+\label{sec:tech-classfile}
 
 All of the \LaTeX{} configuration for the document that pertains to
 the general LBNF/DUNE style is in the
 \texttt{td-pdr.cls} file. (The name of this file may change from document to document; it will be the only \texttt{xxx.cls} file.)
-The class takes some options that control high-level style:
+The class takes some options that control high-level style, e.g.,:
 
 \begin{description}
 \item[\texttt{final}] this removes all extra markup used during the
@@ -43,11 +44,12 @@ The class takes some options that control high-level style:
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Document-wide \LaTeX{} files in \texttt{common/}}
+\label{sec:tech-common}
 
 Multi-volume documents are supported and should use the
 \texttt{common/} subdirectory to house any information that is to be
 shared between volumes.
-Single-volume documents (e.g., the ProtoDUNE-SP TDR) will also supply some files here.
+Because we reuse formatting from one document to the next, the single-volume documents (e.g., the ProtoDUNE-SP TDR) also use this directory.
 The expected ``common'' files include:
 \begin{description}
 \item[\texttt{defs.tex}] macros defining common terms.
@@ -71,11 +73,11 @@ across all document repositories.
 
 Specific documents may place additional files in this \texttt{common/}
 directory that should be shared document-wide.
-For example, most (all but intro) volumes of the CDR include a standard \texttt{common/intro.tex}.
+For example, most (all but intro) volumes of the TDR will include a standard \texttt{common/intro.tex}.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Getting the Files and Compiling after your Changes}
-\label{sec:getfiles-compile}
+\section{Getting the files and compiling after your changes}
+\label{sec:tech-compile}
 
 Detailed instructions for getting the files and compiling a volume are
 given on main GitHub page for the repository supplying this document at

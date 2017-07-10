@@ -1,0 +1,92 @@
+\chapter{Creating good graphics}
+\label{ch:graphics}
+
+
+It is essential to use high-quality, efficiently sized figures (aka
+``graphics'').
+You may be asked to re-make any that egregiously violate some some
+basic standards.
+These standards are in place to avoid sub-optimal figures, bloated
+files sizes, and delayed publishing schedules.  E.g., the arXive puts a limit of 10\,MB on documents.
+
+Often the best thing to do is to \textbf{not} process or attempt to
+optimize a graphic but provide the editors access to the most ``raw''
+graphic which your software can produce.
+If at all uncertain, please contact the technical editors.
+The rest of this section provides guidance on how to create optimal
+figures.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Graphic types}
+\label{sec:graphic-types}
+
+There two basic graphic content types; these are important to understand:
+
+\begin{description}
+\item[raster] a two dimensional array of pixels
+\item[vector] a two dimensional drawing description language
+\end{description}
+
+The documents compile with \texttt{pdflatex} and so may use graphics
+in PDF, JPEG or PNG file formats.
+These formats have specific best uses:
+
+\begin{description}
+\item[JPEG] use for photographs
+\item[PDF] use of any line drawings, plots, illustrations
+\item[PNG] use due to some inability to produce proper JPEG or PDF (contact editors)
+\end{description}
+
+It is possible (though unwise) to store inherently raster information
+in PDF or to rasterize inherently vector information into JPEG or PNG.
+\textbf{This is the main cause for bloated, low-quality graphics.}
+Here are some guidelines addressing this common problem:
+
+\begin{itemize}
+\item Only save photographic images to JPEG, avoid re-saves.
+\item Save line drawings, plots or illustrations directly to vector PDF.
+\item Follow special guidance on annotation (see Section~\ref{sec:graphic-annotate}).
+\item Never convert any raster data (JPEG/PNG) to PDF.
+\item Never raster what is really vector data in to a JPEG/PNG.
+\item Never use MicroSoft PowerPoint for any figure as it tends to lead to poor quality and bloated files.
+\item Do save using native application formats to allow later
+  modification
+\item Leave any potential format conversions to the technical editors.
+\item Consider providing plots as easy-to-reproduce ROOT, Python or
+  other scripts.
+  (see Section~\ref{sec:graphic-plots})
+\end{itemize}
+
+\noindent If authors find these guidelines can not be followed for any
+given graphic, please contact the technical editors.   
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Plots}
+\label{sec:graphic-plots}
+
+Where possible, it is recommended that any plots be submitted in a
+form that allows easy reproduction from data in the course of building
+the document.
+This allows the technical editors to attempt to apply consistent
+in-plot fonts, colors, wording.
+\fixme{More info to be added.}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Annotated figures}
+\label{sec:graphic-annotate}
+
+One common figure type is to take a figure and annotate it with
+arrows, labels, etc.
+Ideally you will do this directly in \LaTeX{}, for example using TikZ.
+If you can't do that, then take care not to produce a bloated,
+low-quality graphic, and please choose fonts and colors that ``work''
+with the document.
+If at all possible, provide the file in a format which can be further
+edited and which does not turn raster data into PDF nor vector data
+into JPEG/PNG.
+If this can't be avoided and if the underlying graphic is JPEG then
+produce the final version in JPEG and not PNG nor PDF.
+If the annotation is on top of an original vector drawing and your
+annotation software will retain the vector information, save it as
+PDF.
+

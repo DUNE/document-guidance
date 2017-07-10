@@ -1,5 +1,5 @@
-\chapter{General Information}
-\label{ch:generalities}
+\chapter{General information}
+\label{ch:gen}
 
 This volume gives guidance to authors and editors of DUNE and LBNF documents such as the CDR, TDRs, and so on. It collects ``wisdom'' learned from 
 producing earlier documents, including the DUNE CDR, and we will appreciate 
@@ -11,7 +11,7 @@ This has been updated for the DUNE TDR, which will likely have multiple volumes.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{What's on the Document Guidance GitHub web page?}
-\label{ssec:files-webpage}
+\label{sec:gen-webpage}
 
 Some guidance is on the web page \url{https://github.com/DUNE/document-guidance}:
 
@@ -28,186 +28,52 @@ Note about Draft vs. Print format:
 Draft format gives you line numbers, ``fixme'' and other markup notes (see Chapter~\ref{ch:review}), 
 faint grey notes (enclosed in a box) near labeled items (headings, figures, tables, etc.) to help you know 
 what label was used to reference each particular thing.  
-It's easiest to trace things when the labels are meaningful, and for figures, when they match the image filename, so please choose labels carefully. Labels are discussed in Section~\ref{sec:intra-doc-ref}.
-
+It's easiest to trace things when the labels are meaningful, and for figures, when they match the image filename, so please choose labels carefully. Labels are discussed in Section~\ref{sec:latex-intra-doc-ref}.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Files and filenames}
-\label{sec:files}
+\section{What's in the Document Guidance repository?}
+\label{sec:gen-repo}
 
-An entire document may consist of one or more \textit{volumes}; e.g.,
-the DUNE/LBNF TDR will likely consist of several, only some of which may be written in
-\LaTeX{}.
-Within the overall TDR directory, you will find the \LaTeX{} and figure content for all the \LaTeX{} volumes. There are subdirectories for each volume. The content for a given volume is
-arranged like:
+
+A document pertaining to the overall LBNF and/or DUNE enterprise may consist of multiple \textit{volumes}\footnote{Some volumes may be written in MS Word, external to a GitHub repository.}.  The repository holds all the files needed to compile each volume of the document (or the document itself, if it's not broken into volumes), both content files and additional files that set up the configuration, 
+contain auxiliary text (e.g., acronym lists, citations), or provide definitions or macros (defs.txt), etc.  Most of these other files are maintained by the technical editor and you should not modify them. You may of course add citations, acronyms, and so forth.  More information on these files is given in Chapter~\ref{ch:tech}.
+
+
+The repository is set up with a subdirectory for each volume -- this is where you will do the bulk of your work. In the following, \texttt{volname} represents a label for the volume. The content for a given volume is
+arranged as follows:
 
 \begin{description}
-\item[\texttt{volname.tex}] the main file and is found in the top-level
-  directory. It generally has no significant content itself but
-  ``includes'' content contained in other files.
+\item[\texttt{volname.tex}] the main file (see Section~\ref{sec:tech-mainfile}) for a volume; there will likely be a few of these. They are found in the top-level
+  directory. They are have no significant content themselves; they just use
+  ``includes'' to pull together content contained in their component chapter files. Please do NOT modify any volume file!
 \item[\texttt{figures/}] top-level subdirectory for any static figures
-  shared by more than one volume in the repository.
-\item[\texttt{volname/}] subdirectory holding all content for one particular volume.
-\item[\texttt{volname/chaptername.tex}] holds the content for one
-  chapter of a volume.
-\item[\texttt{volname/figures/}] subdirectory holding any static volume-specific figures
+  shared by more than one volume in the repository. Typically your figures will be volume-specific and you won't add them here.
+\item[\texttt{volname/}] subdirectory holding all content for one particular volume. You will work within a given volume subdirectory.
+\item[\texttt{volname/chaptername.tex}] holds the content for one chapter of a volume. You will add or edit content in one or more chapter files.
+\item[\texttt{volname/figures/}] subdirectory holding any static volume-specific figures. Your figures will usually go here.
 \item[\texttt{volname/generated/}] subdirectory holding any generated
-  figures (see Section~\ref{sec:figures} for info on generated files)
+  figures (see Section~\ref{sec:graphic-plots} for info on generated files). Your ROOT plots, for example, will go here.
 \end{description}
 
-\fixme{fix this after we get the structure set}
-Where \texttt{volname} is some label for the volume (the name for the
-volume you are reading now is ``\texttt{guidance}'').
-Multi-volume documents may pick some file naming convention (e.g., the
-TDR may use ``\texttt{volume-VOLUMEname}''.
-Specific files hold chapter-level or section-level content and should be named with some
-short, descriptive label.
-The file holding this sentence is ``\texttt{guidance/chapter-general.tex}''.
-Some general guidance on choosing these file names:
 
+Multi-volume documents will have an established file naming convention (e.g., the
+TDR may use ``\texttt{volume-volumename}''.
+Specific files hold chapter-level or section-level content and should be named with some
+short, descriptive label, e.g., ``\texttt{chapter-chaptername}.''
+
+Please note:
 \begin{itemize}
-\item Editors may elect to further break up content into per-section
-  files.
-  If so, follow a naming convention such as
-  ``\texttt{chaptername-sectionname.tex}''.
-\item Do not include a volume, chapter or section numbers in any file
-  name.
-  Their actual numbers will be determined by high-level ordering by
-  the editors. 
-\item The editors are expected to maintain the top level
-  \texttt{name.tex} files. Other authors should avoid modifying it.
-\item Use the \texttt{figures/} subdirectory for static figures (see
-  Section~\ref{sec:figures}). For how to include generated figures see
-  Section~\ref{sec:plots}.
-\item If you find something inadequate or have questions, consult with either: \\
+\item Editors may elect to further break up content into per-section files. If so, follow a naming convention such as ``\texttt{chaptername-sectionname.tex}''.
+\item Please do not include a volume, chapter, section or figure number in any file name. Their actual numbers will be determined at compile time according to the configuration and the volume's main file. 
+\item If you have questions, consult with either: \\
   Anne Heavey, aheavey@fnal.gov, 630-840-8039 (technical editor)\\
   Brett Viren, bv@bnl.gov (help on graphics, \LaTeX{} and git machinery)
 \end{itemize}
 
-
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Figure format}
-\label{sec:figure-format}
+\section{What's in this guidance document?}
+\label{sec:gen-doc}
 
-It is essential to use high-quality, efficiently sized figures (aka
-``graphics'').
-You may be asked to re-make any that egregiously violate some some
-basic standards.
-These standards are in place to avoid sub-optimal figures, bloated
-files sizes, and delayed publishing schedules.  
-Often the best thing to do is to \textbf{not} process or attempt to
-optimize a graphic but provide the editors access to the most ``raw''
-graphic which your software can produce.
-If at all uncertain, please contact the technical editors.
-The rest of this section provides guidance on how to create optimal
-figures.
+As you might imagine, this document contains GUIDANCE for writing your documents. Guidance on \LaTeX{}, language, abbreviations, figures, and other things. Please read through it so that you understand the LBNF/DUNE style and structure for documents.  There is \LaTeX{} code that you can copy straight from the source for this document and edit to fit your content.  This is supposed to make it easy!
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Graphic types}
-\label{sec:graphic-types}
 
-There two basic graphic content types; these are important to understand:
-
-\begin{description}
-\item[raster] a two dimensional array of pixels
-\item[vector] a two dimensional drawing description language
-\end{description}
-
-The documents compile with \texttt{pdflatex} and so may use graphics
-in PDF, JPEG or PNG file formats.
-These formats have specific best uses:
-
-\begin{description}
-\item[JPEG] use for photographs
-\item[PDF] use of any line drawings, plots, illustrations
-\item[PNG] use due to some inability to produce proper JPEG or PDF (contact editors)
-\end{description}
-
-It is possible (though unwise) to store inherently raster information
-in PDF or to rasterize inherently vector information into JPEG or PNG.
-\textbf{This is the main cause for bloated, low-quality graphics.}
-Here are some guidelines addressing this common problem:
-
-\begin{itemize}
-\item Only save photographic images to JPEG, avoid re-saves.
-\item Save line drawings, plots or illustrations directly to vector PDF.
-\item Follow special guidance on annotation (see Section~\ref{sec:annotate}).
-\item Never convert any raster data (JPEG/PNG) to PDF.
-\item Never raster what is really vector data in to a JPEG/PNG.
-\item Never use MicroSoft PowerPoint for any figure as it tends to lead to poor quality and bloated files.
-\item Do save using native application formats to allow later
-  modification
-\item Leave any potential format conversions to the technical editors.
-\item Consider providing plots as easy-to-reproduce ROOT, Python or
-  other scripts.
-  (see Section~\ref{sec:plots})
-\end{itemize}
-
-\noindent If authors find these guidelines can not be followed for any
-given graphic, please contact the technical editors.   
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Plots}
-\label{sec:plots}
-
-Where possible, it is recommended that any plots be submitted in a
-form that allows easy reproduction from data in the course of building
-the document.
-This allows the technical editors to attempt to apply consistent
-in-plot fonts, colors, wording.
-(More info to be added.)
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Annotated figures}
-\label{sec:annotate}
-
-One common figure type is to take a figure and annotate it with
-arrows, labels, etc.
-Ideally you will do this directly in \LaTeX{}, for example using TikZ.
-If you can't do that, then take care not to produce a bloated,
-low-quality graphic, and please choose fonts and colors that ``work''
-with the document.
-If at all possible, provide the file in a format which can be further
-edited and which does not turn raster data into PDF nor vector data
-into JPEG/PNG.
-If this can't be avoided and if the underlying graphic is JPEG then
-produce the final version in JPEG and not PNG nor PDF.
-If the annotation is on top of an original vector drawing and your
-annotation software will retain the vector information, save it as
-PDF.
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Structuring a design document}
-\label{sec:design-doc}
-
-To make design documents (e.g., CDR, TDR) easier to read, it's a good idea to follow a similar structure in the presentation of each system, subsystem and component. The structure described here assumes that each major project item (e.g., far detector, near detector...) gets a dedicated volume, and each major system within the item gets a chapter.  Depending on the actual report, this may vary. ``Appropriate level of detail'' may also vary.
-
-The different volumes of the DUNE TDR should have similar introductory chapters in case someone is only reading that volume. 
-Use common/intro.tex in the intro chapter, then add in 
-The intro chapter should be structured as:
-\begin{itemize}
-\item (per volume) About this volume.
-\end{itemize}
-
-Create an introduction section for each chapter.  For chapters about detector systems, use the APA template as a model.
-\fixme{I need to link it to here}
-
-\begin{itemize}
-\item Begin with: ``The scope of the (name of system) includes the design, procurement, fabrication, testing, delivery and installation (or whatever it includes) of all the subsystems (or components) that comprise it:'' (follow with a list)
-\item Include an image of the overall system, labeling its parts. Show how the system fits into the overall L2 project item.
-\item Followed this by a list of (major) requirements that the system must satisfy.
-\item Check this against the requirements documentation.
-\item Describe the overall system to appropriate level of detail.
-\end{itemize}
-
-Create a section for each subsystem of the system.
-
-\begin{itemize}
-\item Begin with a description of the overall subsystem.
-\item Include a labeled image of the subsystem.  
-\item List all the components that comprise the subsystem.
-\item Start a subsection for each component that describes and illustrates it, to appropriate level of detail.
-\item The text in the section should clearly indicate how the subsystem/component satisfies the related requirements listed in the intro section.
-\item By the end of the chapter, for every requirement listed in the intro section, there should exist an explanation of how it will be satisfied.
-\end{itemize}

@@ -1,5 +1,5 @@
 
-\chapter{\LaTeX{} Standards for LBNF/DUNE }
+\chapter{\LaTeX{} standards for LBNF/DUNE documents}
 \label{ch:latex-stds}
 
 This chapter provides guidelines on sectioning,  inserting figures, tables and references, and formatting numbers and units according to the \LaTeX{} configuration we have set up for LBNF/DUNE documents.
@@ -7,8 +7,8 @@ This chapter provides guidelines on sectioning,  inserting figures, tables and r
 Typically the start of your chapter will be an introduction to or overview of the chapter itself. Recommendation: write the chapter first, then go back and write the introduction to it. It's more likely to be coherent!
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Sectioning}
-\label{sec:sectioning}
+\section{Sectioning (This is a section heading.)}
+\label{sec:latex-sectioning}
 
 Most documents get subdivided into chapters (for larger documents) and/or sections and subsections. Please subdivide according to these standards:
 
@@ -25,10 +25,10 @@ Most documents get subdivided into chapters (for larger documents) and/or sectio
 The following sectioning macros are available, ordered from bigger to smaller:
 
 \begin{verbatim}
-\chapter{A Chapter}
-\section{A Section}
-\subsection{A Sub Section}
-\subsubsection{A Sub Sub Section}
+\chapter{A chapter}
+\section{A section}
+\subsection{A subsection}
+\subsubsection{A subsubsection}
 \end{verbatim}
 
 Two sub's is all you get.  
@@ -37,32 +37,32 @@ sectioning is required.
 Starting from \verb|\subsection|, this produces the following:
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{A Sub Section}
-\label{sec:sub}
+\subsection{A subsection}
+\label{sec:latex-sec-sub}
 
 This is a subsection.
 
 %%%%%%%%%%%%%%%%%%%
-\subsubsection{A Sub Sub Section}
-\label{sec:subsub}
+\subsubsection{A subsubsection}
+\label{sec:latex-sec-subsub}
 
 This is a subsubsection.
 
 %%%%%%%%%%%%%%%%%%%
-\subsubsection{A second Sub Sub Section}
-\label{sec:subsub2}
+\subsubsection{A second subsubsection}
+\label{sec:latex-sec-subsub2}
 
 Remember, if you have one, you need at least one more.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{A second Sub Section}
-\label{sec:sub2}
+\subsection{A second subsection}
+\label{sec:latex-sub2}
 
 Ditto.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Including Figures}
-\label{sec:figures}
+\section{Including figures}
+\label{sec:latex-figures}
 
 Instead of using the usual \texttt{figure} environment, please use the custom \texttt{cdrfigure}
 environment in order to provide for a consistent presentation.
@@ -72,13 +72,13 @@ arguments:
 \begin{enumerate}
 \item An initial, optional short caption to appear in the List Of Figures (LoF), in square brackets. This caption only needs to
 identify the figure uniquely, it does not need to describe it fully.
-\item A (required) label for referencing (do not prepend \texttt{fig:} to the label text --  \LaTeX{} will do that automatically). No spaces are allowed in the label. Curly brackets. It is helpful to have this label match the filename of the figure. 
+\item A (required) label for referencing. No spaces are allowed in the label. Curly brackets. This label should be chosen to match the filename of the figure (image-filename, below). (Do not prepend \texttt{fig:} to the label text --  \LaTeX{} will do that automatically.)
 \item The (required) full caption. Curly brackets, again.
 \end{enumerate}
 
 Usually the figure contains a graphic via an \texttt{includegraphics} statement.
 The filename is assumed relative to a \texttt{graphicspath} as
-mentioned in Section~\ref{ssec:files-pdunesp-tdr} and as such, please (a) put the file in the right place and (b) don't
+mentioned in Section~\ref{sec:tech-mainfile} and as such, please (a) put the file in the right place and (b) don't
  specify any directory parts in its name.
 The file's extension may be omitted. Provide an image credit if appropriate. The entry looks like this:
 
@@ -89,37 +89,37 @@ The file's extension may be omitted. Provide an image credit if appropriate. The
     \end{cdrfigure}
 \end{verbatim}
 
+Remember, ``image-filename'' should match ``required-label.'' This makes it MUCH easier to find associated references and figures in the \LaTeX{}  source. 
 
-
-\begin{cdrfigure}[An aerial photograph of Fermilab]{aerial}{An aerial photograph of Fermilab
+\begin{cdrfigure}[An aerial photograph of Fermilab]{fermilab-aerial}{An aerial photograph of Fermilab
     showing Wilson Hall and surrounding accelerator rings (Photo: Fermilab
     Visual Media Services)}
-  \includegraphics[width=0.8\textwidth]{fermilab-aerial.jpg}
+  \includegraphics[width=0.8\textwidth]{fermilab-aerial}
 \end{cdrfigure}
 
 
-An example can be seen in Figure~\ref{fig:aerial}, which is created
-with the \LaTeX{} shown in Figure~\ref{fig:aerial-latex}.  Notice that in the reference to the figures, we need to prepend \texttt{fig:} to the label. (See Section~\ref{sec:intra-doc-ref}.)
+An example can be seen in Figure~\ref{fig:fermilab-aerial}, which is created
+with the \LaTeX{} shown in Figure~\ref{fig:aerial-latex}.  Notice that in the reference to the figures, we need to prepend \texttt{fig:} to the label. (See Section~\ref{sec:latex-intra-doc-ref}.)
 
-\begin{cdrfigure}[]{aerial-latex}{\LaTeX{} source showing how to include Figure~\ref{fig:aerial} and how to refer to it in the text}
+\begin{cdrfigure}[]{aerial-latex}{\LaTeX{} source showing how to include Figure~\ref{fig:fermilab-aerial} and how to refer to it in the text}
 \begin{verbatim}
-    \begin{cdrfigure}[An aerial photograph of Fermilab]{aerial}
+    \begin{cdrfigure}[An aerial photograph of Fermilab]{fermilab-aerial}
        {An aerial photograph of Fermilab showing Wilson Hall and 
        surrounding accelerator rings (Photo: Fermilab Visual Media Services)}
-      \includegraphics[width=0.8\textwidth]{fermilab-aerial.jpg}
+      \includegraphics[width=0.8\textwidth]{fermilab-aerial}
       
-      See Figure~\ref{fig:aerial}...
+      See Figure~\ref{fig:fermilab-aerial}...
     \end{cdrfigure}
 \end{verbatim}
 \end{cdrfigure}
 
-See Section~\ref{sec:figure-format} for guidelines on the graphics files themselves.
+See Chapter~\ref{ch:graphics} for guidelines on the graphics files themselves.
 
 \FloatBarrier
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Tables}
-\label{sec:tables}
+\section{Including tables}
+\label{sec:latex-tables}
 
 Like figures, we use a special environment, \texttt{cdrtable} for
 tables to achieve a degree of consistency.
@@ -129,8 +129,8 @@ required arguments:
 
 \begin{enumerate}
 \item An initial, optional short caption for the List of Tables (LoT). Square brackets.
-\item The tabular column specification. Curly brackets for the last three.
-\item A label for referencing (it will have \texttt{tab:} prepended automatically)
+\item The tabular column specification. (Curly brackets for the last three items.)
+\item A label for referencing (\LaTeX{}  will prepend \texttt{tab:} to your label text automatically)
 \item The full caption.
 \end{enumerate}
 
@@ -141,7 +141,10 @@ Following every regular row (except the last) you should include a
 \texttt{colline} macro.
 Both of these take the place of the usual \texttt{hline}.
 
-\begin{cdrtable}[The LoT caption]{cc}{example}
+\begin{cdrtable}
+[The LoT caption]
+{cc}
+{example}
 {This is a sample table.}
   Rows & Counts \\ \toprowrule
   Row 1 & First \\ \colhline
@@ -152,27 +155,31 @@ Both of these take the place of the usual \texttt{hline}.
 \noindent Table~\ref{tab:example} is thus made like (arguments can span lines):
 
 \begin{verbatim}
-\begin{cdrtable}[The LoT caption]{cc}{example}
-{This is an example table.}
+\begin{cdrtable}
+[The LoT caption]
+{cc}
+{example}
+{This is a sample table.}
   Rows & Counts \\ \toprowrule
   Row 1 & First \\ \colhline
   Row 2 & Second \\ \colhline
   Row 3 & Third \\ 
 \end{cdrtable}
 
-This is how you would make a reference to Table~\ref{tab:example}... 
+See Table~\ref{tab:example}...
 \end{verbatim}
 
 Table~\ref{tab:pdecay} shows a more complex example.
 See the source for how it is written.
 Note that special column specifications are used.
 
-\begin{cdrtable}[Efficiencies and background rates for nucleon decay
-  modes]{$L^c^c^c^c}{pdecay}{Efficiencies and background rates for
-    nucleon decay channels of interest for a large underground LArTPC,
-    and comparison with water Cherenkov detector capabilities} %$
-  Decay Mode & \multicolumn{2}{^c}{Water Cherenkov} & 
-\multicolumn{2}{^c}{Liquid Argon TPC} \\
+\begin{cdrtable}
+[Efficiencies and background rates for nucleon decay modes]
+{$L^c^c^c^c}
+{pdecay}
+{Efficiencies and background rates for nucleon decay channels of interest for a large underground LArTPC, and 
+comparison with water Cherenkov detector capabilities}
+Decay Mode & \multicolumn{2}{^c}{Water Cherenkov} & \multicolumn{2}{^c}{Liquid Argon TPC} \\
 \rowtitlestyle              % ``\rowstyletitle'' is needed here to bold the 2nd row of header text.
 & Efficiency & Background & Efficiency & Background \\ \toprowrule
 $p \rightarrow K^+ \overline{\nu}$ & 19\% & 4 & 97\% & 1 \\ \colhline
@@ -187,8 +194,8 @@ $n \rightarrow e^+\pi^-$ & 19\% & 2 & 44\% & 0.8 \\
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Labels and Intra-document References}
-\label{sec:intra-doc-ref}
+\section{Labels and intra-document references}
+\label{sec:latex-intra-doc-ref}
 
 Assume that any chapter, section or important sub-, subsub- section
 or any figure or table environment may need to be referenced
@@ -219,19 +226,21 @@ or Section~\ref{sec:a-subsection} ...
 
 When you reference a chapter, section, subsection, figure, table,
 etc., capitalize the word ``Chapter'' or whatever it is, e.g., ``as
-shown in Section~\ref{sec:plots}.''
+shown in Section~\ref{sec:tech-mainfile}.''
 Use the word ``Section'' even if it's a subsection or subsubsection,
 and use the tilde sign to keep the number on the same line as the word
 that precedes it.
 
-For figures, the reference needs to include ``fig:'' before the label name defined in the \verb|\cdrfigure| environment, as mentioned in Section~\ref{sec:figures}; for tables, ``tab:'' must be prepended to the label name (see Section~\ref{sec:tables}).
+For figures, the reference needs to include ``fig:'' before the label name defined in the \verb|\cdrfigure| environment, as mentioned in Section~\ref{sec:latex-figures}; for tables, ``tab:'' must be prepended to the label name (see Section~\ref{sec:latex-tables}).
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Citations and the Bibliography}
+\section{Citations and the bibliography}
+\label{sec:latex-cit}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{The File Containing the Citations}
+\subsection{The bibliography file containing the citations}
+\label{sec:latex-bib-file}
 
 The \texttt{citedb.bib} file is in BibTex format  (note that this filename may be altered to match a specific document, e.g., \texttt{pdune-tdr-citedb.bib}.
 This is \textbf{not} \LaTeX{} format and in particular does not
@@ -246,7 +255,8 @@ Before adding any entry to \texttt{citedb.bib} search through it
 to ascertain that the entry you wish to add is not already there.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Referencing Citations}
+\subsection{Referencing citations}
+\label{sec:latex-ref}
 
 Referencing citations is done like \verb|\cite{strunk}| which gives \cite{strunk}.
 (Compiling the bibliography entries into the document requires an extra step: run ``bibtex'' on
@@ -256,13 +266,14 @@ The key \texttt{strunk} matches an entry in the \texttt{common/citedb.bib}
 file (as relative to the top-level directory).
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Defining Standardized Terms and \LaTeX{} Renderings}
+\section{Standardized terms and \LaTeX{} renderings}
+\label{sec:latex-terms}
 
 To enforce consistency, use a \LaTeX{} macro in place of any name or
-term that is frequently used and defined in the file \texttt{common/defs.tex}.  You may add terms
-to this file as needed. 
+term that is frequently used and defined in the file \texttt{common/defs.tex}.  
 It is especially important to do this if the name or term is subject
-to multiple ``spellings.''
+to multiple ``spellings.'' You may add terms
+to this file, but please notify the volume editors if you do. We want to maintain consistency! 
 
 Some examples:
 
@@ -272,7 +283,7 @@ Some examples:
 \end{itemize}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Numbers and Units}
+\section{Numbers and units}
 
 \textbf{All} numerical quantities expressed as literal number
 \textbf{must} have units unless they are inherently do not have a unit.
@@ -281,7 +292,7 @@ and a collection of common units are defined in
 \texttt{common/units.tex}.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Bare Numbers}
+\subsection{Bare numbers}
 
 To enforce consistent writing of numbers please encase them in the
 \verb|\num{}| command:
@@ -293,7 +304,7 @@ To enforce consistent writing of numbers please encase them in the
 \end{itemize}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Bare Units}
+\subsection{Bare units}
 
 If you need to write a bare unit, one with not associated number, use
 \verb|\si{}| (lower case ``si'')
@@ -304,7 +315,7 @@ If you need to write a bare unit, one with not associated number, use
 \end{itemize}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Numbers and Units}
+\subsection{Numbers with units}
 
 When a quantity has a unit write both the numerical part and the unit
 using the \verb|\SI{}{}| command like:

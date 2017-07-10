@@ -1,0 +1,177 @@
+\chapter{Sample structure for a LBNF/DUNE design document chapter}
+\label{sec:design-doc}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Volume structure}
+
+To make design documents (e.g., CDR, TDR) easier to read, it's a good idea to follow a similar structure in the presentation of each system, subsystem and component. The structure described here assumes that each major project item (e.g., far detector, near detector...) gets a dedicated volume, and each major system within the item gets a chapter.  Depending on the actual report, this may vary. (As of July 2017, it is TBD for DUNE TDR.) ``Appropriate level of detail'' may also vary.
+
+The different volumes of the DUNE TDR will have similar introductory chapters in case someone reads that volume.  
+It will always begin with the content of ``common/intro.tex'' followed by ``About this volume.''
+
+Create an introduction section for each chapter.  For chapters about detector systems, use the APA template as a model.
+The rest of this chapter illustrates the structure of the APA chapter of the single-phase detector module. It is intended to serve as a model.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Start chapter model (using APA): Introduction and scope}
+\label{apa:intro-scope}
+
+Anode Plane Assemblies (APAs) are the far detector elements utilized to sense ionization created by
+charged particles traversing the liquid argon volume inside the single-phase TPC. The planes are interleaved with Cathode Plane Assemblies (CPAs), as shown in Figure..., to establish the required electric fields and form drift volumes for the charged particles. 
+
+\fixme{Include an image of the overall system, indicating its parts. Show how the system fits into the overall detector.}
+
+The operating principle is illustrated in Figure...
+
+An APA consists of a rectangular framework with a fine wire mesh stretched across it, over which are wrapped four layers of sense and shielding wires...
+
+The scope of the Anode Plane Assembly (APA) system includes the continued procurement of materials for, and the fabrication, testing, delivery and installation of the following subsystems: 
+
+\begin{itemize}
+\item stainless steel APA frame, 150 per module 
+\item wire mesh that covers the frame on both sides, ...
+\end{itemize}
+...
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Physics requirements and parameters}
+\label{apa:req-param}
+
+The full set of requirements that the APA must satisfy is documented in 
+\fixme{add ref to requirements document  when it's ready, and maybe list the most important half dozen in a table here).}  
+
+\begin{cdrtable}[Important requirements on the APA design]{p{0.8\textwidth}}{apaphysicsparams}{Important requirements on the APA design (Sample only!)}   
+Requirement  \\ \toprowrule
+ The APA wire spacing shall be chosen to provide high efficiency in distinguishing electron shower from photon showers \\ \colhline
+ The APA wire planes shall be oriented relative to each other to optimize the measurement of high energy and low energy tracks from accelerator  \\ \colhline
+ ...\\ 
+\end{cdrtable}
+...
+
+\fixme{By the end of the chapter, for every requirement listed in this section, there should exist an explanation of how it will be satisfied.}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Design considerations and parameters}
+\label{apa:design-consid}
+
+%%%%%  Design to identify MIPs -- wire pitch and other params
+The APA design must enable identification of minimum-ionizing particles (MIPs). This is a function of several detector parameters, including: argon purity, drift distance, diffusion, wire pitch, and Equivalent Noise Charge (ENC).  DUNE-SP requires that MIPs originating anywhere inside the active volume of the detector be reconstructed with 100$\%$ efficiency.   The choice of wire pitch, of $\sim$5\,mm, for the wire layers on the APA, combined with key parameters for other TPC systems (described in their respective sections of the TDR), is expected to enable the 100$\%$ MIP identification efficiency.
+
+%%%%% Locate vertices, determine fiducial vol, then back to vertex...?
+DUNE-SP requires that it be possible to determine the fiducial volume (via analysis) to $<$1$\%$, which in turn requires reaching a vertex resolution of $\sim$1.5\,cm along each coordinate direction. (The fiducial volume, among other factors, determines the number of target nucleons, which is a component in cross section measurements.) 
+The fine granularity of the APA wires enables excellent precision in identifying the location of any vertices in an event, (e.g., the primary vertex in a neutrino interaction or gamma conversion points in a $\pi^{0}$ decay), which has a direct impact on reconstruction efficiency.
+In practice, the resolution on the drift-coordinate ($x$) of a vertex or hit will be better than that on its location in the $y-z$ plane, due to the combination of drift-velocity and electronics sampling-rate...
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Schedule}
+\label{apa:schedule}
+
+\fixme{How long to make and test each APA, and what is
+the high level overall technically driven schedule...}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Components}
+\label{sec:apa-components}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%    
+\subsection{APA frame}
+\label{sec:apa-frame}
+
+\fixme{Include an image of the subsystem (frame), indicating its parts. Show how the system fits into the overall system (APA).}
+
+
+%%%%%%%%%%%%%%%%%% 
+\subsubsection{Dimensions}
+\label{sec:apa-frame-dim}
+
+The stainless steel frame of the APA (shown in Figures ...) is 6.06\,m long, not counting electronics and mounting hardware, and 2.30\,m wide.  It is 76.2\,mm thick, made from imperial size 3-in $\times$ 4-in $\times$ 0.120-in wall rectangular tubing... 
+
+%%%%%%%%%%%%%%%%%% 
+\subsubsection{Wire loads on frame}
+
+The many wires strung across the frame, each with a 5-N tension ($\sim$1.1 lb), apply a large, compressive, in-plane load around the perimeter of the APA...
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%    
+\subsection{Wires}
+\label{sec:apa-wires}
+
+\fixme{Include an image of the subsystem (wires)...}
+
+%%%%%%%%%%%%%%%%%% 
+\subsubsection{Wire material}
+\label{sec:apa-wires-mat}
+
+The choices of wire material, diameter, tension and wire-placement accuracy are made to ensure proper operation of the LArTPC at voltage, and to provide the precision necessary for reconstruction...
+
+%%%%%%%%%%%%%%%%%% 
+\subsubsection{Wire tension}
+\label{sec:apa-wires-tension}
+
+The chosen tension of 5\,N, when combined with the intermediate support combs...
+ 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Fabrication and assembly}
+\label{sec:apa-fabrication}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%    
+\subsection{Frame}
+
+%%%%%%%%%%%%%%%%%% 
+\subsubsection{Frame assembly}
+\label{sec:apa-fabric-frame}
+
+The APA frame is assembled with machine screws...
+
+%%%%%%%%%%%%%%%%%% 
+\subsubsection{Frame handling}
+\label{sec:apa-fabric-fr-handling}
+
+All handling of APAs in the factory is done with the long (6-m) axis of the APAs...
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%    
+\subsection{Wiring process}
+\label{sec:apa-wiring}
+The wiring process uses an automated winding machine that first rotates an APA frame to the vertical landscape position...
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%    
+\subsection{Production plan}
+\fixme{Describe how many production lines, where they will be, how to handle testing and storage...}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Interfaces}
+\label{sec:apa-interfaces}
+
+\fixme{Something about the APAs interface to the cold electronics boxes, the PDS, and interconnection features will be described in the section about CR boards...}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Transport}
+\label{sec:apa-transport}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{QC procedures}
+\label{sec:apa-qc}
+
+Each ProtoDUNE-SP APA will be subject to a testing program during production that will demonstrate...
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%    
+\subsection{Tension survey}
+\label{sec:apa-qc-tension}
+
+Wire tension is a critical parameter in the performance of the APA...
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%    
+\subsection{Electrical continuity test}
+\label{sec:apa-continuity}
+
+The electrical connection of each APA wire to the cold readout electronics must be verified...
+...
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%    
+\subsection{Conclusion}
+\label{sec:apa-concl}
+
+\fixme{This section may not always be needed.}
