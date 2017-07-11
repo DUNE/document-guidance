@@ -51,7 +51,7 @@ editors, listed below.)
 
 You will "clone" each desired remote repository from GitHub into a dedicated directory on your local machine. First, set up a "parent" directory to contain the repository(ies), e.g., /my/work/area.
 
-Each GitHub repository web site provides a URL above the list of files; it starts with "https" and ends with ".git".  The HTTPS URL can be used for anonymous cloning and then later can be pushed to (see below) by supplying your GitHub password.  The SSH URL requires uploading a public key to GitHub but then no password need be given. More information is at [[https://help.github.com/articles/which-remote-url-should-i-use/][Which remote URL should I use?]. Pick the URL you like and then cloning is simple:
+Each GitHub repository web site provides a URL above the list of files; it starts with "https" and ends with ".git".  The HTTPS URL can be used for anonymous cloning and then later can be pushed to (see below) by supplying your GitHub password.  The SSH URL requires uploading a public key to GitHub but then no password need be given. More information is at [[https://help.github.com/articles/which-remote-url-should-i-use/][Which remote URL should I use?]]. Pick the URL you like and then cloning is simple:
 
 #+BEGIN_EXAMPLE
   $ cd /my/work/area
