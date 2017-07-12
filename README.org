@@ -18,7 +18,7 @@ This *page* tells you how to access and build the LaTeX guidance document contai
 This page also provides all the instructions you will need for interacting with git as you pull and push document files.
 
 ** Quick start
-See more detailed information in the "Getting Started" section below.
+This shows how to clone the TDR repository and build the physics volume. Bare bones. See more detailed and non-TDR-specific information in the "Best practices" and "Getting Started" sections below.
 
 -  [[https://help.github.com/articles/signing-up-for-a-new-github-account][Get a github account]] and send your username to Brett (see bottom of page).
  
