@@ -9,7 +9,7 @@ provides an example.
 This has been updated for the DUNE TDR. Earlier versions of this guidance document were updated for other important documents, e.g., the CDR and the ProtoDUNE-SP TDR.  These versions can be found at \url{https://github.com/DUNE/document-guidance/releases/}.
 
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{What's on the Document Guidance GitHub web page?}
 \label{sec:gen-webpage}
 
@@ -75,5 +75,88 @@ Please note:
   Brett Viren, bv@bnl.gov (help on graphics, \LaTeX{} and git machinery)
 \end{itemize}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{If you read nothing else in this document...}
+\label{sec:gen-nothing}
+
+... at least remember that it is here for reference!
+
+Please check that your figures are reasonably sized. We may want to add this document to the arXiv, which has a 10\,MB limit per document; bloated figures can use that up quickly.
+
+Please do sectioning, figures, tables and citations ``the DUNE way''. 
+
+\textbf{Sectioning:}
+\begin{verbatim}
+\chapter{A chapter}
+\label{ch:blah}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{A section}
+\label{sec:blah-sec1}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{A subsection}
+\label{sec:blah-sec1-subsec1}
+
+%%%%%%%%%%%%%%%%%%%%
+\subsubsection{A subsubsection}
+\label{sec:blah-sec1-subsec1-subsubsec1}
+\end{verbatim}
 
 
+\textbf{Figures:}
+\begin{verbatim}
+    \begin{cdrfigure}[optional caption for LoF]{required-label}
+     {required full caption (Credit: xyz)}
+    \includegraphics[width=0.8\textwidth]{image-filename}
+    \end{cdrfigure}
+\end{verbatim}
+
+To reference: \verb|See Figure~\ref{fig:required-label}|.
+Please make \verb|required-label| the same as \verb|image-filename|. (Yes, \verb|cdrfigure| was originally defined for the CDR.)
+
+\textbf{Tables:}
+\begin{verbatim}
+\begin{cdrtable}
+[The LoT caption]
+{cc}
+{table-label}
+{This is a sample table.}
+  Rows & Counts \\ \toprowrule
+  Row 1 & First \\ \colhline
+  Row 2 & Second \\ \colhline
+  Row 3 & Third \\ 
+\end{cdrtable}
+\end{verbatim}
+To reference: \verb|See Table~\ref{tab:table-label}|.
+
+\fixme{I haven't included equations or arrays; not sure there's anything DUNE-specific. What do you recommend regarding inclusion in here?}
+
+\textbf{Citations:}
+
+They go in \texttt{common/citedb.bib}. When adding citations to this file, copy the BibTeX rendering of the citation from \url{http://inspirehep.net} if it exists there. E.g.,
+
+\begin{verbatim}
+ @article{Gando:2010aa,
+      author         = {A.~Gando and others},
+      title          = "{Constraints on $\theta_{13}$ from A Three-Flavor Oscillation Analysis of Reactor Antineutrinos at KamLAND}",
+      journal        = {Phys.Rev.D},
+      volume         = {83},
+      pages          = {052002},
+      year           = {2011},
+      note           = {arXiv:1009.4771 [hep-ex]},
+}
+\end{verbatim}
+
+ To reference it within a file, use, e.g.,  \verb|\cite{Gando:2010aa}|.
+
+\textbf{Macros (Definitions):}
+
+We recommend that you use (and add to, as needed) macros defined in common/defs.txt for things like \verb|\newcommand{\anumu}{$\bar\nu_\mu$\xspace}|. Clearly, typing \verb|\anumu| is much less error-prone than the full expression.
+
+\textbf{Fixmes:}
+
+As in ``fix me!'' If you're not sure about something or you find an error that somebody else has to fix, use:
+\begin{verbatim}
+\fixme{This is a fixme.}
+\end{verbatim}
