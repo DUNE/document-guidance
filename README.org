@@ -1,22 +1,26 @@
 #+TITLE: Guidance for contributing to DUNE documents
 
-
-This *repository* holds the source for a document that provides guidance on writing and editing  [[https://github.com/DUNE/DUNE-TDR][The DUNE TDR]] in LaTeX according to the standards that we've set up for DUNE and LBNF. Previous versions of the guidance document have been used for:
+## This repository
+This *repository* holds the source for a document that provides guidance on writing and editing  [[https://github.com/DUNE/DUNE-TDR][The DUNE TDR]] in LaTeX according to the standards that we've set up for DUNE and LBNF. It is designed to follow its own guidance and thus can be used as an extended example and as a reference. Previous versions of the guidance document have been used for:
 
 - [[https://github.com/DUNE/protodune-tdr][The ProtoDUNE-SP TDR]]
 - [[https://github.com/DUNE/lbne-fd-closeout][The DUNE Far Detector Closeout]]
 - [[https://github.com/DUNE/lbn-cdr][The DUNE CDR]]
 
-See [[https://wiki.dunescience.org/wiki/Physics_TDR_Volume_Development][Physics TDR Volume Development]] for information on coordination and management. 
 
-*This page* tells you how to access and build the LaTeX guidance document contained in this repository. These instructions are also valid for accessing and building the document that you will be contributing to, e.g., [[https://github.com/DUNE/DUNE-TDR][The DUNE TDR]]. 
+Please look at the LaTeX files under the "guidance" directory to see how to make headings, labels, tables, figures, etc., according to standards we've set. Compare it to the built [[https://dune.bnl.gov/docs/guidance.pdf][PDF of the document]].
+
+See [[https://wiki.dunescience.org/wiki/Physics_TDR_Volume_Development][Physics TDR Volume Development]] for information on coordination and management for the physics volume of the TDR. 
+
+## This page
+This *page* tells you how to access and build the LaTeX guidance document contained in this repository. These instructions are also valid for accessing and building the document that you will be contributing to, e.g., [[https://github.com/DUNE/DUNE-TDR][The DUNE TDR]]. 
 
 This page also provides all the instructions you will need for interacting with git as you pull and push document files.
 
 ** Quick start
 See more detailed information in the "Getting Started" section below.
 
--  [[https://help.github.com/articles/signing-up-for-a-new-github-account/ Get a github account]] and send your username to Brett
+-  [https://help.github.com/articles/signing-up-for-a-new-github-account/][Get a github account]] and send your username to Brett (see bottom of page).
  
 - Type this sequence to clone the repository:
 #+BEGIN_EXAMPLE
@@ -24,7 +28,7 @@ See more detailed information in the "Getting Started" section below.
   $ git clone https://github.com/DUNE/DUNE-TDR.git
 #+END_EXAMPLE
  
-- Do a test edit and test build (yes, twice)
+- Do a test edit and test build (yes, run it twice)
 #+BEGIN_EXAMPLE
   $ pdflatex volume-physics
   $ pdflatex volume-physics
@@ -44,12 +48,6 @@ Please follow these four important guidelines that will help avoid headaches:
 2. *We recommend that you compile frequently as you compose and edit; it will be easier to resolve any compilation problems.*
 3. *Make sure the document compiles before you commit it and push it to the repository. Ask Anne if you need help.*
 4. *Commit and push immediately after you finish your edits so that others have the best chance of picking up your changes before they edit.  (Yes, git can resolve conflicts, but it's better to avoid them.)*
-
-* How the guidance document should be used
-
-The documentation is in the form of a LaTeX document that is designed to follow its own guidance and thus can be used as an extended example. Please read through it once when you start contributing content, and bookmark it for reference.  Don't worry about following it to the letter, the editor will fix things.  (But the less she has to fix, the quicker it goes!)
-
-Please look at the LaTeX files under the "guidance" directory to see how to make headings, labels, tables, figures, etc., according to standards we've set. Compare it to the built [[https://dune.bnl.gov/docs/guidance.pdf][PDF of the document]].
 
 
 * Getting started
