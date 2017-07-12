@@ -1,6 +1,6 @@
 #+TITLE: Guidance for contributing to DUNE documents
 
-## This repository
+** This repository
 This *repository* holds the source for a document that provides guidance on writing and editing  [[https://github.com/DUNE/DUNE-TDR][The DUNE TDR]] in LaTeX according to the standards that we've set up for DUNE and LBNF. It is designed to follow its own guidance and thus can be used as an extended example and as a reference. Previous versions of the guidance document have been used for:
 
 - [[https://github.com/DUNE/protodune-tdr][The ProtoDUNE-SP TDR]]
@@ -12,7 +12,7 @@ Please look at the LaTeX files under the "guidance" directory to see how to make
 
 See [[https://wiki.dunescience.org/wiki/Physics_TDR_Volume_Development][Physics TDR Volume Development]] for information on coordination and management for the physics volume of the TDR. 
 
-## This page
+** This page
 This *page* tells you how to access and build the LaTeX guidance document contained in this repository. These instructions are also valid for accessing and building the document that you will be contributing to, e.g., [[https://github.com/DUNE/DUNE-TDR][The DUNE TDR]]. 
 
 This page also provides all the instructions you will need for interacting with git as you pull and push document files.
