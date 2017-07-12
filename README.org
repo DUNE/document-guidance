@@ -20,7 +20,7 @@ This page also provides all the instructions you will need for interacting with 
 ** Quick start
 See more detailed information in the "Getting Started" section below.
 
--  [https://help.github.com/articles/signing-up-for-a-new-github-account/][Get a github account]] and send your username to Brett (see bottom of page).
+-  [[https://help.github.com/articles/signing-up-for-a-new-github-account][Get a github account]] and send your username to Brett (see bottom of page).
  
 - Type this sequence to clone the repository:
 #+BEGIN_EXAMPLE
