@@ -1,21 +1,44 @@
-#+TITLE: Guidance For Contributing to DUNE Documents
+#+TITLE: Guidance for contributing to DUNE documents
 
 
-This *repository* holds the source for a document that provides guidance on writing and editing 
+This *repository* holds the source for a document that provides guidance on writing and editing  [[https://github.com/DUNE/DUNE-TDR][The DUNE TDR]] in LaTeX according to the standards that we've set up for DUNE and LBNF. Previous versions of the guidance document have been used for:
 
-- [[https://github.com/DUNE/DUNE-TDR][The DUNE TDR]]
 - [[https://github.com/DUNE/protodune-tdr][The ProtoDUNE-SP TDR]]
 - [[https://github.com/DUNE/lbne-fd-closeout][The DUNE Far Detector Closeout]]
 - [[https://github.com/DUNE/lbn-cdr][The DUNE CDR]]
 
-in LaTeX according to the standards that we've set up for DUNE and LBNF.
+See [[https://wiki.dunescience.org/wiki/Physics_TDR_Volume_Development][Physics TDR Volume Development]] for information on coordination and management. 
 
-This *page* tells you how to access and build the LaTeX guidance document contained in this repository. These instructions are also valid for accessing and building the document that you will be contributing to, e.g., the DUNE TDR. 
+*This page* tells you how to access and build the LaTeX guidance document contained in this repository. These instructions are also valid for accessing and building the document that you will be contributing to, e.g., [[https://github.com/DUNE/DUNE-TDR][The DUNE TDR]]. 
 
 This page also provides all the instructions you will need for interacting with git as you pull and push document files.
 
+** Quick start
+See more detailed information in the "Getting Started" section below.
 
-First of all, please follow these four important guidelines that will help avoid headaches:
+-  [[https://help.github.com/articles/signing-up-for-a-new-github-account/ Get a github account]] and send your username to Brett
+ 
+- Type this sequence to clone the repository:
+#+BEGIN_EXAMPLE
+  $ cd /my/work/area
+  $ git clone https://github.com/DUNE/DUNE-TDR.git
+#+END_EXAMPLE
+ 
+- Do a test edit and test build (yes, twice)
+#+BEGIN_EXAMPLE
+  $ pdflatex volume-physics
+  $ pdflatex volume-physics
+#+END_EXAMPLE
+ 
+- Type this sequence to commit (after it builds successfully):
+#+BEGIN_EXAMPLE
+  $ git commit -a -m "Brief explanation of what you updated"
+  $ git push
+#+END_EXAMPLE
+
+
+** Best practices for interacting with GitHub
+Please follow these four important guidelines that will help avoid headaches:
 
 1. *Always do a pull immediately before you begin working on a file just in case someone else modified it recently.*
 2. *We recommend that you compile frequently as you compose and edit; it will be easier to resolve any compilation problems.*
@@ -26,7 +49,7 @@ First of all, please follow these four important guidelines that will help avoid
 
 The documentation is in the form of a LaTeX document that is designed to follow its own guidance and thus can be used as an extended example. Please read through it once when you start contributing content, and bookmark it for reference.  Don't worry about following it to the letter, the editor will fix things.  (But the less she has to fix, the quicker it goes!)
 
-Please look at the tex files under the "guidance" directory to see how to make headings, labels, tables, figures, etc., according to standards we've set. Compare it to the built PDF of the document, which you can find at the [[https://github.com/DUNE/document-guidance/releases][GitHub releases area for this repository]].
+Please look at the LaTeX files under the "guidance" directory to see how to make headings, labels, tables, figures, etc., according to standards we've set. Compare it to the built [[https://dune.bnl.gov/docs/guidance.pdf][PDF of the document]].
 
 
 * Getting started
