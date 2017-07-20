@@ -1,5 +1,5 @@
 
-\chapter{\LaTeX{} standards for LBNF/DUNE documents}
+\chapter{\LaTeX{} writing standards for LBNF/DUNE documents}
 \label{ch:latex-stds}
 
 This chapter provides guidelines on sectioning,  inserting figures, tables and references, and formatting numbers and units according to the \LaTeX{} configuration we have set up for LBNF/DUNE documents.
@@ -242,9 +242,13 @@ For figures, the reference needs to include ``fig:'' before the label name defin
 \subsection{The bibliography file containing the citations}
 \label{sec:latex-bib-file}
 
-The \texttt{citedb.bib} file is in BibTex format  (note that this filename may be altered to match a specific document, e.g., \texttt{pdune-tdr-citedb.bib}.
-This is \textbf{not} \LaTeX{} format and in particular does not
-indicate comments via \texttt{\%} characters.
+The \texttt{common/(...)citedb.bib} file is in BibTex format. The (...) here means that it may have a prefix that indicates
+which document it goes with. For the TDR, it is called \texttt{common/tdr-citedb.bib}. Please read the guidelines at the
+beginning of that file. (We have left a well-populated \texttt{common/citedb.bib} in the TDR directory in case you want to search for a citation
+ that may have appeared in the CDR, or other DUNE/LBNF document.)
+
+Note that the bib file is \textbf{not} in \LaTeX{} format and in particular does not
+indicate comments via \texttt{\%} characters. (Again, guidelines are in the file itself.)
 The
 generated bibliography reflects the order in which citations are referenced in the text, not the order of entries in this file.
 
