@@ -35,20 +35,21 @@ It's easiest to trace things when the labels are meaningful, and for figures, wh
 \section{What's in the Document Guidance GitHub repository?}
 \label{sec:gen-guidance-repo}
 
-This repository contains code for a document with ``all you need to know'' about writing your documents -- guidance on \LaTeX{} syntax, chapter structure, English standards, abbreviations, figures, and other things. Please read through it so that you understand the LBNF/DUNE style and structure for documents.  There is \LaTeX{} code that you can copy straight from the source for this document and edit for your content.  This is supposed to make it easy!
+This repository contains code for a document with ``all you need to know'' about using /LBNF/DUNE \LaTeX{}  conventions  -- guidance on syntax, chapter structure, English standards, abbreviations, figures, and other things. Please read through it so that you understand the LBNF/DUNE style and structure for documents.  There is customized \LaTeX{} code that you can copy straight from the source for this document and edit for your content.  This is supposed to make it easy!
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{What's in the DUNE TDR GitHub repository?}
 \label{sec:gen-repo}
 
-A document maintained in GitHub pertaining to the overall DUNE enterprise may consist of multiple \textit{volumes}\footnote{Some volumes may be written in MS Word, external to a GitHub repository.}. The DUNE TDR will likely have multiple volumes.  A document repository holds all the files needed to compile each volume of the document (or the document itself, if it's not broken into volumes). This includes both content files and additional files that set up the configuration, 
-contain auxiliary text (e.g., acronym lists, citations), or provide definitions or macros (defs.txt), etc.  Most of these other files are maintained by the technical editor and you should not modify them. You may of course add citations, acronyms, and so forth.   More information on these files is given in Chapter~\ref{ch:tech}.
+A document maintained in GitHub pertaining to the overall DUNE enterprise, such as the TDR, may consist of multiple \textit{volumes}\footnote{Some volumes may be written in MS Word, external to a GitHub repository.}. The DUNE TDR will likely have multiple volumes.  A document repository holds all the files needed to compile each volume of the document (or the document itself, if it's not broken into volumes). This includes both content files and additional files that set up the configuration, 
+contain auxiliary text (e.g., acronym lists, citations), or provide definitions or macros (\texttt{defs.txt}), etc.  Most of these other files are maintained by the technical editor and you should not modify them. You may of course add citations, acronyms, and so forth.   More information on these files is given in Chapter~\ref{ch:tech}.
 
 The DUNE TDR repository will be set up with a subdirectory for each volume -- this is where you will do the bulk of your work. In the following, \texttt{volname} represents a label for the volume. The content for a given volume is
 arranged as follows:
 
 \begin{description}
+\item[\texttt{common}] a directory that houses several configuration-related files and files that are otherwise used by multiple volumes. The ones you are likely to touch are \texttt{defs.tex}, \texttt{tdr-citedb.bib}, and possibly one or another of the acronym files.
 \item[\texttt{volname.tex}] the main file (see Section~\ref{sec:tech-mainfile}) for a volume; there will one of these per volume. They are found in the top-level
   directory. They have no significant content themselves; they just use
   ``includes'' to pull together content contained in their component chapter files. Please do NOT modify any volume file!
@@ -70,9 +71,9 @@ Please note:
 \begin{itemize}
 \item Editors may elect to further break up content into per-section files. If so, follow a naming convention such as ``\texttt{chaptername-sectionname.tex}''.
 \item Please do not include a volume, chapter, section or figure number in any file name. Their actual numbers will be determined at compile time according to the configuration and the volume's main file. 
-\item If you have questions, consult with either: \\
+\item If you have questions, consult with one of: \\
   Anne Heavey, aheavey@fnal.gov, 630-840-8039 (technical editor)\\
-  Brett Viren, bv@bnl.gov (help on graphics, \LaTeX{} and git machinery)
+  Brett Viren, bv@bnl.gov or Dave Demuth, david.demuth@vcsu.edu (help on graphics, \LaTeX{} and git machinery)
 \end{itemize}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -81,11 +82,95 @@ Please note:
 
 ... at least remember that it is here for reference!
 
-Please check that your figures are reasonably sized. We may want to add this document to the arXiv, which has a 10\,MB limit per document; bloated figures can use that up quickly.
+%%%%%%%%
+\textbf{Macros (Definitions):}
 
-Please do sectioning, figures, tables and citations ``the DUNE way''. 
+\begin{framed}
+We recommend that you use (and add to, as needed) macros defined in \texttt{common/defs.txt} for complicated expressions like 
+\begin{verbatim}
+$\bar\nu_\mu$.
+\end{verbatim}
+ Clearly, typing a macro like 
+ \begin{verbatim}
+\anumu
+\end{verbatim} 
+is easier and much less error-prone than the full expression.
+%\verb|\newcommand{\anumu}{$\bar\nu_\mu$\xspace}|. Clearly, typing \verb|\anumu| is much less error-prone than the full expression.
+Find more information in Section~\ref{sec:latex-terms}.
+\end{framed}
 
+%%%%%%%%
+\textbf{Fixmes:}
+
+\begin{framed}
+As in ``fix me!'' If you're not sure about something or you find an error that somebody else has to fix, use:
+\begin{verbatim}
+\fixme{This is a fixme.}
+\end{verbatim}
+More info and other options are in Chapter~\ref{ch:review}.
+\end{framed}
+
+%%%%%%%%
+\textbf{Figures:}
+
+\begin{framed}
+\begin{verbatim}
+    \begin{dunefigure}[optional caption for LoF]{fig:required-label}
+     {required full caption (Credit: xyz)}
+    \includegraphics[width=0.8\textwidth]{image-filename}
+    \end{dunefigure}
+\end{verbatim}
+To reference: \verb|See Figure~\ref{fig:required-label}|.
+Please make \verb|required-label| the same as \verb|image-filename|. 
+
+Please check that your figures are reasonably sized. We may want to add this document to the arXiv, which has a 10\,MB limit per document; bloated figures can use that up quickly. Find more information in Section~\ref{sec:latex-figures}.
+\end{framed}
+
+%%%%%%%%
+\textbf{Tables:}
+
+\begin{framed}
+\begin{verbatim}
+\begin{dunetable}
+[The LoT caption]
+{cc}
+{table-label}
+{This is a sample table.}
+  Rows & Counts \\ \toprowrule
+  Row 1 & First \\ \colhline
+  Row 2 & Second \\ \colhline
+  Row 3 & Third \\ 
+\end{dunetable}
+\end{verbatim}
+To reference: \verb|See Table~\ref{tab:table-label}|.
+
+Find more information in Section~\ref{sec:latex-tables}.
+\end{framed}
+%%%%%%%%
+\textbf{Citations:}
+\begin{framed}
+They go in \texttt{common/tdr-citedb.bib}. When adding citations to this file, copy the BibTeX rendering of the citation from \url{http://inspirehep.net} if it exists there. (We have left a well-populated \texttt{common/citedb.bib} in the TDR directory in case you want to search for a citation
+ that may have appeared in the CDR, or other DUNE/LBNF document.) E.g.,
+
+\begin{verbatim}
+ @article{Gando:2010aa,
+      author         = {A.~Gando and others},
+      title          = "{Constraints on $\theta_{13}$ from A Three-Flavor ...}",
+      journal        = {Phys.Rev.D},
+      volume         = {83},
+      pages          = {052002},
+      year           = {2011},
+      note           = {arXiv:1009.4771 [hep-ex]},
+}
+\end{verbatim}
+ To reference it within a file, use, e.g.,  \verb|\cite{Gando:2010aa}|.
+Find more information in Section~\ref{sec:latex-cit}.
+\end{framed}
+
+%%%%%%%%
 \textbf{Sectioning:}
+
+\begin{framed}
 \begin{verbatim}
 \chapter{A chapter}
 \label{ch:blah}
@@ -102,61 +187,5 @@ Please do sectioning, figures, tables and citations ``the DUNE way''.
 \subsubsection{A subsubsection}
 \label{sec:blah-sec1-subsec1-subsubsec1}
 \end{verbatim}
-
-
-\textbf{Figures:}
-\begin{verbatim}
-    \begin{cdrfigure}[optional caption for LoF]{required-label}
-     {required full caption (Credit: xyz)}
-    \includegraphics[width=0.8\textwidth]{image-filename}
-    \end{cdrfigure}
-\end{verbatim}
-
-To reference: \verb|See Figure~\ref{fig:required-label}|.
-Please make \verb|required-label| the same as \verb|image-filename|. (Yes, \verb|cdrfigure| was originally defined for the CDR.)
-
-\textbf{Tables:}
-\begin{verbatim}
-\begin{cdrtable}
-[The LoT caption]
-{cc}
-{table-label}
-{This is a sample table.}
-  Rows & Counts \\ \toprowrule
-  Row 1 & First \\ \colhline
-  Row 2 & Second \\ \colhline
-  Row 3 & Third \\ 
-\end{cdrtable}
-\end{verbatim}
-To reference: \verb|See Table~\ref{tab:table-label}|.
-
-\fixme{I haven't included equations or arrays; not sure there's anything DUNE-specific. What do you recommend regarding inclusion in here?}
-
-\textbf{Citations:}
-
-They go in \texttt{common/citedb.bib}. When adding citations to this file, copy the BibTeX rendering of the citation from \url{http://inspirehep.net} if it exists there. E.g.,
-
-\begin{verbatim}
- @article{Gando:2010aa,
-      author         = {A.~Gando and others},
-      title          = "{Constraints on $\theta_{13}$ from A Three-Flavor Oscillation Analysis of Reactor Antineutrinos at KamLAND}",
-      journal        = {Phys.Rev.D},
-      volume         = {83},
-      pages          = {052002},
-      year           = {2011},
-      note           = {arXiv:1009.4771 [hep-ex]},
-}
-\end{verbatim}
-
- To reference it within a file, use, e.g.,  \verb|\cite{Gando:2010aa}|.
-
-\textbf{Macros (Definitions):}
-
-We recommend that you use (and add to, as needed) macros defined in common/defs.txt for things like \verb|\newcommand{\anumu}{$\bar\nu_\mu$\xspace}|. Clearly, typing \verb|\anumu| is much less error-prone than the full expression.
-
-\textbf{Fixmes:}
-
-As in ``fix me!'' If you're not sure about something or you find an error that somebody else has to fix, use:
-\begin{verbatim}
-\fixme{This is a fixme.}
-\end{verbatim}
+Find more information in Section~\ref{sec:latex-sectioning}.
+\end{framed}

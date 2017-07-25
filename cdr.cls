@@ -171,7 +171,7 @@
 \newcommand{\cdrtablabel}{}% stores the label
 \newcommand{\cdrtabcaption}{}% stores the caption
 \newcommand{\cdrtabcaptionshort}{}% stores an optional short caption
-\newenvironment{cdrtable}[4][]
+\newenvironment{dunetable}[4][]
 {
   \if\relax\detokenize{#1}\relax
   \gdef\cdrtabcaptionshort{\relax}
@@ -201,7 +201,7 @@
 \newcommand{\cdrfiglabel}{}% stores the label
 \newcommand{\cdrfigcaption}{}% stores the caption
 \newcommand{\cdrfigcaptionshort}{}% stores an optional short caption
-\newenvironment{cdrfigure}[3][]
+\newenvironment{dunefigure}[3][]
 {
   \if\relax\detokenize{#1}\relax
   \gdef\cdrfigcaptionshort{\relax}
@@ -273,3 +273,5 @@
 
 %add TOC, TOF, TOT, Ref to TOC (show up in PDF sidebar for easy navigation)
 \RequirePackage{tocbibind}
+
+\usepackage{cprotect}

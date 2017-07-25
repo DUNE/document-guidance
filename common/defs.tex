@@ -16,28 +16,59 @@
 
 % Things about oscillation
 %
-% example: \dm{12}
-\newcommand{\dm}[1]{$\delta m^2_{#1}$\xspace}
-% example \sinstt{12}
-\newcommand{\sinstt}[1]{$\sin^22\theta_{#1}$\xspace}
-% example \deltacp
-\newcommand{\deltacp}{$\delta_{\rm CP}$\xspace}
-% example \nuxtonux{\mu}{e}
-\newcommand{\nuxtonux}[2]{$\nu_{#1} \to \nu_{#2}$\xspace}
-\newcommand{\numutonumu}{\nuxtonux{\mu}{\mu}}
-\newcommand{\numutonue}{\nuxtonux{\mu}{e}}
 \newcommand{\numu}{$\nu_\mu$\xspace}
 \newcommand{\nue}{$\nu_e$\xspace}
+\newcommand{\nutau}{$\nu_\tau$\xspace}
+
 \newcommand{\anumu}{$\bar\nu_\mu$\xspace}
 \newcommand{\anue}{$\bar\nu_e$\xspace}
+\newcommand{\anutau}{$\bar\nu_\tau$\xspace}
 
-% Names
+\newcommand{\dm}[1]{$\Delta m^2_{#1}$\xspace} % example: \dm{12}
+
+\newcommand{\sinst}[1]{$\sin^2\theta_{#1}$\xspace} % example \sinst{12}
+\newcommand{\sinstt}[1]{$\sin^22\theta_{#1}$\xspace}  % example \sinstt{12}
+
+\newcommand{\deltacp}{$\delta_{\rm CP}$\xspace}   % example \deltacp
+\newcommand{\mdeltacp}{$\delta_{\rm CP}$}   %%%%%%%%%%  <--- missing something; what's the m for?
+
+\newcommand{\nuxtonux}[2]{$\nu_{#1} \to \nu_{#2}$\xspace}  % example \nuxtonux23 (no {...} )
+\newcommand{\numutonumu}{\nuxtonux{\mu}{\mu}}
+\newcommand{\numutonue}{\nuxtonux{\mu}{e}}
+% Add chi sqd MH?  avg delta chi sqd?
+
+% atmospheric neutrinos and PDK
+\newcommand{\ptoknubar}{$p^+ \rightarrow K^+ \overline{\nu}$\xspace}
+\newcommand{\ptoepizero}{$p^+ \rightarrow e^+ \pi^0$\xspace}
+
+% Names of expts or detectors
 \newcommand{\cherenkov}{Cherenkov\xspace}
 \newcommand{\kamland}{KamLAND\xspace}
-\newcommand{\kamiokande}{Kamiokande\xspace}
+\newcommand{\kkande}{Kamiokande\xspace}  %%%% <---- changed to make shorter
 \newcommand{\superk}{Super--Kamiokande\xspace}
+\newcommand{\hyperk}{Hyper--Kamiokande\xspace}
 \newcommand{\miniboone}{MiniBooNE\xspace}
 \newcommand{\minerva}{MINER$\nu$A\xspace}
 \newcommand{\nova}{NO$\nu$A\xspace}
-\newcommand{\SURF}{Sanford Underground Research Facility\xspace}
+\newcommand{\numi}{NuMI\xspace}
+\newcommand{\lariat}{LArIAT\xspace}
+\newcommand{\argoneut}{ArgoNeuT\xspace}
 
+% Random
+\newcommand{\lartpc}{LArTPC\xspace}
+\newcommand{\SURF}{Sanford Underground Research Facility\xspace}
+\newcommand{\globes}{GLoBES\xspace}
+\newcommand{\larsoft}{LArSoft\xspace}
+\newcommand{\snowglobes}{SNOwGLoBES\xspace}
+
+% Isotopes
+\def\argon40{$^{40}$Ar}  %%%%%       <--- \Ar40 doesn't work; don't know why
+\def\Ar39{$^{39}$Ar}
+\def\Cl40{$^{40}$Cl}
+\def\K40{$^{40}$K}
+\def\B8{$^{8}$B}
+
+% Parameters
+\def\driftvelocity{\SI{1.6}{\milli\meter/\micro\second}\xspace}
+\def\lartemp{\SI{88}\,K\xspace}
+% What other parameters to include?  Wire spacings? Drift lengths? Decay pipe length?
