@@ -111,7 +111,7 @@ arguments:
 \begin{enumerate}
 \item An initial, optional short caption to appear in the List Of Figures (LoF), in square brackets. This caption only needs to
 identify the figure uniquely, it does not need to describe it fully.
-\item A (required) label for referencing. No spaces are allowed in the label. Curly brackets. This label should be chosen to match the filename of the figure (image-filename, below). %(Do not prepend \texttt{fig:} to the label text --  \LaTeX{} will do that automatically.)
+\item A (required) label for referencing. No spaces are allowed in the label. Curly brackets. Start the label with \texttt{fig:} then use the filename of the figure as the rest of the label, (\texttt{image-filename}, below). 
 \item The (required) full caption. Curly brackets, again.
 \end{enumerate}
 
@@ -122,15 +122,15 @@ mentioned in Section~\ref{sec:tech-mainfile} and as such, please (a) put the fil
 The file's extension may be omitted. Provide an image credit if appropriate. The entry looks like this (make the width/size appropriate for the image):
 
 \begin{verbatim}
-    \begin{dunefigure}[optional caption for LoF]{fig:required-label}
+    \begin{dunefigure}[optional caption for LoF]{fig:figure-label}
      {required full caption (Credit: xyz)}
     \includegraphics[width=0.8\textwidth]{image-filename}
     \end{dunefigure}
 \end{verbatim}
 
-Remember, ``image-filename'' should match ``required-label.'' This makes it MUCH easier to find associated references and figures in the \LaTeX{}  source. 
+Remember, ``image-filename'' should match ``figure-label.'' This makes it MUCH easier to find associated references and figures in the \LaTeX{}  source. 
 
-\begin{dunefigure}[An aerial photograph of Fermilab]{fermilab-aerial}{An aerial photograph of Fermilab
+\begin{dunefigure}[An aerial photograph of Fermilab]{fig:fermilab-aerial}{An aerial photograph of Fermilab
     showing Wilson Hall and surrounding accelerator rings (Photo: Fermilab
     Visual Media Services)}
   \includegraphics[width=0.8\textwidth]{fermilab-aerial}
@@ -140,7 +140,7 @@ Remember, ``image-filename'' should match ``required-label.'' This makes it MUCH
 An example can be seen in Figure~\ref{fig:fermilab-aerial}, which is created
 with the \LaTeX{} shown in Figure~\ref{fig:aerial-latex}.  Notice that in the reference to the figures, we need to prepend \texttt{fig:} to the label. (See Section~\ref{sec:latex-intra-doc-ref}.)
 
-\begin{dunefigure}[]{aerial-latex}{\LaTeX{} source showing how to include Figure~\ref{fig:fermilab-aerial} and how to refer to it in the text}
+\begin{dunefigure}[]{fig:aerial-latex}{\LaTeX{} source showing how to include Figure~\ref{fig:fermilab-aerial}}
 \begin{verbatim}
     \begin{dunefigure}[An aerial photograph of Fermilab]{fig:fermilab-aerial}
        {An aerial photograph of Fermilab showing Wilson Hall and 
@@ -148,7 +148,6 @@ with the \LaTeX{} shown in Figure~\ref{fig:aerial-latex}.  Notice that in the re
     \includegraphics[width=0.8\textwidth]{fermilab-aerial}
     \end{dunefigure}
 \end{verbatim}
-See Figure~\ref{fig:fermilab-aerial}...
 \end{dunefigure}
 
 See Chapter~\ref{ch:graphics} for guidelines on the graphics files themselves.
@@ -161,14 +160,14 @@ See Chapter~\ref{ch:graphics} for guidelines on the graphics files themselves.
 
 Like figures, we use a special environment, \texttt{dunetable} for
 tables to achieve a degree of consistency.
-This is instead of the usual double \texttt{table} + \texttt{tabular} environments.
+This replaces the usual double \texttt{table} + \texttt{tabular} environments.
 The \texttt{dunetable} environment takes one optional and three
 required arguments:
 
 \begin{enumerate}
 \item An initial, optional short caption for the List of Tables (LoT). Square brackets.
 \item The tabular column specification. (Curly brackets for the last three items.)
-\item A label for referencing. % (\LaTeX{}  will prepend \texttt{tab:} to your label text automatically)
+\item A label for referencing. Start the label with \texttt{tab:}. 
 \item The full caption.
 \end{enumerate}
 
@@ -196,7 +195,7 @@ Both of these take the place of the usual \texttt{hline}.
 \begin{dunetable}
 [The LoT caption]
 {cc}
-{example}
+{tab:example}
 {This is a sample table.}
   Rows & Counts \\ \toprowrule
   Row 1 & First \\ \colhline
@@ -214,7 +213,7 @@ Note that special column specifications are used.
 \begin{dunetable}
 [Efficiencies and background rates for nucleon decay modes]
 {$L^c^c^c^c}
-{pdecay}
+{tab:pdecay}
 {Efficiencies and background rates for nucleon decay channels of interest for a large underground LArTPC, and 
 comparison with water Cherenkov detector capabilities}
 Decay Mode & \multicolumn{2}{^c}{Water Cherenkov} & \multicolumn{2}{^c}{Liquid Argon TPC} \\
@@ -279,8 +278,6 @@ For figures, the labels and references need to include ``fig:'' before the actua
 \subsection{The bibliography file containing the citations}
 \label{sec:latex-bib-file}
 
-%The \texttt{common/(...)citedb.bib} file is in BibTex format. The (...) here means that it may have a prefix that indicates
-%which document it goes with. 
 For the TDR, we have created the file \texttt{common/tdr-citedb.bib} to contain all the citations. Please read the guidelines at the
 beginning of that file. We have left a well-populated \texttt{common/citedb.bib} in the TDR directory in case you want to search for a citation
  that may have appeared in the CDR, or other DUNE/LBNF document.
