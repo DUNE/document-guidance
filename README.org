@@ -21,6 +21,16 @@ This page also provides all the instructions you will need for interacting with 
 This shows how to clone the TDR repository and build the physics volume. Bare bones. See more detailed and non-TDR-specific information in the "Best practices" and "Getting Started" sections below.
 
 -  [[https://help.github.com/articles/signing-up-for-a-new-github-account][Get a github account]] and send your username to Brett (see bottom of page).
+
+If you need a reliable LaTeX installation, Tom Junk has installed texlive 2017 in his area on the dunegpvm's at Fermilab. Feel free to use it! Just login and run his setup file:
+
+#+BEGIN_EXAMPLE
+  $ ssh dunesl7gpvm01.fnal.gov
+  $ source /dune/app/users/trj/texlive2017/setup.sh
+  $ mkdir /my/work/area
+#+END_EXAMPLE
+
+
  
 - Type this sequence to clone the repository:
 #+BEGIN_EXAMPLE
@@ -28,8 +38,9 @@ This shows how to clone the TDR repository and build the physics volume. Bare bo
   $ git clone https://github.com/DUNE/DUNE-TDR.git
 #+END_EXAMPLE
  
-- Do a test edit and test build (yes, run it twice)
+- Do a test edit and test build (yes, run pdflatex twice)
 #+BEGIN_EXAMPLE
+  $ cd DUNE-TDR
   $ pdflatex volume-physics
   $ pdflatex volume-physics
 #+END_EXAMPLE
