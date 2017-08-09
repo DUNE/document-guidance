@@ -212,7 +212,8 @@ If you don't want to edit in LaTeX, please talk to Anne.
 
 * Contacts
 
-- Anne Heavey <aheavey@fnal.gov> 630-840-8039 (technical editor, content)
+- Anne Heavey <aheavey@fnal.gov> 630-840-8039 (technical editor, structure, style)
 
-- Brett Viren <bv@bnl.gov> (technical editor, LaTeX machinery and repository)
+- Brett Viren <bv@bnl.gov> (LaTeX machinery and repository)
 
+- David Demuth <david.demuth@vcsu.edu> (LaTeX, images, general)
