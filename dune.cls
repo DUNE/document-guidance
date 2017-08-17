@@ -40,9 +40,6 @@
 \RequirePackage{parskip}
 \setlength{\parskip}{\baselineskip}
 
-% David adds listings for code snippets 8/16/17
-\RequirePackage{listings}
-
 % Smart end-of-macro spacing
 \RequirePackage{xspace}
 % Let's use units properly and consistently!

@@ -211,7 +211,7 @@ some reason you don't want to use Git we can work around that, however you need 
 
 The [[https://desktop.github.com/][Github Desktop]] application can be used to interface the DUNE Github repository, saving some command-line headaches.
 
-If you are willing and able to edit in LaTeX, but don't want to deal with Git, download the latest version of the desired file from the [[https://github.com/DUNE/DUNE-TDR][web-based repository], edit it and send it to Anne (see contacts below).
+If you are willing and able to edit in LaTeX, but don't want to deal with Git, download the latest version of the desired file from the [[https://github.com/DUNE/DUNE-TDR][web-based repository]], edit it and send it to Anne (see contacts below).
 
 For those new to LaTex, you might find the real-time preview feature using the [[https://www.overleaf.com/benefits][Overleaf]] a useful practice environment.
 
