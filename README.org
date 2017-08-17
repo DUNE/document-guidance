@@ -6,6 +6,7 @@ This *repository* holds the source for a document that provides guidance on writ
 - [[https://github.com/DUNE/protodune-tdr][The ProtoDUNE-SP TDR]]
 - [[https://github.com/DUNE/lbne-fd-closeout][The DUNE Far Detector Closeout]]
 - [[https://github.com/DUNE/lbn-cdr][The DUNE CDR]]
+- [[https://github.com/DUNE/DUNE-TDR][The DUNE TDR]]
 
 
 Please look at the LaTeX files under the "guidance" directory to see how to make headings, labels, tables, figures, etc., according to standards we've set. Compare it to the built [[https://dune.bnl.gov/docs/guidance.pdf][PDF of the document]].
@@ -21,6 +22,8 @@ This page also provides all the instructions you will need for interacting with 
 This shows how to clone the TDR repository and build the physics volume. Bare bones. See more detailed and non-TDR-specific information in the "Best practices" and "Getting Started" sections below.
 
 -  [[https://help.github.com/articles/signing-up-for-a-new-github-account][Get a github account]] and send your username to Brett (see bottom of page).
+-  [[https://github.com/DUNE/document-guidance/blob/master/install-git-on-mac.org][Install Git on Mac]], requires Mac OS X, [[https://appleid.apple.com][Apple ID]], [[https://developer.apple.com/xcode/downloads][XCode]], and [[https://developer.apple.com/download/more/][Command Line Tools]].
+-  [[https://desktop.github.com/][Github Desktop]] Manage your [[https://guides.github.com/introduction/flow/][GitHub flow]] using this dandy interface. 
 
 If you need a reliable LaTeX installation, Tom Junk has installed texlive 2017 in his area on the dunegpvm's at Fermilab. Feel free to use it! Just login and run his setup file:
 
@@ -206,7 +209,11 @@ Git works on all major computing platforms and many minor ones and is
 successfully used by all manner of people.  If for
 some reason you don't want to use Git we can work around that, however you need to always start by downloading the latest files from GitHub.
 
-If you are willing and able to edit in LaTeX, but don't want to deal with Git, download the latest version of the desired file from the repository, edit it and send it to Anne (see contacts below).
+The [[https://desktop.github.com/][Github Desktop]] application can be used to interface the DUNE Github repository, saving some command-line headaches.
+
+If you are willing and able to edit in LaTeX, but don't want to deal with Git, download the latest version of the desired file from the [[https://github.com/DUNE/DUNE-TDR][web-based repository], edit it and send it to Anne (see contacts below).
+
+For those new to LaTex, you might find the real-time preview feature using the [[https://www.overleaf.com/benefits][Overleaf]] a useful practice environment.
 
 If you don't want to edit in LaTeX, please talk to Anne.
 
@@ -216,4 +223,4 @@ If you don't want to edit in LaTeX, please talk to Anne.
 
 - Brett Viren <bv@bnl.gov> (LaTeX machinery and repository)
 
-- David Demuth <david.demuth@vcsu.edu> (LaTeX, images, general)
+- David DeMuth <david.demuth@vcsu.edu> (LaTeX, images, general)

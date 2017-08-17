@@ -75,18 +75,73 @@ in-plot fonts, colors, wording.
 \section{Annotated figures}
 \label{sec:graphic-annotate}
 
-One common figure type is to take a figure and annotate it with
-arrows, labels, etc.
-Ideally you will do this directly in \LaTeX{}, for example using TikZ.
-If you can't do that, then take care not to produce a bloated,
-low-quality graphic, and please choose fonts and colors that ``work''
-with the document.
-If at all possible, provide the file in a format which can be further
-edited and which does not turn raster data into PDF nor vector data
-into JPEG/PNG.
-If this can't be avoided and if the underlying graphic is JPEG then
-produce the final version in JPEG and not PNG nor PDF.
-If the annotation is on top of an original vector drawing and your
-annotation software will retain the vector information, save it as
-PDF.
+It is a common activity to take a figure and annotate it with arrows, labels, etc.
+For example, as shown in Figure \ref{fig:annotation-original}, annotations were made on a decaying kaon in the ICARUS T600 detector
+considered in a PDK analysis. Then shown again with similar markups after using the \LaTeX{} TikZ package in Figure \ref{fig:annotation-tikz}.
 
+\begin{dunefigure}[Annotations: original graphic]{fig:annotation-original}{An image annotated by, for example Powerpoint, often leading to file size bloat.}
+\includegraphics[width=0.8\textwidth]{fig-kaon-coll.png}
+\end{dunefigure}
+
+\begin{dunefigure}[Annotations: TikZ modified graphic]{fig:annotation-tikz}
+{An image annotated using the \LaTeX Tikz package.}
+\begin{tikzpicture}[scale = 1.0, font=\sffamily\LARGE]
+    \node[anchor=south west,inner sep=0] at (0,0) 
+    {\includegraphics[width=0.8\textwidth]{fig-kaon-coll-blank.png}};
+    \node at (11.7,8.5) {\textbf{cathode}};    
+    \draw [line width=2pt, dotted] (0.3,7.8) -- (13.6,7.8);
+    \node at (7.0,6.5) {\textbf{kaon decay}};    
+    \draw [line width=1.5pt,-latex] (7.0,5.9) -- (7.0,2.1);
+    \node at (11.9,5.7) {\textbf{muon decay}};    
+    \draw [line width=1.5pt,-latex] (11.7,5.4) -- (11.7,3.5);
+    \node at (0.9,4.1) [rotate=90] {\textbf{time}};
+    \draw [line width=2pt,-latex] (0.4,0.4) -- (0.4,5.0);
+    \node at (2.9,1.0) {\textbf{wire no.}};   
+    \draw [line width=2pt,-latex] (0.4,0.4) -- (5.1,0.4);
+    \node at (10.7,1.0) {\textbf{0.5 m}};    
+    \draw [line width=1.5pt] (7.8,0.4) -- (13.5,0.4);
+    \draw [line width=1.5pt] (7.8,0.2) -- (7.8,0.6);
+    \draw [line width=1.5pt] (13.5,0.2) -- (13.5,0.6);    
+    \draw[red,ultra thick,rounded corners] (11.3,2.5) rectangle (12.3,3.5);
+\end{tikzpicture}
+\end{dunefigure}
+
+
+%\centerline{Figure 2.1c: \LaTeX~ TikZ Code Snippet}
+
+\begin{dunefigure}[TikZ Code Snippet]{fig:tikz-snippet}{\LaTeX TikZ Annotation Code Snippet}
+\begin{framed}
+\begin{verbatim}
+
+\begin{tikzpicture}[scale = 1.0, font=\sffamily\LARGE]
+    \node[anchor=south west,inner sep=0] at (0,0) 
+    {\includegraphics[width=0.8\textwidth]{fig-kaon-coll-blank.png}};
+    \node at (11.7,8.5) {\textbf{cathode}};    
+    \draw [line width=2pt, dotted] (0.3,7.8) -- (13.6,7.8);
+    \node at (7.0,6.5) {\textbf{kaon decay}};    
+    \draw [line width=1.5pt,-latex] (7.0,5.9) -- (7.0,2.1);
+    \node at (11.9,5.7) {\textbf{muon decay}};    
+    \draw [line width=1.5pt,-latex] (11.7,5.4) -- (11.7,3.5);
+    \node at (0.9,4.1) [rotate=90] {\textbf{time}};
+    \draw [line width=2pt,-latex] (0.4,0.4) -- (0.4,5.0);
+    \node at (2.9,1.0) {\textbf{wire no.}};   
+    \draw [line width=2pt,-latex] (0.4,0.4) -- (5.1,0.4);
+    \node at (10.7,1.0) {\textbf{0.5 m}};    
+    \draw [line width=1.5pt] (7.8,0.4) -- (13.5,0.4);
+    \draw [line width=1.5pt] (7.8,0.2) -- (7.8,0.6);
+    \draw [line width=1.5pt] (13.5,0.2) -- (13.5,0.6);    
+    \draw[red,ultra thick,rounded corners] (11.3,2.5) rectangle (12.3,3.5);
+\end{tikzpicture}
+
+\end{verbatim}
+\end{framed}
+\end{dunefigure}
+
+If you find the TikZ approach tedious, then at a minimum take care not to produce a 
+low-quality graphic with a large filesize (>3MB). Also, please choose fonts and colors that ``work'' with the document.
+
+If at all possible, provide the file in a format which can be further edited and which does not turn raster data into PDF nor vector data into JPEG/PNG.
+
+If this can't be avoided and if the underlying graphic is JPEG then produce the final version in JPEG and not PNG nor PDF. If the annotation is on top of an original vector drawing and your annotation software will retain the vector information, save it as PDF.
+
+Feel free to consult david.demuth@vcsu.edu with any assistance on creating your image annotations.

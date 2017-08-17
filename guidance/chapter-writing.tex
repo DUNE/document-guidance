@@ -140,7 +140,7 @@ Remember, ``image-filename'' should match ``figure-label.'' This makes it MUCH e
 An example can be seen in Figure~\ref{fig:fermilab-aerial}, which is created
 with the \LaTeX{} shown in Figure~\ref{fig:aerial-latex}.  Notice that in the reference to the figures, we need to prepend \texttt{fig:} to the label. (See Section~\ref{sec:latex-intra-doc-ref}.)
 
-\begin{dunefigure}[]{fig:aerial-latex}{\LaTeX{} source showing how to include Figure~\ref{fig:fermilab-aerial}}
+\begin{dunefigure}[\LaTeX{} source for figure inclusions.]{fig:aerial-latex}{\LaTeX{} source showing how to include Figure~\ref{fig:fermilab-aerial}}
 \begin{verbatim}
     \begin{dunefigure}[An aerial photograph of Fermilab]{fig:fermilab-aerial}
        {An aerial photograph of Fermilab showing Wilson Hall and 
@@ -289,9 +289,11 @@ generated bibliography reflects the order in which citations are referenced in t
 
 When adding citations to this file, if possible, copy the BibTeX rendering of the citation from \url{http://inspirehep.net}.
 
-Manual care must be taken to avoid duplication. \fixme{BV found something; I have to look at it. AH}
+Manual care must be taken to avoid duplication. %\fixme{BV found something; I have to look at it. AH}
 Before adding any entry to \texttt{tdr-citedb.bib}, search through it
 to ascertain whether the entry you wish to add is already there.
+
+JabRef (\url{http://www.jabref.org/}) is a cross-platform Java GUI that can be used to search bibliographies, possibly investigating duplicities, by working on any loaded .bib file.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Referencing citations}
