@@ -28,8 +28,9 @@ This shows how to clone the TDR repository and build the physics volume. Bare bo
 If you need a reliable LaTeX installation, Tom Junk has installed texlive 2017 in his area on the dunegpvm's at Fermilab. Feel free to use it! Just login and run his setup file:
 
 #+BEGIN_EXAMPLE
-  $ ssh dunesl7gpvm01.fnal.gov
-  $ source /dune/app/users/trj/texlive2017/setup.sh
+  $ ssh dunesl7gpvm01.fnal.gov  
+  for bash and sh:  $ source /grid/fermiapp/products/dune/texlive2017/setup.sh
+  for tcsh and csh: $ source /grid/fermiapp/products/dune/texlive2017/setup.csh
   $ mkdir /my/work/area
 #+END_EXAMPLE
 
@@ -224,3 +225,5 @@ If you don't want to edit in LaTeX, please talk to Anne.
 - Brett Viren <bv@bnl.gov> (LaTeX machinery and repository)
 
 - David DeMuth <david.demuth@vcsu.edu> (LaTeX, images, general)
+
+(last updated 25 Sept 2017)
