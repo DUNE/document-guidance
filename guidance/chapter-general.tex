@@ -1,4 +1,4 @@
-\chapter{General information}
+\chapter{General Information}
 \label{ch:gen}
 
 This volume gives guidance to authors and editors of DUNE documents such as the CDR, TDRs, and so on. It collects ``wisdom'' learned from 
@@ -10,7 +10,7 @@ This has been updated for the DUNE TDR. Earlier versions of this guidance docume
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{What's on the Document Guidance GitHub web page?}
+\section{What's on the Document Guidance GitHub Web Page?}
 \label{sec:gen-webpage}
 
 Information about using GitHub and building a document is on the web page \url{https://github.com/DUNE/document-guidance}:
@@ -32,30 +32,31 @@ what label was used to reference each particular thing.
 It's easiest to trace things when the labels are meaningful, and for figures, when they match the image filename, so please choose labels carefully. Labels are discussed in Section~\ref{sec:latex-intra-doc-ref}.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{What's in the Document Guidance GitHub repository?}
+\section{What's in the Document Guidance GitHub Repository?}
 \label{sec:gen-guidance-repo}
 
 This repository contains code for a document with ``all you need to know'' about using /LBNF/DUNE \LaTeX{}  conventions  -- guidance on syntax, chapter structure, English standards, abbreviations, figures, and other things. Please read through it so that you understand the LBNF/DUNE style and structure for documents.  There is customized \LaTeX{} code that you can copy straight from the source for this document and edit for your content.  This is supposed to make it easy!
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{What's in the DUNE TDR GitHub repository?}
+\section{What's in the DUNE TDR GitHub Repository?}
 \label{sec:gen-repo}
 
-A document maintained in GitHub pertaining to the overall DUNE enterprise, such as the TDR, may consist of multiple \textit{volumes}\footnote{Some volumes may be written in MS Word, external to a GitHub repository.}. The DUNE TDR will likely have multiple volumes.  A document repository holds all the files needed to compile each volume of the document (or the document itself, if it's not broken into volumes). This includes both content files and additional files that set up the configuration, 
+A document maintained in GitHub pertaining to the overall DUNE enterprise, such as the TDR, may consist of multiple \textit{volumes}\footnote{Some volumes may be written in MS Word, external to a GitHub repository.}.  A document repository holds all the files needed to compile each volume of the document (or the document itself, if it's not broken into volumes). This includes both content files and additional files that set up the configuration, 
 contain auxiliary text (e.g., acronym lists, citations), or provide definitions or macros (\texttt{defs.txt}), etc.  Most of these other files are maintained by the technical editor and you should not modify them. You may of course add citations, acronyms, and so forth.   More information on these files is given in Chapter~\ref{ch:tech}.
 
-The DUNE TDR repository will be set up with a subdirectory for each volume -- this is where you will do the bulk of your work. In the following, \texttt{volname} represents a label for the volume. The content for a given volume is
+The DUNE TDR repository is set up with a subdirectory for each volume -- this is where you will do the bulk of your work. In the following, \texttt{volname} represents a label for the volume. The content is
 arranged as follows:
 
 \begin{description}
-\item[\texttt{common}] a directory that houses several configuration-related files and files that are otherwise used by multiple volumes. The ones you are likely to touch are \texttt{defs.tex}, \texttt{tdr-citedb.bib}, and possibly one or another of the acronym files.
+\item[\texttt{common}] a top-level directory that houses several configuration-related files and files that are otherwise used by multiple volumes. The ones you are likely to touch are \texttt{defs.tex}, \texttt{tdr-citedb.bib}, and possibly one or another of the acronym files.
 \item[\texttt{volname.tex}] the main file (see Section~\ref{sec:tech-mainfile}) for a volume; there will one of these per volume. They are found in the top-level
   directory. They have no significant content themselves; they just use
   ``includes'' to pull together content contained in their component chapter files. Please do NOT modify any volume file!
 \item[\texttt{figures/}] top-level subdirectory for any static figures
   shared by more than one volume in the repository. Typically your figures will be volume-specific and you won't add them here.
-\item[\texttt{volname/}] subdirectory holding all content for one particular volume. You will work within a given volume subdirectory.
+\item[\texttt{far-detector-(something)-phase/}] The SP and DP Far Detector technologies will have multiple volumes each. Therefore an extra directory level is inserted at the top level for each, to separately collect the SP and the DP sets of volumes.  
+\item[\texttt{volname/}] subdirectory holding all content for one particular volume (under directories of previous bullet for detector volumes). You will work within a given volume subdirectory. 
 \item[\texttt{volname/chaptername.tex}] holds the content for one chapter of a volume. You will add or edit content in one or more chapter files.
 \item[\texttt{volname/figures/}] subdirectory holding any static volume-specific figures. Your figures will usually go here.
 \item[\texttt{volname/generated/}] subdirectory holding any generated
@@ -63,9 +64,11 @@ arranged as follows:
 \end{description}
 
 Multi-volume documents will have an established file naming convention (e.g., the
-TDR may use ``\texttt{volume-volumename}''.
+TDR uses ``\texttt{volume-volumename}''.
 Specific files hold chapter-level or section-level content and should be named with some
 short, descriptive label, e.g., ``\texttt{chapter-chaptername}.''
+
+\hlfix{As of November 2017, the APA volume  of the TDR has its contents structure set. It should serve as a model for structuring other detector element volumes.}{Notice this!}
 
 Please note:
 \begin{itemize}
@@ -172,19 +175,19 @@ Find more information in Section~\ref{sec:latex-cit}.
 
 \begin{framed}
 \begin{verbatim}
-\chapter{A chapter}
+\chapter{A Chapter}
 \label{ch:blah}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{A section}
+\section{A Section}
 \label{sec:blah-sec1}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{A subsection}
+\subsection{A Subsection}
 \label{sec:blah-sec1-subsec1}
 
 %%%%%%%%%%%%%%%%%%%%
-\subsubsection{A subsubsection}
+\subsubsection{A Subsubsection}
 \label{sec:blah-sec1-subsec1-subsubsec1}
 \end{verbatim}
 Find more information in Section~\ref{sec:latex-sectioning}.

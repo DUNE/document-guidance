@@ -1,14 +1,16 @@
-\chapter{Important files in the GitHub document repository}
+\chapter{Important Files in the GitHub Document Repository}
 \label{ch:tech}
 
 This chapter describes some of the more technical aspects of the LBNF/DUNE \LaTeX setup. Various aspects of the configuration are pulled out into separate files to keep things well organized.  In general, authors should 
 not edit the files described in this chapter. Often authors need to include citations, and occasionally may want to add acronyms or definitions. This is ok; just please don't touch any other configuration-related files!
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{The main file}
+\section{The Main File}
 \label{sec:tech-mainfile}
 
-A new main file will likely be started only by the technical editors. The main file
+A new main file will likely be started only by the technical editors. There is one for each volume (if a document is split into volumes). It is the file that you compile to create the document or the volume. It appears in the top level directory of the repository.  These files are named \texttt{volume-(something).tex} (or \texttt{(document-name).tex} if not multi-volume). They should be the only \texttt{(name).tex} files at this directory level.
+
+The main file
 
 \begin{enumerate}
 \item sets the document class (see Section~\ref{sec:tech-classfile};
@@ -16,7 +18,7 @@ A new main file will likely be started only by the technical editors. The main f
 \item inputs the preamble;
 \item opens the document environment;
 \item inputs the ``init'' file;
-%\item Redefine the volumes sub-title -- when document is split into volumes; this TDR is not
+\item Redefine the volumes subtitle when document is split into volumes
 \item inputs each chapter file;
 \item inputs the ``final'' file (which provides the bibliographical information); and
 \item closes the document environment.
@@ -28,7 +30,7 @@ name and edit as directed by the comments.  As an example, the main file of the 
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{The \LaTeX{} class file}
+\section{The \LaTeX{} Class File}
 \label{sec:tech-classfile}
 
 All of the \LaTeX{} configuration for the document that pertains to
@@ -43,7 +45,7 @@ The class takes some options that control high-level style, e.g.,:
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Document-wide \LaTeX{} files in \texttt{common/}}
+\section{Document-wide \LaTeX{} Files in \texttt{common/}}
 \label{sec:tech-common}
 
 Multi-volume documents are supported and should use the
@@ -76,7 +78,7 @@ directory that should be shared document-wide.
 For example, most (all but intro) volumes of the TDR will include a standard \texttt{common/intro.tex}.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Getting the files and compiling after your changes}
+\section{Getting the Files and Compiling after your Changes}
 \label{sec:tech-compile}
 
 Detailed instructions for getting the files and compiling a volume are

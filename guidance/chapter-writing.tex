@@ -1,5 +1,5 @@
 
-\chapter{\LaTeX{} conventions for LBNF/DUNE documents}
+\chapter{\LaTeX{} Conventions for LBNF/DUNE Documents}
 \label{ch:latex-stds}
 
 This chapter provides guidelines on sectioning, inserting figures, tables and references, and formatting numbers and units according to the \LaTeX{} configuration we have set up for LBNF/DUNE documents.
@@ -8,7 +8,7 @@ Typically the start of your chapter will be an introduction to or overview of th
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Macros and defined terms}
+\section{Macros and Defined Terms}
 \label{sec:latex-terms}
 
 To enforce consistency among frequently used terms, we have defined \LaTeX{} macros for several names, expressions and parameter values in the file \texttt{common/defs.tex}.  
@@ -30,7 +30,7 @@ For example,
 \end{itemize}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Numbers and units}
+\section{Numbers and Units}
 
 \textbf{All} numerical quantities expressed as literal number
 \textbf{must} have units unless they are inherently unitless.
@@ -41,7 +41,7 @@ and a collection of common units are defined in
 E.g., using either \verb|\foot| or \verb|\ft| will yield ft. And \ktyr will yield \ktyr.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Bare numbers}
+\subsection{Bare Numbers}
 
 To enforce consistent writing of numbers please encase them in the
 \verb|\num{}| command:
@@ -53,7 +53,7 @@ To enforce consistent writing of numbers please encase them in the
 \end{itemize}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Bare units}
+\subsection{Bare Units}
 
 If you need to write a bare unit, one with not associated number, use
 \verb|\si{}| (lower case ``si'')
@@ -64,7 +64,7 @@ If you need to write a bare unit, one with not associated number, use
 \end{itemize}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Numbers with units}
+\subsection{Numbers with Units}
 
 When a quantity has a unit, write both the numerical part and the unit
 using the \verb|\SI{}{}| command like:
@@ -76,11 +76,12 @@ using the \verb|\SI{}{}| command like:
 
 These are defined in the file \texttt{common/defs.tex}.
 
-Sometimes quantities are used as adjectives, e.g., in ``a 40-kiloton detector'' the ``40-kiloton'' is acting as an adjective.
-These require proper outfitting with a dash which is easy to forget.
-To accommodate this, a set of ``adjective quantity'' macros are defined in \texttt{units/defs.tex}.
-A generic \verb|\SIadj| is provided as are some commonly used ones.
-For example:
+%Sometimes quantities are used as adjectives, e.g., in ``a 40 kiloton detector'' the ``40 kiloton'' is acting as an adjective. 
+No hyphens shall be used between numbers and units, even if the number-unit is used as an adjective, e.g., ``a 40 kiloton detector.''  (This is a change from past DUNE documents.) 
+%These require proper outfitting with a dash which is easy to forget.
+%To accommodate this, a set of ``adjective quantity'' macros are defined in \texttt{units/defs.tex}.
+%A generic \verb|\SIadj| is provided as are some commonly used ones.
+%For example:
 
 %\begin{itemize}
 %\item \cprotect\paragraph{``The \SIadj{4850}{ft} level'' is written as \verb|The \SIadj{4850}{ft} level|.}
@@ -88,7 +89,7 @@ For example:
 %\end{itemize}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Common compound units}
+\subsection{Common Compound Units}
 
 There are some common units that rather long to type out each time
 especially when we require nice formatting. Again, see \texttt{common/units.tex}.
@@ -231,7 +232,7 @@ $n \rightarrow e^+\pi^-$ & 19\% & 2 & 44\% & 0.8 \\
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Labels and intra-document references}
+\section{Labels and Intra-document References}
 \label{sec:latex-intra-doc-ref}
 
 Assume that any chapter, section or important sub-, subsub- section
@@ -251,7 +252,7 @@ For example:
 \section{A Section}
 \label{sec:a-section}
 
-\subsection{A Sub Section}
+\subsection{A Subsection}
 \label{sec:a-subsection}
 
 ... as described in Chapter~\ref{ch:a-chapter} ... 
@@ -271,11 +272,11 @@ For figures, the labels and references need to include ``fig:'' before the actua
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Citations and the bibliography}
+\section{Citations and the Bibliography}
 \label{sec:latex-cit}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{The bibliography file containing the citations}
+\subsection{The Bibliography File Containing the Citations}
 \label{sec:latex-bib-file}
 
 For the TDR, we have created the file \texttt{common/tdr-citedb.bib} to contain all the citations. Please read the guidelines at the
@@ -296,7 +297,7 @@ to ascertain whether the entry you wish to add is already there.
 JabRef (\url{http://www.jabref.org/}) is a cross-platform Java GUI that can be used to search bibliographies, possibly investigating duplicities, by working on any loaded .bib file.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Referencing citations}
+\subsection{Referencing Citations}
 \label{sec:latex-ref}
 
 Referencing citations is done like \verb|\cite{strunk}| which gives \cite{strunk}.
@@ -307,7 +308,7 @@ The key \texttt{strunk} matches an entry in the \texttt{common/tdr-citedb.bib}
 file (as relative to the top-level directory).
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Standard \LaTeX sectioning, ``the DUNE way''!}
+\section{Standard \LaTeX{} Sectioning, ``The DUNE Way''!}
 \label{sec:latex-sectioning}
 
 Most documents get subdivided into chapters (for larger documents) and/or sections and subsections. Please subdivide according to these standards:
@@ -322,13 +323,16 @@ Most documents get subdivided into chapters (for larger documents) and/or sectio
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \end{verbatim}
 
+Please capitalize all significant words in a heading (this is a change from 
+previous DUNE documents).
+
 The following sectioning macros are available, ordered from bigger to smaller:
 
 \begin{verbatim}
-\chapter{A chapter}
-\section{A section}
-\subsection{A subsection}
-\subsubsection{A subsubsection}
+\chapter{A Chapter}
+\section{A Section}
+\subsection{A Subsection}
+\subsubsection{A Subsubsection}
 \end{verbatim}
 
 Two sub's is all you get.  
@@ -337,25 +341,25 @@ sectioning is required.
 Starting from \verb|\subsection|, this produces the following:
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{A subsection}
+\subsection{A Subsection}
 \label{sec:latex-sec-sub}
 
 This is a subsection.
 
 %%%%%%%%%%%%%%%%%%%
-\subsubsection{A subsubsection}
+\subsubsection{A Subsubsection}
 \label{sec:latex-sec-subsub}
 
 This is a subsubsection.
 
 %%%%%%%%%%%%%%%%%%%
-\subsubsection{A second subsubsection}
+\subsubsection{A Second Subsubsection}
 \label{sec:latex-sec-subsub2}
 
 Remember, if you have one, you need at least one more.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{A second subsection}
+\subsection{A Second Subsection}
 \label{sec:latex-sub2}
 
 Ditto.
