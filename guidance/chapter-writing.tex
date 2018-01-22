@@ -119,7 +119,7 @@ identify the figure uniquely, it does not need to describe it fully.
 Usually the figure contains a graphic via an \texttt{includegraphics} statement.
 The filename is assumed relative to a \texttt{graphicspath} as
 mentioned in Section~\ref{sec:tech-mainfile} and as such, please (a) put the file in the right place and (b) don't
- specify any directory parts in its name.
+ specify any directory parts in its name. 
 The file's extension may be omitted. Provide an image credit if appropriate. The entry looks like this (make the width/size appropriate for the image):
 
 \begin{verbatim}
@@ -129,8 +129,15 @@ The file's extension may be omitted. Provide an image credit if appropriate. The
     \end{dunefigure}
 \end{verbatim}
 
-Remember, ``image-filename'' should match ``figure-label.'' This makes it MUCH easier to find associated references and figures in the \LaTeX{}  source. 
+Remember, ``image-filename'' should match ``figure-label.'' This makes it MUCH easier to find associated references and figures in the \LaTeX{}  source.  Also, we recommend starting the filename with an abbreviated form of the subsystem it relates to, e.g., for the APAs,
 
+\begin{itemize}
+\item image filename = apa-frame-and-wires
+\item label = fig:apa-frame-and-wires
+\item reference = fig:ig:apa-frame-and-wires
+\end{itemize}
+
+Example:
 \begin{dunefigure}[An aerial photograph of Fermilab]{fig:fermilab-aerial}{An aerial photograph of Fermilab
     showing Wilson Hall and surrounding accelerator rings (Photo: Fermilab
     Visual Media Services)}
