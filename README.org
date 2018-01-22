@@ -22,6 +22,7 @@ This page also provides all the instructions you will need for interacting with 
 This shows how to clone the TDR repository and build the physics volume. Bare bones. See more detailed and non-TDR-specific information in the "Best practices" and "Getting Started" sections below.
 
 -  [[https://help.github.com/articles/signing-up-for-a-new-github-account][Get a github account]] and send your username to Brett (see bottom of page).
+-  [[https://help.github.com/categories/authenticating-to-github/][Click here if you have authentication problems]].
 -  [[https://github.com/DUNE/document-guidance/blob/master/install-git-on-mac.org][Install Git on Mac]], requires Mac OS X, [[https://appleid.apple.com][Apple ID]], [[https://developer.apple.com/xcode/downloads][XCode]], and [[https://developer.apple.com/download/more/][Command Line Tools]].
 -  [[https://desktop.github.com/][Github Desktop]] Manage your [[https://guides.github.com/introduction/flow/][GitHub flow]] using this dandy interface. 
 
@@ -79,6 +80,8 @@ Brett Viren (see contacts below) and indicate which repository(ies) you need to
 access.  (If you instead prefer to fork and issue pull requests, that
 can likely be accommodated.  Check with the document technical
 editors, listed below.)
+
+If you experience authentication problems, [[https://help.github.com/categories/authenticating-to-github/][this page has information to help you]].
 
 
 ** Initial clone
