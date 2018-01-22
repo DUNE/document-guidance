@@ -21,3 +21,4 @@ guidance.pdf
 .lock-waf*
 .waf-*
 build
+auto

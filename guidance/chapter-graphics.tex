@@ -69,7 +69,51 @@ form that allows easy reproduction from data in the course of building
 the document.
 This allows the technical editors to attempt to apply consistent
 in-plot fonts, colors, wording.
-\fixme{More info to be added.}
+
+There is no one way to satisfy this high level of figure production
+because authors must remain free to use the plotting tools they find
+best suited.  The following are some guidelines.
+
+\begin{itemize}
+\item Commit the high-level code used to produce the figure in some
+  clearly named sub-directory of the repository.  Factor this code
+  from any large code base.  For example, supply a ``stand alone''
+  Python or ROOT script or one which depends on common
+  modules/libraries.
+  
+\item Commit any data needed to produce the figure in some clearly
+  named subdirectory.  However, distill this data down so that it does
+  not require substantial space.  A suggested rule of thumb is that
+  the data should not be an order of magnitude larger than the
+  resulting PDF.
+
+\item If a figure is drawn or otherwise generated directly from code
+  or markup, include the source file as well as the resulting PDF/PNG.
+
+\end{itemize}
+
+The two guidelines must typically be satisfied together.  Here are
+some example strategies:
+
+\begin{itemize}
+\item Produce a plot in ROOT and save the resulting \texttt{TCanvas}
+  as a \texttt{.C} file.
+\item Dump plot data as columns in a text file and provide a ROOT or
+  Python (eg \texttt{matplotib}) script to read it in and produce the
+  PDF.
+\item Complex structured data can reduced to just what is needed for
+  the plot and saved as ROOT \texttt{TTree} or compressed JSON files.
+\item Create a shell script which takes no arguments, a Makefile, or
+  other build file, or otherwise document any non-trivial command line
+  steps needed to rerun the code.
+\end{itemize}
+
+If the effort to provide this high-level of sophistication is
+considered prohibitive, then consider at least adding a note (for
+example in a \texttt{figures/README.txt} file or in a
+\texttt{figures/my-figure.readme} file) that associates the name of
+your figures with your contact info and/or the procedure needed to
+reproduce the figure.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Annotated Figures}
