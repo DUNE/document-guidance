@@ -315,6 +315,28 @@ The key \texttt{strunk} matches an entry in the \texttt{common/tdr-citedb.bib}
 file (as relative to the top-level directory).
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Vendors and Trademarks}
+\label{sec:trademarks}
+
+Please only reference specific vendors when the particular vendor choice is significant.  When needed,
+list as follows:
+
+\begin{verbatim}
+The component contains one Widgetmaster 2000\texttrademark \cite{widgetmastermaker}...
+\end{verbatim}
+Which looks like:
+
+The component contains one Widgetmaster 2000\texttrademark \cite{widgetmastermaker}...
+
+
+Then in the bibliography file add:
+\begin{verbatim}
+@misc{widgetmastermaker,
+url = "{http://widgets-r-us.com/}",
+title = {Widgets R Us},
+}
+\end{verbatim}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Standard \LaTeX{} Sectioning, ``The DUNE Way''!}
 \label{sec:latex-sectioning}
 
