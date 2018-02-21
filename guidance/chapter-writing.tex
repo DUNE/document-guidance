@@ -129,6 +129,11 @@ The file's extension may be omitted. Provide an image credit if appropriate. The
     \end{dunefigure}
 \end{verbatim}
 
+Do not prepend any directory information to the image-filename in the includegraphics line; it will cause an error. The \LaTeX setup that we have already takes care of finding the image. 
+
+Mac users: Please avoid the use of capital letters in graphics filenames; it causes errors that you don't catch when compiling locally on your system. The Mac file systems are not truly case-sensitive, and a mismatch in the capitalization of graphics file names causes problems down the line in the repository.
+
+
 Remember, ``image-filename'' should match ``figure-label.'' This makes it MUCH easier to find associated references and figures in the \LaTeX{}  source.  Also, we recommend starting the filename with an abbreviated form of the subsystem it relates to, e.g., for the APAs,
 
 \begin{itemize}
