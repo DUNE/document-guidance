@@ -215,6 +215,15 @@ If any commits have been pushed by others since the last time you did a =git pul
 
 If all else fails, save your changed files somewhere, blow away the repository and reclone it. Then remake your edits.
 
+Note from Glenn Horton-Smith about "git merge":
+
+A "git merge"" will pull in the content from other commits that
+happened since you did the pull on which your last commit was based, and
+those will appear as changes or added files. So add them to the list of things to commit before you commit your
+merge.  Don't delete them.
+(The .gitignore file is set up to not bug you about extra files, so if
+you see changed or added files, you can be pretty sure they're good stuff.)
+
 ** Git-phobic and/or LaTeX-phobic
 
 Git works on all major computing platforms and many minor ones and is
