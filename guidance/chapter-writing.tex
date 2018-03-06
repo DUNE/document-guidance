@@ -8,10 +8,13 @@ Typically the start of your chapter will be an introduction to or overview of th
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Macros and Defined Terms}
+\section{Defined Terms: Macros and the Glossary}
 \label{sec:latex-terms}
 
-To enforce consistency among frequently used terms, we have defined \LaTeX{} macros for several names, expressions and parameter values in the file \texttt{common/defs.tex}.  
+To enforce consistency among frequently used terms, we have defined \LaTeX{} macros for several names, expressions and parameter values in the file \texttt{common/defs.tex}.  We also use a system called ``DUNE Words'' to enforce consistency of terminology. (Thank you, Brett.)  Terms are defined in the file \texttt{common/glossary.tex}.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{The common/defs.tex File}
 
 You may add terms
 to this file; this is useful if the name or term is subject
@@ -28,6 +31,12 @@ For example,
 \item \SURF is written as \verb|\SURF|, and
 \item \minerva is written as \verb|\minerva|.
 \end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{The common/glossary.tex file}
+
+This is all explained in Brett's document ``DUNE Words'' at \\
+ \url{https://dune.bnl.gov/docs/technical-proposal/dune-words.pdf}.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Numbers and Units}
@@ -341,6 +350,7 @@ url = "{http://widgets-r-us.com/}",
 title = {Widgets R Us},
 }
 \end{verbatim}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Standard \LaTeX{} Sectioning, ``The DUNE Way''!}
 \label{sec:latex-sectioning}
