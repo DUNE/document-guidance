@@ -8,18 +8,37 @@ This chapter provides guidelines on terminology, grammar, punctuation, and other
 \section{DUNE and LBNF-related Terminology}
 \label{sec:english-terminology}
 
+Please see the file \verb|common/glossary.tex| for defined terms. To use terms defined there, you will typically use \verb|\dword{label}| in your text.  Variations include:
+
+\begin{itemize}
+\item \verb|\dword{label}| nominal term
+\item \verb|\dwords{label}| plural term
+\item \verb|\Dword{label}| capitalized term
+\item \verb|\Dwords{label}| capitalized and plural term
+\item \verb|\dshort{label}| force usage of the abbreviated term
+\item \verb|\dlong{label}| force usage of the full term
+\end{itemize}
+
+For example, to refer to the photon detection system, a glossary term has been defined:
+
+\verb|\newduneabbrev{pds}{PDS}{photon detection system}|
+\verb|{The \gls{submodule} system sensitive to light produced in the LAr}|
+
+Now, everyone can refer to this in the text as \verb|\dword{\pds}|, and it will compile as ``PDS.''  If we decide to change it to ``PD'' later, we can easily do it globally!
+
+Not all of the following terms are in the glossary; those that are, are labeled as such:
 \begin{itemize}
 \item antiwhatever not anti-whatever (e.g., antineutrino, antimatter...)
 \item ``muon antineutrino,'' not ``antimuon neutrino''
-\item minimum ionizing particle: MIP
-\item beamline, not ``beam line'' or ``beam-line''
-\item ``dual-phase module,'' not ``double-phase module''
+\item minimum ionizing particle: MIP (use \verb|\dword{mip}|)
+\item beamline, not ``beam line'' or ``beam-line'' (use \verb|\dword{beamline}|)
+\item ``dual-phase module,'' not ``double-phase module'' (use \verb|\dword{dp}|)
 \item ``detector'' should be used for the entire ND or FD, not for a module
-\item use Far Detector or Near Detector with initial caps when you refer to the name of a building such as Far Detector Hall or Near Detector Hall; otherwise ``far'' and ``near'' detector.
-\item same for ``facility'' as it is a common noun, unless the word ``facility'' is in the name of the structure
-\item ``detector module'' = any \SI{10}{kt} portion of the \SI{40}{kt} FD
+\item use Far Detector or Near Detector with initial caps. (use \verb|\dword{fd}| or \verb|\dword{nd}|)
+\item  ``Facility'' is a common noun, unless the word ``facility'' is in the name of the structure
+\item ``detector module'' = any \SI{10}{kt} portion of the \SI{40}{kt} FD (use \verb|\dword{detmodule}|)
 \item for non-reference design, call it ``alternative,'' not ``alternate'' (moot for TDR?)
-\item ``a TPC in a \SI{10}{kt} module,'' not ``a \SI{10}{kt}  TPC'' 
+\item ``a TPC in a \SI{10}{kt} module,'' not ``a \SI{10}{kt}  TPC''; Remember \SI{1}{kt} is metric and defined as \SI{1}{Gg}
 \item co-spokespersons not co-spokespeople
 \item ``universe'' in general, not ``Universe''
 \end{itemize}
@@ -30,13 +49,14 @@ This chapter provides guidelines on terminology, grammar, punctuation, and other
 
 Spelling, voice:
 \begin{itemize}
+\item Standard English rules for capitalization apply. Do not promote common nouns or adjectives to proper nouns or adjectives.
 \item Use American spelling: e.g., ionization (not ionisation), flavor (not flavour) and so on.
 \item Avoid use of first person (e.g., I, we, our). 
 \item The gender-neutral ``singular they'' is to be used in preference to ``he'' or ``she'' or ``he/she'' or other ; e.g., ``the installer must wear a hard hat when they they enter the cryostat.''
 \item Use tables and figures to highlight content. It increases readability.
 \item Use active voice wherever possible, e.g., ``the field shaping coils and the cathode structure share identical features...'' or ``the design follows  an extensive review...''
-\item Use consistent terminology. (If you call it a spade here, call it a spade there.)
-\item Expand abbreviations at first occurrence.
+\item Use consistent terminology. (If you call it a spade here, call it a spade there.) Use DUNE Words!
+\item Expand abbreviations at first occurrence. Use DUNE Words (\url{https://dune.bnl.gov/docs/technical-proposal/dune-words.pdf})!
 \item Do not split infinitives. E.g., ``to choose carefully'' is good, but ``to carefully choose'' is bad.
 \end{itemize}
 

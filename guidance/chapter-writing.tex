@@ -4,7 +4,11 @@
 
 This chapter provides guidelines on sectioning, inserting figures, tables and references, and formatting numbers and units according to the \LaTeX{} configuration we have set up for LBNF/DUNE documents.
 
-Typically the start of your chapter will be an introduction to or overview of the chapter itself. Recommendation: write the chapter first, then go back and write the introduction to it. It's more likely to be coherent!
+Prepare your section(s) to the level of peer-reviewed publications for an international science journal.
+ 
+Target your introductory section(s) at both scientists from the broad HEP community and at knowledgeable, but not necessarily expert, members of national and international science policy organizations. Recommendation: write the chapter first, then go back and write the introduction to it. It's more likely to be coherent!
+
+Target the body of your section(s) at scientists and engineers from the broader HEP community.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -35,7 +39,9 @@ For example,
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{The common/glossary.tex file}
 
-This is all explained in Brett's document ``DUNE Words'' at \\
+``If you call it a spade here, call it a spade there.'' We want to enforce consistency in terminology. We do this via a glossary filled with ``DUNE Words.''  This means you should check the \verb|common/glossary.tex| for defined terms and use \verb|\dword{label}| for these terms in your text.
+
+ More information, including variations on \verb|\dword{label}|, is given in Section~\ref{sec:english-terminology}, and the details are explained in Brett's (short) document ``DUNE Words'' at \\
  \url{https://dune.bnl.gov/docs/technical-proposal/dune-words.pdf}.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -43,11 +49,14 @@ This is all explained in Brett's document ``DUNE Words'' at \\
 
 \textbf{All} numerical quantities expressed as literal number
 \textbf{must} have units unless they are inherently unitless.
+The international audience demands consistent use of metric units throughout.  Please follow this standard. If and only if  a detector component has been purchased or specified using a US/Imperial or another practical non-standard metric unit, then that unit should be listed as well in parentheses that follow (use of the ambiguous but common \si{kt} is allowed). For example:
+
+“Holes are drilled to a diameter of \SI{0.64}{cm} (\SI{0.25}{in})…..The \SI{0.64}{cm} diameter holes are cleaned with…”
+
 In order to enforce consistency the \texttt{siunitx} package is used
 and a collection of common units are defined in
 \texttt{common/units.tex}.
 
-E.g., using either \verb|\foot| or \verb|\ft| will yield ft. And \ktyr will yield \ktyr.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Bare Numbers}
@@ -332,24 +341,28 @@ file (as relative to the top-level directory).
 \section{Vendors and Trademarks}
 \label{sec:trademarks}
 
-Please only reference specific vendors when the particular vendor choice is significant.  When needed,
-list as follows:
+Please only reference specific vendors when the particular vendor choice is significant. 
+We should use a consistent scheme for these.
+ 
+Accompany the first mention of a commercial product with a footnote.  This will improve readability by allowing for quick identification of the commercial term in question. 
+Do not use the trademark symbol \texttrademark{} or registration mark \textregistered{} in the text, but use it in the footnote where appropriate.
+Most commercial product names should be capitalized.
+Use a short version of the commercial product name in the text itself.
+ 
+The structure of the footnote should be the following:
+Begin with a short descriptive phrase.  Then give the name of the company.  Add \texttrademark{} or  \textregistered{} according to what the company does on their web site. Then provide the company's top-level URL. If an electronic address does not exist, use a physical mailing address. Example:
 
-\begin{verbatim}
-The component contains one Widgetmaster 2000\texttrademark \cite{widgetmastermaker}...
-\end{verbatim}
-Which looks like:
+In your text, write ``The component installation requires one Widgetmaster \\
+2000\verb|\footnote{Widgetmastermaker\texttrademark{} Widgetmaster 2000 iron bending machine, | \\
+\verb|Widgetmastermaker\texttrademark{} Power Widgets http:widgetmastermaker.com.}| because ...''
 
-The component contains one Widgetmaster 2000\texttrademark \cite{widgetmastermaker}...
-
-
-Then in the bibliography file add:
-\begin{verbatim}
-@misc{widgetmastermaker,
-url = "{http://widgets-r-us.com/}",
-title = {Widgets R Us},
-}
-\end{verbatim}
+%Then in the bibliography file add:
+%\begin{verbatim}
+%@misc{widgetmastermaker,
+%url = "{http://widgets-r-us.com/}",
+%title = {Widgets R Us},
+%}
+%\end{verbatim}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Standard \LaTeX{} Sectioning, ``The DUNE Way''!}
