@@ -49,9 +49,11 @@ For example,
 
 \textbf{All} numerical quantities expressed as literal number
 \textbf{must} have units unless they are inherently unitless.
-The international audience demands consistent use of metric units throughout.  Please follow this standard. If and only if  a detector component has been purchased or specified using a US/Imperial or another practical non-standard metric unit, then that unit should be listed as well in parentheses that follow (use of the ambiguous but common \si{kt} is allowed). For example:
+The international audience demands consistent use of metric units throughout.  Please follow this standard (fully documented at \url{http://mirrors.sorengard.com/ctan/macros/latex/contrib/siunitx/siunitx.pdf}). 
 
-“Holes are drilled to a diameter of \SI{0.64}{cm} (\SI{0.25}{in})…..The \SI{0.64}{cm} diameter holes are cleaned with…”
+If and only if  a detector component has been purchased or specified using a US/Imperial or another practical non-standard metric unit, then that unit should be listed as well in parentheses that follow (use of the ambiguous but common \si{kt} is allowed). For example:
+
+``Holes are drilled to a diameter of \SI{0.64}{cm} (\SI{0.25}{in})... The \SI{0.64}{cm} diameter holes are cleaned with...''
 
 In order to enforce consistency the \texttt{siunitx} package is used
 and a collection of common units are defined in
@@ -68,17 +70,24 @@ To enforce consistent writing of numbers please encase them in the
 \item ``\num{100}'' is written as \verb|\num{100}|.
 \item ``\num{1000}'' is written as \verb|\num{1000}|.
 \item ``\num{123.456}'' is written as \verb|\num{123.456}|.
+\item ``\num{1+-2i}'' is written as \verb|\num{1+-2i}|.
+\item ``\num{.3e45}'' is written as \verb|\num{.3e45}|.
+\item ``\numlist{10;20;30}'' is written as\verb|\numlist{10;20;30}|.
 \end{itemize}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Bare Units}
 
-If you need to write a bare unit, one with not associated number, use
-\verb|\si{}| (lower case ``si'')
+If you need to write a bare unit, one with not associated number, use \verb|\si{}| (lower case ``si''). Some combinations are
+defined in the file \texttt{common/defs.tex}.
+
 
 \begin{itemize}
-\item ``\si{m}'' is written \verb|\si{m}|.
-\item ``\si{pc}'' is written \verb|\si{pc}|.
+\item ``\si{\meter}'' is written \verb|\si{\meter}|.
+\item ``\si{\square\volt\cubic\lumen\per\farad}'' is written \verb|\si{\square\volt\cubic\lumen\per\farad}|.
+\item  ``\si{\volt}'' is written \verb|\si{\volt}|.
+\item  ``\si{kg.m.s^{-1}}'' is written either as \verb|\si{kg.m.s^{-1}}| or  \verb|\si{\kilogram\metre\per\second}|.
+\item  ``\si{kg.m.s^{-1}}'' is written as \verb|\si[per-mode=symbol]{\kilogram\metre\per\second}|. 
 \end{itemize}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

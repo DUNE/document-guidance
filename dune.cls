@@ -14,7 +14,7 @@
 \def\titleextra{ }
 
 %added because defs.tex asks for it
-\newcommand\thevolumetitle{Technical Design Report}
+\newcommand\thevolumetitle{DUNE Documentation Guidance}
 \newcommand\thevolumesubtitle{}
 
 
@@ -130,9 +130,11 @@
     \boldmath
   }l}%
 
-\definecolor{lightblue}{RGB}{212,236,244}
+%\definecolor{lightblue}{RGB}{212,236,244} ---Anne is changing (212,236,244 is lightblue)
+\definecolor{dunetablecolor}{RGB}{125,174,211} % matches lighter blue color from Diana's scheme 
 \newcommand{\rowtitlestyle}{
-  \rowcolor{lightblue}
+%  \rowcolor{lightblue}
+  \rowcolor{dunetablecolor}
   \rowstyle{\bfseries \boldmath} 
 }
 
