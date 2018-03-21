@@ -276,3 +276,6 @@
 \RequirePackage{tocbibind}
 
 \usepackage{cprotect}
+\usepackage{eurosym}
+\usepackage{tfrupee}
+\usepackage{textcomp}

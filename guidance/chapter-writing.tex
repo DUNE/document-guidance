@@ -51,9 +51,9 @@ For example,
 \textbf{must} have units unless they are inherently unitless.
 The international audience demands consistent use of metric units throughout.  Please follow this standard (fully documented at \url{http://mirrors.sorengard.com/ctan/macros/latex/contrib/siunitx/siunitx.pdf}). 
 
-If and only if  a detector component has been purchased or specified using a US/Imperial or another practical non-standard metric unit, then that unit should be listed as well in parentheses that follow (use of the ambiguous but common \si{kt} is allowed). For example:
+If and only if  a detector component has been purchased or specified using a US/Imperial or another practical non-standard metric unit, then that unit should be listed as well in parentheses that follow (use of the ambiguous but common \si{\kt} is allowed). For example:
 
-``Holes are drilled to a diameter of \SI{0.64}{cm} (\SI{0.25}{in})... The \SI{0.64}{cm} diameter holes are cleaned with...''
+``Holes are drilled to a diameter of \SI{0.635}{cm} (\SI{0.25}{in})... The \SI{0.635}{cm} diameter holes are cleaned with...''
 
 In order to enforce consistency the \texttt{siunitx} package is used
 and a collection of common units are defined in
@@ -71,7 +71,8 @@ To enforce consistent writing of numbers please encase them in the
 \item ``\num{1000}'' is written as \verb|\num{1000}|.
 \item ``\num{123.456}'' is written as \verb|\num{123.456}|.
 \item ``\num{1+-2i}'' is written as \verb|\num{1+-2i}|.
-\item ``\num{.3e45}'' is written as \verb|\num{.3e45}|.
+\item ``\num{3e45}'' is written as \verb|\num{3e45}|.
+\item ``\num{.3e45}'' is written as \verb|\num{.3e45}| (keeps the decimal point before the 3).
 \item ``\numlist{10;20;30}'' is written as\verb|\numlist{10;20;30}|.
 \end{itemize}
 
@@ -83,11 +84,11 @@ defined in the file \texttt{common/defs.tex}.
 
 
 \begin{itemize}
-\item ``\si{\meter}'' is written \verb|\si{\meter}|.
+\item ``\si{\meter}'' is written \verb|\si{\meter}| (The European spelling \verb|\si{\metre}| also works).
 \item ``\si{\square\volt\cubic\lumen\per\farad}'' is written \verb|\si{\square\volt\cubic\lumen\per\farad}|.
 \item  ``\si{\volt}'' is written \verb|\si{\volt}|.
-\item  ``\si{kg.m.s^{-1}}'' is written either as \verb|\si{kg.m.s^{-1}}| or  \verb|\si{\kilogram\metre\per\second}|.
-\item  ``\si{kg.m.s^{-1}}'' is written as \verb|\si[per-mode=symbol]{\kilogram\metre\per\second}|. 
+\item  ``\si{kg.m.s^{-1}}'' is written either as \verb|\si{kg.m.s^{-1}}| or  \verb|\si{\kilogram\meter\per\second}|.
+\item  ``\si{kg.m.s^{-1}}'' is written as \verb|\si[per-mode=symbol]{\kilogram\meter\per\second}|. 
 \end{itemize}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -97,23 +98,13 @@ When a quantity has a unit, write both the numerical part and the unit
 using the \verb|\SI{}{}| command like:
 
 \begin{itemize}
-\item ``\SI{120}{GeV}'' is written as \verb|\SI{120}{GeV}|,
-\item ``\SI{4850}{foot}'' is written as \verb|\SI{4850}{foot}|,
+\item ``\SI{120}{\GeV}'' is written as \verb|\SI{120}{\GeV}|,
+\item ``\SI{4850}{\ft}'' is written as \verb|\SI{4850}{\ft}|,
 \end{itemize}
 
-These are defined in the file \texttt{common/defs.tex}.
+These are defined in the file \texttt{common/units.tex}.
 
-%Sometimes quantities are used as adjectives, e.g., in ``a 40 kiloton detector'' the ``40 kiloton'' is acting as an adjective. 
 No hyphens shall be used between numbers and units, even if the number-unit is used as an adjective, e.g., ``a 40 kiloton detector.''  (This is a change from past DUNE documents.) 
-%These require proper outfitting with a dash which is easy to forget.
-%To accommodate this, a set of ``adjective quantity'' macros are defined in \texttt{units/defs.tex}.
-%A generic \verb|\SIadj| is provided as are some commonly used ones.
-%For example:
-
-%\begin{itemize}
-%\item \cprotect\paragraph{``The \SIadj{4850}{ft} level'' is written as \verb|The \SIadj{4850}{ft} level|.}
-%\item ``A typical \GeVadj{2} event'' is written as \verb|A typical \GeVadj{2} event|.
-%\end{itemize}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Common Compound Units}
@@ -172,7 +163,7 @@ Remember, ``image-filename'' should match ``figure-label.'' This makes it MUCH e
 Example:
 \begin{dunefigure}[An aerial photograph of Fermilab]{fig:fermilab-aerial}{An aerial photograph of Fermilab
     showing Wilson Hall and surrounding accelerator rings (Photo: Fermilab
-    Visual Media Services)}
+    Visual Media Services).}
   \includegraphics[width=0.8\textwidth]{fermilab-aerial}
 \end{dunefigure}
 
@@ -180,11 +171,11 @@ Example:
 An example can be seen in Figure~\ref{fig:fermilab-aerial}, which is created
 with the \LaTeX{} shown in Figure~\ref{fig:aerial-latex}.  Notice that in the reference to the figures, we need to prepend \texttt{fig:} to the label. (See Section~\ref{sec:latex-intra-doc-ref}.)
 
-\begin{dunefigure}[\LaTeX{} source for figure inclusions.]{fig:aerial-latex}{\LaTeX{} source showing how to include Figure~\ref{fig:fermilab-aerial}}
+\begin{dunefigure}[\LaTeX{} source for figure inclusions.]{fig:aerial-latex}{\LaTeX{} source showing how to include Figure~\ref{fig:fermilab-aerial}.}
 \begin{verbatim}
     \begin{dunefigure}[An aerial photograph of Fermilab]{fig:fermilab-aerial}
        {An aerial photograph of Fermilab showing Wilson Hall and 
-       surrounding accelerator rings (Photo: Fermilab Visual Media Services)}
+       surrounding accelerator rings (Photo: Fermilab Visual Media Services).}
     \includegraphics[width=0.8\textwidth]{fermilab-aerial}
     \end{dunefigure}
 \end{verbatim}
@@ -340,6 +331,8 @@ JabRef (\url{http://www.jabref.org/}) is a cross-platform Java GUI that can be u
 \label{sec:latex-ref}
 
 Referencing citations is done like \verb|\cite{strunk}| which gives \cite{strunk}.
+To reference multiple citations at the same place, use \verb|\cite{strunk,ref2,ref3}| which gives  [1,2,3].
+
 (Compiling the bibliography entries into the document requires an extra step: run ``bibtex'' on
  guidance.tex, then run pdflatex on it again a couple of times. Otherwise you'll see [?] here 
  and no bibliography entry at the end.) 
@@ -351,10 +344,10 @@ file (as relative to the top-level directory).
 \label{sec:trademarks}
 
 Please only reference specific vendors when the particular vendor choice is significant. 
-We should use a consistent scheme for these.
+We should use a consistent scheme for these. 
  
 Accompany the first mention of a commercial product with a footnote.  This will improve readability by allowing for quick identification of the commercial term in question. 
-Do not use the trademark symbol \texttrademark{} or registration mark \textregistered{} in the text, but use it in the footnote where appropriate.
+Do not use the trademark symbol \texttrademark{} or registration mark \textregistered{} in the text, but use it in the footnote where appropriate. Add the footnote only on the first occurrence of the product name in a chapter.
 Most commercial product names should be capitalized.
 Use a short version of the commercial product name in the text itself.
  
@@ -364,14 +357,6 @@ Begin with a short descriptive phrase.  Then give the name of the company.  Add 
 In your text, write ``The component installation requires one Widgetmaster \\
 2000\verb|\footnote{Widgetmastermaker\texttrademark{} Widgetmaster 2000 iron bending machine, | \\
 \verb|Widgetmastermaker\texttrademark{} Power Widgets http:widgetmastermaker.com.}| because ...''
-
-%Then in the bibliography file add:
-%\begin{verbatim}
-%@misc{widgetmastermaker,
-%url = "{http://widgets-r-us.com/}",
-%title = {Widgets R Us},
-%}
-%\end{verbatim}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Standard \LaTeX{} Sectioning, ``The DUNE Way''!}
@@ -401,9 +386,8 @@ The following sectioning macros are available, ordered from bigger to smaller:
 \subsubsection{A Subsubsection}
 \end{verbatim}
 
-Two sub's is all you get.  
-Consult with the technical editors if you feel finer grained
-sectioning is required.
+We recommend that you stop the subsectioning at this point, but you can go down a couple of levels further.
+%Consult with the technical editors if you feel finer grained sectioning is required.
 Starting from \verb|\subsection|, this produces the following:
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
