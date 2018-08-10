@@ -5,6 +5,7 @@ tools in their usual manner.  In addition, support for some specific
 tools and build methods is provided.
 
 The control.tex file controls whether a volume gets compiled as "draft" with edit markings (fixmes and line numbers) or print ready, i.e., a clean compilation without those markings. Its content is either:
+
 -For draft, either empty or: ~%\def\isfinal{1}~
 -For print: ~\def\isfinal{1}~
 
