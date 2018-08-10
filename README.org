@@ -89,7 +89,8 @@ If you installed the GitHub for Mac (or for other platforms as available), you c
   # Pull down the latest commits (from other contributors) just before you start:
   $ git pull
   # Compile the document before you begin your editing session, to verify that it works.
-  # Edit your files, frequently saving your changes and verifying that the document compiles. When you are done:
+  # Edit your files, frequently saving your changes and verifying that the document compiles. 
+  # When you are done:
   # If any of your files are new (often new image files), add it/them before committing, e.g.,:
   $ git add path/to/the-new-file.tex
   $ git add path/to/the-new-picture(.pdf/.jpg/.png)

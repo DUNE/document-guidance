@@ -5,13 +5,17 @@ tools in their usual manner.  In addition, support for some specific
 tools and build methods is provided.
 
 The control.tex file controls whether a volume gets compiled as "draft" with edit markings (fixmes and line numbers) or print ready, i.e., a clean compilation without those markings. Its content is either:
+#+BEGIN_EXAMPLE
 # For draft, either empty or %\def\isfinal{1}
 # For print \def\isfinal{1}
+#+END_EXAMPLE
 
 Each top-level TeX file interprets the control file via the lines:
+#+BEGIN_EXAMPLE
 # \input{control}
 # \ifdefined\isfinal\documentclass[final]{dune}\else\documentclass{dune}\fi
- 
+ #+END_EXAMPLE
+
 The control.tex file can be adjusted manually. Or it can be set automatically by using the compileit script.
 
 ** The ~compileit~ script
