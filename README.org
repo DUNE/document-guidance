@@ -118,13 +118,14 @@ If there are conflicts, Git will alert you. This will likely involve a =git merg
 Git will pull in the content from other commits that
 occurred since you did the pull on which your most recent commit was based, and
 these will appear as changes or added files. Add them to the list of things to commit before you commit your merge.  Don't delete them.
-(The .gitignore file is set up to not bug you about extra files, so if
-you see changed or added files, you can be pretty sure they're good stuff.)
+(The =.gitignore= file is set up to ignore unnecessary files, so if
+you see changed or added files, they should probably be there.)
 
 Refer to [[https://git-scm.com/docs/git-merge][git merge documentation]] for more information. Resolve the conflicts in the affected file(s); this can be tedious. 
 Edit, save, add files (adding is shown in the general procedure above).
 Make sure the entire document compiles, then commit and push:
 #+BEGIN_EXAMPLE
+  $ git add path/to/the-new-file.tex (if needed)
   $ git commit -a -m "Brief explanation of what you updated"
   $ git push
 #+END_EXAMPLE
@@ -152,7 +153,7 @@ some reason you don't want to use Git we can work around that (talk to Anne), ho
 
 The [[https://desktop.github.com/][Github Desktop]] application can be used to interface the DUNE Github repository, saving some command-line headaches.
 
-You might find the real-time preview feature using the [[https://www.overleaf.com/benefits][Overleaf]] a useful editing environment.
+If you want a real-time preview feature, you may find [[https://www.overleaf.com/benefits][Overleaf]] a useful editing environment. Anne can set one up for your chapter.
 
 If you don't want to edit in LaTeX, please talk to Anne.
 
