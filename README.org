@@ -113,19 +113,21 @@ If =git pull= fails, it's likely because you have unpushed changes (Always commi
   $ git stash
   $ git pull
   $ git stash pop
-  # Resolve the conflicts in the affected file(s); this can be tedious.
-  # (There's a git merge in here somewhere)
-  # Edit, save, add files (adding is shown in the general procedure above).
-  # Make sure the entire document compiles, then commit and push:
-  $ git commit -a -m "Brief explanation of what you updated"
-  $ git push
 #+END_EXAMPLE
-
-A "git merge" will pull in the content from other commits that
+If there are conflicts, Git will alert you. This will likely involve a =git merge= step.
+Git will pull in the content from other commits that
 occurred since you did the pull on which your most recent commit was based, and
 these will appear as changes or added files. Add them to the list of things to commit before you commit your merge.  Don't delete them.
 (The .gitignore file is set up to not bug you about extra files, so if
 you see changed or added files, you can be pretty sure they're good stuff.)
+
+Refer to [[https://git-scm.com/docs/git-merge][git merge documentation]] for more information. Resolve the conflicts in the affected file(s); this can be tedious. 
+Edit, save, add files (adding is shown in the general procedure above).
+Make sure the entire document compiles, then commit and push:
+#+BEGIN_EXAMPLE
+  $ git commit -a -m "Brief explanation of what you updated"
+  $ git push
+#+END_EXAMPLE
 
 If all else fails, save your changed files somewhere, blow away the repository and reclone it. Then remake your edits.
 
