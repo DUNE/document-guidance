@@ -220,13 +220,13 @@ Both of these take the place of the usual \texttt{hline}.
   Row 3 & Third \\ 
 \end{dunetable}
 
-\noindent Table~\ref{tab:example} is thus made like (arguments can span lines):
+\noindent Table~\ref{tab:table-label} is thus made like (arguments can span lines):
 
 \begin{verbatim}
 \begin{dunetable}
 [The LoT caption]
 {cc}
-{tab:example}
+{tab:table-label}
 {This is a sample table.}
   Rows & Counts \\ \toprowrule
   Row 1 & First \\ \colhline
@@ -234,8 +234,10 @@ Both of these take the place of the usual \texttt{hline}.
   Row 3 & Third \\ 
 \end{dunetable}
 
-See Table~\ref{tab:example}...
+See Table~\ref{tab:table-label}...
 \end{verbatim}
+
+The ``cc'' means: ``two columns, both centered.'' You can substitute ``l'' or ``r'' to left- or right-justify a column's contents. Use \verb|p{'width'}| (e.g.,\verb|p{0.2\textwidth}| or \verb|p{5cm}| if you need a column's contents to wrap to multiple lines.
 
 Table~\ref{tab:pdecay} shows a more complex example.
 See the source for how it is written.
