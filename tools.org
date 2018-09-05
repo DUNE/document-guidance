@@ -1,24 +1,11 @@
 * Build Tools
 
 
-The documents in this repository can be built with your favorite LaTeX
-tools in their usual manner.  In addition, support for some specific
-tools and build methods is provided.
-
-(Note: for the DUNE TDR, we will remove the control.tex file; we will document the solution here once we decide on it!)
-
-The control.tex file controls whether a volume gets compiled as "draft" with edit markings (fixmes and line numbers) or print ready, i.e., a clean compilation without those markings. Its content is either:
-
--For draft, either empty or: ~%\def\isfinal{1}~
--For print: ~\def\isfinal{1}~
-
-Each top-level TeX file interprets the control file via the lines:
-#+BEGIN_EXAMPLE
-\input{control}
-\ifdefined\isfinal\documentclass[final]{dune}\else\documentclass{dune}\fi
- #+END_EXAMPLE
-
-The control.tex file can be adjusted manually. Or it can be set automatically by using the compileit script.
+The DUNE LaTeX documents can be built with your favorite LaTeX tools
+in their usual manner.  Support for some optional tools are provided
+which may simplify the process.  See also the ~README~ file in the
+repository of the particular document.  For help on using ~git~ see
+[[./git.org]].
 
 
 ** Waf build
@@ -30,17 +17,14 @@ The commands to run are as below.
 For specifics on the waf output produced for the DUNE TDR, see [[https://github.com/DUNE/DUNE-TDR#building-the-documents][Building the documents]] on the dune-tdr repository page.
 
 #+BEGIN_EXAMPLE
-  ./waf configure [--prefix=/path/to/install] [--prompt-level=1]  (1)
-  ./waf -p                                                          (2)
-  ./waf install                                                   (3)
+  ./waf configure [--prefix=/path/to/install] (1)
+  ./waf -p                                    (2)
+  ./waf install                               (3)
 #+END_EXAMPLE
 
 1) The one-time configuration of the build is required.  Two options
-   may be given.  A "prefix" location specifies an absolute or
-   relative path to where you might want the resulting PDFs to be
-   "installed".  A "prompt level" of 1 means that you will see all of
-   LaTeX's output and be able to respond to any error prompts while 0
-   means a quieter, less informative output.
+   may be given.  A ~--prefix~ to give a where you might want the
+   resulting PDFs to be "installed".
 
 2) Actually build the documents.  This will run tasks in parallel on
    as many cores as your computer provides.  Results will land in the
@@ -49,49 +33,76 @@ For specifics on the waf output produced for the DUNE TDR, see [[https://github.
 
 3) Optionally, "install" the results to the prefix specified in step (1).
 
-If you are not interested in building the entire volume set you may
-narrow what ~waf~ builds.  For example to build just the SP DAQ
-chapter PDF:
+*** Chapter files
+
+The Waf build provides extra functionality to generate per-chapter TeX files and build them into PDFs.  This is useful to hand out a focused part of an overall volume for review and can assist authoring as it allows one to more quickly rebuild the smaller chunk of the document you are actually working on.
+
+To generate and build all chapter PDFs: 
 
 #+BEGIN_EXAMPLE
-  ./waf --targets=far-detector-single-phase-chapter-fdsp-daq.pdf
+  ./waf --chapters
 #+END_EXAMPLE
 
-While it should not be required to modify them, the ~chapters.tex~ and
-~chapters.sh~ files are used in this build.
+Once build you can rebuild just a particular chapter by narrowing the ~waf~ target:
+
+#+BEGIN_EXAMPLE
+  ./waf --targets=guidance-chapter-graphics.pdf
+#+END_EXAMPLE
+
+You can also exploit the chapter TeX file with automated tooling like ~latexmk~ (see below for more on this tool).
+
+#+BEGIN_EXAMPLE
+  latexmk -pdf -pvc build/guidance-chapter-graphics.tex
+#+END_EXAMPLE
+
+You can now edit the actual chapter TeX (*not* the above file but [[./guidance/chapter-graphics.tex]] in this case) and each time you save the file ~latexmk~ will automatically rebuild *just* that chapter.
+
+The main chapter TeX file is generated using the [[./util/chapters.sh][script]] and [[./util/chapters.tex][template
+file]] which are under ~util/~.  Normally these are not user-serviceable.
+
 
 *** Debugging problems with Waf
 
 By default waf runs in a parallel mode which causes a lot of LaTeX
-output to flash by on your terminal.  When there is an error, Waf will
-terminate with a Python stack trace.  You must then scroll the
-terminal to try to find the detail errors from LaTeX itself.  This can
-be rather tedious.
-
-More easily, when Waf "crashes" you can rerun it while instructing it
-to run LaTeX in a serial fashion and also to turn on the usual LaTeX
-interactivity.  This can be accomplished with:
+output to flash by on your terminal.  When things work adding ~-p~ can
+help quiet the output.  But, when there is an error in your LaTeX you
+usually want more information, you want it serially and you may need
+to enter the LaTeX compiler's interactive mode.  This can be
+accomplished with:
 
 #+BEGIN_EXAMPLE
-  $ ./waf -j1 --prompt-level=1
+  $ ./waf -j1 --debug
 #+END_EXAMPLE
 
-This can help see 
 
 ** The ~latexmk~ tool
 
-The ~latexmk~ tool is very handy to use while editing as it can watch
-the TeX source, recompile each time a file is saved and refresh a PDF
-viewer.  To use it effectively requires some special configuration
-which is in the ~.latexmkrc~ file in this repository.  Simply running
-it from the source directory should work.
+The ~latexmk~ tool, mentioned already above, is very handy to use
+while editing as it can watch the TeX source, recompile each time a
+file is saved and refresh a PDF viewer.  To use it effectively
+requires some special configuration which is in the ~.latexmkrc~ file
+in this repository.  Simply running it from the source directory
+should work.
 
 #+BEGIN_EXAMPLE
   # one shot:
-  latexmk executive-summary
-  ls -l latexmk-out/*.pdf
-  # or, have it watch the TeX files, rebuild and refresh your PDF viewer 
-  latexmk -pvc executive-summary
+  latexmk -pdf guidance.tex
+#+END_EXAMPLE
+
+Depending on if you have configured ~latexmk~ this probably sprays
+files into your current working directory.  You can clean up with:
+
+#+BEGIN_EXAMPLE
+  latexmk -c guidance.tex
+  # or:
+  latexmk -C guidance.tex
+#+END_EXAMPLE
+
+The former leaves the PDF and the latter also deletes it.  To make
+~latexmk~ watch for file saving and automatically rebuild add ~-pvc~
+
+#+BEGIN_EXAMPLE
+  latexmk -pdf -pvc guidance.tex
 #+END_EXAMPLE
 
 Depending on your local environment (eg, which PDF viewer you prefer)
@@ -100,42 +111,17 @@ commented out suggestions.  If these are useful to you, do *not*
 uncomment them in this file but rather copy them to your personal
 =~/.latexmkrc= file.
 
-The per-chapter TeX documents produced by the Waf build above can also
-be leveraged here to create an editing environment with fast builds.
-First build the desired PDF with ~waf~ and then use its ~.tex~ file
-with ~latexmk~.
+See above for how to exploit the Waf build to operate at a per-chapter level for even faster automatic rebuilding.
+
+** LaTeX At Fermilab
+If you need a reliable LaTeX installation, Tom Junk has installed texlive 2017 in his area on the dunegpvm's at Fermilab. Feel free to use it! Just login and run his setup file:
 
 #+BEGIN_EXAMPLE
-  $ ./waf --targets=far-detector-single-phase-chapter-fdsp-daq.pdf
-  latexmk -pvc build/far-detector-single-phase-chapter-fdsp-daq.tex
+  $ ssh dunesl7gpvm01.fnal.gov  
+  #for bash and sh:  
+  $ source /grid/fermiapp/products/dune/texlive2017/setup.sh
+  #for tcsh and csh: 
+  $ source /grid/fermiapp/products/dune/texlive2017/setup.csh
+  $ mkdir /my/work/area
 #+END_EXAMPLE
-
-You may now edit the TeX files used by this chapter and each save
-should rerun ~pdflatex~ and refresh your PDF viewer.
-
-** The ~compileit~ script
-
-This may not be present in every repository; in particular it is not in dune-tdr.
-
-The ~compileit~ script simply calls the standard low-level TeX tools,
-builds the documents in "draft" or "print" mode (removes line numbers
-and hides fixmes) and provides some clean up of TeX's intermediate
-files.  The three modes of operation are as in this example (shown for the executive summary main tex file):
-
-#+BEGIN_EXAMPLE
-  # build a document in "draft" mode.
-  ./compileit executive-summary.tex [draft]
-  # build a document in "print" mode
-  ./compileit executive-summary.tex print
-  # Clean out all the generated files except the PDF
-  ./compileit executive-summary.tex clean
-  Not removing:
-  executive-summary.pdf
-#+END_EXAMPLE
-
-Likewise, the ~compileit~ script can be run on the other top-level
-volume TeX files.  Note that intermediate files are created directly
-in the top level source directory.  Take care not to ~git add~ them.
-
-The "clean" argument gets rid of all the intermediate files, keeping the .tex and the .pdf files only.
 

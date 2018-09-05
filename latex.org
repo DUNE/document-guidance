@@ -1,0 +1,68 @@
+#+title: DUNE LaTeX
+
+This document collects nuts and bolts information on how DUNE uses LaTeX.
+
+* General layout
+
+Here gives a tour of the general layout of files and directories in
+the repo or in your working directory.
+
+- [[./dune.cls]] holds most of the setup for large DUNE documents.  It's
+  not much more than using a bunch of LaTeX packages.
+
+- [[./common/]] preamble/init/final TeX bits repeated in volumes and some
+  with some important files that authors should be aware of:
+  - defs.tex :: macros that should be used instead of "hard coding" something.
+  - units.tex :: proper way to "spell" number with and without units.
+  - citedb.bib :: (or similar name ~.bib~) the BibTeX bibliography database
+  - glossary.tex :: a glossary database
+
+- ~figures/~ or ~graphics/~ locates graphics files (PDF, JPEG, PNG)
+
+- ~util/~ holds tools that help build
+
+- ~generated/~ in the case that files are generated and committed,
+  they go here.  Never hand-edit these files as changes will be lost
+  next time they are regenerated.  Instead modify whatever generates
+  them.
+
+- ~shared/~ some documents have TeX which must be identical across
+  volumes or other units.  That goes here.
+
+- ~vol*/~ per volume tex directory each with an accompanying
+  ~vol*.tex~ file.
+
+- ~build/~ produced by Waf.  Do *not* commit and be sure to add it to
+  the [[./gitignore]] file.
+
+- ~install/~ possibly created by ~waf --prefix=install~.  Do *not*
+  commit and be sure to add it to the [[./gitignore]] file.
+
+- ~latexmk*/~ possibly created by ~latexmk~ for its output.
+
+Not all these exist in all document repos or working areas.
+
+* LaTeX Features
+
+** Final vs Draft
+
+In "draft" mode the PDF will have line numbers, "fixmes" and other
+features that may not be pretty but help in editing.  These are all
+turned off in "final" build mode.
+
+Normally, this would be handled by giving an option ~final~ to the
+class but instead we hard-code this switch in ~dune.cls~ as we often
+have many main volume and chapter TeX files that we want to switch
+between final and draft in a sweeping manner.  To switch, find at the top of [[./dune.cls]]:
+
+#+BEGIN_SRC latex
+  \newif\iffinal
+  \finaltrue
+#+END_SRC
+or
+#+BEGIN_SRC latex
+  \newif\iffinal
+  \finalfalse
+#+END_SRC
+
+

@@ -1,0 +1,137 @@
+#+title: Help on using Git
+
+* This page
+
+Here provides some guidance on how to use get and contribute to the
+documents with ~git~.  These instructions are valid for accessing all
+DUNE documents managed in GitHub, e.g., [[https://github.com/DUNE/DUNE-TDR][The DUNE TDR]]; just use the
+appropriate repository and file names.
+Guidance on building the documents is [[./tools.org][also available]] and see the ~README~ file of each document repository.
+
+The general process you will follow has these steps:
+- Set yourself up to interact with GitHub and run LaTeX on your local machine.
+- Clone the repository onto your local system.
+- Before each editing session, pull new changes from the GitHub repository to your local system.
+- Edit files.
+- Test compilation.
+- (If some time has passed...) Pull new changes in again without overwriting your edits, and ensure that the document still compiles.
+- Send your changes up to the repository.
+
+
+* Get set up to use GitHub and ~git~
+
+-  [[https://help.github.com/articles/signing-up-for-a-new-github-account][Get a github account]] and send your username to Brett (see Contacts at bottom of page).
+-  See below or [[https://help.github.com/categories/authenticating-to-github/][Click here if you experience authentication problems]].
+-  [[https://github.com/DUNE/document-guidance/blob/master/install-git-on-mac.org][Install Git on Mac]], requires Mac OS X, [[https://appleid.apple.com][Apple ID]], [[https://developer.apple.com/xcode/downloads][XCode]], and [[https://developer.apple.com/download/more/][Command Line Tools]].
+-  [[https://desktop.github.com/][Github Desktop]] Manage your [[https://guides.github.com/introduction/flow/][GitHub flow]] using this dandy interface. 
+
+
+* Clone the repository and build the document
+This page uses the =document-guidance= repository and files in the sample commands. Note that you don't have permissions to push anything to this repository. When working on a "real" document, substitute the actual document repository name for =document-guidance= (and the actual "main" file name for =guidance=) in the commands shown on this page.
+
+You can clone using terminal commands or via the "Clone or Download" button on the repository web page (see next section). To use terminal commands, type this sequence to clone the repository into the area you want to use, e.g., =my/work/area=:
+
+#+BEGIN_EXAMPLE
+  $ cd /my/work/area
+  $ git clone https://github.com/DUNE/document-guidance.git
+  $ cd document-guidance  
+#+END_EXAMPLE
+ 
+Do a test build of the appropriate "main" LaTeX file. In a typical DUNE repository, it will be something like =volume-(name).tex=. In this example, it is =guidance.tex=:
+#+BEGIN_EXAMPLE
+  $ pdflatex guidance
+#+END_EXAMPLE
+
+See the instructions on [[./tools.org][Build Tools]] for full guidance.
+ 
+* Clone using "Clone or Download" button 
+
+You can clone using terminal commands or via the "Clone or Download" button on the repository web page. The "https" URL can be used for anonymous cloning and then later can be pushed to by supplying your GitHub password.  The SSH URL requires uploading a public key to GitHub but then no password need be given. More information is at [[https://help.github.com/articles/which-remote-url-should-i-use/][Which remote URL should I use?]].
+
+If you plan to use SSH, make sure you're authenticated: 
+
+- Go to [[https://github.com/settings/keys][Settings/Keys]]
+- Click on big green "New SSH Key"
+- Paste your public SSH key
+- If problems [[https://help.github.com/categories/authenticating-to-github/][click here for information to help you]] or, just use HTTPS and password authentication.
+
+
+* Make edits and push your edits to the repository: General Procedure
+
+This procedure assumes that you have not made any edits, either at all, or since your most recent push to the GitHub repository. If this is not true, skip to "Avoiding and resolving conflicts" below, then come back here for the general procedure.
+
+If you installed the GitHub for Mac (or for other platforms as available), you can use the GUI provided to pull, commit and push, if you prefer.  If you use a terminal command line, here is the procedure.
+
+
+#+BEGIN_EXAMPLE
+  $ cd /my/work/area/document-guidance
+  # Pull down the latest commits (from other contributors) just before you start:
+  $ git pull
+  # Compile the document before you begin your editing session, to verify that it works.
+  # Edit your files, frequently saving your changes and verifying that the document compiles. 
+  # When you are done:
+  # If any of your files are new (often new image files), add it/them before committing, e.g.,:
+  $ git add path/to/the-new-file.tex
+  $ git add path/to/the-new-picture(.pdf/.jpg/.png)
+  ...
+  # When you're done, compile again, then commit and push:
+  $ git commit -a -m "Brief explanation of what you updated"
+  $ git push
+  # If this fails, see below.
+#+END_EXAMPLE
+
+* Avoiding and resolving conflicts in git
+
+First, if you know that someone else may want to edit the same files, it's a courtesy to let them know that you plan to edit them, and ping them again once you've pushed your updates. It's easier than resolving conflicts later.
+
+If any commits have been pushed by others since the last time you did a =git pull= (or since your initial =git clone= if you haven't yet pulled) then git will not allow you to =push= until you have done a fresh =git pull=. 
+
+If =git pull= fails, it's likely because you have unpushed changes (Always commit and push at the end of your editing session to avoid this!). In this case, you will need to "stash" your changes, "pull" again to get the latest commits, then "unstash" (or "pop" your changes back in) and resolve conflicts in the editor. Here is the procedure:
+
+#+BEGIN_EXAMPLE
+  $ git stash
+  $ git pull
+  $ git stash pop
+#+END_EXAMPLE
+If there are conflicts, Git will alert you. This will likely involve a =git merge= step.
+Git will pull in the content from other commits that
+occurred since you did the pull on which your most recent commit was based, and
+these will appear as changes or added files. Add them to the list of things to commit before you commit your merge.  Don't delete them.
+(The =.gitignore= file is set up to ignore unnecessary files, so if
+you see changed or added files, they should probably be there.)
+
+Refer to [[https://git-scm.com/docs/git-merge][git merge documentation]] for more information. Resolve the conflicts in the affected file(s); this can be tedious. 
+Edit, save, add files (adding is shown in the general procedure above).
+Make sure the entire document compiles, then commit and push:
+#+BEGIN_EXAMPLE
+  $ git add path/to/the-new-file.tex (if needed)
+  $ git commit -a -m "Brief explanation of what you updated"
+  $ git push
+#+END_EXAMPLE
+
+If all else fails, save your changed files somewhere, blow away the repository and reclone it. Then remake your edits.
+
+* Best practices for interacting with GitHub
+Please follow these four important guidelines that will help avoid headaches:
+
+1. *Always do a pull immediately before you begin working on a file just in case someone else modified it recently.*
+2. *Compile frequently as you compose and edit; it will be easier to resolve any compilation problems.*
+3. *Make sure the document compiles before you commit it and push it to the repository. Ask Anne (aheavey@fnal.gov) if you need help.*
+4. *Commit and push immediately after you finish your edits so that others have the best chance of picking up your changes before they edit.  (It is much easier to avoid than to resolve conflicts.)*
+
+Extra best practices with eventual upload to the arXiv in mind:
+5. Keep your image sizes as small as possible (and under 1MB in all cases). In particular, resize photos to a maximum of 1000 px wide at 72 px/in.
+6. If you replace a figure, delete the old one (it will remain in earlier versions of the repository). The arXiv chokes on unused files.
+
+   
+* Git-phobic and/or LaTeX-phobic
+
+Git works on all major computing platforms and many minor ones and is
+successfully used by all manner of people.  If for
+some reason you don't want to use Git we can work around that (talk to Anne), however you need to always start by downloading the latest files from GitHub.
+
+The [[https://desktop.github.com/][Github Desktop]] application can be used to interface the DUNE Github repository, saving some command-line headaches.
+
+If you want a real-time preview feature, you may find [[https://www.overleaf.com/benefits][Overleaf]] a useful editing environment. Anne can set one up for your chapter.
+
+If you don't want to edit in LaTeX, please talk to Anne.
