@@ -1,8 +1,11 @@
 * Build Tools
 
+
 The documents in this repository can be built with your favorite LaTeX
 tools in their usual manner.  In addition, support for some specific
 tools and build methods is provided.
+
+(Note: for the DUNE TDR, we will remove the control.tex file; we will document the solution here once we decide on it!)
 
 The control.tex file controls whether a volume gets compiled as "draft" with edit markings (fixmes and line numbers) or print ready, i.e., a clean compilation without those markings. Its content is either:
 
@@ -17,35 +20,14 @@ Each top-level TeX file interprets the control file via the lines:
 
 The control.tex file can be adjusted manually. Or it can be set automatically by using the compileit script.
 
-** The ~compileit~ script
-
-The ~compileit~ script simply calls the standard low-level TeX tools,
-builds the documents in "draft" or "print" mode (removes line numbers
-and hides fixmes) and provides some clean up of TeX's intermediate
-files.  The three modes of operation are as in this example (shown for the executive summary main tex file):
-
-#+BEGIN_EXAMPLE
-  # build a document in "draft" mode.
-  ./compileit executive-summary.tex [draft]
-  # build a document in "print" mode
-  ./compileit executive-summary.tex print
-  # Clean out all the generated files except the PDF
-  ./compileit executive-summary.tex clean
-  Not removing:
-  executive-summary.pdf
-#+END_EXAMPLE
-
-Likewise, the ~compileit~ script can be run on the other top-level
-volume TeX files.  Note that intermediate files are created directly
-in the top level source directory.  Take care not to ~git add~ them.
-
-The "clean" argument gets rid of all the intermediate files, keeping the .tex and the .pdf files only.
 
 ** Waf build
 
 A [[https://waf.io/][Waf]] build system is provided which will build all the volume PDFs as
 well as generate per-chapter main TeX files and build them to PDF.
 The commands to run are as below.
+
+For specifics on the waf output produced for the DUNE TDR, see [[https://github.com/DUNE/DUNE-TDR#building-the-documents][Building the documents]] on the dune-tdr repository page.
 
 #+BEGIN_EXAMPLE
   ./waf configure [--prefix=/path/to/install] [--prompt-level=1]  (1)
@@ -130,3 +112,30 @@ with ~latexmk~.
 
 You may now edit the TeX files used by this chapter and each save
 should rerun ~pdflatex~ and refresh your PDF viewer.
+
+** The ~compileit~ script
+
+This may not be present in every repository; in particular it is not in dune-tdr.
+
+The ~compileit~ script simply calls the standard low-level TeX tools,
+builds the documents in "draft" or "print" mode (removes line numbers
+and hides fixmes) and provides some clean up of TeX's intermediate
+files.  The three modes of operation are as in this example (shown for the executive summary main tex file):
+
+#+BEGIN_EXAMPLE
+  # build a document in "draft" mode.
+  ./compileit executive-summary.tex [draft]
+  # build a document in "print" mode
+  ./compileit executive-summary.tex print
+  # Clean out all the generated files except the PDF
+  ./compileit executive-summary.tex clean
+  Not removing:
+  executive-summary.pdf
+#+END_EXAMPLE
+
+Likewise, the ~compileit~ script can be run on the other top-level
+volume TeX files.  Note that intermediate files are created directly
+in the top level source directory.  Take care not to ~git add~ them.
+
+The "clean" argument gets rid of all the intermediate files, keeping the .tex and the .pdf files only.
+
