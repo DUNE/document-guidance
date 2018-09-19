@@ -1,17 +1,16 @@
 #+title: DUNE LaTeX
 
-This document collects nuts and bolts information on how DUNE uses LaTeX.
+This document collects nuts and bolts information on the LaTeX conventions used in DUNE design reports. More detail is given in Chapter 6 of the guidance document.
 
 * General layout
 
-Here gives a tour of the general layout of files and directories in
+Here is a tour of the general layout of files and directories in
 the repo or in your working directory.
 
 - [[./dune.cls]] holds most of the setup for large DUNE documents.  It's
   not much more than using a bunch of LaTeX packages.
 
-- [[./common/]] preamble/init/final TeX bits repeated in volumes and some
-  with some important files that authors should be aware of:
+- [[./common/]] The files preamble, init, final include LaTeX bits required by all the volumes. Other important files that authors should be aware of are:
   - defs.tex :: macros that should be used instead of "hard coding" something.
   - units.tex :: proper way to "spell" number with and without units.
   - citedb.bib :: (or similar name ~.bib~) the BibTeX bibliography database
@@ -29,7 +28,7 @@ the repo or in your working directory.
 - ~shared/~ some documents have TeX which must be identical across
   volumes or other units.  That goes here.
 
-- ~vol*/~ per volume tex directory each with an accompanying
+- ~vol*/~ per volume directory each with an accompanying
   ~vol*.tex~ file.
 
 - ~build/~ produced by Waf.  Do *not* commit and be sure to add it to

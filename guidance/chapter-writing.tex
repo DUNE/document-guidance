@@ -44,8 +44,11 @@ For example,
  More information, including variations on \verb|\dword{label}|, is given in Section~\ref{sec:english-terminology}, and the details are explained in Brett's (short) document ``DUNE Words'' at \\
  \url{https://dune.bnl.gov/docs/technical-proposal/dune-words.pdf}.
 
+
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Numbers and Units}
+\label{sec:num-units}
 
 \textbf{All} numerical quantities expressed as literal number
 \textbf{must} have units unless they are inherently unitless.
@@ -117,6 +120,24 @@ especially when we require nice formatting. Again, see \texttt{common/units.tex}
 \item ``exposure in \ktmwyr{}s'' is written as \verb|exposure in \ktmwyr{}s|.
 \end{itemize}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Requirements Tables}
+\label{sec:req-tables}
+
+(This section needs further development once the editorial team has finalized the plan for requirements.)
+
+Enumeration of requirements is an important addition to the TDR, and a systematic way of doing this is under development.  
+
+Requirement ``owners'' are responsible for committing a CSV file to the directory (TBD) that contains the exported data from a spreadsheet that lists their requirements in the following format (TBD). 
+
+The CSV filename must follow this format (TBD).
+
+For each CSV file uploaded to GitHub, the system will generate read-only LaTeX code for the requirement table.  The LaTeX file generated from a given CSV will have the name (TBD).
+
+To include the requirements table  in your chapter file, use the syntax:
+\begin{verbatim}
+\input{TBD}
+\end{verbatim}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Including ``dunefigures''}
