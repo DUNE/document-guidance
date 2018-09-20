@@ -7,6 +7,28 @@ which may simplify the process.  See also the ~README~ file in the
 repository of the particular document.  For help on using ~git~ see
 [[./git.org]].
 
+** Final vs Draft
+
+In "draft" mode the PDF will have line numbers, "fixmes" and other
+features that may not be pretty but help in editing.  These are all
+turned off in "final" build mode.
+
+Normally, this would be handled by giving an option ~final~ to the
+class but instead we hard-code this switch in ~dune.cls~ as we often
+have many main volume and chapter TeX files that we want to switch
+between final and draft in a sweeping manner.  To switch, find at the top of [[./dune.cls]] (lines 11, 12):
+
+#+BEGIN_SRC latex
+  \newif\iffinal
+  \finaltrue
+#+END_SRC
+or
+#+BEGIN_SRC latex
+  \newif\iffinal
+  \finalfalse
+#+END_SRC
+
+
 
 ** Waf build
 
@@ -113,15 +135,4 @@ uncomment them in this file but rather copy them to your personal
 
 See above for how to exploit the Waf build to operate at a per-chapter level for even faster automatic rebuilding.
 
-** LaTeX At Fermilab
-If you need a reliable LaTeX installation, Tom Junk has installed texlive 2017 in his area on the dunegpvm's at Fermilab. Feel free to use it! Just login and run his setup file:
-
-#+BEGIN_EXAMPLE
-  $ ssh dunesl7gpvm01.fnal.gov  
-  #for bash and sh:  
-  $ source /grid/fermiapp/products/dune/texlive2017/setup.sh
-  #for tcsh and csh: 
-  $ source /grid/fermiapp/products/dune/texlive2017/setup.csh
-  $ mkdir /my/work/area
-#+END_EXAMPLE
 

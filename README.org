@@ -13,11 +13,24 @@ Please look at the LaTeX files under the "guidance" directory to see how to make
 
 See [[https://wiki.dunescience.org/wiki/Technical_Design_Report][the wiki pages for the TDR]] for information on coordination and management for the DUNE TDR. 
 
+* Install LaTeX
+
+If you need a reliable LaTeX installation, Tom Junk has installed texlive 2017 in his area on the dunegpvm's at Fermilab. Feel free to use it! Just login and run his setup file:
+
+#+BEGIN_EXAMPLE
+  $ ssh dunesl7gpvm01.fnal.gov  
+  #for bash and sh:  
+  $ source /grid/fermiapp/products/dune/texlive2017/setup.sh
+  #for tcsh and csh: 
+  $ source /grid/fermiapp/products/dune/texlive2017/setup.csh
+  $ mkdir /my/work/area
+#+END_EXAMPLE
+
 * Need Help?
 
-- [[./git.org][Help on using ~git~ and GitHub]]
-- [[./tools.org][Help on building the documents]]
-- [[./latex.org][Help on DUNE LaTeX]]
+- [[./git.org][Using ~git~ and GitHub (and Best Practices)]]
+- [[./latex.org][Repository structure and files]]
+- [[./tools.org][Building the documents]]
 
 For more help:
 

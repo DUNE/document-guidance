@@ -17,6 +17,18 @@ The general process you will follow has these steps:
 - (If some time has passed...) Pull new changes in again without overwriting your edits, and ensure that the document still compiles.
 - Send your changes up to the repository.
 
+* Best practices for interacting with GitHub
+Please follow these four important guidelines that will help avoid headaches:
+
+1. *Always do a pull immediately before you begin working on a file just in case someone else modified it recently.*
+2. *Compile frequently as you compose and edit; it will be easier to resolve any compilation problems.*
+3. *Make sure the document compiles before you commit it and push it to the repository. Ask Anne (aheavey@fnal.gov) if you need help.*
+4. *Commit and push immediately after you finish your edits so that others have the best chance of picking up your changes before they edit.  (It is much easier to avoid than to resolve conflicts.)*
+
+Extra best practices with eventual upload to the arXiv in mind:
+5. Keep your image sizes as small as possible (and under 1MB in all cases). In particular, resize photos to a maximum of 1000 px wide at 72 px/in.
+6. If you replace a figure, delete the old one (it will remain in earlier versions of the repository). The arXiv chokes on unused files.
+
 
 * Get set up to use GitHub and ~git~
 
@@ -111,20 +123,8 @@ Make sure the entire document compiles, then commit and push:
 
 If all else fails, save your changed files somewhere, blow away the repository and reclone it. Then remake your edits.
 
-* Best practices for interacting with GitHub
-Please follow these four important guidelines that will help avoid headaches:
-
-1. *Always do a pull immediately before you begin working on a file just in case someone else modified it recently.*
-2. *Compile frequently as you compose and edit; it will be easier to resolve any compilation problems.*
-3. *Make sure the document compiles before you commit it and push it to the repository. Ask Anne (aheavey@fnal.gov) if you need help.*
-4. *Commit and push immediately after you finish your edits so that others have the best chance of picking up your changes before they edit.  (It is much easier to avoid than to resolve conflicts.)*
-
-Extra best practices with eventual upload to the arXiv in mind:
-5. Keep your image sizes as small as possible (and under 1MB in all cases). In particular, resize photos to a maximum of 1000 px wide at 72 px/in.
-6. If you replace a figure, delete the old one (it will remain in earlier versions of the repository). The arXiv chokes on unused files.
-
    
-* Git-phobic and/or LaTeX-phobic
+* Prefer to avoid Git?
 
 Git works on all major computing platforms and many minor ones and is
 successfully used by all manner of people.  If for
