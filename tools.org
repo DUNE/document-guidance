@@ -28,7 +28,9 @@ or
   \finalfalse
 #+END_SRC
 
+** pdflatex
 
+The command ~pdflatex [filename]~, run twice, will compile a document, set up the chapter, section, figure and table numbering, and provide the tables of contents, figures, and tables.  It will not create the bibliography; for that, run ~biblatex~ on the file, followed again by ~pdflatex. 
 
 ** Waf build
 

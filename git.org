@@ -70,7 +70,7 @@ If you plan to use SSH, make sure you're authenticated:
 
 * Make edits and push your edits to the repository: General Procedure
 
-This procedure assumes that you have not made any edits, either at all, or since your most recent push to the GitHub repository. If this is not true, skip to "Avoiding and resolving conflicts" below, then come back here for the general procedure.
+The procedure outlined here assumes that you have no outstanding edits; i.e., that you have already pushed all your edits, if any, to the GitHub repository. If this is not true, skip to "Avoiding and resolving conflicts" below, then come back here for the general procedure.
 
 If you installed the GitHub for Mac (or for other platforms as available), you can use the GUI provided to pull, commit and push, if you prefer.  If you use a terminal command line, here is the procedure.
 
@@ -94,7 +94,7 @@ If you installed the GitHub for Mac (or for other platforms as available), you c
 
 * Avoiding and resolving conflicts in git
 
-First, if you know that someone else may want to edit the same files, it's a courtesy to let them know that you plan to edit them, and ping them again once you've pushed your updates. It's easier than resolving conflicts later.
+First, if you know that someone else may want to edit the same files, it's a courtesy to let them know that you plan to edit these files, then ping them again once you've pushed your updates. It's easier than resolving conflicts later.
 
 If any commits have been pushed by others since the last time you did a =git pull= (or since your initial =git clone= if you haven't yet pulled) then git will not allow you to =push= until you have done a fresh =git pull=. 
 
@@ -107,8 +107,8 @@ If =git pull= fails, it's likely because you have unpushed changes (Always commi
 #+END_EXAMPLE
 If there are conflicts, Git will alert you. This will likely involve a =git merge= step.
 Git will pull in the content from other commits that
-occurred since you did the pull on which your most recent commit was based, and
-these will appear as changes or added files. Add them to the list of things to commit before you commit your merge.  Don't delete them.
+occurred after you did the pull on which your most recent commit was based, and
+these will appear as changes or added files. Add them to the list of things to commit before you commit your merge.  Don't delete them!
 (The =.gitignore= file is set up to ignore unnecessary files, so if
 you see changed or added files, they should probably be there.)
 
