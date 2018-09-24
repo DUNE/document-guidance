@@ -15,7 +15,7 @@ See [[https://wiki.dunescience.org/wiki/Technical_Design_Report][the wiki pages 
 
 * Install LaTeX
 
-If you need a reliable LaTeX installation, Tom Junk has installed texlive 2017 in his area on the dunegpvm's at Fermilab. Feel free to use it! Just login and run his setup file:
+If you need a reliable LaTeX installation, Tom Junk has installed texlive 2017 in the shared dune area on the dunegpvm's at Fermilab. Feel free to use it! Just login and run his setup file:
 
 #+BEGIN_EXAMPLE
   $ ssh dunesl7gpvm01.fnal.gov  
