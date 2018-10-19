@@ -14,7 +14,7 @@ the repo or in your working directory. More detail is given in Chapter 6 of the 
   
 Guidelines for editing these files are in the guidance document. Please follow best practices! Many people will need to update these files, so always pull down the latest version before you start, then push your changes soon after you finish.
 
-- ~figures/~ or ~graphics/~ locates graphics files (PDF, JPEG, PNG)
+- ~figures/~ or ~graphics/~ holds graphics files (PDF, JPEG, PNG)
 
 - ~util/~ holds tools that can be used to build a volume
 

@@ -9,7 +9,9 @@
 \RequirePackage[letterpaper,margin=2cm]{geometry}
 
 \newif\iffinal
-\finaltrue
+%% Switch between draft or final:
+\finalfalse
+%\finaltrue
 
 % Required values and their setters
 \newcommand\thedoctitle{DRAFT Technical Design Report}

@@ -120,20 +120,6 @@ especially when we require nice formatting. Again, see \texttt{common/units.tex}
 \item ``exposure in \ktmwyr{}s'' is written as \verb|exposure in \ktmwyr{}s|.
 \end{itemize}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Requirements Tables}
-\label{sec:req-tables}
-
-(This section needs further development once the editorial team has finalized the plan for requirements.)
-
-Enumeration of requirements is an important addition to the TDR, and a systematic way of doing this is under development.  The TDR team will provide a template (likely a spreadsheet) and guidance.
-
-Requirement ``owners'' are responsible for filling in the spreadsheet using LaTeX code for any symbols, equations, etc. The TDR team will turn it into LaTeX files and provide them for you to input into your chapter files.
-
-To include the requirements table  in your chapter file, use the syntax (still TBD):
-\begin{verbatim}
-\input{filename}
-\end{verbatim}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Including ``dunefigures''}
@@ -229,7 +215,7 @@ Both of these take the place of the usual \texttt{hline}.
 \begin{dunetable}
 [The LoT caption]
 {cc}
-{tab:example}
+{tab:table-label}
 {This is a sample table.}
   Rows & Counts \\ \toprowrule
   Row 1 & First \\ \colhline
@@ -245,10 +231,10 @@ Both of these take the place of the usual \texttt{hline}.
 {cc}
 {tab:table-label}
 {This is a sample table.}
-  Rows & Counts \\ \toprowrule
-  Row 1 & First \\ \colhline
+  Rows & Counts  \\ \toprowrule
+  Row 1 & First  \\ \colhline
   Row 2 & Second \\ \colhline
-  Row 3 & Third \\ 
+  Row 3 & Third  \\ 
 \end{dunetable}
 
 See Table~\ref{tab:table-label}...
@@ -278,6 +264,158 @@ $n \rightarrow e^+\pi^-$ & 19\% & 2 & 44\% & 0.8 \\
 
 \FloatBarrier
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Tables Specifically for the DUNE TDR}
+\label{sec:tables}
+
+In this section we show a sample table (shown for SP HV) for each standardized table to be used in detector-system chapters of the TDR. 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Requirements/Specifications Tables}
+\label{sec:tables-req}
+
+\fixme{This section needs further development once the editorial team has finalized the plan for requirements.}
+
+Enumeration of requirements is an important addition to the TDR, and a systematic way of doing this is under development.  The TDR team will provide a template (likely a spreadsheet) and guidance.
+
+Requirement ``owners'' are responsible for filling in the spreadsheet using LaTeX code for any symbols, equations, etc. The TDR team will turn it into LaTeX files and provide them for you to input into your chapter files.
+
+To include the requirements table  in your chapter file, use the syntax (still TBD):
+\begin{verbatim}
+\input{filename}
+\end{verbatim}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Interface Document Tables}
+\label{sec:tables-intfc}
+
+\begin{verbatim}
+\begin{dunetable}
+[High Voltage System Interface Links]
+{p{0.4\textwidth}p{0.2\textwidth}}
+{tab:HVinterfaces}
+{High Voltage System Interface Links }   
+Interfacing System & Linked Reference    \\ \toprowrule
+CISC & 
+\href{http://docs.dunescience.org/cgi-bin/ShowDocument?docid=6787&version=1}{DocDB 6787} 
+\cite{bib:docdb6787}                     \\ \colhline
+DP CRP & \cite{bib:docdb6754}            \\ \colhline
+... & \cite{}                            \\ \colhline
+(last item)& \cite{}                     \\
+\end{dunetable}
+\end{verbatim}
+
+
+This is a reference to Table~\ref{tab:HVinterfaces} (\verb|\ref{tab:HVinterfaces}|).
+
+\begin{dunetable}
+[High Voltage System Interface Links]
+{p{0.4\textwidth}p{0.2\textwidth}}
+{tab:HVinterfaces}
+{High Voltage System Interface Links }   
+Interfacing System & Linked Reference \\ \toprowrule
+CISC & 
+\href{http://docs.dunescience.org/cgi-bin/ShowDocument?docid=6787&version=1}{DocDB 6787} \cite{bib:docdb6787}                    \\ \colhline
+DP CRP & \cite{bib:docdb6754}             \\ \colhline
+... & \cite{}                                                  \\ \colhline
+(last item)& \cite{}                                     \\
+\end{dunetable}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Risk Tables}
+\label{sec:tables-risk}
+
+\begin{verbatim}
+\begin{dunetable}
+[High Voltage System Risk Summary]
+{p{0.15\textwidth}p{0.75\textwidth}}
+{tab:HVrisks}
+{High Voltage System Risk Summary}   
+ID & Risk                 \\ \toprowrule
+(id 1) & risk text        \\ \colhline
+(id 2) & risk text        \\ \colhline
+... & ...                 \\ \colhline
+(last id)& risk text      \\
+\end{dunetable}
+\end{verbatim}
+
+This is a reference to Table~\ref{tab:HVinterfaces} (\verb|\ref{tab:HVrisks}|).
+
+\begin{dunetable}
+[High Voltage System Risk Summary]
+{p{0.15\textwidth}p{0.75\textwidth}}
+{tab:HVrisks}
+{High Voltage System Risk Summary}   
+ID & Risk                   \\ \toprowrule
+(id 1) & risk text        \\ \colhline
+(id 2) & risk text       \\ \colhline
+... & ...                        \\ \colhline
+(last id)& risk text     \\
+\end{dunetable}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Cost Tables}
+\label{sec:tables-cost}
+
+\begin{verbatim}
+\begin{dunetable}
+[High Voltage System Cost Summary]
+{p{0.7\textwidth}p{0.2\textwidth}}
+{tab:HVcostsumm}
+{High Voltage System Cost Summary (made-up numbers)}   
+Item & Core Cost (k\$ US) \\ \toprowrule
+(item 1) & \num{67.0}     \\ \colhline
+(item 2) & \num{57.8}     \\ \colhline
+... & ...                 \\ \colhline
+(last item)& \num{47.4}   \\
+\end{dunetable}
+\end{verbatim}
+
+This is a reference to Table~\ref{tab:HVinterfaces} (\verb|\ref{tab:HVcostsumm}|).
+
+\begin{dunetable}
+[High Voltage System Cost Summary]
+{p{0.7\textwidth}p{0.2\textwidth}}
+{tab:HVcostsumm}
+{High Voltage System Cost Summary (made-up numbers)}   
+Item & Core Cost (k\$ US) \\ \toprowrule
+(item 1) & \num{67.0}         \\ \colhline
+(item 2) & \num{57.8}        \\ \colhline
+... & ...                                   \\ \colhline
+(last item)& \num{47.4}     \\
+\end{dunetable}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Schedule/Milestone Tables}
+\label{sec:tables-sched}
+
+\begin{verbatim}
+\begin{dunetable}
+[High Voltage System Schedule]
+{p{0.65\textwidth}p{0.25\textwidth}}
+{tab:HVsched}
+{High Voltage System Schedule (made-up dates)}   
+Milestone & Date (Month YYYY)   \\ \toprowrule
+(item 1) & October 2020         \\ \colhline
+(item 2) & March 2021           \\ \colhline
+... & ...                       \\ \colhline
+(last item)& June 2023          \\
+\end{dunetable}
+\end{verbatim}
+
+This is a reference to Table~\ref{tab:HVinterfaces} (\verb|\ref{tab:HVsched}|).
+
+\begin{dunetable}
+[High Voltage System Schedule]
+{p{0.65\textwidth}p{0.25\textwidth}}
+{tab:HVsched}
+{High Voltage System Schedule (made-up dates)}   
+Milestone & Date (Month YYYY)   \\ \toprowrule
+(item 1) & October 2020         \\ \colhline
+(item 2) & March 2021           \\ \colhline
+... & ...                       \\ \colhline
+(last item)& June 2023          \\
+\end{dunetable}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
