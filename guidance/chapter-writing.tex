@@ -290,6 +290,10 @@ To include the requirements table  in your chapter file, use the syntax (still T
 \subsection{Interface Document Tables}
 \label{sec:tables-intfc}
 
+We have a standard table format for linking to interface documents in the DUNE docdb. In the first column, put the system to which you are interfacing. For the second column, we provide a macro to use to add linked references,  \verb|\intfcdoc{}{}|. The first parameter is the interface document's docdb number, and the second is its version number. Both parameters are required. 
+
+The output of the macro is a hyperlink to the version of the document in the docdb and a citation.  The macro requires that the citation's label be of the form: \verb|bib:docdbNNNN|, where NNNN is the docdb number.
+
 \begin{verbatim}
 \begin{dunetable}
 [High Voltage System Interface Links]
@@ -297,12 +301,9 @@ To include the requirements table  in your chapter file, use the syntax (still T
 {tab:HVinterfaces}
 {High Voltage System Interface Links }   
 Interfacing System & Linked Reference    \\ \toprowrule
-CISC & 
-\href{http://docs.dunescience.org/cgi-bin/ShowDocument?docid=6787&version=1}{DocDB 6787} 
-\cite{bib:docdb6787}                     \\ \colhline
-DP CRP & \cite{bib:docdb6754}            \\ \colhline
-... & \cite{}                            \\ \colhline
-(last item)& \cite{}                     \\
+CISC & \intfcdoc{6787}{1}                \\ \colhline
+... & \intfcdoc{nnnn}{n}                 \\ \colhline
+(last item)& \intfcdoc{}{}               \\
 \end{dunetable}
 \end{verbatim}
 
@@ -314,12 +315,10 @@ This is a reference to Table~\ref{tab:HVinterfaces} (\verb|\ref{tab:HVinterfaces
 {p{0.4\textwidth}p{0.2\textwidth}}
 {tab:HVinterfaces}
 {High Voltage System Interface Links }   
-Interfacing System & Linked Reference \\ \toprowrule
-CISC & 
-\href{http://docs.dunescience.org/cgi-bin/ShowDocument?docid=6787&version=1}{DocDB 6787} \cite{bib:docdb6787}                    \\ \colhline
-DP CRP & \cite{bib:docdb6754}             \\ \colhline
-... & \cite{}                                                  \\ \colhline
-(last item)& \cite{}                                     \\
+Interfacing System & Linked Reference    \\ \toprowrule
+CISC & \intfcdoc{6787}{1}                  \\ \colhline
+... &  \intfcdoc{}{}                           \\ \colhline
+(last item)& \intfcdoc{}{}                                          \\
 \end{dunetable}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -475,7 +474,9 @@ indicate comments via \texttt{\%} characters. (Again, guidelines are in the file
 The
 generated bibliography reflects the order in which citations are referenced in the text, not the order of entries in this file.
 
-When adding citations to this file, if possible, copy the BibTeX rendering of the citation from \url{http://inspirehep.net}.
+When adding citations to this file, if possible, copy the BibTeX rendering of the citation from \url{http://inspirehep.net}.  Except...
+
+For documents in docdb, please use the form defined in Section~\ref{sec:tables-intfc}, namely: \verb|bib:docdbNNNN|. For interface documents, you MUST use this form.
 
 Manual care must be taken to avoid duplication. %\fixme{BV found something; I have to look at it. AH}
 Before adding any entry to \texttt{tdr-citedb.bib}, search through it
