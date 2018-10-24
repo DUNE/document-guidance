@@ -274,25 +274,29 @@ In this section we show a sample table (shown for SP HV) for each standardized t
 \subsection{Requirements/Specifications Tables}
 \label{sec:tables-req}
 
-\fixme{This section needs further development once the editorial team has finalized the plan for requirements.}
+Enumeration of requirements is an important addition to the TDR, and a systematic way of doing this is in place.  
 
-Enumeration of requirements is an important addition to the TDR, and a systematic way of doing this is under development.  The TDR team will provide a template (likely a spreadsheet) and guidance.
+In DUNE \citedocdb{11074}{1} you will find a template Excel file in which to enter your requirements or specifications.  The top-level detector specifications are also in this DocDB.  The top five (colored green) apply to all subsystems. Of the others, some will apply to your subsystem and others will not.  Note that the top-level requirements do not follow the same format as the template. (The TDR team will update them to the required format - still to do!)
 
-Requirement ``owners'' are responsible for filling in the spreadsheet using LaTeX code for any symbols, equations, etc. The TDR team will turn it into LaTeX files and provide them for you to input into your chapter files.
+Please do the following:
+\begin{enumerate}
+\item Download both files from DocDB 11074.
+\item Read through the top-level requirements and determine which apply to your subsystem.
+\item Follow the guidelines given in the template to enter any additional requirements or specifications for your subsystem.  In the validation field, be sure to include ProtoDUNE impacts and simulation studies, as appropriate. You may include additional validation information, as well.
+\item Create a new DocDB entry and upload your completed spreadsheet to it.
+\item Send an email to aheavey@fnal.gov with (1) your file's DocDB number and (2) the list of ``top-level'' requirements that apply to your subsystem.
+\item Whenever you update your spreadsheet, remember to upload it to DocDB into a new version, and notify aheavey@fnal.gov.
+\end{enumerate}
 
-To include the requirements table  in your chapter file, use the syntax (still TBD):
-\begin{verbatim}
-\input{filename}
-\end{verbatim}
-
+The TDR team will turn your Excel file into LaTeX and insert them into your chapter files.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Interface Document Tables}
 \label{sec:tables-intfc}
 
-We have a standard table format for linking to interface documents in the DUNE docdb. In the first column, put the system to which you are interfacing. For the second column, we provide a macro to use to add linked references,  \verb|\intfcdoc{}{}|. The first parameter is the interface document's docdb number, and the second is its version number. Both parameters are required. 
+We have a standard table format for linking to interface documents in the DUNE docdb. In the first column, put the system to which you are interfacing. For the second column, we provide a macro to use to add linked references,  \verb|\citedocdb{}{}|. The first parameter is the interface document's docdb number, and the second is its version number. Both parameters are required. 
 
-The output of the macro is a hyperlink to the version of the document in the docdb and a citation.  The macro requires that the citation's label be of the form: \verb|bib:docdbNNNN|, where NNNN is the docdb number.
+The output of the macro is a hyperlink to the version of the document in the docdb followed by a citation.  The macro requires that the citation's label be of the form: \verb|bib:docdbNNNN|, where NNNN is the docdb number.
 
 \begin{verbatim}
 \begin{dunetable}
@@ -301,24 +305,24 @@ The output of the macro is a hyperlink to the version of the document in the doc
 {tab:HVinterfaces}
 {High Voltage System Interface Links }   
 Interfacing System & Linked Reference    \\ \toprowrule
-CISC & \intfcdoc{6787}{1}                \\ \colhline
-... & \intfcdoc{nnnn}{n}                 \\ \colhline
-(last item)& \intfcdoc{}{}               \\
+CISC & \citedocdb{6787}{1}                \\ \colhline
+... & \citedocdb{nnnn}{n}                 \\ \colhline
+(last item)& \citedocdb{}{}               \\
 \end{dunetable}
 \end{verbatim}
 
 
 This is a reference to Table~\ref{tab:HVinterfaces} (\verb|\ref{tab:HVinterfaces}|).
-
+\fixme{Finalize with Brett-24oct}
 \begin{dunetable}
 [High Voltage System Interface Links]
 {p{0.4\textwidth}p{0.2\textwidth}}
 {tab:HVinterfaces}
 {High Voltage System Interface Links }   
 Interfacing System & Linked Reference    \\ \toprowrule
-CISC & \intfcdoc{6787}{1}                  \\ \colhline
-... &  \intfcdoc{}{}                           \\ \colhline
-(last item)& \intfcdoc{}{}                                          \\
+CISC & \citedocdb{6787}{1}                  \\ \colhline
+... &  \citedocdb{nnnn}{n}                           \\ \colhline
+(last item)& \citedocdb{}{}                                          \\
 \end{dunetable}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
