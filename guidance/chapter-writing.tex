@@ -276,16 +276,19 @@ In this section we show a sample table (shown for SP HV) for each standardized t
 
 Enumeration of requirements is an important addition to the TDR, and a systematic way of doing this is in place.  
 
-%In DUNE \citedocdb{11074}{1} you will find a template Excel file in which to enter your requirements or specifications.  The top-level detector specifications are also in this DocDB.  The top five (colored green) apply to all subsystems. Of the others, some will apply to your subsystem and others will not.  Note that the top-level requirements do not follow the same format as the template. (The TDR team will update them to the required format - still to do!)
-In DUNE \citedocdb{11074}{2} you will find a template Excel file in which to enter your requirements or specifications.  The top-level detector specifications are included within the first 30 rows.  The top five (colored green) apply to all subsystems. Of the others (orange and blue), some will apply to your subsystem and others will not.  You will check those that apply to you.
-Here are the steps to follow:
+In DUNE \citedocdb{11074}{3} you will find a template Excel file in which to enter your requirements or specifications.  The file has several sheets (tabs). The TDR team has an automated way of turning the data in this file into LaTeX, hence the detailed instructions that follow:
 
 \begin{enumerate}
-\item Download the file from \citedocdb{11074}{2}.
-\item Read through the top-level requirements (through row 30). Click the box in the first column of those that apply to your subsystem. 
-\item Follow the guidelines given in rows 1 and 2 of the template to enter any additional requirements or specifications for your subsystem, starting at row 31.  In the validation field, be sure to include ProtoDUNE impacts and simulation studies, as appropriate. You may include additional validation information, as well.
-\item Upload your completed spreadsheet to your existing requirements DocDB entry, if you have one.
+\item Download the file from \citedocdb{11074}{3}.
+\item Read through the top-level requirements in the sheet labeled ``List of top-level requirements.''  The top five (colored green) apply to all subsystems. Of the others (orange and blue), some will apply to your subsystem and others will not.
+\item Enter the numbers of those that apply to your subsystem into column A of the tab labeled ``Your selected top level requirements.''
+\item From the sheet labeled ``Subsystem codes'' find your code and rename the sheet ``Your subsystem'' to that code.
+\item Note the guidelines given in rows 1 and 2 of your subsystem sheet. Also note that a couple of example rows are given.
+\item  Enter any additional requirements or specifications for your subsystem into this sheet.  In the validation field, be sure to include ProtoDUNE impacts and simulation studies, as appropriate. You may include additional validation information, as well.
+\item Delete the example rows.
+\item Upload your completed spreadsheet to your existing requirements DocDB entry, if you have one. If you don't, create a new DocDB entry for it.
 \item Whenever you update your spreadsheet, remember to upload it to DocDB into a new version.
+\item Be aware that if any of the top-level requirements change, you will need to review and possibly update your spreadsheet.  The TDR team will provide the information on what's been updated.
 \end{enumerate}
 
 The TDR team will turn your Excel files into LaTeX and insert them into your chapter files.
