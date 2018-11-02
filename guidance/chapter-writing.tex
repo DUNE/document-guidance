@@ -32,7 +32,7 @@ For example,
 \item \numutonumu is written as \verb|\numutonumu|,
 \item \ptoknubar is written as \verb|\ptoknubar|,
 \item the drift velocity parameter value \driftvelocity is written as \verb|\driftvelocity|,
-\item \SURF is written as \verb|\SURF|, and
+\item SURF is written as \verb|\surf|, and
 \item \minerva is written as \verb|\minerva|.
 \end{itemize}
 
@@ -298,20 +298,20 @@ The TDR team will turn your Excel files into LaTeX and insert them into your cha
 \subsection{Interface Document Tables}
 \label{sec:tables-intfc}
 
-We have a standard table format for linking to interface documents in the DUNE docdb. In the first column, put the system to which you are interfacing. For the second column, we provide a macro to use to add linked references,  \verb|\citedocdb{}{}|. The first parameter is the interface document's docdb number, and the second is its version number. Both parameters are required. 
+We have a standard table format for linking to interface documents in the DUNE docdb. In the first column, put the system to which you are interfacing; use the glossary entry for the system, if it exists. For the second column, we provide a macro to use to add linked references,  \verb|\citedocdb{}{}|. The first parameter is the interface document's docdb number, and the second is its version number. Both parameters are required. 
 
 The output of the macro is a hyperlink to the version of the document in the docdb followed by a citation.  The macro requires that the citation's label be of the form: \verb|bib:docdbNNNN|, where NNNN is the docdb number.
 
 \begin{verbatim}
 \begin{dunetable}
 [High Voltage System Interface Links]
-{p{0.4\textwidth}p{0.2\textwidth}}
+{p{0.25\textwidth}p{0.5\textwidth}l}
 {tab:HVinterfaces}
 {High Voltage System Interface Links }   
-Interfacing System & Linked Reference    \\ \toprowrule
-CISC & \citedocdb{6787}{1}                \\ \colhline
-... & \citedocdb{nnnn}{n}                 \\ \colhline
-(last item)& \citedocdb{}{}               \\
+Interfacing System & Description & Linked Reference \\ \toprowrule
+\dword{cisc} & \dword{hv} vs. \dword{lar} level interlock, sensor locations in high-field regions, cold/warm camera coverage, \dword{hv} signal monitoring, etc. & \citedocdb{6787}{1}                  \\ \colhline
+... & & \citedocdb{nnnn}{n}                   \\ \colhline
+(last item)& & \citedocdb{}{}                 \\
 \end{dunetable}
 \end{verbatim}
 
@@ -319,14 +319,14 @@ CISC & \citedocdb{6787}{1}                \\ \colhline
 This is a reference to Table~\ref{tab:HVinterfaces} (\verb|\ref{tab:HVinterfaces}|).
 %\fixme{Finalize with Brett-24oct}
 \begin{dunetable}
-[High Voltage System Interface Links]
-{p{0.4\textwidth}p{0.2\textwidth}}
+{p{0.25\textwidth}p{0.5\textwidth}l}
 {tab:HVinterfaces}
 {High Voltage System Interface Links }   
-Interfacing System & Linked Reference    \\ \toprowrule
-CISC & \citedocdb{6787}{1}                  \\ \colhline
-... &  \citedocdb{nnnn}{n}                           \\ \colhline
-(last item)& \citedocdb{}{}                                          \\
+Interfacing System & Description & Linked Reference \\ \toprowrule
+
+\dword{cisc} & \dword{hv} vs. \dword{lar} level interlock, sensor locations in high-field regions, cold/warm camera coverage, \dword{hv} signal monitoring, etc. & \citedocdb{6787}{1}                   \\ \colhline
+ ... & & \citedocdb{nnnn}{n}                   \\ \colhline
+(last item)& & \citedocdb{}{}                 \\
 \end{dunetable}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

@@ -1,12 +1,14 @@
 % -*- latex -*-
 %
-% Document class for DUNE Design Reports
+% Document class for Conceptual Design Report
 
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{dune}[2015/02/02]
 \LoadClass[12pt,letterpaper]{report}
 
 \RequirePackage[letterpaper,margin=2cm]{geometry}
+
+
 
 \newif\iffinal
 %% Switch between draft or final:
@@ -18,32 +20,80 @@
 \newcommand\thedocsubtitle{Deep Underground Neutrino Experiment (DUNE) and Long-Baseline Neutrino Facility (LBNF)}
 \def\titleextra{ }
 
-%added because defs.tex asks for it
-\newcommand\thevolumetitle{DUNE Documentation Guidance}
-\newcommand\thevolumesubtitle{}
+%%% numbers below count section digits (not the chapter digit)
+% set depth of sectioning to appear in the table of contents
+% "2" will show chapter/section/subsection
+% "3" will additionally include subsubsection
+% note, this also governs the depth of the PDF "Index"
+\setcounter{tocdepth}{2}
+% set depth to which numbering is applied.  
+% "3" will number chapter/section/subsection/subsubsection
+% "4" will additionally number subsubsubsection 
+\setcounter{secnumdepth}{4}
+% note: numbering in the text and ToC are the same.
+% You can have unnumbered (sub*N)sections in the ToC if
+%  secnumdepth < tocdepth
 
-
+%%%%%%%%%%%%
+%% https://tex.stackexchange.com/a/60212
 % Provide finer-grained sectioning.
+\RequirePackage{titlesec}
+\titleclass{\subsubsubsection}{straight}[\subsection]
+
 \newcounter{subsubsubsection}[subsubsection]
-\def\subsubsubsectionmark#1{}
-\def\thesubsubsubsection {\thesubsubsection
-     .\arabic{subsubsubsection}}
-\def\subsubsubsection{\@startsection
-     {subsubsubsection}{4}{\z@} {-3.25ex plus -1
-     ex minus -.2ex}{1.5ex plus .2ex}{\bf\normalsize\sffamily}}
-\def\l@subsubsubsection{\@dottedtocline{4}{4.8em}
-     {4.2em}}
+\renewcommand\thesubsubsubsection{\thesubsubsection.\arabic{subsubsubsection}}
+\renewcommand\theparagraph{\thesubsubsubsection.\arabic{paragraph}} % optional; useful if paragraphs are to be numbered
+
+\titleformat{\chapter}[display]
+    {\normalfont\huge\bfseries}{\chaptertitlename\ \thechapter}{20pt}{\Huge}[\glsresetall]
+\titleformat{\subsubsubsection}
+  {\normalfont\normalsize\bfseries}{\thesubsubsubsection}{1em}{}
+\titlespacing*{\subsubsubsection}
+{0pt}{3.25ex plus 1ex minus .2ex}{1.5ex plus .2ex}
+
+\makeatletter
+\renewcommand\paragraph{\@startsection{paragraph}{5}{\z@}%
+  {3.25ex \@plus1ex \@minus.2ex}%
+  {-1em}%
+  {\normalfont\normalsize\bfseries}}
+\renewcommand\subparagraph{\@startsection{subparagraph}{6}{\parindent}%
+  {3.25ex \@plus1ex \@minus .2ex}%
+  {-1em}%
+  {\normalfont\normalsize\bfseries}}
+\def\toclevel@subsubsubsection{4}
+\def\toclevel@paragraph{5}
+\def\toclevel@paragraph{6}
+\def\l@subsubsubsection{\@dottedtocline{4}{7em}{4em}}
+\def\l@paragraph{\@dottedtocline{5}{10em}{5em}}
+\def\l@subparagraph{\@dottedtocline{6}{14em}{6em}}
+\makeatother
+%%%%%%%%%%%%%%%%%%%%%%%
+
+%%% original: messes up the index
+% \newcounter{subsubsubsection}[subsubsection]
+% \def\subsubsubsectionmark#1{}
+% \def\thesubsubsubsection {\thesubsubsection
+%      .\arabic{subsubsubsection}}
+% \def\subsubsubsection{\@startsection
+%      {subsubsubsection}{4}{\z@} {-3.25ex plus -1
+%      ex minus -.2ex}{1.5ex plus .2ex}{\bf\normalsize\sffamily}}
+% \def\l@subsubsubsection{\@dottedtocline{4}{4.8em}
+%      {4.2em}}
 
 
 % List of other packages required, add as needed.
 % Some basic packages
-\RequirePackage{color,soul}
+\RequirePackage{soul}
 \RequirePackage{graphicx}
 \RequirePackage[T1]{fontenc}
 \RequirePackage{lmodern}
+% used for local line spacing changes such as in the title
+\RequirePackage{setspace}
 % Anne adds parskip 5/7/15
 \RequirePackage{parskip}
 \setlength{\parskip}{\baselineskip}
+
+\RequirePackage{capt-of}
 
 % Smart end-of-macro spacing
 \RequirePackage{xspace}
@@ -55,21 +105,23 @@
 \RequirePackage{longtable}
 
 % For abbrev/acronym lists
-\RequirePackage[intoc]{nomencl}
-\makenomenclature  % does this belong here or outside of the class?
-\renewcommand{\nomname}{Acronyms, Abbreviations and Terms}
-\setlength{\nomlabelwidth}{0.2\textwidth}
+% \RequirePackage[intoc]{nomencl}
+% \makenomenclature  % does this belong here or outside of the class?
+% \renewcommand{\nomname}{Acronyms, Abbreviations and Terms}
+% \setlength{\nomlabelwidth}{0.2\textwidth}
 
 % Tighter control of floats.
 \RequirePackage{placeins}
 
 
+\RequirePackage[table,usenames,pdftex,dvipsnames]{xcolor}
+
 %% fixme: this needs to be controlled by "draft"
-\RequirePackage[color]{showkeys}
+% \RequirePackage[color]{showkeys}
 \RequirePackage[pagewise]{lineno}
 
 
-\RequirePackage[table,usenames,dvipsnames]{xcolor}
+
 
 \RequirePackage{framed}
 \RequirePackage{wrapfig}
@@ -103,7 +155,7 @@
   \renewcommand{\headrulewidth}{0pt}
   \renewcommand{\footrulewidth}{0pt}
   \fancyhead[RO]{\titlepagecornerblock}
-%  \fancyfoot[C]{\includegraphics[width=0.4\textwidth]{dunelogo_colorhoriz}}
+  \fancyfoot[C]{\includegraphics[width=0.4\textwidth]{dunelogo_colorhoriz}}
 }
 \fancypagestyle{plain}{
   \fancyhf{}
@@ -117,6 +169,10 @@
   \fancyhead[LO,RE]{\textsf{\footnotesize \leftmark}}
   \fancyfoot[CO,CE]{\textsf{\footnotesize \explong}}
 }
+% Avoid warnings like:
+% Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+%  Make it at least 14.49998pt.
+\setlength{\headheight}{15pt}
 
 
 % Fancier tables
@@ -142,11 +198,8 @@
 \definecolor{dunepeach}{RGB}{241,159,83}
 \definecolor{dunegold}{RGB}{255,210,108}
 
-%\definecolor{lightblue}{RGB}{212,236,244} ---Anne is changing (212,236,244 is lightblue)
-\definecolor{dunetablecolor}{RGB}{125,174,211} % matches lighter blue color from Diana's scheme 
 \newcommand{\rowtitlestyle}{
-%  \rowcolor{lightblue}
-  \rowcolor{dunetablecolor}
+  \rowcolor{dunesky}
   \rowstyle{\bfseries \boldmath} 
 }
 
@@ -181,7 +234,7 @@
 % }
 
 
-\newcommand{\dunetablabel}{}% stores the label
+\newcommand{\dunetabtablabel}{}% stores the label
 \newcommand{\dunetabcaption}{}% stores the caption
 \newcommand{\dunetabcaptionshort}{}% stores an optional short caption
 \newenvironment{dunetable}[4][]
@@ -208,8 +261,6 @@
       \label{\dunetablabel}
   \end{table}
 }
-
-\usepackage{tablefootnote}
 
 \newcommand{\dunefiglabel}{}% stores the label
 \newcommand{\dunefigcaption}{}% stores the caption
@@ -256,36 +307,55 @@
 
 
 % Hyperref typically needs to come at the end of all \usepackages 
-\RequirePackage[pdftex,bookmarks]{hyperref}
+\RequirePackage[pdftex,bookmarks,hidelinks]{hyperref}
 
 % Use to import pdf files (Anne 4/28/15)
 \RequirePackage{pdfpages}
 
-
-%\finalfalse
-%\DeclareOption{final}{
-%  \finaltrue
-%}
 \ProcessOptions\relax
 
 \iffinal
 \presetkeys{todonotes}{disable}{}
 \newcommand{\hlfix}[2]{}
 \newcommand{\fixme}[1]{}
-
+\newcommand{\metainfo}[1]{}
+%\linenumbers  %<---- uncomment if you want ONLY linenumbers with otherwise print-ready copy
 \else
 % "draft"
 %Set default style for todonotes
 \presetkeys{todonotes}{fancyline}{}
 \newcommand{\hlfix}[2]{\texthl{#1}\todo{#2}}
 \newcommand{\fixme}[1]{\todo[inline]{#1}}
+\newcommand{\metainfo}[1]{\todo[inline,backgroundcolor=yellow]{#1}}
+
 \linenumbers
 \fi
 
 %add TOC, TOF, TOT, Ref to TOC (show up in PDF sidebar for easy navigation)
 \RequirePackage{tocbibind}
 
+% Use to include authorlist in PDF format
+\usepackage{pdfpages}
+
+%for \lesssim symbol
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{cleveref} %To use vref suggested by A Habig Feb 2018
+\usepackage{makecell} % To allow linebreaking within table cells (AH Feb 2018)
+
 \usepackage{cprotect}
 \usepackage{eurosym}
 \usepackage{tfrupee}
 \usepackage{textcomp}
+
+
+% Comoditize citing DocDB (moved to defs, requires version number-Anne)
+%%% Note: this relies on the fact that DocDB is happy getting an empty
+%%% version= parameter.
+%%% So if user doesn't include a version, the link goes to the more
+%%% recent.
+% \citedocdb{12345}
+%% or
+% \citedocdb[3]{12345}
+%\newcommand{\citedocdb}[2][]{\href{https://docs.dunescience.org/cgi-bin/private/ShowDocument?docid=#2&version=#1}{DocDB #2}\cite{bib:docdb#2}\xspace}

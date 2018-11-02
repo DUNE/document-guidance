@@ -1,21 +1,27 @@
-% This file is to hold any special settings for a particular CDR
-% Things that are generic to CDRs in general go in cdr.cls.
-% Probably no \usepackages should be here.
+% stuff before document begins.  
 
-%\usepackage[pdftex,pdfpagelabels,bookmarks]{hyperref}
-
+\graphicspath{ {graphics/} }
 
 
 \input{common/defs.tex}
 \input{common/units.tex}
+\input{generated/parameters.tex}
 
+% For abbrev/acronym lists, see also init.tex for entry point of acronyms.tex.
+% \usepackage[intoc]{nomencl}
+% \makenomenclature
+% \renewcommand{\nomname}{Acronyms, Abbreviations and Terms}
+% \setlength{\nomlabelwidth}{0.2\textwidth}
 
-% Set the major title, consistently across all volumes
-\renewcommand\thevolumetitle{Technical Design Report \\ \explong}
+% For glossaries, needs to be loaded *after* hyperref to get clickable links.
+\input{common/glossary}
+
+% Heidi S.  - this leads to duplicates so commented it out 
+%\input{common/glossary-anne}
 
 % Do this here to make use of the experiment name and title macro
 \hypersetup{
-    pdftitle={\expshort TDR \thevolumesubtitle},
+    pdftitle={\expshort TDR \thedocsubtitle},
     pdfauthor={\expshort Collaboration},
     final=true,
     colorlinks=false,

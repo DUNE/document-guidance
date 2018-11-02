@@ -14,7 +14,8 @@
    
    Anne Heavey, Fermilab; technical editor, structure, style \\
    Brett Viren, Brookhaven; LaTeX machinery and GitHub repository\\
-   David DeMuth, VCSU; LaTeX, images, general
+   David DeMuth, VCSU; LaTeX, images, general\\
+   Nora Ransom, KSU; technical and copy editor
    
  \vspace{5mm}
 
@@ -29,26 +30,34 @@
 
 \cleardoublepage
 
-\pagestyle{plain} 
+
+%\includepdf[pages={-}]{tdr-authors.pdf}                        <--- add in later
+%\input{dune-institutions} Anne removing for collab review 21 May
+
+\cleardoublepage
+
 
 \renewcommand{\familydefault}{\sfdefault}
 \renewcommand{\thepage}{\roman{page}}
-\setcounter{page}{1}
-\cleardoublepage
+\setcounter{page}{0}
 
-\setcounter{tocdepth}{3}
+\pagestyle{plain} 
+
+%\clearpage
+
 \textsf{\tableofcontents}
-\cleardoublepage
+%\clearpage
 
-%For acronym list to appear just after TOC
-\printnomenclature
-\cleardoublepage
 
 \textsf{\listoffigures}
-\cleardoublepage
+%\clearpage
 
 \textsf{\listoftables}
-\clearpage
+%\clearpage
+
+%For acronym list to appear just after TOC, TOF, TOT
+%\printnomenclature
+%\clearpage
 
 \iffinal\else
 \textsf{\listoftodos}
@@ -68,11 +77,20 @@
 \fancyhead[LO,RE]{\textsf{\footnotesize \leftmark}}
 
 \fancyfoot{}
-\fancyfoot[RO]{\textsf{\footnotesize DUNE Technical Design Report}}
-\fancyfoot[LE]{\textsf{\footnotesize \thevolumetitle}}
+\fancyfoot[RO]{\textsf{\footnotesize The DUNE Technical Design Report}}
+\fancyfoot[LO]{\textsf{\footnotesize \thedoctitle}}
 \fancypagestyle{plain}{}
 
 \renewcommand{\headrule}{\vspace{-4mm}\color[gray]{0.5}{\rule{\headwidth}{0.5pt}}}
 
-
+% Not all main documents have any citations.
+% When not built in "final" mode, add in one citation just to let the
+% document build.
+% If, after substantial editing a main document still lacks any
+% citations then it should have its whole bibliography removed.
+%\ifdefined\isfinal\nocite{}\else\nocite{CD0}\fi
 \nocite{CD0}
+
+
+% see also preamble.tex
+%\input{common/acronyms}
