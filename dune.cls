@@ -38,6 +38,14 @@
 %% https://tex.stackexchange.com/a/60212
 % Provide finer-grained sectioning.
 \RequirePackage{titlesec}
+%% bug in titlesec as provided by Ubuntu 16.04, fix with:
+%% https://tex.stackexchange.com/a/300259
+\RequirePackage{etoolbox}
+\makeatletter
+\patchcmd{\ttlh@hang}{\parindent\z@}{\parindent\z@\leavevmode}{}{}
+\patchcmd{\ttlh@hang}{\noindent}{}{}{}
+\makeatother
+
 \titleclass{\subsubsubsection}{straight}[\subsection]
 
 \newcounter{subsubsubsection}[subsubsection]
@@ -191,6 +199,7 @@
     \boldmath
   }l}%
 
+% the DUNE palette
 \definecolor{dunebrown}{RGB}{94,51,39}
 \definecolor{dunenavy}{RGB}{0,59,113}
 \definecolor{dunesky}{RGB}{125,174,211}
@@ -198,8 +207,11 @@
 \definecolor{dunepeach}{RGB}{241,159,83}
 \definecolor{dunegold}{RGB}{255,210,108}
 
+%\definecolor{lightblue}{RGB}{212,236,244} ---Anne is changing (212,236,244 is lightblue)
+\definecolor{dunetablecolor}{RGB}{125,174,211} % matches lighter blue color from Diana's scheme 
 \newcommand{\rowtitlestyle}{
-  \rowcolor{dunesky}
+%  \rowcolor{lightblue}
+  \rowcolor{dunetablecolor}
   \rowstyle{\bfseries \boldmath} 
 }
 
@@ -318,14 +330,20 @@
 \presetkeys{todonotes}{disable}{}
 \newcommand{\hlfix}[2]{}
 \newcommand{\fixme}[1]{}
+\newcommand{\fixmehl}[1]{}
 \newcommand{\metainfo}[1]{}
 %\linenumbers  %<---- uncomment if you want ONLY linenumbers with otherwise print-ready copy
 \else
 % "draft"
 %Set default style for todonotes
 \presetkeys{todonotes}{fancyline}{}
+% highlight some text (arg #1) and attach a todo to it
 \newcommand{\hlfix}[2]{\texthl{#1}\todo{#2}}
+% inline via highlighting
+\newcommand{\fixmehl}[1]{\hl{#1}}
+% a fixme block
 \newcommand{\fixme}[1]{\todo[inline]{#1}}
+% a meta info block
 \newcommand{\metainfo}[1]{\todo[inline,backgroundcolor=yellow]{#1}}
 
 \linenumbers
@@ -350,12 +368,19 @@
 \usepackage{textcomp}
 
 
-% Comoditize citing DocDB (moved to defs, requires version number-Anne)
-%%% Note: this relies on the fact that DocDB is happy getting an empty
-%%% version= parameter.
-%%% So if user doesn't include a version, the link goes to the more
-%%% recent.
-% \citedocdb{12345}
-%% or
-% \citedocdb[3]{12345}
-%\newcommand{\citedocdb}[2][]{\href{https://docs.dunescience.org/cgi-bin/private/ShowDocument?docid=#2&version=#1}{DocDB #2}\cite{bib:docdb#2}\xspace}
+% Comoditize citing DocDB esp for interface documents in TDR.
+% Using "as of" allows us to control which version is associated with the TDR by date.
+\newcommand{\citedocdb}[1]{DocDB #1~\cite{bib:docdb#1}\xspace}
+%It requires bib entries with labels and urls of this form:
+%.      @article{bib:docdb6730,
+%      ....
+%.     note = "\url{https://docs.dunescience.org/cgi-bin/private/ShowDocument?docid=#1\&asof=2019-7-15} "}
+% To cite in text: \citedocdb{6730}
+
+
+% This is used for making row labels inside tables
+\makeatletter
+\newcommand\newtag[2]{#1\def\@currentlabel{#1}\label{#2}}
+\makeatother
+
+\usepackage{multirow}

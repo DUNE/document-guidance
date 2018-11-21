@@ -298,9 +298,11 @@ The TDR team will turn your Excel files into LaTeX and insert them into your cha
 \subsection{Interface Document Tables}
 \label{sec:tables-intfc}
 
-We have a standard table format for linking to interface documents in the DUNE docdb. In the first column, put the system to which you are interfacing; use the glossary entry for the system, if it exists. For the second column, we provide a macro to use to add linked references,  \verb|\citedocdb{}{}|. The first parameter is the interface document's docdb number, and the second is its version number. Both parameters are required. 
+We have a standard table format for linking to interface documents in the DUNE docdb. In the first column, put the system to which you are interfacing; use the glossary entry for the system, if it exists. For the second column, we provide a macro to use to add linked references,  \verb|\citedocdb{}|. The parameter is the interface document's docdb number. 
 
-The output of the macro is a hyperlink to the version of the document in the docdb followed by a citation.  The macro requires that the citation's label be of the form: \verb|bib:docdbNNNN|, where NNNN is the docdb number.
+The output of the macro is a hyperlink to the version of the document in the docdb followed by a citation.  The macro requires that the citation's label be of the form: \verb|bib:docdbNNNN|, where NNNN is the docdb number, and that the URL be of the form \\ \verb|https://docs.dunescience.org/cgi-bin/private/ShowDocument?docid=#1\&asof=2019-7-15|.
+
+\fixme{Hoping to find a way to use a macro for the date in the bib file in order to maintain it centrally. Anne 11/21}
 
 \begin{verbatim}
 \begin{dunetable}
@@ -309,9 +311,9 @@ The output of the macro is a hyperlink to the version of the document in the doc
 {tab:HVinterfaces}
 {High Voltage System Interface Links }   
 Interfacing System & Description & Linked Reference \\ \toprowrule
-\dword{cisc} & \dword{hv} vs. \dword{lar} level interlock, sensor locations in high-field regions, cold/warm camera coverage, \dword{hv} signal monitoring, etc. & \citedocdb{6787}{1}                  \\ \colhline
-... & & \citedocdb{nnnn}{n}                   \\ \colhline
-(last item)& & \citedocdb{}{}                 \\
+\dword{cisc} & \dword{hv} vs. \dword{lar} level interlock, sensor locations in high-field regions, cold/warm camera coverage, \dword{hv} signal monitoring, etc. & \citedocdb{6787}  \\ \colhline
+... & & \citedocdb{nnnn}                   \\ \colhline
+(last item)& & \citedocdb{}                \\
 \end{dunetable}
 \end{verbatim}
 
@@ -324,9 +326,9 @@ This is a reference to Table~\ref{tab:HVinterfaces} (\verb|\ref{tab:HVinterfaces
 {High Voltage System Interface Links }   
 Interfacing System & Description & Linked Reference \\ \toprowrule
 
-\dword{cisc} & \dword{hv} vs. \dword{lar} level interlock, sensor locations in high-field regions, cold/warm camera coverage, \dword{hv} signal monitoring, etc. & \citedocdb{6787}{1}                   \\ \colhline
- ... & & \citedocdb{nnnn}{n}                   \\ \colhline
-(last item)& & \citedocdb{}{}                 \\
+\dword{cisc} & \dword{hv} vs. \dword{lar} level interlock, sensor locations in high-field regions, cold/warm camera coverage, \dword{hv} signal monitoring, etc. & \citedocdb{6787} \\ \colhline
+ ... & & \citedocdb{nnnn}                   \\ \colhline
+(last item)& & \citedocdb{}                 \\
 \end{dunetable}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

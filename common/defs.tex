@@ -33,30 +33,30 @@
 
 % Things about oscillation
 %
-\newcommand{\numu}{$\nu_\mu$\xspace}
-\newcommand{\nue}{$\nu_e$\xspace}
-\newcommand{\nutau}{$\nu_\tau$\xspace}
+\newcommand{\numu}{\ensuremath{\nu_\mu}\xspace}
+\newcommand{\nue}{\ensuremath{\nu_e}\xspace}
+\newcommand{\nutau}{\ensuremath{\nu_\tau}\xspace}
 
-\newcommand{\anumu}{$\bar\nu_\mu$\xspace}
-\newcommand{\anue}{$\bar\nu_e$\xspace}
-\newcommand{\anutau}{$\bar\nu_\tau$\xspace}
+\newcommand{\anumu}{\ensuremath{\bar\nu_\mu}\xspace}
+\newcommand{\anue}{\ensuremath{\bar\nu_e}\xspace}
+\newcommand{\anutau}{\ensuremath{\bar\nu_\tau}\xspace}
 
-\newcommand{\dm}[1]{$\Delta m^2_{#1}$\xspace} % example: \dm{12}
+\newcommand{\dm}[1]{\ensuremath{\Delta m^2_{#1}}\xspace} % example: \dm{12}
 
-\newcommand{\sinst}[1]{$\sin^2\theta_{#1}$\xspace} % example \sinst{12}
-\newcommand{\sinstt}[1]{$\sin^22\theta_{#1}$\xspace}  % example \sinstt{12}
+\newcommand{\sinst}[1]{\ensuremath{\sin^2\theta_{#1}}\xspace} % example \sinst{12}
+\newcommand{\sinstt}[1]{\ensuremath{\sin^22\theta_{#1}}\xspace}  % example \sinstt{12}
 
-\newcommand{\deltacp}{$\delta_{\rm CP}$\xspace}   % example \deltacp
-\newcommand{\mdeltacp}{$\delta_{\rm CP}$}   %%%%%%%%%%  <--- missing something; what's the m for?
+\newcommand{\deltacp}{\ensuremath{\delta_{\rm CP}}\xspace}   % example \deltacp
+\newcommand{\mdeltacp}{\ensuremath{\delta_{\rm CP}}}   %%%%%%%%%%  <--- missing something; what's the m for?
 
-\newcommand{\nuxtonux}[2]{$\nu_{#1} \to \nu_{#2}$\xspace}  % example \nuxtonux23 (no {...} )
+\newcommand{\nuxtonux}[2]{\ensuremath{\nu_{#1} \to \nu_{#2}}\xspace}  % example \nuxtonux23 (no {...} )
 \newcommand{\numutonumu}{\nuxtonux{\mu}{\mu}}
 \newcommand{\numutonue}{\nuxtonux{\mu}{e}}
 % Add chi sqd MH?  avg delta chi sqd?
 
 % atmospheric neutrinos and PDK
-\newcommand{\ptoknubar}{$p \rightarrow K^+ \overline{\nu}$\xspace}
-\newcommand{\ptoepizero}{$p^+ \rightarrow e^+ \pi^0$\xspace}
+\newcommand{\ptoknubar}{\ensuremath{\rightarrow K^+ \overline{\nu}}\xspace}
+\newcommand{\ptoepizero}{\ensuremath{p^+ \rightarrow e^+ \pi^0}\xspace}
 
 % Names of expts or detectors
 \newcommand{\cherenkov}{Cherenkov\xspace}
@@ -189,19 +189,22 @@
 \def\elecnoisefe{ \num{1000} enc\xspace}
 % 3 light yield
 \def\lightyield{\SI{0.5}{pe/\MeV}\xspace}
+\def\lightyieldgoal{\SI{5}{pe/\MeV}\xspace}
 % 4 time resolution
 \def\timeres{\SI{1}{\mu/\s}\xspace}
+\def\timeresgoal{\SI{100}{ns}\xspace}
 % 5 LAr purity
 \def\larpurity{\SI{100}{ppt}\xspace}
 \def\larpuritygoal{\SI{30}{ppt}\xspace}
 % 6 APA gaps
-\def\apagap{\SI{20}{\milli\m}\xspace}
+\def\apagapsame{\SI{15}{\milli\m}\xspace}
+\def\apagapdiff{\SI{30}{\milli\m}\xspace}
 % 7 drift field uniformity (from component positioning)
 \def\fielduniformity{\SI{1}{\%}\xspace}
 % 8a APA collection wire angle
-\def\apacollwireangle{\SI{0}{^\circ}\xspace}
+\def\apacollwireangle{$\SI{0}{^\circ}$\xspace}
 % 8b APA induction wire angle
-\def\apainducwireangle{$\pm$\SI{35.7}{^\circ}\xspace}
+\def\apainducwireangle{$\pm\SI{35.7}{^\circ}$\xspace}
 % 9a APA wire pitch - U,V
 \def\uvpitch{\SI{4.669}{\milli\meter}\xspace}
 % 9b APA wire pitch - X, G
@@ -215,32 +218,33 @@
 % 13 FE peaking time
 \def\{\fepeaktime{SI{1}{\mu}s\xspace}
 % 14 signal saturation level (SP)
-\def\spsignalsat{\num{530000} electrons\xspace}
+\def\spsignalsat{\num{500000} electrons\xspace}
 % 15 LAr N contamination
 \def\nitrogencontam{\SI{25}{ppm}\xspace}
-% 16 detector live time
-\def\livetime{\SI{90}{\%}\xspace}
+% 16 detector dead time
+\def\deadtime{\SI{0.5}{\%}\xspace}
 % Engineering
 % 17 Cathode resistivity
-\def\cathodemegohm{\SI{1}{\mega\Omega/sq}\xspace}
+\def\cathodemegohm{\SI{1}{\mega\ohm/square}\xspace}
+\def\cathodegigohm{\SI{1}{\giga\ohm/square}\xspace}
 % 
 %\def\{\xspace}
 % 19 ADC sampling frequency
 \def\samplingfreq{\SI{2}{\mega\hertz}\xspace}
 % 20 ADC dynamic range
-\def\adcdynrange{\num{3000}:\num{1}\xspace}
-\def\adcdynrangegoal{\num{4070}:\num{1}\xspace}
+\def\adcdynrange{\num{12} bits}  %{3000}:\num{1}\xspace}
+\def\adcdynrangegoal{\num{13} bits} %{4070}:\num{1}\xspace}
 % 21 CE power consumption (SP)
 \def\cepower{\SI{50}{mW/channel}\xspace}
 % 22 data to tape
 \def\dataratetotape{\SI{30}{PB/year}\xspace}
 % 23 SNB trigger
 \def\snbtriggereff{90\% efficiency\xspace}
-\def\snbtriggervisenergy{90\% efficiency \xspace}
+%\def\snbtriggervisenergy{90\% efficiency \xspace}
 % 24 local E fields
 \def\localefield{\SI{30}{\kV/\cm}\xspace}
 % 25 non-FE noise contributions
-\def\elecnoisenonfe{$\ll$ \SI{500}{enc}\xspace}
+\def\elecnoisenonfe{$\ll$ \SI{1000}{enc}\xspace}
 % 26 impurity contrib from components
 \def\larpuritycomps{$\ll$ \SI{30}{ppt}\xspace}
 % 28 dead channels
@@ -264,12 +268,9 @@
 \newcommand{\phel}{photoelectron\xspace}
 \newcommand{\pwrsupp}{power supply\xspace}
 \newcommand{\pwrsupps}{power supplies\xspace}
+\newcommand{\frfour}{FR-4\xspace}
 
-% For interface tables in TDR:
-\newcommand{\citedocdb}[2]{
-\href{http://docs.dunescience.org/cgi-bin/ShowDocument?docid=#1\&version=#2}{DocDB {#1}} \cite{bib:docdb#1}
-\xspace}  % example of use: \citedocdb{6745}{1}
+% For interface tables in TDR:  (Brett put in dune.cls instead)
+%\newcommand{\citedocdb}[2]{
+%\href{http://docs.dunescience.org/cgi-bin/ShowDocument?docid=#1\&version=#2}{DocDB {#1}} \cite{bib:docdb#1}\xspace}  % example of use: \citedocdb{6745}{1}
 
-%detector components SP only
-
-%detector components DP only

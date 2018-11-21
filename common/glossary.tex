@@ -126,6 +126,11 @@
   meet the sense wires of the TPC and the front-end DAQ is where the
   DAQ meets the output of the electronics}
 
+\newduneabbrev{daqrou}{RU}{DAQ readout units}{The first element in the data flow of the DAQ.}
+
+\newduneabbrev{cots}{COTS}{commercial off-the-shelf}{Items, typically hardware such as computers, which may be purchased whole, without any custom design or fabrication and thus at normal consumer prices and availability.}
+
+
 %analog digital converter
 \newduneabbrev{adc}{ADC}{analog-to-digital converter}{A sampling of a voltage
   resulting in a discrete integer count corresponding in some way to
@@ -240,10 +245,21 @@
 \newduneabbrev{tpm}{TPM}{trigger primitive message}{A message flowing
   up the trigger hierarchy from local to global context.  Also see \gls{tcm}}
 
+\newduneabbrev{ipc}{IPC}{inter-process communication}{A system for software elements to exchange information between threads, local processes or across a data network.  An IPC system is typically specified in terms of protocols  composed of message types and their associated data schema.}
+
+\newduneword{daqdispre}{discovery and presence}{As used in the context of the \gls{ipc}, a system which provides mechanisms for a node on a communication network to learn of the existence of peers and their identity (discovery) as well as determine if they are currently operational or have become unresponsive (presence).}
+
+\newduneabbrev{pubsub}{PUB/SUB}{publish-subscribe communication pattern}{An \gls{ipc} communication pattern where one element, the publisher, sends data to all connected elements, the subscribers.  Each subscriber may connect to multiple publishers.  A variant is PUB/SUB with topics where a subscriber may register an identifier, the topic, to limit the information received to just an associated subset.}
+
 %event builder
 \newduneabbrev{eb}{EB}{event builder}{A software agent servicing one
   \gls{detmodule} by executing \glspl{trigcommand} by reading out
   the requested data}
+
+\newduneabbrev{daqdfo}{DFO}{Dataflow Orchestration}{The process by which trigger commands are executed in parallel and asynchronous manner by the back-end egress subsystem of the DAQ.}
+
+% yes, this is a silly name
+\newduneabbrev{daqfbi}{FBI}{Front-end Buffer Interfaces}{The process which provides read-only access to data residing in a front-end's buffers to processes on the network.}
 
 %cluster on board
 \newduneabbrev{cob}{COB}{Cluster On Board}{An ATCA motherboard housing four RCEs}
@@ -331,7 +347,8 @@ span a contiguous period of time as requested by a \gls{trigcommand}}
 %data selector
 \newduneword{daqds}{data selector}{The portion of the \gls{daqfrag}
   that accepts \glspl{trigcommand} and returns the corresponding
-  \gls{datafrag}}
+  \gls{datafrag}.  Not to be confused with \gls{daqdsn}.}
+\newduneword{daqdsn}{data selection}{The process of forming a trigger decision for selecting a subset of detector data for output by the DAQ from the content of the detector data itself.  Not to be confused with \gls{daqds}.}
 
 %front-end mother board
 \newduneabbrev{femb}{FEMB}{front-end mother board}{Refers a unit of
@@ -413,6 +430,13 @@ span a contiguous period of time as requested by a \gls{trigcommand}}
 %run control ------- fixme: maybe another sentence
 \newduneabbrev{rc}{RC}{run control}{The system for configuring,
   starting and terminating the DAQ}
+
+\newduneabbrev{ccm}{CCM}{control, configuration and monitoring}{A system for controlling, configuring and monitoring other systems in particular those that make up the DAQ where the CCM encompasses \gls{rc}.}
+
+\newduneword{daqrun}{DAQ run}{A period of time over which relevant data taking conditions and DAQ configuration are asserted to be unchanged. 
+  Multiple DAQ runs may occur simultaneously when multiple \glspl{daqpart} are active. 
+  This term should not be confused with DUNE experiment or beam ``runs'' which typically span many DAQ runs.}
+\newduneword{daqrunnum}{DAQ run number}{A monotonic increasing count which uniquely and globally identifies a \gls{daqrun}.}
 
 %supernova neutrino burst  
 \newduneabbrev{snb}{SNB}{supernova neutrino burst}{A prompt 
@@ -620,6 +644,8 @@ milestone on the path to a full \gls{tdr}} % changed from ``technical proposal''
 \newduneabbrevs{cpa}{CPA}{cathode plane assembly}{cathode plane assemblies}{The component of the \single detector module that provides the drift HV cathode}
 
 \newduneabbrev{fc}{FC}{field cage}{The component of a LArTPC that contains and shapes the applied \efield}
+
+\newduneword{cpafc}{CPA/FC}{A pair of \gls{cpa} panels and the top and bottom \gls{fc} portions that attach to the pair; an intermediate assembly for installation into the \gls{spmod} }
 
 \newduneabbrev{topfc}{top FC}{top field cage}{The horizontal portions of the \single FC on the top}
 
@@ -912,3 +938,14 @@ milestone on the path to a full \gls{tdr}} % changed from ``technical proposal''
 
 \newduneword{fss}{FSS}{field shaping strips}
 \newduneword{lvds}{LVDS}{low-voltage differential signaling}
+
+
+%electrostatic discharge
+\newduneword{esd}{ESD}{electrostatic discharge}%{ESD is the sudden flow of electricity between two electrically charged objects caused by contact, an electrical short, or dielectric breakdown. ESD can cause failure of electronic components such as integrated circuits}
+
+\newduneabbrev{rp}{RP}{resistive panel}{Resistive panels form the constant potential surfaces for a \gls{spmod} \gls{cpa}; they are composed of a thin layer of carbon-impregnated Kapton and laminated to both sides of a \frfour sheet. }
+
+\newduneword{uhmwpe}{UHMWPE}{ultra-high molecular weight polyethylene}
+
+\newduneword{cts}{CTS}{Cryogenic Test System}
+\newduneword{plc}{PLC}{programmable logic controller}

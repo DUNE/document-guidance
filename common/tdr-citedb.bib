@@ -16,6 +16,8 @@ in this file; please read through it before adding citations!
 
  - List DocDB notes like:
 
+
+
 @BOOK{strunk,
    author = {Strunk, Jr., William and E. B. White},
    title = "{The Elements of Style}",
@@ -26,11 +28,11 @@ in this file; please read through it before adding citations!
 
 @techreport{tdr-vol-1,
 title = "{TDR Volume 1: The LBNF and DUNE Projects}",
-collaboration = {{DUNE}},
+fcollaboration = {{DUNE}},
 year = {2018},
 note = "\url{http://docs.dunescience.org/cgi-bin/ShowDocument?docid=nnnn}"
 }
-
+	   
 To make anything literal, surround it in {}'s.
 
 A note on comments:  
@@ -4876,17 +4878,39 @@ author = "Dieter Rein and Lalit M. Sehgal"
       reportNumber   = "FERMILAB-PUB-15-075-ND",
       SLACcitation   = "%%CITATION = ARXIV:1503.02107;%%",
 }
-@unpublished{Eberly:2014mra,
+
+@article{Sobczyk:2017mts,
+      author         = "Sobczyk, Joanna Ewa",
+      title          = "{Intercomparison of lepton-nucleus scattering models in
+                        the quasielastic region}",
+      journal        = "Phys. Rev.",
+      volume         = "C96",
+      year           = "2017",
+      number         = "4",
+      pages          = "045501",
+      doi            = "10.1103/PhysRevC.96.045501",
+      eprint         = "1706.06739",
+      archivePrefix  = "arXiv",
+      primaryClass   = "nucl-th",
+      SLACcitation   = "%%CITATION = ARXIV:1706.06739;%%"
+}
+
+@article{Eberly:2014mra,
       author         = "Eberly, B. and others",
-      title          = "{Charged Pion Production in $\nu_\mu$ Interactions on
-                        Hydrocarbon at $\langle E_{\nu}\rangle$= 4.0 GeV}",
+      title          = "{Charged pion production in $\nu_\mu$ interactions on
+                        hydrocarbon at $\langle E_{\nu}\rangle$= 4.0 GeV}",
       collaboration  = "MINERvA",
-      year           = "2014",
+      journal        = "Phys. Rev.",
+      volume         = "D92",
+      year           = "2015",
+      number         = "9",
+      pages          = "092008",
+      doi            = "10.1103/PhysRevD.92.092008",
       eprint         = "1406.6415",
       archivePrefix  = "arXiv",
       primaryClass   = "hep-ex",
       reportNumber   = "FERMILAB-PUB-14-193-E",
-      SLACcitation   = "%%CITATION = ARXIV:1406.6415;%%",
+      SLACcitation   = "%%CITATION = ARXIV:1406.6415;%%"
 }
 
 @article{Qian:2012zn,
@@ -5188,16 +5212,25 @@ author = "Dieter Rein and Lalit M. Sehgal"
       reportNumber   = "FERMILAB-PUB-11-183-E, BNL-95065-2011-JA",
       SLACcitation   = "%%CITATION = ARXIV:1104.3922;%%",
 }
-@unpublished{Sousa:2015bxa,
-      author         = "Sousa, Alexandre",
+
+@article{Sousa:2015bxa,
+      author         = "Sousa, Alexandre B.",
       title          = "{First MINOS+ Data and New Results from MINOS}",
-      collaboration  = "MINOS, MINOS+",
+      booktitle      = "{Proceedings, 26th International Conference on Neutrino
+                        Physics and Astrophysics (Neutrino 2014): Boston,
+                        Massachusetts, United States, June 2-7, 2014}",
+      collaboration  = "MINOS+, MINOS",
+      journal        = "AIP Conf. Proc.",
+      volume         = "1666",
       year           = "2015",
+      pages          = "110004",
+      doi            = "10.1063/1.4915576",
       eprint         = "1502.07715",
       archivePrefix  = "arXiv",
       primaryClass   = "hep-ex",
-      SLACcitation   = "%%CITATION = ARXIV:1502.07715;%%",
+      SLACcitation   = "%%CITATION = ARXIV:1502.07715;%%"
 }
+
 
 @unpublished{Machado:2011wx,
       author         = "Machado, P.A.N. and Nunokawa, H. and Santos, F.A. Pereira
@@ -5426,16 +5459,25 @@ author = "Dieter Rein and Lalit M. Sehgal"
       reportNumber   = "IFIC-11-09",
       SLACcitation   = "%%CITATION = ARXIV:1103.1366;%%",
 }
-@unpublished{Zhang:2015fya,
+
+@article{Zhang:2015fya,
       author         = "Zhang, Chao",
-      title          = "{Recent Results From The Daya Bay Experiment}",
+      title          = "{Recent Results from the Daya Bay Experiment}",
+      booktitle      = "{Proceedings, 26th International Conference on Neutrino
+                        Physics and Astrophysics (Neutrino 2014): Boston,
+                        Massachusetts, United States, June 2-7, 2014}",
       collaboration  = "Daya Bay",
+      journal        = "AIP Conf. Proc.",
+      volume         = "1666",
       year           = "2015",
+      pages          = "080003",
+      doi            = "10.1063/1.4915564",
       eprint         = "1501.04991",
       archivePrefix  = "arXiv",
       primaryClass   = "hep-ex",
-      SLACcitation   = "%%CITATION = ARXIV:1501.04991;%%",
+      SLACcitation   = "%%CITATION = ARXIV:1501.04991;%%"
 }
+
 @article{Jarlskog:1985cw,
       author         = "Jarlskog, C.",
       title          = "{A Basis Independent Formulation of the Connection
@@ -5683,19 +5725,9 @@ author = "Dieter Rein and Lalit M. Sehgal"
       SLACcitation   = "%%CITATION = ASTRO-PH/0010398;%%",
 }
 
-@unpublished{Fischer:2008rh,
-     author    = "Fischer, T. and Whitehouse, S. C. and Mezzacappa, A. and
-                  Thielemann, F. -K. and Liebendorfer, M.",
-     title     = "{The neutrino signal from protoneutron star accretion and
-                  black hole formation}",
-     year      = "2008",
-     eprint    = "0809.5129",
-     archivePrefix = "arXiv",
-     primaryClass  =  "astro-ph",
-     SLACcitation  = "%%CITATION = 0809.5129;%%"
-}
 
-@unpublished{Schirato:2002tg,
+
+@article{Schirato:2002tg,
       author         = "Schirato, Richard C. and Fuller, George M.",
       title          = "{Connection between supernova shocks, flavor
                         transformation, and the neutrino signal}",
@@ -5704,7 +5736,7 @@ author = "Dieter Rein and Lalit M. Sehgal"
       archivePrefix  = "arXiv",
       primaryClass   = "astro-ph",
       reportNumber   = "LA-UR-02-3068",
-      SLACcitation   = "%%CITATION = ASTRO-PH/0205390;%%",
+      SLACcitation   = "%%CITATION = ASTRO-PH/0205390;%%"
 }
 
 @article{Hanke:2013ena,
@@ -5739,16 +5771,22 @@ author = "Dieter Rein and Lalit M. Sehgal"
       SLACcitation   = "%%CITATION = ARXIV:1108.4355;%%",
 }
 
-@unpublished{Lund:2013uta,
+@article{Lund:2013uta,
       author         = "Lund, Tina and Kneller, James P.",
       title          = "{Combining collective, MSW, and turbulence effects in
                         supernova neutrino flavor evolution}",
+      journal        = "Phys. Rev.",
+      volume         = "D88",
       year           = "2013",
+      number         = "2",
+      pages          = "023008",
+      doi            = "10.1103/PhysRevD.88.023008",
       eprint         = "1304.6372",
       archivePrefix  = "arXiv",
       primaryClass   = "astro-ph.HE",
-      SLACcitation   = "%%CITATION = ARXIV:1304.6372;%%",
+      SLACcitation   = "%%CITATION = ARXIV:1304.6372;%%"
 }
+
 
 @unpublished{Friedland:2006ta,
       author         = "Friedland, Alexander and Gruzinov, Andrei",
@@ -5847,7 +5885,7 @@ author = "Dieter Rein and Lalit M. Sehgal"
       primaryClass   = "astro-ph.HE",
 }
 
-@unpublished{Choubey:2010up,
+@article{Choubey:2010up,
       author         = "Choubey, Sandhya and Dasgupta, Basudeb and Dighe, Amol
                         and Mirizzi, Alessandro",
       title          = "{Signatures of collective and matter effects on supernova
@@ -5856,6 +5894,23 @@ author = "Dieter Rein and Lalit M. Sehgal"
       eprint         = "1008.0308",
       archivePrefix  = "arXiv",
       primaryClass   = "hep-ph",
+      reportNumber   = "TIFR-TH-10-20",
+      SLACcitation   = "%%CITATION = ARXIV:1008.0308;%%"
+}
+@article{Fischer:2008rh,
+      author         = "Fischer, T. and Whitehouse, S. C. and Mezzacappa, A. and
+                        Thielemann, F. -K. and Liebendorfer, M.",
+      title          = "{The neutrino signal from protoneutron star accretion and
+                        black hole formation}",
+      journal        = "Astron. Astrophys.",
+      volume         = "499",
+      year           = "2009",
+      pages          = "1",
+      doi            = "10.1051/0004-6361/200811055",
+      eprint         = "0809.5129",
+      archivePrefix  = "arXiv",
+      primaryClass   = "astro-ph",
+      SLACcitation   = "%%CITATION = ARXIV:0809.5129;%%"
 }
 @article{Dasgupta:2009mg,
       author         = "Dasgupta, Basudeb and Dighe, Amol and Raffelt, Georg G.
@@ -7156,6 +7211,7 @@ note = {DUNE DocDB 112}
 title = "{Low-Energy Backgrounds}",
 author = {{Gehman, V.M. and others}},
 year = {2014},
+collaboration = {{DUNE}},
 note = {LBNE DocDB 9470}
 }
 
@@ -7950,16 +8006,13 @@ url = "{http://microboone.fnal.gov/wp-content/uploads/MICROBOONE-NOTE-1028-PUB.p
       SLACcitation   = "%%CITATION = ARXIV:0812.2373;%%"
 }
 
-
-
 @techreport{fields_doc_2901,
 title = "{Beam Optimization Task Force Final Report}",
 author = {{Fields, L. and Weber, A.  for the Beam Optimization Task Force}},
+collaboration = {{DUNE}},
 year = {2017},
-note = {DUNE DocDB 2901}
+note = "\url{https://docs.dunescience.org/cgi-bin/private/ShowDocument?docid=2901}"
 }
-
-
 
 @article{Zeller:2013sva,
       author         = "Zeller, M. and others",
@@ -9611,3 +9664,502 @@ year = {2018},
 note = "\url{http://docs.dunescience.org/cgi-bin/ShowDocument?docid=7117&version=1}"
 }
 
+@phdthesis{Duffy:2016owt,
+      author         = "Duffy, Kirsty Elizabeth",
+      title          = "{Measurement of the neutrino oscillation parameters
+                        sin2θ23, ∆m232, sin2θ13, and δCP in neutrino and
+                        antineutrino oscillation at T2K}",
+      school         = "Oxford U.",
+      year           = "2016",
+      doi            = "10.1007/978-3-319-65040-1",
+      reportNumber   = "T2K-THESIS-078",
+      SLACcitation   = "%%CITATION = T2K-THESIS-078;%%"
+}
+ 
+@article{Benhar:1994hw,
+      author         = "Benhar, O. and Fabrocini, A. and Fantoni, S. and Sick,
+                        I.",
+      title          = "{Spectral function of finite nuclei and scattering of GeV
+                        electrons}",
+      journal        = "Nucl. Phys.",
+      volume         = "A579",
+      year           = "1994",
+      pages          = "493-517",
+      doi            = "10.1016/0375-9474(94)90920-2",
+      SLACcitation   = "%%CITATION = NUPHA,A579,493;%%"
+}
+ 
+@article{Nieves:2004wx,
+      author         = "Nieves, J. and Amaro, Jose Enrique and Valverde, M.",
+      title          = "{Inclusive quasi-elastic neutrino reactions}",
+      journal        = "Phys. Rev.",
+      volume         = "C70",
+      year           = "2004",
+      pages          = "055503",
+      doi            = "10.1103/PhysRevC.70.055503, 10.1103/PhysRevC.72.019902",
+      note           = "[Erratum: Phys. Rev.C72,019902(2005)]",
+      eprint         = "nucl-th/0408005",
+      archivePrefix  = "arXiv",
+      primaryClass   = "nucl-th",
+      SLACcitation   = "%%CITATION = NUCL-TH/0408005;%%"
+}
+ 
+@article{Gallmeister:2016dnq,
+      author         = "Gallmeister, K. and Mosel, U. and Weil, J.",
+      title          = "{Neutrino-Induced Reactions on Nuclei}",
+      journal        = "Phys. Rev.",
+      volume         = "C94",
+      year           = "2016",
+      number         = "3",
+      pages          = "035502",
+      doi            = "10.1103/PhysRevC.94.035502",
+      eprint         = "1605.09391",
+      archivePrefix  = "arXiv",
+      primaryClass   = "nucl-th",
+      SLACcitation   = "%%CITATION = ARXIV:1605.09391;%%"
+}
+ 
+@article{Pandey:2014tza,
+      author         = "Pandey, V. and Jachowicz, N. and Van Cuyck, T. and
+                        Ryckebusch, J. and Martini, M.",
+      title          = "{Low-energy excitations and quasielastic contribution to
+                        electron-nucleus and neutrino-nucleus scattering in the
+                        continuum random-phase approximation}",
+      journal        = "Phys. Rev.",
+      volume         = "C92",
+      year           = "2015",
+      number         = "2",
+      pages          = "024606",
+      doi            = "10.1103/PhysRevC.92.024606",
+      eprint         = "1412.4624",
+      archivePrefix  = "arXiv",
+      primaryClass   = "nucl-th",
+      SLACcitation   = "%%CITATION = ARXIV:1412.4624;%%"
+}
+
+@article{Meyer:2016oeg,
+      author         = "Meyer, Aaron S. and Betancourt, Minerba and Gran, Richard
+                        and Hill, Richard J.",
+      title          = "{Deuterium target data for precision neutrino-nucleus
+                        cross sections}",
+      journal        = "Phys. Rev.",
+      volume         = "D93",
+      year           = "2016",
+      number         = "11",
+      pages          = "113015",
+      doi            = "10.1103/PhysRevD.93.113015",
+      eprint         = "1603.03048",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ph",
+      reportNumber   = "FERMILAB-PUB-16-185-ND-T",
+      SLACcitation   = "%%CITATION = ARXIV:1603.03048;%%"
+}
+
+@article{Rodrigues:2015hik,
+      author         = "Rodrigues, P. A. and others",
+      title          = "{Identification of nuclear effects in neutrino-carbon
+                        interactions at low three-momentum transfer}",
+      collaboration  = "MINERvA",
+      journal        = "Phys. Rev. Lett.",
+      volume         = "116",
+      year           = "2016",
+      pages          = "071802",
+      doi            = "10.1103/PhysRevLett.116.071802",
+      eprint         = "1511.05944",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ex",
+      reportNumber   = "FERMILAB-PUB-15-498-ND",
+      SLACcitation   = "%%CITATION = ARXIV:1511.05944;%%"
+}
+
+@article{Colle:2015ena,
+      author         = "Colle, C. and Hen, O. and Cosyn, W. and Korover, I. and
+                        Piasetzky, E. and Ryckebusch, J. and Weinstein, L. B.",
+      title          = "{Extracting the mass dependence and quantum numbers of
+                        short-range correlated pairs from $A(e,e′p)$ and
+                        $A(e,e′pp)$ scattering}",
+      journal        = "Phys. Rev.",
+      volume         = "C92",
+      year           = "2015",
+      number         = "2",
+      pages          = "024604",
+      doi            = "10.1103/PhysRevC.92.024604",
+      eprint         = "1503.06050",
+      archivePrefix  = "arXiv",
+      primaryClass   = "nucl-th",
+      SLACcitation   = "%%CITATION = ARXIV:1503.06050;%%"
+}
+
+
+@article{Amaro:2017eah,
+      author         = "Amaro, J. E. and Barbaro, M. B. and Caballero, J. A. and
+                        De Pace, A. and Donnelly, T. W. and Megias, G. D. and Ruiz
+                        Simo, I.",
+      title          = "{Density dependence of 2p-2h meson-exchange currents}",
+      journal        = "Phys. Rev.",
+      volume         = "C95",
+      year           = "2017",
+      number         = "6",
+      pages          = "065502",
+      doi            = "10.1103/PhysRevC.95.065502",
+      eprint         = "1704.01539",
+      archivePrefix  = "arXiv",
+      primaryClass   = "nucl-th",
+      SLACcitation   = "%%CITATION = ARXIV:1704.01539;%%"
+}
+
+@article{Rodrigues:2016xjj,
+      author         = "Rodrigues, Philip and Wilkinson, Callum and McFarland,
+                        Kevin",
+      title          = "{Constraining the GENIE model of neutrino-induced single
+                        pion production using reanalyzed bubble chamber data}",
+      journal        = "Eur. Phys. J.",
+      volume         = "C76",
+      year           = "2016",
+      number         = "8",
+      pages          = "474",
+      doi            = "10.1140/epjc/s10052-016-4314-3",
+      eprint         = "1601.01888",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ex",
+      SLACcitation   = "%%CITATION = ARXIV:1601.01888;%%"
+}
+
+@article{Altinok:2017xua,
+      author         = "Altinok, O. and others",
+      title          = "{Measurement of $\nu_{\mu}$ charged-current single
+                        $\pi^{0}$ production on hydrocarbon in the few-GeV region
+                        using MINERvA}",
+      collaboration  = "MINERvA",
+      journal        = "Phys. Rev.",
+      volume         = "D96",
+      year           = "2017",
+      number         = "7",
+      pages          = "072003",
+      doi            = "10.1103/PhysRevD.96.072003",
+      eprint         = "1708.03723",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ex",
+      reportNumber   = "FERMILAB-PUB-17-220-ND",
+      SLACcitation   = "%%CITATION = ARXIV:1708.03723;%%"
+}
+
+
+@article{McGivern:2016bwh,
+      author         = "McGivern, C. L. and others",
+      title          = "{Cross sections for $\nu_\mu$ and $\bar \nu_\mu$ induced
+                        pion production on hydrocarbon in the few-GeV region using
+                        MINERvA}",
+      collaboration  = "MINERvA",
+      journal        = "Phys. Rev.",
+      volume         = "D94",
+      year           = "2016",
+      number         = "5",
+      pages          = "052005",
+      doi            = "10.1103/PhysRevD.94.052005",
+      eprint         = "1606.07127",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ex",
+      reportNumber   = "FERMILAB-PUB-16-228-ND",
+      SLACcitation   = "%%CITATION = ARXIV:1606.07127;%%"
+}
+
+@article{Mislivec:2017qfz,
+      author         = "Mislivec, A. and others",
+      title          = "{Measurement of total and differential cross sections of
+                        neutrino and antineutrino coherent $\pi^\pm$ production on
+                        carbon}",
+      collaboration  = "MINERvA",
+      journal        = "Phys. Rev.",
+      volume         = "D97",
+      year           = "2018",
+      number         = "3",
+      pages          = "032014",
+      doi            = "10.1103/PhysRevD.97.032014",
+      eprint         = "1711.01178",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ex",
+      reportNumber   = "FERMILAB-PUB-17-504-E",
+      SLACcitation   = "%%CITATION = ARXIV:1711.01178;%%"
+}
+
+@unpublished{optimizedbeamcdr,
+       author = {Phil Adamson and others},
+collaboration = {LBNF/DUNE},
+title =  "{Long-Baseline Neutrino Facility (LBNF)/DUNE
+Conceptual Design Report: Annex 3A\_opt}",
+year = {2017},
+note = {\url{https://docs.dunescience.org/cgi-bin/private/RetrieveFile?docid=4559&filename=CDR_Optimized_Beam_Oct02.pdf&version=12}},
+}
+
+@article{nieves1,
+        title = {Inclusive charged-current neutrino-nucleus reactions},
+        author = {Nieves, J. and Simo, I. Ruiz and Vacas, M. J. Vicente},
+        journal = {Phys. Rev. C},
+        volume = {83},
+        issue = {4}, 
+        pages = {045501},
+        numpages = {19},
+        year = {2011},
+        month = {Apr},
+        publisher = {American Physical Society},
+        doi = {10.1103/PhysRevC.83.045501},
+        eprint = {https://link.aps.org/doi/10.1103/PhysRevC.83.045501}
+}
+
+@article{nieves2,
+title = {Neutrino-nucleus quasi-elastic and 2p2h interactions up to 10 GeV},
+author = {Gran, R. and Nieves, J. and Sanchez, F. and Vacas, M. J. Vicente},
+journal = {Phys. Rev. D},
+volume = {88},
+issue = {11},
+pages = {113007},
+numpages = {10},
+year = {2013},
+month = {Dec},
+publisher = {American Physical Society},
+doi = {10.1103/PhysRevD.88.113007},
+eprint = {https://link.aps.org/doi/10.1103/PhysRevD.88.113007}
+}
+
+@article{llewelyn-smith,
+        title = "Neutrino reactions at accelerator energies",
+        journal = "Physics Reports",
+        volume = "3", 
+        number = "5", 
+        pages = "261 - 379",
+        year = "1972",
+        issn = "0370-1573",
+        doi = "https://doi.org/10.1016/0370-1573(72)90010-5",
+        eprint = "http://www.sciencedirect.com/science/article/pii/0370157372900105",
+        author = "C.H. Llewellyn Smith"
+}
+
+@article{RikRPA,
+      author         = "Gran, Richard",
+      title          = "{Model Uncertainties for Valencia RPA Effect for
+                        MINERvA}",
+      year           = "2017",
+      eprint         = "1705.02932",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ex",
+      reportNumber   = "FERMILAB-FN-1030-ND",
+      SLACcitation   = "%%CITATION = ARXIV:1705.02932;%%"
+}
+
+@article{nieves_uncert,
+title = "Theoretical uncertainties on quasielastic charged-current neutrino–nucleus cross sections",
+journal = "Physics Letters B",
+volume = "638",
+number = "4",
+pages = "325 - 332",
+year = "2006",
+issn = "0370-2693",
+doi = "https://doi.org/10.1016/j.physletb.2006.05.053",
+url = "http://www.sciencedirect.com/science/article/pii/S0370269306006344",
+author = "M. Valverde and J.E. Amaro and J. Nieves"
+}
+
+@article{t2k_2018,
+      author         = "Abe, K. and others",
+      title          = "{Search for CP violation in Neutrino and Antineutrino
+                        Oscillations by the T2K experiment with $2.2\times10^{21}$
+                        protons on target}",
+      collaboration  = "T2K",
+      year           = "2018",
+      eprint         = "1807.07891",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ex",
+      SLACcitation   = "%%CITATION = ARXIV:1807.07891;%%"
+}
+
+@article{bodek_eb,
+      author         = "Bodek, A.",
+      title          = "{Removal and Binding Energies in Lepton Nucleus
+                        Scattering}",
+      year           = "2018",
+      eprint         = "1801.07975",
+      archivePrefix  = "arXiv",
+      primaryClass   = "nucl-th",
+      SLACcitation   = "%%CITATION = ARXIV:1801.07975;%%"
+}
+
+@proceedings{bodek_talk,
+      author         = "Bodek, A.",
+      title          = "{Removal and Binding Energies in Lepton Nucleus Scattering}",
+      conference	= "{NuFact 2018}",
+      url = "{
+https://indico.phys.vt.edu/event/34/contributions/656/attachments/477/731/binding-energy-nufact-2018.pdf}"
+}
+
+@article{minos_pi_q2,
+  title = {Study of quasielastic scattering using charged-current ${\ensuremath{\nu}}_{\ensuremath{\mu}}$-iron interactions in the MINOS near detector},
+  author = {Adamson, P. and Anghel, I. and Aurisano, A. and Barr, G. and Bishai, M. and Blake, A. and Bock, G. J. and Bogert, D. and Cao, S. V. and Castromonte, C. M. and Childress, S. and Coelho, J. A. B. and Corwin, L. and Cronin-Hennessy, D. and de Jong, J. K. and Devan, A. V. and Devenish, N. E. and Diwan, M. V. and Escobar, C. O. and Evans, J. J. and Falk, E. and Feldman, G. J. and Frohne, M. V. and Gallagher, H. R. and Gomes, R. A. and Goodman, M. C. and Gouffon, P. and Graf, N. and Gran, R. and Grzelak, K. and Habig, A. and Hahn, S. R. and Hartnell, J. and Hatcher, R. and Holin, A. and Huang, J. and Hylen, J. and Irwin, G. M. and Isvan, Z. and James, C. and Jensen, D. and Kafka, T. and Kasahara, S. M. S. and Koizumi, G. and Kordosky, M. and Kreymer, A. and Lang, K. and Ling, J. and Litchfield, P. J. and Lucas, P. and Mann, W. A. and Marshak, M. L. and Mayer, N. and McGivern, C. and Medeiros, M. M. and Mehdiyev, R. and Meier, J. R. and Messier, M. D. and Miller, W. H. and Mishra, S. R. and Moed Sher, S. and Moore, C. D. and Mualem, L. and Musser, J. and Naples, D. and Nelson, J. K. and Newman, H. B. and Nichol, R. J. and Nowak, J. A. and O'Connor, J. and Orchanian, M. and Pahlka, R. B. and Paley, J. and Patterson, R. B. and Pawloski, G. and Perch, A. and Pf\"utzner, M. and Phan-Budd, S. and Plunkett, R. K. and Poonthottathil, N. and Qiu, X. and Radovic, A. and Rebel, B. and Rosenfeld, C. and Rubin, H. A. and Sanchez, M. C. and Schneps, J. and Schreckenberger, A. and Schreiner, P. and Sharma, R. and Sousa, A. and Tagg, N. and Talaga, R. L. and Thomas, J. and Thomson, M. A. and Tian, X. and Timmons, A. and Tognini, S. C. and Toner, R. and Torretta, D. and Urheim, J. and Vahle, P. and Viren, B. and Walding, J. J. and Weber, A. and Webb, R. C. and White, C. and Whitehead, L. and Whitehead, L. H. and Wojcicki, S. G. and Zwaska, R.},
+  collaboration = {MINOS Collaboration},
+  journal = {Phys. Rev. D},
+  volume = {91},
+  issue = {1},
+  pages = {012005},
+  numpages = {20},
+  year = {2015},
+  month = {Jan},
+  publisher = {American Physical Society},
+  doi = {10.1103/PhysRevD.91.012005},
+  url = {https://link.aps.org/doi/10.1103/PhysRevD.91.012005}
+}
+
+@InProceedings{nova_2018,
+  author = 	 {Sanchez, Mayly},
+  title = 	 {NOvA Results and Prospects},
+  booktitle = {XXVIII International Conference on Neutrino Physics and Astrophysics (Neutrino 2018)},
+  year = 	 {2018},
+  month = 	 {June},
+  publisher = {Zenodo},
+  note = 	 {\url{https://zenodo.org/record/1286758}},
+  DOI={10.5281/zenodo.1286758},
+ }
+
+@PhdThesis{StowellThesis,
+  author = 	 {P. Stowell},
+   school = 	 {University of Sheffield},
+  year = 	 {2018},
+  OPTnote = 	 {},
+}
+
+@article{minoo,
+  title = {Single pion production in neutrino-nucleon interactions},
+  author = {Kabirnezhad, M.},
+  journal = {Phys. Rev. D},
+  volume = {97},
+  issue = {1},
+  pages = {013002},
+  numpages = {18},
+  year = {2018},
+  month = {Jan},
+  publisher = {American Physical Society},
+  doi = {10.1103/PhysRevD.97.013002},
+  url = {https://link.aps.org/doi/10.1103/PhysRevD.97.013002}
+}
+
+% NOVA CVN paper
+@article{novacvn,
+  author={A Aurisano and
+          Alexander Radovic and
+          D Rocco and
+          A Himmel and 
+          M D Messier and 
+          E Niner and 
+          G Pawloski and 
+          F Psihas and 
+          A Sousa and 
+          P Vahle},
+  title={A convolutional neural network neutrino event classifier},
+  journal={Journal of Instrumentation},
+  volume={11},
+  number={09},
+  pages={P09001},
+  url={http://stacks.iop.org/1748-0221/11/i=09/a=P09001},
+  year={2016},
+}
+
+% Google network
+@article{GoogLeNet,
+  author    = {Christian Szegedy and
+               Wei Liu and
+               Yangqing Jia and
+               Pierre Sermanet and
+               Scott E. Reed and
+               Dragomir Anguelov and
+               Dumitru Erhan and
+               Vincent Vanhoucke and
+               Andrew Rabinovich},
+  title     = {Going Deeper with Convolutions},
+  journal   = {CoRR},
+  volume    = {abs/1409.4842},
+  year      = {2014},
+  url       = {http://arxiv.org/abs/1409.4842},
+  archivePrefix = {arXiv},
+  eprint    = {1409.4842},
+  timestamp = {Wed, 07 Jun 2017 14:40:42 +0200},
+  biburl    = {https://dblp.org/rec/bib/journals/corr/SzegedyLJSRAEVR14},
+  bibsource = {dblp computer science bibliography, https://dblp.org}
+}
+
+% References for CVN event selection section
+@article{He-et-al-2015-deep,
+  author    = {Kaiming He and
+               Xiangyu Zhang and
+               Shaoqing Ren and
+               Jian Sun},
+  title     = {Deep Residual Learning for Image Recognition},
+  journal   = {CoRR},
+  volume    = {abs/1512.03385},
+  year      = {2015},
+  url       = {http://arxiv.org/abs/1512.03385},
+  archivePrefix = {arXiv},
+  eprint    = {1512.03385},
+  timestamp = {Wed, 07 Jun 2017 14:41:17 +0200},
+  biburl    = {https://dblp.org/rec/bib/journals/corr/HeZRS15},
+  bibsource = {dblp computer science bibliography, https://dblp.org}
+}
+
+% Squeeze-and-Excitation Networks (ILSVRC 2017 winner)
+
+@article{Hu-et-al-2017-squeeze,
+  author    = {Jie Hu and
+               Li Shen and
+               Gang Sun},
+  title     = {Squeeze-and-Excitation Networks},
+  journal   = {CoRR},
+  volume    = {abs/1709.01507},
+  year      = {2017},
+  url       = {http://arxiv.org/abs/1709.01507},
+  archivePrefix = {arXiv},
+  eprint    = {1709.01507},
+  timestamp = {Thu, 05 Oct 2017 09:43:07 +0200},
+  biburl    = {https://dblp.org/rec/bib/journals/corr/abs-1709-01507},
+  bibsource = {dblp computer science bibliography, https://dblp.org}
+}
+
+@inproceedings{Abadi-et-al-2016-tensorflow,
+  title={TensorFlow: A System for Large-Scale Machine Learning.},
+  author={Abadi, Mart{\'\i}n and
+          Barham, Paul and
+          Chen, Jianmin and
+          Chen, Zhifeng and
+          Davis, Andy and
+          Dean, Jeffrey and
+          Devin, Matthieu and
+          Ghemawat, Sanjay and
+          Irving, Geoffrey and
+          Isard, Michael and
+          others},
+  booktitle={OSDI},
+  volume={16},
+  pages={265--283},
+  year={2016}
+}
+
+@misc{Chollet-et-al-2015-keras,
+  title={Keras},
+  author={Chollet, Fran\c{c}ois and others},
+  year={2015},
+  publisher={GitHub},
+  howpublished={https://github.com/keras-team/keras},
+}
+
+@article{Kostelecky:2016kfm,
+      author         = "Kostelecký, V. Alan and Mewes, Matthew",
+      title          = "{Testing local Lorentz invariance with gravitational
+                        waves}",
+      journal        = "Phys. Lett.",
+      volume         = "B757",
+      year           = "2016",
+      pages          = "510-514",
+      doi            = "10.1016/j.physletb.2016.04.040",
+      eprint         = "1602.04782",
+      archivePrefix  = "arXiv",
+      primaryClass   = "gr-qc",
+      reportNumber   = "IUHET-611",
+      SLACcitation   = "%%CITATION = ARXIV:1602.04782;%%"
+}
