@@ -70,7 +70,7 @@ To generate and build all chapter PDFs:
 Once build you can rebuild just a particular chapter by narrowing the ~waf~ target:
 
 #+BEGIN_EXAMPLE
-  ./waf --targets=guidance-chapter-graphics.pdf
+  ./waf --chapters --targets=guidance-chapter-graphics.pdf
 #+END_EXAMPLE
 
 You can also exploit the chapter TeX file with automated tooling like ~latexmk~ (see below for more on this tool).
@@ -123,18 +123,22 @@ files into your current working directory.  You can clean up with:
 #+END_EXAMPLE
 
 The former leaves the PDF and the latter also deletes it.  To make
-~latexmk~ watch for file saving and automatically rebuild add ~-pvc~
+~latexmk~ watch for file saving and automatically rebuild add ~-pvc~.
 
 #+BEGIN_EXAMPLE
   latexmk -pdf -pvc guidance.tex
 #+END_EXAMPLE
 
-Depending on your local environment (eg, which PDF viewer you prefer)
-additional configuration may be required.  The ~.latexmk~ has some
-commented out suggestions.  If these are useful to you, do *not*
-uncomment them in this file but rather copy them to your personal
-=~/.latexmkrc= file.
+This works best if your PDF viewer will auto refresh each time the PDF
+file is updated.  On Linux evince/atril make good viewers.  If your
+PDF viewer lacks auto-refresh feature additional configuration can
+work around its deficiencies.  The ~.latexmk~ has some commented out
+suggestions.  If these are useful to you, do *not* uncomment them in
+this file but rather copy them to your personal =~/.latexmkrc= file.
 
-See above for how to exploit the Waf build to operate at a per-chapter level for even faster automatic rebuilding.
+See above for how to exploit the Waf build to operate at a per-chapter
+level for even faster automatic rebuilding.  The auto-rebuild loop
+provided by ~latexmk~ can be applied to the generated chapter main tex
+as well.
 
 
