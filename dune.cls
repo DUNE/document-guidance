@@ -374,7 +374,7 @@
 %It requires bib entries with labels and urls of this form:
 %.      @article{bib:docdb6730,
 %      ....
-%.     note = "\url{https://docs.dunescience.org/cgi-bin/private/ShowDocument?docid=#1\&asof=2019-7-15} "}
+%.     note = "\url{https://docs.dunescience.org/cgi-bin/private/ShowDocument?docid=6730\&asof=2019-7-15} "}
 % To cite in text: \citedocdb{6730}
 
 

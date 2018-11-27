@@ -300,9 +300,9 @@ The TDR team will turn your Excel files into LaTeX and insert them into your cha
 
 We have a standard table format for linking to interface documents in the DUNE docdb. In the first column, put the system to which you are interfacing; use the glossary entry for the system, if it exists. For the second column, we provide a macro to use to add linked references,  \verb|\citedocdb{}|. The parameter is the interface document's docdb number. 
 
-The output of the macro is a hyperlink to the version of the document in the docdb followed by a citation.  The macro requires that the citation's label be of the form: \verb|bib:docdbNNNN|, where NNNN is the docdb number, and that the URL be of the form \\ \verb|https://docs.dunescience.org/cgi-bin/private/ShowDocument?docid=#1\&asof=2019-7-15|.
+The output of the macro is a hyperlink to the version of the document in the docdb followed by a citation.  The macro requires that the citation's label be of the form: \verb|bib:docdbNNNN|, where NNNN is the docdb number, and that the URL be of the form \\ \verb|https://docs.dunescience.org/cgi-bin/private/ShowDocument?docid=NNNN&asof=2019-7-15|.
 
-\fixme{Hoping to find a way to use a macro for the date in the bib file in order to maintain it centrally. Anne 11/21}
+
 
 \begin{verbatim}
 \begin{dunetable}
