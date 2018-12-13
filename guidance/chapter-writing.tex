@@ -282,9 +282,11 @@ In DUNE DocDB 11074~\cite{bib:docdb11074} you will find a template Excel file in
 \item Download the file from DocDB 11074~\cite{bib:docdb11074}.
 \item Read through the top-level requirements in the sheet labeled ``Top-level to review.''  The top five (colored yellow) are considered global; they may appear in all subsystem chapters (TBD). Of the others (orange and blue), some will apply to your chapter and others will not.
 \item Enter the unique ID numbers (column A) of the global requirements that apply to your chapter into column A of the tab labeled ``Your selected top level reqs.''
-\item From the sheet labeled ``Chapter codes'' find your subsystem code and rename the sheet ``Your chapter'' to that code.
-\item In your chapter sheet, note the guidelines given in rows 1 and 2. Also note that a couple of example rows are given.
-\item  Enter any additional requirements or specifications for your chapter into this sheet.  In the validation field, be sure to include ProtoDUNE impacts and simulation studies, as appropriate. You may include additional validation information, as well.  Please be concise!  We expect no more than five or ten additional specifications here. Questions on content? Ask Tim and Sam.
+\item In ``Your chapter'' sheet, note the guidelines given in rows 1 and 2. Also note that a couple of example rows are given.
+\item  Enter any additional requirements or specifications for your chapter into this sheet using proper LaTeX.  See Figure~\ref{fig:spec-fields}.
+\item The TDR will pick up the brief rationale and validation fields, not the full ones. Please fill out both full and brief; this information may be used in other contexts in the future.
+\item In the validation field, be sure to include ProtoDUNE impacts and simulation studies, as appropriate. You may include additional validation information, as well.  
+\item Please be concise!  We expect no more than five or ten additional specifications here. Questions on content? Ask Tim and Sam.
 \item Delete the example rows.
 \item Save your spreadsheet as \textit{DUNE-req-spec-(your chapter code)-DDMMMYYYY.xlsx}, e.g., DUNE-req-spec-SP-PDS-30oct2018.xlsx.
 \item Upload your completed spreadsheet to your existing requirements DocDB entry, if you have one. (It should be labeled with the topic ``Requirements'' to allow easy searching.) If you don't, create a new DocDB entry for it. 
@@ -292,7 +294,11 @@ In DUNE DocDB 11074~\cite{bib:docdb11074} you will find a template Excel file in
 \item Be aware that if any of the top-level requirements change, you will need to review and possibly update your spreadsheet.  The TDR team will provide the information on what's been updated.
 \end{enumerate}
 
-The TDR team will turn your Excel files into LaTeX and insert them into your chapter files.
+\begin{dunefigure}[Guidelines for specifications]{fig:spec-fields}
+       {Guidelines for specifications}
+    \includegraphics[width=0.8\textwidth]{spec-fields}
+    \end{dunefigure}
+The TDR team will turn your Excel files into LaTeX tables and the generated files will reside under the ``generated'' folder in the repository structure. The TDR team will work with you to insert them into your chapter files.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Interface Document Tables}
@@ -475,22 +481,27 @@ For figures, the labels and references need to include ``fig:'' before the actua
 \subsection{The Bibliography File Containing the Citations}
 \label{sec:latex-bib-file}
 
-For the TDR, we have created the file \texttt{common/tdr-citedb.bib} to contain all the citations. Please read the guidelines at the
-beginning of that file. We have left a well-populated \texttt{common/citedb.bib} in the TDR directory in case you want to search for a citation
- that may have appeared in the CDR, or other DUNE/LBNF document.
+
+For the TDR, we have created the file \texttt{common/tdr-citedb.bib} to contain all the citations.
+Please email all the bibliography entries that you need to Luke Corwin (Luke.Corwin@sdsmt.edu); he is ensuring that they all make it into the github repository.
+
+Before requesting a new entry to \texttt{tdr-citedb.bib}, please search through it
+to see whether the entry you wish to add is already there.
+%When adding citations to this file, if possible, copy the BibTeX rendering of the citation from \url{http://inspirehep.net}.  Except...
+
+When possible, send Luke the BibTeX rendering of your needed citation from \url{http://inspirehep.net}.  Except...
+
+For any documents in docdb, just send him the docdb numbers. Please use the form %defined in Section~\ref{sec:tables-intfc}, namely: 
+\verb|bib:docdbNNNN| for the label in your text; Luke will format the actual reference properly.  %For interface documents, you MUST use this form.
+
+% Please read the guidelines at the beginning of that file. We have left a well-populated \texttt{common/citedb.bib} in the TDR directory in case you want to search for a citation that may have appeared in the CDR, or other DUNE/LBNF document.
+(For the TDR you can stop reading this section here.)
 
 Note that the bib file is \textbf{not} in \LaTeX{} format and in particular does not
 indicate comments via \texttt{\%} characters. (Again, guidelines are in the file itself.)
-The
-generated bibliography reflects the order in which citations are referenced in the text, not the order of entries in this file.
+The generated bibliography reflects the order in which citations are referenced in the text, not the order of entries in this file.
 
-When adding citations to this file, if possible, copy the BibTeX rendering of the citation from \url{http://inspirehep.net}.  Except...
-
-For documents in docdb, please use the form defined in Section~\ref{sec:tables-intfc}, namely: \verb|bib:docdbNNNN|. For interface documents, you MUST use this form.
-
-Manual care must be taken to avoid duplication. %\fixme{BV found something; I have to look at it. AH}
-Before adding any entry to \texttt{tdr-citedb.bib}, search through it
-to ascertain whether the entry you wish to add is already there.
+%Manual care must be taken to avoid duplication. %\fixme{BV found something; I have to look at it. AH}
 
 JabRef (\url{http://www.jabref.org/}) is a cross-platform Java GUI that can be used to search bibliographies, possibly investigating duplicities, by working on any loaded .bib file.
 
