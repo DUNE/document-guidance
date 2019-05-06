@@ -12,6 +12,7 @@
 
 %%%%% Anne adding macros for referencing TDR volumes and annexes Apr 20, 2015 %%%%%
 \def\expshort{DUNE\xspace}
+\def\dune{\expshort}
 \def\explong{The Deep Underground Neutrino Experiment\xspace}
 
 %\def\thedocsubtitle{LBNF/DUNE Technical Design Report (DRAFT)}
@@ -20,15 +21,36 @@
 \def\tdrtitle{DRAFT Technical Design Report}
 
 
-% All volume titles in one place.
+% All volume titles and numbers in one place.
 \def\voltitleexec{Executive Summary\xspace}
-\def\voltitlephysics{DUNE Physics\xspace}
-\def\voltitlesp{Single-Phase Far Detector Module\xspace}
-\def\voltitledp{Dual-Phase Far Detector Module\xspace}
-\def\voltitlend{Near Detector\xspace}
-\def\voltitleswc{Software and Computing\xspace}
-\def\voltitletc{Technical Coordination\xspace}
+\def\volnumberexec{1}
 
+\def\voltitlephysics{DUNE Physics\xspace}
+\def\volnumberphysics{2}
+
+\def\voltitlesp{Single-Phase Far Detector Module\xspace}
+\def\volnumbersp{3}
+
+\def\voltitledp{Dual-Phase Far Detector Module\xspace}
+\def\volnumberdp{4}
+
+\def\voltitletc{Technical Coordination\xspace}
+\def\volnumbertc{5}
+
+\def\voltitlend{Near Detector\xspace} % not part of TDR, a chapter goes in Exec Summ
+\def\volnumbernd{6}
+
+\def\voltitleswc{Software and Computing\xspace} % not part of TDR, a chapter goes in Exec Summ
+\def\volnumberswc{7}
+
+% see~\refsec{exec}{2.3}
+\newcommand{\refsec}[2]{Volume~\csname volnumber#1\endcsname \xspace Section~#2}
+% see~\refch{exec}{2}
+\newcommand{\refch}[2]{Volume~\csname volnumber#1\endcsname \xspace Chapter~#2}
+% see Table~\refinch{exec}{1.2}
+\newcommand{\refinch}[2]{#2 in Volume~\csname volnumber#1\endcsname \xspace}
+
+\newcommand{\bigo}[1]{\ensuremath{\mathcal{O}(#1)}}
 
 
 % Things about oscillation
@@ -58,28 +80,10 @@
 \newcommand{\ptoknubar}{\ensuremath{\rightarrow K^+ \overline{\nu}}\xspace}
 \newcommand{\ptoepizero}{\ensuremath{p^+ \rightarrow e^+ \pi^0}\xspace}
 
-% Names of expts or detectors
-\newcommand{\cherenkov}{Cherenkov\xspace}
-\newcommand{\kamland}{KamLAND\xspace}
-\newcommand{\kkande}{Kamiokande\xspace}  %%%% <---- changed to make shorter
-\newcommand{\superk}{Super--Kamiokande\xspace}
-\newcommand{\hyperk}{Hyper--Kamiokande\xspace}
-\newcommand{\miniboone}{MiniBooNE\xspace}
-\newcommand{\microboone}{MicroBooNE\xspace}
-\newcommand{\minerva}{MINER$\nu$A\xspace}
-\newcommand{\nova}{NO$\nu$A\xspace}
-\newcommand{\numi}{NuMI\xspace}
-\newcommand{\lariat}{LArIAT\xspace}
-\newcommand{\argoneut}{ArgoNeuT\xspace}
 
-% Random
-\newcommand{\lartpc}{LArTPC\xspace}
-\newcommand{\globes}{GLoBES\xspace}
-\newcommand{\larsoft}{LArSoft\xspace}
-\newcommand{\snowglobes}{SNOwGLoBES\xspace}
-\newcommand{\docdb}{DUNE DocDB\xspace}
-% Isotopes
-\def\argon40{$^{40}$Ar}  %%%%%       <--- \Ar40 doesn't work; don't know why
+
+% Isotopes - stay here
+\def\argon40{${}^{40}$Ar}       
 \def\Ar39{$^{39}$Ar}
 \def\Cl40{$^{40}$Cl}
 \def\K40{$^{40}$K}
@@ -87,34 +91,34 @@
 \newcommand\isotope[2]{\textsuperscript{#2}#1} % use as, e.g.,: \isotope{Si}{28}
 
 % Parameters common to SP DP
+\def\ndfromtarget{\SI{574}{\meter}\xspace} % ND from target
 \def\fdfiducialmass{\SI{40}{\kt}\xspace}
 \def\driftvelocity{\SI{1.6}{\milli\meter/\micro\second}\xspace} % same for sp and dp?
 \def\lartemp{\SI{88}\,K\xspace}
 \def\larmass{\SI{17.5}{\kt}\xspace} % full mass in cryostat
-\def\tpcheight{\SI{12}{\meter}\xspace} % height of SP TPC, APA, CPA and of DP TPC
-\def\cryostatht{\SI{14.1}{\meter}\xspace} % height of cryostat
-\def\cryostatlen{\SI{62.0}{\meter}\xspace} % height of cryostat
-\def\cryostatwdth{\SI{14.0}{\meter}\xspace} % height of cryostat
+\def\cryostatht{\SI{17.8}{\meter}\xspace} % outer height of cryostat (Jim Stewart 5/2/19)
+\def\cryostatlen{\SI{65.8}{\meter}\xspace} % length of cryostat (Jim Stewart 5/2/19)
+\def\cryostatwdth{\SI{18.9}{\meter}\xspace} % width of cryostat (Jim Stewart 5/2/19)
 \def\nominalmodsize{\SI{10}{kt}\xspace} % nominal module size 10 kt
-
-\def\dunelifetime{\SI{20}{year}\xspace} % nominal operational life time of DUNE experiment
-\def\beamturnon{{2026}\xspace} % the year we expect beam to turn on
-\def\firstfdmodstartinstall{{2022}\xspace} % the year we expect to start install of 1st FD moc
-\def\maincavernstartexc{{2019}\xspace} % the year we expect to start cavern excavation
+\def\dunelifetime{\SI{20}{years}\xspace} % nominal operational life time of DUNE experiment
 \def\pipiibeampower{\SI{1.2}{MW}\xspace} 
-
+\def\cooldown{cool-down\xspace} % standardize w/ or w/o space or hyphen
 
 % Parameters SP
-\def\spmaxfield{\SI{500}{\volt/\centi\meter}} % SPfield strength
+\def\spmaxfield{\SI{500}{\volt/\centi\meter}\xspace} % SPfield strength
 \def\spactivelarmass{\SI{10}{\kt}\xspace} % active mass in cryostat
-\def\spmaxdrift{\SI{3.53}{\m}\xspace}
-\def\sptpclen{\SI{58}{\meter}\xspace} % length of SP TPC, APA, CPA
+\def\spmaxdrift{\SI{3.52}{\m}\xspace}
+\def\tpcheight{\SI{12.01}{\meter}\xspace} % height of SP TPC, APA, CPA and of DP TPC
+\def\sptpclen{\SI{58.17}{\meter}\xspace} % length of SP TPC, APA, CPA
 \def\apacpapitch{\SI{2.32}{\meter}\xspace} % pitch of SP CPAs and APAs
 \def\spfcmodlen{\SI{3.5}{\m}} % length of SP FC module
 \def\spnumch{\num{384000}\xspace} % total number of APA readout channels 
 \def\spnumpdch{\num{6000}\xspace} % total number of PD readout channels 
 \def\planespace{\SI{4.75}{\milli\meter}\xspace}
 \def\sptargetdriftvoltpos{\SI{180}{kV}\xspace} % target drift voltage - positive
+\def\coldbox{cold box\xspace} % standardize w/ or w/o space or hyphen
+\def\Coldbox{Cold box\xspace} % standardize w/ or w/o space or hyphen
+\def\endwall{end wall\xspace} % standardize w/ or w/o space
 
 % Parameters DP
 \def\dpactivelarmass{\SI{12.096}{\kt}\xspace} % active mass in cryostat
@@ -127,7 +131,7 @@
 \def\dptotcrp{\num{80}\xspace} % total number of CRPs in module
 \def\dpchpercrp{\num{1920}\xspace} %  channels per CRP
 \def\dpnumcrpch{\num{153600}\xspace} % total number of CRP channels in module
-\def\dpchperchimney{\num{6400}\xspace} %  channels per chimney
+\def\dpchperchimney{\num{640}\xspace} %  channels per chimney  --CRP channels?
 \def\dpnumpmtch{\num{720}\xspace} % number of PMT channels
 \def\dpstrippitch{\SI{3.125}{\milli\meter}\xspace} % pitch of anode strips
 \def\dpnumfcmod{\num{244}\xspace} % number of FC modules
@@ -141,45 +145,32 @@
 %% SP has 2.25ms drift time.  The readout is 2*dt + 20%*dt extra.
 \def\spreadout{\SI{5.4}{\ms}\xspace}
 %% DP has 7.5 ms drift time.  The same (over generous) rule gives 16.5ms
-\def\dpreadout{\SI{16.4}{\ms}\xspace}
+\def\dpreadout{\SI{16.5}{\ms}\xspace}
 % Supernova Neutrino Burst buffer and readout window time
-\def\snbtime{\SI{30}{\s}\xspace}
+\def\snbtime{\SI{100}{\s}\xspace}
 % interesting amount of time we might have SNB neutrinos but not yet
 % enough to trigger.
 \def\snbpretime{\SI{10}{\s}\xspace}
-% SP SNB dump size
-\def\spsnbsize{\SI{45}{\PB}\xspace}
+% SP SNB dump size. MUST KEEP THIS MANUALLY IN SYNC 1.5 TB/s * \snbtime
+\def\spsnbsize{\SI{45}{\TB}\xspace}
 
 % keep these three numerically in sync
 \def\offsitepbpy{\SI{30}{\PB/\year}\xspace}
 \def\offsitegbyteps{\SI{1}{\GB/\s}\xspace}
 \def\offsitegbps{\SI{8}{\Gbps}\xspace}
-
 \def\surffnalbw{\SI{100}{\Gbps}\xspace}
-\newcommand{\fnal}{Fermilab\xspace}
-\newcommand{\surf}{SURF\xspace}
-\newcommand{\bnl}{BNL\xspace}
-\newcommand{\anl}{ANL\xspace}
+
+
 
 % New from Anne March/April 2018
 %physics terms
 \newcommand{\efield}{E field\xspace}
-\newcommand{\lbl}{long-baseline\xspace}
 \newcommand{\Lbl}{Long-baseline\xspace}
 \newcommand{\rms}{RMS\xspace} % Might want this small caps?
 \newcommand{\threed}{3D\xspace}
 \newcommand{\twod}{2D\xspace}
 
-%detectors and modules
-\newcommand{\fardet}{Far Detector\xspace}
-\newcommand{\detmodule}{detector module\xspace}
-\newcommand{\dual}{DP\xspace}
-\newcommand{\Dual}{DP\xspace}
-\newcommand{\single}{SP\xspace}
-\newcommand{\Single}{SP\xspace}
-\newcommand{\dpmod}{DP detector module\xspace}
-\newcommand{\spmod}{SP detector module\xspace}
-\newcommand{\lar}{LAr\xspace}
+
 
 % Top-level requirements and specifications
 % 1 Minimum drift field
@@ -191,7 +182,7 @@
 \def\lightyield{\SI{0.5}{pe/\MeV}\xspace}
 \def\lightyieldgoal{\SI{5}{pe/\MeV}\xspace}
 % 4 time resolution
-\def\timeres{\SI{1}{\mu/\s}\xspace}
+\def\timeres{\SI{1}{\micro/\second}\xspace}
 \def\timeresgoal{\SI{100}{ns}\xspace}
 % 5 LAr purity
 \def\larpurity{\SI{100}{ppt}\xspace}
@@ -216,7 +207,7 @@
 % 12 HV PS ripple contrib to noise
 \def\hvripplenoise{\SI{100}{enc}\xspace}
 % 13 FE peaking time
-\def\{\fepeaktime{SI{1}{\mu}s\xspace}
+\def\fepeaktime{\SI{1}{\micro\second}\xspace}
 % 14 signal saturation level (SP)
 \def\spsignalsat{\num{500000} electrons\xspace}
 % 15 LAr N contamination
@@ -250,32 +241,25 @@
 % 28 dead channels
 \def\deadchannels{\SI{1}{\%}\xspace}
 
+\newcommand{\fdth}{feedthrough\xspace} % ok not in gloss
+\newcommand{\phel}{photoelectron\xspace} % ok not in gloss
+\newcommand{\frfour}{FR-4\xspace} % used in gloss and sp hv chap
 
-%detector components SP and DP
-\newcommand{\dss}{DSS\xspace}
-\newcommand{\hv}{high voltage\xspace}
-\newcommand{\fcage}{field cage\xspace}
-\newcommand{\fc}{FC\xspace}
-\newcommand{\fdth}{feedthrough\xspace}
-\newcommand{\fcmod}{FC module\xspace}  %%%   don't need?
-\newcommand{\topfc}{top FC\xspace}
-\newcommand{\botfc}{bottom FC\xspace}
-\newcommand{\ewfc}{endwall FC\xspace}
-\newcommand{\pdsys}{PD system\xspace}
-\newcommand{\phdet}{photon detector\xspace}
-\newcommand{\sipm}{SiPM\xspace}
-\newcommand{\pmt}{PMT\xspace}
-\newcommand{\phel}{photoelectron\xspace}
-\newcommand{\pwrsupp}{power supply\xspace}
-\newcommand{\pwrsupps}{power supplies\xspace}
-\newcommand{\frfour}{FR-4\xspace}
 
-% For interface tables in TDR:  (Brett put in dune.cls instead)
-%\newcommand{\citedocdb}[2]{
-%\href{http://docs.dunescience.org/cgi-bin/ShowDocument?docid=#1\&version=#2}{DocDB {#1}} \cite{bib:docdb#1}\xspace}  % example of use: \citedocdb{6745}{1}
+% The following from phys ch-bsm 1/3/19 (was in their cls file)
+\newcommand{\lsim}{{\;\raise0.3ex\hbox{$<$\kern-0.75em\raise-1.1ex\hbox{$\sim$}}\;}}
+\newcommand{\gsim}{{\;\raise0.3ex\hbox{$>$\kern-0.75em\raise-1.1ex\hbox{$\sim$}}\;}}
+\newcommand{\beq}{\begin{equation}}
+\newcommand{\eeq}{\end{equation}}
+\newcommand{\bea}{\begin{eqnarray}}
+\newcommand{\eea}{\end{eqnarray}}
+\newcommand{\DF}{\Delta_{4}}
+\mathchardef\minus="002D
+\newcommand{\dk}[1]{\textcolor{red}{#1}}
+\newcommand{\dkc}[1]{\textbf{\textcolor{red}{(#1 --DK)}}}
+\newcommand{\dd}[1]{\textcolor{blue}{#1}}
 
 %Milestones (from Eric's talk Mar 12, 2019} https://indico.fnal.gov/event/20149/contribution/0/material/slides/1.pdf
-
 \newcommand{\startpduneiispinstall}{March 2021\xspace}% Start of ProtoDUNE-II (SP) Installation: March 2021
 \newcommand{\startpduneiidpinstall}{March 2022\xspace}%Start of ProtoDUNE-II (DP) Installation: March 2022
 \newcommand{\sdlwavailable}{April 2022\xspace}%South Dakota Logistics Warehouse Available: April 2022
@@ -287,3 +271,69 @@
 \newcommand{\accesstopsecondcryo}{January 2025\xspace}%Top of Far Detector #2 Accessible: January 2025
 \newcommand{\startsecondtpcinstall}{August 2025\xspace}%Start of Far Detector #2 TPC Installation: August 2025
 \newcommand{\secondtpcinstallend}{May 2026\xspace}%End of Far Detector #2 TPC Installation: May 2026
+
+%Mike Kordosky: the command below is used to refer to
+% planned entries in the requirements table.
+\newcommand{\rrt}[1]{\ifthenelse{\equal{#1}{}}{[RT:TBD]}{[RT:#1]}}
+
+%%%%%%% Everything below here is DEPRECATED (4/30/19 AH) %%%%%%%%%%
+
+% Names of expts or detectors -- all these go into glossary DEPRECATED
+% in use
+\newcommand{\cherenkov}{Cherenkov\xspace}  %nonaccel
+\newcommand{\kamland}{KamLAND\xspace} %cisc dp
+\newcommand{\superk}{Super--Kamiokande\xspace} %nonaccel, bsm
+\newcommand{\hyperk}{Hyper--Kamiokande\xspace} %nonaccel
+\newcommand{\microboone}{MicroBooNE\xspace} %used in cisc sp, hv, daq
+\newcommand{\minerva}{MINER$\nu$A\xspace} %tools/meth, nuosc11
+\newcommand{\nova}{NO$\nu$A\xspace} %lots
+\newcommand{\lariat}{LArIAT\xspace} % calib,dppds
+\newcommand{\argoneut}{ArgoNeuT\xspace} %nonaccel
+%not in use
+\newcommand{\kkande}{Kamiokande\xspace}  
+\newcommand{\miniboone}{MiniBooNE\xspace}
+\newcommand{\numi}{NuMI\xspace}
+\newcommand{\larnd}{LAr ND\xspace}
+
+% usage not checked for the rest 4/30/19
+% Random -- all these go into glossary DEPRECATED
+\newcommand{\lartpc}{LArTPC\xspace}
+\newcommand{\globes}{GLoBES\xspace}
+\newcommand{\larsoft}{LArSoft\xspace}
+\newcommand{\snowglobes}{SNOwGLoBES\xspace}
+\newcommand{\docdb}{DUNE DocDB\xspace}
+\newcommand{\lbl}{long-baseline\xspace} %DEPRECATED
+
+% also have in glossary; Glossary also has CERN, PSL, other big labs, etc. DEPRECATED
+\newcommand{\fnal}{Fermilab\xspace} 
+\newcommand{\surf}{SURF\xspace} 
+\newcommand{\bnl}{BNL\xspace}
+\newcommand{\anl}{ANL\xspace}
+ 
+ %detectors and modules
+% also have in glossary; THE FOLLOWING NINE TERMS ARE DEPRECATED 4/30/19
+\newcommand{\detmodule}{detector module\xspace}
+\newcommand{\dual}{DP\xspace}
+\newcommand{\Dual}{DP\xspace}
+\newcommand{\single}{SP\xspace}
+\newcommand{\Single}{SP\xspace}
+\newcommand{\dpmod}{DP detector module\xspace}
+\newcommand{\spmod}{SP detector module\xspace}
+\newcommand{\lar}{LAr\xspace}
+\newcommand{\lntwo}{LN$_2$\xspace}  %used in sp-tpcelec 
+
+%detector components SP and DP -- need to be in gloss; THESE 14 ITEMS DEPRECATED:
+\newcommand{\dss}{DSS\xspace}
+\newcommand{\hv}{high voltage\xspace}
+\newcommand{\fcage}{field cage\xspace}
+\newcommand{\fc}{FC\xspace}
+\newcommand{\fcmod}{FC module\xspace}  %%%   don't need?
+\newcommand{\topfc}{top FC\xspace}
+\newcommand{\botfc}{bottom FC\xspace}
+\newcommand{\ewfc}{endwall FC\xspace}
+\newcommand{\pdsys}{PD system\xspace}
+\newcommand{\phdet}{photon detector\xspace}
+\newcommand{\sipm}{SiPM\xspace}
+\newcommand{\pmt}{PMT\xspace}
+\newcommand{\pwrsupp}{power supply\xspace}
+\newcommand{\pwrsupps}{power supplies\xspace}

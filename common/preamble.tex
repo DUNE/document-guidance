@@ -1,5 +1,10 @@
 % stuff before document begins.  
 
+% Most packages are required through dune.cls.  Put hyper-ref related here to assure it's last.
+%%% xr won't play nice
+% \usepackage{xr-hyper}
+\usepackage[pdftex,bookmarks,hidelinks]{hyperref}
+
 \graphicspath{ {graphics/} }
 
 % make some "if"s for DP and SP.
@@ -9,9 +14,13 @@
 \newif\ifdp
 \newif\ifsp
 
+
+
+
 \input{common/defs.tex}
 \input{common/units.tex}
 \input{generated/parameters.tex}
+%\input{generated/reqdefs.tex}
 
 % For abbrev/acronym lists, see also init.tex for entry point of acronyms.tex.
 % \usepackage[intoc]{nomencl}

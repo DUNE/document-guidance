@@ -12,8 +12,8 @@
 
 \newif\iffinal
 %% Switch between draft or final:
-\finalfalse
-%\finaltrue
+%\finalfalse
+\finaltrue
 
 % Required values and their setters
 \newcommand\thedoctitle{DRAFT Technical Design Report}
@@ -318,21 +318,20 @@
 
 
 
-% Hyperref typically needs to come at the end of all \usepackages 
-\RequirePackage[pdftex,bookmarks,hidelinks]{hyperref}
-
 % Use to import pdf files (Anne 4/28/15)
 \RequirePackage{pdfpages}
 
 \ProcessOptions\relax
 
+\newcommand{\forlbnc}[1]{\todo[inline,backgroundcolor=dunegold]{#1}}
+
 \iffinal
-\presetkeys{todonotes}{disable}{}
+%\presetkeys{todonotes}{disable}{}
 \newcommand{\hlfix}[2]{}
 \newcommand{\fixme}[1]{}
 \newcommand{\fixmehl}[1]{}
 \newcommand{\metainfo}[1]{}
-%\linenumbers  %<---- uncomment if you want ONLY linenumbers with otherwise print-ready copy
+\linenumbers  %<---- uncomment if you want ONLY linenumbers with otherwise print-ready copy
 \else
 % "draft"
 %Set default style for todonotes
@@ -353,28 +352,30 @@
 \RequirePackage{tocbibind}
 
 % Use to include authorlist in PDF format
-\usepackage{pdfpages}
+\RequirePackage{pdfpages}
 
 %for \lesssim symbol
-\usepackage{amsfonts}
-\usepackage{amssymb}
-\usepackage{amsmath}
-\usepackage{cleveref} %To use vref suggested by A Habig Feb 2018
-\usepackage{makecell} % To allow linebreaking within table cells (AH Feb 2018)
+\RequirePackage{amsfonts}
+\RequirePackage{amssymb}
+\RequirePackage{amsmath}
+\RequirePackage{makecell} % To allow linebreaking within table cells (AH Feb 2018)
 
-\usepackage{cprotect}
-\usepackage{eurosym}
-\usepackage{tfrupee}
-\usepackage{textcomp}
+\RequirePackage{cprotect}
+\RequirePackage{eurosym}
+\RequirePackage{tfrupee}
+\RequirePackage{textcomp}
 
 
 % Comoditize citing DocDB esp for interface documents in TDR.
 % Using "as of" allows us to control which version is associated with the TDR by date.
 \newcommand{\citedocdb}[1]{DocDB #1~\cite{bib:docdb#1}\xspace}
 %It requires bib entries with labels and urls of this form:
-%.      @article{bib:docdb6730,
-%      ....
-%.     note = "\url{https://docs.dunescience.org/cgi-bin/private/ShowDocument?docid=6730\&asof=2019-7-15} "}
+% @techreport{bib:docdbNNNN,
+%    title = "{DUNE FD Interface Document: SP TPC Electronics to joint DAQ}",
+%    type = {DUNE doc} or {LBNF doc},
+%    number = {NNNN},
+%    year = {20NN},
+%    note = "\url{https://docs.dunescience.org/cgi-bin/private/ShowDocument?docid=NNNN\&asof=2019-7-15}"
 % To cite in text: \citedocdb{6730}
 
 
@@ -383,4 +384,12 @@
 \newcommand\newtag[2]{#1\def\@currentlabel{#1}\label{#2}}
 \makeatother
 
-\usepackage{multirow}
+\RequirePackage{multirow}
+
+
+
+% see preamble for hyperref related.
+
+\usepackage{float}
+\usepackage{overpic}
+\usepackage{subfig}
