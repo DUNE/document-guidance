@@ -8,14 +8,15 @@
 
 
 % for terms with acronyms
-\newcommand{\dshort}[1]{\glsentrytext{#1}}
-\newcommand{\dshorts}[1]{\glsentryshortpl{#1}}
-\newcommand{\dlong}[1]{\glsentrylong{#1}}
-\newcommand{\dlongs}[1]{\glsentrylongpl{#1}}
+\newcommand{\dshort}[1]{\glsentrytext{#1}}  % doesn't provide link
+\newcommand{\dshorts}[1]{\glsentryshortpl{#1}}  % doesn't provide link
+\newcommand{\dlong}[1]{\glsentrylong{#1}}  % doesn't provide link
+\newcommand{\dlongs}[1]{\glsentrylongpl{#1}}  % doesn't provide link
 
 % force the "first time" behavior
-\newcommand{\dfirst}[1]{\glsfirst{#1}}
-\newcommand{\dfirsts}[1]{\glsfirstplural{#1}}
+% \newcommand{\dfirst}[1]{\glsfirst{#1}}
+\newcommand{\dfirst}[1]{\glsfirst{#1}\glsunset{#1}}
+\newcommand{\dfirsts}[1]{\glsfirstplural{#1}\glsunset{#1}}
 
 \newcommand{\dword}[1]{\gls{#1}}
 \newcommand{\dwords}[1]{\glspl{#1}}
@@ -32,13 +33,16 @@
         name={\glsentrylong{#1}},
         first={\glsentryname{#1}},
         firstplural={\glsentrylong{#1}\glspluralsuffix},
-        description={#3}
+        description={#3},
+        sort={#2}
     }
 }
 
 % use this to define terms that DO have acronyms.
 %                 1      2     3       4 
 % \newduneabbrev{label}{abbrev}{term}{description}
+%%%% note: there is something wonky about capitalization which
+%%%% is why \glsentry* isn't used in some of the arguments below.
 \newcommand{\newduneabbrev}[4]{
   \newglossaryentry{#1}{
     text={#2},
@@ -46,9 +50,10 @@
     shortplural={{#2}\glspluralsuffix},
     longplural={{#3}\glspluralsuffix{}},
     name={\glsentrylong{#1}{} (\glsentrytext{#1}{})},
-    first={\glsentryname{#1}},
+    first={#3 (#2)},
     firstplural={#3\glspluralsuffix{} (\glsentrytext{#1}\glspluralsuffix{})},
-    description={#4}
+    description={#4},
+    sort={#2}
   }
 }
 
@@ -65,7 +70,8 @@
     name={\glsentrylong{#1}{} (\glsentrytext{#1}{})},
     first={#3 (#2)},
     firstplural={#4 (\glsentrytext{#1}\glspluralsuffix{})},
-    description={#5}
+    description={#5},
+    sort={#2}    
   }
 }
 
@@ -74,109 +80,109 @@
 \newduneword{dword}{DUNE Word}{A term in the DUNE lexicon}
 
 %%%%%%     START ADDING WORDS, IN ALPHABETICAL ORDER IF POSSIBLE!    %%%%%%%%
-\newduneword{nasa}{NASA}{National Aereonautics and Space Administration}
+\newduneword{nasa}{NASA}{U.S. National Aereonautics and Space Administration}
 
 %near detector
 \newduneabbrev{nd}{ND}{near detector}{Refers to the detector(s) %or more  generally the experimental site
- installed close to the neutrino source at \fnal }
+ installed close to the neutrino source at \gls{fnal} }
 
 %far detector
-\newduneabbrev{fd}{FD}{far detector}{Refers to the \fdfiducialmass fiducial mass DUNE detector %or more generally the experimental 
-  to be installed at the far site at \surf in
-  Lead, SD, to be composed of four \nominalmodsize modules}
+\newduneabbrev{fd}{FD}{far detector}{The \SI{70}{kt} total (\fdfiducialmass fiducial) mass \gls{lartpc} DUNE detector, composed of four \larmass total (\nominalmodsize fiducial) mass modules,  %or more generally the experimental 
+  to be installed at the far site at \gls{surf} in
+  Lead, SD, USA}
 
 %single-phase
-\newduneabbrev{sp}{SP}{single-phase}{Distinguishes one of the DUNE far detector technologies by the fact that it operates using argon in its liquid phase only
+\newduneabbrev{sp}{SP}{single-phase}{Distinguishes one of the DUNE far detector technologies by the fact that it operates using argon in its liquid phase only}
   %Distinguishes one of the four  \SI{10}{\kton} \glspl{detmodule} of the DUNE far detector by the  fact that it operates using argon in just its liquid phase}
-  }
+  
 
 %dual-phase
-\newduneabbrev{dp}{DP}{dual-phase}{Distinguishes one of the DUNE far detector technologies by the fact that it operates using argon %Distinguishes one of the four \SI{10}{\kton} \glspl{detmodule} of the DUNE far detector by the fact that it operates using argon 
- in both gas and liquid phases}
+\newduneabbrev{dp}{DP}{dual-phase}{Distinguishes one of the DUNE far detector technologies by the fact that it operates using argon 
+ in both gas and liquid phases; sometimes called double-phase} % 1 sept2020; Anne added `double' after SSR mentioned that EU tends to use it
 
 %photon detection system
-\newduneabbrev{pds}{PDS}{photon detection system}{The detector 
-  subsystem sensitive to light produced in the \lar }
+\newduneabbrev{pds}{PD system}{photon detection system}{The detector 
+  subsystem sensitive to light produced in the \gls{lar} }
 
 %high voltage system
 \newduneabbrev{hvs}{HVS}{high voltage system}{The detector 
-  subsystem that provides the TPC drift field }
+  subsystem that provides the \gls{tpc} drift field}
 
 %time projection chamber
-\newduneabbrev{tpc}{TPC}{time projection chamber}{The portion of each
-  DUNE \gls{detmodule} that records ionization electrons
-  after they drift away from a cathode through the \lar, and also
-  through gaseous argon in a \dual module. 
-  The activity is recorded by digitizing the waveforms of current
+\newduneabbrev{tpc}{TPC}{time projection chamber}{A type of particle detector that uses an \efield together with a sensitive volume of gas or liquid, e.g., \gls{lar}, to perform a \threed reconstruction of a particle trajectory or interaction. The activity is recorded by digitizing the waveforms of current
   induced on the anode as the distribution of ionization charge passes by
-  or is collected on the electrode}
+  or is collected on the electrode (TPC is also used for ``total project cost'')} 
+
+%liquid argon time-projection chamber
+\newduneabbrev{lartpc}{LArTPC}{liquid argon time-projection chamber}{A \gls{tpc} filled with liquid argon; %A class of detector technology that this technology forms 
+the basis for the \gls{dune} \gls{fd} modules} %.   It typically entails observation of ionization activity by  electrical signals and of scintillation by optical signals}
 
 %anode plane assembly
-\newduneabbrevs{apa}{APA}{anode plane assembly}{anode plane assemblies}{A unit of the \single
-  detector module containing the elements sensitive to ionization in the \lar. 
+\newduneabbrevs{apa}{APA}{anode plane assembly}{anode plane assemblies}{A unit of the \gls{sp}
+  detector module containing the elements sensitive to ionization in the \gls{lar}. 
   It contains two faces each of three planes of wires, and interfaces to the cold
   electronics and photon detection system} 
 
 \newduneabbrev{awg}{AWG}{American wire gauge} {U.S. standard set of non-ferrous wire conductor sizes}
 
-\newduneabbrev{ufer}{Ufer}{Concrete Encased Electrode} {U.S. National Electrical Code grounding method refered to as Concrete Encased Electrode}
+\newduneabbrev{ufer}{Ufer}{concrete encased electrode} {U.S. National Electrical Code grounding method refered to as Concrete Encased Electrode}
 
 %charge readout
 \newduneabbrev{cro}{CRO}{charge readout}{The system for detecting
-  ionization charge distributions in a \dual detector module}
+  ionization charge distributions in a \gls{dp} detector module}
 
 %light readout
 \newduneabbrev{lro}{LRO}{light readout}{The system for detecting
-  scintillation photons in a \dual  detector module}
+  scintillation photons in a \gls{dp}  detector module}
 
 %safe high voltage
 \newduneabbrev{shv}{SHV}{safe high voltage}{Type of bayonet mount
 connector used on coaxial cables that has additional insulation 
-compared to standard BNC and MHV connectots that makes it safer
-for handling high voltage by preventing accidental contact with the
+compared to standard BNC and MHV connectors that makes it safer
+for handling \gls{hv} by preventing accidental contact with the
 live wire connector in an unmated connector or plug}
 
 %front-end
 \newduneabbrev{fe}{FE}{front-end}{The front-end refers a point that is
   ``upstream'' of the data flow for a particular subsystem. 
-  For example the front-end electronics is where the cold electronics
-  meet the sense wires of the TPC and the front-end DAQ is where the
-  DAQ meets the output of the electronics}
+  For example the \gls{sp} front-end electronics is where the cold electronics
+  meet the sense wires of the TPC and the front-end \gls{daq} is where the
+  \gls{daq} meets the output of the electronics}
 
-\newduneabbrev{daqrou}{RU}{DAQ readout units}{The first element in the data flow of the DAQ.}
+\newduneabbrev{daqrou}{DAQ RU}{DAQ readout unit}{The first element in the data flow of the \gls{daq}}
 
 \newduneabbrev{cots}{COTS}{commercial off-the-shelf}{Items, typically hardware such as 
-computers, which may be purchased whole, without any custom design or fabrication and 
-thus at normal consumer prices and availability.}
+computers, that may be purchased whole, without any custom design or fabrication and 
+thus at normal consumer prices and availability}
 
 \newduneabbrev{i2c}{I2C}{Inter-Integrated Circuit}{I$^2$C or I2C is a synchronous, 
 multi-master, multi-slave, packet switched, single-ended, serial computer bus widely used 
 for attaching lower-speed peripheral ICs to processors and microcontrollers in short-distance, 
-intra-board communication.} %leave upper case
+intra-board communication} %leave upper case
 
 \newduneabbrev{spi}{SPI}{Serial Peripheral Interface}{The Serial Peripheral Interface is a 
 synchronous serial communication interface specification used for short distance 
-communication, primarily in embedded systems.}%leave upper case
+communication, primarily in embedded systems}%leave upper case
 
 \newduneabbrev{miso}{MISO}{master in slave out}{The Master In Slave Out is a logic
 signal on the \gls{spi} bus on which the data from the slave are transmitted once
-a request from the master is received.} %leave upper case
+a request from the master is received} %leave upper case
 
 \newduneabbrev{mosi}{MOSI}{master out slave in}{The Master Out Slave In is a logic
-signal on the \gls{spi} bus on which the data from the master is transmitted.} %leave upper case
+signal on the \gls{spi} bus on which the data from the master is transmitted} %leave upper case
 
 \newduneabbrev{uart}{UART}{Universal Asynchrous Receiver/Transmitter}{A universal 
 asynchronous receiver-transmitter is a computer hardware device for asynchronous 
-serial communication in which the data format and transmission speeds are configurable.}%leave upper case
+serial communication in which the data format and transmission speeds are configurable}%leave upper case
 
 \newduneword{cr}{CR}{Capacitance-Resistance} %leave upper case
 
 \newduneword{dc}{DC}{direct coupling} % I think these are ok lower case (anne)
 
-\newduneword{ac}{AC}{capacitive coupling}  % I think these are ok lower case (anne)
+\newduneword{ac}{AC}{Alternating Current; when used in the phrase ``AC coupling'' refers to a circuit element that filters out low-frequency components, such as constant offsets, leaving higher frequency signal components. The frequency filtering is determined both by a resistor and a capacitor}
 
-\newduneabbrev{pll}{PLL}{Phase-Locked Loop}{A phase-locked loop is a control system that generates an
-output signal whose phase is related to the phase of an input signal.}  %leave upper case
+\newduneabbrev{pll}{PLL}{Phase-Locked Loop}{A control system that generates an
+output signal whose phase is related to the phase of an input signal}  %leave upper case
 
 \newduneword{fifo}{FIFO}{First-In-First-Out} % leave in upper case
 
@@ -184,69 +190,76 @@ output signal whose phase is related to the phase of an input signal.}  %leave u
 
 \newduneword{saci}{SACI}{\gls{slac} \gls{asic} Control Interface}
 
+\newduneword{om3}{OM3}{Type of multi-mode fiber optic cable, typically capable of \SI{10}{Gbps} data transmission at lengths up to \SI{300}{m}}
+
+\newduneword{om4}{OM4}{Type of multi-mode fiber optic cable, typically capable of \SI{10}{Gbps} data transmission at lengths up to \SI{550}{m}}
+
 \newduneword{qfp}{QFP}{Quad Flat Package} % leave in upper case
 
-\newduneabbrev{ams}{AMS}{analog and mixed signal}{Verilog-AMS is a derivative of the Verilog hardware description language that includes analog and mixed-signal extensions (AMS) in order to define the behavior of analog and mixed-signal systems.}
+\newduneabbrev{ams}{AMS}{analog and mixed signal}{Verilog-AMS is a derivative of the Verilog hardware description language that includes analog and mixed-signal extensions (AMS) in order to define the behavior of analog and mixed-signal systems}
 
-\newduneabbrev{hepa}{HEPA}{High Efficiency Particulate Air}{The High Efficiency Particulate Air filters are a type of air filter that remove \num{99.97}\% of particles that have a size greater han or equal to \SI{0.3}{$\mu$m}.}  % leave in upper case
+\newduneabbrev{hepa}{HEPA}{High Efficiency Particulate Air}{The High Efficiency Particulate Air filters are a type of air filter that remove 99.97\% of particles that have a size greater than or equal to \SI{0.3}{$\mu$m}}  % leave in upper case
 
-\newduneabbrev{uvm}{UVM}{universal verification methodology}{The Universal Verification Methodology is a standardized methodology for verifying integrated circuit designs.}   % leave in upper case
+\newduneabbrev{uvm}{UVM}{universal verification methodology}{The Universal Verification Methodology is a standardized methodology for verifying integrated circuit designs}   % leave in upper case
 
 \newduneword{lhc}{LHC}{Large Hadron Collider}
 
-\newduneabbrev{lsb}{LSB}{Least Significant Bit}{The bit with the lowest numerical value in a binary number}
+\newduneabbrev{lsb}{LSB}{least significant bit}{The bit with the lowest numerical value in a binary number}
 
-\newduneabbrev{ldo}{LDO}{low-dropout regulator}{A low-dropout or LDO regulator is a DC linear voltage regulator that can regulate the output voltage even when the supply voltage is very close to the output voltage.}
+\newduneabbrev{ldo}{LDO}{low-dropout regulator}{A low-dropout or LDO regulator is a \gls{dc} linear voltage regulator that can regulate the output voltage even when the supply voltage is very close to the output voltage}
 
 %analog digital converter
 \newduneabbrev{adc}{ADC}{analog-to-digital converter}{A sampling of a voltage
   resulting in a discrete integer count corresponding in some way to
   the input}
 
-\newduneabbrev{inl}{INL}{integral non-linearity}{A commonly used measure of performance in \gls{adc}s. It is the deviation between the ideal input threshold value and the measured threshold level of a certain output code.}
+\newduneabbrev{inl}{INL}{integral non-linearity}{A commonly used measure of performance in \glspl{adc}. It is the deviation between the ideal input threshold value and the measured threshold level of a certain output code}
 
-\newduneabbrev{dnl}{DNL}{differential non-linearity}{A commonly used measure of performance in \gls{adc}s. The DNL error is defined as the difference between an actual step width and the ideal value of one \gls{lsb}.}
+\newduneabbrev{dnl}{DNL}{differential non-linearity}{A commonly used measure of performance in \glspl{adc}. The DNL error is defined as the difference between an actual step width and the ideal value of one \gls{lsb}}
 
 \newduneword{pnp}{PNP}{Type of bipolar junction transistor consistning of a
-layer of N-doped semiconductor sandwiched between two layers of P-doped material.}
+layer of N-doped semiconductor sandwiched between two layers of P-doped material}
 
 \newduneword{spice}{SPICE}{SPICE
 (``Simulation Program with Integrated Circuit Emphasis'') is a general-purpose, 
 open-source analog electronic circuit simulator. It is a program used in integrated 
 circuit and board-level design to check the integrity of circuit designs and to 
-predict circuit behavior.}
+predict circuit behavior}
 
 %data acquisition
 \newduneabbrev{daq}{DAQ}{data acquisition}{The data acquisition system
-  accepts data from the detector FE electronics, buffers
+  accepts data from the detector \gls{fe} electronics, buffers
   the data, performs a \gls{trigdecision}, builds events from the selected
   data and delivers the result to the offline \gls{diskbuffer}}
 
+% interval of validity
+\newduneabbrev{iov}{IOV}{interval of validity}{Interval over which something is valid}
+
+%CALC
+\newduneword{calci}{CALCI}{Calibration and Cryogenic Instrumentation}
+
 %detector module
-\newduneword{detmodule}{detector module}{The entire DUNE far detector is
+\newduneword{detmodule}{far detector module}{The entire DUNE far detector is
   segmented into four modules, each with a nominal \SI{10}{\kton}
   fiducial mass}
+  
+\newduneword{module}{module}{Many aspects of the DUNE far and near detectors are modular, so ``module'' must be understood in context. It may refer to one of the four far detector modules, distinct portions of a subdetector as in a ``field cage module,'' a software or electronics module, e.g., a separate framework plug-in, and so on}
 
-%detector unit
-\newduneword{detunit}{detector unit}{A \gls{submodule} may be partitioned
-  into a number of similar parts. 
-  For example the single-phase TPC \gls{submodule} is made up of APA
-  units}
+%detector unit  
+\newduneword{detunit}{detector unit}{A portion of a \gls{detmodule} may be further partitioned into a number of similar parts.   For example, the \gls{sp} \gls{tpc} is made up of \gls{apa}  units (and other elements)}
 
-%signal over noise ratio
-\newduneword{snr}{\mbox{S/N}}{signal over noise ratio}
 
 %secondary DAQ buffer
 \newduneword{diskbuffer}{secondary DAQ buffer}{A secondary
-  \dshort{daq} buffer holds a small subset of the full rate as
+  \gls{daq} buffer holds a small subset of the full rate as
   selected by a \gls{trigcommand}. 
   This buffer also marks the interface with the DUNE Offline}
 
 %online  monitoring
 \newduneabbrev{om}{OM}{online monitoring}{Processes that run inside
-  the DAQ on data ``in flight,'' specifically before landing on the
+  the \gls{daq} on data ``in flight,'' specifically before landing on the
   offline disk buffer, and that provide feedback on the operation of
-  the DAQ itself and the general health of the data it is marshalling}
+  the \gls{daq} itself and the general health of the data it is marshalling}
 
 %data quality monitoring
 \newduneabbrev{dqm}{DQM}{data quality monitoring}{Analysis of the raw
@@ -256,26 +269,30 @@ predict circuit behavior.}
   stages of processing, using disk files as input}
 
 %DAQ dump buffer
-\newduneword{dumpbuffer}{DAQ dump buffer}{This \dshort{daq} buffer
+\newduneword{dumpbuffer}{DAQ dump buffer}{This \gls{daq} buffer
   accepts a high-rate data stream, in aggregate, from an associated
-  \gls{submodule} sufficient to collect all data likely relevant to
+%  \gls{submodule} (elim by anne)
+  portion of a \gls{detmodule} sufficient to collect all data likely relevant to
   a potential \gls{snb}}
+\newduneabbrev{etf}{ETF}{Experiment Test Framework}{\gls{wlcg} testing middleware running grid jobs that actively test distributed sites services and capabilities, and report back to monitoring services}
 
 %Global Trigger Logic
 \newduneabbrev{etl}{ETL}{external trigger logic}{Trigger processing
   that consumes \gls{detmodule} level \gls{trignote} information
   and other global sources of trigger input and emits
   \gls{trigcommand} information back to the \glspl{mtl}}
+\newduneabbrev{daqeti}{ETI}{external trigger interface}{Interface between \glspl{mtl} and external source and sinks of relevant trigger information}
 
 %trigger notification
 \newduneword{trignote}{trigger notification}{Information provided by
-  \gls{mtl} to \gls{etl} about \gls{trigdecision} its processing}
+  \gls{mtl} to \gls{etl} about \gls{trigdecision} %its 
+  processing}
 
 %trigger primitive
 \newduneword{trigprimitive}{trigger primitive}{Information derived by
-  the DAQ \gls{fe} hardware that describes a region of space (e.g.,
+  the \gls{daq} \gls{fe} hardware that describes a region of space (e.g.,
   one or several neighboring channels) and time (e.g., a contiguous set
-  of ADC sample ticks) associated with some activity}
+  of \gls{adc} sample ticks) associated with some activity}
 
 %external trigger candidate
 \newduneword{externtrigger}{external trigger candidate}{Information
@@ -301,10 +318,8 @@ predict circuit behavior.}
   In particular in referencing the value for the mixing angle
   $\theta_{23}$}
 
-%sub-detector ??? %%%%%%%%%%%%%%%%%%%      Why not ``subdet''? (Anne)  %%%%%% ???????
-\newduneword{submodule}{subdetector}{A detector unit of granularity less
-  than one \gls{detmodule} such as the TPC of either a \single or \dual 
-  module}
+%sub-detector ??? %%%%%%%%%%%%%%%%%%%     CHeck if used (Anne)  %%%%%% ???????
+%\newduneword{submodule}{subdetector}{A detector unit of granularity less  than one \gls{detmodule} such as the TPC of either a \gls{sp} or \gls{dp}   module}
 
 %trigger candidate
 \newduneword{trigcandidate}{trigger candidate}{Summary information derived
@@ -320,7 +335,7 @@ predict circuit behavior.}
 \newduneabbrev{tcm}{TCM}{trigger command message}{A message flowing
   down the trigger hierarchy from global to local context.  Also see \gls{tpm}}
 
-\newduneabbrev{mlt}{MLT}{module level trigger}{add def}
+\newduneabbrev{mlt}{MLT}{module level trigger}{The \gls{daq} component responsible for producing a \gls{trigdecision} that will be used to command the readout of a detector module}
 
 %trigger decision
 \newduneword{trigdecision}{trigger decision}{The process by which
@@ -330,37 +345,35 @@ predict circuit behavior.}
 \newduneabbrev{tpm}{TPM}{trigger primitive message}{A message flowing
   up the trigger hierarchy from local to global context.  Also see \gls{tcm}}
 
-\newduneabbrev{ipc}{IPC}{inter-process communication}{A system for software elements to exchange information between threads, local processes or across a data network.  An IPC system is typically specified in terms of protocols  composed of message types and their associated data schema.}
+\newduneabbrev{ipc}{IPC}{inter-process communication}{A system for software elements to exchange information between threads, local processes or across a data network.  An IPC system is typically specified in terms of protocols  composed of message types and their associated data schema}
 
-\newduneword{daqdispre}{discovery and presence}{As used in the context of the \gls{ipc}, a system which provides mechanisms for a node on a communication network to learn of the existence of peers and their identity (discovery) as well as determine if they are currently operational or have become unresponsive (presence).}
+\newduneword{daqdispre}{discovery and presence}{As used in the context of the \gls{ipc}, a system that provides mechanisms for a node on a communication network to learn of the existence of peers and their identity (discovery) as well as determine if they are currently operational or have become unresponsive (presence)}
 
-\newduneabbrev{pubsub}{PUB/SUB}{publish-subscribe communication pattern}{An \gls{ipc} communication pattern where one element, the publisher, sends data to all connected elements, the subscribers.  Each subscriber may connect to multiple publishers.  A variant is PUB/SUB with topics where a subscriber may register an identifier, the topic, to limit the information received to just an associated subset.}
+\newduneabbrev{pubsub}{PUB/SUB}{publish-subscribe communication pattern}{An \gls{ipc} communication pattern where one element, the publisher, sends data to all connected elements, the subscribers.  Each subscriber may connect to multiple publishers.  A variant is PUB/SUB with topics where a subscriber may register an identifier, the topic, to limit the information received to just an associated subset}
 
 %event builder
-\newduneabbrev{eb}{EB}{event builder}{A software agent servicing one
-  \gls{detmodule} by executing \glspl{trigcommand} by reading out
-  the requested data}
+\newduneabbrev{eb}{EB}{event builder}{A software agent that executes \glspl{trigcommand}  for one  \gls{detmodule} by reading out the requested data}
+%{A software agent servicing one \gls{detmodule} by executing \glspl{trigcommand} by reading out  the requested data} (Anne: awkward wording)
 
-\newduneabbrev{daqdfo}{DFO}{dataflow orchestration}{The process by which trigger commands are executed in parallel and asynchronous manner by the back-end output subsystem of the DAQ.}
+\newduneabbrev{daqdfo}{DFO}{data flow orchestrator}{The process by which trigger commands are executed in parallel and asynchronous manner by the back-end output subsystem of the \gls{daq}}
 
-% yes, this is a silly name
-\newduneabbrev{daqfbi}{FBI}{front-end buffer interface}{The process which provides read-only access to data residing in a front-end's buffers to processes on the network.}
+\newduneabbrev{daqubi}{UBI}{upstream DAQ buffer interface}{The process which provides read-only access to data residing in the upstream \gls{daq} buffers to processes on the network}
 
 %cluster on board
 \newduneabbrev{cob}{COB}{cluster on board}{An ATCA motherboard housing four RCEs}
 
 %reconfigurable computing element
-\newduneabbrev{rce}{RCE}{reconfigurable computing element}{Data processor located outside of the cryostat on a \gls{cob} which contains \gls{fpga}, RAM and SSD resources, responsible for buffering data, producing trigger primitives, responding to triggered requests for data and sinking \gls{snb} dumps}
+\newduneabbrev{rce}{RCE}{reconfigurable computing element}{Data processor located outside of the cryostat on a \gls{cob} that contains \gls{fpga}, RAM and \gls{ssd} resources, responsible for buffering data, producing trigger primitives, responding to triggered requests for data and synching \gls{snb} dumps}
 
 %bump on wire
-\newduneabbrev{bow}{BOW}{Bump On Wire}{A working name for the front-end readout computing elements used in the nominal DAQ design to interface the \dual  crates to the DAQ front-end computers}
+\newduneabbrev{bow}{BOW}{Bump On Wire}{A working name for the front-end readout computing elements used in the nominal \gls{daq} design to interface the \gls{dp}  crates to the \gls{daq} front-end computers}
 
 %advanced telecommunication computing architecture
 \newduneabbrev{atca}{ATCA}{Advanced Telecommunications Computing
-  Architecture}{An advanced computer architecture specification developed for the telecommunications, military, and aerospace industries that incorporates the latest trends high-speed interconnect technologies, next-generation processors, and improved reliability, availability and serviceability} 
+  Architecture}{An advanced computer architecture specification developed for the telecommunications, military, and aerospace industries that incorporates the latest trends in  high-speed interconnect technologies, next-generation processors, and improved reliability, availability and serviceability} 
 
 %Micro Telecommunications Computing Architecture
-\newduneabbrev{utca}{$\mu$TCA}{Micro Telecommunications Computing Architecture}{The computer architecture specification followed by the crates that house charge and light readout electronics in the dual-phase module} 
+\newduneabbrev{utca}{$\mu$TCA}{Micro Telecommunications Computing Architecture}{The computer architecture specification followed by the crates that house charge and light readout electronics in the \gls{dpmod}} 
 
 %user datagram protocol
 \newduneabbrev{udp}{UDP}{user datagram protocol}{A simple,
@@ -381,22 +394,22 @@ predict circuit behavior.}
 integrated circuit technology that allows the hardware to be reconfigured to
 execute different algorithms after its manufacture and deployment}
 
-\newduneabbrev{fmc}{FMC}{FPGA mezzanine card}{Boards holding FPGA and other integrated circuitry which attach to a motherboard.}
+\newduneabbrev{fmc}{FMC}{FPGA mezzanine card}{Boards holding \glspl{fpga} and other integrated circuitry that attach to a motherboard}
 
 %Front-End Link eXchange
 \newduneabbrev{felix}{FELIX}{Front-End Link eXchange}{A
-  high-throughput interface between front-end and trigger electronics
+  high-throughput interface between \gls{fe} and trigger electronics
   and the standard PCIe computer bus}
 
 %DAQ partition
 \newduneword{daqpart}{DAQ partition}{A cohesive and
- coherent collection of DAQ hardware and software working together to trigger and read out some portion of one detector module; it consists of an integral number of \glspl{daqfrag}. 
- Multiple DAQ partitions may operate simultaneously, but each instance operates independently}
+ coherent collection of \gls{daq} hardware and software working together to trigger and read out some portion of one detector module; it consists of an integral number of \glspl{daqfrag}. 
+ Multiple \gls{daq} partitions may operate simultaneously, but each instance operates independently}
 
 %front-end computer
-\newduneabbrev{fec}{FEC}{front-end computer}{The portion of one
+\newduneabbrev{fec}{DAQ FEC}{DAQ front-end computer}{The portion of one
   \gls{daqpart} that hosts the \gls{daqdr}, \gls{daqbuf} and
-  \gls{daqds}.  It hosts the \gls{daqfer} and corresponding portion of the \gls{daqbuf}.}
+  \gls{daqds}.  It hosts the \gls{daqfer} and corresponding portion of the \gls{daqbuf}}
 
 %DAQ front-end fragment
 \newduneword{daqfrag}{DAQ front-end fragment}{The portion of one
@@ -410,7 +423,7 @@ span a contiguous period of time as requested by a \gls{trigcommand}}
 %DAQ front-end redout
 \newduneabbrev{daqfer}{FER}{DAQ front-end readout}{The portion of a
   \gls{daqfrag} that accepts data from the detector electronics and
-  provides it to the \gls{fec}.}
+  provides it to the \gls{fec}}
 
 %DAQ data receiver
 \newduneabbrev{daqdr}{DDR}{DAQ data receiver}{The portion of the
@@ -419,7 +432,7 @@ span a contiguous period of time as requested by a \gls{trigcommand}}
   forwards the full data stream to the \gls{daqbuf}}
 
 %primary DAQ buffer
-\newduneabbrev{daqbuf}{primary buffer}{DAQ primary buffer}{The portion
+\newduneword{daqbuf}{DAQ primary buffer}{The portion
   of the \gls{daqfrag} that accepts full data stream from the
   corresponding \gls{detunit} and retains it sufficiently long for it
   to be available to produce a \gls{datafrag}}
@@ -427,22 +440,25 @@ span a contiguous period of time as requested by a \gls{trigcommand}}
 %data selector
 \newduneword{daqds}{data selector}{The portion of the \gls{daqfrag}
   that accepts \glspl{trigcommand} and returns the corresponding
-  \gls{datafrag}.  Not to be confused with \gls{daqdsn}.}
+  \gls{datafrag}.  Not to be confused with \gls{daqdsn}}
 
-\newduneword{daqdsn}{data selection}{The process of forming a trigger decision for selecting a subset of detector data for output by the DAQ from the content of the detector data itself.  Not to be confused with \gls{daqds}.}
+\newduneword{daqdsn}{data selection}{The process of forming a trigger decision for selecting a subset of detector data for output by the \gls{daq} from the content of the detector data itself.  Not to be confused with \gls{daqds}}
 
-\newduneabbrev{daqros}{RO}{DAQ readout sub-system}{The sub-system of the DAQ for accepting and buffering data input from detector electronics.}
+\newduneabbrev{daqros}{DAQ RO}{DAQ readout subsystem}{The subsystem of the \gls{daq} for accepting and buffering data input from detector electronics}
 
-\newduneabbrev{daqdss}{DS}{DAQ data selection sub-system}{The sub-system of the DAQ responsible for forming a trigger decision based on a portion of the input data stream.  The majority subset of the \gls{daqtrs}.}
-\newduneabbrev{daqtrs}{TS}{DAQ trigger sub-system}{The sub-system of the DAQ responsible for forming a trigger decision.}
-\newduneabbrev{daqbes}{BE}{DAQ back-end sub-system}{The portion of the DAQ which is generally toward its output end.  It is responsible for accepting and executing trigger commands and marshaling the data they address to output storage buffers.}
-\newduneabbrev{daqtss}{TSS}{DAQ timing and synchronization sub-system}{The portion of the DAQ which provides for timing and synchronization to various components.}
+\newduneabbrev{daqdss}{DAQ DS}{DAQ data selection subsystem}{The subsystem of the \gls{daq} responsible for forming a trigger decision based on a portion of the input data stream.  The majority subset of the \gls{daqtrs}}
+
+\newduneabbrev{daqtrs}{DAQ TS}{DAQ trigger subsystem}{The subsystem of the \gls{daq} responsible for forming a trigger decision}
+
+\newduneabbrev{daqbes}{DAQ BE}{DAQ back-end subsystem}{The portion of the \gls{daq} that is generally toward its output end.  It is responsible for accepting and executing trigger commands and marshaling the data they address to output storage buffers}
+
+\newduneabbrev{daqtss}{DAQ TSS}{DAQ timing and synchronization subsystem}{The portion of the \gls{daq} that provides for timing and synchronization to various components}
 
 
 %front-end mother board
 \newduneabbrev{femb}{FEMB}{front-end mother board}{Refers a unit of
-  the \gls{sp} cold electronics that contains the front-end amplifier
-  and ADC ASICs covering 128 channels}
+  the \gls{sp} \gls{ce} that contains the \gls{fe} amplifier
+  and \gls{adc} \glspl{asic} covering 128 channels}
 
 %application-specific integrated circuit
 \newduneword{asic}{ASIC}{application-specific integrated circuit}
@@ -451,67 +467,65 @@ span a contiguous period of time as requested by a \gls{trigcommand}}
 \newduneword{lv}{LV}{low voltage}
 
 %iceberg
-\newduneword{iceberg}{ICEBERG}{Integrated Cryostat and Electronics Built for Experimental Research Goals:
-a new double wall cryostat build at Fermilab and installed in the Proton Assembly Building meant for 
-liquid argon detector R\&D and for testing of DUNE detector components}
+\newduneabbrev{iceberg}{ICEBERG}{ICEBERG R\&D cryostat and electronics}{Integrated Cryostat and Electronics Built for Experimental Research Goals: a new double-walled cryostat built and installed at \gls{fnal}  
+%build at \gls{fnal} and installed in the Proton Assembly Building meant (Anne changed) 
+for liquid argon detector R\&D and for testing of DUNE detector components}
 
 %coldadc
-\newduneword{coldadc}{ColdADC}{newly developed 16-channels ASIC providing analog to digital conversion}
+\newduneword{coldadc}{ColdADC}{A newly developed 16-channels \gls{asic} providing analog to digital conversion}
 
 %coldata
-\newduneword{coldata}{COLDATA}{a 64-channels control and communications ASIC}
+\newduneword{coldata}{COLDATA}{A 64-channel control and communications \gls{asic}}
 %\newduneabbrev{coldata}{COLDATA}{a 64-channel control and communications ASIC}{A key component of the 128-channel \gls{femb} that provides a control and communication interface between cold \gls{lvds} channels and warm electronics external to the cryostat}
 
 %cryo
-\newduneword{cryo}{CRYO}{integrated ASIC including front-end circuitry providing signal amplification and pulse shaping, analog to digital conversion, and control and communication functionalities for 64 channels}
+\newduneword{cryo}{CRYO}{Integrated ASIC including \gls{fe} circuitry providing signal amplification and pulse shaping, analog to digital conversion, and control and communication functionalities for 64 channels}
 
 %liquid argon application-specific integrated circuit
-\newduneword{larasic}{LArASIC}{A 16-channels front-end ASIC that provides signal amplification and pulse shaping}
+\newduneword{larasic}{LArASIC}{A 16-channel \gls{fe} \gls{asic} that provides signal amplification and pulse shaping}
 
 %complementary metal-oxide-semiconductor
 \newduneword{cmos}{CMOS}{Complementary metal-oxide-semiconductor}
 
 %equivalent noise charge
-\newduneword{enc}{ENC}{equivalent noise charge}
+\newduneabbrev{enc}{ENC}{equivalent noise charge}{The equivalent noise charge is the input charge that corresponds to a \gls{snr}$=1$}
+%equivalent number of bits - not used
 
-%equivalent number of bits
-\newduneword{enob}{ENOB}{effective number of bits}
-
-%dynamic range enhancement
-\newduneword{dre}{DRE}{dynamic range enhancement}
+%dynamic range enhancement not used
 
 %successive approximation register
 \newduneword{sar}{SAR}{successive approximation register}
 
 %protodune
-\newduneword{protodune}{ProtoDUNE}{Either of the two DUNE prototype detectors constructed at CERN. % and operated in  a CERN test beam (expected fall 2018). 
-  One prototype implements \single and the other \dual technology. }
-
-\newduneword{protodune2}{ProtoDUNE-2}{The second run of the ProtoDUNE detector}
+\newduneword{protodune}{ProtoDUNE}{Either of the two DUNE prototype detectors constructed at \gls{cern}. % and operated in  a CERN test beam (expected fall 2018). 
+  One prototype implements \gls{sp} technology and the other \gls{dp}}
+  
+\newduneword{protodune2}{ProtoDUNE-2}{The second run of a \gls{protodune} detector}
 
 %the single-phase ProtoDUNE detector
-\newduneword{pdsp}{ProtoDUNE-SP}{The \single ProtoDUNE detector}
+\newduneword{pdsp}{ProtoDUNE-SP}{The \gls{sp} \gls{protodune} detector at \gls{cern}}
 
 %the dual-phase ProtoDune detector
-\newduneword{pddp}{ProtoDUNE-DP}{The \dual ProtoDUNE detector}
+\newduneword{pddp}{ProtoDUNE-DP}{The \gls{dp} \gls{protodune} detector at \gls{cern}}
 
 %WA105 dual-phase demonstrator
-\newduneword{wa105}{WA105 DP demonstrator}{The \SI[product-units=power]{3x1x1}{m} WA105 dual-phase prototype detector at CERN}
+\newduneword{wa105}{WA105 DP demonstrator}{The \SI[product-units=power]{3x1x1}{m} WA105 \gls{dp} prototype detector at \gls{cern}}
 
 %data aquisition event block --- includes dirty word: "event"
 \newduneword{rawevent}{DAQ event block}{The unit of data output by the
-  DAQ. 
+  \gls{daq}.  
   It contains trigger and detector data spanning a unique, contiguous
-  time period and a subset of the detector channels.}
+  time period and a subset of the detector channels}
 
 %solid-state disk
 \newduneabbrev{ssd}{SSD}{solid-state disk}{Any storage device that
   may provide sufficient write throughput to receive, both collectively and
   distributed, the sustained full rate of data from a \gls{detmodule}
   for many seconds}
+\newduneabbrev{nvme}{NVMe}{Non-volatile memory express}{A specification for an interface to storage media attached via PCIe}
 
-%high-level trigger --- fixme: this needs improvement
-\newduneabbrev{hlt}{HLT}{high-level trigger}{This is actually a filter applied to data which has been triggered and aggregated in order to further reduce or characterize it.}
+%high-level trigger --- 
+\newduneabbrev{hlt}{HLT}{high-level trigger}{This is actually a filter applied to data that has been triggered and aggregated in order to further reduce or characterize it}
 
 %particle identification
 \newduneabbrev{pid}{PID}{particle ID}{Particle identification}
@@ -530,20 +544,22 @@ liquid argon detector R\&D and for testing of DUNE detector components}
   It may be applied at different granularity from per-channel to per
   \gls{detunit}}
 
-%run control ------- fixme: maybe another sentence
+%run control 
 \newduneabbrev{rc}{RC}{run control}{The system for configuring,
-  starting and terminating the DAQ}
+  starting and terminating the \gls{daq}}
 
-\newduneabbrev{daqccm}{CCM}{DAQ control, configuration and monitoring sub-system}{A system for controlling, configuring and monitoring other systems in particular those that make up the DAQ where the CCM encompasses \gls{rc}.}
+\newduneword{r-c}{RC}{resistive-capacitive (circuit)}
 
-\newduneword{daqrun}{DAQ run}{A period of time over which relevant data taking conditions and DAQ configuration are asserted to be unchanged. 
-  Multiple DAQ runs may occur simultaneously when multiple \glspl{daqpart} are active. 
-  This term should not be confused with DUNE experiment or beam ``runs'' which typically span many DAQ runs.}
-\newduneword{daqrunnum}{DAQ run number}{A monotonic increasing count which uniquely and globally identifies a \gls{daqrun}.}
+\newduneabbrev{daqccm}{CCM}{DAQ control, configuration and monitoring subsystem}{A system for controlling, configuring and monitoring other systems in particular those that make up the \gls{daq} where the CCM encompasses \gls{rc}}
+
+\newduneword{daqrun}{DAQ run}{A period of time over which relevant data taking conditions and \gls{daq} configuration are asserted to be unchanged. 
+  Multiple \gls{daq} runs may occur simultaneously when multiple \glspl{daqpart} are active. 
+  This term should not be confused with DUNE experiment or beam ``runs'' that typically span many \gls{daq} runs}
+\newduneword{daqrunnum}{DAQ run number}{A monotonically increasing count that uniquely and globally identifies a \gls{daqrun}}
 
 %supernova neutrino burst  
 \newduneabbrev{snb}{SNB}{supernova neutrino burst}{A prompt 
-  increase in the flux of low-energy neutrinos emitted in the first few seconds of a core-collapse supernova.  It can also refer to a trigger command type that may be due to an SNB,
+  increase in the flux of low-energy neutrinos emitted in the first few seconds of a core-collapse supernova.  It can also refer to a trigger command type that may be due to this phenomenon,
   or detector conditions that mimic its interaction signature}
 
 %supernova burst and low energy
@@ -552,7 +568,7 @@ liquid argon detector R\&D and for testing of DUNE detector components}
 
 %supernova early warning system
 \newduneabbrev{snews}{SNEWS}{SuperNova Early Warning System}{A global
-  supernova neutrino burst trigger formed by a coincidence of SNB
+  supernova neutrino burst trigger formed by a coincidence of \gls{snb} 
   triggers collected from participating experiments}
 
 %one pulse per second signal
@@ -564,48 +580,48 @@ liquid argon detector R\&D and for testing of DUNE detector components}
 \newduneabbrev{sls}{SLS}{spill location system}{A system residing at
   the DUNE far detector site that provides information, possibly
   predictive, indicating periods of time when neutrinos are being
-  produced by the \fnal Main Injector beam spills}
+  produced by the \gls{fnal} Main Injector beam spills}
 
 %warm interface board
 \newduneabbrev{wib}{WIB}{warm interface board}{Digital electronics
-  situated just outside the \single cryostat that receives digital data
-  from the FEMBs over cold copper connections and sends it to the RCE
-  FE readout hardware}
+  situated just outside the \gls{sp} cryostat that receives digital data
+  from the \glspl{femb} over cold copper connections and sends it to the \gls{rce}
+  \gls{fe} readout hardware}
 
-\newduneabbrev{gps}{GPS}{Global Positioning System}{A satellite-based system that provides a highly accurate \gls{pps} which may be used to synchronize clocks and determine the location.}
+\newduneabbrev{gps}{GPS}{Global Positioning System}{A satellite-based system that provides a highly accurate \gls{pps} that may be used to synchronize clocks and determine location}
 
-\newduneabbrev{ntp}{NTP}{Network Time Protocol}{A networking protocol which allows synchronizing of clocks to within a few \si{\milli\second} of a time standard on a local network and within a few tens of \si{\milli\second} over the Internet.} 
+\newduneabbrev{ntp}{NTP}{Network Time Protocol}{A networking protocol that allows synchronizing of clocks to within a few \si{\milli\second} of a time standard on a local network and within a few tens of \si{\milli\second} over the Internet} 
 
-\newduneabbrev{irig}{IRIG}{inter-range instrumentation group}{A standards body which defined a time code standard for transferring timing information.}
+\newduneabbrev{ptproto}{PTP}{Precision Time Protocol}{A networking protocol that allows synchronizing of clocks to within a few \si{\micro\second} of a time standard on a local network} 
+
+\newduneabbrev{irig}{IRIG}{inter-range instrumentation group}{A standards body that defined a time-code standard for transferring timing information}
 
 %network interfce controller
 \newduneabbrev{nic}{NIC}{network interface controller}{Hardware for controlling the interface to a communication network.  Typically, one that obeys the Ethernet protocol}
 
 %warm interface electronics crate
-\newduneabbrev{wiec}{WIEC}{warm interface electronics crate}{Crates mounted on the signal flanges that contain the warm interface boards}
+\newduneabbrev{wiec}{WIEC}{warm interface electronics crate}{Crates mounted on the signal flanges that contain the \glspl{wib}}
 
 %power and timing cards
-\newduneabbrev{ptc}{PTC}{power and timing cards}{Cards that provide further processing and distribution of the signals entering and exiting the \single cryostat}
-\newduneabbrev{ptb}{PTB}{power and timing backplane}{Backplane used to connect the \gls{wib}s and the \gls{ptc}s on the \gls{wiec}. Also connects the \gls{ce} flange on the cryostat penetration.}
+\newduneabbrev{ptc}{PTC}{power and timing card}{Cards that provide further processing and distribution of the signals entering and exiting the \gls{sp} cryostat}
+
+\newduneabbrev{ptb}{PTB}{power and timing backplane}{Backplane used to connect the \glspl{wib} and the \glspl{ptc} on the \gls{wiec}. Also connects the \gls{ce} flange on the cryostat penetration}
 
 %silicon photomultipler
 \newduneabbrev{sipm}{SiPM}{silicon photomultiplier}{A solid-state
   avalanche photodiode sensitive to single \phel signals}
 
 %cryogenic instrumentation and slow control
-\newduneabbrev{cisc}{CISC}{cryogenic instrumentation and slow controls}{A DUNE
-  consortium responsible for the cryogenic instrumentation and slow controls components}
+\newduneabbrev{cisc}{CISC}{cryogenic instrumentation and slow controls}{Includes equipment to monitor all detector  components and  \gls{lar} quality and behavior, and provides a control system for many of the detector components}
 
 %FTE
-\newduneword{fte}{FTE}{Full Time Equivalent. A unit of labor
-  for the project. One year of work from one person.}
+\newduneword{fte}{FTE}{full-time equivalent. A unit of labor
+  for the project. One year of work from one person}
 
-%consortium
-\newduneword{consortium}{consortium}{A unit of organization in the
-  DUNE project focused on one major component of the far detector}
+
 
 %art 
-\newduneword{art}{\textit{art}}{A software framework implementing an
+\newduneword{art}{art}{A software framework implementing an
   event-based execution paradigm} %http://art.fnal.gov/
 
 %sequential access via metadata  
@@ -615,16 +631,7 @@ liquid argon detector R\&D and for testing of DUNE detector components}
   processing that has used the files}
 
 %art data aquisition
-\newduneword{artdaq}{\textit{art}DAQ}{A general-purpose \fnal data acquisition framework for distributed data combination and processing. 
-It is designed to exploit the parallelism that is possible with
-modern multi-core and networked computers}
-
-%big-O notation
-\newduneword{order}{$\mathcal{O}(n)$}{of order $n$}
-
-%\newduneword{3d}{3D}{3 dimensional (also 1D, 2D, etc.)} % not phys 
-%(Use defs.tex version}
-%.........
+\newduneword{artdaq}{artdaq}{A data acquisition toolkit for data transfer, aggregation and processing}
 
 %beamline
 \newduneword{beamline}{beamline}{A sequence of control and monitoring devices used for the formation of a directed collection of particles}
@@ -636,89 +643,85 @@ modern multi-core and networked computers}
 
 %conventional facilities
 \newduneabbrev{cf}{CF}{conventional facilities}{Pertaining to
-  construction and operation of buildings or caverns and conventional infrastructure}
+  construction and operation of buildings and conventional infrastructure, and for \gls{lbnf-dune}, CF includes the excavation caverns}
 
 %charge parity
 \newduneabbrev{cp}{CP}{charge parity}{Product of charge and parity
   transformations}
 
 %product of charge, parity and time-reversal
-\newduneword{cpt}{CPT}{product of charge, parity
+\newduneabbrev{cpt}{CPT}{charge, parity, and time reversal symmetry}{product of charge, parity
   and time-reversal transformations}
 
 %charge-parity symmetry violation
 \newduneabbrev{cpv}{CPV}{charge-parity symmetry violation}{Lack of
   symmetry in a system before and after charge and parity
-  transformations are applied}
+  transformations are applied. 
+  For CP symmetry to hold,  a particle turns into its
+ corresponding antiparticle under a charge transformation, and a parity
+transformation inverts its space coordinates, i.e. produces the mirror image}
 
 %us department of energy
 \newduneword{doe}{DOE}{U.S. Department of Energy}
 
 \newduneabbrev{fra}{FRA}{Fermi Research Alliance}{A joint partnership of the University of Chicago and the Universities Research Association (URA) that manages and operates Fermilab on behalf of the \gls{doe}}
 
-\newduneword{us}{USA}{United States of America}
+%\newduneword{us}{USA}{United States of America}
 
 %deep underground neutrino experiment
-\newduneword{dune}{DUNE}{Deep Underground Neutrino Experiment}
+\newduneabbrev{dune}{DUNE}{Deep Underground Neutrino Experiment}{A leading-edge, international experiment for neutrino science and proton decay studies}
 
 %environment, safety and health
-\newduneword{esh}{ES\&H}{Environment, Safety and Health}
+\newduneabbrev{esh}{ES\&H}{environment, safety and health}{A discipline and specialty that studies and implements practical aspects of environmental protection and safety at work} % The LBNF/DUNE ES\&H program complies with applicable standards and local, state, and federal legal requirements through the Fermilab ``work smart'' set of standards and the contract between Fermi Research Alliance and the DOE Office of Science (FRA-DOE)}
 
 \newduneabbrev{ppe}{PPE}{personnel protective equipment}{Equipment worn to minimize exposure to hazards that cause serious workplace injuries and illnesses}
 
-\newduneword{odh}{ODH}{Oxygen Deficiency Hazard}
+\newduneabbrev{odh}{ODH}{oxygen deficiency hazard}{a hazard that occurs when inert gases such as nitrogen, helium, or argon displace room air and thus reduce the percentage of oxygen below the level required for human life}
 
-\newduneword{feshm}{FESHM}{Fermilab Environmental and Safety Manual}
+\newduneabbrev{feshm}{FESHM}{Fermilab Environment, Safety and Health Manual}{The document that contains Fermilab's policies and procedures designed to manage environment, safety, and health in all its programs}
 
-%fine-grained tracker
-\newduneabbrev{fgt}{FGT}{fine-grained tracker}{A near detector module ??}
 
 %far site conventional facilities
 \newduneabbrev{fscf}{FSCF}{far site conventional facilities}{The
-  \gslpl{cf} at the DUNE far detector site, \surf}
+  \gls{cf} at the DUNE far detector site, \gls{surf}}
   
 %near site conventional facilities
 \newduneabbrev{nscf}{NSCF}{near site conventional facilities}{The
-  \gslpl{cf} at the DUNE near detector site, \fnal}
+  \gls{cf} at the DUNE near detector site, \gls{fnal}}
 
 %grand unified theory
-\newduneabbrevs{gut}{GUT}{grand unified theory}{grand unified theories}{A class of theories that unifies the electro-weak and strong forces}
+\newduneabbrevs{gut}{GUT}{grand unified theory}{grand unified theories}{A class of theories that unifies the electroweak and strong forces}
 
 %liquid argon
-\newduneabbrev{lar}{LAr}{liquid argon}{The liquid phase of argon}
+\newduneabbrev{lar}{LAr}{liquid argon}{Argon in its liquid phase; it is a cryogenic liquid with a boiling point of \SI{87}{K} and density of \SI{1.4}{g/ml}}
 
-%liquid argon time-projection chamber
-\newduneabbrev{lartpc}{LArTPC}{liquid argon time-projection chamber}{A
-  class of detector technology that forms the basis for the DUNE far
-  detector modules. 
-  It typically entails observation of ionization activity by
-  electrical signals and of scintillation by optical signals}
 
 %long-baseline
 \newduneabbrev{lbl}{LBL}{long-baseline}{Refers to the distance between the 
-  neutrino source  and the far detector.  It can also refer to the distance between the near and far detectors. 
-  The ``long'' designation is an approximate and relative distinction. For DUNE, this distance  (between \fnal and \surf) is approximately \SI{1300}{km}}
+  neutrino source  and the \gls{fd}.  It can also refer to the distance between the near and far detectors. 
+  The ``long'' designation is an approximate and relative distinction. For DUNE, this distance  (between \gls{fnal} and \gls{surf}) is approximately \SI{1300}{km}}
 
 %long-baseline neutrino facility
 \newduneabbrev{lbnf}{LBNF}{Long-Baseline Neutrino Facility}{The
   organizational entity responsible for developing the neutrino beam, the cryostats
   and cryogenics systems, and the conventional facilities for DUNE}
-\newduneabbrev{lbnf-dune}{LBNF/DUNE}{\gls{lbnf} and \gls{dune} project}{The overall global project, including \gls{lbnf} and \gls{dune}}
+  
+\newduneabbrev{lbnf-dune}{LBNF/DUNE}{LBNF and DUNE project}{The overall global project, including \gls{lbnf} and \gls{dune}}
 
-\newduneabbrev{lbnc}{LBNC}{Long-Baseline Neutrino Committee}{The
-  organizational entity responsible for overseeing the \gls{lbnf} and \gls{dune}  projects. The committee reports to the \fnal director}
+\newduneabbrev{lbnc}{LBNC}{Long-Baseline Neutrino Committee}{The committee, composed of internationally prominent scientists with relevant expertise, charged by the \gls{fnal} director to review the scientific, technical, and managerial progress, plans and decisions associated with \gls{dune}}
 
-\newduneabbrev{ncg}{NCG}{Neutrino Cost Group}{The
-  organizational entity responsible for reviewing and scrutinizing the \gls{dune}  project cost. The committee reports to the \fnal director}
+\newduneabbrev{ncg}{NCG}{Neutrino Cost Group}{A group of internationally prominent scientists with relevant experience that is charged by the \gls{fnal} director to review the cost, schedule, and associated risks for the \gls{dune} experiment}
 
 %mass hierarchy
 \newduneabbrev{mh}{MH}{mass hierarchy}{Describes the separation
   between the mass squared differences related to the solar and
-  atmospheric neutrino problems}
+  atmospheric neutrino problems (also written as \gls{mo})}
+
+\newduneabbrev{mo}{MO}{mass ordering}{See \gls{mh}}
 
 %fnal main injector
-\newduneabbrev{mi}{MI}{\fnal Main Injector}{An accelerator at
-  \fnal that provides a beam of high-energy protons that upon
+\newduneabbrev{mi}{MI}{Fermilab Main Injector}{An accelerator at
+  \gls{fnal} that provides a beam of high-energy protons that upon
   striking a target produce secondaries that decay to provide the
   neutrinos directed toward the DUNE far detector}
 
@@ -734,13 +737,17 @@ modern multi-core and networked computers}
 \newduneabbrev{qc}{QC}{quality control}{An aggregate of activities (such as design analysis and inspection for defects) performed to ensure adequate quality in manufactured products}
 
 %standard model
-\newduneabbrev{sm}{SM}{Standard Model}{Refers to a theory describing
+\newduneabbrev{sm}{SM}{standard model}{Refers to a theory describing
   the interaction of elementary particles}
 
 %technical design report
 \newduneabbrev{tdr}{TDR}{technical design report}{A formal project
   document %required by funding agencies 
   that describes the experiment at a technical level}
+
+\newduneabbrev{prelimdr}{PDR}{preliminary design report}{A formal project
+  document %required by funding agencies 
+  that describes the experiment at a preliminary design level}
 
 %interim design report
 \newduneabbrev{tp}{IDR}{interim design report}{An intermediate
@@ -763,27 +770,23 @@ milestone on the path to a full \gls{tdr}} % changed from ``technical proposal''
 
 %%%%%%%%%%%%% PROJECT AND DETECTORS VOLUME list for acronyms below %%%%%%%%%%%%
 
-% fixme: should not have degenerate definition.  This also should be an abbrev.
-%\newduneword{blm}{BLM}{(in Volume 4) beamline measurement (system); (in Volume 3) beam loss monitor} (not used -- yet! Anne 10 May 2018)
-%omit trailing period in newduneabbrev(s) and newduneword, glossaries package will append the end of sentence period - Ddm
 
-\newduneabbrevs{cpa}{CPA}{cathode plane assembly}{cathode plane assemblies}{The component of the \single detector module that provides the drift HV cathode}
 
-\newduneabbrev{fc}{FC}{field cage}{The component of a LArTPC that contains and shapes the applied \efield}
+\newduneabbrevs{cpa}{CPA}{cathode plane assembly}{cathode plane assemblies}{The component of the \gls{sp} detector module that provides the drift HV cathode}
+
+\newduneabbrev{fc}{FC}{field cage}{The component of a \gls{lartpc} that contains and shapes the applied \efield}
 
 \newduneword{cpafc}{CPA/FC}{A pair of \gls{cpa} panels and the top and bottom \gls{fc} portions that attach to the pair; an intermediate assembly for installation into the \gls{spmod} }
 
-\newduneabbrev{topfc}{top FC}{top field cage}{The horizontal portions of the \single FC on the top}
+\newduneabbrev{topfc}{top FC}{top field cage}{The horizontal portions of the \gls{sp} \gls{fc}   on the top of the \gls{tpc}}
 
-\newduneabbrev{botfc}{bottom FC}{bottom field cage}{The horizontal portions of the \single FC on the bottom}
+\newduneabbrev{botfc}{bottom FC}{bottom field cage}{The horizontal portions of the \gls{sp} \gls{fc} on the bottom of the \gls{tpc}}
 
-\newduneabbrev{ewfc}{endwall FC}{endwall field cage}{The vertical portions of the \single FC near the wall}
+\newduneabbrev{ewfc}{endwall FC}{endwall field cage}{The vertical portions of the \gls{sp} \gls{fc} near the wall}
 
-\newduneabbrev{gp}{GP}{ground plane}{An electrode that is held to be
-  electrically neutral relative to Earth ground voltage}
+\newduneabbrev{gp}{GP}{ground plane}{An electrode held electrically neutral relative to Earth ground voltage; it is mounted on the \gls{fc} in a \gls{spmod} to protect the cryostat wall}
 
-  \newduneword{gg}{ground grid}{An electrode that is held to be
-  electrically neutral relative to Earth ground voltage  ?? fix def or can we just use gp def?}
+\newduneword{gg}{ground grid}{An electrode held electrically neutral relative to Earth ground voltage; it is installed between the cathode and the \glspl{pd} in a \gls{dpmod} to protect the \glspl{pmt}, maintaining high transparency to light}
 
 
 \newduneabbrev{alara}{ALARA}{as low as reasonably
@@ -794,36 +797,36 @@ milestone on the path to a full \gls{tdr}} % changed from ``technical proposal''
   activity is undertaken}
 
 \newduneabbrev{ecal}{ECAL}{electromagnetic calorimeter}{A detector
-  component that measures energy deposition of traversing particles}
+  component that measures energy deposition of traversing particles (in the near detector conceptual design)}
 
 \newduneabbrev{hv}{HV}{high voltage}{Generally describes a voltage
-  applied to drive the motion of free electrons through some media}
+  applied to drive the motion of free electrons through some media, e.g., LAr}
 
-% can also use in the text: \dword{sp} \dword{detmodule} 
-\newduneword{spmod}{SP module}{single-phase detector module}
-\newduneword{dpmod}{DP module}{dual-phase detector module}
-%\newduneword{dsp}{DUNE-SP}{The \single DUNE detector} % No they are det modules!
-%\newduneword{ddp}{DUNE-DP}{The \dual DUNE detector}% No they are det modules!
+% can also use in the text: \gls{sp} \gls{detmodule} 
+\newduneword{spmod}{SP module}{single-phase DUNE \gls{fd} module}
+\newduneword{dpmod}{DP module}{dual-phase DUNE \gls{fd} module}
+%\newduneword{dsp}{DUNE-SP}{The \gls{sp} DUNE detector} % No they are det modules!
+%\newduneword{ddp}{DUNE-DP}{The \gls{dp} DUNE detector}% No they are det modules!
 
-\newduneabbrev{tcoord}{TC}{technical coordinator}{Responsible for organization of
-the project effort; is a member of the \gls{dune} management team}
+\newduneabbrev{tcoord}{TC}{technical coordinator}{A member of the \gls{dune} management team responsible for organizing the technical aspects of the project effort; is head of \gls{tc}}
 
-\newduneabbrev{rcoord}{RC}{resource coordinator}{Responsible for financing of
-the project effort; is a member of the \gls{dune} management team}
+\newduneabbrev{rcoord}{RC}{resource coordinator}{A member of the \gls{dune} management team responsible for coordinating the financial resources of the project effort}
 
-\newduneabbrev{tc}{TCN}{technical coordination}{Responsible for overall integration 
+%\newduneabbrev{tc}{TCN}{technical coordination}{The DUNE organization responsible for overall integration of the detector elements and successful execution of the detector construction project; areas of responsibility include general project oversight, systems engineering, \gls{qa} and safety}
+\newduneword{tc}{technical coordination}{The DUNE organization responsible for overall integration 
 of the detector elements and successful execution of the detector
 construction project; areas of responsibility include 
-general project oversight, systems engineering, \gls{qa} 
-and safety}
+general project oversight, systems engineering, \gls{qa} and safety}
 
 \newduneabbrev{exb}{EB}{executive board}{The highest level DUNE
-  decision making body for the collaboration}
+  decision-making body for the collaboration}
 
 \newduneabbrev{tb}{TB}{technical board}{The DUNE organization responsible for
   evaluating technical decisions}
 
-\newduneabbrev{rrb}{RRB}{resource review board}{The organization of DUNE funding agencies responsible for funding decisions}
+\newduneabbrev{rrb}{RRB}{Resources Review Board}{A part of \gls{dune}'s international project governance structure, composed of representatives of all funding agencies that sponsor the project, and of  \gls{fnal} management, established to provide coordination among funding partners and oversight of \gls{dune}}
+
+\newduneabbrev{inc}{INC}{International Neutrino Council}{A highest-level international advisory body to the U.S. \gls{doe} and the  \gls{fnal} directorate on matters related to the  \gls{lbnf} and the  \gls{pip2} projects. This council is composed of representatives from the international funding agencies and  \gls{cern} that make major contributions the infrastructure}
 
 
 %%%%%%%%%%%%% PHYSICS AND DETECTORS VOLUME list for acronyms below %%%%%%%%%%%%
@@ -833,10 +836,11 @@ and safety}
   ($W^+$ or $W^-$) is exchanged}
 
 
-\newduneabbrev{dis}{DIS}{deep inelastic scattering}{Refers to
-  interaction of an elementary charged particle with a nucleus in an
-  energy range where the interaction can be modeled as being with
-  individual nucleons}
+\newduneabbrev{dis}{DIS}{deep inelastic scattering}{Refers to interaction between
+  elementary particles and a nucleus in an energy range where the
+  interaction can be modeled as occurring between constituent quarks
+  of one nucleon and resulting in no bulk recoil of the resulting
+  nucleus} % 1sep2020 ArturA: swapped with {qe}
 
 \newduneabbrev{fsi}{FSI}{final-state interactions}{Refers to
   interactions between elementary or composite particles subsequent to
@@ -845,7 +849,7 @@ and safety}
 
 \newduneword{geant4}{Geant4}{A
   software toolkit for the simulation of the passage of particles
-  through matter using Monte Carlo methods}
+  through matter using \gls{mc} methods}
 
 \newduneabbrev{genie}{GENIE}{Generates Events for Neutrino Interaction
   Experiments}{Software providing an object-oriented neutrino
@@ -857,33 +861,30 @@ and safety}
   function. 
   Forms the basis for some types of detector and physics simulations}
 
-\newduneabbrev{qe}{QE}{quasi-elastic}{Refers to interaction between
-  elementary particles and a nucleus in an energy range where the
-  interaction can be modeled as occurring between constituent quarks
-  of one nucleon and resulting in no bulk recoil of the resulting
-  nucleus}
+\newduneabbrev{qe}{QE}{quasi-elastic}{Refers to the 
+  interaction of an elementary charged particle with a nucleus in an
+  energy range where the interaction can be modeled as taking place with
+  individual nucleons} % 1sep2020 ArturA: swapped with {dis}
 
 %%%%%%%%%%%%%%%%%%%%%%%%% PROJECT VOLUME list for acronyms below %%%%%%%%%%%%%%%
 
 \newduneabbrev{mou}{MoU}{memorandum of understanding}{A document
   summarizing an agreement between two or more parties}
 
-\newduneabbrev{pip2}{PIP-II}{Proton Improvement Plan II}{A plan for
-  improving the protons on target delivered for the DUNE neutrino
-  production beam. 
-  This is revision two of this plan and is planned to be followed by a PIP-III}
-
-\newduneabbrev{sdsta}{SDSTA}{South Dakota Science and Technology
-  Authority}{The legal entity that manages the Sanford Underground
-  Research Facility, \surf, in Lead, S.D}
+\newduneabbrev{pip2}{PIP-II}{Proton Improvement Plan II}{A \gls{fnal} project for
+  improving the protons on target delivered delivered by the \gls{lbnf} neutrino production beam. 
+  This is version two of this plan and it is planned to be followed by a PIP-III}
   
-\newduneabbrev{sdsd}{SDSD}{Fermilab South Dakota Services Division}{A Fermilab division responsible providing host laboratory functions at the far site}
+\newduneabbrev{sdsta}{SDSTA}{South Dakota Science and Technology
+  Authority}{The legal entity that manages \gls{surf}, in Lead, S.D}
+  
+\newduneabbrev{sdsd}{SDSD}{Fermilab South Dakota Services Division}{A Fermilab division responsible providing host laboratory functions at SURF in South Dakota}
 
 \newduneabbrev{firus}{FIRUS}{Facility Information Reporting Utility System}
- {The safety system at \surf}
+ {The safety system at \gls{surf}}
 
-\newduneabbrev{bsi}{BSI}{Building and Site Infrastructure}
- {The work package for outfitting of the \dword{lbnf} underground infrastructure.}
+\newduneabbrev{bsi}{BSI}{building and site infrastructure}
+ {The work package for outfitting of the \gls{lbnf} underground infrastructure}
 
 
 
@@ -898,46 +899,44 @@ and safety}
 \newduneword{bsm}{BSM}{beyond the standard model}
 
 \newduneabbrev{dm}{DM}{dark matter}{The term given to the unknown
-  matter or force that explains measurements of motion of galaxies
+  matter or force that explains measurements of galaxy motion % motion of galaxies
   that are otherwise inconsistent with the amount of mass associated
-  with observed amount of photon production}
+  with the observed amount of photon production}
   
-  \newduneabbrev{bdm}{BDM}{dark matter}{Add definition}
+\newduneabbrev{bdm}{BDM}{boosted dark matter}{A new model that describes a relativistic dark matter particle boosted by the annihilation of heavier dark matter particles in the galactic center or the sun}
 
 \newduneabbrev{cern}{CERN}{European Organization for Nuclear
-Research}{In French, Organisation europ\'{e}enne pour la recherche
-nucl\'{e}aire, derived from Conseil Europ`{e}en pour la Recherche
-Nucl\`{e}aire, the leading particle physics laboratory in Europe and home
-to the ProtoDUNEs}
+Research}{The leading particle physics laboratory in Europe and home to the ProtoDUNEs. (In French, the Organisation Europ\'{e}enne pour la Recherche Nucl\'{e}aire, derived from Conseil Europ\'{e}en pour la Recherche Nucl\'{e}aire)}
 
 
-\newduneabbrev{dsnb}{DSNB}{Diffuse Supernova Neutrino Background}{The
+\newduneabbrev{dsnb}{DSNB}{diffuse supernova neutrino background}{The
   term describing the pervasive, constant flux of neutrinos due to all
   past supernova neutrino bursts}
 
 \newduneabbrev{espp}{ESPP}{European Strategy for Particle Physics}{The
-European Strategy for Particle Physics is the cornerstone of Europe's
+%European Strategy for Particle Physics is the 
+cornerstone of Europe's
 decision-making process for the long-term future of the
-field. Mandated by the CERN Council, it is formed through a broad
+field. Mandated by the \gls{cern} Council, it is formed through a broad
 consultation of the grass-roots particle physics community, it
 actively solicits the opinions of physicists from around the world,
 and it is developed in close coordination with similar processes in
-the US and Japan in order to ensure coordination between regions and
-optimal use of resources globally.}
+the USA and Japan in order to ensure coordination between regions and
+optimal use of resources globally}
 
-\newduneword{gar}{GAr}{gaseous argon}
-\newduneabbrev{gartpc}{GArTPC}{gaseous argon time-projection
-chamber}{A possible technology choice for the \gls{nd}.}
+\newduneabbrev{gar}{GAr}{gaseous argon}{argon in its gas phase}
+\newduneabbrev{gartpc}{GArTPC}{gaseous argon time-projection chamber}{A \gls{tpc} filled with gaseous argon; a possible technology choice for the \gls{nd}}
+
 
 
 \newduneabbrev{globes}{GLoBES}{General Long-Baseline Experiment
   Simulator}{A software package for simulating energy spectra of
-  neutrino flux, interaction and measured (after application of some
-  model of a detector response) energy spectra}
+  neutrino flux, interactions, and energy spectra measured after application of some
+  model of a detector response)}
 
-\newduneword{snowglobes}{SNOwGLoBES}{SuperNova
-Observatories with \gls{globes}. From the official description~\cite{snowglobes}: 
-SNOwGLoBES is public software for computing interaction rates and distributions of observed quantities for supernova burst neutrinos in common detector materials. The intent is to provide a very simple and fast code and data package which can be used for tests of observability of physics signatures in current and future detectors, and for evaluation of relative sensitivities of different detector configurations. The event estimates are made using available cross-sections and parameterized detector responses. Water, argon, scintillator and lead-based configurations are included. The package makes use of GLoBES front-end software. SNOwGLoBES is not intended to replace full detector simulations; however output should be useful for many types of studies}
+\newduneabbrev{snowglobes}{SNOwGLoBES}{SuperNova
+Observatories with GLoBES} {From the official description: SNOwGLoBES is public software for computing interaction rates and distributions of observed quantities for \gls{snb} neutrinos in common detector materials} % (Anne thinks this was too long.)
+% The intent is to provide a very simple and fast code and data package which can be used for tests of observability of physics signatures in current and future detectors, and for evaluation of relative sensitivities of different detector configurations. The event estimates are made using available cross-sections and parameterized detector responses. Water, argon, scintillator and lead-based configurations are included. The package makes use of GLoBES front-end software. SNOwGLoBES is not intended to replace full detector simulations; however output should be useful for many types of studies}
 
 
 % are these really used anywhere?
@@ -957,11 +956,20 @@ SNOwGLoBES is public software for computing interaction rates and distributions 
   eigenstate ordering whereby the sign of the mass squared difference
   associated with the atmospheric neutrino problem is negative}
 
+\newduneabbrev{no}{NO}{normal ordering}{Refers to the neutrino mass
+  eigenstate ordering whereby the sign of the mass squared difference
+  associated with the atmospheric neutrino problem is positive}
+
+\newduneabbrev{io}{IO}{inverted ordering}{Refers to the neutrino mass
+  eigenstate ordering whereby the sign of the mass squared difference
+  associated with the atmospheric neutrino problem is negative}
+
+
 \newduneabbrev{msw}{MSW}{Mikheyev-Smirnov-Wolfenstein effect}{Explains
   the oscillatory behavior of neutrinos produced inside the sun as
   they traverse the solar matter}
 
-\newduneabbrev{nsi}{NSI}{nonstandard interactions}{A general class of
+\newduneabbrev{nsi}{NSI}{nonstandard interaction}{A general class of
   theory of elementary particles other than the Standard Model}
 
 
@@ -975,7 +983,7 @@ program that will have an optimized set of short- and long-baseline neutrino osc
 is a reformulated venture referred to here as the Long Baseline
 Neutrino Facility (LBNF)''}
 
-\newduneword{sme}{SME}{Standard-Model Extension}
+\newduneabbrev{sme}{SME}{standard-model extension}{an effective field theory that contains the \gls{sm}, general relativity, and all possible operators that break Lorentz symmetry (Wikipedia)}
 
 \newduneabbrev{susy}{SUSY}{supersymmetry}{Theoretical symmetry between a fermion and a boson}
 
@@ -984,201 +992,215 @@ Neutrino Facility (LBNF)''}
 
 %%%%%%%%%%%%%%%%%%%%%%%%% DETECTORS VOLUME list for acronyms below %%%%%%%%%%%%%%%
 
-\newduneabbrev{ce}{CE}{cold electronics}{Refers to readout electronics that operate at cryogenic temperatures}
+\newduneabbrev{ce}{CE}{cold electronics}{Analog and digital readout electronics that operate at cryogenic temperatures}
 
-\newduneabbrev{crp}{CRP}{charge-readout plane}{In the \dual technology, a  collection of
+\newduneabbrev{crp}{CRP}{charge-readout plane}{In the \gls{dp} technology, a  collection of
   electrodes in a planar arrangement placed at a particular voltage
   relative to some applied \efield such that drifting electrons
   may be collected and their number and time may be measured}
 
 \newduneabbrev{dram}{DRAM}{dynamic random access memory}{A computer memory technology}
 
-% these should be abbrev and maybe combined.
-\newduneword{fermilab}{\fnal}{Fermi National Accelerator Laboratory (in Batavia, IL, the Near Site)}
-\newduneword{fnal}{\fnal}{Fermi National Accelerator Laboratory (in Batavia, IL, the Near Site)}
-%should probably get rid of either fnal or fermilab here.
-\newduneword{bnl}{BNL}{Brookhaven National Laboratory (in Upton, NY)}
-\newduneword{slac}{SLAC}{SLAC National Accelerator Laboratory (in Menlo Park, CA)}
-\newduneword{lbnl}{LBNL}{Lawrence Berkeley National Laboratory (in Berkeley, CA)}
-\newduneword{anl}{ANL}{Argonne National Laboratory (in Lemont, IL)}
+
+\newduneabbrev{fnal}{Fermilab}
+{Fermi National Accelerator Laboratory}{U.S. national laboratory in Batavia, IL. It is the laboratory that hosts \gls{dune} and serves as its near site}
+
+\newduneabbrev{bnl}{BNL}{Brookhaven National Laboratory}{US national laboratory in Upton, NY}
+
+\newduneabbrev{slac}{SLAC}{SLAC National Accelerator Laboratory}{US national laboratory in Menlo Park, CA}
+
+\newduneabbrev{lbnl}{LBNL}{Lawrence Berkeley National Laboratory}{US national laboratory in Berkeley, CA}
+
+\newduneabbrev{anl}{ANL}{Argonne National Laboratory}{US national laboratory in Lemont, IL}
+
+\newduneabbrev{lanl}{LANL}{Los Alamos National Laboratory}{US national laboratory in Los Alamos, NM}
+
 \newduneabbrev{fs}{FS}{full stream}{Relates to a data stream that has not undergone selection, compression or other form of reduction}
 
 \newduneabbrev{lem}{LEM}{large electron multiplier}{A micro-pattern detector suitable for use in ultra-pure argon vapor; LEMs consist of copper-clad PCB boards with sub-millimeter-size holes through which electrons undergo amplification}
-%\newduneabbrev{lem}{LEM}{large electron multiplier}{A technique of electron multiplication via avalanche in sub-millimeter-size holes in a
-%millimeter-thick printed circuit board where electric fields are understood}
+
+
 \newduneabbrev{lng}{LNG}{liquefied natural gas}{Pertaining to natural gas in its liquid phase}
 
-% this is pretty generic and isn't referenced.
-%\newduneword{mesh}{mesh screen}{A fine mesh screen, glued directly to
-%  the steel frame on both sides of each APA in the single-phase TPC,
-% creates a uniform ground layer beneath the wire planes}
+
 
 \newduneabbrev{mip}{MIP}{minimum ionizing particle}{Refers to a
-  momentum traversing some medium such that the particle is losing
-  near the minimum amount of energy per distance traversed} % some \mip and some \dword{mip}. If time, rectify. ??
+  particle traversing some medium such that the particle's mean energy loss is  
+  near the minimum}
+%{Refers to a  momentum traversing some medium such that the particle is losing  near the minimum amount of energy per distance traversed} % some \mip and some \gls{mip}. If time, rectify. ??
 
-%\newduneword{abc}{MTS}{Materials Test Stand}
-%\newduneword{muid}{MuID}{muon identifier (detector)}
 
-%\newduneword{abc}{OPERA}{Oscillation Project with Emulsion-Racking Apparatus (experiment at LNGS)}
-%\newduneword{abc}{NND}{(used only in Volume 4 Chapter 7) near neutrino detector, same as ND}
-%\newduneword{abc}{OD}{outer diameter}
-
-% there is also pds
-\newduneabbrev{pd}{PD}{photon detector}{Refers to the detector
-  elements involved in measurement of number and arrival times of
-  optical photons produced in a detector module} %volume}
+\newduneabbrev{pd}{PD}{photon detector}{The detector
+  elements involved in measurement of the number and arrival times of
+  optical photons produced in a detector module} 
 
 \newduneabbrev{pmt}{PMT}{photomultiplier tube}{A device that makes use
   of the photoelectric effect to produce an electrical signal from the
   arrival of optical photons}
 
-\newduneabbrev{ppm}{ppm}{parts per million}{A number equal to $10^{-6}$}
-\newduneabbrev{ppb}{ppb}{parts per billion}{A number equal to $10^{-9}$}
-\newduneabbrev{ppt}{ppt}{parts per trillion}{A number equal to $10^{-12}$}
+\newduneabbrev{ppm}{ppm}{parts per million}{A concentration equal to one part in $10^{-6}$}
+\newduneabbrev{ppb}{ppb}{parts per billion}{A concentration equal to one part in $10^{-9}$}
+\newduneabbrev{ppt}{ppt}{parts per trillion}{A concentration equal to one part in $10^{-12}$}
 
+% these should be abbrev
 \newduneword{rio}{RIO}{reconfigurable input output}
 
-\newduneword{rpc}{RPC}{resistive plate chamber}
-\newduneword{s/n}{S/N}{signal-to-noise (ratio)}
-\newduneword{ssp}{SSP}{SiPM signal processor}
-\newduneword{sbn}{SBN}{Short-Baseline Neutrino program (at \fnal)}
-\newduneword{stt}{STT}{straw tube tracker}
-%\newduneword{abc}{SURF (also Sanford Lab)}{Sanford Underground Research Facility (in Lead, SD, the Far Site)}
-\newduneword{tr}{TR}{transition radiation}
-%\newduneword{abc}{W}{Watt (also mW, kW, MW) }
-%\newduneword{abc}{WA105}{Single-Phase LArTPC and the Long Baseline Neutrino Observatory Demonstration}
-\newduneword{wire board}{wire board}{At the head end of the APA in the \single TPC, stacks of electronics boards referred to as ``wire boards'' are arrayed to anchor the wires.  They also provide the connection between the wires and the cold electronics} %?? long for a word. ??
+%signal over noise ratio -- merge these two (tpcelec sp uses 2nd)
 
-\newduneabbrev{wls}{WLS}{wavelength shifting}{A material or process by
+\newduneabbrev{s/n}{S/N}{signal-to-noise}{signal-to-noise ratio}
+\newduneword{snr}{\mbox{S/N}}{signal-to-noise ratio}
+
+
+\newduneword{ssp}{SSP}{\gls{sipm} signal processor}
+
+\newduneabbrev{sbn}{SBN}{Short-Baseline Neutrino}{A \gls{fnal} program consisting of three collaborations, \gls{microboone}, \gls{sbnd}, and \gls{icarus}, to perform sensitive searches for $\nue$ appearance and $\numu$ disappearance in the Booster Neutrino Beam}
+
+\newduneword{stt}{STT}{straw tube tracker}
+
+
+\newduneword{wire board}{wire board}{At the head end of the APA in the \gls{sp} \gls{tpc}, stacks of electronics boards referred to as ``wire boards'' are arrayed to anchor the wires.  They also provide the connection between the wires and the cold electronics} %?? long for a word. ??
+
+\newduneabbrev{wls}{WLS}{wavelength-shifting}{A material or process by
   which incident photons are absorbed by a material and photons are
   emitted at a different, typically longer, wavelength}
   
-\newduneabbrev{tpb}{TPB}{tetra-phenyl butadiene}{A type of wavelength shifting material}
+\newduneabbrev{tpb}{TPB}{tetra-phenyl butadiene}{A \gls{wls} material}
 
-\newduneabbrev{ptp}{PTP}{p-terphenyl}{A type of wavelength shifting material}
+\newduneabbrev{ptp}{PTP}{p-terphenyl}{A \gls{wls} material}
 
 \newduneabbrev{sft}{SFT}{signal feedthrough}{A cryostat penetration allowing for the passage of cables or other extended parts}
-\newduneabbrev{sftchimney}{SFT chimney}{signal feedthrough chimney}{In the \dual technology, a volume above the cryostat penetration used for a signal feedthrough}
+\newduneabbrev{sftchimney}{SFT chimney}{signal feedthrough chimney}{In the \gls{dp} technology, a volume above the cryostat penetration used for a signal feedthrough}
 
 
-\newduneword{catiroc}{CATIROC}{charge and time integrated readout chip}
+\newduneabbrev{catiroc}{CATIROC}{charge and time integrated readout chip}{A complete read-out chip manufactured in AustriaMicroSystem designed to read arrays of 16 photomultipliers}
 
 \newduneabbrev{wr}{WR}{White Rabbit}{A component of the timing system that forwards clock signal and time-of-day reference data to the master timing unit}
 
 \newduneabbrev{mch}{MCH}{MicroTCA Carrier Hub}{An network switching device}
 
-%\newduneabbrev{wrmch}{WR-MCH}{White Rabbit \gls{utca} Carrier Hub}{add def} %??
 \newduneabbrev{wrmch}{WR-MCH}{White Rabbit \gls{utca} Carrier Hub}{A card mounted in \gls{utca} crate that recieves time syncronization information and trigger data packets over \gls{wr} network and disributes them to the \gls{amc} over \gls{utca} backplane} 
 
 \newduneabbrev{wrtsn}{WR-TSN}{White Rabbit TimeStamping Node}{A unit on the \gls{wr} network that timestamps the trigger signals and sends out trigger data packets to \gls{wrmch}}
 
+% these should be abbrevs
 \newduneword{cmp}{CMP}{configuration management plan}
-
 \newduneword{qap}{QAP}{quality assurance plan} %{A project management device for planning \gls{qa}}
-
 \newduneword{ieshp}{IESHP}{integrated environmental, safety and health plan}%{Refers to the LBNF/DUNE project planning instrument}
-
 \newduneword{dmp}{DMP}{data management plan} %{A project management device to state how the experimental data will be managed}
-
 \newduneword{qam}{QAM}{quality assurance manager} %{The manager of \gls{qa} for the LBNF/DUNE project}
 
-\newduneabbrev{dss}{DSS}{detector support system}{The system used to support the \single detector within the cryostat}
+\newduneabbrev{dss}{DSS}{detector support system}{The system of rails suspended from the cryostat ceiling in a \gls{spmod} used to support the \gls{apa}s, \gls{cpa}s, and the \glspl{ewfc}} % update from MV 1sept2020 
 
-\newduneabbrev{ddss}{DDSS}{\gls{dune} detector safety system}{The system used to manage key aspects of detector safety}
-
-\newduneabbrev{itf}{ITF}{integration and test facility}{A facility where various detector components will be tested prior to installation}
+\newduneabbrev{ddss}{DDSS}{DUNE detector safety system}{The hardware system responsible for the safety of the detector, implemented either via a \gls{plc} or via custom hardware protections} % update from MV 1sept2020 
 
 \newduneabbrev{lc}{LC}{logistics center}{A facility where \gls{lbnf} and \gls{dune} components will be received and transhipped to \gls{surf}}
 
 \newduneabbrev{tco}{TCO}{temporary construction opening}{An opening in the side of a cryostat through which detector elements are brought into the cryostat; utilized during construction and installation}
 
-\newduneabbrev{surf}{SURF}{Sanford Underground Research Facility}{The laboratory in South Dakota where \gls{lbnf} will be constructed}
+\newduneabbrev{surf}{SURF}{Sanford Underground Research Facility}{The laboratory in South Dakota where the \gls{lbnf} \gls{fscf} will be constructed and the \gls{dune} \gls{fd} will be installed and operated}
 
 \newduneabbrev{sit}{SIT}{surface installation team}{An organizational unit responsible for logistics and integration in South Dakota}
 
-\newduneabbrev{uit}{UIT}{underground installation team}{An organizational unit responsible for installation in the underground area at the \surf site}
+\newduneabbrev{uit}{UIT}{underground installation team}{An organizational unit responsible for installation in the underground area at the \gls{surf} site}
 
-\newduneabbrev{cmgc}{CMGC}{construction manager/general contractor}{The organizational unit responsible for management of the construction of conventional facilities at the underground area at the \surf site}
+\newduneabbrev{cmgc}{CMGC}{construction manager/general contractor}{The organizational unit responsible for management of the construction of conventional facilities at the underground area at the \gls{surf} site}
 
-\newduneword{cdrev}{conceptual design review}{A project management device by which a conceptual design is reviewed} % anne changed - was CDR which has another meaning; see cdr.
-\newduneabbrev{pdr}{PDR}{preliminary design review}{A project management device by which an early design is reviewed} % do we want this for `review' not `report'?
-\newduneabbrev{fdr}{FDR}{final design review}{A project management device by which a final design is reviewed}
-\newduneabbrev{prr}{PRR}{production readiness review}{A project management device by which the production readiness is reviewed}
-\newduneabbrev{irr}{IRR}{installation readiness review}{A project management device by which the plan for installation is reviewed}
-\newduneabbrev{orr}{ORR}{operational readiness review}{A project management device by which the operational readiness is reviewed}
-\newduneabbrev{ppr}{PPR}{production progress review}{A project management device by which the progress of production is reviewed}
-\newduneabbrev{edms}{EDMS}{engineering document management system}{A computerized system deveolped at CERN by which documents, drawings and models are managed}
+%\newduneabbrev{cdrev}{CDR}{conceptual design review}{A project management device by which a conceptual design is reviewed} 
+\newduneword{cdrev}{conceptual design review}{A project management device by which a conceptual design is reviewed} 
+%\newduneabbrev{pdr}{PDR}{preliminary design review}{A project management device by which an early design is reviewed} % do we want this for `review' not `report'?
+%\newduneabbrev{fdr}{FDR}{final design review}{A project management device by which a final design is reviewed}
+\newduneword{pdr}{preliminary design review}{A project management device by which an early design is reviewed} % do we want this for `review' not `report'?
+\newduneword{fdr}{final design review}{A project management device by which a final design is reviewed}
+%\newduneabbrev{prr}{PRR}{production readiness review}{A project management device by which the production readiness is reviewed}
+\newduneword{prr}{production readiness review}{A project management device by which the production readiness is reviewed}
+%\newduneabbrev{irr}{IRR}{installation readiness review}{A project management device by which the plan for installation is reviewed}
+\newduneword{irr}{installation readiness review}{A project management device by which the plan for installation is reviewed}
+%\newduneabbrev{orr}{ORR}{operational readiness review}{A project management device by which the operational readiness is reviewed}
+\newduneword{orr}{operational readiness review}{A project management device by which the operational readiness is reviewed}
+\newduneword{ppr}{production progress review}{A project management device by which the progress of production is reviewed} %changed to dune word 1/13 
+\newduneabbrev{edms}{EDMS}{engineering document management system}{A computerized document management system developed and supported at \gls{cern} in which some DUNE documents, drawings and engineering models are managed}
+\newduneabbrev{ecr}{ECR}{engineering change request}{The first step in the change control process in which a proposed change is described}
+\newduneabbrev{docdb}{DocDB}{Document DataBase}{A computerized document management system developed and supported at \gls{fnal} in which virtually all LBNF and most DUNE documents are managed (docs.dunescience.org)}
 
 \newduneword{wrgm}{WR grandmaster}{White Rabbit grandmaster}
 
 
 %%%%% Software and computing %%%%
 
-\newduneword{larsoft}{\larsoft}{Liquid Argon Software (\larsoft),  a shared base of physics software across \lartpc experiments}
-\newduneword{nova}{\nova}{The \nova off-axis neutrino oscillation experiment at \fnal }
-\newduneword{minerva}{\minerva}{The \minerva neutrino cross sections experiment at \fnal }
-\newduneword{microboone}{\microboone}{The \lartpc-based \microboone neutrino oscillation experiment at \fnal }
-\newduneword{sbnd}{SBND}{The Short-Baseline Near Detector experiment at \fnal}
-\newduneword{nexo}{nEXO}{Enriched Xenon Observatory}
-\newduneword{argoneut}{ArgoNeuT}{The ArgoNeuT test-beam experiment and \gls{lar} \gls{tpc} prototype at \fnal}
-\newduneword{icarus}{ICARUS}{add def}
-\newduneword{atlas}{ATLAS}{add def}
-\newduneword{lbne}{LBNE}{add def}
-\newduneword{lbno}{LBNO}{add def}
+\newduneabbrev{larsoft}{LArSoft}{Liquid Argon Software}{A shared base of physics software across \gls{lartpc} experiments}
+% these should be abbrevs
+\newduneword{nova}{NOvA}{The \gls{nova} off-axis neutrino oscillation experiment at \gls{fnal}}
+\newduneword{minerva}{MINERvA}{Neutrino cross sections experiment at \gls{fnal}}
+\newduneword{microboone}{MicroBooNE}{A \gls{lartpc} neutrino oscillation experiment at \gls{fnal}}
+\newduneword{sbnd}{SBND}{The Short-Baseline Near Detector experiment at  \gls{fnal}}
+\newduneabbrev{nexo}{nEXO}{Enriched Xenon Observatory}{Experiment at Lawrence Livermore National Laboratory (U.S. national lab in Livermore, CA) searching for new physics with neutrinoless double-beta decay}
+\newduneword{argoneut}{ArgoNeuT}{The ArgoNeuT test-beam experiment and \gls{lartpc} prototype at  \gls{fnal}}
+\newduneword{icarus}{ICARUS}{A neutrino experiment that was located at the Laboratori Nazionali del Gran Sasso (LNGS) in Italy, then refurbished at \gls{cern} for re-use in the same neutrino beam from \gls{fnal} used by the \gls{miniboone} , \gls{microboone} and \gls{sbnd} experiments. The ICARUS detector is being reassembled at \gls{fnal}}
+\newduneword{atlas}{ATLAS}{One of two general-purpose detectors at the \gls{lhc}. It investigates a wide range of physics, from the measurements of the Higgs boson properties to searches for extra dimensions and particles that could make up \gls{dm}}
+
+\newduneword{lbne}{LBNE}{Long Baseline Neutrino Experiment (a terminated US project that was reformulated in 2014 under the auspices of the new \gls{dune} collaboration, an internationally coordinated and internationally funded program, with \gls{fnal} as host)}
 
 
-\newduneword{wirecell}{wire-cell}{A tomographic automated \threed neutrino event reconstruction method for \lartpc{}s}
-\newduneword{ftslite}{F-FTS-lite}{Light-weight version of the \fnal File Transfer system used for rapid data transfers out of the online systems}
-\newduneword{fts}{FTS}{File Transfer System developed at \fnal to catalog and move data to permanent storage}
+\newduneabbrev{lbno}{LBNO}{Long Baseline Neutrino Observatory} {A terminated European project that, during its six-year duration, assessed the feasibility of a next-generation deep underground neutrino observatory in Europe)}
+%\newduneabbrev{lbno}{LBNO}{Long Baseline Neutrino Observatory}{During its six-year duration, its members assessed the feasibility of a next-generation deep underground neutrino observatory in Europe}
+
+
+\newduneword{wirecell}{Wire-Cell}{A tomographic automated \threed neutrino event reconstruction method for \glspl{lartpc}}
+\newduneabbrev{wct}{WCT}{Wire-Cell Toolkit}{A software toolkit with data flow processing components for \gls{lartpc} noise and signal simulation, noise filtering, signal processing, and tomographic \threed ionization activity imaging}
+\newduneword{ftslite}{F-FTS-lite}{Light-weight version of the \gls{fnal} File Transfer system used for rapid data transfers out of the online systems}
+\newduneabbrev{fts}{FTS}{File Transfer System}{A file transfer system developed at \gls{fnal} to catalog and move data to permanent storage}
 
 %%% new ones that I haven't categorized (Anne)
-\newduneword{35t}{35 ton prototype}{The 35 ton prototype cryostat and \gls{sp} detector built at \fnal before the \gls{protodune} detectors}
+\newduneword{35t}{35 ton prototype}{A prototype cryostat and \gls{sp} detector built at \gls{fnal} before the \gls{protodune} detectors}
 
-\newduneabbrev{cuc}{CUC}{central utility cavern}{The central underground cavern  containing utilities such as central cryogenics and other systems, and the underground data center and control room}
+\newduneabbrev{mcr}{MCR}{main communications room}{Space at the \gls{fd} site for cyber infrastructure}
+
+\newduneabbrev{cuc}{CUC}{central utility cavern}{The utility cavern at the 4850L of \gls{surf} located between the two detector caverns. It contains utilities such as central cryogenics and other systems, and the underground data center and control room}
+
 \newduneabbrev{cfd}{CFD}{computational fluid dynamics}{High performance computer-assisted modeling of fluid dynamical systems}
 \newduneword{vuv}{VUV}{vacuum ultra-violet}
-\newduneword{tallbo}{TallBo}{A cylindrical cryostat at \fnal primarily used for developing scintillation light collection technologies for \lartpc detectors}
+\newduneword{tallbo}{TallBo}{A cylindrical cryostat at \gls{fnal} primarily used for developing scintillation light collection technologies for \gls{lartpc} detectors}
 
-\newduneword{root}{ROOT}{add definition}
+\newduneword{root}{ROOT}{A modular scientific software toolkit. It provides all the functionalities needed to deal with big data processing, statistical analysis, visualisation and storage. It is mainly written in C++ but integrated with other languages such as Python and R}
 
-\newduneabbrev{eos}{EOS}{EOS}{The XRootD based distributed file system developed by CERN}
+\newduneabbrev{eos}{EOS}{EOS}{The XRootD-based distributed file system developed by CERN}
 \newduneabbrev{ehn1}{EHN1}{Experiment Hall North One}{Location at CERN of the ProtoDUNE experiments}
 \newduneword{led}{LED}{Light-emitting diode}
-\newduneword{rtd}{RTD}{Cryostat level and temperature monitoring devices}
+\newduneabbrev{rtd}{RTD}{resistance temperature detector}{A temperature sensor consisting of a material with an accurate and reproducible resistance/temperature relationship}
 \newduneword{swc}{SWC}{Software \& Computing}
-\newduneabbrev{las}{LAS}{LEM-anode Sandwich}{In the \dual technology, a \gls{lem} and its corresponding anode are mounted together in a module called a LEM-anode sandwich}
+\newduneabbrev{las}{LAS}{LEM-anode Sandwich}{In the \gls{dp} technology, a \gls{lem} and its corresponding anode are mounted together in a module called a LEM-anode sandwich}
 
 \newduneword{roi}{ROI}{region of interest}
-\newduneword{hpc}{HPC}{high-performance computing facilities; generally computing facilities emphasizing parallel computing with aggregate power of more than a teraflop}
+\newduneabbrev{hpc}{HPC}{high-performance computing}{high-performance computing facilities; generally computing facilities emphasizing parallel computing with aggregate power of more than a teraflop}
 
 
 \newduneword{comfund}{common fund}{The shared resources of the collaboration}
 \newduneabbrev{ims}{IMS}{integrated master schedule}{A project management device consisting of linked tasks and milestones}
 
-\newduneword{hvdb}{HVDB}{dual-phase HV divider board}
-\newduneword{sas}{SAS}{A pass-through chamber used to ensure safe transfer of materials, avoiding contamination in both directions}
+\newduneword{hvdb}{HVDB}{HV divider board}
+\newduneword{sas}{SAS}{Another term for the materials airlock; a pass-through chamber used to ensure safe transfer of materials into a clean room, avoiding contamination in both directions}
 
-\newduneword{fea}{FEA}{finite element analysis}
+\newduneabbrev{fea}{FEA}{finite element analysis}{Simulation of a physical phenomenon using the numerical technique called Finite Element Method (FEM), a numerical method for solving problems of engineering and mathematical physics}
 
 \newduneword{fss}{FSS}{field shaping strips}
 \newduneword{lvds}{LVDS}{low-voltage differential signaling}
 
 
 
-%electrostatic discharge
+%electrostatic discharge  
 \newduneword{esd}{ESD}{electrostatic discharge}%{ESD is the sudden flow of electricity between two electrically charged objects caused by contact, an electrical short, or dielectric breakdown. ESD can cause failure of electronic components such as integrated circuits}
 
-\newduneabbrev{rp}{RP}{resistive panel}{Resistive panels form the constant potential surfaces for a \gls{spmod} \gls{cpa}; they are composed of a thin layer of carbon-impregnated Kapton and laminated to both sides of a \frfour sheet. }
+\newduneabbrev{rp}{RP}{resistive panel}{Resistive panels form the constant potential surfaces for a \gls{spmod} \gls{cpa}; they are composed of a thin layer of carbon-impregnated Kapton and laminated to both sides of a \frfour sheet}
 
 \newduneword{uhmwpe}{UHMWPE}{ultra-high molecular weight polyethylene}
 
 \newduneword{cts}{CTS}{Cryogenic Test System}
-\newduneword{plc}{PLC}{programmable logic controller}
 
-\newduneword{mppc}{MPPC}{\SI{6}{mm}$\times$\SI{6}{mm} Multi-Pixel Photon Counters produced by Hamamatsu\texttrademark{} Photonics K.K.}
+\newduneabbrev{plc}{PLC}{programmable logic controller}{An industrial digital computer that has been ruggedized and adapted for the control of manufacturing or other processes that require high reliability, ease of programming, and process fault diagnosis} % update from Marco V 1sep2020
 
-\newduneabbrev{sfp}{SFP}{small form-factor pluggable (SFP)}{a particular standard for optical transceivers}
+\newduneword{mppc}{MPPC}{\SI{6}{mm}$\times$\SI{6}{mm} Multi-Pixel Photon Counters produced by Hamamatsu\texttrademark{} Photonics K.K}
+
+\newduneabbrev{sfp}{SFP}{small form-factor pluggable}{a particular standard for optical transceivers}
 
 \newduneabbrev{minipod}{MiniPOD}{miniature parallel optical device}{a family of types of multi-channel optical transceivers}
 
@@ -1187,20 +1209,21 @@ Neutrino Facility (LBNF)''}
 \newduneword{lcm}{LCM}{light calibration module}
 \newduneword{lpm}{LPM}{light pulser module}
 \newduneword{dac}{DAC}{digital-to-analog converter}
-\newduneword{sarapu}{S-ARAPUCA}{ARAPUCA design with different wavelength shifter coatings on both faces of the dichroic filter window(s) of the cell}
-\newduneword{xarapu}{X-ARAPUCA}{ARAPUCA design with different wavelength shifter coating on only the external face of the dichroic filter window(s) but with a wavelength shifter doped plate inside the cell}
+\newduneword{arapuca}{ARAPUCA}{A \gls{pds} design that consists of a light trap that captures wavelength-shifted photons inside boxes with highly reflective internal surfaces until they are eventually detected by \gls{sipm} detectors or are lost}
+\newduneword{sarapu}{S-ARAPUCA}{Standard \gls{arapuca} design with different \gls{wls} coatings on both faces of the dichroic filter window(s) of the cell}
+\newduneword{xarapu}{X-ARAPUCA}{Extended \gls{arapuca} design with \gls{wls} coating on only the external face of the dichroic filter window(s) but with a \gls{wls} doped plate inside the cell}
 \newduneword{feb}{FEB}{front-end board}
 
-%\newduneword{gdml}{GDML}{needs def}
-\newduneword{lsnd}{LSND}{needs def}
+\newduneabbrev{lsnd}{LSND}{Liquid Scintilator Neutrino Detector}{A scintillation detector and associated experiment located at Los Alamos National Laboratory}
 
-\newduneword{cvn}{CVN}{convolutional visual network}
-\newduneword{pandora}{Pandora}{needs def - software development kit...}
+\newduneabbrev{cvn}{CVN}{convolutional visual network}{An algorithm for identifying neutrino interactions based on their topology and without the need for detailed reconstruction algorithms}
+
+\newduneword{pandora}{Pandora}{The Pandora multi-algorithm approach to pattern recognition} 
 
 %Lisa added
 \newduneabbrev{pma}{PMA}{Projection Matching Algorithm}{A reconstruction algorithm that combines \twod reconstructed objects to form a \threed representation}
-\newduneabbrev{bdt}{BDT}{Boosted Decision Tree}{A method of multivariate analysis}
-\newduneabbrev{cnn}{CNN}{Convolutional Neural Network}{A deep learning technique most commonly applied to analyzing visual imagery}
+\newduneabbrev{bdt}{BDT}{boosted decision tree}{A method of multivariate analysis}
+\newduneabbrev{cnn}{CNN}{convolutional neural network}{A deep learning technique most commonly applied to analyzing visual imagery}
 \newduneword{pdg}{PDG}{Particle Data Group}
 
 % from CISC
@@ -1216,96 +1239,84 @@ Neutrino Facility (LBNF)''}
 
 \newduneword{opc-ua}{OPC-UA}{OPC  Unified Architecture is a machine to machine communication protocol for industrial automation developed by the OPC Foundation. OPC stands for Object Linking and Embedding for Process Control}
 
-\newduneword{cabangle}{Cabibbo angle}{add definition- from nu osc 01 or 02}
-\newduneword{valor}{VALOR}{add def (from nu-osc 03)}
-\newduneword{cafana}{CAFAna}{add def (from nu-osc 03)}
-\newduneabbrev{pca}{PCA}{principal component analysis}{add def (from nu-osc 03)}
-\newduneword{numi}{NuMI}{a set of facilities, collectively called ``Neutrinos at the Main Injector.''  The NuMI neutrino beamline target system converts an intense proton beam into a focused neutrino beam}
+\newduneword{cabangle}{Cabibbo angle}{A quark mixing parameter that governs the coupling of up quarks to strange quarks}
+\newduneword{valor}{VALOR}{A neutrino oscillation fitting framework that is used by \gls{t2k}; the name stands for VALencia-Oxford-Rutherford, the original three institutions that developed it}
+\newduneword{cafana}{CAFAna}{Common Analysis File Analysis}
+\newduneabbrev{pca}{PCA}{principal component analysis}{A statistical procedure that uses an orthogonal transformation to convert a set of observations of possibly correlated variables into a set of values of linearly uncorrelated variables called principal components (Wikipedia)}
+\newduneword{numi}{NuMI}{a set of facilities at \gls{fnal}, collectively called ``Neutrinos at the Main Injector.''  The NuMI neutrino beamline target system converts an intense proton beam into a focused neutrino beam}
 \newduneword{gibuu}{GiBUU}{Giessen Boltzmann-Uehling-Uhlenback Project; a unified theory and transport framework in the MeV and GeV energy regimes for elementary reactions on nuclei }
-\newduneword{crpa}{CRPA}{add def (from nu-osc 05)}
-\newduneword{rpa}{RPA}{add def (from nu-osc 05)}
-\newduneword{t2k}{T2K}{T2K (Tokai to Kamioka) is a long-baseline neutrino experiment in Japan studying neutrino oscillations }
+\newduneabbrev{rpa}{RPA}{random phase approximation} {an approximation method commonly used for describing the dynamic linear electronic response of electron systems (Wikipedia)}%(from nu-osc 05)}
+\newduneword{t2k}{T2K}{T2K (Tokai to Kamioka) is a long-baseline neutrino experiment in Japan studying neutrino oscillations}
 \newduneword{mptdet}{MPT detector}{multipurpose tracking detector}
-\newduneword{hpg}{HPG}{high-pressure gas? add definition- from nu osc 06}
-\newduneword{tdc}{TDC}{add def nu osc 07}
-\newduneword{lariat}{LArIAT}{add def (from nu-osc 09)}
-\newduneword{captain}{CAPTAIN}{add def (from nu-osc 09)}
-\newduneword{dayabay}{Daya Bay}{add def (from nu-osc 10)}
-\newduneword{nuwro}{NuWro}{neutrino interaction generatoradd def (from nu-osc 11)}
-\newduneword{neut}{NEUT}{neutrino interaction generator, add def (from nu-osc 11)}
-\newduneword{minos}{MINOS}{add def}
-\newduneword{mpt}{MPT}{add def}
+
+\newduneword{lariat}{LArIAT}{The repurposed ArgoNeuT \gls{lartpc}, modified for use in a charged particle beam, dedicated to the calibration and precise characterization of the output response of these detectors}
+
+\newduneword{captain}{CAPTAIN}{Experimental program sited at \gls{lanl} that is designed to make measurements of scientific importance to \gls{lbl} neutrino physics and physics topics that will be explored by large underground detectors}
+
+\newduneword{dayabay}{Daya Bay}{a neutrino-oscillation experiment in Daya Bay, China, designed to measure the mixing angle $\Theta_{13}$  using antineutrinos produced by the reactors of the Daya Bay and Ling Ao nuclear power plants}
+
+\newduneword{nuwro}{NuWro}{neutrino interaction generator}
+
+\newduneabbrev{neut}{NEUT}{neutrino interaction generator}{A neutrino interaction simulation program library for the studies of atmospheric accelerator neutrinos}
+
+\newduneword{minos}{MINOS}{A long-baseline neutrino experiment, with a near detector at \gls{fnal} and a far detector in the Soudan mine in Minnesota, designed to observe the phenomena of neutrino oscillations (ended data runs in 2012)}
 
 
-\newduneabbrev{efig}{EFIG}{Experimental Facilities Interface Group}{The body responsible for the required high-level coordination between the \gls{lbnf} and \gls{dune} projects.}
+\newduneabbrev{efig}{EFIG}{Experimental Facilities Interface Group}{The body responsible for the required high-level coordination between the \gls{lbnf} and \gls{dune} projects}
 \newduneword{ashriver}{Ash River}{The Ash River, Minnesota, USA \gls{nova} experiment far site, used as an assembly test site for \gls{dune}} 
-\newduneabbrev{ipd}{PI-DIR}{Project Integration Director}{Responsible for integration and installation of \gls{lbnf} and \gls{dune} deliverables in South Dakota. Manages the \gls{jpo}}
-\newduneabbrev{jpo}{JPO}{Joint Project Office}{The office formed from members of the \gls{lbnf} project and \gls{dune} 
-\gls{tc} teams to direct integration and installation of the \gls{fd} modules. Its functions include global project configuration and integration, installation planning and
-coordination, scheduling, safety assurance, technical review planning
-and oversight, development of partner agreements, and financial
-reporting}
 
-\newduneword{ifbeam}{IFbeam}{Database that stores beamline information
-indexed by timestamp}
+%\newduneabbrev{ipd}{PI-DIR}{project integration director}{Responsible for integration and installation of \gls{lbnf} and \gls{dune} deliverables in South Dakota. Manages the \gls{integoff}}
+\newduneword{ipd}{project integration director}{Responsible for integration and installation of \gls{lbnf} and \gls{dune} deliverables in South Dakota. Manages the \gls{integoff}}
 
-\newduneabbrev{marley}{MARLEY}{Model of Argon Reaction Low Energy
-Yields}{Developed at UC Davis, MARLEY is the first realistic model of
-neutrino electron interactions on argon for enegies less than 50
-MeV. This includes the energy range important for supernova burst
-neutrinos and also solar 8--Boron neutrinos}
+\newduneabbrev{jpo}{JPO}{Joint Project Office}{The framework through which team members from the LBNF project office, \gls{integoff}, and DUNE \gls{tc} work together to provide coherence in project support functions across the global enterprise. 
+Its functions include global project configuration and integration, installation planning and coordination, scheduling, safety assurance, technical review planning and oversight, development of partner agreements, and financial reporting}
+
+\newduneword{ifbeam}{IFbeam}{Database that stores beamline information indexed by timestamp}
+
+\newduneabbrev{marley}{MARLEY}{Model of Argon Reaction Low Energy Yields}{Developed at UC Davis, MARLEY is the first realistic model of neutrino electron interactions on argon for enegies less than \SI{50}{MeV}. This includes the energy range important for \gls{snb} neutrinos and also solar 8--boron neutrinos}
 
 \newduneabbrev{es}{ES}{elastic scattering}{Events in which a neutrino
 elastically scatters off of another particle}
 
 
-\newduneword{cno}{CNO}{The CNO cycle (for carbon–nitrogen–oxygen) is
-one of the two known sets of fusion reactions by which stars convert
-hydrogen to helium, the other being the proton–proton chain reaction
-(pp-chain reaction). In the CNO cycle, four protons fuse, using
-carbon, nitrogen, and oxygen isotopes as catalysts, to produce one
-alpha particle, two positrons and two electron neutrinos}
+\newduneabbrev{cno}{CNO}{carbon nitrogen oxygen}{The CNO cycle (for carbon-nitrogen-oxygen) is one of the two known sets of fusion reactions by which stars convert hydrogen to helium, the other being the proton-proton chain reaction (pp-chain reaction). In the CNO cycle, four protons fuse, using carbon, nitrogen, and oxygen isotopes as catalysts, to produce one alpha particle, two positrons and two electron neutrinos}
 
-\newduneabbrev{sdwf}{SDWF}{South Dakota Warehouse Facility}{Warehousing operations in South Dakota responsible for receiving LBNF/DUNE goods and coordinating shipping to the Ross shaft.}
+\newduneabbrev{sdwf}{SDWF}{South Dakota Warehouse Facility}{Warehousing operations in South Dakota responsible for receiving LBNF and DUNE goods and coordinating shipments to the Ross shaft at \gls{surf}}
 
-\newduneabbrev{wms}{WMS}{warehouse management system}{Commercial software package used to track shipments and interface to freight forwarders. This includes a database for shipping.}
+\newduneabbrev{wms}{WMS}{warehouse management system}{Commercial software package used to track shipments and interface to freight forwarders. This includes a database for shipping}
 
-\newduneabbrev{dcdb}{DCDB}{DUNE construction database}{Database used by DUNE to track the history and testing of all parts of the detectors.}
+\newduneabbrev{dcdb}{DCDB}{DUNE construction database}{Database used by DUNE to track the history and testing of all parts of each \gls{detmodule}}
 
-\newduneabbrev{aup}{AUP}{acceptance for use and possession}{Beneficial occupancy of the underground areas for LBNF and DUNE.}
+\newduneabbrev{aup}{AUP}{acceptance for use and possession}{Required for beneficial occupancy of the underground areas at \gls{surf} for \gls{lbnf} and \gls{dune}}
 
-%\newduneabbrev{wec}{WEC}{Warm Electronics Crate}{Electronics crate mounted on the feedthru Tees which hold the warm interface boards and power timing cards.} %get rid of this - weic
-
-\newduneabbrev{sno}{SNO}{Sudbury Neutrino Observatory}{The Sudbury
-Neutrino Observatory was a detector built 6800 feet under ground, in
-INCO's Creighton mine near Sudbury, Ontario, Canada. SNO was a
-heavy-water Cherenkov detector designed to detect neutrinos produced
-by fusion reactions in the sun}
-
-\newduneword{sk}{Super-Kamiokande}{From the official website~\cite{skwebsite}: Super-Kamiokande is a large water
-Cherenkov detector.  The Super-Kamiokande detector consists of a
-stainless-steel tank,39.3 m diameter and 41.4 m tall,
-filled with 50,000 tons of ultra pure water. About 13,000
-photo-multipliers are installed on the tank wall. The detector is
-located at 1,000 meter underground in the Kamioka-mine, Hida-city,
-Gifu, Japan}
-
-\newduneabbrev{id}{ID}{inner diameter}{Inner diameter of a tube.}
-
-\newduneabbrev{od}{OD}{outer diameter}{Outer diameter of a tube.}
+\newduneabbrev{bms}{BMS}{building management system}{Part of the safety system at \gls{surf} that includes the fire and life safety system}
+\newduneabbrev{fls}{FLS}{fire and life safety system}{Part of the safety system at \gls{surf}}
 
 
-\newduneabbrev{rms}{RMS}{root mean square}{The square root of the arithmetic mean of the squares of a set of values, used as a measure of the typical magnitude of a set of numbers, regardless of their sign.}
 
-\newduneabbrev{orc}{ORC}{operational readiness clearance}{Final safety approval prior to the start of operation.}
+\newduneabbrev{sno}{SNO}{Sudbury Neutrino Observatory}{The Sudbury Neutrino Observatory was a detector built 6800 feet under ground, in INCO's Creighton mine near Sudbury, Ontario, Canada. SNO was a heavy-water Cherenkov detector designed to detect neutrinos produced by fusion reactions in the sun}
 
-\newduneabbrev{gsc}{GSC group}{global safety coordination group}{Evaluates applicable codes and standards including international code equivalency for the design, assembly, and installation of the Far Detector.}
+\newduneword{sk}{Super-Kamiokande}{Experiment sited in the Kamioka-mine, Hida-city, Gifu, Japan that uses a large water Cherenkov detector to study neutrino properties through the observation of solar neutrinos, atmospheric neutrinos and man-made neutrinos}
+% (too long and not in line with defs of other experiments) From the official website~\cite{skwebsite}: Super-Kamiokande is a large water Cherenkov detector.  The Super-Kamiokande detector consists of a stainless-steel tank,39.3 m diameter and 41.4 m tall, filled with 50,000 tons of ultra pure water. About 13,000 photo-multipliers are installed on the tank wall. The detector is located at 1,000 meter underground in the Kamioka-mine, Hida-city, Gifu, Japan}
 
-\newduneabbrev{ha}{HA}{hazard analysis}{A first step in a process to assess risk; the result of hazard analysis is the identification of different types of hazards}
-\newduneword{har}{HAR}{Hazard Analysis Report}
-\newduneabbrev{tap}{TAP}{trip action plan}{add def}
+\newduneabbrev{id}{ID}{inner diameter}{Inner diameter of a tube}
+
+\newduneabbrev{od}{OD}{outer diameter}{Outer diameter of a tube}
+
+
+\newduneabbrev{rms}{RMS}{root mean square}{The square root of the arithmetic mean of the squares of a set of values, used as a measure of the typical magnitude of a set of numbers, regardless of their sign}
+
+\newduneabbrev{orc}{ORC}{operational readiness clearance}{Final safety approval prior to the start of operation}
+
+\newduneabbrev{gsc}{GSC group}{global safety coordination group}{DUNE group that evaluates applicable codes and standards, including international code equivalency, for the design, assembly, and installation of the \gls{fd}}
+
+\newduneabbrev{ha}{HA}{hazard analysis}{A first step in a process to assess risk; the result of hazard analysis is the identification of the hazards present for a task or process}%different types of hazards}(anne)
+\newduneword{har}{HAR}{hazard analysis report}
+
+\newduneabbrev{tap}{TAP}{trip action plan}{A document required for any trip by a worker to the underground area at \gls{surf}, per that site's access control program; it describes the work to be accomplished during the trip} % ask Jim Stewart to check
+
 \newduneword{em}{EM}{emergency management}
-\newduneword{ert}{ERT}{emergency rescue team}
+\newduneword{ert}{ERT}{emergency response team}
 
 % from DP-PDS --begin
 \newduneabbrev{ndk}{NDK}{nucleon decay}{The hypothetical, baryon number violating decay of a proton or a bound neutron into lighter particles}
@@ -1318,17 +1329,17 @@ Gifu, Japan}
 
 \newduneabbrev{fwhm}{FWHM}{full width at half maximum}{Width of a distribution measured between those points at which the distribution is equal to half of its maximum amplitude}
 
-\newduneabbrev{gdml}{GDML}{geometry description markup language}{Application-indepedent geometry description format based on XML}
+\newduneabbrev{gdml}{GDML}{geometry description markup language}{An application-indepedent, geometry-description format based on XML}
 
 \newduneabbrev{xml}{XML}{extensible markup language}{A markup language that defines a set of rules for encoding documents in a format that is both human-readable and machine-readable}
 
-\newduneabbrev{crt}{CRT}{cosmic ray tagger}{Detector external to the TPC designed to tag TPC-traversing cosmic ray particles}
+\newduneabbrev{crt}{CRT}{cosmic-ray tagger}{Detector external to the TPC designed to tag TPC-traversing cosmic ray particles}
 
 \newduneabbrev{sn}{SN}{supernova}{Event that occurs upon the death of certain types of stars}
 
 \newduneabbrev{wg}{WG}{working group}{A group of persons working together to achieve specified goals}
 
-\newduneabbrev{ctsf}{CTSF}{Coating, Testing and Storage Facility}{A facility where the photodetectors of the \dual \gls{pds} will be coated, tested and stored.}
+\newduneabbrev{ctsf}{CTSF}{coating, testing and storage facility}{A facility where the the \gls{dp} photon detectors will be coated, tested, and stored}
 
 % from DP-PDS --end
 
@@ -1336,85 +1347,258 @@ Gifu, Japan}
 % from Schellman
 
 \newduneword{rucio}{Rucio}{Data management system originally developed
-by ATLAS but now open-source and shared across HEP}
-\newduneabbrev{doma}{DOMA}{Data Organization, Management, and
-Access}{Data Organization, Management, and Access efforts through the
+by \gls{atlas} but now open-source and shared across HEP}
+\newduneabbrev{doma}{DOMA}{data organization, management, and
+access}{data organization, management, and access efforts through the
 HEP Software Foundation}
-\newduneabbrev{hsf}{HSC}{High Energy Physics Software Foundation}{High
-Energy Physics Software Foundation}
+
+\newduneabbrev{hsf}{HSC}{HEP Software Foundation Collaboration}{A foundation that facilitates cooperation and common efforts in high energy physics software and computing internationally}
+
 \newduneabbrev{wlcg}{WLCG}{Worldwide LHC Computing Grid}{Worldwide LHC
 Computing Grid}
 \newduneabbrev{osg}{OSG}{Open Science Grid}{Open Science Grid}
 \newduneabbrev{sci}{SCI}{Scientific Computing Infrastructure}{Proposed
 extension of the infrastructure component of \gls{wlcg} to other
 experiments}
-\newduneabbrev{csc}{CSC}{Computing and Software Consortium}{DUNE
-Computing and Software Consortium}
+\newduneabbrev{csc}{CSC}{computing and software consortium}{DUNE
+computing and software consortium}
 
-\newduneword{dirac}{DIRAC}{Computing workflow management designed for
-LHCb and now used by many HEP experiments}
+\newduneword{dirac}{DIRAC}{Computing workflow management designed for LHCb and now used by many HEP experiments}
 
 % from DP-HV --start
 \newduneword{frp}{FRP}{fiber-reinforced plastic}
-\newduneabbrev{hdpe}{HDPE}{add full name}{add def}
-
+\newduneabbrev{hdpe}{HDPE}{high-density polyethylene}{A thermoplastic polymer made from petroleum commonly used to make plastic bottles}
 \newduneword{hvps}{HVPS}{\gls{hv} power supply}
 \newduneword{aisi}{AISI}{American Iron and Steel Institute}
 \newduneword{ific}{IFIC}{Instituto de Fisica Corpuscular (in Valencia, Spain)}
 \newduneabbrev{rsds}{RSDS}{radioactive source deployment system}{Proposed calibration system based on the deployment of
-radioactive sources inside the \gls{dune} cryostat.}
+radioactive sources inside the \gls{dune} cryostat}
 \newduneword{2p2h}{2p2h}{two particle, two hole}
 \newduneabbrev{duneprism}{DUNE-PRISM}{\gls{dune} Precision Reaction-Independent Spectrum Measurement}{a mobile near detector that can perform measurements over a range of angles off-axis from the neutrino beam direction in order to sample many different neutrino energy distributions}
 \newduneword{arcube}{ArgonCube}{The name of the core part of the \gls{dune} \gls{nd}, a \gls{lartpc}}
 
-\newduneabbrev{citf}{CITF}{cryogenic instrumentation test facility}{A facility at \fnal with small ($<\,\SI{1}{ton}$) to intermediate ($\sim\,\SI{1}{ton}$) volumes of instrumented, purified TPC-grade \lar, used for testing devices intended for use in \gls{dune}}
+\newduneabbrev{citf}{CITF}{cryogenic instrumentation test facility}{A facility at \gls{fnal} with small ($<$\SI{1}{ton}) to intermediate ($\sim$\SI{1}{ton}) volumes of instrumented, purified TPC-grade \gls{lar}, used for testing devices intended for use in \gls{dune}}
 
-\newduneabbrev{3dst}{3DST}{3D scintillator tracker}{The core part of the 3D projection scintillator tracker spectrometer}
-\newduneabbrev{3dsts}{3DST-S}{3D scintillator tracker spectrometer}{The 3D projection scintillator tracker spectrometer}
-\newduneword{mpd}{MPD}{multi-purpose detector}
-\newduneword{hpgtpc}{HPgTPC}{high-pressure gaseous argon \gls{tpc}}
+\newduneabbrev{3dst}{3DST}{3D scintillator tracker}{The core part of the \threed projection scintillator tracker spectrometer in the near detector conceptual design}
+\newduneabbrev{3dsts}{3DST-S}{3D scintillator tracker spectrometer}{The \threed projection scintillator tracker spectrometer  in the near detector conceptual design}
+\newduneabbrev{mpd}{MPD}{multi-purpose detector}{A component of the near detector conceptual design; it is a magnetized system consisting of a \gls{hpgtpc} and a surrounding \gls{ecal}}
+\newduneabbrev{hpg}{HPG}{high-pressure gas}{gas at high pressure to be used in a \gls{hpgtpc}} 
+\newduneabbrev{hpgtpc}{HPgTPC}{high-pressure gaseous argon TPC}{A \gls{tpc} filled with gaseous argon; a possible component of the \gls{dune} \gls{nd}}
+
 \newduneword{src}{SRC}{short-range correlated nucleon-nucleon interactions}
 \newduneword{larpix}{LArPix}{ \gls{asic} pixelated charge readout for a \gls{tpc} }
 \newduneword{arclt}{ArCLight}{a light detector \gls{arcube} effort}
 \newduneword{fhc}{FHC}{forward horn current ($\numu$ mode)}
-\newduneword{rhc}{RHC}{reverse horn current ($\overline{\nu}_{\mu}$ mode)}
+\newduneword{rhc}{RHC}{reverse horn current (\numubartonumubar mode)}
 \newduneword{mwpc}{MWPC}{multi-wire proportional chamber}
 \newduneword{na61}{NA61}{CERN hadron production experiment}
 \newduneword{pdnd}{ProtoDUNE-ND}{a prototype \gls{dune} \gls{nd}}
-\newduneword{ccqe}{CCQE}{charged current quasielastic interaction} 
+% replaced by abbrev from ND CDR: \newduneword{ccqe}{CCQE}{charged current quasielastic interaction} 
 \newduneabbrev{roc}{ROC}{readout chamber}{readout chamber for gaseous argon \gls{tpc}}
 \newduneabbrev{iroc}{IROC}{inner readout chamber}{inner (radial) readout chamber for gaseous argon \gls{tpc}}
 \newduneabbrev{oroc}{OROC}{outer readout chamber}{outer (radial) readout chamber for gaseous argon \gls{tpc}}
 
-\newduneword{lux}{LUX}{add def}
-\newduneword{mjdemo}{Majorana Demonstrator}{add def}
-\newduneword{lz}{LZ}{add def}
-\newduneword{mu2e}{Mu2e}{add def}
-\newduneword{pdsp2}{ProtoDUNE-2}{A second test run in the singe-phase ProtoDUNE test stand at CERN, acting as a validation of the final single-phase detector design}
-\newduneword{osha}{OSHA}{Occupational Safety and Health Administration (USA Department of Labor) formed by the Occupational Safety and Health Act of 1970.}
-\newduneabbrev{pns}{PNS}{pulsed neutron source}{Calibration system based
-on neutron capture gamma showers spread out in the whole detector.}
+\newduneword{lux}{LUX}{Large Underground Xenon (LUX) dark matter detector at \gls{surf} }
 
-\newduneabbrev{fv}{FV}{fiducial volume}{Detector volume within the \gls{tpc},
-that is selected for physics analysis, through cuts on reconstructed event position}
+\newduneword{mjdemo}{Majorana Demonstrator}{Experiment sited at \gls{surf} that  seeks to determine whether neutrinos are their own antiparticles}
+
+\newduneword{lz}{LZ}{Experiment sited at \gls{surf} that  seeks to detect faint interactions between galactic dark matter and regular matter}
+
+\newduneword{mu2e}{Mu2e}{An experiment sited at \gls{fnal} that searches for charged-lepton flavor violation and seeks to discover physics beyond the \gls{sm}}
+
+\newduneword{pdsp2}{ProtoDUNE-SP-2}{A second test run in the singe-phase
+ProtoDUNE test stand at CERN, acting as a validation of the final
+single-phase detector design}
+
+
+\newduneword{osha}{OSHA}{Occupational Safety and Health Administration (USA Department of Labor) formed by the Occupational Safety and Health Act of 1970}
+\newduneabbrev{pns}{PNS}{pulsed neutron source}{Calibration system based
+on neutron capture gamma showers spread out in the whole detector}
+
+\newduneabbrev{fv}{FV}{fiducial volume}{The detector volume within the \gls{tpc} that is selected for physics analysis through cuts on reconstructed event position}
 
 \newduneword{p6}{P6}{framework used to plan and status the resource-loaded schedule of activities associated with the USA contributions to \gls{lbnf} and \gls{dune} }
-\newduneword{evms}{EVMS}{earned value management system}
+\newduneabbrev{evms}{EVMS}{earned value management system}{Earned Value Management is a systematic approach to the integration and measurement of cost, schedule, and technical (scope) accomplishments on a project or task. It provides both the government and contractors the ability to examine detailed schedule information, critical program and technical milestones, and cost data (text from the US DOE); the EVMS is a system that implements this approach}
 
 
-\newduneword{core}{CORE}{add def}
-\newduneabbrev{ahj}{AHJ}{Authority Having Jurisdiction}{add def}
+\newduneword{core}{CORE}{CORE contributions are in either monetary units or labor hours. They can be technical components for the facility or experiment and the effort of the staff needed to produce, install, and test them;  major facilities for the experiment; or other products and services relevant for the completion of the facility or experiment} % 15 May - gina needs to `bless' this
+
+
+\newduneabbrev{ahj}{AHJ}{Authority Having Jurisdiction}{An organization, office, or individual responsible for enforcing the requirements of a code or standard, or for approving equipment, materials, an installation, or a procedure (\gls{osha})}
 \newduneword{cte}{CTE}{coefficient of thermal expansion}
 
-\newduneword{opc}{OPC}{Open Platform Communications is a series of standards and specifications for industrial telecommunication.} 
-\newduneword{scada}{SCADA}{Supervisory Control and Data Acquisition}
-\newduneword{ln}{LN}{liquid nitrogen}
+\newduneabbrev{opc}{OPC}{open platform communications}{Open platform communications is a series of standards and specifications for industrial telecommunication} 
+\newduneword{scada}{SCADA}{supervisory control and data acquisition}
+\newduneword{ln}{LN$_2$}{liquid nitrogen}
 \newduneabbrev{lapd}{LAPD}{Liquid Argon Purity Demonstrator}{Cryostat at Fermilab for long-term studies requiring a large volume of argon}
 
 \newduneabbrev{pab}{PAB}{Proton Assembly Building}{Home of several \gls{lar} facilities at Fermilab}
-\newduneword{tvs}{TVS}{transient voltage suppression}
 \newduneword{hep}{HEP}{high energy physics}
 \newduneword{sc}{SC}{scientific computing}  % check, this may be wrong (ask Heidi)
 \newduneword{cms}{CMS}{Compact Muon Solenoid experiment at CERN}
 \newduneword{alice}{ALICE}{A Large Ion Collider Experiment, at CERN}
 \newduneword{gpib}{GPIB}{general purpose interface bus}
+
+
+\newduneabbrev{pfparticle}{PFParticle}{particle flow particle}{Each of the individual reconstructed particles in the hierarchy (or particle flow) describing the reconstructed event interaction}
+
+\newduneabbrev{mcparticle}{MCParticle}{Monte Carlo Particle}{Individual true simulated particle}
+\newduneword{au}{AU}{astronomical unit}
+\newduneword{nufit}{NuFIT 4.0}{The NuFIT 4.0 global fit to neutrino oscillation data}
+
+\newduneabbrev{sgft}{SGFT}{term}{add def (DP install)}
+\newduneword{uhv}{UHV}{ultra high vacuum}
+\newduneword{lps}{LPS}{laser positioning system}
+
+\newduneword{unicamp}{UNICAMP}{University of Campinas, Sao Paulo, Brazil}
+ 
+\newduneabbrev{fbk}{FBK}{Fondazione Bruno Kessler}{FBK is a research non-profit entity in Trento, Italy that partners in the development of technology with applications in various fields including High Energy Physics}
+
+% the below not used 
+%15may anne
+
+%\newduneabbrev{fgt}{FGT}{fine-grained tracker}{A near detector module Add def??}
+
+%\newduneword{consortium}{consortium}{A unit of organization in the  DUNE project focused on one major component of the far detector}
+\newduneword{fft}{FFT}{fast Fourier transform}
+\newduneabbrev{enob}{ENOB}{effective number of bits}{The effective number of bits is a measure of the dynamic range of an \gls{adc} and its associated circuitry. The resolution of an \gls{adc} is specified by the number of bits used to represent the analog value, in principle giving 2N signal levels for an N-bit signal. However, all real \gls{adc} circuits introduce noise and distortion. ENOB specifies the resolution of an ideal \gls{adc} circuit that would have the same resolution as the circuit under consideration}
+\newduneabbrev{sndr}{SNDR}{signal to noise and distortion ratio}{Also known as SINAD. Ratio of the \gls{rms} signal amplitude to the mean value of the root-sum-square of all other spectral components, including harmonics, but excluding \gls{dc} levels. It is a good indication of the overall dynamic performance of an \gls{adc} because it includes all components which make up noise and distortion}
+\newduneabbrev{sfdr}{SFDR}{spurious free dynamic range}{Spurious free dynamic range is the ratio of the \gls{rms} value of the signal to the \gls{rms} value of the worst spurious signal regardless of where it falls in the frequency spectrum. The worst spur may or may not be a harmonic of the original signal}
+\newduneabbrev{thd}{THD}{total harmonic distortion}{Total harmonic distortion is the ratio of the \gls{rms} value of the fundamental signal to the mean value of the root-sum-square of its harmonics} 
+\newduneword{tvs}{TVS}{transient voltage suppression}
+
+\newduneword{riskprob}{risk probabilities}{The risk probability, after taking into account the planned mitigation activities, is ranked as 
+ L (low $<\,$\SI{10}{\%}), 
+M (medium \SIrange{10}{25}{\%}), or 
+H (high $>\,$\SI{25}{\%}). 
+The cost and schedule impacts are ranked as 
+L (cost increase $<\,$\SI{5}{\%}, schedule delay $<\,$2 months), 
+M (\SIrange{5}{25}{\%} and 2--6 months, respectively) and 
+H ($>\,$\SI{20}{\%} and $>\,$2 months, respectively)}
+
+\newduneabbrev{lbls}{LBLS}{laser beam location system}
+{Auxiliary calibration system providing an independent location measurement of the ionization laser beams direction}
+
+
+\newduneabbrev{lsst}{LSST}{Large Synoptic Survey Telescope}{8.4 m telescope with 3.2G-pixel camera that will start taking data in 2023}
+\newduneabbrev{ska}{SKA}{Square Kilometer Array}{International radio telescope array planned to start data-taking in 2027}
+\newduneabbrev{hyperk}{HyperK}{Hyper Kamiokande}{260 kt water Cerenkov neutrino detector to begin construction at Kamiokande in 2020}
+\newduneword{lhcb}{LHCb}{LHC experiment dedicated to forward physics}
+\newduneword{belleii}{Belle II}{B-factory experiment now running at KEK}
+
+\newduneabbrev{ldm}{LDM}{light-mass dark matter}{Refers to dark matter particles with mass values much lower than the electroweak scale, specifically below the 1~GeV level}
+ 
+\newduneabbrev{bnv}{BNV}{baryon-number violating}{Describing an interaction where \gls{baryonnumber} is not conserved}
+
+\newduneword{bugey}{Bugey}{Neutrino experiment that operated at the Bugey nuclear power plant in France}
+
+\newduneword{minosplus}{MINOS$+$}{The successor to the \gls{minos} experiment, utilizing the same detectors and beam line, but operating at higher beam energy tune than \gls{minos}, parasitic with \gls{nova}}
+
+\newduneword{baryonnumber}{baryon number}{A quantity expressing the total number of baryons in a system minus the number of antibaryons}
+
+\newduneword{np04}{NP04}{CERN North Area hadron beamline used for the \gls{pdsp} test beam run}
+
+\newduneword{np02}{NP02}{CERN North Area hadron beamline used for the \gls{pddp} test beam run} %new from KH 1sep2020
+
+\newduneword{ua1}{UA1}{UA1 (Underground Area 1) was a particle detector at \gls{cern}'s  Super Proton Synchrotron (SPS). It ran from 1981 until 1990, when the SPS was used as a proton-antiproton collider, searching for traces of W and Z particles in collisions. (CERN) The UA1 dipole magnet was reused in the NOMAD experiment and currently provides the magnetic field for the \gls{t2k} ND280 detector}
+
+\newduneword{ssc}{SSC}{The Superconducting Super Collider was to be a huge underground ring complex beneath the area near Waxahachie, Texas, USA, that would have been the world’s most energetic particle accelerator. It was begun in 1990, but canceled by the U.S. Congress in 1993 (scientificamerican.com Oct 2013)}
+
+\newduneword{daphne}{DAPHNE}{Detector electronics for Acquiring PHotons from NEutrinos is a custom-developed warm front-end waveform digitizing electronics module derived from the readout system developed at Fermilab for the Mu2e experiment}
+ 
+\newduneword{nersc}{NERSC}{National Energy Research Computing Facility at \gls{lbnl}}
+
+% \newduneabbrev{integoff}{IO}{integration office}{The office that incorporates the onsite team responsible for coordinating integration and installation activities at SURF}
+\newduneword{integoff}{integration office}{The office that incorporates the onsite team responsible for coordinating integration and installation activities at SURF}
+
+\newduneabbrev{sma}{SMA}{SubMiniature version A}{Connector interface for coaxial cables
+with a screw-type coupling mechanism}
+
+\newduneword{kloe}{KLOE}{KLOE is a $e^+ e^-$ collider detector spectrometer operated at DAFNE, the $\phi$-meson factory at Frascati, Rome. In DUNE it will consist of a \SI{26}{cm} Pb+scintillating fiber ECAL surrounding a cylindrical open detector region that is  \SI{4.00}{m} in diameter and \SI{4.30}{m} long. The ECAL and detector region are embedded in a \SI{0.6}{T} magnetic field created by a \SI{4.86}{m} diameter superconducting coil and a \SI{475}{tonne} iron yoke}
+
+%\newduneabbrev{ro}{RO}{review office}{An office within the \gls{integoff} that organizes reviews }
+\newduneword{ro}{review office}{An office within the \gls{integoff} that organizes reviews }
+
+\newduneabbrev{doecd}{CD}{critical decision}{The U.S. DOE's Order 413.3B outlines a series of staged project approvals, each of which is referred to as a critical decision (CD)}
+
+\newduneabbrev{lbnfspac}{LBNF SPAC}{LBNF Strategic Project Advisory Committee}{A committee charged by the host laboratory director to provide expert, independent advice on significant issues and strategies related to LBNF project organization, management, and risks}
+
+\newduneabbrev{sand}{SAND}{System for on-Axis Neutrino Detection}{The beam monitor component of the near detector that remains on-axis at all times and serves as a dedicated neutrino spectrum monitor}
+
+\newduneword{4850l}{4850L}{The depth in feet (1480 m) of the top of the cryostats underground at SURF; used more generally to refer to the DUNE underground area. Called the ``4850 level'' or ``4850L''}
+
+\newduneword{apb}{APB}{authorship and publications board}
+\newduneword{crb}{CRB}{collaboration resources board}
+\newduneword{cube}{CuBe}{beryllium copper, used to make \gls{sp} \gls{apa} readout planes}
+\newduneword{drift}{drift}{(1) refers to electron drift under the influence of an electric field in a \gls{tpc}; (2) an excavated horizontal corridors (tunnels) in the underground areas at \gls{surf}}
+\newduneword{exposure}{exposure}{The integrated detector fiducial mass times beam intensity; it is proportional to the number of interactions and is used to normalize cross sections in a data sample}
+\newduneword{fr4}{FR-4}{Flame-retardant fiberglass-reinforced epoxy resin laminate used in making PCBs and other detector components}
+\newduneword{g10}{G-10}{Non-flame-retardant fiberglass-reinforced epoxy resin laminate used in making PCBs}
+\newduneword{kapton}{Kapton}{A polyimide plastic film that is stable over a broad range of temperatures and is resistant to radiation damage}
+\newduneword{shaft}{shaft}{A vertical excavation at \gls{surf} connecting with the surface}
+\newduneword{winze}{winze}{A vertical excavation at \gls{surf} connecting two drifts, not connecting to the surface}
+\newduneword{ib}{IB}{institutional board}
+\newduneword{irb}{IBR}{institutional board representative}
+\newduneword{scomm}{SC}{speakers committee}
+\newduneword{sac}{SAC}{spokespersons advisory committee}
+\newduneword{ccondc}{CCC}{code of conduct committee}
+\newduneword{eoc}{EOC}{education and outreach committee}
+\newduneword{indico}{Indico}{Web-based meeting organization tool}
+% replaced by abbrev from ND CDR:  \newduneword{mec}{meson exchange current}{See \gls{2p2h}}
+\newduneabbrev{htc}{HTC}{High Throughput Computing}{Computing facilities typically consisting of large numbers of commodity servers as opposed to a single large machine. Best suited for running large numbers of independent jobs in parallel, these facilities are what is usually meant by ``grid computing''}
+\newduneword{dcache}{dCache}{A distributed, highly scalable (multi-PB) storage system, usable as both a standalone system and as a high-speed frontend to a tape storage system (such as /pnfs at Fermilab)}
+\newduneabbrev{ifdhc}{IFDHC}{Intensity Frontier Data Handling Client}{A multi-protocol tool for data transfer and file delivery in jobs. It is able to automatically select transfer protocols based on source and destination characteristics}
+\newduneabbrev{ifdh}{ifdh}{Intensity Frontier Data Handling}{The actual command invoked when using \gls{ifdhc}, on the command line, e.g. ifdh cp source\_file dest\_file}
+\newduneabbrev{pnfs}{PNFS}{Pseudo Network File System}{A file system often used in large storage systems. Typically interaction is very similar to a regular NFS volume, but there can be some subtle and important differences}
+
+% next 3 from NS cryogenics (Anne 8/28/20)
+\newduneword{nde}{NDE}{non-destructive examination}
+\newduneword{psv}{PSV}{pressure safety valve}
+\newduneword{pickling}{pickling}{steel pickling and oiling is a metal surface treatment finishing process used to remove surface impurities such as rust and carbon scale from hot rolled carbon steel}
+
+% from ND CDR (the next 42 lines) Anne; Aug 31, 2020
+\newduneabbrev{tof}{ToF}{time of flight}{The time a particle takes to fly between two visible interactions observed in the detector. If combined with the distance traveled by the particle, for example a neutron, it can be used for energy reconstruction}
+
+\newduneword{pep4}{PEP-4}{TPC for the Positron Electron Project 4 Collider at Stanford}
+
+
+\newduneword{ndlar}{ND-LAr}{\gls{lartpc} component of the near detector based on \gls{arcube} technology}
+
+\newduneword{ndgar}{ND-GAr}{component of the near detector with a core gaseous argon \gls{tpc} surrounded by an \gls{ecal} and a magnet}
+
+\newduneword{sfgd}{SuperFGD}{Super Fine-Grained Detector (SuperFGD) is 3D granular plastic scintillator detector that adopts the same technology as \dword{3dst}. It will be installed in the \dword{t2k} \dword{nd280} system \cite{Abe:2019whr}. \dword{3dst} design will inherit in large part from the SuperFGD detector}
+
+\newduneword{nd280}{ND280}{Near Detector 280, is the \dword{t2k} magnetized near detector \cite{Abe:2011ks}}
+
+\newduneword{fee}{FEE}{front-end electronics}
+
+\newduneword{mpgd}{MPGD}{MicroPattern Gas Detectors}
+
+\newduneword{rmm}{RMM}{Resistive MicroMegas}
+
+\newduneabbrev{stv}{STV}{Single Transverse Variables}{Kinematical variables obtained by projecting the neutrino interaction onto the transverse plane}
+
+\newduneabbrev{ccqe}{CCQE}{charged current quasielastic interaction} {An interaction where a neutrino scatters from a nucleon, producing a charged lepton and converting a neutron to a proton or vice versa}
+
+\newduneword{sis}{SIS}{shallow inelastic scattering}
+
+\newduneabbrev{res}{RES}{resonant scattering}{The mode of scattering where the target nucleon is excited to a resonant state and decays, typically producing one or more pions}
+
+ \newduneabbrev{hadw}{W}{invariant mass of the hadronic system}{Refers to the invariant mass of the hadronic system formed during the neutrino scatter}
+
+\newduneabbrev{agky}{AGKY}{Andreopolis-Gallagher-Kehayias-Yang}{A model for hadronization of nonresonant inelastic neutrino reactions at invariant hadronic masses of less than 3 \SI{3}{\GeV\per\square c} used in \dshort{GENIE}} 
+
+\newduneabbrev{clas}{CLAS}{CEBAF Large Acceptance Spectrometer}{A nuclear and particle physics detector located in the experimental Hall B at Jefferson Laboratory in Newport News, Virginia, United States. It is used to study the properties of the nuclear matter by the collaboration of over 200 physicists. Of particular relevance is its study of electron interactions with nuclei, including argon} 
+
+\newduneabbrev{e4nu}{e4nu}{Electrons for Neutrinos}{A collaboration dedicated to using JLab's electron-scattering data to deliver improved neutrino-nucleus cross sections} 
+
+\newduneabbrev{ldmx}{LDMX}{Light Dark Matter eXperiment}{The LDMX detector concept consists of a small precision tracker, and electromagnetic and hadronic calorimeters, all with near $2\pi$ azimuthal acceptance from the forward beam axis out to $∼40^\circ$ angle. This detector would be capable of measuring correlations among electrons, pions, protons, and neutrons in electron-nucleus scattering at exactly the energies relevant for DUNE physics} 
+
+\newduneabbrev{mec}{MEC}{meson-exchange currents} {An nuclear effect wherein pairs or larger groups of nucleons within a nucleus are bound together through the exchange of pions or other mesons. Neutrinos and other particles can scatter from these correlated pairs}
+
+\newduneword{imt}{IMT}{Intranuclear momentum transfer}
+
+\newduneword{miniboone}{MiniBooNE}{The Mini Booster Neutrino Experiment, at Fermilab, was designed to fully explore the LSND result}
+
+\newduneabbrev{tms}{TMS}{temporary muon spectrometer}{A muon spectrometer for the Near Detector that will be installed for the initial running period of DUNE, before the \gls{mpd} detector component is ready}
+

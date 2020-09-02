@@ -1,15 +1,161 @@
-\glossaryentry{\glsentrylong {cisc}{} (\glsentrytext {cisc}{})?\glossentry{cisc}|setentrycounter[]{page}\glsnumberformat}{20}
-\glossaryentry{\glsentrylong {hv}{} (\glsentrytext {hv}{})?\glossentry{hv}|setentrycounter[]{page}\glsnumberformat}{20}
-\glossaryentry{\glsentrylong {lar}{} (\glsentrytext {lar}{})?\glossentry{lar}|setentrycounter[]{page}\glsnumberformat}{20}
-\glossaryentry{\glsentrylong {hv}{} (\glsentrytext {hv}{})?\glossentry{hv}|setentrycounter[]{page}\glsnumberformat}{20}
-\glossaryentry{\glsentrylong {pdsp}?\glossentry{pdsp}|setentrycounter[]{page}\glsnumberformat}{24}
-\glossaryentry{\glsentrylong {pddp}?\glossentry{pddp}|setentrycounter[]{page}\glsnumberformat}{24}
-\glossaryentry{\glsentrylong {prr}{} (\glsentrytext {prr}{})?\glossentry{prr}|setentrycounter[]{page}\glsnumberformat}{24}
-\glossaryentry{\glsentrylong {cuc}{} (\glsentrytext {cuc}{})?\glossentry{cuc}|setentrycounter[]{page}\glsnumberformat}{24}
-\glossaryentry{\glsentrylong {cuc}{} (\glsentrytext {cuc}{})?\glossentry{cuc}|setentrycounter[]{page}\glsnumberformat}{24}
-\glossaryentry{\glsentrylong {detmodule}?\glossentry{detmodule}|setentrycounter[]{page}\glsnumberformat}{24}
-\glossaryentry{\glsentrylong {detmodule}?\glossentry{detmodule}|setentrycounter[]{page}\glsnumberformat}{24}
-\glossaryentry{\glsentrylong {detmodule}?\glossentry{detmodule}|setentrycounter[]{page}\glsnumberformat}{24}
-\glossaryentry{\glsentrylong {detmodule}?\glossentry{detmodule}|setentrycounter[]{page}\glsnumberformat}{24}
-\glossaryentry{\glsentrylong {detmodule}?\glossentry{detmodule}|setentrycounter[]{page}\glsnumberformat}{24}
-\glossaryentry{\glsentrylong {detmodule}?\glossentry{detmodule}|setentrycounter[]{page}\glsnumberformat}{24}
+\glossaryentry{CISC?\glossentry{cisc}|setentrycounter[]{page}\glsnumberformat}{21}
+\glossaryentry{HV?\glossentry{hv}|setentrycounter[]{page}\glsnumberformat}{21}
+\glossaryentry{LAr?\glossentry{lar}|setentrycounter[]{page}\glsnumberformat}{21}
+\glossaryentry{HV?\glossentry{hv}|setentrycounter[]{page}\glsnumberformat}{21}
+\glossaryentry{ProtoDUNE-SP?\glossentry{pdsp}|setentrycounter[]{page}\glsnumberformat}{25}
+\glossaryentry{ProtoDUNE-DP?\glossentry{pddp}|setentrycounter[]{page}\glsnumberformat}{25}
+\glossaryentry{production readiness review?\glossentry{prr}|setentrycounter[]{page}\glsnumberformat}{25}
+\glossaryentry{CUC?\glossentry{cuc}|setentrycounter[]{page}\glsnumberformat}{25}
+\glossaryentry{CUC?\glossentry{cuc}|setentrycounter[]{page}\glsnumberformat}{25}
+\glossaryentry{far detector module?\glossentry{detmodule}|setentrycounter[]{page}\glsnumberformat}{25}
+\glossaryentry{far detector module?\glossentry{detmodule}|setentrycounter[]{page}\glsnumberformat}{25}
+\glossaryentry{far detector module?\glossentry{detmodule}|setentrycounter[]{page}\glsnumberformat}{25}
+\glossaryentry{far detector module?\glossentry{detmodule}|setentrycounter[]{page}\glsnumberformat}{25}
+\glossaryentry{far detector module?\glossentry{detmodule}|setentrycounter[]{page}\glsnumberformat}{25}
+\glossaryentry{far detector module?\glossentry{detmodule}|setentrycounter[]{page}\glsnumberformat}{25}
+\glossaryentry{TMS?\glossentry{tms}|setentrycounter[]{page}\glsnumberformat}{41}
+\glossaryentry{MiniBooNE?\glossentry{miniboone}|setentrycounter[]{page}\glsnumberformat}{41}
+\glossaryentry{IMT?\glossentry{imt}|setentrycounter[]{page}\glsnumberformat}{41}
+\glossaryentry{MEC?\glossentry{mec}|setentrycounter[]{page}\glsnumberformat}{41}
+\glossaryentry{LDMX?\glossentry{ldmx}|setentrycounter[]{page}\glsnumberformat}{41}
+\glossaryentry{e4nu?\glossentry{e4nu}|setentrycounter[]{page}\glsnumberformat}{41}
+\glossaryentry{DSS?\glossentry{dss}|setentrycounter[]{page}\glsnumberformat}{41}
+\glossaryentry{DDSS?\glossentry{ddss}|setentrycounter[]{page}\glsnumberformat}{41}
+\glossaryentry{DP?\glossentry{dp}|setentrycounter[]{page}\glsnumberformat}{41}
+\glossaryentry{NP02?\glossentry{np02}|setentrycounter[]{page}\glsnumberformat}{41}
+\glossaryentry{PLC?\glossentry{plc}|setentrycounter[]{page}\glsnumberformat}{41}
+\glossaryentry{QE?\glossentry{qe}|setentrycounter[]{page}\glsnumberformat}{41}
+\glossaryentry{DIS?\glossentry{dis}|setentrycounter[]{page}\glsnumberformat}{41}
+\glossaryentry{DP module?\glossentry{dpmod}|setentrycounter[]{page}\glsnumberformat}{42}
+\glossaryentry{$\mu $TCA?\glossentry{utca}|setentrycounter[]{page}\glsnumberformat}{42}
+\glossaryentry{SP?\glossentry{sp}|setentrycounter[]{page}\glsnumberformat}{42}
+\glossaryentry{LAr?\glossentry{lar}|setentrycounter[]{page}\glsnumberformat}{42}
+\glossaryentry{LBNF/DUNE?\glossentry{lbnf-dune}|setentrycounter[]{page}\glsnumberformat}{42}
+\glossaryentry{LAr?\glossentry{lar}|setentrycounter[]{page}\glsnumberformat}{42}
+\glossaryentry{SP?\glossentry{sp}|setentrycounter[]{page}\glsnumberformat}{42}
+\glossaryentry{SURF?\glossentry{surf}|setentrycounter[]{page}\glsnumberformat}{43}
+\glossaryentry{FE?\glossentry{fe}|setentrycounter[]{page}\glsnumberformat}{43}
+\glossaryentry{trigger decision?\glossentry{trigdecision}|setentrycounter[]{page}\glsnumberformat}{43}
+\glossaryentry{secondary DAQ buffer?\glossentry{diskbuffer}|setentrycounter[]{page}\glsnumberformat}{43}
+\glossaryentry{DAQ partition?\glossentry{daqpart}|setentrycounter[]{page}\glsnumberformat}{43}
+\glossaryentry{DDR?\glossentry{daqdr}|setentrycounter[]{page}\glsnumberformat}{43}
+\glossaryentry{DAQ primary buffer?\glossentry{daqbuf}|setentrycounter[]{page}\glsnumberformat}{43}
+\glossaryentry{data selector?\glossentry{daqds}|setentrycounter[]{page}\glsnumberformat}{43}
+\glossaryentry{FER?\glossentry{daqfer}|setentrycounter[]{page}\glsnumberformat}{43}
+\glossaryentry{DAQ primary buffer?\glossentry{daqbuf}|setentrycounter[]{page}\glsnumberformat}{43}
+\glossaryentry{DAQ partition?\glossentry{daqpart}|setentrycounter[]{page}\glsnumberformat}{43}
+\glossaryentry{DAQ FEC?\glossentry{fec}|setentrycounter[]{page}\glsnumberformat}{43}
+\glossaryentry{detector unit?\glossentry{detunit}|setentrycounter[]{page}\glsnumberformat}{43}
+\glossaryentry{data fragment?\glossentry{datafrag}|setentrycounter[]{page}\glsnumberformat}{43}
+\glossaryentry{DAQ?\glossentry{daq}|setentrycounter[]{page}\glsnumberformat}{43}
+\glossaryentry{DAQ front-end fragment?\glossentry{daqfrag}|setentrycounter[]{page}\glsnumberformat}{43}
+\glossaryentry{DAQ?\glossentry{daq}|setentrycounter[]{page}\glsnumberformat}{43}
+\glossaryentry{DAQ front-end fragment?\glossentry{daqfrag}|setentrycounter[]{page}\glsnumberformat}{43}
+\glossaryentry{detector unit?\glossentry{detunit}|setentrycounter[]{page}\glsnumberformat}{43}
+\glossaryentry{data fragment?\glossentry{datafrag}|setentrycounter[]{page}\glsnumberformat}{43}
+\glossaryentry{DAQ front-end fragment?\glossentry{daqfrag}|setentrycounter[]{page}\glsnumberformat}{43}
+\glossaryentry{trigger command?\glossentry{trigcommand}|setentrycounter[]{page}\glsnumberformat}{43}
+\glossaryentry{DAQ?\glossentry{daq}|setentrycounter[]{page}\glsnumberformat}{43}
+\glossaryentry{data selector?\glossentry{daqds}|setentrycounter[]{page}\glsnumberformat}{43}
+\glossaryentry{DAQ front-end fragment?\glossentry{daqfrag}|setentrycounter[]{page}\glsnumberformat}{43}
+\glossaryentry{trigger command?\glossentry{trigcommand}|setentrycounter[]{page}\glsnumberformat}{43}
+\glossaryentry{data fragment?\glossentry{datafrag}|setentrycounter[]{page}\glsnumberformat}{43}
+\glossaryentry{data selection?\glossentry{daqdsn}|setentrycounter[]{page}\glsnumberformat}{43}
+\glossaryentry{DAQ front-end fragment?\glossentry{daqfrag}|setentrycounter[]{page}\glsnumberformat}{43}
+\glossaryentry{FER?\glossentry{daqfer}|setentrycounter[]{page}\glsnumberformat}{43}
+\glossaryentry{DAQ primary buffer?\glossentry{daqbuf}|setentrycounter[]{page}\glsnumberformat}{43}
+\glossaryentry{PLC?\glossentry{plc}|setentrycounter[]{page}\glsnumberformat}{43}
+\glossaryentry{far detector module?\glossentry{detmodule}|setentrycounter[]{page}\glsnumberformat}{43}
+\glossaryentry{SP?\glossentry{sp}|setentrycounter[]{page}\glsnumberformat}{44}
+\glossaryentry{TPC?\glossentry{tpc}|setentrycounter[]{page}\glsnumberformat}{44}
+\glossaryentry{APA?\glossentry{apa}|setentrycounter[]{page}\glsnumberformat}{44}
+\glossaryentry{FD?\glossentry{fd}|setentrycounter[]{page}\glsnumberformat}{44}
+\glossaryentry{SP module?\glossentry{spmod}|setentrycounter[]{page}\glsnumberformat}{44}
+\glossaryentry{APA?\glossentry{apa}|setentrycounter[]{page}\glsnumberformat}{44}
+\glossaryentry{CPA?\glossentry{cpa}|setentrycounter[]{page}\glsnumberformat}{44}
+\glossaryentry{endwall FC?\glossentry{ewfc}|setentrycounter[]{page}\glsnumberformat}{44}
+\glossaryentry{SP?\glossentry{sp}|setentrycounter[]{page}\glsnumberformat}{44}
+\glossaryentry{FC?\glossentry{fc}|setentrycounter[]{page}\glsnumberformat}{44}
+\glossaryentry{far detector module?\glossentry{detmodule}|setentrycounter[]{page}\glsnumberformat}{44}
+\glossaryentry{trigger notification?\glossentry{trignote}|setentrycounter[]{page}\glsnumberformat}{44}
+\glossaryentry{trigger command?\glossentry{trigcommand}|setentrycounter[]{page}\glsnumberformat}{44}
+\glossaryentry{MTL?\glossentry{mtl}|setentrycounter[]{page}\glsnumberformat}{44}
+\glossaryentry{MTL?\glossentry{mtl}|setentrycounter[]{page}\glsnumberformat}{44}
+\glossaryentry{far detector module?\glossentry{detmodule}|setentrycounter[]{page}\glsnumberformat}{44}
+\glossaryentry{trigger command?\glossentry{trigcommand}|setentrycounter[]{page}\glsnumberformat}{44}
+\glossaryentry{LArTPC?\glossentry{lartpc}|setentrycounter[]{page}\glsnumberformat}{44}
+\glossaryentry{LArTPC?\glossentry{lartpc}|setentrycounter[]{page}\glsnumberformat}{44}
+\glossaryentry{SURF?\glossentry{surf}|setentrycounter[]{page}\glsnumberformat}{44}
+\glossaryentry{SP?\glossentry{sp}|setentrycounter[]{page}\glsnumberformat}{45}
+\glossaryentry{DAQ?\glossentry{daq}|setentrycounter[]{page}\glsnumberformat}{45}
+\glossaryentry{DAQ?\glossentry{daq}|setentrycounter[]{page}\glsnumberformat}{45}
+\glossaryentry{SP?\glossentry{sp}|setentrycounter[]{page}\glsnumberformat}{45}
+\glossaryentry{CE?\glossentry{ce}|setentrycounter[]{page}\glsnumberformat}{45}
+\glossaryentry{FE?\glossentry{fe}|setentrycounter[]{page}\glsnumberformat}{45}
+\glossaryentry{ADC?\glossentry{adc}|setentrycounter[]{page}\glsnumberformat}{45}
+\glossaryentry{ASIC?\glossentry{asic}|setentrycounter[]{page}\glsnumberformat}{45}
+\glossaryentry{DAQ front-end fragment?\glossentry{daqfrag}|setentrycounter[]{page}\glsnumberformat}{45}
+\glossaryentry{DAQ FEC?\glossentry{fec}|setentrycounter[]{page}\glsnumberformat}{45}
+\glossaryentry{DUNE?\glossentry{dune}|setentrycounter[]{page}\glsnumberformat}{45}
+\glossaryentry{CF?\glossentry{cf}|setentrycounter[]{page}\glsnumberformat}{45}
+\glossaryentry{SURF?\glossentry{surf}|setentrycounter[]{page}\glsnumberformat}{45}
+\glossaryentry{TPC?\glossentry{tpc}|setentrycounter[]{page}\glsnumberformat}{45}
+\glossaryentry{DUNE?\glossentry{dune}|setentrycounter[]{page}\glsnumberformat}{45}
+\glossaryentry{FD?\glossentry{fd}|setentrycounter[]{page}\glsnumberformat}{45}
+\glossaryentry{LBNF?\glossentry{lbnf}|setentrycounter[]{page}\glsnumberformat}{45}
+\glossaryentry{DUNE?\glossentry{dune}|setentrycounter[]{page}\glsnumberformat}{45}
+\glossaryentry{MO?\glossentry{mo}|setentrycounter[]{page}\glsnumberformat}{46}
+\glossaryentry{LArTPC?\glossentry{lartpc}|setentrycounter[]{page}\glsnumberformat}{46}
+\glossaryentry{Fermilab?\glossentry{fnal}|setentrycounter[]{page}\glsnumberformat}{46}
+\glossaryentry{MH?\glossentry{mh}|setentrycounter[]{page}\glsnumberformat}{46}
+\glossaryentry{HPgTPC?\glossentry{hpgtpc}|setentrycounter[]{page}\glsnumberformat}{46}
+\glossaryentry{ECAL?\glossentry{ecal}|setentrycounter[]{page}\glsnumberformat}{46}
+\glossaryentry{detector unit?\glossentry{detunit}|setentrycounter[]{page}\glsnumberformat}{46}
+\glossaryentry{trigger command?\glossentry{trigcommand}|setentrycounter[]{page}\glsnumberformat}{46}
+\glossaryentry{trigger command?\glossentry{trigcommand}|setentrycounter[]{page}\glsnumberformat}{46}
+\glossaryentry{ETL?\glossentry{etl}|setentrycounter[]{page}\glsnumberformat}{46}
+\glossaryentry{trigger notification?\glossentry{trignote}|setentrycounter[]{page}\glsnumberformat}{46}
+\glossaryentry{external trigger candidate?\glossentry{externtrigger}|setentrycounter[]{page}\glsnumberformat}{46}
+\glossaryentry{Fermilab?\glossentry{fnal}|setentrycounter[]{page}\glsnumberformat}{46}
+\glossaryentry{NOvA?\glossentry{nova}|setentrycounter[]{page}\glsnumberformat}{46}
+\glossaryentry{Fermilab?\glossentry{fnal}|setentrycounter[]{page}\glsnumberformat}{46}
+\glossaryentry{ProtoDUNE-DP?\glossentry{pddp}|setentrycounter[]{page}\glsnumberformat}{46}
+\glossaryentry{LAr?\glossentry{lar}|setentrycounter[]{page}\glsnumberformat}{46}
+\glossaryentry{CERN?\glossentry{cern}|setentrycounter[]{page}\glsnumberformat}{46}
+\glossaryentry{SP?\glossentry{sp}|setentrycounter[]{page}\glsnumberformat}{46}
+\glossaryentry{DP?\glossentry{dp}|setentrycounter[]{page}\glsnumberformat}{46}
+\glossaryentry{DP?\glossentry{dp}|setentrycounter[]{page}\glsnumberformat}{47}
+\glossaryentry{ProtoDUNE?\glossentry{protodune}|setentrycounter[]{page}\glsnumberformat}{47}
+\glossaryentry{CERN?\glossentry{cern}|setentrycounter[]{page}\glsnumberformat}{47}
+\glossaryentry{SP?\glossentry{sp}|setentrycounter[]{page}\glsnumberformat}{47}
+\glossaryentry{ProtoDUNE?\glossentry{protodune}|setentrycounter[]{page}\glsnumberformat}{47}
+\glossaryentry{CERN?\glossentry{cern}|setentrycounter[]{page}\glsnumberformat}{47}
+\glossaryentry{COB?\glossentry{cob}|setentrycounter[]{page}\glsnumberformat}{47}
+\glossaryentry{FPGA?\glossentry{fpga}|setentrycounter[]{page}\glsnumberformat}{47}
+\glossaryentry{SSD?\glossentry{ssd}|setentrycounter[]{page}\glsnumberformat}{47}
+\glossaryentry{SNB?\glossentry{snb}|setentrycounter[]{page}\glsnumberformat}{47}
+\glossaryentry{Fermilab?\glossentry{fnal}|setentrycounter[]{page}\glsnumberformat}{47}
+\glossaryentry{DAQ?\glossentry{daq}|setentrycounter[]{page}\glsnumberformat}{47}
+\glossaryentry{trigger command?\glossentry{trigcommand}|setentrycounter[]{page}\glsnumberformat}{47}
+\glossaryentry{FD?\glossentry{fd}|setentrycounter[]{page}\glsnumberformat}{47}
+\glossaryentry{far detector module?\glossentry{detmodule}|setentrycounter[]{page}\glsnumberformat}{47}
+\glossaryentry{LBNF?\glossentry{lbnf}|setentrycounter[]{page}\glsnumberformat}{47}
+\glossaryentry{FSCF?\glossentry{fscf}|setentrycounter[]{page}\glsnumberformat}{47}
+\glossaryentry{DUNE?\glossentry{dune}|setentrycounter[]{page}\glsnumberformat}{47}
+\glossaryentry{FD?\glossentry{fd}|setentrycounter[]{page}\glsnumberformat}{47}
+\glossaryentry{TPM?\glossentry{tpm}|setentrycounter[]{page}\glsnumberformat}{47}
+\glossaryentry{MPD?\glossentry{mpd}|setentrycounter[]{page}\glsnumberformat}{48}
+\glossaryentry{LAr?\glossentry{lar}|setentrycounter[]{page}\glsnumberformat}{48}
+\glossaryentry{TCM?\glossentry{tcm}|setentrycounter[]{page}\glsnumberformat}{48}
+\glossaryentry{trigger decision?\glossentry{trigdecision}|setentrycounter[]{page}\glsnumberformat}{48}
+\glossaryentry{trigger candidate?\glossentry{trigcandidate}|setentrycounter[]{page}\glsnumberformat}{48}
+\glossaryentry{far detector module?\glossentry{detmodule}|setentrycounter[]{page}\glsnumberformat}{48}
+\glossaryentry{trigger candidate?\glossentry{trigcandidate}|setentrycounter[]{page}\glsnumberformat}{48}
+\glossaryentry{trigger command?\glossentry{trigcommand}|setentrycounter[]{page}\glsnumberformat}{48}
+\glossaryentry{MTL?\glossentry{mtl}|setentrycounter[]{page}\glsnumberformat}{48}
+\glossaryentry{ETL?\glossentry{etl}|setentrycounter[]{page}\glsnumberformat}{48}
+\glossaryentry{trigger decision?\glossentry{trigdecision}|setentrycounter[]{page}\glsnumberformat}{48}
+\glossaryentry{SP?\glossentry{sp}|setentrycounter[]{page}\glsnumberformat}{48}
+\glossaryentry{FEMB?\glossentry{femb}|setentrycounter[]{page}\glsnumberformat}{48}
+\glossaryentry{RCE?\glossentry{rce}|setentrycounter[]{page}\glsnumberformat}{48}
+\glossaryentry{FE?\glossentry{fe}|setentrycounter[]{page}\glsnumberformat}{48}

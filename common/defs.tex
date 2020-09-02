@@ -10,38 +10,83 @@
 % Check here first, don't reinvent existing ones, add any novel ones.
 % Use \xspace.
 
-%%%%% Anne adding macros for referencing TDR volumes and annexes Apr 20, 2015 %%%%%
+%%%%% Anne adding macros for referencing TDR volumes and chapters May 2019 %%%%%
 \def\expshort{DUNE\xspace}
 \def\dune{\expshort}
 \def\explong{The Deep Underground Neutrino Experiment\xspace}
 
-%\def\thedocsubtitle{LBNF/DUNE Technical Design Report (DRAFT)}
 \def\thedocsubtitle{Deep Underground Neutrino Experiment (DUNE)} 
-%\def\tdrtitle{Technical Proposal}
-\def\tdrtitle{DRAFT Technical Design Report}
-
-
+\def\tdrtitle{Technical Design Report}
 % All volume titles and numbers in one place.
-\def\voltitleexec{Executive Summary\xspace}
-\def\volnumberexec{1}
+\def\voltitleexec{Introduction to DUNE\xspace}
+\def\volnumberexec{I}
+% Note structure of definition name: 
+% vol=intro, ch for chapter, short id for chap, e.g., es=exec summary -->
+% e.g.,  intro ch es --> introches --> \introches
+\def\introches{Volume~\volnumberexec{}, \voltitleexec{}, Chapter~1\xspace}
+\def\introchphys{Volume~\volnumberexec{}, \voltitleexec{}, Chapter~2\xspace}
+\def\introchsp{Volume~\volnumberexec{}, \voltitleexec{}, Chapter~3\xspace}
+\def\introchdp{Volume~\volnumberexec{}, \voltitleexec{}, Chapter~4\xspace}
+\def\introchnd{Volume~\volnumberexec{}, \voltitleexec{}, Chapter~5\xspace}
+\def\introchcomp{Volume~\volnumberexec{}, \voltitleexec{}, Chapter~6\xspace}
+\def\introchtc{Volume~\volnumberexec{}, \voltitleexec{}, Chapter~7\xspace}
 
 \def\voltitlephysics{DUNE Physics\xspace}
-\def\volnumberphysics{2}
+\def\volnumberphysics{II}
+\def\physches{Volume~\volnumberphysics{}, \voltitlephysics{}, Chapter~1\xspace}
+\def\physchproj{Volume~\volnumberphysics{}, \voltitlephysics{}, Chapter~2\xspace}
+\def\physchland{Volume~\volnumberphysics{}, \voltitlephysics{}, Chapter~3\xspace}
+\def\physchtools{Volume~\volnumberphysics{}, \voltitlephysics{}, Chapter~4\xspace}
+\def\physchlbl{Volume~\volnumberphysics{}, \voltitlephysics{}, Chapter~5\xspace}
+\def\physchndk{Volume~\volnumberphysics{}, \voltitlephysics{}, Chapter~6\xspace}
+\def\physchsnb{Volume~\volnumberphysics{}, \voltitlephysics{}, Chapter~7\xspace}
+\def\physchbsm{Volume~\volnumberphysics{}, \voltitlephysics{}, Chapter~8\xspace}
+\def\physchconcl{Volume~\volnumberphysics{}, \voltitlephysics{}, Chapter~9\xspace}
 
-\def\voltitlesp{Single-Phase Far Detector Module\xspace}
-\def\volnumbersp{3}
+\def\voltitletc{DUNE Far Detector Technical Coordination\xspace}
+\def\volnumbertc{III}
+\def\tcches{Volume~\volnumbertc{}, \voltitletc{}, Chapter~1\xspace}
+\def\tcchproj{Volume~\volnumbertc{}, \voltitletc{}, Chapter~2\xspace}
+\def\tcchdesorg{Volume~\volnumbertc{}, \voltitletc{}, Chapter~3\xspace}
+\def\tcchjpo{Volume~\volnumbertc{}, \voltitletc{}, Chapter~4\xspace}
+\def\tcchfac{Volume~\volnumbertc{}, \voltitletc{}, Chapter~5\xspace}
+\def\tcchdet{Volume~\volnumbertc{}, \voltitletc{}, Chapter~6\xspace}
+\def\tcchie{Volume~\volnumbertc{}, \voltitletc{}, Chapter~7\xspace}
+\def\tcchrev{Volume~\volnumbertc{}, \voltitletc{}, Chapter~8\xspace}
+\def\tcchqa{Volume~\volnumbertc{}, \voltitletc{}, Chapter~9\xspace}
+\def\tcchesh{Volume~\volnumbertc{}, \voltitletc{}, Chapter~10\xspace}
+\def\tcchappx{Volume~\volnumbertc{}, \voltitletc{}, Chapter~11\xspace}
 
-\def\voltitledp{Dual-Phase Far Detector Module\xspace}
-\def\volnumberdp{4}
+\def\voltitlesp{The DUNE Far Detector Single-Phase Technology\xspace}
+\def\volnumbersp{IV}
+\def\spches{Volume~\volnumbersp{}, \voltitlesp{}, Chapter~1\xspace}
+\def\spchapa{Volume~\volnumbersp{}, \voltitlesp{}, Chapter~2\xspace}
+\def\spchhv{Volume~\volnumbersp{}, \voltitlesp{}, Chapter~3\xspace}
+\def\spchtpcelec{Volume~\volnumbersp{}, \voltitlesp{}, Chapter~4\xspace}
+\def\spchpds{Volume~\volnumbersp{}, \voltitlesp{}, Chapter~5\xspace}
+\def\spchcalib{Volume~\volnumbersp{}, \voltitlesp{}, Chapter~6\xspace}
+\def\spchdaq{Volume~\volnumbersp{}, \voltitlesp{}, Chapter~7\xspace}
+\def\spchcisc{Volume~\volnumbersp{}, \voltitlesp{}, Chapter~8\xspace}
+\def\spchinstall{Volume~\volnumbersp{}, \voltitlesp{}, Chapter~9\xspace}
 
-\def\voltitletc{Technical Coordination\xspace}
-\def\volnumbertc{5}
+\def\voltitledp{The DUNE Far Detector Dual-Phase Technology\xspace}
+\def\volnumberdp{V}
+\def\dpches{Volume~\volnumberdp{}, \voltitledp{}, Chapter~1\xspace}
+\def\dpchcrp{Volume~\volnumberdp{}, \voltitledp{}, Chapter~2\xspace}
+\def\dpchhv{Volume~\volnumberdp{}, \voltitledp{}, Chapter~3\xspace}
+\def\dpchtpcelec{Volume~\volnumberdp{}, \voltitledp{}, Chapter~4\xspace}
+\def\dpchpds{Volume~\volnumberdp{}, \voltitledp{}, Chapter~5\xspace}
+\def\dpchcalib{Volume~\volnumberdp{}, \voltitledp{}, Chapter~6\xspace}
+\def\dpchdaq{Volume~\volnumberdp{}, \voltitledp{}, Chapter~7\xspace}
+\def\dpchcisc{Volume~\volnumberdp{}, \voltitledp{}, Chapter~6\xspace}
+\def\dpchinstall{Volume~\volnumberdp{}, \voltitledp{}, Chapter~9\xspace}
 
-\def\voltitlend{Near Detector\xspace} % not part of TDR, a chapter goes in Exec Summ
-\def\volnumbernd{6}
 
-\def\voltitleswc{Software and Computing\xspace} % not part of TDR, a chapter goes in Exec Summ
-\def\volnumberswc{7}
+% This one used for testing only - SWC volume is not included in TDR
+\def\voltitleswc{DUNE SC\xspace}
+\def\volnumberswc{22}
+\def\voltitlend{DUNE SC\xspace}
+\def\volnumbernd{21}
 
 % see~\refsec{exec}{2.3}
 \newcommand{\refsec}[2]{Volume~\csname volnumber#1\endcsname \xspace Section~#2}
@@ -76,9 +121,18 @@
 \newcommand{\numutonue}{\nuxtonux{\mu}{e}}
 % Add chi sqd MH?  avg delta chi sqd?
 
+\newcommand{\numubartonumubar}{
+\ensuremath{\overline{\numu}\rightarrow\overline{\numu}}\xspace
+}
+
+\newcommand{\numubartonuebar}{
+\ensuremath{\overline{\numu}\rightarrow\overline{\nue}}\xspace
+}
 % atmospheric neutrinos and PDK
-\newcommand{\ptoknubar}{\ensuremath{\rightarrow K^+ \overline{\nu}}\xspace}
-\newcommand{\ptoepizero}{\ensuremath{p^+ \rightarrow e^+ \pi^0}\xspace}
+\newcommand{\ptoknubar}{\ensuremath{p\rightarrow K^+ \overline{\nu}}\xspace}
+\newcommand{\ptoepizero}{\ensuremath{p \rightarrow e^+ \pi^0}\xspace}
+\newcommand{\ntoek}{\ensuremath{n\rightarrow e^{-}K^{+}}\xspace}
+\newcommand{\nnbar}{\ensuremath{n-\bar{n}}\xspace}
 
 
 
@@ -96,9 +150,16 @@
 \def\driftvelocity{\SI{1.6}{\milli\meter/\micro\second}\xspace} % same for sp and dp?
 \def\lartemp{\SI{88}\,K\xspace}
 \def\larmass{\SI{17.5}{\kt}\xspace} % full mass in cryostat
+
+% from https://edms.cern.ch/ui/file/1834156/1/CENBNFCR0075.pdf 12/11/19:
 \def\cryostatht{\SI{17.8}{\meter}\xspace} % outer height of cryostat (Jim Stewart 5/2/19)
-\def\cryostatlen{\SI{65.8}{\meter}\xspace} % length of cryostat (Jim Stewart 5/2/19)
-\def\cryostatwdth{\SI{18.9}{\meter}\xspace} % width of cryostat (Jim Stewart 5/2/19)
+\def\cryostatlen{\SI{65.8}{\meter}\xspace} % outer length of cryostat (Jim Stewart 5/2/19)
+\def\cryostatwdth{\SI{18.9}{\meter}\xspace} % outer width of cryostat (Jim Stewart 5/2/19)
+
+\def\cryostathtinner{\SI{14.0}{\meter}\xspace} % inner height of cryostat (Jim Stewart 5/2/19)
+\def\cryostatleninner{\SI{62.0}{\meter}\xspace} % inner length of cryostat (Jim Stewart 5/2/19)
+\def\cryostatwdthinner{\SI{15.1}{\meter}\xspace} % inner width of cryostat (Jim Stewart 5/2/19)
+
 \def\nominalmodsize{\SI{10}{kt}\xspace} % nominal module size 10 kt
 \def\dunelifetime{\SI{20}{years}\xspace} % nominal operational life time of DUNE experiment
 \def\pipiibeampower{\SI{1.2}{MW}\xspace} 
@@ -107,25 +168,26 @@
 % Parameters SP
 \def\spmaxfield{\SI{500}{\volt/\centi\meter}\xspace} % SPfield strength
 \def\spactivelarmass{\SI{10}{\kt}\xspace} % active mass in cryostat
-\def\spmaxdrift{\SI{3.52}{\m}\xspace}
-\def\tpcheight{\SI{12.01}{\meter}\xspace} % height of SP TPC, APA, CPA and of DP TPC
-\def\sptpclen{\SI{58.17}{\meter}\xspace} % length of SP TPC, APA, CPA
-\def\apacpapitch{\SI{2.32}{\meter}\xspace} % pitch of SP CPAs and APAs
+\def\spmaxdrift{\SI{3.5}{\m}\xspace}
+\def\tpcheight{\SI{12.0}{\meter}\xspace} % height of SP TPC, APA, CPA and of DP TPC
+\def\sptpclen{\SI{58.2}{\meter}\xspace} % length of SP TPC, APA, CPA
+\def\apacpapitch{\SI{2.3}{\meter}\xspace} % pitch of SP CPAs and APAs
 \def\spfcmodlen{\SI{3.5}{\m}} % length of SP FC module
 \def\spnumch{\num{384000}\xspace} % total number of APA readout channels 
 \def\spnumpdch{\num{6000}\xspace} % total number of PD readout channels 
-\def\planespace{\SI{4.75}{\milli\meter}\xspace}
-\def\sptargetdriftvoltpos{\SI{180}{kV}\xspace} % target drift voltage - positive
+\def\planespace{\SI{4.8}{\milli\meter}\xspace}
+\def\sptargetdriftvolt{$-\SI{180}{\kilo\volt}$\xspace} % target drift voltage - positive
+\def\sptargetdriftvoltpos{\SI{180}{\kilo\volt}\xspace} % target drift voltage - positive
 \def\coldbox{cold box\xspace} % standardize w/ or w/o space or hyphen
 \def\Coldbox{Cold box\xspace} % standardize w/ or w/o space or hyphen
 \def\endwall{end wall\xspace} % standardize w/ or w/o space
 
 % Parameters DP
-\def\dpactivelarmass{\SI{12.096}{\kt}\xspace} % active mass in cryostat
-\def\dpfidlarmass{\SI{10.643}{\kt}\xspace} % fiducial mass in cryostat
-\def\dpmaxdrift{\SI{12}{\m}\xspace} % max drift length
-\def\dptpclen{\SI{60}{\meter}\xspace} % length of TPC
-\def\dptpcwdth{\SI{12}{\meter}\xspace} % width of TPC
+\def\dpactivelarmass{\SI{12.1}{\kt}\xspace} % active mass in cryostat
+\def\dpfidlarmass{\SI{10.6}{\kt}\xspace} % fiducial mass in cryostat
+\def\dpmaxdrift{\SI{12.0}{\m}\xspace} % max drift length
+\def\dptpclen{\SI{60.0}{\meter}\xspace} % length of TPC
+\def\dptpcwdth{\SI{12.0}{\meter}\xspace} % width of TPC
 \def\dpswchpercrp{\num{36}\xspace} % number of anode/lem sandwiches per CRP 
 \def\dpnumswch{\num{2880}\xspace} % total number of anode sandwiches in module
 \def\dptotcrp{\num{80}\xspace} % total number of CRPs in module
@@ -133,7 +195,7 @@
 \def\dpnumcrpch{\num{153600}\xspace} % total number of CRP channels in module
 \def\dpchperchimney{\num{640}\xspace} %  channels per chimney  --CRP channels?
 \def\dpnumpmtch{\num{720}\xspace} % number of PMT channels
-\def\dpstrippitch{\SI{3.125}{\milli\meter}\xspace} % pitch of anode strips
+\def\dpstrippitch{\SI{3.1}{\milli\meter}\xspace} % pitch of anode strips
 \def\dpnumfcmod{\num{244}\xspace} % number of FC modules
 \def\dpnumfcres{\num{240}\xspace} % number of FC resistors
 \def\dpnumfcrings{\num{60}\xspace} % number of FC rings
@@ -145,7 +207,7 @@
 %% SP has 2.25ms drift time.  The readout is 2*dt + 20%*dt extra.
 \def\spreadout{\SI{5.4}{\ms}\xspace}
 %% DP has 7.5 ms drift time.  The same (over generous) rule gives 16.5ms
-\def\dpreadout{\SI{16.5}{\ms}\xspace}
+\def\dpreadout{\SI{7.5}{\ms}\xspace}
 % Supernova Neutrino Burst buffer and readout window time
 \def\snbtime{\SI{100}{\s}\xspace}
 % interesting amount of time we might have SNB neutrinos but not yet
@@ -153,6 +215,16 @@
 \def\snbpretime{\SI{10}{\s}\xspace}
 % SP SNB dump size. MUST KEEP THIS MANUALLY IN SYNC 1.5 TB/s * \snbtime
 \def\spsnbsize{\SI{45}{\TB}\xspace}
+
+% available power in the CUC and for DAQ
+\def\cucpower{\SI[inter-unit-product =$\cdot$]{500}{\kilo\volt\ampere}\xspace}
+\def\daqpower{\SI[inter-unit-product =$\cdot$]{500}{\kilo\volt\ampere}\xspace}
+\def\surfdaqpower{\SI[inter-unit-product =$\cdot$]{50}{\kilo\volt\ampere}\xspace}
+
+% available racks in the CUC and for DAQ.
+\def\cucracks{\SI{60}{racks}\xspace}
+\def\daqracks{\SI{56}{racks}\xspace}
+\def\surfdaqracks{\SI{8}{racks}\xspace}
 
 % keep these three numerically in sync
 \def\offsitepbpy{\SI{30}{\PB/\year}\xspace}
@@ -169,6 +241,9 @@
 \newcommand{\rms}{RMS\xspace} % Might want this small caps?
 \newcommand{\threed}{3D\xspace}
 \newcommand{\twod}{2D\xspace}
+\newcommand{\fdth}{feedthrough\xspace} % ok not in gloss
+\newcommand{\phel}{photoelectron\xspace} % ok not in gloss
+\newcommand{\frfour}{FR-4\xspace} % used in gloss and sp hv chap
 
 
 
@@ -177,7 +252,7 @@
 \def\mindriftfield{\SI{250}{\volt/\cm}\xspace}
 \def\mindriftfieldgoal{\SI{500}{\volt/\cm}\xspace}
 % 2 FE elec noise
-\def\elecnoisefe{ \num{1000} enc\xspace}
+\def\elecnoisefe{ \SI{1000}{e$^-$}\xspace}
 % 3 light yield
 \def\lightyield{\SI{0.5}{pe/\MeV}\xspace}
 \def\lightyieldgoal{\SI{5}{pe/\MeV}\xspace}
@@ -197,15 +272,15 @@
 % 8b APA induction wire angle
 \def\apainducwireangle{$\pm\SI{35.7}{^\circ}$\xspace}
 % 9a APA wire pitch - U,V
-\def\uvpitch{\SI{4.669}{\milli\meter}\xspace}
+\def\uvpitch{\SI{4.7}{\milli\meter}\xspace}
 % 9b APA wire pitch - X, G
-\def\xgpitch{\SI{4.790}{\milli\meter}\xspace}
+\def\xgpitch{\SI{4.8}{\milli\meter}\xspace}
 % 10 APA wire position tolerance
 \def\wirepitchtol{$\pm$\SI{0.5}{\milli\meter}\xspace}
 % 11 drift field uniformity (from HVS)
 \def\fielduniformityhv{\SI{1}{\%}\xspace}
 % 12 HV PS ripple contrib to noise
-\def\hvripplenoise{\SI{100}{enc}\xspace}
+\def\hvripplenoise{\SI{100}{e$^-$}\xspace}
 % 13 FE peaking time
 \def\fepeaktime{\SI{1}{\micro\second}\xspace}
 % 14 signal saturation level (SP)
@@ -235,15 +310,12 @@
 % 24 local E fields
 \def\localefield{\SI{30}{\kV/\cm}\xspace}
 % 25 non-FE noise contributions
-\def\elecnoisenonfe{$\ll$ \SI{1000}{enc}\xspace}
+\def\elecnoisenonfe{$<<$ \SI{1000}{e$^-$}\xspace}
 % 26 impurity contrib from components
-\def\larpuritycomps{$\ll$ \SI{30}{ppt}\xspace}
+\def\larpuritycomps{$<<$ \SI{30}{ppt}\xspace}
 % 28 dead channels
 \def\deadchannels{\SI{1}{\%}\xspace}
 
-\newcommand{\fdth}{feedthrough\xspace} % ok not in gloss
-\newcommand{\phel}{photoelectron\xspace} % ok not in gloss
-\newcommand{\frfour}{FR-4\xspace} % used in gloss and sp hv chap
 
 
 % The following from phys ch-bsm 1/3/19 (was in their cls file)
@@ -267,14 +339,20 @@
 \newcommand{\accesscuccountrm}{April  2023\xspace}% CUC Counting Room Accessible: April 2023
 \newcommand{\accesstopfirstcryo}{January 2024\xspace}%Top of Far Detector #1 Cryostat Accessible: January 2024
 \newcommand{\startfirsttpcinstall}{August 2024\xspace}%Start of Far Detector #1 TPC Installation: August 2024
-\newcommand{\firsttpcinstallend}{May 2025\xspace}% End of Far Detector #1 TPC Installation: May 2025
 \newcommand{\accesstopsecondcryo}{January 2025\xspace}%Top of Far Detector #2 Accessible: January 2025
+\newcommand{\firsttpcinstallend}{May 2025\xspace}% End of Far Detector #1 TPC Installation: May 2025
 \newcommand{\startsecondtpcinstall}{August 2025\xspace}%Start of Far Detector #2 TPC Installation: August 2025
 \newcommand{\secondtpcinstallend}{May 2026\xspace}%End of Far Detector #2 TPC Installation: May 2026
 
+\newcommand{\maincavernstartexc}{(get date)\xspace}% Start exc of detector cavern 1. needed for exec summ
+
 %Mike Kordosky: the command below is used to refer to
 % planned entries in the requirements table.
-\newcommand{\rrt}[1]{\ifthenelse{\equal{#1}{}}{[RT:TBD]}{[RT:#1]}}
+%\newcommand{\rrt}[1]{\ifthenelse{\equal{#1}{}}{[RT:TBD]}{[RT:#1]}}
+% remove these entries
+\newcommand{\rrt}[1]{}
+
+\newcommand{\beamturnon}{fix beam turn on date in defs.tex\xspace}
 
 %%%%%%% Everything below here is DEPRECATED (4/30/19 AH) %%%%%%%%%%
 
@@ -285,8 +363,8 @@
 \newcommand{\superk}{Super--Kamiokande\xspace} %nonaccel, bsm
 \newcommand{\hyperk}{Hyper--Kamiokande\xspace} %nonaccel
 \newcommand{\microboone}{MicroBooNE\xspace} %used in cisc sp, hv, daq
-\newcommand{\minerva}{MINER$\nu$A\xspace} %tools/meth, nuosc11
-\newcommand{\nova}{NO$\nu$A\xspace} %lots
+\newcommand{\minerva}{MINERvA\xspace} %tools/meth, nuosc11
+\newcommand{\nova}{NOvA\xspace} %lots
 \newcommand{\lariat}{LArIAT\xspace} % calib,dppds
 \newcommand{\argoneut}{ArgoNeuT\xspace} %nonaccel
 %not in use

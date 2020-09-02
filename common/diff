@@ -1,0 +1,468 @@
+87c87
+<  installed close to the neutrino source at \gls{fnal} }
+---
+>  installed close to the neutrino source at \fnal }
+
+
+91c91
+<   to be installed at the far site at \gls{surf} in
+---
+>   to be installed at the far site at \surf in
+
+
+105c105
+<   subsystem sensitive to light produced in the \gls{lar} }
+---
+>   subsystem sensitive to light produced in the \lar }
+
+
+114c114
+<   or is collected on the electrode (TPC is also used for ``total project cost'')} 
+---
+>   or is collected on the electrode} % The portion of each DUNE \gls{detmodule} that records ionization electrons after they drift away from a cathode through the \lar, and also  through gaseous argon in a \dual module, is a TPC.  }
+
+
+121,122c121,122
+< \newduneabbrevs{apa}{APA}{anode plane assembly}{anode plane assemblies}{A unit of the \gls{sp}
+<   detector module containing the elements sensitive to ionization in the \gls{lar}. 
+---
+> \newduneabbrevs{apa}{APA}{anode plane assembly}{anode plane assemblies}{A unit of the \single
+>   detector module containing the elements sensitive to ionization in the \lar. 
+
+
+132c132
+<   ionization charge distributions in a \gls{dp} detector module}
+---
+>   ionization charge distributions in a \dual detector module}
+
+
+136c136
+<   scintillation photons in a \gls{dp}  detector module}
+---
+>   scintillation photons in a \dual  detector module}
+
+
+182,184c182
+< \newduneword{ac}{AC}%{capacitive coupling}  % I think these are ok lower case (anne)
+< {Alternating Current;
+< when used in the phrase ``AC coupling'' refers to a circuit element that filters out low-frequency components, such as constant offsets, leaving higher frequency signal components. The frequency filtering is determined both by a resistor and a capacitor}
+---
+> \newduneword{ac}{AC}{capacitive coupling}  % I think these are ok lower case (anne)
+
+
+203c201
+< \newduneabbrev{hepa}{HEPA}{High Efficiency Particulate Air}{The High Efficiency Particulate Air filters are a type of air filter that remove 99.97\% of particles that have a size greater than or equal to \SI{0.3}{$\mu$m}}  % leave in upper case
+---
+> \newduneabbrev{hepa}{HEPA}{High Efficiency Particulate Air}{The High Efficiency Particulate Air filters are a type of air filter that remove \num{99.97}\% of particles that have a size greater han or equal to \SI{0.3}{$\mu$m}}  % leave in upper case
+
+
+237,242d234
+< % interval of validity
+< \newduneabbrev{iov}{IOV}{interval of validity}{Interval over which something is valid}
+< 
+< %CALC
+< \newduneword{calci}{CALCI}{Calibration and Cryogenic Instrumentation}
+< 
+
+
+244c236
+< \newduneword{detmodule}{far detector module}{The entire DUNE far detector is
+---
+> \newduneword{detmodule}{detector module}{The entire DUNE far detector is
+
+
+247,248d238
+<   
+< \newduneword{module}{module}{Many aspects of the DUNE far and near detectors are modular, so ``module'' must be understood in context. It may refer to one of the four far detector modules, distinct portions of a subdetector as in a ``field cage module,'' a software or electronics module, e.g., a separate framework plug-in, and so on}
+
+
+251,252c241,242
+< \newduneword{detunit}{detector unit}{A  
+< portion of a \gls{detmodule} may be further partitioned into a number of similar parts.   For example the \gls{sp} \gls{tpc} 
+---
+> \newduneword{detunit}{detector unit}{A %\gls{submodule} 
+> portion of a \gls{detmodule} may be further partitioned into a number of similar parts.   For example the \gls{sp} \gls{tpc} %\gls{submodule} 
+
+
+258c248
+<   \gls{daq} buffer holds a small subset of the full rate as
+---
+>   \dshort{daq} buffer holds a small subset of the full rate as
+
+
+281d270
+< \newduneabbrev{etf}{ETF}{Experiment Test Framework}{\gls{wlcg} testing middleware running grid jobs that actively test distributed sites services and capabilities, and report back to monitoring services}
+
+
+326c315
+< %\newduneword{submodule}{subdetector}{A detector unit of granularity less  than one \gls{detmodule} such as the TPC of either a \gls{sp} or \gls{dp}   module}
+---
+> %\newduneword{submodule}{subdetector}{A detector unit of granularity less  than one \gls{detmodule} such as the TPC of either a \single or \dual   module}
+
+
+373c362
+< \newduneabbrev{bow}{BOW}{Bump On Wire}{A working name for the front-end readout computing elements used in the nominal \gls{daq} design to interface the \gls{dp}  crates to the \gls{daq} front-end computers}
+---
+> \newduneabbrev{bow}{BOW}{Bump On Wire}{A working name for the front-end readout computing elements used in the nominal \gls{daq} design to interface the \dual  crates to the \gls{daq} front-end computers}
+
+
+474,475c463,465
+< \newduneabbrev{iceberg}{ICEBERG}{ICEBERG R\&D cryostat and electronics}{Integrated Cryostat and Electronics Built for Experimental Research Goals: a new double-walled cryostat built and installed at \gls{fnal}  
+< %build at \gls{fnal} and installed in the Proton Assembly Building meant (Anne changed) 
+---
+> \newduneabbrev{iceberg}{ICEBERG}{ICEBERG R\&D cryostat and electronics}{Integrated Cryostat and Electronics Built for Experimental Research Goals:
+> a new double-walled cryostat built and installed at \gls{fnal} 
+> %build at \gls{fnal} and installed in the Proton Assembly Building meant (Anne changed)
+
+
+495c485,486
+< \newduneabbrev{enc}{ENC}{equivalent noise charge}{The equivalent noise charge is the input charge that corresponds to a \gls{snr}$=1$}
+---
+> \newduneabbrev{enc}{ENC}{equivalent noise charge}{The equivalent noise charge is the input charge that corresponds to a 
+> $\gls{snr}=1$}
+
+
+587c578
+<   produced by the \gls{fnal} Main Injector beam spills}
+---
+>   produced by the \fnal Main Injector beam spills}
+
+
+612c603
+< \newduneabbrev{ptb}{PTB}{power and timing backplane}{Backplane used to connect the \glspl{wib} and the \glspl{ptc} on the \gls{wiec}. Also connects the \gls{ce} flange on the cryostat penetration}
+---
+> \newduneabbrev{ptb}{PTB}{power and timing backplane}{Backplane used to connect the \gls{wib}s and the \gls{ptc}s on the \gls{wiec}. Also connects the \gls{ce} flange on the cryostat penetration}
+
+
+666c657,658
+< transformation inverts its space coordinates, i.e. produces the mirror image}
+---
+> transformation inverts its space coordinates, i.e., 
+> produces the mirror image}
+
+
+690c682
+<   \gls{cf} at the DUNE far detector site, \gls{surf}}
+---
+>   \gls{cf} at the DUNE far detector site, \surf}
+
+
+694c686
+<   \gls{cf} at the DUNE near detector site, \gls{fnal}}
+---
+>   \gls{cf} at the DUNE near detector site, \fnal}
+
+
+697c689
+< \newduneabbrevs{gut}{GUT}{grand unified theory}{grand unified theories}{A class of theories that unifies the electroweak and strong forces}
+---
+> \newduneabbrevs{gut}{GUT}{grand unified theory}{grand unified theories}{A class of theories that unifies the electro-weak and strong forces}
+
+
+722,724c714
+<   atmospheric neutrino problems (also written as \gls{mo})}
+< 
+< \newduneabbrev{mo}{MO}{mass ordering}{See \gls{mh}}
+---
+>   atmospheric neutrino problems}
+
+
+728c718
+<   \gls{fnal} that provides a beam of high-energy protons that upon
+---
+>   \fnal that provides a beam of high-energy protons that upon
+
+
+779c769
+< \newduneabbrevs{cpa}{CPA}{cathode plane assembly}{cathode plane assemblies}{The component of the \gls{sp} detector module that provides the drift HV cathode}
+---
+> \newduneabbrevs{cpa}{CPA}{cathode plane assembly}{cathode plane assemblies}{The component of the \single detector module that provides the drift HV cathode}
+
+
+793c783
+< \newduneword{gg}{ground grid}{An electrode held electrically neutral relative to Earth ground voltage; it is installed between the cathode and the \glspl{pd} in a \gls{dpmod} to protect the \glspl{pmt}, maintaining high transparency to light}
+---
+>   \newduneword{gg}{ground grid}{An electrode held electrically neutral relative to Earth ground voltage; it is installed between the cathode and the \glspl{pd} in a \gls{dpmod} to protect the \glspl{pmt}, maintaining high transparency to light}
+
+
+812,813c802,803
+< %\newduneword{dsp}{DUNE-SP}{The \gls{sp} DUNE detector} % No they are det modules!
+< %\newduneword{ddp}{DUNE-DP}{The \gls{dp} DUNE detector}% No they are det modules!
+---
+> %\newduneword{dsp}{DUNE-SP}{The \single DUNE detector} % No they are det modules!
+> %\newduneword{ddp}{DUNE-DP}{The \dual DUNE detector}% No they are det modules!
+
+
+823c813,814
+< general project oversight, systems engineering, \gls{qa} and safety}
+---
+> general project oversight, systems engineering, \gls{qa} 
+> and safety}
+
+
+888c879
+<  {The safety system at \gls{surf}}
+---
+>  {The safety system at \surf}
+
+
+910c901
+< \newduneabbrev{bdm}{BDM}{boosted dark matter}{A new model that describes a relativistic dark matter particle boosted by the annihilation of heavier dark matter particles in the galactic center or the sun}
+---
+>   \newduneabbrev{bdm}{BDM}{boosted dark matter}{A new model that describes a relativistic dark matter particle boosted by the annihilation of heavier dark matter participles in the galactic center or the sun}
+
+
+913c904
+< Research}{The leading particle physics laboratory in Europe and home to the ProtoDUNEs. (In French, the Organisation Europ\'{e}enne pour la Recherche Nucl\'{e}aire, derived from Conseil Europ\'{e}en pour la Recherche Nucl\'{e}aire)}
+---
+> Research}{The leading particle physics laboratory in Europe and home to the ProtoDUNEs. (In French, the Organisation Europ\'{e}enne pour la Recherche Nucl\'{e}aire, derived from Conseil Europ\'{e}en pour la Recherche Nucl\'{e}aire}
+
+
+935d925
+< 
+
+
+942c932,933
+< Observatories with GLoBES} {From the official description: SNOwGLoBES is public software for computing interaction rates and distributions of observed quantities for \gls{snb} neutrinos in common detector materials} % (Anne thinks this was too long.)
+---
+> Observatories with GLoBES} {From the official description~\cite{snowglobes}: 
+> SNOwGLoBES is public software for computing interaction rates and distributions of observed quantities for \gls{snb} neutrinos in common detector materials} % (Anne thinks this was too long.)
+
+
+1058c1049
+< \newduneword{ssp}{SSP}{\gls{sipm} signal processor}
+---
+> \newduneword{ssp}{SSP}{SiPM signal processor}
+
+
+1065c1056
+< \newduneword{wire board}{wire board}{At the head end of the APA in the \gls{sp} \gls{tpc}, stacks of electronics boards referred to as ``wire boards'' are arrayed to anchor the wires.  They also provide the connection between the wires and the cold electronics} %?? long for a word. ??
+---
+> \newduneword{wire board}{wire board}{At the head end of the APA in the \single TPC, stacks of electronics boards referred to as ``wire boards'' are arrayed to anchor the wires.  They also provide the connection between the wires and the cold electronics} %?? long for a word. ??
+
+
+1071c1062,1063
+< \newduneabbrev{tpb}{TPB}{tetra-phenyl butadiene}{A \gls{wls} material}
+---
+> \newduneabbrev{tpb}{TPB}{tetra-phenyl butadiene}{A %type of 
+> \gls{wls} material}
+
+
+1073c1065,1066
+< \newduneabbrev{ptp}{PTP}{p-terphenyl}{A \gls{wls} material}
+---
+> \newduneabbrev{ptp}{PTP}{p-terphenyl}{A %type of 
+> \gls{wls} material}
+
+
+1076c1069
+< \newduneabbrev{sftchimney}{SFT chimney}{signal feedthrough chimney}{In the \gls{dp} technology, a volume above the cryostat penetration used for a signal feedthrough}
+---
+> \newduneabbrev{sftchimney}{SFT chimney}{signal feedthrough chimney}{In the \dual technology, a volume above the cryostat penetration used for a signal feedthrough}
+
+
+1112c1105
+< \newduneabbrev{cmgc}{CMGC}{construction manager/general contractor}{The organizational unit responsible for management of the construction of conventional facilities at the underground area at the \gls{surf} site}
+---
+> \newduneabbrev{cmgc}{CMGC}{construction manager/general contractor}{The organizational unit responsible for management of the construction of conventional facilities at the underground area at the \surf site}
+
+
+1126c1119
+< \newduneword{ppr}{production progress review}{A project management device by which the progress of production is reviewed} %changed to dune word 1/13 
+---
+> \newduneword{ppr}{production progress review}{A project management device by which the progress of production is reviewed} %changed to dune word 1/13
+
+	
+1136c1129
+< \newduneabbrev{larsoft}{LArSoft}{Liquid Argon Software}{A shared base of physics software across \gls{lartpc} experiments}
+---
+> \newduneabbrev{larsoft}{LArSoft}{Liquid Argon Software}{A shared base of physics software across \lartpc experiments}
+
+
+1138,1140c1131,1133
+< \newduneword{nova}{NOvA}{The \gls{nova} off-axis neutrino oscillation experiment at \gls{fnal}}
+< \newduneword{minerva}{MINERvA}{Neutrino cross sections experiment at \gls{fnal}}
+< \newduneword{microboone}{MicroBooNE}{A \gls{lartpc} neutrino oscillation experiment at \gls{fnal}}
+---
+> \newduneword{nova}{NOvA}{The \nova off-axis neutrino oscillation experiment at \gls{fnal}}
+> \newduneword{minerva}{MINERvA}{The \minerva neutrino cross sections experiment at  \gls{fnal}}
+> \newduneword{microboone}{MicroBooNE}{The \lartpc-based \microboone neutrino oscillation experiment at  \gls{fnal}}
+
+
+1142c1135
+< \newduneabbrev{nexo}{nEXO}{Enriched Xenon Observatory}{Experiment at Lawrence Livermore National Laboratory (U.S. national lab in Livermore, CA) searching for new physics with neutrinoless double-beta decay}
+---
+> \newduneabbrev{nexo}{nEXO}{Enriched Xenon Observatory}{Experiment at Lawrence Livermore National Laboratory (U.S. national lab in Livermore, CA)searching for new physics with neutrinoless double-beta decay}
+
+
+1154,1157c1147,1150
+< \newduneword{wirecell}{Wire-Cell}{A tomographic automated \threed neutrino event reconstruction method for \glspl{lartpc}}
+< \newduneabbrev{wct}{WCT}{Wire-Cell Toolkit}{A software toolkit with data flow processing components for \gls{lartpc} noise and signal simulation, noise filtering, signal processing, and tomographic \threed ionization activity imaging}
+< \newduneword{ftslite}{F-FTS-lite}{Light-weight version of the \gls{fnal} File Transfer system used for rapid data transfers out of the online systems}
+< \newduneabbrev{fts}{FTS}{File Transfer System}{A file transfer system developed at \gls{fnal} to catalog and move data to permanent storage}
+---
+> \newduneword{wirecell}{Wire-Cell}{A tomographic automated \threed neutrino event reconstruction method for \lartpc{}s}
+> \newduneabbrev{wct}{WCT}{Wire-Cell Toolkit}{A software toolkit with data flow processing components for \lartpc noise and signal simulation, noise filtering, signal processing, and tomographic \threed ionization activity imaging}
+> \newduneword{ftslite}{F-FTS-lite}{Light-weight version of the \fnal File Transfer system used for rapid data transfers out of the online systems}
+> \newduneabbrev{fts}{FTS}{File Transfer System}{A file transfer system developed at \fnal to catalog and move data to permanent storage}
+
+
+1160c1153
+< \newduneword{35t}{35 ton prototype}{A prototype cryostat and \gls{sp} detector built at \gls{fnal} before the \gls{protodune} detectors}
+---
+> \newduneword{35t}{35 ton prototype}{A prototype cryostat and \gls{sp} detector built at \fnal before the \gls{protodune} detectors}
+
+
+1177c1170
+< \newduneabbrev{las}{LAS}{LEM-anode Sandwich}{In the \gls{dp} technology, a \gls{lem} and its corresponding anode are mounted together in a module called a LEM-anode sandwich}
+---
+> \newduneabbrev{las}{LAS}{LEM-anode Sandwich}{In the \dual technology, a \gls{lem} and its corresponding anode are mounted together in a module called a LEM-anode sandwich}
+
+
+1251c1244
+< \newduneword{numi}{NuMI}{a set of facilities at \gls{fnal}, collectively called ``Neutrinos at the Main Injector.''  The NuMI neutrino beamline target system converts an intense proton beam into a focused neutrino beam}
+---
+> \newduneword{numi}{NuMI}{a set of facilities at \fnal, collectively called ``Neutrinos at the Main Injector.''  The NuMI neutrino beamline target system converts an intense proton beam into a focused neutrino beam}
+
+
+1279c1272,1273
+< \newduneword{ifbeam}{IFbeam}{Database that stores beamline information indexed by timestamp}
+---
+> \newduneword{ifbeam}{IFbeam}{Database that stores beamline information 
+> indexed by timestamp}
+
+
+1281c1275,1278
+< \newduneabbrev{marley}{MARLEY}{Model of Argon Reaction Low Energy Yields}{Developed at UC Davis, MARLEY is the first realistic model of neutrino electron interactions on argon for enegies less than \SI{50}{MeV}. This includes the energy range important for \gls{snb} neutrinos and also solar 8--boron neutrinos}
+---
+> \newduneabbrev{marley}{MARLEY}{Model of Argon Reaction Low Energy
+> Yields}{Developed at UC Davis, MARLEY is the first realistic model of
+> neutrino electron interactions on argon for enegies less than \SI{50}{MeV}. This includes the energy range important for \gls{snb}
+> neutrinos and also solar 8--boron neutrinos}
+
+
+1287c1284,1288
+< \newduneabbrev{cno}{CNO}{carbon nitrogen oxygen}{The CNO cycle (for carbon-nitrogen-oxygen) is one of the two known sets of fusion reactions by which stars convert hydrogen to helium, the other being the proton-proton chain reaction (pp-chain reaction). In the CNO cycle, four protons fuse, using carbon, nitrogen, and oxygen isotopes as catalysts, to produce one alpha particle, two positrons and two electron neutrinos}
+---
+> \newduneabbrev{cno}{CNO}{carbon nitrogen oxygen}{The CNO cycle (for carbon-nitrogen-oxygen) is one of the two known sets of fusion reactions by which stars convert
+> hydrogen to helium, the other being the proton-proton chain reaction
+> (pp-chain reaction). In the CNO cycle, four protons fuse, using
+> carbon, nitrogen, and oxygen isotopes as catalysts, to produce one
+> alpha particle, two positrons and two electron neutrinos}
+
+
+1295c1296
+< \newduneabbrev{aup}{AUP}{acceptance for use and possession}{Required for beneficial occupancy of the underground areas at \gls{surf} for \gls{lbnf} and \gls{dune}}
+---
+> \newduneabbrev{aup}{AUP}{acceptance for use and possession}{Required for beneficial occupancy of the underground areas at SURF for LBNF and DUNE}
+
+
+1302c1303,1307
+< \newduneabbrev{sno}{SNO}{Sudbury Neutrino Observatory}{The Sudbury Neutrino Observatory was a detector built 6800 feet under ground, in INCO's Creighton mine near Sudbury, Ontario, Canada. SNO was a heavy-water Cherenkov detector designed to detect neutrinos produced by fusion reactions in the sun}
+---
+> \newduneabbrev{sno}{SNO}{Sudbury Neutrino Observatory}{The Sudbury
+> Neutrino Observatory was a detector built 6800 feet under ground, in
+> INCO's Creighton mine near Sudbury, Ontario, Canada. SNO was a
+> heavy-water Cherenkov detector designed to detect neutrinos produced
+> by fusion reactions in the sun}
+
+
+1321c1326,1327
+< \newduneabbrev{tap}{TAP}{trip action plan}{A document required for any trip by a worker to the underground area at \gls{surf}, per that site's access control program; it describes the work to be accomplished during the trip} % ask Jim Stewart to check
+---
+> \newduneabbrev{tap}{TAP}{trip action plan}{A document required for any trip by a worker to the underground area at \gls{surf}, per that site's access control program; 
+> it describes the work to be accomplished during the trip} % ask Jim Stewart to check
+
+
+1341c1347
+< \newduneabbrev{crt}{CRT}{cosmic-ray tagger}{Detector external to the TPC designed to tag TPC-traversing cosmic ray particles}
+---
+> \newduneabbrev{crt}{CRT}{cosmic ray tagger}{Detector external to the TPC designed to tag TPC-traversing cosmic ray particles}
+
+
+1347c1353
+< \newduneabbrev{ctsf}{CTSF}{coating, testing and storage facility}{A facility where the the \gls{dp} photon detectors will be coated, tested, and stored}
+---
+> \newduneabbrev{ctsf}{CTSF}{coating, testing and storage facility}{A facility where the the \dual photon detectors will be coated, tested, and stored}
+
+
+1371c1377,1378
+< \newduneword{dirac}{DIRAC}{Computing workflow management designed for LHCb and now used by many HEP experiments}
+---
+> \newduneword{dirac}{DIRAC}{Computing workflow management designed for
+> LHCb and now used by many HEP experiments}
+
+
+1375c1382
+< \newduneabbrev{hdpe}{HDPE}{high-density polyethylene}{A thermoplastic polymer made from petroleum commonly used to make plastic bottles}
+---
+> \newduneabbrev{hdpe}{HDPE}{high-density polyethylene}{High-density polyethylene plastic}
+
+
+1385c1392
+< \newduneabbrev{citf}{CITF}{cryogenic instrumentation test facility}{A facility at \gls{fnal} with small ($<$\SI{1}{ton}) to intermediate ($\sim$\SI{1}{ton}) volumes of instrumented, purified TPC-grade \gls{lar}, used for testing devices intended for use in \gls{dune}}
+---
+> \newduneabbrev{citf}{CITF}{cryogenic instrumentation test facility}{A facility at \fnal with small ($<\,\SI{1}{ton}$) to intermediate ($\sim\,\SI{1}{ton}$) volumes of instrumented, purified TPC-grade \lar, used for testing devices intended for use in \gls{dune}}
+
+
+1423c1430,1431
+< \newduneabbrev{fv}{FV}{fiducial volume}{The detector volume within the \gls{tpc} that is selected for physics analysis through cuts on reconstructed event position}
+---
+> \newduneabbrev{fv}{FV}{fiducial volume}{The detector volume within the \gls{tpc} 
+> that is selected for physics analysis through cuts on reconstructed event position}
+
+
+1432c1440
+< \newduneabbrev{ahj}{AHJ}{Authority Having Jurisdiction}{An organization, office, or individual responsible for enforcing the requirements of a code or standard, or for approving equipment, materials, an installation, or a procedure (\gls{osha})}
+---
+> \newduneabbrev{ahj}{AHJ}{Authority Having Jurisdiction}{An organization, office, or individual responsible for enforcing the requirements of a code or standard, or for approving equipment, materials, an installation, or a procedure (OSHA)}
+
+
+1476c1484
+<  L (low $<\,$\SI{10}{\%}), 
+---
+> L (low $<\,$\SI{10}{\%}), 
+
+
+1480c1488
+< L (cost increase $<\,$\SI{5}{\%}, schedule delay $<\,$2 months), 
+---
+> L (cost increase $<\,$\SI{5}{\%}, schedule delay $<\,$\num{2} months), 
+
+
+1494c1502,1504
+< \newduneabbrev{ldm}{LDM}{light-mass dark matter}{Refers to dark matter particles with mass values much lower than the electroweak scale, specifically below the 1~GeV level}
+---
+> 
+> 
+>  \newduneabbrev{ldm}{LDM}{light-mass dark matter}{Refers to dark matter particles with mass values much lower than the electroweak scale, specifically below the 1~GeV level}
+
+
+1515c1525
+< \newduneword{integoff}{integration office}{The office that incorporates the onsite team responsible for coordinating integration and installation activities at SURF}
+---
+>   \newduneword{integoff}{integration office}{The office that incorporates the onsite team responsible for coordinating integration and installation activities at SURF}
+
+
+1532,1552d1541
+< 
+< \newduneword{apb}{APB}{authorship and publications board}
+< \newduneword{crb}{CRB}{collaboration resources board}
+< \newduneword{cube}{CuBe}{beryllium copper, used to make \gls{sp} \gls{apa} readout planes}
+< \newduneword{drift}{drift}{excavated horizontal corridors (tunnels) in the underground areas at \gls{surf}}
+< \newduneword{exposure}{exposure}{The integrated detector fiducial mass times beam intensity; it is proportional to the number of interactions and is used to normalize cross sections in a data sample}
+< \newduneword{fr4}{FR-4}{Flame-retardant fiberglass-reinforced epoxy resin laminate used in making PCBs and other detector components}
+< \newduneword{g10}{G-10}{Non-flame-retardant fiberglass-reinforced epoxy resin laminate used in making PCBs}
+< \newduneword{kapton}{Kapton\texttrademark}{A polyimide plastic film that is stable over a broad range of temperatures and is resistant to radiation damage}
+< \newduneword{shaft}{A vertical excavation at \gls{surf} connecting with the surface}
+< \newduneword{winze}{winze}{A vertical excavation at \gls{surf} connecting two drifts, not connecting to the surface}
+< \newduneword{ib}{IB}{institutional board}
+< \newduneword{irb}{IBR}{institutional board representative}
+< \newduneword{scomm}{SC}{speakers committee}
+< \newduneword{sac}{SAC}{spokespersons advisory committee}
+< \newduneword{ccc}{CCC}{code of conduct committee}
+< \newduneword{eoc}{EOC}{education and outreach committee}
+< \newduneword{indico}{Indico}{Web-based meeting organization tool}
+< \newduneword{docdb}{DocDB}{Web-based document management system hosted by Fermilab used by DUNE (docs.dunescience.org)}
+< \newduneword{edms}{EDMS}{Web-based document management system hosted by CERN used by DUNE primarily for systems engineering and integration documents}
+< \newduneword{mec}{meson exchange current}{See \gls{2p2h}}

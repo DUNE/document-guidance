@@ -23,7 +23,7 @@ Verzocchi, M.},
 type = {DUNE doc or LBNF doc},
 number = {NNNN},
 year = {2018},
-note = "\url{https://docs.dunescience.org/cgi-bin/private/ShowDocument?docid=NNNN&asof=2019-7-15}"
+note = "\url{https://docs.dunescience.org/cgi-bin/private/ShowDocument?docid=NNNN&asof=2019-11-1}"
 }
 
 - For publically viewable documents, use a different URL template:
@@ -35,8 +35,22 @@ Verzocchi, M.},
 type = {DUNE doc or LBNF doc},
 number = {NNNN},
 year = {2018},
-note = "\url{http://docs.dunescience.org/cgi-bin/ShowDocument?docid=NNNN&asof=2019-7-15}"
+note = "\url{http://docs.dunescience.org/cgi-bin/ShowDocument?docid=NNNN&asof=2019-11-1}"
 }
+
+- List CERN EDMS notes as follows:
+
+@techreport{bib:cernedmsNNNN,
+          title = "{}",
+          author = {},
+          type =   {CERN EDMS},
+          number = {NNNN},
+          year =   {},
+          note = "\url{https://edms.cern.ch/document/NNNN}"
+}
+
+
+%%%%%%
 
 
 @BOOK{strunk,
@@ -49,8 +63,8 @@ note = "\url{http://docs.dunescience.org/cgi-bin/ShowDocument?docid=NNNN&asof=20
 
 @techreport{tdr-vol-1,
 title = "{TDR Volume 1: The LBNF and DUNE Projects}",
-fcollaboration = {{DUNE}},
-year = {2018},
+collaboration = {{DUNE}},
+year = {2019},
 note = "\url{http://docs.dunescience.org/cgi-bin/ShowDocument?docid=nnnn}"
 }
 	   
@@ -104,7 +118,7 @@ note = "\url{http://docs.dunescience.org/cgi-bin/ShowDocument?docid=}"
 author = {P. Derwent and others},
 title =  "{Proton Improvement Plan-II}",
 year = {2013},
-note = "\url{http://projectx-docdb.fnal.gov/cgi-bin/RetrieveFile?=1232&filename=1.2\%20MW\%20Report_Rev5.pdf&version=3}",
+note = "\url{http://projectx-docdb.fnal.gov/cgi-bin/RetrieveFile?docid=1232&filename=1.2%20MW%20Report_Rev5.pdf&version=3}",
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -114,8 +128,15 @@ note = "\url{http://projectx-docdb.fnal.gov/cgi-bin/RetrieveFile?=1232&filename=
 @unpublished{nasa_nepp,
 author = "{Teverovsky, Alexander}",
 title = "Reliability of Electronics at Cryogenic Temperatures",
-note = "https://nepp.nasa.gov/DocUploads/1BCC6326-46F7-4C5E-94D476A8B6176ED1/Approach%20to%20Reliability%20Testing%20at%20cryo%20NEPP.pdf",
+note = "\url{https://nepp.nasa.gov/DocUploads/1BCC6326-46F7-4C5E-94D476A8B6176ED1/Approach%20to%20Reliability%20Testing%20at%20cryo%20NEPP.pdf}",
 year = "2005"
+}
+
+@unpublished{nasa_mems,
+author = " Patterson, Richard and Hammoud, Ahmad",
+title = "Effect of Temperature on the Performance and Stability of Recent COTS Silicon Oscillators",
+note = "\url{https://nepp.nasa.gov/files/19908/10_281_GRC_Patterson_Si%20Oscillators%207_12_10.doc}",
+year = "2010"
 }
 
 @unpublished{SACI,
@@ -505,16 +526,24 @@ note = "\url{https://www.prysmiangroup.com/sites/default/files/business_markets/
 note = "\url{http://www.caledonian-cables.co.uk/Coaxia_Cable/M17_RG/RG303.html}",
 }
 
-@article{tpb,
-  author={R Francini and others},
-  title={VUV-Vis optical characterization of Tetraphenyl-butadiene films on glass and specular reflector substrates from room to liquid Argon temperature},
-  journal={Journal of Instrumentation},
-  volume={8},
-  number={09},
-  pages={P09006},
-  url={http://stacks.iop.org/1748-0221/8/i=09/a=P09006},
-  year={2013},
 
+
+@article{Francini:2013lua,
+      author         = "Francini, R. and others",
+      title          = "{VUV-Vis optical characterization of
+                        Tetraphenyl-butadiene films on glass and specular
+                        reflector substrates from room to liquid Argon
+                        temperature}",
+      journal={Journal of Instrumentation},
+      volume={8},
+      number={09},
+      pages={P09006},
+      doi            = "10.1088/1748-0221/8/09/P09006",
+      year           = "2013",
+      eprint         = "1304.6117",
+      archivePrefix  = "arXiv",
+      primaryClass   = "physics.ins-det",
+      SLACcitation   = "%%CITATION = ARXIV:1304.6117;%%"
 }
 
 @unpublished{sytcast,
@@ -654,7 +683,7 @@ note = "\url{http://www.allectra.com/index.php/en/}",
 @article{PipelinedADC,
   author={D. W. Cline and P. R. Gray},
   journal={IEEE Journal of Solid-State Circuits},
-  title={A power optimized 13-b 5 Msamples/s pipelined analog-to-digital converter in 1.2 mu;m CMOS},
+  title={A power optimized 13-b 5 Msamples/s pipelined analog-to-digital converter in 1.2 micron CMOS},
   year={1996},
   volume={31},
   number={3},
@@ -681,40 +710,116 @@ year = {2016},
 note = "\url{https://docs.dunescience.org/cgi-bin/private/ShowDocument?docid=1651}"
 }
 
+@techreport{bib:docdb6727,
+title = "{DUNE FD Interface Document: DP Photon Detector to joint DAQ}",
+author = {Duchesneau, D. and Gil-Botella, I. and Karagiorgi, G. and Newbold},
+type = {DUNE doc},
+institution = {DUNE},
+number = {6727},
+year = {2018},
+note = "\url{https://docs.dunescience.org/cgi-bin/private/ShowDocument?docid=6727\&asof=2019-11-1}"
+}
+}
+
 @techreport{bib:docdb6742,
 title = "{DUNE FD Interface Document: SP TPC Electronics to joint DAQ}",
 author = {Christian, D. and Karagiorgi, G. and Newbold, D. and Verzocchi, M.},
 type = {DUNE doc},
+institution = {DUNE},
 number = {6742},
 year = {2018},
-note = "\url{https://docs.dunescience.org/cgi-bin/private/ShowDocument?docid=6742\&asof=2019-7-15}"
+note = "\url{https://docs.dunescience.org/cgi-bin/private/ShowDocument?docid=6742\&asof=2019-11-1}"
 }
 }
 
-@techreport{bib:docdb6727,
-title = "{DUNE FD Interface Document: SP Photon Detector to Joint DAQ}",
-author = {Duchesneau, D. and Gil-Botella, I. and  Karagiorgi, G. and Newbold, D.},
+@techreport{bib:docdb1584,
+title = "{ProtoDUNE Design Review Reports}",
+author = {Kettell, S., {\it et al.}},
 type = {DUNE doc},
-institution = {LAPP, CIEMAT, Columbia, and Bristol},
-number = {6727},
+institution = {DUNE},
+number = {1584},
+year = {2017},
+note = "\url{http://docs.dunescience.org/cgi-bin/ShowDocument?docid=1584&asof=2019-11-1}"
+}
+
+@techreport{bib:eshdocdb3303,
+title = "{ESH Code Equivalency Studies}",
+author = {M. Michels},
+type = {FNAL doc},
+institution = {Fermilab},
+number = {3303},
 year = {2018},
-note = "\url{https://docs.dunescience.org/cgi-bin/private/ShowDocument?docid=6727&asof=2019-7-15}"
+note = "\url{https://esh-docdbcert.fnal.gov/cgi-bin/cert/ShowDocument?docid=3303&asof=2019-11-1}"
+}
+
+@techreport{bib:docdb14245,
+title = "{LBNF BSI - 100 Pct Final Design}",
+author = {Josh Wilhite},
+type = {LBNF DocDB},
+institution = {LBNF},
+number = {14245},
+year = {2019},
+note = "\url{https://docs.dunescience.org/cgi-bin/private/ShowDocument?docid=14245}"
+}
+
+@techreport{bib:docdb14242,
+title = "{LBNF BSI - 90 Pct Final Design}",
+author = {Josh Wilhite},
+type = {LBNF DocDB},
+institution = {LBNF},
+number = {14242},
+year = {2018},
+note = "\url{https://docs.dunescience.org/cgi-bin/private/ShowDocument?docid=14242}"
+}
+
+@techreport{bib:docdb1754,
+title = "{ARUP Fire and Life Safety Assessment}",
+author = {Josh Wilhite},
+type = {LBNF DocDB},
+institution = {LBNF},
+number = {1754},
+year = {2016},
+note = "\url{https://docs.dunescience.org/cgi-bin/private/ShowDocument?docid=1754}"
+}
+
+@techreport{bib:docdb9564,
+title = "{DUNE Far Detector Design Review Plan}",
+author = {Farshid Feyzi},
+type = {DUNE doc},
+institution = {DUNE},
+number = {9564},
+year = {2019},
+note = "\url{http://docs.dunescience.org/cgi-bin/ShowDocument?docid=9564&asof=2019-11-1}"
 }
 
 @techreport{bib:docdb7123,
 title = "{DUNE FD Interface Document: Software and Computing to Joint DAQ}",
 author = {Karagiorgi, G. and Newbold, D. and Norman, A. and Schellman, H.},
 institution = {Columbia, Bristol, Fermilab, and Oregon State},
+type = {DUNE doc},
+number = {7123},
 year = {2018},
-note = "\url{http://docs.dunescience.org/cgi-bin/ShowDocument?docid=7123}"
+note = "\url{http://docs.dunescience.org/cgi-bin/ShowDocument?docid=7123&asof=2019-11-1}"
+}
+
+@techreport{bib:docdb16766,
+title = "{DUNE FD Interface Document: DSS to SP HV}",
+author = {Pietropaolo, F.},
+institution = {CERN},
+type = {DUNE doc},
+number = {16766},
+year = {2019},
+note = "\url{https://docs.dunescience.org/cgi-bin/private/ShowDocument?docid=16766&asof=2019-11-1}"
 }
 
 @techreport{bib:docdb5915,
 title = "{CFD Analysis of Fluid, Heat, and Impurity Flows in DUNE FAR Detector to Address Additional Design Considerations}",
 author = {Michna, G. J. and others},
 institution = {South Dakota State University},
+type = {DUNE doc},
+number = {5915},
 year = {2017},
-note = "\url{http://docs.dunescience.org/cgi-bin/ShowDocument?docid=5915}"
+note = "\url{https://docs.dunescience.org/cgi-bin/private/ShowDocument?docid=5915&asof=2019-11-1}",
 }
 
 @article{Kudryavtsev:2008qh,
@@ -1427,7 +1532,7 @@ note = {will be drafted soon}
 
 @article{MINOSPRD,
 author = {P. Adamson and others},
-collaboration = {MINOS Collaboration},
+collaboration = {MINOS},
 title = "{Improved search for muon-neutrino to electron-neutrino oscillations in MINOS}",
 journal = {Phys. Rev. D.},
 volume = {77}, 
@@ -1439,7 +1544,7 @@ year = {2008},
       author         = "Adamson, P. and others",
       title          = "{Neutrino and Antineutrino Inclusive Charged-current
                         Cross Section Measurements with the MINOS Near Detector}",
-      collaboration  = "MINOS Collaboration",
+      collaboration  = "MINOS",
       journal        = "Phys.Rev.",
       volume         = "D81",
       pages          = "072002",
@@ -1458,7 +1563,7 @@ year = {2008},
                         inclusive charged current cross-section off an isoscalar
                         target in the energy range 2.5 < E(nu) < 40-GeV by
                         NOMAD}",
-      collaboration  = "NOMAD Collaboration",
+      collaboration  = "NOMAD",
       journal        = "Phys.Lett.",
       volume         = "B660",
       pages          = "19-25",
@@ -1474,7 +1579,7 @@ year = {2008},
       author         = "Lyubushkin, V and others",
       title          = "{A Study of quasi-elastic muon neutrino and antineutrino
                         scattering in the NOMAD experiment}",
-      collaboration  = "NOMAD Collaboration",
+      collaboration  = "NOMAD",
       journal        = "Eur.Phys.J.",
       volume         = "C63",
       pages          = "355-381",
@@ -1504,7 +1609,7 @@ year = {2008},
 
 @article{NA49,
 author = {M. Makariev},
-collaboration = {NA49 Collaboration},
+collaboration = {NA49},
 title = "{Pion production in p + C collisions at 158-GeV/c beam momentum.}",
 journal = {AIP Conf.Proc.},
 volume = {899}, 
@@ -1580,7 +1685,7 @@ note   = {LBNE-doc-5446},
 
 @article{MINOS-nue,
 author = {P. Adamson and others},
-collaboration = {MINOS Collaboration},
+collaboration = {MINOS},
 title = "{Improved search for muon-neutrino to electron-neutrino oscillations in MINOS}",
 journal = {Phys. Rev. Lett.},
 volume = {107}, 
@@ -1591,7 +1696,7 @@ year = {2011},
 
 @article{ICARUS-pizero,
 author = {A. Ankowski and others},
-collaboration = {ICARUS Collaboration},
+collaboration = {ICARUS},
 title = {Energy reconstruction of electromagnetic showers from pi0 decays with the ICARUS T600 Liquid Argon TPC},
 journal = {Acta Physica Polonica},
 volume = {B41}, 
@@ -1626,7 +1731,7 @@ year = {2004},
          
 @article{ICARUSmuons,
 author = {A. Ankowski and others},
-collaboration = {ICARUS Collaboration},
+collaboration = {ICARUS},
 title = {Measurement of through-going particle momentum by means of multiple scattering with the ICARUS T600 TPC.},
 journal = {Eur. Phys. J.},
 volume = {C48}, 
@@ -1636,7 +1741,7 @@ year = {2006},
          
 @unpublished{OPERA-tau,
 author        = {Umut Kose},
-collaboration = {OPERA Collaboration},
+collaboration = {OPERA},
 title         = "{Search for $\nu_\mu \to \nu_\tau$ oscillations in appearance mode in the OPERA experiment.}",
 year = {2011},
 note = {arXiv:1106.3871 [hep-ex] }
@@ -1644,7 +1749,7 @@ note = {arXiv:1106.3871 [hep-ex] }
 
 @article{MINOS_disap,
 author = {P. Adamson and others},
-collaboration = {MINOS Collaboration},
+collaboration = {MINOS},
 title = "{Search for the disappearance of muon antineutrinos in the NuMI neutrino beam.}",
 journal = {Phys. Rev. D.},
 volume = {84}, 
@@ -1666,7 +1771,7 @@ note = {arXiv:1102.5352 [hep-ph]},
 
 @article{MINOSNC2010,
 author = {P. Adamson and others},
-collaboration = {MINOS Collaboration},
+collaboration = {MINOS},
 title = "{Search for sterile neutrino mixing in the MINOS long baseline experiment}",
 journal = {Phys. Rev. D.},
 volume = {81},  
@@ -1834,6 +1939,7 @@ year = {2002},
 @techreport{DOCDB740,
 note = {LBNE-doc-740},
 title = "{Nuclear Effects in Water vs. Argon}",
+institution = {DUNE},
 date = "2010",
 author = "R. Petti and G. Zeller" 
 }
@@ -1869,6 +1975,7 @@ note = {arXiv:0809.2977 [hep-ph]},
 @techreport{DOCDB5904,
 author = {V. Kudryavtsev and others},
 title = {Cosmic rays and cosmogenics. Report to the LBNE Collaboration.},
+institution = {LBNE},
 year = {2012},
 note = {LBNE-doc-5904},
 }
@@ -2062,6 +2169,7 @@ note={{Magnet Test Facility measurement database private communication  (Fermila
 @techreport{docdb2193,
 title={{Remote Handling Component List}},
 author={{Patrick Hurh}},
+institution = {LBNE},
 year={2010},
 note={LBNE DocDB 2193 \url{http://beamdocs.fnal.gov/AD-public/DocDB/ShowDocument?docid=2193}}
 }
@@ -2085,6 +2193,7 @@ the Booster neutrino beam (to MiniBooNE)}
 @techreport{tritium_3,
 title={{LBNE Groundwater Shielding Requirements for Shallow and Deep Beam}},
 author={D. Reitzner and K. Vaziri},
+institution = {LBNE},
 note={LBNE Doc 4052 \url{http://lbne2-docdb.fnal.gov:8080/0040/004052/004/ShieldingRequirementsGroundwater5.docx}},
 institution={Fermilab}
 }
@@ -2244,7 +2353,7 @@ year={2012}
 @article{ref:SPY,
       author         = "Ambrosini, G. and others",
       title          = "{Pion yield from 450-GeV/c protons on beryllium}",
-      collaboration  = "SPY Collaboration",
+      collaboration  = "SPY",
       journal        = "Phys.Lett.",
       volume         = "B425",
       pages          = "208-214",
@@ -2258,7 +2367,7 @@ year={2012}
       author         = "Catanesi, M.G. and others",
       title          = "{{Measurement of the production cross-section of positive
                         pions in p-Al collisions at 12.9-GeV/c}}",
-      collaboration  = "HARP Collaboration",
+      collaboration  = "HARP",
       journal        = "Nucl.Phys.",
       volume         = "B732",
       pages          = "1-45",
@@ -2274,7 +2383,7 @@ year={2012}
 @Article{Isenhower:2006zp,
       author         = "Isenhower, D. and others",
       title          = "{Proposal to upgrade the MIPP experiment}",
-      collaboration  = "MIPP Collaboration",
+      collaboration  = "MIPP",
       year           = "2006",
       note           = "hep-ex/0609057",
       archivePrefix  = "arXiv",
@@ -2288,7 +2397,7 @@ year={2012}
       author         = "Abgrall, N and others",
       title          = "{Measurements of Cross Sections and Charged Pion Spectra
                         in Proton-Carbon Interactions at 31 GeV/c}",
-      collaboration  = "NA61/SHINE Collaboration",
+      collaboration  = "NA61/SHINE",
       journal        = "Phys.Rev.",
       volume         = "C84",
       pages          = "034604",
@@ -2383,7 +2492,7 @@ ch 4 neutrino detectors
 
 @unpublished{minerva,
   author = {Osmanov, B.},
-  collaboration = {MINERvA collaboration},
+  collaboration = {MINERvA},
   title = "{MINERvA Detector: Description and Performance}",
   year = {2011},
   note = {arXiv:1109.2855 [hep-ex]}
@@ -2401,6 +2510,7 @@ ch 4 neutrino detectors
 @unpublished{lbne-doc-4185,
 title={{LAr1 TPC Cold Electronics Design Summary}},
 author={C. Thorn},
+institution = {BNL},
 year={2011},
 note={LBNE DocDB 4185-v4}
 }
@@ -2408,6 +2518,7 @@ note={LBNE DocDB 4185-v4}
 @unpublished{lbne-doc-5063,
 title={{LAr40 Cold Electronics Review}},
 author={C. Thorn},
+institution = {BNL},
 year={2011},
 note={LBNE DocDB 5063-v3}
 }
@@ -2633,12 +2744,12 @@ note = {arXiv:1203.1669 [hep-ex]},
 
 @article{Gando:2010aa,
       author         = {A.~Gando and others},
-      title          = "{Constraints on $\theta_{13}$ from A Three-Flavor Oscillation Analysis of Reactor Antineutrinos at KamLAND}",
+      title          = "{Constraints on $\theta_{13}$ from a Three-Flavor Oscillation Analysis of Reactor Antineutrinos at KamLAND}",
       journal        = {Phys.Rev.D},
       volume         = {83},
       pages          = {052002},
       year           = {2011},
-      note           = {arXiv:1009.4771 [hep-ex]},
+      note           = {arXiv:1009.4771 [hep-ex]}
 }
 
 @misc{dayabaytalk,
@@ -2897,7 +3008,7 @@ note = {LBNE:DocDB-196}
 
 @Article{IMB-det,
      author = {R. Becker-Szendy and others},
-collaboration = {The IMB Collaboration},
+collaboration = {IMB},
      title = "{A Large Water Cherenkov Detector for Nucleon Decay and Neutrino Interactions}",
      journal = {Nuclear Instruments and Methods},
      volume = {A324},
@@ -3133,7 +3244,7 @@ ch9 -- none as of 8/24
 
 @misc{ref:lappd,
 author = {J.~Anderson and others},
-collaboration = "LAPPD Collaboration",
+collaboration = "LAPPD",
 title =  "{The Development of Large-Area Fast Photo-detector. Proposal to DOE (2009)}",
 year = {2009},
 note = {\url{http://psec.uchicago.edu/other/Project_description_nobudgets.pdf}},
@@ -3141,7 +3252,7 @@ note = {\url{http://psec.uchicago.edu/other/Project_description_nobudgets.pdf}},
 
 @misc{ref:lappd2,
 author = {J.~Anderson and others},
-collaboration = "LAPPD Collaboration",
+collaboration = "LAPPD",
 title =  "{Technical Design Report for the frugal MCP}",
 year = {2010},
 note = {\url{http://psec.uchicago.edu/library/doe_reports/TDR.pdf}},
@@ -3228,7 +3339,7 @@ author = {Michael Andrews},
 type = {DUNE doc},
 number = {291},
 year = {2016},
-note = "\url{https://docs.dunescience.org/cgi-bin/private/ShowDocument?docid=291&asof=2019-7-15}"
+note = "\url{https://docs.dunescience.org/cgi-bin/private/ShowDocument?docid=291&asof=2019-11-1}"
 }
 
 
@@ -3282,7 +3393,7 @@ note = {LBNE Doc 355}
 author = {{Particle Physics Project Prioritization Panel}},
 title =  "{US Particle Physics: Scientific Opportunities; A Strategic Plan for the Next Ten Years}",
 year = {2008},
-note = {\url{http://science.energy.gov/~/media/hep/pdf/files/pdfs/p5_report_06022008.pdf}},
+note = {\url{https://science.osti.gov/-/media/hep/pdf/files/pdfs/p5_report_06022008.pdf?la=en&hash=C1AA6A983650A19C7D0C39F73855D6525034B40B}},
 }
 
 @misc{p5report2014,
@@ -3449,7 +3560,7 @@ year = {2004},
 }
 
 
-@unpublished{LBNE-docdb-3037},
+@unpublished{LBNE-docdb-3037,
 author = {H. Jostlein},
 title =  "{FNAL APA prototype and wire holding tests}",
 year = {2010},
@@ -4115,19 +4226,21 @@ note = {arXiv:1101.003 [hep-ex]},
       SLACcitation   = "%%CITATION = ARXIV:1301.4817;%%",
 }
 
-@unpublished{Cantini:2014xza,
-      author         = "Cantini, C. and Epprecht, L. and Gendotti, A. and
-                        Horikawa, S. and Periale, L. and others",
+@article{Cantini:2014xza,
+      author         = "Cantini, C. and others",
       title          = "{Performance study of the effective gain of the double
                         phase liquid Argon LEM Time Projection Chamber}",
-      year           = "2014",
+      journal        = "JINST",
+      volume         = "10",
+      year           = "2015",
+      number         = "03",
+      pages          = "P03017",
+      doi            = "10.1088/1748-0221/10/03/P03017",
       eprint         = "1412.4402",
       archivePrefix  = "arXiv",
       primaryClass   = "physics.ins-det",
-      note           = "arXiv:1412.4402 [physics.ins-det], accepted for publication in JINST, 2014",
-      SLACcitation   = "%%CITATION = ARXIV:1412.4402;%%",
+      SLACcitation   = "%%CITATION = ARXIV:1412.4402;%%"
 }
-
 
 @article{Badertscher:2010fi,
       author         = "A.~Badertscher and others",
@@ -4262,7 +4375,7 @@ url="https://edms.cern.ch/project/CERN-0000148526",
       author         = "Amerio, S. and others",
       title          = "{Design, construction and tests of the ICARUS T600
                         detector}",
-      collaboration  = "ICARUS Collaboration",
+      collaboration  = "ICARUS",
       journal        = "Nucl.Instrum.Meth.",
       volume         = "A527",
       pages          = "329-410",
@@ -4299,39 +4412,26 @@ note={"Progress report on LBNO-DEMO/WA105 (2015), G.~Balik {\it et al.}, CERN-SP
 
 
 @article{Akiri:2011dv,
-	Archiveprefix = {arXiv},
-	Author = {Akiri, T. and others},
-	Collaboration = {LBNE Collaboration},
-	Date-Added = {2013-06-03 11:04:35 +0000},
-	Date-Modified = {2013-06-03 11:04:54 +0000},
-	Eprint = {1110.6249},
-	Journal = {arXiv},
-	Primaryclass = {hep-ex},
-	Reportnumber = {FERMILAB-FN-0941-PPD, LBNE-PWG-004},
-	Slaccitation = {%%CITATION = ARXIV:1110.6249;%%},
-	Title = {{The 2010 Interim Report of the Long-Baseline Neutrino Experiment Collaboration Physics Working Groups}},
-	Year = {2011},
-	Bdsk-File-1 = {YnBsaXN0MDDUAQIDBAUGJCVYJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoKgHCBMUFRYaIVUkbnVsbNMJCgsMDxJXTlMua2V5c1pOUy5vYmplY3RzViRjbGFzc6INDoACgAOiEBGABIAFgAdccmVsYXRpdmVQYXRoWWFsaWFzRGF0YV8QFlBhcGVycy9Ba2lyaTIwMTFkdi5wZGbSFwsYGVdOUy5kYXRhTxEBqAAAAAABqAACAAAMTWFjaW50b3NoIEhEAAAAAAAAAAAAAAAAAAAAzIaSTUgrAAAAD9c2D0FraXJpMjAxMWR2LnBkZgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACZym/N0kMNAAAAAAAAAAAAAQADAAAJIAAAAAAAAAAAAAAAAAAAAAZQYXBlcnMAEAAIAADMhnYtAAAAEQAIAADN0ibtAAAAAQAUAA/XNgAP1ykAD9a5AAUDVAACEDYAAgBHTWFjaW50b3NoIEhEOlVzZXJzOgBkbHVzc2k6AERyb3Bib3g6AEJpYlJlYWRlcjoAUGFwZXJzOgBBa2lyaTIwMTFkdi5wZGYAAA4AIAAPAEEAawBpAHIAaQAyADAAMQAxAGQAdgAuAHAAZABmAA8AGgAMAE0AYQBjAGkAbgB0AG8AcwBoACAASABEABIANVVzZXJzL2RsdXNzaS9Ecm9wYm94L0JpYlJlYWRlci9QYXBlcnMvQWtpcmkyMDExZHYucGRmAAATAAEvAAAVAAIADf//AACABtIbHB0eWiRjbGFzc25hbWVYJGNsYXNzZXNdTlNNdXRhYmxlRGF0YaMdHyBWTlNEYXRhWE5TT2JqZWN00hscIiNcTlNEaWN0aW9uYXJ5oiIgXxAPTlNLZXllZEFyY2hpdmVy0SYnVHJvb3SAAQAIABEAGgAjAC0AMgA3AEAARgBNAFUAYABnAGoAbABuAHEAcwB1AHcAhACOAKcArAC0AmACYgJnAnICewKJAo0ClAKdAqICrwKyAsQCxwLMAAAAAAAAAgEAAAAAAAAAKAAAAAAAAAAAAAAAAAAAAs4=}}
+      author         = "Akiri, T. and others",
+      title          = "{The 2010 Interim Report of the Long-Baseline Neutrino
+                        Experiment Collaboration Physics Working Groups}",
+      collaboration  = "LBNE",
+      year           = "2011",
+      eprint         = "1110.6249",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ex",
+      reportNumber   = "FERMILAB-FN-0941-PPD, LBNE-PWG-004",
+      SLACcitation   = "%%CITATION = ARXIV:1110.6249;%%"
+}
 
 
-@article{Gushchin:1982aa,
-	Author = {Gushchin, E. M. and others},
-	Date-Added = {2013-04-19 09:34:53 +0000},
-	Date-Modified = {2013-04-24 14:47:19 +0000},
-	Journal = {Sov. Phys. JETP},
-	Keywords = {extraction,LAr},
-	Pages = {860-862},
-	Title = {{Emission of "hot" electrons from liquid and solid argon and xenon}},
-	Volume = {55(5)},
-	Year = {1982},
-	Bdsk-File-1 = {YnBsaXN0MDDUAQIDBAUGJCVYJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoKgHCBMUFRYaIVUkbnVsbNMJCgsMDxJXTlMua2V5c1pOUy5vYmplY3RzViRjbGFzc6INDoACgAOiEBGABIAFgAdccmVsYXRpdmVQYXRoWWFsaWFzRGF0YV8QGVBhcGVycy9HdXNoY2hpbjE5ODJhYS5wZGbSFwsYGVdOUy5kYXRhTxEBsgAAAAABsgACAAAMTWFjaW50b3NoIEhEAAAAAAAAAAAAAAAAAAAAzIaSTUgrAAAAD9c2Ekd1c2hjaGluMTk4MmFhLnBkZgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACI6ijNltxDAAAAAAAAAAAAAQADAAAJIAAAAAAAAAAAAAAAAAAAAAZQYXBlcnMAEAAIAADMhnYtAAAAEQAIAADNlsAjAAAAAQAUAA/XNgAP1ykAD9a5AAUDVAACEDYAAgBKTWFjaW50b3NoIEhEOlVzZXJzOgBkbHVzc2k6AERyb3Bib3g6AEJpYlJlYWRlcjoAUGFwZXJzOgBHdXNoY2hpbjE5ODJhYS5wZGYADgAmABIARwB1AHMAaABjAGgAaQBuADEAOQA4ADIAYQBhAC4AcABkAGYADwAaAAwATQBhAGMAaQBuAHQAbwBzAGgAIABIAEQAEgA4VXNlcnMvZGx1c3NpL0Ryb3Bib3gvQmliUmVhZGVyL1BhcGVycy9HdXNoY2hpbjE5ODJhYS5wZGYAEwABLwAAFQACAA3//wAAgAbSGxwdHlokY2xhc3NuYW1lWCRjbGFzc2VzXU5TTXV0YWJsZURhdGGjHR8gVk5TRGF0YVhOU09iamVjdNIbHCIjXE5TRGljdGlvbmFyeaIiIF8QD05TS2V5ZWRBcmNoaXZlctEmJ1Ryb290gAEACAARABoAIwAtADIANwBAAEYATQBVAGAAZwBqAGwAbgBxAHMAdQB3AIQAjgCqAK8AtwJtAm8CdAJ/AogClgKaAqECqgKvArwCvwLRAtQC2QAAAAAAAAIBAAAAAAAAACgAAAAAAAAAAAAAAAAAAALb}}
 
 @article{Rubbia:2010zz,
       author         = "Rubbia, A.",
       title          = "{The LAGUNA design study: Towards giant liquid based
                         underground detectors for neutrino physics and
                         astrophysics and proton decay searches}",
-      collaboration  = "LAGUNA Collaboration",
+      collaboration  = "LAGUNA",
       journal        = "Acta Phys.Polon.",
       volume         = "B41",
       pages          = "1727-1732",
@@ -4389,19 +4489,6 @@ note={"Progress report on LBNO-DEMO/WA105 (2015), G.~Balik {\it et al.}, CERN-SP
 	
 	
 
-@article{Dolgoshein:1920aa,
-	Author = {B. A. Dolgoshein and others},
-	Date-Added = {2013-05-09 08:54:47 +0000},
-	Date-Modified = {2013-05-09 08:57:25 +0000},
-	Journal = {JETP Letters},
-	Keywords = {extraction},
-	Number = {11},
-	Pages = {351-353},
-	Title = {{New method of registration of ionizing-particle tracks in condensed matter}},
-	Volume = {11},
-	Year = {1970},
-	Bdsk-File-1 = {YnBsaXN0MDDUAQIDBAUGJCVYJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoKgHCBMUFRYaIVUkbnVsbNMJCgsMDxJXTlMua2V5c1pOUy5vYmplY3RzViRjbGFzc6INDoACgAOiEBGABIAFgAdccmVsYXRpdmVQYXRoWWFsaWFzRGF0YV8QG1BhcGVycy9Eb2xnb3NoZWluMTk3MGFhLnBkZtIXCxgZV05TLmRhdGFPEQG6AAAAAAG6AAIAAAxNYWNpbnRvc2ggSEQAAAAAAAAAAAAAAAAAAADMhpJNSCsAAAAP1zYURG9sZ29zaGVpbjE5NzBhYS5wZGYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAJFrp82uxM4AAAAAAAAAAAABAAMAAAkgAAAAAAAAAAAAAAAAAAAABlBhcGVycwAQAAgAAMyGdi0AAAARAAgAAM2uqK4AAAABABQAD9c2AA/XKQAP1rkABQNUAAIQNgACAExNYWNpbnRvc2ggSEQ6VXNlcnM6AGRsdXNzaToARHJvcGJveDoAQmliUmVhZGVyOgBQYXBlcnM6AERvbGdvc2hlaW4xOTcwYWEucGRmAA4AKgAUAEQAbwBsAGcAbwBzAGgAZQBpAG4AMQA5ADcAMABhAGEALgBwAGQAZgAPABoADABNAGEAYwBpAG4AdABvAHMAaAAgAEgARAASADpVc2Vycy9kbHVzc2kvRHJvcGJveC9CaWJSZWFkZXIvUGFwZXJzL0RvbGdvc2hlaW4xOTcwYWEucGRmABMAAS8AABUAAgAN//8AAIAG0hscHR5aJGNsYXNzbmFtZVgkY2xhc3Nlc11OU011dGFibGVEYXRhox0fIFZOU0RhdGFYTlNPYmplY3TSGxwiI1xOU0RpY3Rpb25hcnmiIiBfEA9OU0tleWVkQXJjaGl2ZXLRJidUcm9vdIABAAgAEQAaACMALQAyADcAQABGAE0AVQBgAGcAagBsAG4AcQBzAHUAdwCEAI4ArACxALkCdwJ5An4CiQKSAqACpAKrArQCuQLGAskC2wLeAuMAAAAAAAACAQAAAAAAAAAoAAAAAAAAAAAAAAAAAAAC5Q==},
-	Bdsk-Url-1 = {http://www.jetpletters.ac.ru/ps/1724/article_26181.shtml}}
 
 @article{LAGUNA-LBNO-deliv,
 	Journal = "Annex",
@@ -4758,6 +4845,7 @@ note="\url{http://www.ohwr.org/projects/white-rabbit}"
       SLACcitation   = "%%CITATION = ARXIV:1307.7335;%%",
   note = {arXiv:1307.7335 [hep-ex]}
 }
+
 @article{Gonzalez-Garcia:2014bfa,
       author         = "Gonzalez-Garcia, M.C. and Maltoni, Michele and Schwetz,
                         Thomas",
@@ -5043,7 +5131,7 @@ author = "Dieter Rein and Lalit M. Sehgal"
       author         = "Adamson, P. and others",
       title          = "{Electron neutrino and antineutrino appearance in the
                         full MINOS data sample}",
-      collaboration  = "MINOS Collaboration",
+      collaboration  = "MINOS",
       journal        = "Phys.Rev.Lett.",
       number         = "17",
       volume         = "110",
@@ -5858,7 +5946,7 @@ author = "Dieter Rein and Lalit M. Sehgal"
 }
 @Article{Antonioli:2004zb,
      author    = "Antonioli, P. and others",
-     title     = "SNEWS: The SuperNova Early Warning System",
+     title     = "{SNEWS: The SuperNova Early Warning System}",
      journal   = "New J. Phys.",
      volume    = "6",
      year      = "2004",
@@ -6103,7 +6191,7 @@ author = "Dieter Rein and Lalit M. Sehgal"
       author         = "Hirata, K. and others",
       title          = "{Observation of a Neutrino Burst from the Supernova SN
                         1987a}",
-      collaboration  = "KAMIOKANDE-II Collaboration",
+      collaboration  = "KAMIOKANDE-II",
       journal        = "Phys.Rev.Lett.",
       volume         = "58",
       pages          = "1490-1493",
@@ -6134,7 +6222,7 @@ author = "Dieter Rein and Lalit M. Sehgal"
       author         = "Wurm, Michael and others",
       title          = "{The next-generation liquid-scintillator neutrino
                         observatory LENA}",
-      collaboration  = "LENA Collaboration",
+      collaboration  = "LENA",
       journal        = "Astropart.Phys.",
       volume         = "35",
       pages          = "685-732",
@@ -6213,7 +6301,7 @@ author = "Dieter Rein and Lalit M. Sehgal"
       author         = "Amoruso, S. and others",
       title          = "{Measurement of the mu decay spectrum with the ICARUS
                         liquid argon TPC}",
-      collaboration  = "ICARUS Collaboration",
+      collaboration  = "ICARUS",
       journal        = "Eur.Phys.J.",
       volume         = "C33",
       pages          = "233-241",
@@ -6616,7 +6704,7 @@ note = {LBNE Doc 7460}
       author         = "Fukuda, S. and others",
       title          = "{Solar B-8 and hep neutrino measurements from 1258 days
                         of Super-Kamiokande data}",
-      collaboration  = "Super-Kamiokande Collaboration",
+      collaboration  = "Super-Kamiokande",
       journal        = "Phys.Rev.Lett.",
       volume         = "86",
       pages          = "5651-5655",
@@ -6627,12 +6715,13 @@ note = {LBNE Doc 7460}
       primaryClass   = "hep-ex",
       SLACcitation   = "%%CITATION = HEP-EX/0103032;%%",
 }
+
 @article{Ahmad:2001an,
       author         = "Ahmad, Q.R. and others",
-      title          = "{Measurement of the rate of nu/e + d -> p + p + e-
+      title          = "{Measurement of the rate of $nu_e + d to p + p + e^-$
                         interactions produced by B-8 solar neutrinos at the
                         Sudbury Neutrino Observatory}",
-      collaboration  = "SNO Collaboration",
+      collaboration  = "SNO",
       journal        = "Phys.Rev.Lett.",
       volume         = "87",
       pages          = "071301",
@@ -6648,7 +6737,7 @@ note = {LBNE Doc 7460}
 
 @article{Guglielmi:2012,
       author         = "Guglielmi, A.",
-      collaboration  = "ICARUS Collaboration",
+      collaboration  = "ICARUS",
       title          = "{Status and early events from ICARUS T600}",
       journal        = "Nucl.Phys",
       volume         = "B (Proc. Suppl.) 229-232",
@@ -6677,7 +6766,7 @@ note = {LBNE Doc 7460}
       author         = "Bellini, G. and others",
       title          = "{First evidence of pep solar neutrinos by direct
                         detection in Borexino}",
-      collaboration  = "Borexino Collaboration",
+      collaboration  = "Borexino",
       journal        = "Phys.Rev.Lett.",
       volume         = "108",
       pages          = "051302",
@@ -6693,7 +6782,7 @@ note = {LBNE Doc 7460}
       title          = "{Measurement of the solar 8B neutrino rate with a liquid
                         scintillator target and 3 MeV energy threshold in the
                         Borexino detector}",
-      collaboration  = "Borexino Collaboration",
+      collaboration  = "Borexino",
       journal        = "Phys.Rev.",
       volume         = "D82",
       pages          = "033006",
@@ -7089,6 +7178,8 @@ institution = {LBNL},
 year = {2014},
 note = {LBNE DocDB 8797-v2}
 }
+
+
 
 @inproceedings{radekaNoise,
       author         = "Radeka, V.",
@@ -7902,8 +7993,7 @@ note = "Available at \url{https://cdcvs.fnal.gov/redmine/projects/lbne-beamsim/w
 }
 
 @article{arpkLNLS,
-      author         = "H. daMotta, A.A. Machado, L. Paulucci, E. Segreto, B. Gelli, M.R. Guzzo, G. Marques, D. Galante, 
-      				V. Teixeira, W. Araujo, C. Ambrosio, M.Bissiano, F. Marinho.",
+      author         = "{H. daMotta, A.A. Machado, L. Paulucci, E. Segreto, B. Gelli, M.R. Guzzo, G. Marques, D. Galante, V. Teixeira, W. Araujo, C. Ambrosio, M.Bissiano and F. Marinho}",
       title          = "{ARAPUCA light trap for large liquid argon time projection chambers}",
        journal    = "POS",
       year         = "2017",
@@ -8502,13 +8592,19 @@ adsnote = {Provided by the SAO/NASA Astrophysics Data System}}
      SLACcitation   = "%%CITATION = ARXIV:1709.05002;%%"
 }
  
-@inproceedings{Marinho:2018doi,
+@article{Marinho:2018doi,
       author         = "Marinho, F. and Paulucci, L. and Machado, A. A. and
                         Segreto, E.",
       title          = "{Numerical characterization of the ARAPUCA: a new
                         approach for LAr scintillation light detection}",
-      url            = "https://inspirehep.net/record/1667227/files/1804.03764.pdf",
+      booktitle      = "{Conference on Neutrino and Nuclear Physics (CNNP2017)
+                        Catania, Italy, October 15-21, 2017}",
+      journal        = "J. Phys. Conf. Ser.",
+      volume         = "1056",
       year           = "2018",
+      number         = "1",
+      pages          = "012036",
+      doi            = "10.1088/1742-6596/1056/1/012036",
       eprint         = "1804.03764",
       archivePrefix  = "arXiv",
       primaryClass   = "physics.ins-det",
@@ -8536,31 +8632,32 @@ the following are Interface Control Documents cited in the slow controls chapter
 @techreport{bib:docdb6730,
       title = {{DUNE FD Interface Document: SP Photon Detector to Joint CISC}},
       author = "Anselmo Cervera Villanueva and others",
+institution = {DUNE},
       type = {DUNE doc},
       number = {6730},
       year = "2018",
-note = "\url{https://docs.dunescience.org/cgi-bin/private/ShowDocument?docid=6730&asof=2019-7-15}"
+note = "\url{https://docs.dunescience.org/cgi-bin/private/ShowDocument?docid=6730&asof=2019-11-1}"
 }
 
 @article{bib:docdb6790,
       title = {{DUNE FD Interface Document: DAQ to CISC}},
       author = "Anselmo Cervera Villanueva and others",
       year = "2018",
-note = "\url{https://docs.dunescience.org/cgi-bin/private/ShowDocument?docid=6790&version=1} "
+note = "\url{http://docs.dunescience.org/cgi-bin/ShowDocument?docid=6790} "
 }
 
 @article{bib:docdb6787,
       title = {{DUNE FD Interface Document: High Voltage to CISC}},
       author = "Anselmo Cervera Villanueva and others",
       year = "2018",
-note = "\url{https://docs.dunescience.org/cgi-bin/private/ShowDocument?docid=6787&version=1} "
+note = "\url{http://docs.dunescience.org/cgi-bin/ShowDocument?docid=6787} "
 }
 
 @article{bib:docdb6784,
       title = {{DUNE FD Interface Document: DP TPC Electronics to Joint CISC}},
       author = "Dario Autiero and others",
       year = "2018",
-note = "\url{https://docs.dunescience.org/cgi-bin/private/ShowDocument?docid=6784&version=1} "
+note = "\url{https://docs.dunescience.org/cgi-bin/private/ShowDocument?docid=6784} "
 }
 
 
@@ -8568,21 +8665,21 @@ note = "\url{https://docs.dunescience.org/cgi-bin/private/ShowDocument?docid=678
       title = {{DUNE FD Interface Document: DP CRP to Joint CISC}},
       author = "Anselmo Cervera Villanueva and others",
       year = "2018",
-note = "\url{https://docs.dunescience.org/cgi-bin/private/ShowDocument?docid=6760&version=1} "
+note = "\url{https://docs.dunescience.org/cgi-bin/private/ShowDocument?docid=6760} "
 }
 
 @article{bib:docdb6679,
       title = {{DUNE FD Interface Document for Single Phase/Joint: SP APA to Joint CISC}},
       author = "Anselmo Cervera Villanueva and others",
       year = "2018",
-note = "\url{https://docs.dunescience.org/cgi-bin/private/ShowDocument?docid=6679&version=1} "
+note = "\url{http://docs.dunescience.org/cgi-bin/ShowDocument?docid=6679} "
 }
 
 @article{bib:docdb6781,
       title = {{DUNE FD Interface Document: DP Photon Detector to Joint CISC}},
       author = "Duchesneau, D. and Gil-Botella, I. and and Gollapinni, S.  and Villanueva, A.",
       year = "2018",
-note = "\url{https://docs.dunescience.org/cgi-bin/private/ShowDocument?docid=6781&version=1} "
+note = "\url{https://docs.dunescience.org/cgi-bin/private/ShowDocument?docid=6781} "
 }
 
 @article{bib:docdb6991,
@@ -8605,28 +8702,28 @@ note = "\url{https://docs.dunescience.org/cgi-bin/private/ShowDocument?docid=709
       title = {{DUNE FD Interface Document: Calibration to Joint CISC}},
       author = "Sowjanya Gollapinni and others",
       year = "2018",
-note = "\url{https://docs.dunescience.org/cgi-bin/private/ShowDocument?docid=7072&version=1} "
+note = "\url{http://docs.dunescience.org/cgi-bin/ShowDocument?docid=7072} "
 }
 
 @article{bib:docdb7045,
       title = {{DUNE FD Interface Document: Integration Facility to Joint CISC}},
       author = "Sowjanya Gollapinni and others",
       year = "2018",
-note = "\url{https://docs.dunescience.org/cgi-bin/private/ShowDocument?docid=7045&version=1} "
+note = "\url{https://docs.dunescience.org/cgi-bin/private/ShowDocument?docid=7045} "
 }
 
 @article{bib:docdb7018,
       title = {{DUNE FD Interface Document: Installation Interfaces to Joint CISC}},
       author = "Sowjanya Gollapinni and others",
       year = "2018",
-note = "\url{https://docs.dunescience.org/cgi-bin/private/ShowDocument?docid=7018&version=1} "
+note = "\url{http://docs.dunescience.org/cgi-bin/ShowDocument?docid=7018} "
 }
 
 @article{bib:docdb7126,
       title = {{DUNE FD Interface Document: Software and Computing to Joint CISC}},
       author = "Sowjanya Gollapinni and others",
       year = "2018",
-note = "\url{https://docs.dunescience.org/cgi-bin/private/ShowDocument?docid=7126&version=1} "
+note = "\url{http://docs.dunescience.org/cgi-bin/ShowDocument?docid=7126} "
 }
 
 @article{Laycock:2019ynk,
@@ -8634,7 +8731,7 @@ note = "\url{https://docs.dunescience.org/cgi-bin/private/ShowDocument?docid=712
                         Formica, Andrea and Govi, Giacomo and Jouvin, Michel and
                         Lange, David and Laycock, Paul and Wood, Lynn",
       title          = "{HEP Software Foundation Community White Paper Working
-                        Group – Conditions Data}",
+                        Group - Conditions Data}",
       year           = "2019",
       eprint         = "1901.05429",
       archivePrefix  = "arXiv",
@@ -8914,7 +9011,7 @@ title = "{The magnetized steel and scintillator calorimeters of the {MINOS} expe
 journal = "Nuclear Instruments and Methods in Physics Research Section A: Accelerators, Spectrometers, Detectors and Associated Equipment ",
 volume = "596",
 number = "2",
-collaboration= "{MINOS Collaboration}",
+collaboration= "{MINOS}",
 pages = "190 - 228",
 year = "2008",
 note = "",
@@ -9030,7 +9127,7 @@ author = "D.G. Michael and others"
 
 @article{Yanagida:1979as,
       author         = "Yanagida, Tsutomu",
-      title          = "{HORIZONTAL SYMMETRY AND MASSES OF NEUTRINOS}",
+      title          = "{Horizontal Symmetry and Masses of Neutrinos}",
       booktitle      = "{Proceedings: Workshop on the Unified Theories and the
                         Baryon Number in the Universe: Tsukuba, Japan, February
                         13-14, 1979}",
@@ -9355,7 +9452,7 @@ author = "D.G. Michael and others"
 @article{Abe:2014mwa,
       author         = "Abe, K. and others",
       title          = "{Search for proton decay via $p\to\nu K^+$ using
-                        260 kiloton·year data of Super-Kamiokande}",
+                        260 kiloton-year data of Super-Kamiokande}",
       collaboration  = "Super-Kamiokande",
       journal        = "Phys. Rev.",
       volume         = "D90",
@@ -9366,7 +9463,7 @@ author = "D.G. Michael and others"
       eprint         = "1408.1195",
       archivePrefix  = "arXiv",
       primaryClass   = "hep-ex",
-      SLACcitation   = "%%CITATION = ARXIV:1408.1195;%%"
+      SLACcitation   = "%%CITATION = ARXIV:1408.1195;%%"                                                      
 }
 
 
@@ -9427,7 +9524,7 @@ author = "D.G. Michael and others"
       reportNumber   = "FERMILAB-THESIS-2017-04",
       SLACcitation   = "%%CITATION = FERMILAB-THESIS-2017-04;%%"
 }
-@masterthesis{Brown:2018uta,
+@mastersthesis{Brown:2018uta,
       author         = "Garrett Brown",
       title          = "{Sensitivity Study for Low Mass Dark Matter Search at DUNE, M.S. Thesis}",
       school         = "University of Texas Arlington",
@@ -9507,7 +9604,7 @@ author = "D.G. Michael and others"
 
 @misc{bib:uBlifetime,
 title = "{A Measurement of the Attenuation of Drifting Electrons in the MicroBooNE LArTPC}",
-collaboration = {MicroBooNE collaboration},
+collaboration = {MicroBooNE},
 note = "MICROBOONE-NOTE-1026-PUB,\url{http://microboone.fnal.gov/wp-content/uploads/MICROBOONE-NOTE-1026-PUB.pdf}",
 year = {2017}
 }
@@ -9937,34 +10034,45 @@ year = {2017},
 note = {\url{https://docs.dunescience.org/cgi-bin/private/RetrieveFile?docid=4559&filename=CDR_Optimized_Beam_Oct02.pdf&version=12}},
 }
 
-@article{nieves1,
-        title = {Inclusive charged-current neutrino-nucleus reactions},
-        author = {Nieves, J. and Simo, I. Ruiz and Vacas, M. J. Vicente},
-        journal = {Phys. Rev. C},
-        volume = {83},
-        issue = {4}, 
-        pages = {045501},
-        numpages = {19},
-        year = {2011},
-        month = {Apr},
-        publisher = {American Physical Society},
-        doi = {10.1103/PhysRevC.83.045501},
-        eprint = {https://link.aps.org/doi/10.1103/PhysRevC.83.045501}
+@techreport{bib:docdb4559,
+title =  "{Long-Baseline Neutrino Facility (LBNF)/DUNE
+Conceptual Design Report: Annex 3A\_opt}",
+author = {Phil Adamson and others},
+type = {DUNE doc},
+number = {4559},
+year = {2017},
+note = "\url{http://docs.dunescience.org/cgi-bin/ShowDocument?docid=4559&asof=2019-7-15}"
 }
 
-@article{nieves2,
-title = {Neutrino-nucleus quasi-elastic and 2p2h interactions up to 10 GeV},
-author = {Gran, R. and Nieves, J. and Sanchez, F. and Vacas, M. J. Vicente},
-journal = {Phys. Rev. D},
-volume = {88},
-issue = {11},
-pages = {113007},
-numpages = {10},
-year = {2013},
-month = {Dec},
-publisher = {American Physical Society},
-doi = {10.1103/PhysRevD.88.113007},
-eprint = {https://link.aps.org/doi/10.1103/PhysRevD.88.113007}
+@article{Nieves:2011pp,
+      author         = "Nieves, J. and Ruiz Simo, I. and Vicente Vacas, M. J.",
+      title          = "{Inclusive Charged--Current Neutrino--Nucleus Reactions}",
+      journal        = "Phys. Rev.",
+      volume         = "C83",
+      year           = "2011",
+      pages          = "045501",
+      doi            = "10.1103/PhysRevC.83.045501",
+      eprint         = "1102.2777",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ph",
+      SLACcitation   = "%%CITATION = ARXIV:1102.2777;%%"
+}
+
+@article{Gran:2013kda,
+      author         = "Gran, R. and Nieves, J. and Sanchez, F. and Vicente
+                        Vacas, M. J.",
+      title          = "{Neutrino-nucleus quasi-elastic and 2p2h interactions up
+                        to 10 GeV}",
+      journal        = "Phys. Rev.",
+      volume         = "D88",
+      year           = "2013",
+      number         = "11",
+      pages          = "113007",
+      doi            = "10.1103/PhysRevD.88.113007",
+      eprint         = "1307.8105",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ph",
+      SLACcitation   = "%%CITATION = ARXIV:1307.8105;%%"
 }
 
 @article{llewelyn-smith,
@@ -9992,30 +10100,18 @@ eprint = {https://link.aps.org/doi/10.1103/PhysRevD.88.113007}
       SLACcitation   = "%%CITATION = ARXIV:1705.02932;%%"
 }
 
-@article{nieves_uncert,
-title = "Theoretical uncertainties on quasielastic charged-current neutrino–nucleus cross sections",
-journal = "Physics Letters B",
-volume = "638",
-number = "4",
-pages = "325 - 332",
-year = "2006",
-issn = "0370-2693",
-doi = "https://doi.org/10.1016/j.physletb.2006.05.053",
-url = "http://www.sciencedirect.com/science/article/pii/S0370269306006344",
-author = "M. Valverde and J.E. Amaro and J. Nieves"
-}
-
-@article{t2k_2018,
-      author         = "Abe, K. and others",
-      title          = "{Search for CP violation in Neutrino and Antineutrino
-                        Oscillations by the T2K experiment with $2.2\times10^{21}$
-                        protons on target}",
-      collaboration  = "T2K",
-      year           = "2018",
-      eprint         = "1807.07891",
+@article{Valverde:2006zn,
+      author         = "Valverde, M. and Amaro, Jose Enrique and Nieves, J.",
+      title = "Theoretical uncertainties on quasielastic charged-current neutrino-nucleus cross sections",
+      journal        = "Phys. Lett.",
+      volume         = "B638",
+      year           = "2006",
+      pages          = "325-332",
+      doi            = "10.1016/j.physletb.2006.05.053",
+      eprint         = "hep-ph/0604042",
       archivePrefix  = "arXiv",
-      primaryClass   = "hep-ex",
-      SLACcitation   = "%%CITATION = ARXIV:1807.07891;%%"
+      primaryClass   = "hep-ph",
+      SLACcitation   = "%%CITATION = HEP-PH/0604042;%%"
 }
 
 @article{bodek_eb,
@@ -10037,20 +10133,22 @@ author = "M. Valverde and J.E. Amaro and J. Nieves"
 https://indico.phys.vt.edu/event/34/contributions/656/attachments/477/731/binding-energy-nufact-2018.pdf}"
 }
 
-@article{minos_pi_q2,
-  title = {Study of quasielastic scattering using charged-current ${\ensuremath{\nu}}_{\ensuremath{\mu}}$-iron interactions in the MINOS near detector},
-  author = {Adamson, P. and Anghel, I. and Aurisano, A. and Barr, G. and Bishai, M. and Blake, A. and Bock, G. J. and Bogert, D. and Cao, S. V. and Castromonte, C. M. and Childress, S. and Coelho, J. A. B. and Corwin, L. and Cronin-Hennessy, D. and de Jong, J. K. and Devan, A. V. and Devenish, N. E. and Diwan, M. V. and Escobar, C. O. and Evans, J. J. and Falk, E. and Feldman, G. J. and Frohne, M. V. and Gallagher, H. R. and Gomes, R. A. and Goodman, M. C. and Gouffon, P. and Graf, N. and Gran, R. and Grzelak, K. and Habig, A. and Hahn, S. R. and Hartnell, J. and Hatcher, R. and Holin, A. and Huang, J. and Hylen, J. and Irwin, G. M. and Isvan, Z. and James, C. and Jensen, D. and Kafka, T. and Kasahara, S. M. S. and Koizumi, G. and Kordosky, M. and Kreymer, A. and Lang, K. and Ling, J. and Litchfield, P. J. and Lucas, P. and Mann, W. A. and Marshak, M. L. and Mayer, N. and McGivern, C. and Medeiros, M. M. and Mehdiyev, R. and Meier, J. R. and Messier, M. D. and Miller, W. H. and Mishra, S. R. and Moed Sher, S. and Moore, C. D. and Mualem, L. and Musser, J. and Naples, D. and Nelson, J. K. and Newman, H. B. and Nichol, R. J. and Nowak, J. A. and O'Connor, J. and Orchanian, M. and Pahlka, R. B. and Paley, J. and Patterson, R. B. and Pawloski, G. and Perch, A. and Pf\"utzner, M. and Phan-Budd, S. and Plunkett, R. K. and Poonthottathil, N. and Qiu, X. and Radovic, A. and Rebel, B. and Rosenfeld, C. and Rubin, H. A. and Sanchez, M. C. and Schneps, J. and Schreckenberger, A. and Schreiner, P. and Sharma, R. and Sousa, A. and Tagg, N. and Talaga, R. L. and Thomas, J. and Thomson, M. A. and Tian, X. and Timmons, A. and Tognini, S. C. and Toner, R. and Torretta, D. and Urheim, J. and Vahle, P. and Viren, B. and Walding, J. J. and Weber, A. and Webb, R. C. and White, C. and Whitehead, L. and Whitehead, L. H. and Wojcicki, S. G. and Zwaska, R.},
-  collaboration = {MINOS Collaboration},
-  journal = {Phys. Rev. D},
-  volume = {91},
-  issue = {1},
-  pages = {012005},
-  numpages = {20},
-  year = {2015},
-  month = {Jan},
-  publisher = {American Physical Society},
-  doi = {10.1103/PhysRevD.91.012005},
-  url = {https://link.aps.org/doi/10.1103/PhysRevD.91.012005}
+@article{Adamson:2014pgc,
+      author         = "Adamson, P. and others",
+      title          = "{Study of quasielastic scattering using charged-current
+                        $\nu_\mu$-iron interactions in the MINOS near detector}",
+      collaboration  = "MINOS",
+      journal        = "Phys. Rev.",
+      volume         = "D91",
+      year           = "2015",
+      number         = "1",
+      pages          = "012005",
+      doi            = "10.1103/PhysRevD.91.012005",
+      eprint         = "1410.8613",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ex",
+      reportNumber   = "FERMILAB-PUB-14-401-E",
+      SLACcitation   = "%%CITATION = ARXIV:1410.8613;%%"
 }
 
 @InProceedings{nova_2018,
@@ -10086,26 +10184,7 @@ https://indico.phys.vt.edu/event/34/contributions/656/attachments/477/731/bindin
   url = {https://link.aps.org/doi/10.1103/PhysRevD.97.013002}
 }
 
-% NOVA CVN paper
-@article{novacvn,
-  author={A Aurisano and
-          Alexander Radovic and
-          D Rocco and
-          A Himmel and 
-          M D Messier and 
-          E Niner and 
-          G Pawloski and 
-          F Psihas and 
-          A Sousa and 
-          P Vahle},
-  title={A convolutional neural network neutrino event classifier},
-  journal={Journal of Instrumentation},
-  volume={11},
-  number={09},
-  pages={P09001},
-  url={http://stacks.iop.org/1748-0221/11/i=09/a=P09001},
-  year={2016},
-}
+
 
 % Google network
 @article{GoogLeNet,
@@ -10212,95 +10291,105 @@ https://indico.phys.vt.edu/event/34/contributions/656/attachments/477/731/bindin
 @techreport{bib:docdb6670,
 title = "{DUNE Interface Document: APA / TPC Electronics}",
 author = {Christian, D. and Marchionni, A. and Soldner--Rembold, S. and Verzocchi, M.},
+institution = {DUNE},
 type = {DUNE doc},
 number = {6670},
 year = {2018},
-note = "\url{https://docs.dunescience.org/cgi-bin/private/ShowDocument?docid=6670\&asof=2019-7-15}"
+note = "\url{http://docs.dunescience.org/cgi-bin/ShowDocument?docid=6670&asof=2019-11-1}"
 }
 
 
 @techreport{bib:docdb6745,
 title = "{DUNE Interface Document: CISC / SP--TPC Cold Electronics}",
 author = {Cervera Villanueva,  A. and Christian, D. and Gollapinni, S. and Verzocchi, M.},
+institution = {DUNE},
 type = {DUNE doc},
 number = {6745},
 year = {2018},
-note = "\url{https://docs.dunescience.org/cgi-bin/private/ShowDocument?docid=6745\&asof=2019-7-15}"
+note = "\url{https://docs.dunescience.org/cgi-bin/private/ShowDocument?docid=6745\&asof=2019-11-1}"
 }
 
 @techreport{bib:docdb6739,
 title = "{DUNE Interface Document: Single Phase TPC Cold Electronics and
 Joint Far Detector HV System}",
 author = {Christian, D. and Pietropaolo, F. and Verzocchi, M. and Yu, B.},
+institution = {DUNE},
 type = {DUNE doc},
 number = {6739},
 year = {2018},
-note = "\url{https://docs.dunescience.org/cgi-bin/private/ShowDocument?docid=6739\&asof=2019-7-15}"
+note = "\url{https://docs.dunescience.org/cgi-bin/private/ShowDocument?docid=6739\&asof=2019-11-1}"
 }
 
 @techreport{bib:docdb6718,
 title = "{DUNE Interface Document: Single Phase TPC Cold Electronics and
 Single Phase TPC Photon System}",
 author = {Christian, D. and Segreto,  E. and Verzocchi, M. and Warner, D.},
+institution = {DUNE},
 type = {DUNE doc},
 number = {6718},
 year = {2018},
-note = "\url{https://docs.dunescience.org/cgi-bin/private/ShowDocument?docid=6718\&asof=2019-7-15}"
+note = "\url{https://docs.dunescience.org/cgi-bin/private/ShowDocument?docid=6718\&asof=2019-11-1}"
 }
 
 @techreport{bib:docdb6973,
 title = "{DUNE Interface Document: Single Phase TPC Cold Electronics and Detector
 and Facilities Infrastructure (LBNF) and Technical Coordination (DUNE)}",
 author = {Christian, D. and Feyzi, F. and James, E. and Shaw, T. and Verzocchi, M.},
+institution = {DUNE},
 type = {DUNE doc},
 number = {6973},
 year = {2018},
-note = "\url{https://docs.dunescience.org/cgi-bin/private/ShowDocument?docid=6973\&asof=2019-7-15}"
+note = "\url{https://docs.dunescience.org/cgi-bin/private/ShowDocument?docid=6973\&asof=2019-11-1}"
 }
 
 @techreport{bib:docdb7000,
 title = "{DUNE Interface Document: TPC Electronics / Underground Installation Team}",
 author = {Christian, D. and James, E. and Kettel, S. and Stewart, J. and Verzocchi, M.},
+institution = {DUNE},
 type = {DUNE doc},
 number = {7000},
 year = {2018},
-note = "\url{https://docs.dunescience.org/cgi-bin/private/ShowDocument?docid=7000\&asof=2019-7-15}"
+note = "\url{https://docs.dunescience.org/cgi-bin/private/ShowDocument?docid=7000\&asof=2019-11-1}"
 }
 
 @techreport{bib:docdb7027,
 title = "{DUNE Interface Document: TPC Electronics / Integration and Test Facility}",
 author = {Christian, D. and James, E. and Kettel, S. and Marshak, M. and Verzocchi, M.},
+institution = {DUNE},
 type = {DUNE doc},
 number = {7027},
 year = {2018},
-note = "\url{https://docs.dunescience.org/cgi-bin/private/ShowDocument?docid=7027\&asof=2019-7-15}"
+note = "\url{https://docs.dunescience.org/cgi-bin/private/ShowDocument?docid=7027\&asof=2019-11-1}"
 }
 
 @techreport{bib:docdb7054,
 title = "{DUNE Interface Document: Calibration to SP TPC Electronics}",
 author = {Christian, D. and Gollapinni, S. and Mahn, K. and Verzocchi, M.},
+institution = {DUNE},
 type = {DUNE doc},
 number = {7054},
 year = {2018},
-note = "\url{https://docs.dunescience.org/cgi-bin/private/ShowDocument?docid=7054\&asof=2019-7-15}"
+note = "\url{https://docs.dunescience.org/cgi-bin/private/ShowDocument?docid=7054\&asof=2019-11-1}"
 }
 
 @techreport{bib:docdb7081,
 title = "{DUNE Interface Document: DUNE Physics to SP TPC Electronics}",
 author = {Christian, D. and Patterson, R. and Verzocchi, M. and Worcester, E.},
+institution = {DUNE},
 type = {DUNE doc},
 number = {7081},
 year = {2018},
-note = "\url{https://docs.dunescience.org/cgi-bin/private/ShowDocument?docid=7081\&asof=2019-7-15}"
+note = "\url{https://docs.dunescience.org/cgi-bin/private/ShowDocument?docid=7081\&asof=2019-11-1}"
 }
 
 @techreport{bib:docdb7108,
 title = "{DUNE Interface Document: Software and Computing to SP TPC Electronics}",
 author = {Christian, D. and Kirby, M. and McNab, A. and Schellman, H. and Verzocchi, M.},
+institution = {DUNE},
 type = {DUNE doc},
 number = {7108},
 year = {2018},
-note = "\url{https://docs.dunescience.org/cgi-bin/private/ShowDocument?docid=7108\&asof=2019-7-15}"
+note = "\url{https://docs.dunescience.org/cgi-bin/private/ShowDocument?docid=7108\&asof=2019-11-1}"
 }
 
 @misc{lumileds-DS144-pdf,
@@ -10332,7 +10421,7 @@ note = {Accessed: 2018-11-19}
       year = "2018",
       type = "DUNE doc",
       number = "7192",
-      note = "\url{https://docs.dunescience.org/cgi-bin/private/ShowDocument?docid=7192\&asof=2019-7-15}"
+      note = "\url{https://docs.dunescience.org/cgi-bin/private/ShowDocument?docid=7192\&asof=2019-11-1}"
 }
 
 @article{Kuzniak:2018dcf,
@@ -10349,37 +10438,51 @@ wavelength shifter in liquid argon detectors}",
 @techreport{bib:docdb328,
 title = "{Far Site Shaft Hoisting Assumptions and Parameters}",
 author = {David Montanari and Emily Costopoulos and Josh Willhite},
+institution = {DUNE},
 type = {DUNE doc},
 number = {328},
 year = {2018},
-note = "\url{https://docs.dunescience.org/cgi-bin/private/ShowDocument?docid=328&asof=2019-7-15}"
+note = "\url{https://docs.dunescience.org/cgi-bin/private/ShowDocument?docid=328&asof=2019-11-1}"
 }
 
 @techreport{bib:docdb11500,
 title = "{DUNE Integration Test Facility Requirements}",
 author = {Jim Stewart},
+institution = {DUNE},
 type = {DUNE doc},
 number = {11500},
 year = {2018},
-note = "\url{https://docs.dunescience.org/cgi-bin/private/ShowDocument?docid=11500&asof=2019-7-15}"
+note = "\url{https://docs.dunescience.org/cgi-bin/private/ShowDocument?docid=11500&asof=2019-11-1}"
 }
 
 @techreport{bib:docdb8426,
 title = "{DUNE Load List for Ross}",
 author = {Jim Stewart},
+institution = {DUNE},
 type = {DUNE doc},
 number = {8426},
 year = {2018},
-note = "\url{https://docs.dunescience.org/cgi-bin/private/ShowDocument?docid=8426&asof=2019-7-15}"
+note = "\url{https://docs.dunescience.org/cgi-bin/private/ShowDocument?docid=8426&asof=2019-11-1}"
+}
+
+@techreport{bib:docdb8921,
+title = "{Lessons Learned Guideline}",
+author = {Kevin Fahey},
+institution = {DUNE},
+type = {DUNE doc},
+number = {8921},
+year = {2018},
+note = "\url{http://docs.dunescience.org/cgi-bin/ShowDocument?docid=8921}"
 }
 
 @techreport{LBNE-docdb-8426,
 title = "{$p \rightarrow K^{+}$, nubar: early studies}",
 author = {Eric Church},
+institution = {DUNE},
 type = {LBNE Doc},
 number = {8426},
 year = {2014},
-note = "\url{https://lbne2-docdb.fnal.gov/cgi-bin/private/ShowDocument?docid=8426&asof=2019-7-15}"
+note = "\url{https://lbne2-docdb.fnal.gov/cgi-bin/private/ShowDocument?docid=8426&asof=2019-11-1}"
 }
 
 
@@ -10390,10 +10493,11 @@ author = {Alberto Marchionni and
 Francesco Pietropaolo and
 Stefan Soldner-Rembold and
 Bo Yu},
+institution = {DUNE},
 type = {DUNE doc},
 number = {6673},
 year = {2018},
-note = "\url{https://docs.dunescience.org/cgi-bin/private/ShowDocument?docid=6673&asof=2019-7-15}"
+note = "\url{https://docs.dunescience.org/cgi-bin/private/ShowDocument?docid=6673&asof=2019-11-1}"
 }
 
 @techreport{bib:docdb6721,
@@ -10402,10 +10506,11 @@ author = {Dominique Duchesneau and
 In\'{e}s Gil-Botella and
 Ettore Segreto and
 David Warner},
+institution = {DUNE},
 type = {DUNE doc},
 number = {6721},
 year = {2018},
-note = "\url{https://docs.dunescience.org/cgi-bin/private/ShowDocument?docid=6721&asof=2019-7-15}"
+note = "\url{https://docs.dunescience.org/cgi-bin/private/ShowDocument?docid=6721&asof=2019-11-1}"
 }
 
 @techreport{bib:docdb6985,
@@ -10415,10 +10520,11 @@ Eric James and
 Francesco Pietropaolo and
 Theresa Shaw and
 Bo Yu},
+institution = {DUNE},
 type = {DUNE doc},
 number = {6985},
 year = {2018},
-note = "\url{https://docs.dunescience.org/cgi-bin/private/ShowDocument?docid=6985&asof=2019-7-15}"
+note = "\url{https://docs.dunescience.org/cgi-bin/private/ShowDocument?docid=6985&asof=2019-11-1}"
 }
 
 @techreport{bib:docdb7066,
@@ -10427,10 +10533,11 @@ author = {Sowjanya Gollapinni and
 Kendall Mahn and
 Francesco Pietropaolo and
 Bo Yu},
+institution = {DUNE},
 type = {DUNE doc},
 number = {7066},
 year = {2018},
-note = "\url{https://docs.dunescience.org/cgi-bin/private/ShowDocument?docid=7066&asof=2019-7-15}"
+note = "\url{https://docs.dunescience.org/cgi-bin/private/ShowDocument?docid=7066&asof=2019-11-1}"
 }
 
 @techreport{bib:docdb7039,
@@ -10439,10 +10546,11 @@ author = {Eric James and
 Marvin Marshak and
 Francesco Pietropaolo and
 Bo Yu},
+institution = {DUNE},
 type = {DUNE doc},
 number = {7039},
 year = {2018},
-note = "\url{https://docs.dunescience.org/cgi-bin/private/ShowDocument?docid=7039&asof=2019-7-15}"
+note = "\url{https://docs.dunescience.org/cgi-bin/private/ShowDocument?docid=7039&asof=2019-11-1}"
 }
 
 @techreport{bib:docdb7093,
@@ -10451,10 +10559,11 @@ author = {Ryan Patterson and
 Francesco Pietropaolo and
 Elizabeth Worcester and
 Bo Yu},
+institution = {DUNE},
 type = {DUNE doc},
 number = {7093},
 year = {2018},
-note = "\url{https://docs.dunescience.org/cgi-bin/private/ShowDocument?docid=7093&asof=2019-7-15}"
+note = "\url{https://docs.dunescience.org/cgi-bin/private/ShowDocument?docid=7093&asof=2019-11-1}"
 }
 
 @article{DeGeronimo:2011zz,
@@ -10482,6 +10591,45 @@ author = {Andrea Borga and Eric Church and Frank Filthaut and Enrico Gamberini a
 title = "{FELIX based readout of the Single-Phase ProtoDUNE detector}",
 year = {2019},
 note = {arXiv:1806.09194}
+}
+@misc{atlas-felix,
+author = {Weihao Wu},
+title = "{FELIX: the New Detector Interface for the ATLAS Experiment}",
+year = {2018},
+note = {arXiv:1806.10667}
+}
+
+@article{MicroBooNE:2019oom,
+      title          = "{The Continuous Readout Stream of the MicroBooNE Liquid
+                        Argon Time Projection Chamber for Detection of Supernova
+                        Neutrinos}",
+      collaboration  = "MicroBooNE",
+      doi            = "10.2172/1573229",
+      year           = "2019",
+      reportNumber   = "MICROBOONE-NOTE-1030-PUB",
+      SLACcitation   = "%%CITATION = MICROBOONE-NOTE-1030-PUB;%%"
+}
+
+@inproceedings{jwa2019accelerating,
+title={{Accelerating Deep Neural Networks for Real-time Data Selection for High-resolution Imaging Particle Detectors}},
+author={Jwa, Yeon-Jae and Di Guglielmo, Giuseppe and Carloni, Luca P and Karagiorgi, Georgia},
+booktitle={New York Scientific Data Summit (NYSDS)},
+year={2019},
+organization={IEEE}
+}
+
+@inproceedings{Karagiorgi:2019qzp,
+      author         = "Karagiorgi, Georgia",
+      title          = "{Liquid Argon TPC Trigger Development with SBND}",
+      booktitle      = "{Meeting of the Division of Particles and Fields of the
+                        American Physical Society (DPF2019) Boston, Massachusetts,
+                        July 29-August 2, 2019}",
+      collaboration  = "SBND",
+      year           = "2019",
+      eprint         = "1910.08218",
+      archivePrefix  = "arXiv",
+      primaryClass   = "physics.ins-det",
+      SLACcitation   = "%%CITATION = ARXIV:1910.08218;%%"
 }
 
 @unpublished{bib:I2C,
@@ -10676,7 +10824,12 @@ doi = {10.1109/ISCAS.2010.5537633}
       title          = "{Demonstration of MeV-Scale Physics in Liquid Argon Time
                         Projection Chambers Using ArgoNeuT}",
       collaboration  = "ArgoNeuT",
-      year           = "2018",
+      journal        = "Phys. Rev.",
+      volume         = "D99",
+      year           = "2019",
+      number         = "1",
+      pages          = "012002",
+      doi            = "10.1103/PhysRevD.99.012002",
       eprint         = "1810.06502",
       archivePrefix  = "arXiv",
       primaryClass   = "hep-ex",
@@ -11214,7 +11367,7 @@ title = "{DUNE Far Detector Task Force Preliminary Report}",
 type = {DUNE doc},
 number = {1752},
 year = {2016},
-note = "\url{https://docs.dunescience.org/cgi-bin/private/ShowDocument?docid=1752&asof=2019-7-15}"
+note = "\url{https://docs.dunescience.org/cgi-bin/private/ShowDocument?docid=1752&asof=2019-11-1}"
 }
 
 
@@ -11224,7 +11377,7 @@ author = "Lisa Whitehead",
 type = {DUNE doc},
 number = {3384},
 year = {2018},
-note = "\url{https://docs.dunescience.org/cgi-bin/private/ShowDocument?docid=3384&asof=2019-7-15}"
+note = "\url{https://docs.dunescience.org/cgi-bin/private/ShowDocument?docid=3384&asof=2019-11-1}"
 }
 
 @article{Hocker:2007ht,
@@ -11245,9 +11398,21 @@ note = "\url{https://docs.dunescience.org/cgi-bin/private/ShowDocument?docid=338
 
 
 
-@misc{bib:minervanue,
-author = {{M.~Kordosky}},
-note = "Private communication regarding a MINERvA analysis. It should at least be in the arXiv by Spring 2019."
+
+@article{Valencia:2019mkf,
+    author = "Valencia, E. and others",
+    collaboration = "MINERvA",
+    title = "{Constraint of the MINER$\nu$A medium energy neutrino flux using neutrino-electron elastic scattering}",
+    eprint = "1906.00111",
+    archivePrefix = "arXiv",
+    primaryClass = "hep-ex",
+    reportNumber = "FERMILAB-PUB-19-256-CD-ND",
+    doi = "10.1103/PhysRevD.100.092001",
+    journal = "Phys. Rev. D",
+    volume = "100",
+    number = "9",
+    pages = "092001",
+    year = "2019"
 }
 
 @article{bib:original_lownu,
@@ -11286,7 +11451,7 @@ author         = "Church, E. and others",
 type = {DUNE doc},
 number = {1644},
 year = {2016},
-note = "\url{https://docs.dunescience.org/cgi-bin/private/ShowDocument?docid=1644&asof=2019-7-15}"
+note = "\url{https://docs.dunescience.org/cgi-bin/private/ShowDocument?docid=1644&asof=2019-11-1}"
 }
 
 %%%% --- %%%
@@ -11317,10 +11482,11 @@ title = "{DUNE Interface Document: SP-APA/PDS}",
 author = {Alberto Marchionni and Ettore Segreto and
 Christos Touramanis and
 David Warner},
+institution = {DUNE},
 type = {DUNE doc},
 number = {6667},
 year = {2018},
-note = "\url{https://docs.dunescience.org/cgi-bin/private/ShowDocument?docid=6667&asof=2019-7-15}"
+note = "\url{https://docs.dunescience.org/cgi-bin/private/ShowDocument?docid=6667&asof=2019-11-1}"
 }
  
 @TechReport{stats-diaconis-efron-1983,
@@ -11338,10 +11504,11 @@ note = "\url{https://docs.dunescience.org/cgi-bin/private/ShowDocument?docid=666
 @techreport{bib:docdb5609,
 title = "{DUNE FD WBS: Slow Control}",
 author = {Villanueva, Anselmo Cervera and Gollapinni, Sowjanya},
+institution = {DUNE},
 type = {DUNE doc},
 number = {5609},
 year = {2018},
-note = "\url{https://docs.dunescience.org/cgi-bin/private/ShowDocument?docid=5609&asof=2019-7-15}"
+note = "\url{https://docs.dunescience.org/cgi-bin/private/ShowDocument?docid=5609&asof=2019-11-1}"
 }
 
 @inproceedings{Babu:2013jba,
@@ -11694,7 +11861,7 @@ note = "\url{https://www.phy.bnl.gov/twister/bee}",
       reportNumber   = "FERMILAB-PUB-15-458-ND",
       SLACcitation   = "%%CITATION = ARXIV:1703.04024;%%"
 }
-
+✓
 @article{Adams:2018dra,
       author         = "Adams, C. and others",
       title          = "{Ionization electron signal processing in single phase
@@ -11793,14 +11960,14 @@ author = "Esteban, Ivan and Gonzalez-Garcia, M. C. and
 Hern\`andez-Cabezudo, \'Alvaro and Maltoni, Michele and
 Schwetz, Thomas",
 title = "{Global analysis of three-flavour neutrino oscillations:
-synergies and tensions in the determination of $\theta_23,
-\delta_CP$, and the mass ordering}",
+synergies and tensions in the determination of $\theta_{23},                                                  
+\delta_{CP}$, and the mass ordering}",
 year = "2018",
 eprint = "1811.05487",
 archivePrefix = "arXiv",
 primaryClass = "hep-ph",
 reportNumber = "IFT-UAM/CSIC-18-112, YITP-SB-18-34",
-SLACcitation = "%%CITATION = ARXIV:1811.05487;%%"
+SLACcitation = "%%CITATION = ARXIV:1811.05487;%%"                                                             
 }
 
 @misc{nufitweb,
@@ -11935,8 +12102,8 @@ note = "\url{https://cdcvs.fnal.gov/redmine/documents/1026}"
 
 @article{Guler:2000bd,
       author         = "Guler, M. and others",
-      title          = "{OPERA: An appearance experiment to search for nu/mu <-->
-                        nu/tau oscillations in the CNGS beam. Experimental
+      title          = "{OPERA: An appearance experiment to search for $\nu_\mu \leftrightarrow
+                        \nu_\tau$ oscillations in the CNGS beam. Experimental
                         proposal}",
       collaboration  = "OPERA",
       year           = "2000",
@@ -12103,7 +12270,7 @@ interactions in GLoBES}",
       author         = "Adamson, P. and others",
       title          = "{Search for active-sterile neutrino mixing using
                         neutral-current interactions in NOvA}",
-      collaboration  = "NOvA Collaboration",
+      collaboration  = "NOvA",
       journal        = "Phys. Rev.",
       volume         = "D96",
       year           = "2017",
@@ -12120,7 +12287,7 @@ interactions in GLoBES}",
 @article{ref:minossterile,
  author  = "Adamson, P. and others",
  title = "{Search for Sterile Neutrinos Mixing with Muon Neutrinos in MINOS}",
- collaboration  = "{MINOS Collaboration}",
+ collaboration  = "{MINOS}",
  journal        = "Phys. Rev. Lett.",
  volume         = "117",
  year           = "2016",
@@ -12129,7 +12296,7 @@ interactions in GLoBES}",
 
 @article{ref:superksterile,
  author = "Abe, K. and others",
- collaboration = {Super-Kamiokande Collaboration},
+ collaboration = {Super-Kamiokande},
  journal = "Phys. Rev. D",
  volume = "91",
  pages = "052019",
@@ -12138,7 +12305,7 @@ interactions in GLoBES}",
 
 @article{ref:IceCube,
  author = "Aartsen, M. G. and others",
- collaboration = "{IceCube Collaboration}",
+ collaboration = "{IceCube}",
  journal    = "Phys. Rev. Lett.",
  volume    = "117",
  pages     = "071801",
@@ -12149,7 +12316,7 @@ interactions in GLoBES}",
       author         = "Aartsen, M. G. and others",
       title          = "{Search for sterile neutrino mixing using three years of
                         IceCube DeepCore data}",
-      collaboration  = "IceCube Collaboration",
+      collaboration  = "IceCube",
       journal        = "Phys. Rev. D",
       volume         = "95",
       year           = "2017",
@@ -12337,6 +12504,18 @@ from Wavelength Shifting Coatings in Liquid Argon},
       primaryClass   = "hep-ph",
       reportNumber   = "IPPP/18/64",
       SLACcitation   = "%%CITATION = ARXIV:1807.10973;%%"
+}
+
+@article{Ballett:2019bgd,
+      author         = "Ballett, Peter and Boschi, Tommaso and Pascoli, Silvia",
+      title          = "{Heavy Neutral Leptons from low-scale seesaws at the DUNE
+                        Near Detector}",
+      year           = "2019",
+      eprint         = "1905.00284",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ph",
+      reportNumber   = "IPPP/18/76",
+      SLACcitation   = "%%CITATION = ARXIV:1905.00284;%%"
 }
 
 @article{Agostinelli:2002hh,
@@ -12667,7 +12846,7 @@ from Wavelength Shifting Coatings in Liquid Argon},
       author         = "Abe, K. and others",
       title          = "{Atmospheric neutrino oscillation analysis with external
                         constraints in Super-Kamiokande I-IV}",
-      collaboration  = "Super-Kamiokande Collaboration",
+      collaboration  = "Super-Kamiokande",
       year           = "2017",
       eprint         = "1710.09126",
       archivePrefix  = "arXiv",
@@ -12680,7 +12859,7 @@ from Wavelength Shifting Coatings in Liquid Argon},
       title          = "{Determining neutrino oscillation parameters from
                         atmospheric muon neutrino disappearance with three years
                         of IceCube DeepCore data}",
-      collaboration  = "IceCube Collaboration",
+      collaboration  = "IceCube",
       journal        = "Phys. Rev.",
       volume         = "D91",
       year           = "2015",
@@ -12696,7 +12875,7 @@ from Wavelength Shifting Coatings in Liquid Argon},
       author         = "Aartsen, M. G. and others",
       title          = "{Measurement of Atmospheric Neutrino Oscillations at
                         6-56 GeV with IceCube DeepCore}",
-      collaboration  = "IceCube Collaboration",
+      collaboration  = "IceCube",
       journal        = "Phys. Rev. Lett.",
       volume         = "120",
       year           = "2018",
@@ -12712,7 +12891,7 @@ from Wavelength Shifting Coatings in Liquid Argon},
       author         = "Adrian-Martinez, S. and others",
       title          = "{Measurement of Atmospheric Neutrino Oscillations with
                         the ANTARES Neutrino Telescope}",
-      collaboration  = "ANTARES Collaboration",
+      collaboration  = "ANTARES",
       journal        = "Phys. Lett.",
       volume         = "B714",
       year           = "2012",
@@ -12746,7 +12925,7 @@ from Wavelength Shifting Coatings in Liquid Argon},
       title          = "{Measurement of the solar neutrino capture rate with
                         gallium metal. III: Results for the 2002--2007 data-taking
                         period}",
-      collaboration  = "SAGE Collaboration",
+      collaboration  = "SAGE",
       journal        = "Phys. Rev.",
       volume         = "C80",
       year           = "2009",
@@ -12762,7 +12941,7 @@ from Wavelength Shifting Coatings in Liquid Argon},
 @article{Hosaka:2005um,
       author         = "Hosaka, J. and others",
       title          = "{Solar neutrino measurements in super-Kamiokande-I}",
-      collaboration  = "Super-Kamiokande Collaboration",
+      collaboration  = "Super-Kamiokande",
       journal        = "Phys. Rev.",
       volume         = "D73",
       year           = "2006",
@@ -12778,7 +12957,7 @@ from Wavelength Shifting Coatings in Liquid Argon},
 @article{Cravens:2008aa,
       author         = "Cravens, J. P. and others",
       title          = "{Solar neutrino measurements in Super-Kamiokande-II}",
-      collaboration  = "Super-Kamiokande Collaboration",
+      collaboration  = "Super-Kamiokande",
       journal        = "Phys. Rev.",
       volume         = "D78",
       year           = "2008",
@@ -12794,7 +12973,7 @@ from Wavelength Shifting Coatings in Liquid Argon},
 @article{Abe:2010hy,
       author         = "Abe, K. and others",
       title          = "{Solar neutrino results in Super-Kamiokande-III}",
-      collaboration  = "Super-Kamiokande Collaboration",
+      collaboration  = "Super-Kamiokande",
       journal        = "Phys. Rev.",
       volume         = "D83",
       year           = "2011",
@@ -12817,7 +12996,7 @@ from Wavelength Shifting Coatings in Liquid Argon},
       title          = "{An Independent Measurement of the Total Active B-8 Solar
                         Neutrino Flux Using an Array of He-3 Proportional Counters
                         at the Sudbury Neutrino Observatory}",
-      collaboration  = "SNO Collaboration",
+      collaboration  = "SNO",
       journal        = "Phys. Rev. Lett.",
       volume         = "101",
       year           = "2008",
@@ -12835,7 +13014,7 @@ from Wavelength Shifting Coatings in Liquid Argon},
       author         = "Aharmim, B. and others",
       title          = "{Low Energy Threshold Analysis of the Phase I and Phase
                         II Data Sets of the Sudbury Neutrino Observatory}",
-      collaboration  = "SNO Collaboration",
+      collaboration  = "SNO",
       journal        = "Phys. Rev.",
       volume         = "C81",
       year           = "2010",
@@ -12853,7 +13032,7 @@ from Wavelength Shifting Coatings in Liquid Argon},
       author         = "Bellini, G. and others",
       title          = "{Final results of Borexino Phase-I on low energy solar
                         neutrino spectroscopy}",
-      collaboration  = "Borexino Collaboration",
+      collaboration  = "Borexino",
       journal        = "Phys. Rev.",
       volume         = "D89",
       year           = "2014",
@@ -12871,7 +13050,7 @@ from Wavelength Shifting Coatings in Liquid Argon},
       author         = "Ahn, M. H. and others",
       title          = "{Measurement of Neutrino Oscillation by the K2K
                         Experiment}",
-      collaboration  = "K2K Collaboration",
+      collaboration  = "K2K",
       journal        = "Phys. Rev.",
       volume         = "D74",
       year           = "2006",
@@ -12888,7 +13067,7 @@ from Wavelength Shifting Coatings in Liquid Argon},
       title          = "{Combined analysis of $\nu_{\mu}$ disappearance and
                         $\nu_{\mu} \rightarrow \nu_{e}$ appearance in MINOS using
                         accelerator and atmospheric neutrinos}",
-      collaboration  = "MINOS Collaboration",
+      collaboration  = "MINOS",
       journal        = "Phys. Rev. Lett.",
       volume         = "112",
       year           = "2014",
@@ -12905,7 +13084,7 @@ from Wavelength Shifting Coatings in Liquid Argon},
       author         = "Abe, K. and others",
       title          = "{Combined Analysis of Neutrino and Antineutrino
                         Oscillations at T2K}",
-      collaboration  = "T2K Collaboration",
+      collaboration  = "T2K",
       journal        = "Phys. Rev. Lett.",
       volume         = "118",
       year           = "2017",
@@ -12922,7 +13101,7 @@ from Wavelength Shifting Coatings in Liquid Argon},
       title          = "{Updated T2K measurements of muon neutrino and
                         antineutrino disappearance using 1.5$\times$10$^{21}$
                         protons on target}",
-      collaboration  = "T2K Collaboration",
+      collaboration  = "T2K",
       journal        = "Phys. Rev.",
       volume         = "D96",
       year           = "2017",
@@ -12939,7 +13118,7 @@ from Wavelength Shifting Coatings in Liquid Argon},
       author         = "Adamson, P. and others",
       title          = "{Constraints on Oscillation Parameters from $\nu_e$
                         Appearance and $\nu_\mu$ Disappearance in NOvA}",
-      collaboration  = "NOvA Collaboration",
+      collaboration  = "NOvA",
       journal        = "Phys. Rev. Lett.",
       volume         = "118",
       year           = "2017",
@@ -12959,7 +13138,7 @@ from Wavelength Shifting Coatings in Liquid Argon},
       author         = "An, Feng Peng and others",
       title          = "{Measurement of electron antineutrino oscillation based
                         on 1230 days of operation of the Daya Bay experiment}",
-      collaboration  = "Daya Bay Collaboration",
+      collaboration  = "Daya Bay",
       journal        = "Phys. Rev.",
       volume         = "D95",
       year           = "2017",
@@ -12975,7 +13154,7 @@ from Wavelength Shifting Coatings in Liquid Argon},
       author         = "Choi, J. H. and others",
       title          = "{Observation of Energy and Baseline Dependent Reactor
                         Antineutrino Disappearance in the RENO Experiment}",
-      collaboration  = "RENO Collaboration",
+      collaboration  = "RENO",
       journal        = "Phys. Rev. Lett.",
       volume         = "116",
       year           = "2016",
@@ -12992,7 +13171,7 @@ from Wavelength Shifting Coatings in Liquid Argon},
       author         = "Abe, Y. and others",
       title          = "{Improved measurements of the neutrino mixing angle
                         $\theta_{13}$ with the Double Chooz detector}",
-      collaboration  = "Double Chooz Collaboration",
+      collaboration  = "Double Chooz",
       journal        = "JHEP",
       volume         = "10",
       year           = "2014",
@@ -13692,7 +13871,7 @@ from Wavelength Shifting Coatings in Liquid Argon},
 @article{Sirunyan:2018nnz,
       author         = "Sirunyan, Albert M and others",
       title          = "{Search for an $L_{\mu}-L_{\tau}$ gauge boson using Z$\to4\mu$ events in proton-proton collisions at $\sqrt{s}=$ 13 TeV}",
-      collaboration  = "CMS Collaboration",
+      collaboration  = "CMS",
       journal        = "Submitted to: Phys. Lett.",
       year           = "2018",
       eprint         = "1808.03684",
@@ -13796,10 +13975,10 @@ from Wavelength Shifting Coatings in Liquid Argon},
 }
 
 @article{Ahlgren:2013wba,
-      author         = "Ahlgren, Björn and Ohlsson, Tommy and Zhou, Shun",
-      title          = "{Comment on “Is Dark Matter with Long-Range
+      author         = "Ahlgren, Bjorn and Ohlsson, Tommy and Zhou, Shun",
+      title          = "{Comment on `Is Dark Matter with Long-Range
                         Interactions a Solution to All Small-Scale Problems of $\Lambda$
-                        Cold Dark Matter Cosmology?”}",
+                        Cold Dark Matter Cosmology?'}",
       journal        = "Phys.\ Rev.\ Lett.",
       volume         = "111",
       year           = "2013",
@@ -13809,8 +13988,9 @@ from Wavelength Shifting Coatings in Liquid Argon},
       eprint         = "1309.0991",
       archivePrefix  = "arXiv",
       primaryClass   = "hep-ph",
-      SLACcitation   = "%%CITATION = ARXIV:1309.0991;%%"
-}
+      SLACcitation   = "%%CITATION = ARXIV:1309.0991;%%"                                                      
+}​
+
 
 @article{Elahi:2015vzh,
       author         = "Elahi, Fatemeh and Martin, Adam",
@@ -13971,7 +14151,7 @@ from Wavelength Shifting Coatings in Liquid Argon},
 @article{TheBABAR:2016rlg,
       author         = "Lees, J. P. and others",
       title          = "{Search for a muonic dark force at BABAR}",
-      collaboration  = "BaBar Collaboration",
+      collaboration  = "BaBar",
       journal        = "Phys.\ Rev.\ D",
       volume         = "94",
       year           = "2016",
@@ -15011,19 +15191,20 @@ from Wavelength Shifting Coatings in Liquid Argon},
 	Bdsk-Url-1 = {http://dx.doi.org/10.1103/PhysRevD.67.073012}}
 
 @article{Bilenky:1992wv,
-	Archiveprefix = {arXiv},
-	Author = {Bilenky, Samoil M. and Giunti, C.},
-	Doi = {10.1016/0370-2693(93)90760-F},
-	Eprint = {hep-ph/9211269},
-	Journal = {Phys.Lett.},
-	Pages = {137-140},
-	Primaryclass = {hep-ph},
-	Reportnumber = {DFTT-66-92},
-	Slaccitation = {%%CITATION = HEP-PH/9211269;%%},
-	Title = {{Seesaw type mixing and muon-neutrino ---> tau-neutrino oscillations}},
-	Volume = {B300},
-	Year = {1993},
-	Bdsk-Url-1 = {http://dx.doi.org/10.1016/0370-2693(93)90760-F}}
+      author         = "Bilenky, Samoil M. and Giunti, C.",
+      title          = "{Seesaw type mixing and muon-neutrino to tau-neutrino
+                        oscillations}",
+      journal        = "Phys. Lett.",
+      volume         = "B300",
+      year           = "1993",
+      pages          = "137-140",
+      doi            = "10.1016/0370-2693(93)90760-F",
+      eprint         = "hep-ph/9211269",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ph",
+      reportNumber   = "DFTT-66-92",
+      SLACcitation   = "%%CITATION = HEP-PH/9211269;%%"
+}
 
 @article{Dev:2015vra,
 	Archiveprefix = {arXiv},
@@ -15268,7 +15449,7 @@ from Wavelength Shifting Coatings in Liquid Argon},
 @article{Apollonio:2002gd,
 	Archiveprefix = {arXiv},
 	Author = {Apollonio, M. and others},
-	Collaboration = {CHOOZ Collaboration},
+	Collaboration = {CHOOZ},
 	Doi = {10.1140/epjc/s2002-01127-9},
 	Eprint = {hep-ex/0301017},
 	Journal = {Eur.Phys.J.},
@@ -15600,7 +15781,7 @@ from Wavelength Shifting Coatings in Liquid Argon},
 @article{AguilarArevalo:2010wv,
 	Archiveprefix = {arXiv},
 	Author = {Aguilar-Arevalo, A. A. and others},
-	Collaboration = {The MiniBooNE},
+	Collaboration = {MiniBooNE},
 	Doi = {10.1103/PhysRevLett.105.181801},
 	Eprint = {1007.1150},
 	Journal = {Phys. Rev. Lett.},
@@ -16832,7 +17013,7 @@ from Wavelength Shifting Coatings in Liquid Argon},
 }
 
 @article{MicroBooNEmuon,
-      author         = "MicroBooNE Collaboration",
+      author         = "MicroBooNE",
       title          = "{MICROBOONE-NOTE-1010-PUB}",
       journal        = "",
       volume         = "",
@@ -17061,22 +17242,6 @@ reportNumber   = "FERMILAB-PUB-18-223-ND",
 SLACcitation   = "%%CITATION = ARXIV:1806.00096;%%"
 }
 
-@article{PhysRevD.99.012002,
-title = {Demonstration of MeV-scale physics in liquid argon time projection chambers using ArgoNeuT},
-author = {Acciarri, R. and Adams, C. and Asaadi, J. and Baller, B. and Bolton, T. and Bromberg, C. and Cavanna, F. and Church, E. and Edmunds, D. and Ereditato, A. and Farooq, S. and Ferrari, A. and Fitzpatrick, R. S. and Fleming, B. and Hackenburg, A. and Horton-Smith, G. and James, C. and Lang, K. and Lantz, M. and Lepetic, I. and Littlejohn, B. R. and Luo, X. and Mehdiyev, R. and Page, B. and Palamara, O. and Rebel, B. and Sala, P. R. and Scanavini, G. and Schukraft, A. and Smirnov, G. and Soderberg, M. and Spitz, J. and Szelc, A. M. and Weber, M. and Wu, W. and Yang, T. and Zeller, G. P.},
-collaboration = {ArgoNeuT Collaboration},
-journal = {Phys. Rev. D},
-volume = {99},
-issue = {1},
-pages = {012002},
-numpages = {10},
-year = {2019},
-month = {Jan},
-publisher = {American Physical Society},
-doi = {10.1103/PhysRevD.99.012002},
-url = {https://link.aps.org/doi/10.1103/PhysRevD.99.012002}
-}
-
 @article{Adams:2018sgn,
 author         = "Adams, C. and others",
 title          = "{First Measurement of $\nu_{\mu}$ Charged-Current
@@ -17138,10 +17303,11 @@ Zelimir Djurcic and
 Gary Drake and
 Amir Farbin and
 Michael Oberling},
+institution = {DUNE},
 type = {DUNE doc},
 number = {3126},
 year = {2018},
-note = "\url{https://docs.dunescience.org/cgi-bin/private/ShowDocument?docid=3126&asof=2019-7-15}"
+note = "\url{https://docs.dunescience.org/cgi-bin/private/ShowDocument?docid=3126&asof=2019-11-1}"
 }
 
 @techreport{bib:docdb6970,
@@ -17150,10 +17316,11 @@ author = {Farshid Feyzi and
 Eric James and
 Ettore Segreto and
 Theresa Shaw},
+institution = {DUNE},
 type = {DUNE doc},
 number = {6970},
 year = {2018},
-note = "\url{https://docs.dunescience.org/cgi-bin/private/ShowDocument?docid=6970&asof=2019-7-15}"
+note = "\url{https://docs.dunescience.org/cgi-bin/private/ShowDocument?docid=6970&asof=2019-11-1}"
 }
 
 @techreport{bib:docdb6997,
@@ -17162,10 +17329,11 @@ author = {Eric James and
 Ettore Segreto and
 Jim Stewart and
 David Warner},
+institution = {DUNE},
 type = {DUNE doc},
 number = {6997},
 year = {2018},
-note = "\url{https://docs.dunescience.org/cgi-bin/private/ShowDocument?docid=6997&asof=2019-7-15}"
+note = "\url{https://docs.dunescience.org/cgi-bin/private/ShowDocument?docid=6997&asof=2019-11-1}"
 }
 
 @techreport{bib:docdb7024,
@@ -17174,10 +17342,11 @@ author = {Eric James and
 Marvin Marshak and
 Ettore Segreto and
 David Warner},
+institution = {DUNE},
 type = {DUNE doc},
 number = {7024},
 year = {2018},
-note = "\url{https://docs.dunescience.org/cgi-bin/private/ShowDocument?docid=7024&asof=2019-7-15}"
+note = "\url{https://docs.dunescience.org/cgi-bin/private/ShowDocument?docid=7024&asof=2019-11-1}"
 }
 
 @techreport{bib:docdb7051,
@@ -17186,10 +17355,11 @@ author = {Sowjanya Gollapinni and
 Kendall Mahn and
 Ettore Segreto and
 David Warner},
+institution = {DUNE},
 type = {DUNE doc},
 number = {7051},
 year = {2018},
-note = "\url{https://docs.dunescience.org/cgi-bin/private/ShowDocument?docid=7051&asof=2019-7-15}"
+note = "\url{https://docs.dunescience.org/cgi-bin/private/ShowDocument?docid=7051&asof=2019-11-1}"
 }
 
 @techreport{bib:docdb7078,
@@ -17198,10 +17368,11 @@ author = {Ryan Patterson and
 Ettore Segreto and
 David Warner and
 Elizabeth Worcester},
+institution = {DUNE},
 type = {DUNE doc},
 number = {7078},
 year = {2018},
-note = "\url{https://docs.dunescience.org/cgi-bin/private/ShowDocument?docid=7078&asof=2019-7-15}"
+note = "\url{https://docs.dunescience.org/cgi-bin/private/ShowDocument?docid=7078&asof=2019-11-1}"
 }
 
 @techreport{bib:docdb7105,
@@ -17210,10 +17381,11 @@ author = {Andrew Norman and
 Heidi Schellman and
 Ettore Segreto and
 David Warner},
+institution = {DUNE},
 type = {DUNE doc},
 number = {7105},
 year = {2018},
-note = "\url{https://docs.dunescience.org/cgi-bin/private/ShowDocument?docid=7105&asof=2019-7-15}"
+note = "\url{https://docs.dunescience.org/cgi-bin/private/ShowDocument?docid=7105&asof=2019-11-1}"
 }
 
 @techreport{bib:sbnddoc1921,
@@ -17228,10 +17400,11 @@ note = "\url{http://sbn-docdb.fnal.gov/cgi-bin/ShowDocument?docid=1921}"
 @techreport{bib:docdb12367,
 title = "{Lessons learned from ProtoDUNE, details for the SP-CE consortium}",
 author = {Verzocchi, M.},
+institution = {DUNE},
 type = {DUNE doc},
 number = {12367},
 year = {2019},
-note = "\url{https://docs.dunescience.org/cgi-bin/private/ShowDocument?docid=12367&asof=2019-7-15}"
+note = "\url{https://docs.dunescience.org/cgi-bin/private/ShowDocument?docid=12367&asof=2019-11-1}"
 }
 
 %%%%% IDR References
@@ -17356,7 +17529,7 @@ author = {Stuart Mufson},
 type = {LBNE Doc},
 number = {8348},
 year = {2014},
-note = "\url{https://lbne2-docdb.fnal.gov/cgi-bin/private/ShowDocument?docid=8348&asof=2019-7-15}"
+note = "\url{https://lbne2-docdb.fnal.gov/cgi-bin/private/ShowDocument?docid=8348&asof=2019-11-1}"
 }
 
 @article{ADAMSON2002325,
@@ -17379,7 +17552,7 @@ Stephen Magill
 type = {DUNE doc},
 number = {10452},
 year = {2019},
-note = "\url{https://docs.dunescience.org/cgi-bin/private/ShowDocument?docid=10452&asof=2019-7-15}"
+note = "\url{https://docs.dunescience.org/cgi-bin/private/ShowDocument?docid=10452&asof=2019-11-1}"
 }
 
 @Misc{skwebsite,
@@ -17424,13 +17597,19 @@ type = {DUNE doc},
 institution = {LAPP, CIEMAT},
 number = {5606},
 year = {2018},
-note = "\url{https://docs.dunescience.org/cgi-bin/private/ShowDocument?docid=5606&asof=2019-7-15}"
+note = "\url{https://docs.dunescience.org/cgi-bin/private/ShowDocument?docid=5606&asof=2019-11-1}"
 }
 
 @article{Belver:2019lqm,
       author         = "Belver, D. and others",
-      title          = "{A Light Calibration System for the ProtoDUNE-DP Detector}",
+      title          = "{A Light Calibration System for the ProtoDUNE-DP
+                        Detector}",
+      journal        = "JINST",
+      volume         = "14",
       year           = "2019",
+      number         = "04",
+      pages          = "T04001",
+      doi            = "10.1088/1748-0221/14/04/T04001",
       eprint         = "1902.07127",
       archivePrefix  = "arXiv",
       primaryClass   = "physics.ins-det",
@@ -17441,20 +17620,21 @@ note = "\url{https://docs.dunescience.org/cgi-bin/private/ShowDocument?docid=560
 title = "{ProtoDUNE - SP Lessons Learned}",
 author = {Regina Rameika},
 type = {DUNE doc},
+institution = {DUNE},
 number = {8255},
 year = {2018},
-note = "\url{https://docs.dunescience.org/cgi-bin/private/ShowDocument?docid=8255&asof=2019-7-15}"
+note = "\url{https://docs.dunescience.org/cgi-bin/private/ShowDocument?docid=8255&asof=2019-11-1}"
 }
 
 %======== ALICE References (begin lable check)========
 
-@article{Dellacasa:2000bm,
+@techreport{Dellacasa:2000bm,
       author         = "Dellacasa, G. and others",
       title          = "{ALICE: Technical design report of the time projection
                         chamber}",
       collaboration  = "ALICE",
       year           = "2000",
-      reportNumber   = "CERN-OPEN-2000-183, CERN-LHCC-2000-001",
+      number   = "CERN-OPEN-2000-183, CERN-LHCC-2000-001",
       SLACcitation   = "%%CITATION = CERN-OPEN-2000-183;%%"
 }
 
@@ -17659,21 +17839,21 @@ note = "\url{https://docs.dunescience.org/cgi-bin/private/ShowDocument?docid=825
 
 
 @article{Auger:2017flc,
-	author         = "Auger, M. and Chen, Y. and Ereditato, A. and Goeldi, D.
-	and Kreslo, I. and Lorca, D. and Luethi, M. and Mettler,
-	T. and Sinclair, J. R. and Weber, M. S.",
-	title          = "{ArCLight—A Compact Dielectric Large-Area Photon
-	Detector}",
-	journal        = "Instruments",
-	volume         = "2",
-	year           = "2018",
-	number         = "1",
-	pages          = "3",
-	doi            = "10.3390/instruments2010003",
-	eprint         = "1711.11409",
-	archivePrefix  = "arXiv",
-	primaryClass   = "physics.ins-det",
-	SLACcitation   = "%%CITATION = ARXIV:1711.11409;%%"
+      author         = "Auger, M. and Chen, Y. and Ereditato, A. and Goeldi, D.
+                        and Kreslo, I. and Lorca, D. and Luethi, M. and Mettler,
+                        T. and Sinclair, J. R. and Weber, M. S.",
+      title          = "{ArCLight-A Compact Dielectric Large-Area Photon
+                        Detector}",
+      journal        = "Instruments",
+      volume         = "2",
+      year           = "2018",
+      number         = "1",
+      pages          = "3",
+      doi            = "10.3390/instruments2010003",
+      eprint         = "1711.11409",
+      archivePrefix  = "arXiv",
+      primaryClass   = "physics.ins-det",
+      SLACcitation   = "%%CITATION = ARXIV:1711.11409;%%"
 }
 
 
@@ -17684,18 +17864,8 @@ note = "\url{https://docs.dunescience.org/cgi-bin/private/ShowDocument?docid=825
 type = {DUNE doc},
 number = {7878},
 year = {2017},
-note = "\url{https://docs.dunescience.org/cgi-bin/private/ShowDocument?docid=7878&asof=2019-7-15}"
+note = "\url{https://docs.dunescience.org/cgi-bin/private/ShowDocument?docid=7878&asof=2019-11-1}"
 }%verified: slides
-
-
-@techreport{bib:docdb6652,
-title = "{High-Pressure Argon gas TPC Option for the DUNE Near Detector}",
-author = "{DUNE HPgTPC working group}",
-type = {DUNE doc},
-number = {6652},
-year = {2018},
-note = "\url{https://docs.dunescience.org/cgi-bin/private/ShowDocument?docid=6652&asof=2019-7-15}"
-}
 
 
 @InProceedings{lartpcSizeChris,
@@ -17707,7 +17877,7 @@ note = "\url{https://docs.dunescience.org/cgi-bin/private/ShowDocument?docid=665
 	
 	Owner                    = {damian},
 	Timestamp                = {2018.02.16},
-	Url                      = {https://indico.fnal.gov/event/14581/session/5/contribution/86}
+	Url                      = {http://docs.dunescience.org/cgi-bin/ShowDocument?docid=19809&asof=2020-06-19}
 }
 
 
@@ -17718,7 +17888,7 @@ note = "\url{https://docs.dunescience.org/cgi-bin/private/ShowDocument?docid=665
 type = {DUNE doc},
 number = {1792},
 year = {2018},
-note = "\url{https://docs.dunescience.org/cgi-bin/private/ShowDocument?docid=1792&asof=2019-7-15}"
+note = "\url{https://docs.dunescience.org/cgi-bin/private/ShowDocument?docid=1792&asof=2019-11-1}"
 }%verified 
 
 @article{Asaadi:2018oxk,
@@ -17732,16 +17902,6 @@ note = "\url{https://docs.dunescience.org/cgi-bin/private/ShowDocument?docid=179
 	SLACcitation   = "%%CITATION = ARXIV:1801.08884;%%"
 }
 
-@InProceedings{larpix,
-	Title                    = {{A micropower readout ASIC for pixelated liquid Ar TPCs}},
-	Author                   = {Krieger, Amanda and Dwyer, Daniel and Garcia-Sciveres, Maurice and Gnani, Dario and Grace, Carl},
-	Booktitle                = {Topical Workshop on Electronics for Particle Physics},
-	Year                     = {2017},
-	
-	Owner                    = {damian},
-	Timestamp                = {2018.01.20},
-	Url                      = {https://pos.sissa.it/313}
-}
 
 
 @Book{NobleGasDetectors,
@@ -18029,12 +18189,12 @@ note = "\url{https://docs.dunescience.org/cgi-bin/private/ShowDocument?docid=179
       SLACcitation   = "%%CITATION = ECONF,C740805,58;%%"
 }
 
-@article{Rubbia:1977zz,
+@techreport{Rubbia:1977zz,
       author         = "Rubbia, C.",
       title          = "{The Liquid Argon Time Projection Chamber: A New Concept
                         for Neutrino Detectors}",
       year           = "1977",
-      reportNumber   = "CERN-EP-INT-77-08",
+      number   = "CERN-EP-INT-77-08",
       SLACcitation   = "%%CITATION = CERN-EP-INT-77-08;%%"
 }
 
@@ -18135,21 +18295,6 @@ note = "\url{https://docs.dunescience.org/cgi-bin/private/ShowDocument?docid=179
       primaryClass   = "physics.ins-det",
       reportNumber   = "DESY-10-032, CALICE-PUB-2010-001",
       SLACcitation   = "%%CITATION = ARXIV:1003.2662;%%"
-}
-
-@inproceedings{Emberger:2018pgr,
-      author         = "Emberger, Lorenz and Simon, Frank",
-      title          = "{A highly granular calorimeter concept for long baseline
-                        near detectors}",
-      booktitle      = "{18th International Conference on Calorimetry in Particle
-                        Physics (CALOR 2018) Eugene, Oregon, USA, May 21-25,
-                        2018}",
-      year           = "2018",
-      eprint         = "1810.03677",
-      archivePrefix  = "arXiv",
-      primaryClass   = "physics.ins-det",
-      reportNumber   = "MPP-2018-247",
-      SLACcitation   = "%%CITATION = ARXIV:1810.03677;%%"
 }
 
 
@@ -18298,36 +18443,6 @@ note = "\url{https://indico.cern.ch/event/703880/contributions/3159021/attachmen
       SLACcitation   = "%%CITATION = ARXIV:1705.02932;%%"
 }
 
-@article{Nieves:2011pp,
-      author         = "Nieves, J. and Ruiz Simo, I. and Vicente Vacas, M. J.",
-      title          = "{Inclusive Charged--Current Neutrino--Nucleus Reactions}",
-      journal        = "Phys. Rev.",
-      volume         = "C83",
-      year           = "2011",
-      pages          = "045501",
-      doi            = "10.1103/PhysRevC.83.045501",
-      eprint         = "1102.2777",
-      archivePrefix  = "arXiv",
-      primaryClass   = "hep-ph",
-      SLACcitation   = "%%CITATION = ARXIV:1102.2777;%%"
-}
-
-@article{Gran:2013kda,
-      author         = "Gran, R. and Nieves, J. and Sanchez, F. and Vicente
-                        Vacas, M. J.",
-      title          = "{Neutrino-nucleus quasi-elastic and 2p2h interactions up
-                        to 10 GeV}",
-      journal        = "Phys. Rev.",
-      volume         = "D88",
-      year           = "2013",
-      number         = "11",
-      pages          = "113007",
-      doi            = "10.1103/PhysRevD.88.113007",
-      eprint         = "1307.8105",
-      archivePrefix  = "arXiv",
-      primaryClass   = "hep-ph",
-      SLACcitation   = "%%CITATION = ARXIV:1307.8105;%%"
-}
 
 @article{Schwehr:2016pvn,
       author         = "Schwehr, Jackie and Cherdack, Dan and Gran, Rik",
@@ -18493,13 +18608,20 @@ title="{Private communication}"
       SLACcitation   = "%%CITATION = ARXIV:1707.01785;%%"
 }
 
-@Article{dune_nue,
-  author =   "{Chris M. Marshall and Kevin S. McFarland and Callum Wilkinson}",
-  title =    "{Neutrino-electron elastic scattering for flux determination at the DUNE oscillation experiment}",
-  journal =  {Manuscript in Preparation},
-  year =     {2019}
+@article{PhysRevD.101.032002,
+  title = {Neutrino-electron elastic scattering for flux determination at the DUNE oscillation experiment},
+  author = {Marshall, Chris M. and McFarland, Kevin S. and Wilkinson, Callum},
+  journal = {Phys. Rev. D},
+  volume = {101},
+  issue = {3},
+  pages = {032002},
+  numpages = {22},
+  year = {2020},
+  month = {Feb},
+  publisher = {American Physical Society},
+  doi = {10.1103/PhysRevD.101.032002},
+  url = {https://link.aps.org/doi/10.1103/PhysRevD.101.032002}
 }
-
 %%% Maneira
 
 @article{bib:Koivunoro2004,
@@ -18529,15 +18651,10 @@ title="{Private communication}"
       SLACcitation   = "%%CITATION = ARXIV:1902.00596;%%"
 }
 
-
-
-
-
-
 @article{Ereditato:2014lra,
-      author         = "Ereditato, A. and Kreslo, I. and Lüthi, M. and Rudolf
+      author         = {Ereditato, A. and Kreslo, I. and L\"uthi, M. and Rudolf
                         von Rohr, C. and Schenk, M. and Strauss, Thomas and Weber,
-                        M. and Zeller, M.",
+                        M. and Zeller, M.},
       title          = "{A steerable UV laser system for the calibration of
                         liquid argon time projection chambers}",
       journal        = "JINST",
@@ -18616,7 +18733,7 @@ August
 
 
 
-    @article{Megino:2017ywl,
+    @article{Mefgino:2017ywl,
       author         = "Barreiro Megino, F. H. and De, K. and
 Klimentov, A. and
                         Maeno, T. and Nilsson, P. and Oleynik, D. and
@@ -18670,7 +18787,7 @@ author = {David Warner},
 type = {DUNE doc},
 number = {11644},
 year = {2019},
-note = "\url{https://docs.dunescience.org/cgi-bin/private/ShowDocument?docid=11644&asof=2019-7-15}"
+note = "\url{https://docs.dunescience.org/cgi-bin/private/ShowDocument?docid=11644&asof=2019-11-1}"
 }
 
 %Schelman Apr. 7, 2019
@@ -18884,16 +19001,49 @@ for the
 	author = {Kurt Biery and Eric Flumerfelt and John Freeman and Wesley Ketchum and Gennadiy Lukhanin and Ron Rechenmacher},
 	title = {artdaq: {DAQ} software development made simple},
 	journal = {Journal of Physics: Conference Series}
-        }
-        
+}
+
 @article{bib:uBlaser2019,
-      author         = "MicroBooNE Collaboration",
-      title          = "{TBD}",
+      author         =  "Adams, C. and others",
+      title          = "{A Method to Determine the Electric Field of Liquid Argon Time Projection Chambers using a UV Laser System and its Application in MicroBooNE}",
       collaboration  = "MicroBooNE",
+      journal        = "submitted to JINST",
       year           = "2019",
-      reportNumber   = "MICROBOONE-NOTE-1055-PUB",
-      url = "https://microboone.fnal.gov/public-notes/",
-      note = "MicroBooNE public note, expected to be available May 2019."
+      eprint         = "1910.01430",
+      archivePrefix  = "arXiv",
+      primaryClass   = "physics.ins-det",
+      SLACcitation   = "%%CITATION = ARXIV:1512.06882;%%"
+}  
+
+
+@article{Berger:2008xs,
+      author         = "Berger, Ch. and Sehgal, L. M.",
+      title          = "{PCAC and coherent pion production by low energy
+                        neutrinos}",
+      journal        = "Phys. Rev.",
+      volume         = "D79",
+      year           = "2009",
+      pages          = "053003",
+      doi            = "10.1103/PhysRevD.79.053003",
+      eprint         = "0812.2653",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ph",
+      SLACcitation   = "%%CITATION = ARXIV:0812.2653;%%"
+}
+
+@article{Berger:2007rq,
+      author         = "Berger, Ch. and Sehgal, L. M.",
+      title          = "{Lepton mass effects in single pion production by
+                        neutrinos}",
+      journal        = "Phys. Rev.",
+      volume         = "D76",
+      year           = "2007",
+      pages          = "113004",
+      doi            = "10.1103/PhysRevD.76.113004",
+      eprint         = "0709.4378",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ph",
+      SLACcitation   = "%%CITATION = ARXIV:0709.4378;%%"
 }
 
 @article{Friedland:2018vry,
@@ -19018,7 +19168,7 @@ author = {M. Kordosky and K. B. Luk and S. Manly and A. Weber},
 type = {DUNE},
 number = {8184},
 year = {2018},
-note = "\url{https://docs.dunescience.org/cgi-bin/private/ShowDocument?docid=8184&asof=2019-7-15}"
+note = "\url{https://docs.dunescience.org/cgi-bin/private/ShowDocument?docid=8184&asof=2019-11-1}"
 }
  
 @techreport{argoncube_loi,
@@ -19027,7 +19177,7 @@ note = "\url{https://docs.dunescience.org/cgi-bin/private/ShowDocument?docid=818
                        realization of large-mass liquid argon TPC neutrino
                        detectors}",
       institution   = "CERN",
-      collaboration = "ArgonCube Collaboration",
+      collaboration = "ArgonCube",
       address       = "Geneva",
       number        = "CERN-SPSC-2015-009. SPSC-I-243",
       month         = "Feb",
@@ -19043,7 +19193,7 @@ author = {M. Auger and others},
 type = {DUNE doc},
 number = {12571},
 year = {2019},
-note = "\url{https://docs.dunescience.org/cgi-bin/private/ShowDocument?docid=12571N&asof=2019-7-15}"
+note = "\url{https://docs.dunescience.org/cgi-bin/private/ShowDocument?docid=12571&asof=2019-11-1}"
 }
  
 @ARTICLE{G10Breakdown,
@@ -19081,7 +19231,7 @@ author = {Theresa Shaw},
 type = {DUNE doc},
 number = {4499},
 year = {2018},
-note = "\url{https://docs.dunescience.org/cgi-bin/private/ShowDocument?docid=4499&asof=2019-7-15}"
+note = "\url{https://docs.dunescience.org/cgi-bin/private/ShowDocument?docid=4499&asof=2019-11-1}"
 }
 
 @techreport{bib:docdb10419,
@@ -19090,7 +19240,7 @@ author = {M. Auger and R. Berner and Y. Chen and A. Ereditato and D. Goeldi and 
 type = {DUNE doc},
 number = {10419},
 year = {2018},
-note = "\url{https://docs.dunescience.org/cgi-bin/private/ShowDocument?docid=10419&asof=2019-7-15}"
+note = "\url{http://docs.dunescience.org/cgi-bin/ShowDocument?docid=10419&asof=2019-11-1}"
 }
 
 @TechReport{FNAL:Class4Lasers,
@@ -19124,23 +19274,7 @@ note = "\url{https://docs.dunescience.org/cgi-bin/private/ShowDocument?docid=104
   note =         {\url{https://edms.cern.ch/document/2095958}},
 }
 
-@article{Adamson:2014pgc,
-      author         = "Adamson, P. and others",
-      title          = "{Study of quasielastic scattering using charged-current
-                        $\nu \mu$ -iron interactions in the MINOS near detector}",
-      collaboration  = "MINOS",
-      journal        = "Phys. Rev.",
-      volume         = "D91",
-      year           = "2015",
-      number         = "1",
-      pages          = "012005",
-      doi            = "10.1103/PhysRevD.91.012005",
-      eprint         = "1410.8613",
-      archivePrefix  = "arXiv",
-      primaryClass   = "hep-ex",
-      reportNumber   = "FERMILAB-PUB-14-401-E",
-      SLACcitation   = "%%CITATION = ARXIV:1410.8613;%%"
-}
+
 
 @article{Alam:2015nkk,
       author         = "Alam, M. and others",
@@ -19160,8 +19294,19 @@ note = "\url{https://docs.dunescience.org/cgi-bin/private/ShowDocument?docid=104
       year = "2019",
 type = {DUNE doc},
 number = {14002},
-note = "\url{https://docs.dunescience.org/cgi-bin/private/ShowDocument?docid=14002&asof=2019-7-15}"
+note = "\url{https://docs.dunescience.org/cgi-bin/private/ShowDocument?docid=14002&asof=2019-11-1}"
 }
+
+@article{bib:docdb122,
+      title = {{Environmental Assessment, FONSI, and Environmental Review Forms}},
+      author = "R. Walton",
+      year = "2015",
+type = {DUNE doc},
+number = {122},
+note = "\url{http://docs.dunescience.org/cgi-bin/ShowDocument?docid=122&asof=2019-11-1}"
+}
+
+
 
 @article{bib:docdb14005,
       title = {{DUNE FD Interface Document: Calibration-HV}},
@@ -19169,7 +19314,7 @@ note = "\url{https://docs.dunescience.org/cgi-bin/private/ShowDocument?docid=140
       year = "2019",
 type = {DUNE doc},
 number = {14005},
-note = "\url{https://docs.dunescience.org/cgi-bin/private/ShowDocument?docid=14005&asof=2019-7-15}"
+note = "\url{https://docs.dunescience.org/cgi-bin/private/ShowDocument?docid=14005&asof=2019-11-1}"
 }
 
 @article{bib:docdb14008,
@@ -19178,7 +19323,7 @@ note = "\url{https://docs.dunescience.org/cgi-bin/private/ShowDocument?docid=140
       year = "2019",
 type = {DUNE doc},
 number = {14008},
-note = "\url{https://docs.dunescience.org/cgi-bin/private/ShowDocument?docid=14008&asof=2019-7-15}"
+note = "\url{https://docs.dunescience.org/cgi-bin/private/ShowDocument?docid=14008&asof=2019-11-1}"
 }
 
 @article{bib:docdb14011,
@@ -19187,7 +19332,7 @@ note = "\url{https://docs.dunescience.org/cgi-bin/private/ShowDocument?docid=140
       year = "2019",
 type = {DUNE doc},
 number = {14011},
-note = "\url{https://docs.dunescience.org/cgi-bin/private/ShowDocument?docid=14011&asof=2019-7-15}"
+note = "\url{https://docs.dunescience.org/cgi-bin/private/ShowDocument?docid=14011&asof=2019-11-1}"
 }
 
 @article{bib:docdb14014,
@@ -19196,7 +19341,7 @@ note = "\url{https://docs.dunescience.org/cgi-bin/private/ShowDocument?docid=140
       year = "2019",
 type = {DUNE doc},
 number = {14014},
-note = "\url{https://docs.dunescience.org/cgi-bin/private/ShowDocument?docid=14014&asof=2019-7-15}"
+note = "\url{https://docs.dunescience.org/cgi-bin/private/ShowDocument?docid=14014&asof=2019-11-1}"
 }
 
 @article{bib:docdb14017,
@@ -19205,7 +19350,7 @@ note = "\url{https://docs.dunescience.org/cgi-bin/private/ShowDocument?docid=140
       year = "2019",
 type = {DUNE doc},
 number = {14017},
-note = "\url{https://docs.dunescience.org/cgi-bin/private/ShowDocument?docid=14017&asof=2019-7-15}"
+note = "\url{https://docs.dunescience.org/cgi-bin/private/ShowDocument?docid=14017&asof=2019-11-1}"
 }
 
 @article{bib:docdb14020,
@@ -19214,7 +19359,7 @@ note = "\url{https://docs.dunescience.org/cgi-bin/private/ShowDocument?docid=140
       year = "2019",
 type = {DUNE doc},
 number = {14020},
-note = "\url{https://docs.dunescience.org/cgi-bin/private/ShowDocument?docid=14020&asof=2019-7-15}"
+note = "\url{https://docs.dunescience.org/cgi-bin/private/ShowDocument?docid=14020&asof=2019-11-1}"
 }
 
 @article{bib:docdb14023,
@@ -19223,7 +19368,7 @@ note = "\url{https://docs.dunescience.org/cgi-bin/private/ShowDocument?docid=140
       year = "2019",
 type = {DUNE doc},
 number = {14023},
-note = "\url{https://docs.dunescience.org/cgi-bin/private/ShowDocument?docid=14023&asof=2019-7-15}"
+note = "\url{https://docs.dunescience.org/cgi-bin/private/ShowDocument?docid=14023&asof=2019-11-1}"
 }
 
 @article{bib:docdb14026,
@@ -19232,7 +19377,7 @@ note = "\url{https://docs.dunescience.org/cgi-bin/private/ShowDocument?docid=140
       year = "2019",
 type = {DUNE doc},
 number = {14026},
-note = "\url{https://docs.dunescience.org/cgi-bin/private/ShowDocument?docid=14026&asof=2019-7-15}"
+note = "\url{https://docs.dunescience.org/cgi-bin/private/ShowDocument?docid=14026&asof=2019-11-1}"
 }
 
 @article{bib:yu2019a,
@@ -19270,7 +19415,7 @@ institution = {Univ. of Pennsylvania},
 year = {2018},
 type = {DUNE doc},
 number = {9240},
-note = "\url{https://docs.dunescience.org/cgi-bin/private/ShowDocument?docid=9240&asof=2019-7-15}"
+note = "\url{https://docs.dunescience.org/cgi-bin/private/ShowDocument?docid=9240&asof=2019-11-1}"
 }
 
 
@@ -19281,7 +19426,7 @@ institution = {BNL},
 year = {2018},
 type = {DUNE doc},
 number = {12349},
-note = "\url{https://docs.dunescience.org/cgi-bin/private/ShowDocument?docid=12349&asof=2019-7-15}"
+note = "\url{http://docs.dunescience.org/cgi-bin/ShowDocument?docid=12349&asof=2019-11-1}"
 }
 
 @techreport{bib:docdb12751,
@@ -19291,16 +19436,16 @@ institution = {Oregon State University},
 year = {2019},
 type = {DUNE doc},
 number = {12751},
-note = "\url{https://docs.dunescience.org/cgi-bin/private/ShowDocument?docid=12751&asof=2019-7-15}"
+note = "\url{http://docs.dunescience.org/cgi-bin/ShowDocument?docid=12751&asof=2019-11-1}"
 }
 
-@article{Bird:2014ctt,
+@techreport{Bird:2014ctt,
        author         = "Bird, I. and others",
        title          = "{Update of the Computing Models of the WLCG and
 the LHC
                          Experiments}",
        year           = "2014",
-       reportNumber   = "CERN-LHCC-2014-014, LCG-TDR-002",
+       number   = "CERN-LHCC-2014-014, LCG-TDR-002",
        SLACcitation   = "%%CITATION = CERN-LHCC-2014-014;%%"
 }
 
@@ -19321,12 +19466,11 @@ note =
 title = "{LBNF/DUNE Configuration Management Plan}",
 author = {Jack Fowler and Elaine McCluskey and Anne Heavey and Jolie Macier},
 type = {DUNE doc},
+institution = {LBNF/DUNE},
 number = {82},
 year = {2019},
-note = "\url{https://docs.dunescience.org/cgi-bin/private/ShowDocument?docid=82&asof=2019-7-15}"
+note = "\url{http://docs.dunescience.org/cgi-bin/ShowDocument?docid=82&asof=2019-11-1}"
 }
-
-
 
 %%
 
@@ -19355,7 +19499,7 @@ author = {TBD},
 type = {DUNE doc},
 number = {9664},
 year = {2018},
-note = "\url{https://docs.dunescience.org/cgi-bin/private/ShowDocument?docid=9664&asof=2019-7-15}"
+note = "\url{https://docs.dunescience.org/cgi-bin/private/ShowDocument?docid=9664&asof=2019-11-1}"
 }
 
 @TechReport{FNAL:FESHM2000,
@@ -19368,13 +19512,27 @@ note = "\url{https://docs.dunescience.org/cgi-bin/private/ShowDocument?docid=966
   note = 	 {\url{https://eshq.fnal.gov/manuals/feshm/#series2000}},
 }
 
+
+
 @techreport{bib:docdb8708,
 title = "{The DAQ for the single phase DUNE Prototype at CERN}",
 author = {Roland Sipos},
 type = {DUNE doc},
 number = {8708},
 year = {2018},
-note = "\url{https://docs.dunescience.org/cgi-bin/private/ShowDocument?docid=8708&asof=2019-7-15}"
+note = "\url{https://docs.dunescience.org/cgi-bin/private/ShowDocument?docid=8708&asof=2019-11-1}"
+}
+@inproceedings{Sipos:2018auh,
+      author         = "Sipos, Roland",
+      title          = "{The DAQ for the Single Phase DUNE Prototype at CERN}",
+      booktitle      = "{21st IEEE Real Time Conference (RT2018) Williamsburg,
+                        USA, June 11-15, 2018}",
+      collaboration  = "DUNE",
+      year           = "2018",
+      eprint         = "1806.09310",
+      archivePrefix  = "arXiv",
+      primaryClass   = "physics.ins-det",
+      SLACcitation   = "%%CITATION = ARXIV:1806.09310;%%"
 }
 
 
@@ -19384,7 +19542,7 @@ author = {Brett Viren},
 type = {DUNE doc},
 number = {10482},
 year = {2018},
-note = "\url{http://docs.dunescience.org/cgi-bin/ShowDocument?docid=10482&asof=2019-7-15}"
+note = "\url{http://docs.dunescience.org/cgi-bin/ShowDocument?docid=10482&asof=2019-11-1}"
 }
 
 
@@ -19394,7 +19552,7 @@ author = {David Last and David Rivera},
 type = {DUNE doc},
 number = {11215},
 year = {2018},
-note = "\url{https://docs.dunescience.org/cgi-bin/private/ShowDocument?docid=11215&asof=2019-7-15}"
+note = "\url{http://docs.dunescience.org/cgi-bin/ShowDocument?docid=11215&asof=2019-11-1}"
 }
 
 
@@ -19404,7 +19562,16 @@ author = {Guanqun Ge and Yeon-jae Jwa and Georgia Karagiorgi},
 type = {DUNE doc},
 number = {11311},
 year = {2018},
-note = "\url{https://docs.dunescience.org/cgi-bin/private/ShowDocument?docid=11311&asof=2019-7-15}"
+note = "\url{https://docs.dunescience.org/cgi-bin/private/ShowDocument?docid=11311&asof=2019-11-1}"
+}
+
+@techreport{bib:docdb1881,
+title = "{ProtoDUNE RCE-Based TPC Readout}",
+author = {Giles Barr and Matthew Graham and Ryan Herbst and Larry Ruckman},
+type = {DUNE doc},
+number = {1881},
+year = {2018},
+note = "\url{https://docs.dunescience.org/cgi-bin/private/ShowDocument?docid=1881&asof=2019-7-23}"
 }
 
 
@@ -19414,9 +19581,18 @@ author = {Joshua Klein},
 type = {DUNE doc},
 number = {14062},
 year = {2018},
-note = "\url{https://docs.dunescience.org/cgi-bin/private/ShowDocument?docid=14062&asof=2019-7-15}"
+note = "\url{https://docs.dunescience.org/cgi-bin/private/ShowDocument?docid=14062&asof=2019-11-1}"
 }
 
+
+@techreport{bib:docdb14522,
+title = "{DUNE Supernovae Triggering}",
+author = {Pierre Lasorak},
+type = {DUNE doc},
+number = {14522},
+year = {2019},
+note = "\url{https://docs.dunescience.org/cgi-bin/private/ShowDocument?docid=14522&asof=2019-7-23}"
+}
 
 @techreport{bib:docdb11461,
 title = "{What are the DUNE FD DAQ Bottlenecks?}",
@@ -19424,7 +19600,17 @@ author = {Brett Viren},
 type = {DUNE doc},
 number = {11461},
 year = {2018},
-note = "\url{http://docs.dunescience.org/cgi-bin/ShowDocument?docid=11461&asof=2019-7-15}"
+note = "\url{http://docs.dunescience.org/cgi-bin/ShowDocument?docid=11461&asof=2019-11-1}"
+}
+
+
+@techreport{bib:docdb14938,
+title = "{DAQ Consortium Working Group Mandates}",
+author = {Giovanna Lehmann Miotto and Alessandro Thea},
+type = {DUNE doc},
+number = {14938},
+year = {2019},
+note = "\url{https://docs.dunescience.org/cgi-bin/private/ShowDocument?docid=14938&asof=2019-11-1}"
 }
 
 @article{Bhandari:2019rat,
@@ -19451,36 +19637,40 @@ note = "\url{http://docs.dunescience.org/cgi-bin/ShowDocument?docid=11461&asof=2
 title = "{DUNE FD Risks}",
 author = {Eric James and Steve Kettell},
 type = {DUNE doc},
+institution = {DUNE},
 number = {6443},
 year = {2018},
-note = "\url{https://docs.dunescience.org/cgi-bin/private/ShowDocument?docid=6443&asof=2019-7-15}"
+note = "\url{http://docs.dunescience.org/cgi-bin/ShowDocument?docid=6443&asof=2019-11-1}"
 }
 
 @techreport{bib:docdb112,
 title = "{LBNF-DUNE Requirements except Cryostat Requirements}",
 author = {Jeffrey Dolph and Nandhini Dhanaraj},
 type = {DUNE doc},
+institution = {LBNF/DUNE},
 number = {112},
 year = {2018},
-note = "\url{https://docs.dunescience.org/cgi-bin/private/ShowDocument?docid=112&asof=2019-7-15}"
+note = "\url{http://docs.dunescience.org/cgi-bin/ShowDocument?docid=112&asof=2019-11-1}"
 }
 
 @techreport{bib:docdb3582,
 title = "{Defining Constraints of the Ross Cage Dimensional \& Weight Requirements}",
 author = {Emily Collett and Josh Willhite},
 type = {DUNE doc},
+institution = {LBNF},
 number = {3582},
 year = {2018},
-note = "\url{https://docs.dunescience.org/cgi-bin/private/ShowDocument?docid=3582&asof=2019-7-15}"
+note = "\url{http://docs.dunescience.org/cgi-bin/ShowDocument?docid=3582&asof=2019-11-1}"
 }
 
 @techreport{bib:docdb7069,
 title = "{DUNE FD Interface Document: Calibration to Joint DAQ}",
 author = {Sowjanya Gollapinni and Georgia Karagiorgi and Kendall Mahn and Dave Newbold},
+institution = {DUNE},
 type = {DUNE doc},
 number = {7069},
 year = {2018},
-note = "\url{https://docs.dunescience.org/cgi-bin/private/ShowDocument?docid=7069&asof=2019-7-15}"
+note = "\url{https://docs.dunescience.org/cgi-bin/private/ShowDocument?docid=7069&asof=2019-11-1}"
 }
 
 @techreport{bib:docdb11224,
@@ -19489,7 +19679,7 @@ author = {David G. Cussans and Joshua R Klein and Dave Newbold},
 type = {DUNE doc},
 number = {11224},
 year = {2018},
-note = "\url{https://docs.dunescience.org/cgi-bin/private/ShowDocument?docid=11224&asof=2019-7-15}"
+note = "\url{https://docs.dunescience.org/cgi-bin/private/ShowDocument?docid=11224&asof=2019-11-1}"
 }
 
 @techreport{bib:docdb11233,
@@ -19498,113 +19688,124 @@ author = {David G. Cussans and Dave Newbold},
 type = {DUNE doc},
 number = {11233},
 year = {2018},
-note = "\url{https://docs.dunescience.org/cgi-bin/private/ShowDocument?docid=11233&asof=2019-7-15}"
+note = "\url{https://docs.dunescience.org/cgi-bin/private/ShowDocument?docid=11233&asof=2019-11-1}"
 }
 
 @techreport{bib:docdb6988,
 title = "{DUNE FD Interface Document: Facility Interfaces to Joint DAQ}",
 author = {Farshid Feyzi and Eric James and Georgia Karagiorgi and Dave Newbold and Theresa Shaw},
+institution = {DUNE},
 type = {DUNE doc},
 number = {6988},
 year = {2018},
-note = "\url{https://docs.dunescience.org/cgi-bin/private/ShowDocument?docid=6988&asof=2019-7-15}"
+note = "\url{https://docs.dunescience.org/cgi-bin/private/ShowDocument?docid=6988&asof=2019-11-1}"
 }
 
 
 @techreport{bib:docdb6676,
 title = "{DUNE FD Interface Document: SP APA to Joint DAQ}",
 author = {Georgia Karagiorgi and Alberto Marchionni and Dave Newbold and Stefan Soldner-Rembold},
+institution = {DUNE},
 type = {DUNE doc},
 number = {6676},
 year = {2018},
-note = "\url{https://docs.dunescience.org/cgi-bin/private/ShowDocument?docid=6676&asof=2019-7-15}"
+note = "\url{https://docs.dunescience.org/cgi-bin/private/ShowDocument?docid=6676&asof=2019-11-1}"
 }
 
 
 @techreport{bib:docdb7021,
 title = "{DUNE FD Interface Document: Integration Facility to SP APA}",
 author = {Eric James and Steve Kettell and Alberto Marchionni and Marvin Marshak and Stefan Soldner-Rembold},
+institution = {DUNE},
 type = {DUNE doc},
 number = {7021},
 year = {2019},
-note = "\url{https://docs.dunescience.org/cgi-bin/private/ShowDocument?docid=7021&asof=2019-7-15}"
+note = "\url{https://docs.dunescience.org/cgi-bin/private/ShowDocument?docid=7021&asof=2019-11-1}"
 }
 
 
 @techreport{bib:docdb6967,
 title = "{DUNE FD Interface Document: Integration Facility to SP APA}",
 author = {Eric James and Steve Kettell and Alberto Marchionni and Marvin Marshak and Stefan Soldner-Rembold},
+institution = {DUNE},
 type = {DUNE doc},
 number = {6967},
 year = {2019},
-note = "\url{https://docs.dunescience.org/cgi-bin/private/ShowDocument?docid=6967&asof=2019-7-15}"
+note = "\url{https://docs.dunescience.org/cgi-bin/private/ShowDocument?docid=6967&asof=2019-11-1}"
 }
 
 
 @techreport{bib:docdb6994,
 title = "{DUNE FD Interface Document: Integration Facility to SP APA}",
 author = {Eric James and Steve Kettell and Alberto Marchionni and Marvin Marshak and Stefan Soldner-Rembold},
+institution = {DUNE},
 type = {DUNE doc},
 number = {6994},
 year = {2019},
-note = "\url{https://docs.dunescience.org/cgi-bin/private/ShowDocument?docid=6994&asof=2019-7-15}"
+note = "\url{https://docs.dunescience.org/cgi-bin/private/ShowDocument?docid=6994&asof=2019-11-1}"
 }
 
 
 @techreport{bib:docdb7048,
 title = "{DUNE FD Interface Document: Calibration to SP APA}",
 author = {Sowjanya Gollapinni and Kendall Mahn and Alberto Marchionni and Stefan Soldner-Rembold},
+institution = {DUNE},
 type = {DUNE doc},
 number = {7048},
 year = {2018},
-note = "\url{https://docs.dunescience.org/cgi-bin/private/ShowDocument?docid=7048&asof=2019-7-15}"
+note = "\url{https://docs.dunescience.org/cgi-bin/private/ShowDocument?docid=7048&asof=2019-11-1}"
 }
 
 
 @techreport{bib:docdb7102,
 title = "{DUNE FD Interface Document: Software and Computing to SP APA}",
 author = {Alberto Marchionni and Andrew Norman and Heidi Schellman and Stefan Soldner-Rembold},
+institution = {DUNE},
 type = {DUNE doc},
 number = {7102},
 year = {2018},
-note = "\url{https://docs.dunescience.org/cgi-bin/private/ShowDocument?docid=7102&asof=2019-7-15}"
+note = "\url{https://docs.dunescience.org/cgi-bin/private/ShowDocument?docid=7102&asof=2019-11-1}"
 }
 
 @techreport{bib:docdb7075,
 title = "{DUNE FD Interface Document: DUNE Physics to SP APA}",
 author = {Alberto Marchionni and Ryan Patterson and Stefan Soldner-Rembold and Elizabeth Worcester},
+institution = {DUNE},
 type = {DUNE doc},
 number = {7075},
 year = {2018},
-note = "\url{https://docs.dunescience.org/cgi-bin/private/ShowDocument?docid=7075&asof=2019-7-15}"
+note = "\url{https://docs.dunescience.org/cgi-bin/private/ShowDocument?docid=7075&asof=2019-11-1}"
 }
 
 
 @techreport{bib:docdb11275,
 title = "{DUNE-SP Data Selection Summary}",
 author = {Alexander Booth and Georgia Karagiorgi and Joshua R Klein and Pierre JJ Lasorak and David Last and David Rivera and Philip Rodrigues and Brett Viren},
+institution = {DUNE},
 type = {DUNE doc},
 number = {11275},
 year = {2018},
-note = "\url{https://docs.dunescience.org/cgi-bin/private/ShowDocument?docid=11275&asof=2019-7-15}"
+note = "\url{https://docs.dunescience.org/cgi-bin/private/ShowDocument?docid=11275&asof=2019-11-1}"
 }
 
 @techreport{bib:docdb11236,
 title = "{Single phase TPC trigger primitive algorithms for TDR}",
 author = {Philip Rodrigues},
+institution = {DUNE},
 type = {DUNE doc},
 number = {11236},
 year = {2018},
-note = "\url{https://docs.dunescience.org/cgi-bin/private/ShowDocument?docid=11236&asof=2019-7-15}"
+note = "\url{https://docs.dunescience.org/cgi-bin/private/ShowDocument?docid=11236&asof=2019-11-1}"
 }
 
 @techreport{bib:docdb6260,
 title = "{DUNE Installation Integration}",
 author = {Victor Guarino},
+institution = {DUNE},
 type = {DUNE doc},
 number = {6260},
 year = {2019},
-note = "\url{https://docs.dunescience.org/cgi-bin/private/ShowDocument?docid=6260&asof=2019-7-15}"
+note = "\url{https://docs.dunescience.org/cgi-bin/private/ShowDocument?docid=6260&asof=2019-11-1}"
 }
 
 @article{bib:mooney2019a,
@@ -19645,10 +19846,11 @@ note = "\url{https://docs.dunescience.org/cgi-bin/private/ShowDocument?docid=626
 @techreport{bib:docdb14095,
 title = "{ProtoDUNE DAQ Schedule 2019}",
 author = {Giovanna Lehmann-Miotto},
+institution = {DUNE},
 type = {DUNE doc},
 number = {14095},
 year = {2019},
-note = "\url{https://docs.dunescience.org/cgi-bin/private/ShowDocument?docid=14095&asof=2019-7-15}"
+note = "\url{https://docs.dunescience.org/cgi-bin/private/ShowDocument?docid=14095&asof=2019-11-1}"
 }
 
 @article{Larrea:2015wra,
@@ -19668,13 +19870,1086 @@ note = "\url{https://docs.dunescience.org/cgi-bin/private/ShowDocument?docid=140
       SLACcitation   = "%%CITATION = JINST,10,C02019;%%"
 }
 
-@unpublished{JenaNUINT2018,
-author = {D. Jena},
-title =  "{MINERvA adventures in flux determination}",
-year = {2018},
-note = "\url{https://indico.cern.ch/event/703880/contributions/3159052/attachments/1735968/2817449/NuInt2018_DeepikaJena_Flux.pdf}",
+
+@InProceedings{JenaNUINT2018,
+  author = 	 {D. Jena},
+  title = 	 "{MINERvA adventures in flux determination}",
+  booktitle = {NuInt 2018},
+  year = 	 {2018},
+  month = 	 {Oct.},
+  organization = {Fermilab},
+  note = 	  "\url{https://indico.cern.ch/event/703880/contributions/3159052/attachments/1735968/2817449/NuInt2018_DeepikaJena_Flux.pdf}",
 }
- 
+
+@article{DeRomeri:2019kic,
+      author         = "De Romeri, Valentina and Kelly, Kevin J. and Machado,
+                        Pedro A. N.",
+      title          = "{Hunting On- and Off-Axis for Light Dark Matter with
+                        DUNE-PRISM}",
+      year           = "2019",
+      eprint         = "1903.10505",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ph",
+      reportNumber   = "FERMILAB-PUB-19-116-T",
+      SLACcitation   = "%%CITATION = ARXIV:1903.10505;%%"
+}
+
+%EDMS
+
+% EDMS-2095958
+
+@techreport{bib:cernedms2095975,
+          title = "{LBNF/DUNE Far Site Detector Grounding System Requirements}",
+          author = {Shaw, Theresa Marie},
+          type =   {CERN EDMS},
+          institution =   {LBNF/DUNE},
+          number = {2095975},
+          year =   {2019},
+          note = "\url{https://edms.cern.ch/document/2095975}"
+}
+
+@techreport{bib:cernedms2093229,
+          title = "{LBNF 90\% Far Site BSI Drawings and Specifications}",
+          author = {Fowler Jr., Jack},
+          type =   {CERN EDMS},
+          institution =   {LBNF},
+          number = {2093229},
+          year =   {2019},
+          note = "\url{https://edms.cern.ch/document/2093229}"
+}
+
+@techreport{bib:cernedms2095958,
+          title = "{Cable Grounding and Shielding Guidelines}",
+          author = {Shaw, Theresa Marie},
+          type =   {CERN EDMS},
+          institution =   {DUNE},
+          number = {2095958},
+          year =   {2019},
+          note = "\url{https://edms.cern.ch/document/2095958}"
+}
+
+@article{Kelly:2019itm,
+      author         = "Kelly, Kevin James and Machado, Pedro AN and Martinez
+                        Soler, Ivan and Parke, Stephen J and Perez Gonzalez, Yuber
+                        F",
+      title          = "{Sub-GeV Atmospheric Neutrinos and CP-Violation in DUNE}",
+      year           = "2019",
+      eprint         = "1904.02751",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ph",
+      reportNumber   = "FERMILAB-PUB-19-136-T, NUHEP-TH/19-03",
+      SLACcitation   = "%%CITATION = ARXIV:1904.02751;%%"
+}
+
+@inproceedings{Vladisavljevic:2018prd,
+author = "Vladisavljevic, Tomislav",
+title = "{Constraining the T2K Neutrino Flux Prediction with 2009
+NA61/SHINE Replica-Target Data}",
+booktitle = "{Proceedings, Prospects in Neutrino Physics (NuPhys2017):
+London, UK, December 20-22, 2017}",
+year = "2018",
+pages = "189-193",
+doi = "10.5281/zenodo.1300546",
+eprint = "1804.00272",
+archivePrefix = "arXiv",
+primaryClass = "physics.ins-det",
+SLACcitation = "%%CITATION = ARXIV:1804.00272;%%"
+}
+
+@techreport{Aduszkiewicz:2222876,
+author = "Aduszkiewicz, A",
+title = "{Report from the NA61/SHINE experiment at the CERN SPS}",
+institution = "CERN",
+collaboration = "NA61/SHINE",
+address = "Geneva",
+number = "CERN-SPSC-2016-038. SPSC-SR-197",
+month = "Oct",
+year = "2016",
+reportNumber = "CERN-SPSC-2016-038",
+url = "https://cds.cern.ch/record/2222876",
+}
+
+@article{bib:docdb14323,
+      title = {{DUNE FD Interface Document: Calibration-DP-PDS}},
+      author = "Sowjanya Gollapinni and  Kendall Mahn and Jose Maneira",
+      year = "2019",
+type = {DUNE doc},
+number = {14323},
+note = "\url{https://docs.dunescience.org/cgi-bin/private/ShowDocument?docid=14323&asof=2019-11-1}"
+}
+
+@article{bib:docdb14326,
+      title = {{DUNE FD Interface Document: Calibration-DP-CRP}},
+      author = "Sowjanya Gollapinni and  Kendall Mahn and Jose Maneira",
+      year = "2019",
+type = {DUNE doc},
+number = {14326},
+note = "\url{https://docs.dunescience.org/cgi-bin/private/ShowDocument?docid=14326&asof=2019-11-1}"
+}
+
+%% ------ new citations from Mayly
+
+@article{Dwyer:2018phu,
+      author         = "Dwyer, D. A. and others",
+      title          = "{LArPix: Demonstration of low-power 3D pixelated charge
+                        readout for liquid argon time projection chambers}",
+      journal        = "JINST",
+      volume         = "13",
+      year           = "2018",
+      number         = "10",
+      pages          = "P10007",
+      doi            = "10.1088/1748-0221/13/10/P10007",
+      eprint         = "1808.02969",
+      archivePrefix  = "arXiv",
+      primaryClass   = "physics.ins-det",
+      SLACcitation   = "%%CITATION = ARXIV:1808.02969;%%"
+}
+
+@article{Asaadi:2018xfh,
+      author         = "Asaadi, J. and others",
+      title          = "{A pixelated charge readout for Liquid Argon Time
+                        Projection Chambers}",
+      booktitle      = "{Proceedings, Light Detection in Noble Elements (LIDINE
+                        2017): Menlo Park, CA, USA, September 22-24, 2017}",
+      journal        = "JINST",
+      volume         = "13",
+      year           = "2018",
+      number         = "02",
+      pages          = "C02008",
+      doi            = "10.1088/1748-0221/13/02/C02008",
+      SLACcitation   = "%%CITATION = JINST,13,C02008;%%"
+}
+
+@techreport{bib:docdb12388,
+title = "{High-Pressure Argon gas TPC Option for the DUNE Near Detector}",
+author = {Alan Bross and others},
+institution = {DUNE},
+type = {DUNE doc},
+number = {12388},
+year = {2019},
+note = "\url{https://docs.dunescience.org/cgi-bin/private/ShowDocument?docid=12388&asof=2019-11-1}"
+}
+
+@article{Emberger:2018pgr,
+      author         = "Emberger, Lorenz and Simon, Frank",
+      title          = "{A highly granular calorimeter concept for long baseline
+                        near detectors}",
+      booktitle      = "{Proceedings, 18th International Conference on
+                        Calorimetry in Particle Physics (CALOR 2018): Eugene,
+                        Oregon, USA, May 21-25, 2018}",
+      journal        = "J. Phys. Conf. Ser.",
+      volume         = "1162",
+      year           = "2019",
+      number         = "1",
+      pages          = "012033",
+      doi            = "10.1088/1742-6596/1162/1/012033",
+      eprint         = "1810.03677",
+      archivePrefix  = "arXiv",
+      primaryClass   = "physics.ins-det",
+      reportNumber   = "MPP-2018-247",
+      SLACcitation   = "%%CITATION = ARXIV:1810.03677;%%"
+}
+
+@article{Aurisano:2016jvx,
+author = "Aurisano, A. and Radovic, A. and Rocco, D. and Himmel, A.
+and Messier, M. D. and Niner, E. and Pawloski, G. and
+Psihas, F. and Sousa, A. and Vahle, P.",
+title = "{A Convolutional Neural Network Neutrino Event
+Classifier}",
+journal = "JINST",
+volume = "11",
+year = "2016",
+number = "09",
+pages = "P09001",
+doi = "10.1088/1748-0221/11/09/P09001",
+eprint = "1604.01444",
+archivePrefix = "arXiv",
+primaryClass = "hep-ex",
+reportNumber = "FERMILAB-PUB-16-082-ND",
+SLACcitation = "%%CITATION = ARXIV:1604.01444;%%"
+}
+
+@inproceedings{Gandrajula:2018ytr,
+author = "Gandrajula, Reddy Pratap and Groh, Micah",
+title = "{Systematic Uncertainties and Cross-Checks for the NOvA
+Joint $\nu_\mu$+$\nu_e$ Analysis}",
+collaboration = "NOvA",
+url = "https://doi.org/10.5281/zenodo.1292418",
+year = "2018",
+eprint = "1808.10760",
+archivePrefix = "arXiv",
+primaryClass = "hep-ex",
+SLACcitation = "%%CITATION = ARXIV:1808.10760;%%"
+}
+
+@phdthesis{Boehm:2009zz,
+      author         = "Boehm, Joshua Adam Alpern",
+      title          = "{Measurement of electron neutrino appearance with the
+                        MINOS experiment}",
+      school         = "Harvard U.",
+      year           = "2009",
+      url            = "http://lss.fnal.gov/cgi-bin/find_paper.pl?thesis-2009-17",
+      doi            = "10.2172/957077",
+      reportNumber   = "FERMILAB-THESIS-2009-17",
+      SLACcitation   = "%%CITATION = FERMILAB-THESIS-2009-17;%%"
+}
+
+@phdthesis{Sachdev:2015hpa,
+      author         = "Sachdev, Kanika",
+      title          = "{Muon Neutrino to Electron Neutrino Oscillation in
+                        NO$\nu$A}",
+      school         = "Minnesota U.",
+      year           = "2015",
+      url            = "http://lss.fnal.gov/archive/thesis/2000/fermilab-thesis-2015-20.pdf",
+      doi            = "10.2172/1221367",
+      reportNumber   = "FERMILAB-THESIS-2015-20",
+      SLACcitation   = "%%CITATION = FERMILAB-THESIS-2015-20;%%"
+}
+
+%From Alex Sousa, May 2019
+
+@article{Davoudiasl:2002fq,
+      author         = "Davoudiasl, H. and Langacker, P. and Perelstein, M.",
+      title          = "{Constraints on large extra dimensions from neutrino
+                        oscillation experiments}",
+      journal        = "Phys. Rev.",
+      volume         = "D65",
+      year           = "2002",
+      pages          = "105015",
+      doi            = "10.1103/PhysRevD.65.105015",
+      eprint         = "hep-ph/0201128",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ph",
+      reportNumber   = "LBNL-49369, UPR-0977T",
+      SLACcitation   = "%%CITATION = HEP-PH/0201128;%%"
+}
+
+@article{deGouvea:2019ozk,
+      author         = "De Gouv\^ea, Andr\'e and Kelly, Kevin J. and Stenico, G. V. and Pasquini, Pedro",
+      title          = "{Physics with Beam Tau-Neutrino Appearance at DUNE}",
+      year           = "2019",
+      eprint         = "1904.07265",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ph",
+      reportNumber   = "FERMILAB-PUB-19-146-T, NUHEP-TH/19-04",
+      SLACcitation   = "%%CITATION = ARXIV:1904.07265;%%"
+}
+
+@article{deNiverville:2018dbu,
+      author         = "deNiverville, Patrick and Frugiuele, Claudia",
+      title          = "{Hunting sub-GeV dark matter with the NO$\nu$A near
+                        detector}",
+      journal        = "Phys. Rev.",
+      volume         = "D99",
+      year           = "2019",
+      number         = "5",
+      pages          = "051701",
+      doi            = "10.1103/PhysRevD.99.051701",
+      eprint         = "1807.06501",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ph",
+      SLACcitation   = "%%CITATION = ARXIV:1807.06501;%%"
+}
+
+@article{Aguilar-Arevalo:2018wea,
+      author         = "Aguilar-Arevalo, A. A. and others",
+      title          = "{Dark Matter Search in Nucleon, Pion, and Electron
+                        Channels from a Proton Beam Dump with MiniBooNE}",
+      collaboration  = "MiniBooNE DM",
+      journal        = "Phys. Rev.",
+      volume         = "D98",
+      year           = "2018",
+      number         = "11",
+      pages          = "112004",
+      doi            = "10.1103/PhysRevD.98.112004",
+      eprint         = "1807.06137",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ex",
+      reportNumber   = "LA-UR-18-26421, FERMILAB-PUB-18-334-ND",
+      SLACcitation   = "%%CITATION = ARXIV:1807.06137;%%"
+}
+
+
+@article{Davier:1989wz,
+      author         = "Davier, M. and Nguyen Ngoc, H.",
+      title          = "{An Unambiguous Search for a Light Higgs Boson}",
+      journal        = "Phys. Lett.",
+      volume         = "B229",
+      year           = "1989",
+      pages          = "150-155",
+      doi            = "10.1016/0370-2693(89)90174-3",
+      reportNumber   = "LAL 89-24",
+      SLACcitation   = "%%CITATION = PHLTA,B229,150;%%"
+}
+@article{Bross:1989mp,
+      author         = "Bross, A. and Crisler, M. and Pordes, Stephen H. and
+                        Volk, J. and Errede, S. and Wrbanek, J.",
+      title          = "{A Search for Shortlived Particles Produced in an
+                        Electron Beam Dump}",
+      journal        = "Phys. Rev. Lett.",
+      volume         = "67",
+      year           = "1991",
+      pages          = "2942-2945",
+      doi            = "10.1103/PhysRevLett.67.2942",
+      reportNumber   = "FERMILAB-PUB-89-138-E",
+      SLACcitation   = "%%CITATION = PRLTA,67,2942;%%"
+}
+@article{Bjorken:1988as,
+      author         = "Bjorken, J. D. and Ecklund, S. and Nelson, W. R. and
+                        Abashian, A. and Church, C. and Lu, B. and Mo, L. W. and
+                        Nunamaker, T. A. and Rassmann, P.",
+      title          = "{Search for Neutral Metastable Penetrating Particles
+                        Produced in the SLAC Beam Dump}",
+      journal        = "Phys. Rev.",
+      volume         = "D38",
+      year           = "1988",
+      pages          = "3375",
+      doi            = "10.1103/PhysRevD.38.3375",
+      reportNumber   = "FERMILAB-PUB-88-044, PRINT-88-0352 (FERMILAB)",
+      SLACcitation   = "%%CITATION = PHRVA,D38,3375;%%"
+}
+@article{Riordan:1987aw,
+      author         = "Riordan, E. M. and others",
+      title          = "{A Search for Short Lived Axions in an Electron Beam Dump
+                        Experiment}",
+      journal        = "Phys. Rev. Lett.",
+      volume         = "59",
+      year           = "1987",
+      pages          = "755",
+      doi            = "10.1103/PhysRevLett.59.755",
+      reportNumber   = "SLAC-PUB-4280, UR-993, FERMILAB-PUB-87-251",
+      SLACcitation   = "%%CITATION = PRLTA,59,755;%%"
+}
+
+@article{Lees:2017lec,
+      author         = "Lees, J. P. and others",
+      title          = "{Search for Invisible Decays of a Dark Photon Produced in
+                        ${e}^{+}{e}^{-}$ Collisions at BaBar}",
+      collaboration  = "BaBar",
+      journal        = "Phys. Rev. Lett.",
+      volume         = "119",
+      year           = "2017",
+      number         = "13",
+      pages          = "131804",
+      doi            = "10.1103/PhysRevLett.119.131804",
+      eprint         = "1702.03327",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ex",
+      reportNumber   = "BABAR-PUB-17-001, SLAC-PUB-16923",
+      SLACcitation   = "%%CITATION = ARXIV:1702.03327;%%"
+}
+
+@article{Aartsen:2019tjl,
+      author         = "Aartsen, M. G. and others",
+      title          = "{Measurement of Atmospheric Tau Neutrino Appearance with
+                        IceCube DeepCore}",
+      collaboration  = "IceCube",
+      journal        = "Phys. Rev.",
+      volume         = "D99",
+      year           = "2019",
+      number         = "3",
+      pages          = "032007",
+      doi            = "10.1103/PhysRevD.99.032007",
+      eprint         = "1901.05366",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ex",
+      SLACcitation   = "%%CITATION = ARXIV:1901.05366;%%"
+}
+
+@article{Fechner:2009aa,
+      author         = "Fechner, M. and others",
+      title          = "{Kinematic reconstruction of atmospheric neutrino events
+                        in a large water Cherenkov detector with proton
+                        identification}",
+      collaboration  = "Super-Kamiokande",
+      journal        = "Phys. Rev.",
+      volume         = "D79",
+      year           = "2009",
+      pages          = "112010",
+      doi            = "10.1103/PhysRevD.79.112010",
+      eprint         = "0901.1645",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ex",
+      SLACcitation   = "%%CITATION = ARXIV:0901.1645;%%"
+}
+
+@article{Amole:2019fdf,
+      author         = "Amole, C. and others",
+      title          = "{Dark Matter Search Results from the Complete Exposure of
+                        the PICO-60 C$_3$F$_8$ Bubble Chamber}",
+      collaboration  = "PICO",
+      year           = "2019",
+      eprint         = "1902.04031",
+      archivePrefix  = "arXiv",
+      primaryClass   = "astro-ph.CO",
+      reportNumber   = "FERMILAB-PUB-19-073-AE-E",
+      SLACcitation   = "%%CITATION = ARXIV:1902.04031;%%"
+}
+
+@article{Xia:2018qgs,
+      author         = "Xia, Jingkai and others",
+      title          = "{PandaX-II Constraints on Spin-Dependent WIMP-Nucleon
+                        Effective Interactions}",
+      collaboration  = "PandaX-II",
+      journal        = "Phys. Lett.",
+      volume         = "B792",
+      year           = "2019",
+      pages          = "193-198",
+      doi            = "10.1016/j.physletb.2019.02.043",
+      eprint         = "1807.01936",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ex",
+      SLACcitation   = "%%CITATION = ARXIV:1807.01936;%%"
+}
+
+@article{Adamson:2017uda,
+      author         = "Adamson, P. and others",
+      title          = "{Search for sterile neutrinos in MINOS and MINOS+ using a
+                        two-detector fit}",
+      collaboration  = "MINOS+",
+      journal        = "Phys. Rev. Lett.",
+      volume         = "122",
+      year           = "2019",
+      number         = "9",
+      pages          = "091803",
+      doi            = "10.1103/PhysRevLett.122.091803",
+      eprint         = "1710.06488",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ex",
+      reportNumber   = "FERMILAB-PUB-17-430-ND",
+      SLACcitation   = "%%CITATION = ARXIV:1710.06488;%%"
+}
+
+@article{Altmannshofer:2019zhy,
+      author         = "Altmannshofer, Wolfgang and Gori, Stefania and
+                        Mart\'in-Albo, Justo and Sousa, Alexandre and Wallbank,
+                        Michael",
+      title          = "{Neutrino tridents at DUNE}",
+      year           = "2019",
+      eprint         = "1902.06765",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ph",
+      SLACcitation   = "%%CITATION = ARXIV:1902.06765;%%"
+}
+
+
+@InBook{CAFAna,
+  editor = 	 "{NOvA Collaboration}",
+  title = 	 "{NOvA-ART}",
+  chapter = 	 "{CAFAna overview}",
+  publisher = 	 {Redmine},
+  year = 	 {2019},
+  note = "\url{https://cdcvs.fnal.gov/redmine/projects/novaart/wiki/CAFAna_overview}"
+}
+
+@article{Radovic:2018dip,
+      author         = "Radovic, Alexander and Williams, Mike and Rousseau, David
+                        and Kagan, Michael and Bonacorsi, Daniele and Himmel,
+                        Alexander and Aurisano, Adam and Terao, Kazuhiro and
+                        Wongjirad, Taritree",
+      title          = "{Machine learning at the energy and intensity frontiers
+                        of particle physics}",
+      journal        = "Nature",
+      volume         = "560",
+      year           = "2018",
+      number         = "7716",
+      pages          = "41-48",
+      doi            = "10.1038/s41586-018-0361-2",
+      reportNumber   = "FERMILAB-PUB-18-436-ND",
+      SLACcitation   = "%%CITATION = NATUA,560,41;%%"
+}
+
+@techreport{bib:docdb14068,
+    author         = "Conley, E.",
+    title          = "{Fitting supernova neutrino spectral parameters with the Deep
+Underground Neutrino Experiment}",
+institution = {DUNE},
+type = {DUNE doc},
+number = {14068},
+year = {2019},
+note = "\url{https://docs.dunescience.org/cgi-bin/private/ShowDocument?docid=14068&asof=2019-11-1}"
+}
+
+@techreport{bib:docdb1300,
+title = "{Layer Distortion Summary 6m Frame}",
+author = {Lee Greenler},
+institution = {DUNE},
+type = {DUNE doc},
+number = {1300},
+year = {2017},
+note = "\url{https://docs.dunescience.org/cgi-bin/private/ShowDocument?docid=1300&asof=2019-11-1}"
+}
+
+@article{Altarelli:2013aqa,
+      author         = "Altarelli, Guido and Meloni, Davide",
+      title          = "{A non supersymmetric SO(10) grand unified model for all
+                        the physics below $M_{GUT}$}",
+      journal        = "JHEP",
+      volume         = "08",
+      year           = "2013",
+      pages          = "021",
+      doi            = "10.1007/JHEP08(2013)021",
+      eprint         = "1305.1001",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ph",
+      reportNumber   = "RM3-TH-13-05, CERN-PH-TH-2013-90, CERN-PH-TH-2013-090",
+      SLACcitation   = "%%CITATION = ARXIV:1305.1001;%%"
+}
+
+@article{Nussinov:2001rb,
+      author         = "Nussinov, Shmuel and Shrock, Robert",
+      title          = "{N - anti-N oscillations in models with large extra
+                        dimensions}",
+      journal        = "Phys. Rev. Lett.",
+      volume         = "88",
+      year           = "2002",
+      pages          = "171601",
+      doi            = "10.1103/PhysRevLett.88.171601",
+      eprint         = "hep-ph/0112337",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ph",
+      SLACcitation   = "%%CITATION = HEP-PH/0112337;%%"
+}
+
+            
+@techreport{bib:cernedms2100877,
+          title = "{Structural analysis plans and results}",
+          author = {Farshid Feyzi and Daniel Wenman},
+          type =   {CERN EDMS},
+          number = {2100877},
+          year =   {2019},
+          note = "\url{https://edms.cern.ch/document/2100877}"
+}
+
+            
+@techreport{bib:cernedms2173197,
+          title = "{\dword{jpo} Review Office}",
+          author = {Steve Kettell and Sam Zeller},
+          institution = {DUNE},
+          type =   {CERN EDMS},
+          number = {2173197},
+          year =   {2019},
+          note = "\url{https://edms.cern.ch/document/2173197}"
+}
+
+@techreport{bib:cernedms2156770,
+          title = "{Support of LBNF Far Site
+Conventional Facilities 100\% Fire and Life Safety Report}",
+          author = {Fowler Jr., Jack},
+          type =   {CERN EDMS},
+          institution =   {LBNF},
+          number = {2156770},
+          year =   {2018},
+          note = "\url{https://edms.cern.ch/document/2156770}"
+}
+
+@article{Jones:2013bca,
+      author         = "Jones, B. J. P. and Chiu, C. S. and Conrad, J. M. and
+                        Ignarra, C. M. and Katori, T. and Toups, M.",
+      title          = "{A Measurement of the Absorption of Liquid Argon
+                        Scintillation Light by Dissolved Nitrogen at the
+                        Part-Per-Million Level}",
+      journal        = "JINST",
+      volume         = "8",
+      year           = "2013",
+      pages          = "P07011",
+      doi            = "10.1088/1748-0221/8/07/P07011,
+                        10.1088/1748-0221/8/09/E09001",
+      note           = "[Erratum: JINST8,E09001(2013)]",
+      eprint         = "1306.4605",
+      archivePrefix  = "arXiv",
+      primaryClass   = "physics.ins-det",
+      reportNumber   = "FERMILAB-PUB-13-213-E",
+      SLACcitation   = "%%CITATION = ARXIV:1306.4605;%%"
+}
+
+@article{Megino:2017ywl,
+      author         = "Barreiro Megino, F. H. and De, K. and Klimentov, A. and
+                        Maeno, T. and Nilsson, P. and Oleynik, D. and Padolski, S.
+                        and Panitkin, S. and Wenaus, T.",
+      title          = "{PanDA for ATLAS distributed computing in the next
+                        decade}",
+      booktitle      = "{Proceedings, 22nd International Conference on Computing
+                        in High Energy and Nuclear Physics (CHEP2016): San
+                        Francisco, CA, October 14-16, 2016}",
+      collaboration  = "ATLAS",
+      journal        = "J. Phys. Conf. Ser.",
+      volume         = "898",
+      year           = "2017",
+      number         = "5",
+      pages          = "052002",
+      doi            = "10.1088/1742-6596/898/5/052002",
+      reportNumber   = "ATL-SOFT-PROC-2017-016",
+      SLACcitation   = "%%CITATION = 00462,898,052002;%%"
+}
+
+@article{Ereditato:2014tya,
+      author         = "Ereditato, A. and Goeldi, D. and Janos, S. and Kreslo, I.
+                        and Luethi, M. and Rudolf von Rohr, C. and Schenk, M. and
+                        Strauss, T. and Weber, M. S. and Zeller, M.",
+      title          = "{Measurement of the drift field in the ARGONTUBE LAr TPC
+                        with 266 nm pulsed laser beams}",
+      journal        = "JINST",
+      volume         = "9",
+      year           = "2014",
+      number         = "11",
+      pages          = "P11010",
+      doi            = "10.1088/1748-0221/9/11/P11010",
+      eprint         = "1408.6635",
+      archivePrefix  = "arXiv",
+      primaryClass   = "physics.ins-det",
+      SLACcitation   = "%%CITATION = ARXIV:1408.6635;%%"
+}
+
+@article{Rein:2006di,
+      author         = "Rein, D. and Sehgal, L. M.",
+      title          = "{PCAC and the Deficit of Forward Muons in pi+ Production
+                        by Neutrinos}",
+      journal        = "Phys. Lett.",
+      volume         = "B657",
+      year           = "2007",
+      pages          = "207-209",
+      doi            = "10.1016/j.physletb.2007.10.025",
+      eprint         = "hep-ph/0606185",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ph",
+      SLACcitation   = "%%CITATION = HEP-PH/0606185;%%"
+}
+
+@article{Hill:2010yb,
+      author         = "Hill, Richard J. and Paz, Gil",
+      title          = "{Model independent extraction of the proton charge radius
+                        from electron scattering}",
+      journal        = "Phys. Rev.",
+      volume         = "D82",
+      year           = "2010",
+      pages          = "113005",
+      doi            = "10.1103/PhysRevD.82.113005",
+      eprint         = "1008.4619",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ph",
+      reportNumber   = "EFI-PREPRINT-10-21",
+      SLACcitation   = "%%CITATION = ARXIV:1008.4619;%%"
+}
+
+@article{Vissani:2014doa,
+      author         = "Vissani, Francesco",
+      title          = "{Comparative analysis of SN1987A antineutrino fluence}",
+      journal        = "J. Phys.",
+      volume         = "G42",
+      year           = "2015",
+      pages          = "013001",
+      doi            = "10.1088/0954-3899/42/1/013001",
+      eprint         = "1409.4710",
+      archivePrefix  = "arXiv",
+      primaryClass   = "astro-ph.HE",
+      SLACcitation   = "%%CITATION = ARXIV:1409.4710;%%"
+}
+
+@article{Horiuchi:2017sku,
+      author         = "Horiuchi, Shunsaku and Kneller, James P",
+      title          = "{What can be learned from a future supernova neutrino
+                        detection?}",
+      journal        = "J. Phys.",
+      volume         = "G45",
+      year           = "2018",
+      number         = "4",
+      pages          = "043002",
+      doi            = "10.1088/1361-6471/aaa90a",
+      eprint         = "1709.01515",
+      archivePrefix  = "arXiv",
+      primaryClass   = "astro-ph.HE",
+      SLACcitation   = "%%CITATION = ARXIV:1709.01515;%%"
+}
+
+@inproceedings{Ankowski:2016lab,
+      author         = "Ankowski, Artur and others",
+      title          = "{Supernova Physics at DUNE}",
+      booktitle      = "{Supernova Physics at DUNE Blacksburg, Virginia, USA,
+                        March 11-12, 2016}",
+      year           = "2016",
+      eprint         = "1608.07853",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ex",
+      SLACcitation   = "%%CITATION = ARXIV:1608.07853;%%"
+}
+
+@article{Nakazato:2012qf,
+      author         = "Nakazato, Ken'ichiro and Sumiyoshi, Kohsuke and Suzuki,
+                        Hideyuki and Totani, Tomonori and Umeda, Hideyuki and
+                        Yamada, Shoichi",
+      title          = "{Supernova Neutrino Light Curves and Spectra for Various
+                        Progenitor Stars: From Core Collapse to Proto-neutron Star
+                        Cooling}",
+      journal        = "Astrophys. J. Suppl.",
+      volume         = "205",
+      year           = "2013",
+      pages          = "2",
+      doi            = "10.1088/0067-0049/205/1/2",
+      eprint         = "1210.6841",
+      archivePrefix  = "arXiv",
+      primaryClass   = "astro-ph.HE",
+      SLACcitation   = "%%CITATION = ARXIV:1210.6841;%%"
+}
+
+@phdthesis{huedepohldb,
+      author         = "Huedepohl, L.",
+      title          = "{Neutrinos from the Formation, Cooling and Black Hole Collapse of Neutron Stars}",
+      school         = "Technische Universitat Munchen.",
+      year           = "2014",
+      url            = "https://wwwmpa.mpa-garching.mpg.de/ccsnarchive/data/Huedepohl2014_phd_thesis/"
+
+}
+
+
+@article{Moller:2018kpn,
+      author         = "Moeller, Klaes and Suliga, Anna M. and Tamborra, Irene
+                        and Denton, Peter B.",
+      title          = "{Measuring the supernova unknowns at the next-generation
+                        neutrino telescopes through the diffuse neutrino
+                        background}",
+      journal        = "JCAP",
+      volume         = "1805",
+      year           = "2018",
+      number         = "05",
+      pages          = "066",
+      doi            = "10.1088/1475-7516/2018/05/066",
+      eprint         = "1804.03157",
+      archivePrefix  = "arXiv",
+      primaryClass   = "astro-ph.HE",
+      SLACcitation   = "%%CITATION = ARXIV:1804.03157;%%"
+}
+
+@article{Lunardini:2012ne,
+      author         = "Lunardini, Cecilia and Tamborra, Irene",
+      title          = "{Diffuse supernova neutrinos: oscillation effects,
+                        stellar cooling and progenitor mass dependence}",
+      journal        = "JCAP",
+      volume         = "1207",
+      year           = "2012",
+      pages          = "012",
+      doi            = "10.1088/1475-7516/2012/07/012",
+      eprint         = "1205.6292",
+      archivePrefix  = "arXiv",
+      primaryClass   = "astro-ph.SR",
+      reportNumber   = "MPP-2012-90",
+      SLACcitation   = "%%CITATION = ARXIV:1205.6292;%%"
+}
+
+%============================ NHL ===========================
+
+@article{Balantekin:2018ukw,
+      author         = "Balantekin, A. Baha and de Gouv\^ea, Andr\'e and Kayser,
+                        Boris",
+      title          = "{Addressing the Majorana vs. Dirac Question with Neutrino
+                        Decays}",
+      journal        = "Phys. Lett.",
+      volume         = "B789",
+      year           = "2019",
+      pages          = "488-495",
+      doi            = "10.1016/j.physletb.2018.11.068",
+      eprint         = "1808.10518",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ph",
+      reportNumber   = "FERMILAB-PUB-18-418-T, NUHEP-TH/18-09",
+      SLACcitation   = "%%CITATION = ARXIV:1808.10518;%%"
+}
+
+@article{Bernardi:1987ek,
+      author         = "Bernardi, G. and others",
+      title          = "{Further Limits on Heavy Neutrino Couplings}",
+      journal        = "Phys. Lett.",
+      volume         = "B203",
+      year           = "1988",
+      pages          = "332-334",
+      doi            = "10.1016/0370-2693(88)90563-1",
+      reportNumber   = "CERN-EP/87-234",
+      SLACcitation   = "%%CITATION = PHLTA,B203,332;%%"
+}
+
+@article{Bernardi:1985ny,
+      author         = "Bernardi, G. and others",
+      title          = "{Search for Neutrino Decay}",
+      journal        = "Phys. Lett.",
+      volume         = "166B",
+      year           = "1986",
+      pages          = "479-483",
+      doi            = "10.1016/0370-2693(86)91602-3",
+      reportNumber   = "CERN-EP/85-177",
+      SLACcitation   = "%%CITATION = PHLTA,166B,479;%%"
+}
+
+@article{Artamonov:2014urb,
+      author         = "Artamonov, A. V. and others",
+      title          = "{Search for heavy neutrinos in $K^+\to\mu^+\nu_H$
+                        decays}",
+      collaboration  = "E949",
+      journal        = "Phys. Rev.",
+      volume         = "D91",
+      year           = "2015",
+      number         = "5",
+      pages          = "052001",
+      doi            = "10.1103/PhysRevD.91.059903, 10.1103/PhysRevD.91.052001",
+      note           = "[Erratum: Phys. Rev.D91,no.5,059903(2015)]",
+      eprint         = "1411.3963",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ex",
+      reportNumber   = "FERMILAB-PUB-14-609-E",
+      SLACcitation   = "%%CITATION = ARXIV:1411.3963;%%"
+}
+
+@article{Britton:1992xv,
+      author         = "Britton, D. I. and others",
+      title          = "{Improved search for massive neutrinos in $\pi^+ \to e^+
+                        \nu$ decay}",
+      journal        = "Phys. Rev.",
+      volume         = "D46",
+      year           = "1992",
+      pages          = "R885-R887",
+      doi            = "10.1103/PhysRevD.46.R885",
+      reportNumber   = "TRI-PP-92-29",
+      SLACcitation   = "%%CITATION = PHRVA,D46,R885;%%"
+}
+
+@article{Britton:1992pg,
+      author         = "Britton, D. I. and others",
+      title          = "{Measurement of the $\pi^+ \to e^+ \nu$ branching
+                        ratio}",
+      journal        = "Phys. Rev. Lett.",
+      volume         = "68",
+      year           = "1992",
+      pages          = "3000-3003",
+      doi            = "10.1103/PhysRevLett.68.3000",
+      reportNumber   = "TRI-PP-92-15",
+      SLACcitation   = "%%CITATION = PRLTA,68,3000;%%"
+}
+
+@article{Aguilar-Arevalo:2019owf,
+      author         = "Aguilar-Arevalo, A. and others",
+      title          = "{Search for Heavy Neutrinos in $\pi \to \mu\nu$ Decay}",
+      collaboration  = "PIENU",
+      year           = "2019",
+      eprint         = "1904.03269",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ex",
+      SLACcitation   = "%%CITATION = ARXIV:1904.03269;%%"
+}
+
+@article{Aguilar-Arevalo:2017vlf,
+      author         = "Aguilar-Arevalo, A. and others",
+      title          = "{Improved search for heavy neutrinos in the decay
+                        $\pi\rightarrow e\nu$}",
+      collaboration  = "PIENU",
+      journal        = "Phys. Rev.",
+      volume         = "D97",
+      year           = "2018",
+      number         = "7",
+      pages          = "072012",
+      doi            = "10.1103/PhysRevD.97.072012",
+      eprint         = "1712.03275",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ex",
+      SLACcitation   = "%%CITATION = ARXIV:1712.03275;%%"
+}
+
+@article{Vilain:1994vg,
+      author         = "Vilain, P. and others",
+      title          = "{Search for heavy isosinglet neutrinos}",
+      collaboration  = "CHARM II",
+      journal        = "Phys. Lett.",
+      volume         = "B343",
+      year           = "1995",
+      pages          = "453-458",
+      doi            = "10.1016/0370-2693(94)00440-I,
+                        10.1016/0370-2693(94)01422-9",
+      note           = "[Phys. Lett.B351,387(1995)]",
+      reportNumber   = "CERN-PPE-94-168",
+      SLACcitation   = "%%CITATION = PHLTA,B343,453;%%"
+}
+
+
+@article{Vaitaitis:1999wq,
+      author         = "Vaitaitis, A. and others",
+      title          = "{Search for neutral heavy leptons in a high-energy
+                        neutrino beam}",
+      collaboration  = "NuTeV, E815",
+      journal        = "Phys. Rev. Lett.",
+      volume         = "83",
+      year           = "1999",
+      pages          = "4943-4946",
+      doi            = "10.1103/PhysRevLett.83.4943",
+      eprint         = "hep-ex/9908011",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ex",
+      reportNumber   = "FERMILAB-PUB-99-223-E",
+      SLACcitation   = "%%CITATION = HEP-EX/9908011;%%"
+}
+
+@article{Abreu:1996pa,
+      author         = "Abreu, P. and others",
+      title          = "{Search for neutral heavy leptons produced in Z decays}",
+      collaboration  = "DELPHI",
+      journal        = "Z. Phys.",
+      volume         = "C74",
+      year           = "1997",
+      pages          = "57-71",
+      doi            = "10.1007/s002880050370",
+      note           = "[Erratum: Z. Phys.C75,580(1997)]",
+      reportNumber   = "CERN-PPE-96-195",
+      SLACcitation   = "%%CITATION = ZEPYA,C74,57;%%"
+}
+
+
+@article{Abe:2019kgx,
+      author         = "Abe, K. and others",
+      title          = "{Search for heavy neutrinos with the T2K near detector
+                        ND280}",
+      collaboration  = "T2K",
+      year           = "2019",
+      eprint         = "1902.07598",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ex",
+      SLACcitation   = "%%CITATION = ARXIV:1902.07598;%%"
+}
+
+@article{Ballett:2016opr,
+      author         = "Ballett, Peter and Pascoli, Silvia and Ross-Lonergan,
+                        Mark",
+      title          = "{MeV-scale sterile neutrino decays at the Fermilab
+                        Short-Baseline Neutrino program}",
+      journal        = "JHEP",
+      volume         = "04",
+      year           = "2017",
+      pages          = "102",
+      doi            = "10.1007/JHEP04(2017)102",
+      eprint         = "1610.08512",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ph",
+      SLACcitation   = "%%CITATION = ARXIV:1610.08512;%%"
+}
+
+@article{Alekhin:2015byh,
+      author         = "Alekhin, Sergey and others",
+      title          = "{A facility to Search for Hidden Particles at the CERN
+                        SPS: the SHiP physics case}",
+      journal        = "Rept. Prog. Phys.",
+      volume         = "79",
+      year           = "2016",
+      number         = "12",
+      pages          = "124201",
+      doi            = "10.1088/0034-4885/79/12/124201",
+      eprint         = "1504.04855",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ph",
+      reportNumber   = "CERN-SPSC-2015-017, SPSC-P-350-ADD-1",
+      SLACcitation   = "%%CITATION = ARXIV:1504.04855;%%"
+}
+
+@article{Drewes:2018gkc,
+      author         = "Drewes, Marco and Hajer, Jan and Klaric, Juraj and
+                        Lanfranchi, Gaia",
+      title          = "{NA62 sensitivity to heavy neutral leptons in the low
+                        scale seesaw model}",
+      journal        = "JHEP",
+      volume         = "07",
+      year           = "2018",
+      pages          = "105",
+      doi            = "10.1007/JHEP07(2018)105",
+      eprint         = "1801.04207",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ph",
+      SLACcitation   = "%%CITATION = ARXIV:1801.04207;%%"
+}
+
+@article{Curtin:2018mvb,
+      author         = "Curtin, David and others",
+      title          = "{Long-Lived Particles at the Energy Frontier: The
+                        MATHUSLA Physics Case}",
+      year           = "2018",
+      eprint         = "1806.07396",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ph",
+      reportNumber   = "FERMILAB-PUB-18-264-T",
+      SLACcitation   = "%%CITATION = ARXIV:1806.07396;%%"
+}
+
+@article{Kling:2018wct,
+      author         = "Kling, Felix and Trojanowski, Sebastian",
+      title          = "{Heavy Neutral Leptons at FASER}",
+      journal        = "Phys. Rev.",
+      volume         = "D97",
+      year           = "2018",
+      number         = "9",
+      pages          = "095016",
+      doi            = "10.1103/PhysRevD.97.095016",
+      eprint         = "1801.08947",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ph",
+      reportNumber   = "UCI-TR-2017-18",
+      SLACcitation   = "%%CITATION = ARXIV:1801.08947;%%"
+}
+
+
+@article{Gariazzo:2017fdh,
+      author         = "Gariazzo, S. and Giunti, C. and Laveder, M. and Li, Y.
+                        F.",
+      title          = "{Updated Global 3+1 Analysis of Short-BaseLine Neutrino
+                        Oscillations}",
+      journal        = "JHEP",
+      volume         = "06",
+      year           = "2017",
+      pages          = "135",
+      doi            = "10.1007/JHEP06(2017)135",
+      eprint         = "1703.00860",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ph",
+      SLACcitation   = "%%CITATION = ARXIV:1703.00860;%%"
+}
+
+@article{Batley:2015lha,
+      author         = "Batley, J. R. and others",
+      title          = "{Search for the dark photon in $\pi^0$ decays}",
+      collaboration  = "NA48/2",
+      journal        = "Phys. Lett.",
+      volume         = "B746",
+      year           = "2015",
+      pages          = "178-185",
+      doi            = "10.1016/j.physletb.2015.04.068",
+      eprint         = "1504.00607",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ex",
+      reportNumber   = "CERN-PH-EP-2015-093",
+      SLACcitation   = "%%CITATION = ARXIV:1504.00607;%%"
+}
+@article{Bjorken:2009mm,
+      author         = "Bjorken, James D. and Essig, Rouven and Schuster, Philip
+                        and Toro, Natalia",
+      title          = "{New Fixed-Target Experiments to Search for Dark Gauge
+                        Forces}",
+      journal        = "Phys. Rev.",
+      volume         = "D80",
+      year           = "2009",
+      pages          = "075018",
+      doi            = "10.1103/PhysRevD.80.075018",
+      eprint         = "0906.0580",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ph",
+      reportNumber   = "SLAC-PUB-13650, SU-ITP-09-22",
+      SLACcitation   = "%%CITATION = ARXIV:0906.0580;%%"
+}
+
+@article{Ballett:2019xoj,
+      author         = "Ballett, Peter and Hostert, Matheus and Pascoli, Silvia
+                        and Perez-Gonzalez, Yuber F. and Tabrizi, Zahra",
+      title          = "{$Z^\prime$s in neutrino scattering at DUNE}",
+      year           = "2019",
+      eprint         = "1902.08579",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ph",
+      reportNumber   = "IPPP/18/89, FERMILAB-PUB-18-655-T, NUHEP-TH/18-12",
+      SLACcitation   = "%%CITATION = ARXIV:1902.08579;%%"
+}
+
 
 
 %Data Acquisition (ch-sp-daq.tex)
@@ -19695,26 +20970,535 @@ note = "\url{https://indico.cern.ch/event/703880/contributions/3159052/attachmen
 % vol-sp/ch-sp-install/logistics
 % \cite{bib:docdb13954}
 
-% ch-exec-nd.tex
-%  event of a breakdown~\cite{argoncube_fd}
-
-@article{bib:docdb11074,
-      title = {{DUNE TDR SP Requirements/Specs Excel Template}},
-      author = "Anne Heavey and Brett Viren",
-      year = "2018",
-note = "\url{https://docs.dunescience.org/cgi-bin/Private/ShowDocument?docid=11074} "
+@article{Dienes:1998sb,
+      author         = "Dienes, Keith R. and Dudas, Emilian and Gherghetta, Tony",
+      title          = "{Neutrino oscillations without neutrino masses or heavy
+                        mass scales: A Higher dimensional seesaw mechanism}",
+      journal        = "Nucl. Phys.",
+      volume         = "B557",
+      year           = "1999",
+      pages          = "25",
+      doi            = "10.1016/S0550-3213(99)00377-6",
+      eprint         = "hep-ph/9811428",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ph",
+      reportNumber   = "CERN-TH-98-370",
+      SLACcitation   = "%%CITATION = HEP-PH/9811428;%%"
 }
 
-@article{bib:docdb13244,
-      title = {{DUNE TDR DP Requirements/Specs Excel Template}},
-      author = "David DeMuth, Anne Heavey, Brett Viren",
-      year = "2019",
-note = "\url{https://docs.dunescience.org/cgi-bin/Private/ShowDocument?docid=13244} "
+@article{ArkaniHamed:1998vp,
+      author         = "Arkani-Hamed, Nima and Dimopoulos, Savas and Dvali, G. R.
+                        and March-Russell, John",
+      title          = "{Neutrino masses from large extra dimensions}",
+      booktitle      = "{SUSY 98 Conference Oxford, England, July 11-17, 1998}",
+      journal        = "Phys. Rev.",
+      volume         = "D65",
+      year           = "2001",
+      pages          = "024032",
+      doi            = "10.1103/PhysRevD.65.024032",
+      eprint         = "hep-ph/9811448",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ph",
+      reportNumber   = "SLAC-PUB-8014, SU-ITP-98-64",
+      SLACcitation   = "%%CITATION = HEP-PH/9811448;%%"
 }
 
-@article{bib:docdb14236,
-      title = {{DUNE TDR DP Risks Excel Template}},
-      author = "David DeMuth, Anne Heavey, Brett Viren",
-      year = "2019",
-note = "\url{https://docs.dunescience.org/cgi-bin/Private/ShowDocument?docid=14236} "
+
+@article{Akesson:2018vlm,
+      author         = "{\AA}kesson, Torsten and others",
+      title          = "{Light Dark Matter eXperiment (LDMX)}",
+      collaboration  = "LDMX",
+      year           = "2018",
+      eprint         = "1808.05219",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ex",
+      reportNumber   = "FERMILAB-PUB-18-324-A, SLAC-PUB-17303",
+      SLACcitation   = "%%CITATION = ARXIV:1808.05219;%%"
+}
+
+@article{Acciarri:2016ugk,
+      author         = "Acciarri, R. and others",
+      title          = "{Construction and Assembly of the Wire Planes for the
+                        MicroBooNE Time Projection Chamber}",
+      collaboration  = "MicroBooNE",
+      journal        = "JINST",
+      volume         = "12",
+      year           = "2017",
+      number         = "03",
+      pages          = "T03003",
+      doi            = "10.1088/1748-0221/12/03/T03003",
+      eprint         = "1609.06169",
+      archivePrefix  = "arXiv",
+      primaryClass   = "physics.ins-det",
+      reportNumber   = "FERMILAB-PUB-16-384-ND-PPD",
+      SLACcitation   = "%%CITATION = ARXIV:1609.06169;%%"
+}
+
+@article{Garcia-Gamez:2018frz,
+      author         = "Garcia-Gamez, Diego and Basque, Vincent and Brooks,
+                        Thomas G. and Evans, Justin J. and Perry, Michael and
+                        Soldner-Rembold, Stefan and Spagliardi, Fabio and Szelc,
+                        Andrzej M.",
+      title          = "{A Novel Electrical Method to Measure Wire Tensions for
+                        Time Projection Chambers}",
+      journal        = "Nucl. Instrum. Meth.",
+      volume         = "A915",
+      year           = "2019",
+      pages          = "75-81",
+      doi            = "10.1016/j.nima.2018.09.031",
+      eprint         = "1804.05941",
+      archivePrefix  = "arXiv",
+      primaryClass   = "physics.ins-det",
+      SLACcitation   = "%%CITATION = ARXIV:1804.05941;%%"
+}
+
+@techreport{bib:docdb7042,
+title = "{DUNE FD Interface Document: Integration Facility to Joint DAQ}",
+author = {Eric James and
+Georgia Karagiorgi and
+Marvin Marshak and
+Dave Newbold},
+type = {DUNE doc},
+number = {7042},
+year = {2018},
+note = "\url{https://docs.dunescience.org/cgi-bin/private/ShowDocument?docid=7042&asof=2019-11-1}"
+}
+
+@techreport{bib:docdb7015,
+title = "{DUNE FD Interface Document: Installation Interfaces to Joint DAQ}",
+author = {Eric James and
+Georgia Karagiorgi and
+Steve Kettell and
+Dave Newbold and
+Jim Stewart
+},
+institution = {DUNE},
+type = {DUNE doc},
+number = {7015},
+year = {2018},
+note = "\url{https://docs.dunescience.org/cgi-bin/private/ShowDocument?docid=7015&asof=2019-11-1}"
+}
+
+@article{Lukhanin:2012fp,
+      author         = "Lukhanin, Gennadiy and Biery, Kurt and Foulkes, Stephen
+                        and Frank, Martin and Hatzikoutelis, Athanasios and
+                        Kowalkowski, Jim and Paterno, Marc and Rechenmacher, Ron",
+      title          = "{Application of control system studio for the NOvA
+                        detector control system}",
+      booktitle      = "{Proceedings, 19th International Conference on Computing
+                        in High Energy and Nuclear Physics (CHEP 2012): New York,
+                        USA, May 21-25, 2012}",
+      journal        = "J. Phys. Conf. Ser.",
+      volume         = "396",
+      year           = "2012",
+      pages          = "062012",
+      doi            = "10.1088/1742-6596/396/6/062012",
+      reportNumber   = "FERMILAB-CONF-12-292-CD",
+      SLACcitation   = "%%CITATION = 00462,396,062012;%%"
+}
+
+@misc{epics,
+title="{EPICS - Experimental Physics and Industrial Control System}",
+url = {https://epics.anl.gov/index.php},
+urldate = {January 16, 2019},
+note = {Accessed: July 19, 2019}
+}
+
+@misc{epics7,
+title="{EPICS - Experimental Physics and Industrial Control System}",
+url = {https://epics-controls.org/},
+urldate = {2019},
+note = {Accessed: July 19, 2019}
+}
+
+@misc{jcop,
+title="{About JCOP}",
+url = {http://jcop.web.cern.ch/},
+urldate = {2019},
+note = {Accessed: July 19, 2019}
+}
+
+@article{An:2015jdp,
+      author         = "An, Fengpeng and others",
+      title          = "{Neutrino Physics with JUNO}",
+      collaboration  = "JUNO",
+      journal        = "J. Phys.",
+      volume         = "G43",
+      year           = "2016",
+      number         = "3",
+      pages          = "030401",
+      doi            = "10.1088/0954-3899/43/3/030401",
+      eprint         = "1507.05613",
+      archivePrefix  = "arXiv",
+      primaryClass   = "physics.ins-det",
+      SLACcitation   = "%%CITATION = ARXIV:1507.05613;%%"
+}
+
+@article{deGouvea:2002gf,
+      author         = "de Gouv\^ea, Andre and Kayser, Boris and Mohapatra,
+                        Rabindra N.",
+      title          = "{Manifest CP violation from Majorana phases}",
+      journal        = "Phys. Rev.",
+      volume         = "D67",
+      year           = "2003",
+      pages          = "053004",
+      doi            = "10.1103/PhysRevD.67.053004",
+      eprint         = "hep-ph/0211394",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ph",
+      reportNumber   = "FERMILAB-PUB-02-298-T, UMD-PP-03-027",
+      SLACcitation   = "%%CITATION = HEP-PH/0211394;%%"                                                             
+}
+
+@article{Antusch:2007rk,
+      author         = "Antusch, S. and Huber, P. and King, S. F. and Schwetz,
+                        T.",
+      title          = "{Neutrino mixing sum rules and oscillation experiments}",
+      journal        = "JHEP",
+      volume         = "04",
+      year           = "2007",
+      pages          = "060",
+      doi            = "10.1088/1126-6708/2007/04/060",
+      eprint         = "hep-ph/0702286",
+      archivePrefix  = "arXiv",
+      primaryClass   = "HEP-PH",
+      reportNumber   = "CERN-PH-TH-2007-036, FTU-AM-07-03, IFT-UAM-CSIC-07-08,
+                        SHEP-07-05",
+      SLACcitation   = "%%CITATION = HEP-PH/0702286;%%"                                                             
+}
+
+@article{Ballett:2013wya,
+      author         = "Ballett, Peter and King, Stephen F. and Luhn, Christoph
+                        and Pascoli, Silvia and Schmidt, Michael A.",
+      title          = "{Testing atmospheric mixing sum rules at precision
+                        neutrino facilities}",
+      journal        = "Phys. Rev.",
+      volume         = "D89",
+      year           = "2014",
+      number         = "1",
+      pages          = "016016",
+      doi            = "10.1103/PhysRevD.89.016016",
+      eprint         = "1308.4314",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ph",
+      reportNumber   = "IPPP-13-64, DCPT-13-128",
+      SLACcitation   = "%%CITATION = ARXIV:1308.4314;%%"   
+}
+
+
+@techreport{bib:docdb6841,
+title = "{DUNE FD Interface Document: Facility to DUNE Software and Computing}",
+author = {Farshid Feyzi and Eric James and Andrew Norman and Heidi Schellman and Theresa Shaw},
+institution = {DUNE},
+type = {DUNE doc},
+number = {6841},
+year = {2019},
+note = "\url{https://docs.dunescience.org/cgi-bin/private/ShowDocument?docid=6841&asof=2019-11-1}"
+}
+
+@techreport{bib:docdb6847,
+title = "{DUNE FD Interface Document: Installation to Calibration Task Force}",
+author = {Sowjanya Gollapinni and Eric James and Kendall Mahn and Jim Stewart},
+institution = {DUNE},
+type = {DUNE doc},
+number = {6847},
+year = {2019},
+note = "\url{https://docs.dunescience.org/cgi-bin/private/ShowDocument?docid=6847&asof=2019-11-1}"
+}
+
+@techreport{bib:docdb6853,
+title = "{DUNE FD Interface Document: Installation to DUNE Software and Computing}",
+author = {Eric James and Andrew Norman and Heidi Schellman and Jim Stewart},
+institution = {DUNE},
+type = {DUNE doc},
+number = {6853},
+year = {2019},
+note = "\url{https://docs.dunescience.org/cgi-bin/private/ShowDocument?docid=6853&asof=2019-11-1}"
+}
+
+@techreport{bib:docdb7012,
+title = "{DUNE FD Interface Document: Installation Interfaces to Joint HV}",
+author = {Eric James and Steve Kettell and Francesco Pietropaolo and Jim Stewart and Bo Yu},
+institution = {DUNE},
+type = {DUNE doc},
+number = {7012},
+year = {2019},
+note = "\url{https://docs.dunescience.org/cgi-bin/private/ShowDocument?docid=7012&asof=2019-11-1}"
+}
+
+@techreport{bib:docdb7096,
+title = "{DUNE FD Interface Document: DUNE Physics to Joint DAQ}",
+author = {Georgia Karagiorgi and Dave Newbold and Ryan Patterson and Elizabeth Worcester},
+institution = {DUNE},
+type = {DUNE doc},
+number = {7096},
+year = {2019},
+note = "\url{https://docs.dunescience.org/cgi-bin/private/ShowDocument?docid=7096&asof=2019-11-1}"
+}
+
+@techreport{bib:docdb6865,
+title = "{DUNE FD Interface Document: Calibration Task Force to DUNE Physics}",
+author = {Sowjanya Gollapinni and Kendall Mahn and Ryan Patterson and Elizabeth Worcester},
+institution = {DUNE},
+type = {DUNE doc},
+number = {6865},
+year = {2019},
+note = "\url{https://docs.dunescience.org/cgi-bin/private/ShowDocument?docid=6865&asof=2019-11-1}"
+}
+
+@techreport{bib:docdb6871,
+title = "{DUNE FD Interface Document: Calibration Task Force to DUNE Physics}",
+author = {Sowjanya Gollapinni and Kendall Mahn and Ryan Patterson and Elizabeth Worcester},
+institution = {DUNE},
+type = {DUNE doc},
+number = {6871},
+year = {2019},
+note = "\url{http://docs.dunescience.org/cgi-bin/ShowDocument?docid=6871&asof=2019-11-1}"
+}
+
+@techreport{bib:docdb6736,
+title = "{DUNE FD Interface Document: High Voltage to DAQ}",
+author = {Georgia Karagiorgi and Dave Newbold and Francesco Pietropaolo and Bo Yu},
+institution = {DUNE},
+type = {DUNE doc},
+number = {6736},
+year = {2019},
+note = "\url{https://docs.dunescience.org/cgi-bin/private/ShowDocument?docid=6736&asof=2019-11-1}"
+}
+
+@techreport{bib:docdb7120,
+title = "{DUNE FD Interface Document: Software and Computing to Joint HV}",
+author = {Andrew Norman and Francesco Pietropaolo and Heidi Schellman and Bo Yu},
+institution = {DUNE},
+type = {DUNE doc},
+number = {7120},
+year = {2019},
+note = "\url{https://docs.dunescience.org/cgi-bin/private/ShowDocument?docid=7120&asof=2019-11-1}"
+}
+
+@techreport{bib:docdb6868,
+title = "{DUNE FD Interface Document: Calibration Task Force to DUNE Software and Computing}",
+author = {Sowjanya Gollapinni and
+Kendall Mahn and
+Andrew Norman and
+Heidi Schellman},
+institution = {DUNE},
+type = {DUNE doc},
+number = {6868},
+year = {2019},
+note = "\url{https://docs.dunescience.org/cgi-bin/private/ShowDocument?docid=6868&asof=2019-11-1}"
+}
+
+@techreport{bib:docdb6829,
+title = "{DUNE FD Interface Document: Facility to Calibration Task Force}",
+author = {Farshid Feyzi and Sowjanya Gollapinni and Eric James and Kendall Mahn and Theresa Shaw},
+institution = {DUNE},
+type = {DUNE doc},
+number = {6829},
+year = {2019},
+note = "\url{https://docs.dunescience.org/cgi-bin/private/ShowDocument?docid=6829&asof=2019-11-1}"
+}
+
+
+@article{Calviani:2014cxa,
+      author         = "Calviani, M. and Di Luise, S. and Galymov, V. and Velten,
+                        P.",
+      title          = "{Optimization of neutrino fluxes for future long baseline
+                        neutrino oscillation experiments}",
+      booktitle      = "{Proceedings, 37th International Conference on High
+                        Energy Physics (ICHEP 2014): Valencia, Spain, July 2-9,
+                        2014}",
+      journal        = "Nucl. Part. Phys. Proc.",
+      volume         = "273-275",
+      year           = "2016",
+      pages          = "2681-2683",
+      doi            = "10.1016/j.nuclphysbps.2015.10.029",
+      eprint         = "1411.2418",
+      archivePrefix  = "arXiv",
+      primaryClass   = "physics.ins-det",
+      SLACcitation   = "%%CITATION = ARXIV:1411.2418;%%"
+}
+
+
+@article{Beacham:2019nyx,
+      author         = "Beacham, J. and others",
+      title          = "{Physics Beyond Colliders at CERN: Beyond the Standard
+                        Model Working Group Report}",
+      year           = "2019",
+      eprint         = "1901.09966",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ex",
+      reportNumber   = "CERN-PBC-REPORT-2018-007",
+      SLACcitation   = "%%CITATION = ARXIV:1901.09966;%%"
+}
+
+@article{Arguelles:2019xgp,
+      author         = "Arg{\"u}elles, C. A. and others",
+      title          = "{White Paper on New Opportunities at the Next-Generation
+                        Neutrino Experiments (Part 1: BSM Neutrino Physics and
+                        Dark Matter)}",
+      year           = "2019",
+      eprint         = "1907.08311",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ph",
+      SLACcitation   = "%%CITATION = ARXIV:1907.08311;%%"
+}
+
+@article{Pospelov:2007mp,
+      author         = "Pospelov, Maxim and Ritz, Adam and Voloshin, Mikhail B.",
+      title          = "{Secluded WIMP Dark Matter}",
+      journal        = "Phys. Lett.",
+      volume         = "B662",
+      year           = "2008",
+      pages          = "53-61",
+      doi            = "10.1016/j.physletb.2008.02.052",
+      eprint         = "0711.4866",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ph",
+      SLACcitation   = "%%CITATION = ARXIV:0711.4866;%%"
+}
+
+@article{Gariazzo:2015rra,
+      author         = "Gariazzo, S. and Giunti, C. and Laveder, M. and Li, Y. F.
+                        and Zavanin, E. M.",
+      title          = "{Light sterile neutrinos}",
+      journal        = "J. Phys.",
+      volume         = "G43",
+      year           = "2016",
+      pages          = "033001",
+      doi            = "10.1088/0954-3899/43/3/033001",
+      eprint         = "1507.08204",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ph",
+      SLACcitation   = "%%CITATION = ARXIV:1507.08204;%%"
+}
+
+@article{Brown:2018jhj,
+      author         = "Brown, D. A. and others",
+      title          = "{ENDF/B-VIII.0: The 8th Major Release of the Nuclear
+                        Reaction Data Library with CIELO-project Cross Sections,
+                        New Standards and Thermal Scattering Data}",
+      journal        = "Nucl. Data Sheets",
+      volume         = "148",
+      year           = "2018",
+      pages          = "1-142",
+      doi            = "10.1016/j.nds.2018.02.001",
+      SLACcitation   = "%%CITATION = NDTSB,148,1;%%"
+}
+
+@unpublished{Holin2017,
+author = {A. Holin},
+title =  "{NUMI beam lessons and work in progress MINOS/MINOS+}",
+year = {2017},
+note = "\url{https://indico.cern.ch/event/674901/contributions/2799260/ }",
+}
+
+@unpublished{Hylen2016,
+author = {J. Hylen},
+title =  "{NuMI Horn 1 mis-alignment}",
+year = {2016},
+note = "\url{https://indico.fnal.gov/event/13292/}",
+}
+
+@article{Franzini:2006aa,
+      author         = "Franzini, Paolo and Moulson, Matthew",
+      title          = "{The Physics of DAFNE and KLOE}",
+      journal        = "Ann. Rev. Nucl. Part. Sci.",
+      volume         = "56",
+      year           = "2006",
+      pages          = "207-251",
+      doi            = "10.1146/annurev.nucl.56.080805.140459",
+      eprint         = "hep-ex/0606033",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ex",
+      SLACcitation   = "%%CITATION = HEP-EX/0606033;%%"
+}
+
+@techreport{bib:docdb15544,
+title = "{DUNE FD SP DAQ rack layout and power consumption estimate draft}",
+author = {Giovanna Lehmann-Miotto and Alessandro Thea},
+type = {DUNE doc},
+number = {15544},
+year = {2019},
+note = "\url{https://docs.dunescience.org/cgi-bin/private/ShowDocument?docid=15544}"
+}
+
+@article{Adams:2019ssg,
+      author         = "Adams, C. and others",
+      title          = "{Calibration of the Charge and Energy Response of the
+                        MicroBooNE Liquid Argon Time Projection Chamber using
+                        Muons and Protons}",
+      collaboration  = "MicroBooNE",
+      year           = "2019",
+      eprint         = "1907.11736",
+      archivePrefix  = "arXiv",
+      primaryClass   = "physics.ins-det",
+      reportNumber   = "FERMILAB-PUB-19-357-ND",
+      SLACcitation   = "%%CITATION = ARXIV:1907.11736;%%"
+}
+
+@article{Kou:2018nap,
+      author         = "Altmannshofer, W. and others",
+      editor         = "Kou, E. and Urquijo, P.",
+      title          = "{The Belle II Physics Book}",
+      collaboration  = "Belle-II",
+      year           = "2018",
+      eprint         = "1808.10567",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ex",
+      reportNumber   = "KEK Preprint 2018-27, BELLE2-PUB-PH-2018-001,
+                        FERMILAB-PUB-18-398-T, JLAB-THY-18-2780, INT-PUB-18-047,
+                        UWThPh 2018-26",
+      SLACcitation   = "%%CITATION = ARXIV:1808.10567;%%"
+}​
+
+@unpublished{pend_PDSP_PerfPaper,
+     author    = "Abi, Babak and others",
+     collaboration = "DUNE",
+     note = "Paper in preparation, to be submitted to {\it JINST}",
+     title = "{First results on ProtoDUNE-SP LArTPC performance from a test beam run at the CERN Neutrino Platform}"
+}
+
+@article{Acero:2019ksn,
+      author         = "Acero, M. A. and others",
+      title          = "{First Measurement of Neutrino Oscillation Parameters
+                        using Neutrinos and Antineutrinos by NOvA}",
+      collaboration  = "NOvA",
+      journal        = "Phys. Rev. Lett.",
+      volume         = "123",
+      year           = "2019",
+      number         = "15",
+      pages          = "151803",
+      doi            = "10.1103/PhysRevLett.123.151803",
+      eprint         = "1906.04907",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ex",
+      reportNumber   = "FERMILAB-PUB-19-272-ND",
+      SLACcitation   = "%%CITATION = ARXIV:1906.04907;%%"
+}
+
+@article{Abe:2019vii,
+      author         = "Abe, K. and others",
+      title          = "{Constraint on the Matter-Antimatter Symmetry-Violating
+                        Phase in Neutrino Oscillations}",
+      collaboration  = "T2K",
+      year           = "2019",
+      eprint         = "1910.03887",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ex",
+      SLACcitation   = "%%CITATION = ARXIV:1910.03887;%%"
+}
+
+@article{Akaishi:2019dej,
+      author         = "Akaishi, T. and others",
+      title          = "{EMPHATIC: A Proposed Experiment to Measure Hadron
+                        Scattering and Production Cross Sections for Improved
+                        Neutrino Flux Predictions}",
+      collaboration  = "EMPHATIC",
+      year           = "2019",
+      eprint         = "1912.08841",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ex",
+      reportNumber   = "FERMILAB-PUB-19-625-ND",
+      SLACcitation   = "%%CITATION = ARXIV:1912.08841;%%"
 }

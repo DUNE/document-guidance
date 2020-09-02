@@ -1,0 +1,7 @@
+This is makeindex, version 2.15 [TeX Live 2017] (kpathsea + Thai support).
+Scanning style file ./guidance.ist.............................done (29 attributes redefined, 0 ignored).
+Scanning input file guidance.glo....done (195 entries accepted, 0 rejected).
+Sorting entries.....done (1645 comparisons).
+Generating output file guidance.gls....done (226 lines written, 0 warnings).
+Output written in guidance.gls.
+Transcript written in guidance.glg.

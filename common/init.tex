@@ -1,54 +1,61 @@
 % This should be \input first thing after \begin{document}
 
-
-\pagestyle{empty}
+\begin{comment}
+\pagestyle{titlepage}
 
 \begin{center}
-  {\Huge  \thevolumetitle}
+   {\Huge  \thedocsubtitle}  %Yes, I know title and subtitle are reversed!
 
   \vspace{5mm}
 
-  {\LARGE \thevolumesubtitle}
+  {\Huge  \tdrtitle}  
 
-   \vspace{5mm}
-   
-   Anne Heavey, Fermilab; technical editor, structure, style \\
-   Brett Viren, Brookhaven; LaTeX machinery and GitHub repository\\
-   David DeMuth, VCSU; LaTeX, images, general
-   
- \vspace{5mm}
+  \vspace{10mm}
 
+  {\LARGE
+    \textbf{Volume \thevolumenumber{}:}
+
+    \vspace{5mm}
+
+    \thedoctitle}
+
+  \vspace{15mm}
+
+\titleextra
+
+  \vspace{10mm}
   \today
-
-  \vspace{5mm}
-
-%  \titleextra
+    \vspace{15mm}
+    
+    {\large{The DUNE Collaboration}}
 \end{center}
-
-
-
+\end{comment}
 \cleardoublepage
+\vspace*{16cm} 
+  {\small  This document was prepared by the DUNE collaboration using the resources of the Fermi National Accelerator Laboratory (Fermilab), a U.S. Department of Energy, Office of Science, HEP User Facility. Fermilab is managed by Fermi Research Alliance, LLC (FRA), acting under Contract No. DE-AC02-07CH11359.
+  
+The DUNE collaboration also acknowledges the international, national, and regional funding agencies supporting the institutions who have contributed to completing this Technical Design Report.  
+  }
+%\includepdf[pages={-}]{tdr-authors.pdf}                  
 
-\pagestyle{plain} 
+
 
 \renewcommand{\familydefault}{\sfdefault}
 \renewcommand{\thepage}{\roman{page}}
-\setcounter{page}{1}
-\cleardoublepage
+\setcounter{page}{0}
 
-\setcounter{tocdepth}{3}
+\pagestyle{plain} 
+
+
 \textsf{\tableofcontents}
-\cleardoublepage
 
-%For acronym list to appear just after TOC
-%\printnomenclature
-\cleardoublepage
 
 \textsf{\listoffigures}
-\cleardoublepage
 
 \textsf{\listoftables}
-\clearpage
+  \vspace{4mm}
+  \addcontentsline{toc}{chapter}{A Roadmap of the DUNE Technical Design Report}
+
 
 \iffinal\else
 \textsf{\listoftodos}
@@ -68,11 +75,20 @@
 \fancyhead[LO,RE]{\textsf{\footnotesize \leftmark}}
 
 \fancyfoot{}
-\fancyfoot[RO]{\textsf{\footnotesize DUNE Technical Design Report}}
-\fancyfoot[LE]{\textsf{\footnotesize \thevolumetitle}}
+\fancyfoot[RO]{\textsf{\footnotesize The DUNE Technical Design Report}}
+\fancyfoot[LO]{\textsf{\footnotesize \thedoctitle}}
 \fancypagestyle{plain}{}
 
 \renewcommand{\headrule}{\vspace{-4mm}\color[gray]{0.5}{\rule{\headwidth}{0.5pt}}}
 
+% Not all main documents have any citations.
+% When not built in "final" mode, add in one citation just to let the
+% document build.
+% If, after substantial editing a main document still lacks any
+% citations then it should have its whole bibliography removed.
+%\ifdefined\isfinal\nocite{}\else\nocite{CD0}\fi
+%\nocite{CD0} % REmoved 12/30/19
 
-\nocite{CD0}
+
+% see also preamble.tex
+%\input{common/acronyms}

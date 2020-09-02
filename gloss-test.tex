@@ -1,0 +1,1474 @@
+
+% tres meta
+  \dword{dword}{DUNE Word}{A term in the DUNE lexicon}
+
+%%%%%%     START ADDING WORDS, IN ALPHABETICAL ORDER IF POSSIBLE!    %%%%%%%%
+  \dword{nasa}{NASA}{U.S. National Aereonautics and Space Administration}
+
+%near detector
+  \dword{nd}{ND}{near detector}{Refers to the detector(s) %or more  generally the experimental site
+ installed close to the neutrino source at   \dword{fnal} }
+
+%far detector
+  \dword{fd}{FD}{far detector}{The \SI{70}{kt} total (\fdfiducialmass fiducial) mass   \dword{lartpc} DUNE detector, composed of four \larmass total (\nominalmodsize fiducial) mass modules,  %or more generally the experimental 
+  to be installed at the far site at   \dword{surf} in
+  Lead, SD, USA}
+
+%single-phase
+  \dword{sp}{SP}{single-phase}{Distinguishes one of the DUNE far detector technologies by the fact that it operates using argon in its liquid phase only}
+  %Distinguishes one of the four  \SI{10}{\kton}     \dwords{detmodule} of the DUNE far detector by the  fact that it operates using argon in just its liquid phase}
+  
+
+%dual-phase
+  \dword{dp}{DP}{dual-phase}{Distinguishes one of the DUNE far detector technologies by the fact that it operates using argon %Distinguishes one of the four \SI{10}{\kton}     \dwords{detmodule} of the DUNE far detector by the fact that it operates using argon 
+ in both gas and liquid phases}
+
+%photon detection system
+  \dword{pds}{PD system}{photon detection system}{The detector 
+  subsystem sensitive to light produced in the   \dword{lar} }
+
+%high voltage system
+  \dword{hvs}{HVS}{high voltage system}{The detector 
+  subsystem that provides the   \dword{tpc} drift field}
+
+%time projection chamber
+  \dword{tpc}{TPC}{time projection chamber}{A type of particle detector that uses an \efield together with a sensitive volume of gas or liquid, e.g.,   \dword{lar}, to perform a \threed reconstruction of a particle trajectory or interaction. The activity is recorded by digitizing the waveforms of current
+  induced on the anode as the distribution of ionization charge passes by
+  or is collected on the electrode (TPC is also used for ``total project cost'')} 
+
+%liquid argon time-projection chamber
+  \dword{lartpc}{LArTPC}{liquid argon time-projection chamber}{A   \dword{tpc} filled with liquid argon; %A class of detector technology that this technology forms 
+the basis for the   \dword{dune}   \dword{fd} modules} %.   It typically entails observation of ionization activity by  electrical signals and of scintillation by optical signals}
+
+%anode plane assembly
+  \dwords{apa}{APA}{anode plane assembly}{anode plane assemblies}{A unit of the   \dword{sp}
+  detector module containing the elements sensitive to ionization in the   \dword{lar}. 
+  It contains two faces each of three planes of wires, and interfaces to the cold
+  electronics and photon detection system} 
+
+  \dword{awg}{AWG}{American wire gauge} {U.S. standard set of non-ferrous wire conductor sizes}
+
+  \dword{ufer}{Ufer}{concrete encased electrode} {U.S. National Electrical Code grounding method refered to as Concrete Encased Electrode}
+
+%charge readout
+  \dword{cro}{CRO}{charge readout}{The system for detecting
+  ionization charge distributions in a   \dword{dp} detector module}
+
+%light readout
+  \dword{lro}{LRO}{light readout}{The system for detecting
+  scintillation photons in a   \dword{dp}  detector module}
+
+%safe high voltage
+  \dword{shv}{SHV}{safe high voltage}{Type of bayonet mount
+connector used on coaxial cables that has additional insulation 
+compared to standard BNC and MHV connectors that makes it safer
+for handling   \dword{hv} by preventing accidental contact with the
+live wire connector in an unmated connector or plug}
+
+%front-end
+  \dword{fe}{FE}{front-end}{The front-end refers a point that is
+  ``upstream'' of the data flow for a particular subsystem. 
+  For example the   \dword{sp} front-end electronics is where the cold electronics
+  meet the sense wires of the TPC and the front-end   \dword{daq} is where the
+    \dword{daq} meets the output of the electronics}
+
+  \dword{daqrou}{DAQ RU}{DAQ readout unit}{The first element in the data flow of the   \dword{daq}}
+
+  \dword{cots}{COTS}{commercial off-the-shelf}{Items, typically hardware such as 
+computers, that may be purchased whole, without any custom design or fabrication and 
+thus at normal consumer prices and availability}
+
+  \dword{i2c}{I2C}{Inter-Integrated Circuit}{I$^2$C or I2C is a synchronous, 
+multi-master, multi-slave, packet switched, single-ended, serial computer bus widely used 
+for attaching lower-speed peripheral ICs to processors and microcontrollers in short-distance, 
+intra-board communication} %leave upper case
+
+  \dword{spi}{SPI}{Serial Peripheral Interface}{The Serial Peripheral Interface is a 
+synchronous serial communication interface specification used for short distance 
+communication, primarily in embedded systems}%leave upper case
+
+  \dword{miso}{MISO}{master in slave out}{The Master In Slave Out is a logic
+signal on the   \dword{spi} bus on which the data from the slave are transmitted once
+a request from the master is received} %leave upper case
+
+  \dword{mosi}{MOSI}{master out slave in}{The Master Out Slave In is a logic
+signal on the   \dword{spi} bus on which the data from the master is transmitted} %leave upper case
+
+  \dword{uart}{UART}{Universal Asynchrous Receiver/Transmitter}{A universal 
+asynchronous receiver-transmitter is a computer hardware device for asynchronous 
+serial communication in which the data format and transmission speeds are configurable}%leave upper case
+
+  \dword{cr}{CR}{Capacitance-Resistance} %leave upper case
+
+  \dword{dc}{DC}{direct coupling} % I think these are ok lower case (anne)
+
+  \dword{ac}{AC}{Alternating Current; when used in the phrase ``AC coupling'' refers to a circuit element that filters out low-frequency components, such as constant offsets, leaving higher frequency signal components. The frequency filtering is determined both by a resistor and a capacitor}
+
+  \dword{pll}{PLL}{Phase-Locked Loop}{A control system that generates an
+output signal whose phase is related to the phase of an input signal}  %leave upper case
+
+  \dword{fifo}{FIFO}{First-In-First-Out} % leave in upper case
+
+  \dword{tsmc}{TSMC}{Taiwan Semiconductor Manufacturing Company}
+
+  \dword{saci}{SACI}{  \dword{slac}   \dword{asic} Control Interface}
+
+  \dword{om3}{OM3}{Type of multi-mode fiber optic cable, typically capable of \SI{10}{Gbps} data transmission at lengths up to \SI{300}{m}}
+
+  \dword{om4}{OM4}{Type of multi-mode fiber optic cable, typically capable of \SI{10}{Gbps} data transmission at lengths up to \SI{550}{m}}
+
+  \dword{qfp}{QFP}{Quad Flat Package} % leave in upper case
+
+  \dword{ams}{AMS}{analog and mixed signal}{Verilog-AMS is a derivative of the Verilog hardware description language that includes analog and mixed-signal extensions (AMS) in order to define the behavior of analog and mixed-signal systems}
+
+  \dword{hepa}{HEPA}{High Efficiency Particulate Air}{The High Efficiency Particulate Air filters are a type of air filter that remove 99.97\% of particles that have a size greater than or equal to \SI{0.3}{$\mu$m}}  % leave in upper case
+
+  \dword{uvm}{UVM}{universal verification methodology}{The Universal Verification Methodology is a standardized methodology for verifying integrated circuit designs}   % leave in upper case
+
+  \dword{lhc}{LHC}{Large Hadron Collider}
+
+  \dword{lsb}{LSB}{least significant bit}{The bit with the lowest numerical value in a binary number}
+
+  \dword{ldo}{LDO}{low-dropout regulator}{A low-dropout or LDO regulator is a   \dword{dc} linear voltage regulator that can regulate the output voltage even when the supply voltage is very close to the output voltage}
+
+%analog digital converter
+  \dword{adc}{ADC}{analog-to-digital converter}{A sampling of a voltage
+  resulting in a discrete integer count corresponding in some way to
+  the input}
+
+  \dword{inl}{INL}{integral non-linearity}{A commonly used measure of performance in     \dwords{adc}. It is the deviation between the ideal input threshold value and the measured threshold level of a certain output code}
+
+  \dword{dnl}{DNL}{differential non-linearity}{A commonly used measure of performance in     \dwords{adc}. The DNL error is defined as the difference between an actual step width and the ideal value of one   \dword{lsb}}
+
+  \dword{pnp}{PNP}{Type of bipolar junction transistor consistning of a
+layer of N-doped semiconductor sandwiched between two layers of P-doped material}
+
+  \dword{spice}{SPICE}{SPICE
+(``Simulation Program with Integrated Circuit Emphasis'') is a general-purpose, 
+open-source analog electronic circuit simulator. It is a program used in integrated 
+circuit and board-level design to check the integrity of circuit designs and to 
+predict circuit behavior}
+
+%data acquisition
+  \dword{daq}{DAQ}{data acquisition}{The data acquisition system
+  accepts data from the detector   \dword{fe} electronics, buffers
+  the data, performs a   \dword{trigdecision}, builds events from the selected
+  data and delivers the result to the offline   \dword{diskbuffer}}
+
+% interval of validity
+  \dword{iov}{IOV}{interval of validity}{Interval over which something is valid}
+
+%CALC
+  \dword{calci}{CALCI}{Calibration and Cryogenic Instrumentation}
+
+%detector module
+  \dword{detmodule}{far detector module}{The entire DUNE far detector is
+  segmented into four modules, each with a nominal \SI{10}{\kton}
+  fiducial mass}
+  
+  \dword{module}{module}{Many aspects of the DUNE far and near detectors are modular, so ``module'' must be understood in context. It may refer to one of the four far detector modules, distinct portions of a subdetector as in a ``field cage module,'' a software or electronics module, e.g., a separate framework plug-in, and so on}
+
+%detector unit  
+  \dword{detunit}{detector unit}{A portion of a   \dword{detmodule} may be further partitioned into a number of similar parts.   For example, the   \dword{sp}   \dword{tpc} is made up of   \dword{apa}  units (and other elements)}
+
+
+%secondary DAQ buffer
+  \dword{diskbuffer}{secondary DAQ buffer}{A secondary
+    \dword{daq} buffer holds a small subset of the full rate as
+  selected by a   \dword{trigcommand}. 
+  This buffer also marks the interface with the DUNE Offline}
+
+%online  monitoring
+  \dword{om}{OM}{online monitoring}{Processes that run inside
+  the   \dword{daq} on data ``in flight,'' specifically before landing on the
+  offline disk buffer, and that provide feedback on the operation of
+  the   \dword{daq} itself and the general health of the data it is marshalling}
+
+%data quality monitoring
+  \dword{dqm}{DQM}{data quality monitoring}{Analysis of the raw
+  data to monitor the integrity of the data and the performance of the
+  detectors and their electronics. This type of monitoring may be
+  performed in real time, within the   \dword{daq} system, or in later
+  stages of processing, using disk files as input}
+
+%DAQ dump buffer
+  \dword{dumpbuffer}{DAQ dump buffer}{This   \dword{daq} buffer
+  accepts a high-rate data stream, in aggregate, from an associated
+%    \dword{submodule} (elim by anne)
+  portion of a   \dword{detmodule} sufficient to collect all data likely relevant to
+  a potential   \dword{snb}}
+  \dword{etf}{ETF}{Experiment Test Framework}{  \dword{wlcg} testing middleware running grid jobs that actively test distributed sites services and capabilities, and report back to monitoring services}
+
+%Global Trigger Logic
+  \dword{etl}{ETL}{external trigger logic}{Trigger processing
+  that consumes   \dword{detmodule} level   \dword{trignote} information
+  and other global sources of trigger input and emits
+    \dword{trigcommand} information back to the     \dwords{mtl}}
+  \dword{daqeti}{ETI}{external trigger interface}{Interface between     \dwords{mtl} and external source and sinks of relevant trigger information}
+
+%trigger notification
+  \dword{trignote}{trigger notification}{Information provided by
+    \dword{mtl} to   \dword{etl} about   \dword{trigdecision} %its 
+  processing}
+
+%trigger primitive
+  \dword{trigprimitive}{trigger primitive}{Information derived by
+  the   \dword{daq}   \dword{fe} hardware that describes a region of space (e.g.,
+  one or several neighboring channels) and time (e.g., a contiguous set
+  of   \dword{adc} sample ticks) associated with some activity}
+
+%external trigger candidate
+  \dword{externtrigger}{external trigger candidate}{Information
+  provided to the   \dword{mtl} about events external to a
+    \dword{detmodule} so that it may be considered in forming
+      \dwords{trigcommand}}
+
+%Out-of-band trigger command dispatcher
+  \dword{daqoob}{OOB dispatcher}{out-of-band trigger command
+  dispatcher}{This component is responsible for dispatching a   \dword{snb} dump
+  command to all     \dwords{daqfer} in the   \dword{detmodule}}
+
+%module trigger logic
+  \dword{mtl}{MTL}{module trigger logic}{Trigger processing
+  that consumes   \dword{detunit} level   \dword{trigcommand} information
+  and emits     \dwords{trigcommand}. 
+  It provides the   \dword{etl} with     \dwords{trignote} and receives back any
+      \dwords{externtrigger}}
+
+%octant
+  \dword{octant}{octant}{Any of the eight parts into which 4$\pi$
+  is divided by three mutually perpendicular axes. 
+  In particular in referencing the value for the mixing angle
+  $\theta_{23}$}
+
+%sub-detector ??? %%%%%%%%%%%%%%%%%%%     CHeck if used (Anne)  %%%%%% ???????
+%  \dword{submodule}{subdetector}{A detector unit of granularity less  than one   \dword{detmodule} such as the TPC of either a   \dword{sp} or   \dword{dp}   module}
+
+%trigger candidate
+  \dword{trigcandidate}{trigger candidate}{Summary information derived
+  from the full data stream and representing a contribution toward
+  forming a   \dword{trigdecision}}
+
+%trigger command
+  \dword{trigcommand}{trigger command}{Information derived from
+  one or more     \dwords{trigcandidate}  that directs elements of the
+    \dword{detmodule} to read out a portion of the data stream}
+
+%trigger command message
+  \dword{tcm}{TCM}{trigger command message}{A message flowing
+  down the trigger hierarchy from global to local context.  Also see   \dword{tpm}}
+
+  \dword{mlt}{MLT}{module level trigger}{The   \dword{daq} component responsible for producing a   \dword{trigdecision} that will be used to command the readout of a detector module}
+
+%trigger decision
+  \dword{trigdecision}{trigger decision}{The process by which
+      \dwords{trigcandidate} are converted into     \dwords{trigcommand}}
+
+%trigger primitive message
+  \dword{tpm}{TPM}{trigger primitive message}{A message flowing
+  up the trigger hierarchy from local to global context.  Also see   \dword{tcm}}
+
+  \dword{ipc}{IPC}{inter-process communication}{A system for software elements to exchange information between threads, local processes or across a data network.  An IPC system is typically specified in terms of protocols  composed of message types and their associated data schema}
+
+  \dword{daqdispre}{discovery and presence}{As used in the context of the   \dword{ipc}, a system that provides mechanisms for a node on a communication network to learn of the existence of peers and their identity (discovery) as well as determine if they are currently operational or have become unresponsive (presence)}
+
+  \dword{pubsub}{PUB/SUB}{publish-subscribe communication pattern}{An   \dword{ipc} communication pattern where one element, the publisher, sends data to all connected elements, the subscribers.  Each subscriber may connect to multiple publishers.  A variant is PUB/SUB with topics where a subscriber may register an identifier, the topic, to limit the information received to just an associated subset}
+
+%event builder
+  \dword{eb}{EB}{event builder}{A software agent that executes     \dwords{trigcommand}  for one    \dword{detmodule} by reading out the requested data}
+%{A software agent servicing one   \dword{detmodule} by executing     \dwords{trigcommand} by reading out  the requested data} (Anne: awkward wording)
+
+  \dword{daqdfo}{DFO}{data flow orchestrator}{The process by which trigger commands are executed in parallel and asynchronous manner by the back-end output subsystem of the   \dword{daq}}
+
+  \dword{daqubi}{UBI}{upstream DAQ buffer interface}{The process which provides read-only access to data residing in the upstream   \dword{daq} buffers to processes on the network}
+
+%cluster on board
+  \dword{cob}{COB}{cluster on board}{An ATCA motherboard housing four RCEs}
+
+%reconfigurable computing element
+  \dword{rce}{RCE}{reconfigurable computing element}{Data processor located outside of the cryostat on a   \dword{cob} that contains   \dword{fpga}, RAM and   \dword{ssd} resources, responsible for buffering data, producing trigger primitives, responding to triggered requests for data and synching   \dword{snb} dumps}
+
+%bump on wire
+  \dword{bow}{BOW}{Bump On Wire}{A working name for the front-end readout computing elements used in the nominal   \dword{daq} design to interface the   \dword{dp}  crates to the   \dword{daq} front-end computers}
+
+%advanced telecommunication computing architecture
+  \dword{atca}{ATCA}{Advanced Telecommunications Computing
+  Architecture}{An advanced computer architecture specification developed for the telecommunications, military, and aerospace industries that incorporates the latest trends in  high-speed interconnect technologies, next-generation processors, and improved reliability, availability and serviceability} 
+
+%Micro Telecommunications Computing Architecture
+  \dword{utca}{$\mu$TCA}{Micro Telecommunications Computing Architecture}{The computer architecture specification followed by the crates that house charge and light readout electronics in the   \dword{dpmod}} 
+
+%user datagram protocol
+  \dword{udp}{UDP}{user datagram protocol}{A simple,
+  connectionless Internet protocol that supports data integrity
+  checksums, requires no handshaking, and does not guarantee packet delivery}
+
+%advanced meazzanine card
+  \dword{amc}{AMC}{advanced mezzanine card}{Holds digitizing
+  electronics and lives in   \dword{utca} crates}
+
+%radio frequency
+  \dword{rf}{RF}{radio frequency}{Electromagnetic emissions
+  that are within the (radio) frequency band of sensitivity of the detector
+  electronics}
+
+%field programmable gate array
+  \dword{fpga}{FPGA}{field programmable gate array}{An
+integrated circuit technology that allows the hardware to be reconfigured to
+execute different algorithms after its manufacture and deployment}
+
+  \dword{fmc}{FMC}{FPGA mezzanine card}{Boards holding     \dwords{fpga} and other integrated circuitry that attach to a motherboard}
+
+%Front-End Link eXchange
+  \dword{felix}{FELIX}{Front-End Link eXchange}{A
+  high-throughput interface between   \dword{fe} and trigger electronics
+  and the standard PCIe computer bus}
+
+%DAQ partition
+  \dword{daqpart}{DAQ partition}{A cohesive and
+ coherent collection of   \dword{daq} hardware and software working together to trigger and read out some portion of one detector module; it consists of an integral number of     \dwords{daqfrag}. 
+ Multiple   \dword{daq} partitions may operate simultaneously, but each instance operates independently}
+
+%front-end computer
+  \dword{fec}{DAQ FEC}{DAQ front-end computer}{The portion of one
+    \dword{daqpart} that hosts the   \dword{daqdr},   \dword{daqbuf} and
+    \dword{daqds}.  It hosts the   \dword{daqfer} and corresponding portion of the   \dword{daqbuf}}
+
+%DAQ front-end fragment
+  \dword{daqfrag}{DAQ front-end fragment}{The portion of one
+    \dword{daqpart} relating to a single   \dword{fec} and corresponding to an
+  integral number of     \dwords{detunit}.  See also   \dword{datafrag}}
+
+%data fragment
+  \dword{datafrag}{data fragment}{A block of data read out from a single   \dword{daqfrag} that
+span a contiguous period of time as requested by a   \dword{trigcommand}}
+
+%DAQ front-end redout
+  \dword{daqfer}{FER}{DAQ front-end readout}{The portion of a
+    \dword{daqfrag} that accepts data from the detector electronics and
+  provides it to the   \dword{fec}}
+
+%DAQ data receiver
+  \dword{daqdr}{DDR}{DAQ data receiver}{The portion of the
+    \dword{daqfrag} that accepts data from the   \dword{daqfer}, emits
+  trigger candidates produced from the input trigger primitives, and
+  forwards the full data stream to the   \dword{daqbuf}}
+
+%primary DAQ buffer
+  \dword{daqbuf}{DAQ primary buffer}{The portion
+  of the   \dword{daqfrag} that accepts full data stream from the
+  corresponding   \dword{detunit} and retains it sufficiently long for it
+  to be available to produce a   \dword{datafrag}}
+
+%data selector
+  \dword{daqds}{data selector}{The portion of the   \dword{daqfrag}
+  that accepts     \dwords{trigcommand} and returns the corresponding
+    \dword{datafrag}.  Not to be confused with   \dword{daqdsn}}
+
+  \dword{daqdsn}{data selection}{The process of forming a trigger decision for selecting a subset of detector data for output by the   \dword{daq} from the content of the detector data itself.  Not to be confused with   \dword{daqds}}
+
+  \dword{daqros}{DAQ RO}{DAQ readout subsystem}{The subsystem of the   \dword{daq} for accepting and buffering data input from detector electronics}
+
+  \dword{daqdss}{DAQ DS}{DAQ data selection subsystem}{The subsystem of the   \dword{daq} responsible for forming a trigger decision based on a portion of the input data stream.  The majority subset of the   \dword{daqtrs}}
+
+  \dword{daqtrs}{DAQ TS}{DAQ trigger subsystem}{The subsystem of the   \dword{daq} responsible for forming a trigger decision}
+
+  \dword{daqbes}{DAQ BE}{DAQ back-end subsystem}{The portion of the   \dword{daq} that is generally toward its output end.  It is responsible for accepting and executing trigger commands and marshaling the data they address to output storage buffers}
+
+  \dword{daqtss}{DAQ TSS}{DAQ timing and synchronization subsystem}{The portion of the   \dword{daq} that provides for timing and synchronization to various components}
+
+
+%front-end mother board
+  \dword{femb}{FEMB}{front-end mother board}{Refers a unit of
+  the   \dword{sp}   \dword{ce} that contains the   \dword{fe} amplifier
+  and   \dword{adc}     \dwords{asic} covering 128 channels}
+
+%application-specific integrated circuit
+  \dword{asic}{ASIC}{application-specific integrated circuit}
+
+%low voltage
+  \dword{lv}{LV}{low voltage}
+
+%iceberg
+  \dword{iceberg}{ICEBERG}{ICEBERG R\&D cryostat and electronics}{Integrated Cryostat and Electronics Built for Experimental Research Goals: a new double-walled cryostat built and installed at   \dword{fnal}  
+%build at   \dword{fnal} and installed in the Proton Assembly Building meant (Anne changed) 
+for liquid argon detector R\&D and for testing of DUNE detector components}
+
+%coldadc
+  \dword{coldadc}{ColdADC}{A newly developed 16-channels   \dword{asic} providing analog to digital conversion}
+
+%coldata
+  \dword{coldata}{COLDATA}{A 64-channel control and communications   \dword{asic}}
+%  \dword{coldata}{COLDATA}{a 64-channel control and communications ASIC}{A key component of the 128-channel   \dword{femb} that provides a control and communication interface between cold   \dword{lvds} channels and warm electronics external to the cryostat}
+
+%cryo
+  \dword{cryo}{CRYO}{Integrated ASIC including   \dword{fe} circuitry providing signal amplification and pulse shaping, analog to digital conversion, and control and communication functionalities for 64 channels}
+
+%liquid argon application-specific integrated circuit
+  \dword{larasic}{LArASIC}{A 16-channel   \dword{fe}   \dword{asic} that provides signal amplification and pulse shaping}
+
+%complementary metal-oxide-semiconductor
+  \dword{cmos}{CMOS}{Complementary metal-oxide-semiconductor}
+
+%equivalent noise charge
+  \dword{enc}{ENC}{equivalent noise charge}{The equivalent noise charge is the input charge that corresponds to a   \dword{snr}$=1$}
+%equivalent number of bits - not used
+
+%dynamic range enhancement not used
+
+%successive approximation register
+  \dword{sar}{SAR}{successive approximation register}
+
+%protodune
+  \dword{protodune}{ProtoDUNE}{Either of the two DUNE prototype detectors constructed at   \dword{cern}. % and operated in  a CERN test beam (expected fall 2018). 
+  One prototype implements   \dword{sp} technology and the other   \dword{dp}}
+  
+  \dword{protodune2}{ProtoDUNE-2}{The second run of a   \dword{protodune} detector}
+
+%the single-phase ProtoDUNE detector
+  \dword{pdsp}{ProtoDUNE-SP}{The   \dword{sp}   \dword{protodune} detector at   \dword{cern}}
+
+%the dual-phase ProtoDune detector
+  \dword{pddp}{ProtoDUNE-DP}{The   \dword{dp}   \dword{protodune} detector at   \dword{cern}}
+
+%WA105 dual-phase demonstrator
+  \dword{wa105}{WA105 DP demonstrator}{The \SI[product-units=power]{3x1x1}{m} WA105   \dword{dp} prototype detector at   \dword{cern}}
+
+%data aquisition event block --- includes dirty word: "event"
+  \dword{rawevent}{DAQ event block}{The unit of data output by the
+    \dword{daq}.  
+  It contains trigger and detector data spanning a unique, contiguous
+  time period and a subset of the detector channels}
+
+%solid-state disk
+  \dword{ssd}{SSD}{solid-state disk}{Any storage device that
+  may provide sufficient write throughput to receive, both collectively and
+  distributed, the sustained full rate of data from a   \dword{detmodule}
+  for many seconds}
+  \dword{nvme}{NVMe}{Non-volatile memory express}{A specification for an interface to storage media attached via PCIe}
+
+%high-level trigger --- 
+  \dword{hlt}{HLT}{high-level trigger}{This is actually a filter applied to data that has been triggered and aggregated in order to further reduce or characterize it}
+
+%particle identification
+  \dword{pid}{PID}{particle ID}{Particle identification}
+
+%readout window
+  \dword{readout window}{readout window}{A fixed, atomic and
+  continuous period of time over which data from a   \dword{detmodule}, in
+  whole or in part, is recorded. 
+  This period may differ based on the trigger that initiated the
+  readout}
+
+%zero-suppression
+  \dword{zs}{ZS}{zero-suppression}{Used to delete some portion of a
+  data stream that does not significantly deviate from zero or
+  intrinsic noise levels. 
+  It may be applied at different granularity from per-channel to per
+    \dword{detunit}}
+
+%run control 
+  \dword{rc}{RC}{run control}{The system for configuring,
+  starting and terminating the   \dword{daq}}
+
+  \dword{r-c}{RC}{resistive-capacitive (circuit)}
+
+  \dword{daqccm}{CCM}{DAQ control, configuration and monitoring subsystem}{A system for controlling, configuring and monitoring other systems in particular those that make up the   \dword{daq} where the CCM encompasses   \dword{rc}}
+
+  \dword{daqrun}{DAQ run}{A period of time over which relevant data taking conditions and   \dword{daq} configuration are asserted to be unchanged. 
+  Multiple   \dword{daq} runs may occur simultaneously when multiple     \dwords{daqpart} are active. 
+  This term should not be confused with DUNE experiment or beam ``runs'' that typically span many   \dword{daq} runs}
+  \dword{daqrunnum}{DAQ run number}{A monotonically increasing count that uniquely and globally identifies a   \dword{daqrun}}
+
+%supernova neutrino burst  
+  \dword{snb}{SNB}{supernova neutrino burst}{A prompt 
+  increase in the flux of low-energy neutrinos emitted in the first few seconds of a core-collapse supernova.  It can also refer to a trigger command type that may be due to this phenomenon,
+  or detector conditions that mimic its interaction signature}
+
+%supernova burst and low energy
+  \dword{snble}{SNB/LE}{supernova neutrino burst and low
+  energy}{Supernova neutrino burst and low-energy physics program}
+
+%supernova early warning system
+  \dword{snews}{SNEWS}{SuperNova Early Warning System}{A global
+  supernova neutrino burst trigger formed by a coincidence of   \dword{snb} 
+  triggers collected from participating experiments}
+
+%one pulse per second signal
+  \dword{pps}{1PPS signal}{one-pulse-per-second signal}{An
+  electrical signal with a fast rise time and that arrives in real
+  time with a precise period of one second}
+
+%spill location system
+  \dword{sls}{SLS}{spill location system}{A system residing at
+  the DUNE far detector site that provides information, possibly
+  predictive, indicating periods of time when neutrinos are being
+  produced by the   \dword{fnal} Main Injector beam spills}
+
+%warm interface board
+  \dword{wib}{WIB}{warm interface board}{Digital electronics
+  situated just outside the   \dword{sp} cryostat that receives digital data
+  from the     \dwords{femb} over cold copper connections and sends it to the   \dword{rce}
+    \dword{fe} readout hardware}
+
+  \dword{gps}{GPS}{Global Positioning System}{A satellite-based system that provides a highly accurate   \dword{pps} that may be used to synchronize clocks and determine location}
+
+  \dword{ntp}{NTP}{Network Time Protocol}{A networking protocol that allows synchronizing of clocks to within a few \si{\milli\second} of a time standard on a local network and within a few tens of \si{\milli\second} over the Internet} 
+
+  \dword{ptproto}{PTP}{Precision Time Protocol}{A networking protocol that allows synchronizing of clocks to within a few \si{\micro\second} of a time standard on a local network} 
+
+  \dword{irig}{IRIG}{inter-range instrumentation group}{A standards body that defined a time-code standard for transferring timing information}
+
+%network interfce controller
+  \dword{nic}{NIC}{network interface controller}{Hardware for controlling the interface to a communication network.  Typically, one that obeys the Ethernet protocol}
+
+%warm interface electronics crate
+  \dword{wiec}{WIEC}{warm interface electronics crate}{Crates mounted on the signal flanges that contain the     \dwords{wib}}
+
+%power and timing cards
+  \dword{ptc}{PTC}{power and timing card}{Cards that provide further processing and distribution of the signals entering and exiting the   \dword{sp} cryostat}
+
+  \dword{ptb}{PTB}{power and timing backplane}{Backplane used to connect the     \dwords{wib} and the     \dwords{ptc} on the   \dword{wiec}. Also connects the   \dword{ce} flange on the cryostat penetration}
+
+%silicon photomultipler
+  \dword{sipm}{SiPM}{silicon photomultiplier}{A solid-state
+  avalanche photodiode sensitive to single \phel signals}
+
+%cryogenic instrumentation and slow control
+  \dword{cisc}{CISC}{cryogenic instrumentation and slow controls}{Includes equipment to monitor all detector  components and    \dword{lar} quality and behavior, and provides a control system for many of the detector components}
+
+%FTE
+  \dword{fte}{FTE}{full-time equivalent. A unit of labor
+  for the project. One year of work from one person}
+
+
+
+%art 
+  \dword{art}{art}{A software framework implementing an
+  event-based execution paradigm} %http://art.fnal.gov/
+
+%sequential access via metadata  
+  \dword{sam}{SAM}{sequential
+  access via metadata}{A data-handling system to store and retrieve
+  files and associated metadata, including a complete record of the
+  processing that has used the files}
+
+%art data aquisition
+  \dword{artdaq}{artdaq}{A data acquisition toolkit for data transfer, aggregation and processing}
+
+%beamline
+  \dword{beamline}{beamline}{A sequence of control and monitoring devices used for the formation of a directed collection of particles}
+%conceptual design report
+  \dword{cdr}{CDR}{conceptual design report}{A formal project
+  document %required by funding agencies
+   that describes the experiment
+  at a conceptual level}
+
+%conventional facilities
+  \dword{cf}{CF}{conventional facilities}{Pertaining to
+  construction and operation of buildings and conventional infrastructure, and for   \dword{lbnf-dune}, CF includes the excavation caverns}
+
+%charge parity
+  \dword{cp}{CP}{charge parity}{Product of charge and parity
+  transformations}
+
+%product of charge, parity and time-reversal
+  \dword{cpt}{CPT}{charge, parity, and time reversal symmetry}{product of charge, parity
+  and time-reversal transformations}
+
+%charge-parity symmetry violation
+  \dword{cpv}{CPV}{charge-parity symmetry violation}{Lack of
+  symmetry in a system before and after charge and parity
+  transformations are applied. 
+  For CP symmetry to hold,  a particle turns into its
+ corresponding antiparticle under a charge transformation, and a parity
+transformation inverts its space coordinates, i.e. produces the mirror image}
+
+%us department of energy
+  \dword{doe}{DOE}{U.S. Department of Energy}
+
+  \dword{fra}{FRA}{Fermi Research Alliance}{A joint partnership of the University of Chicago and the Universities Research Association (URA) that manages and operates Fermilab on behalf of the   \dword{doe}}
+
+%  \dword{us}{USA}{United States of America}
+
+%deep underground neutrino experiment
+  \dword{dune}{DUNE}{Deep Underground Neutrino Experiment}{A leading-edge, international experiment for neutrino science and proton decay studies}
+
+%environment, safety and health
+  \dword{esh}{ES\&H}{environment, safety and health}{A discipline and specialty that studies and implements practical aspects of environmental protection and safety at work} % The LBNF/DUNE ES\&H program complies with applicable standards and local, state, and federal legal requirements through the Fermilab ``work smart'' set of standards and the contract between Fermi Research Alliance and the DOE Office of Science (FRA-DOE)}
+
+  \dword{ppe}{PPE}{personnel protective equipment}{Equipment worn to minimize exposure to hazards that cause serious workplace injuries and illnesses}
+
+  \dword{odh}{ODH}{oxygen deficiency hazard}{a hazard that occurs when inert gases such as nitrogen, helium, or argon displace room air and thus reduce the percentage of oxygen below the level required for human life}
+
+  \dword{feshm}{FESHM}{Fermilab Environment, Safety and Health Manual}{The document that contains Fermilab's policies and procedures designed to manage environment, safety, and health in all its programs}
+
+
+%far site conventional facilities
+  \dword{fscf}{FSCF}{far site conventional facilities}{The
+    \dword{cf} at the DUNE far detector site,   \dword{surf}}
+  
+%near site conventional facilities
+  \dword{nscf}{NSCF}{near site conventional facilities}{The
+    \dword{cf} at the DUNE near detector site,   \dword{fnal}}
+
+%grand unified theory
+  \dwords{gut}{GUT}{grand unified theory}{grand unified theories}{A class of theories that unifies the electroweak and strong forces}
+
+%liquid argon
+  \dword{lar}{LAr}{liquid argon}{Argon in its liquid phase; it is a cryogenic liquid with a boiling point of %%% \SI{-90}{$^\circ{C}$} (\SI{87}{K}) and density of \SI{1.4}{g/ml}}
+
+
+%long-baseline
+  \dword{lbl}{LBL}{long-baseline}{Refers to the distance between the 
+  neutrino source  and the   \dword{fd}.  It can also refer to the distance between the near and far detectors. 
+  The ``long'' designation is an approximate and relative distinction. For DUNE, this distance  (between   \dword{fnal} and   \dword{surf}) is approximately \SI{1300}{km}}
+
+%long-baseline neutrino facility
+  \dword{lbnf}{LBNF}{Long-Baseline Neutrino Facility}{The
+  organizational entity responsible for developing the neutrino beam, the cryostats
+  and cryogenics systems, and the conventional facilities for DUNE}
+  
+  \dword{lbnf-dune}{LBNF/DUNE}{LBNF and DUNE project}{The overall global project, including   \dword{lbnf} and   \dword{dune}}
+
+  \dword{lbnc}{LBNC}{Long-Baseline Neutrino Committee}{The committee, composed of internationally prominent scientists with relevant expertise, charged by the   \dword{fnal} director to review the scientific, technical, and managerial progress, plans and decisions associated with   \dword{dune}}
+
+  \dword{ncg}{NCG}{Neutrino Cost Group}{A group of internationally prominent scientists with relevant experience that is charged by the   \dword{fnal} director to review the cost, schedule, and associated risks for the   \dword{dune} experiment}
+
+%mass hierarchy
+  \dword{mh}{MH}{mass hierarchy}{Describes the separation
+  between the mass squared differences related to the solar and
+  atmospheric neutrino problems (also written as   \dword{mo})}
+
+  \dword{mo}{MO}{mass ordering}{See   \dword{mh}}
+
+%fnal main injector
+  \dword{mi}{MI}{Fermilab Main Injector}{An accelerator at
+    \dword{fnal} that provides a beam of high-energy protons that upon
+  striking a target produce secondaries that decay to provide the
+  neutrinos directed toward the DUNE far detector}
+
+%protons on target
+  \dword{pot}{POT}{protons on target}{Typically used as a unit
+  of normalization for the number of protons striking the neutrino
+  production target}
+
+%quality assurance
+  \dword{qa}{QA}{quality assurance}{The set of actions taken to provide confidence that quality requirements are fulfilled, and to detect and correct poor results}
+
+%quality control
+  \dword{qc}{QC}{quality control}{An aggregate of activities (such as design analysis and inspection for defects) performed to ensure adequate quality in manufactured products}
+
+%standard model
+  \dword{sm}{SM}{standard model}{Refers to a theory describing
+  the interaction of elementary particles}
+
+%technical design report
+  \dword{tdr}{TDR}{technical design report}{A formal project
+  document %required by funding agencies 
+  that describes the experiment at a technical level}
+
+  \dword{prelimdr}{PDR}{preliminary design report}{A formal project
+  document %required by funding agencies 
+  that describes the experiment at a preliminary design level}
+
+%interim design report
+  \dword{tp}{IDR}{interim design report}{An intermediate
+milestone on the path to a full   \dword{tdr}} % changed from ``technical proposal'' 6/6/2018
+
+%%%%%%%%%%%%% PROJECT AND PHYSICS VOLUME list for acronyms below %%%%%%%%%%%%
+  \dword{ckm}{CKM matrix}{Cabibbo-Kobayashi-Maskawa
+  matrix}{Refers to the matrix describing the mixing between mass and
+  weak eigenstates of quarks}
+
+  \dword{cl}{CL}{confidence level}{Refers to a probability
+  used to determine the value of a random variable given its
+  distribution}
+
+  \dword{pmns}{PMNS}{Pontecorvo-Maki-Nakagawa-Sakata}{A type of matrix that describes the mixing between mass and weak eigenstates of
+  the neutrino}
+
+
+%%%%%%%%%%%%%%%%%.....................
+
+%%%%%%%%%%%%% PROJECT AND DETECTORS VOLUME list for acronyms below %%%%%%%%%%%%
+
+
+
+  \dwords{cpa}{CPA}{cathode plane assembly}{cathode plane assemblies}{The component of the   \dword{sp} detector module that provides the drift HV cathode}
+
+  \dword{fc}{FC}{field cage}{The component of a   \dword{lartpc} that contains and shapes the applied \efield}
+
+  \dword{cpafc}{CPA/FC}{A pair of   \dword{cpa} panels and the top and bottom   \dword{fc} portions that attach to the pair; an intermediate assembly for installation into the   \dword{spmod} }
+
+  \dword{topfc}{top FC}{top field cage}{The horizontal portions of the   \dword{sp}   \dword{fc}   on the top of the   \dword{tpc}}
+
+  \dword{botfc}{bottom FC}{bottom field cage}{The horizontal portions of the   \dword{sp}   \dword{fc} on the bottom of the   \dword{tpc}}
+
+  \dword{ewfc}{endwall FC}{endwall field cage}{The vertical portions of the   \dword{sp}   \dword{fc} near the wall}
+
+  \dword{gp}{GP}{ground plane}{An electrode held electrically neutral relative to Earth ground voltage; it is mounted on the   \dword{fc} in a   \dword{spmod} to protect the cryostat wall}
+
+  \dword{gg}{ground grid}{An electrode held electrically neutral relative to Earth ground voltage; it is installed between the cathode and the     \dwords{pd} in a   \dword{dpmod} to protect the     \dwords{pmt}, maintaining high transparency to light}
+
+
+  \dword{alara}{ALARA}{as low as reasonably
+  achievable}{Typically used with regard management of radiation
+  exposure but may be used more generally. It means making every
+  reasonable effort to maintain e.g., exposures, to as far below the
+  limits as practical, consistent with the purpose for that the
+  activity is undertaken}
+
+  \dword{ecal}{ECAL}{electromagnetic calorimeter}{A detector
+  component that measures energy deposition of traversing particles (in the near detector conceptual design)}
+
+  \dword{hv}{HV}{high voltage}{Generally describes a voltage
+  applied to drive the motion of free electrons through some media, e.g., LAr}
+
+% can also use in the text:   \dword{sp}   \dword{detmodule} 
+  \dword{spmod}{SP module}{single-phase DUNE   \dword{fd} module}
+  \dword{dpmod}{DP module}{dual-phase DUNE   \dword{fd} module}
+%  \dword{dsp}{DUNE-SP}{The   \dword{sp} DUNE detector} % No they are det modules!
+%  \dword{ddp}{DUNE-DP}{The   \dword{dp} DUNE detector}% No they are det modules!
+
+  \dword{tcoord}{TC}{technical coordinator}{A member of the   \dword{dune} management team responsible for organizing the technical aspects of the project effort; is head of   \dword{tc}}
+
+  \dword{rcoord}{RC}{resource coordinator}{A member of the   \dword{dune} management team responsible for coordinating the financial resources of the project effort}
+
+%  \dword{tc}{TCN}{technical coordination}{The DUNE organization responsible for overall integration of the detector elements and successful execution of the detector construction project; areas of responsibility include general project oversight, systems engineering,   \dword{qa} and safety}
+  \dword{tc}{technical coordination}{The DUNE organization responsible for overall integration 
+of the detector elements and successful execution of the detector
+construction project; areas of responsibility include 
+general project oversight, systems engineering,   \dword{qa} and safety}
+
+  \dword{exb}{EB}{executive board}{The highest level DUNE
+  decision-making body for the collaboration}
+
+  \dword{tb}{TB}{technical board}{The DUNE organization responsible for
+  evaluating technical decisions}
+
+  \dword{rrb}{RRB}{Resources Review Board}{A part of   \dword{dune}'s international project governance structure, composed of representatives of all funding agencies that sponsor the project, and of    \dword{fnal} management, established to provide coordination among funding partners and oversight of   \dword{dune}}
+
+  \dword{inc}{INC}{International Neutrino Council}{A highest-level international advisory body to the U.S.   \dword{doe} and the    \dword{fnal} directorate on matters related to the    \dword{lbnf} and the    \dword{pip2} projects. This council is composed of representatives from the international funding agencies and    \dword{cern} that make major contributions the infrastructure}
+
+
+%%%%%%%%%%%%% PHYSICS AND DETECTORS VOLUME list for acronyms below %%%%%%%%%%%%
+
+  \dword{cc}{CC}{charged current}{Refers to an interaction
+  between elementary particles where a charged weak force carrier
+  ($W^+$ or $W^-$) is exchanged}
+
+
+  \dword{dis}{DIS}{deep inelastic scattering}{Refers to the 
+  interaction of an elementary charged particle with a nucleus in an
+  energy range where the interaction can be modeled as taking place with
+  individual nucleons}
+
+  \dword{fsi}{FSI}{final-state interactions}{Refers to
+  interactions between elementary or composite particles subsequent to
+  the initial, fundamental particle interaction, such as may occur as
+  the products exit a nucleus}
+
+  \dword{geant4}{Geant4}{A
+  software toolkit for the simulation of the passage of particles
+  through matter using   \dword{mc} methods}
+
+  \dword{genie}{GENIE}{Generates Events for Neutrino Interaction
+  Experiments}{Software providing an object-oriented neutrino
+  interaction simulation resulting in kinematics of the products of
+  the interaction}
+
+  \dword{mc}{MC}{Monte Carlo}{Refers to a method of numerical
+  integration that entails the statistical sampling of the integrand
+  function. 
+  Forms the basis for some types of detector and physics simulations}
+
+  \dword{qe}{QE}{quasi-elastic}{Refers to interaction between
+  elementary particles and a nucleus in an energy range where the
+  interaction can be modeled as occurring between constituent quarks
+  of one nucleon and resulting in no bulk recoil of the resulting
+  nucleus}
+
+%%%%%%%%%%%%%%%%%%%%%%%%% PROJECT VOLUME list for acronyms below %%%%%%%%%%%%%%%
+
+  \dword{mou}{MoU}{memorandum of understanding}{A document
+  summarizing an agreement between two or more parties}
+
+  \dword{pip2}{PIP-II}{Proton Improvement Plan II}{A   \dword{fnal} project for
+  improving the protons on target delivered delivered by the   \dword{lbnf} neutrino production beam. 
+  This is version two of this plan and it is planned to be followed by a PIP-III}
+  
+  \dword{sdsta}{SDSTA}{South Dakota Science and Technology
+  Authority}{The legal entity that manages   \dword{surf}, in Lead, S.D}
+  
+  \dword{sdsd}{SDSD}{Fermilab South Dakota Services Division}{A Fermilab division responsible providing host laboratory functions at SURF in South Dakota}
+
+  \dword{firus}{FIRUS}{Facility Information Reporting Utility System}
+ {The safety system at   \dword{surf}}
+
+  \dword{bsi}{BSI}{building and site infrastructure}
+ {The work package for outfitting of the   \dword{lbnf} underground infrastructure}
+
+
+
+  \dword{wbs}{WBS}{work breakdown structure}{An organizational
+  project management tool by which the tasks to be performed are
+  partitioned in a hierarchical manner}
+
+%%%%%%%%%%%%%%%%%%%%%%%%% PHYSICS VOLUME list for acronyms below %%%%%%%%%%%%%%%
+  \dword{br}{BR}{branching ratio}{A fractional probability for a
+  decay of a composite particle to occur into some specified set or
+  sets of products}
+  \dword{bsm}{BSM}{beyond the standard model}
+
+  \dword{dm}{DM}{dark matter}{The term given to the unknown
+  matter or force that explains measurements of galaxy motion % motion of galaxies
+  that are otherwise inconsistent with the amount of mass associated
+  with the observed amount of photon production}
+  
+  \dword{bdm}{BDM}{boosted dark matter}{A new model that describes a relativistic dark matter particle boosted by the annihilation of heavier dark matter particles in the galactic center or the sun}
+
+  \dword{cern}{CERN}{European Organization for Nuclear
+Research}{The leading particle physics laboratory in Europe and home to the ProtoDUNEs. (In French, the Organisation Europ\'{e}enne pour la Recherche Nucl\'{e}aire, derived from Conseil Europ\'{e}en pour la Recherche Nucl\'{e}aire)}
+
+
+  \dword{dsnb}{DSNB}{diffuse supernova neutrino background}{The
+  term describing the pervasive, constant flux of neutrinos due to all
+  past supernova neutrino bursts}
+
+  \dword{espp}{ESPP}{European Strategy for Particle Physics}{The
+%European Strategy for Particle Physics is the 
+cornerstone of Europe's
+decision-making process for the long-term future of the
+field. Mandated by the   \dword{cern} Council, it is formed through a broad
+consultation of the grass-roots particle physics community, it
+actively solicits the opinions of physicists from around the world,
+and it is developed in close coordination with similar processes in
+the USA and Japan in order to ensure coordination between regions and
+optimal use of resources globally}
+
+  \dword{gar}{GAr}{gaseous argon}{argon in its gas phase}
+  \dword{gartpc}{GArTPC}{gaseous argon time-projection chamber}{A   \dword{tpc} filled with gaseous argon; a possible technology choice for the   \dword{nd}}
+
+
+
+  \dword{globes}{GLoBES}{General Long-Baseline Experiment
+  Simulator}{A software package for simulating energy spectra of
+  neutrino flux, interactions, and energy spectra measured after application of some
+  model of a detector response)}
+
+  \dword{snowglobes}{SNOwGLoBES}{SuperNova
+Observatories with GLoBES} {From the official description: SNOwGLoBES is public software for computing interaction rates and distributions of observed quantities for   \dword{snb} neutrinos in common detector materials} % (Anne thinks this was too long.)
+% The intent is to provide a very simple and fast code and data package which can be used for tests of observability of physics signatures in current and future detectors, and for evaluation of relative sensitivities of different detector configurations. The event estimates are made using available cross-sections and parameterized detector responses. Water, argon, scintillator and lead-based configurations are included. The package makes use of GLoBES front-end software. SNOwGLoBES is not intended to replace full detector simulations; however output should be useful for many types of studies}
+
+
+% are these really used anywhere?
+  \dword{l/e}{L/E}{length-to-energy ratio}
+  \dword{lri}{LRI}{long-range interactions}
+%  \dword{solarmass}{$M_{\odot}$}{solar mass}
+
+  \dword{nc}{NC}{neutral current}{Refers to an interaction
+  between elementary particles where a neutrally charged weak force carrier
+  ($Z^0$) is exchanged}
+
+  \dword{nh}{NH}{normal hierarchy}{Refers to the neutrino mass
+  eigenstate ordering whereby the sign of the mass squared difference
+  associated with the atmospheric neutrino problem is positive}
+
+  \dword{ih}{IH}{inverted hierarchy}{Refers to the neutrino mass
+  eigenstate ordering whereby the sign of the mass squared difference
+  associated with the atmospheric neutrino problem is negative}
+
+  \dword{no}{NO}{normal ordering}{Refers to the neutrino mass
+  eigenstate ordering whereby the sign of the mass squared difference
+  associated with the atmospheric neutrino problem is positive}
+
+  \dword{io}{IO}{inverted ordering}{Refers to the neutrino mass
+  eigenstate ordering whereby the sign of the mass squared difference
+  associated with the atmospheric neutrino problem is negative}
+
+
+  \dword{msw}{MSW}{Mikheyev-Smirnov-Wolfenstein effect}{Explains
+  the oscillatory behavior of neutrinos produced inside the sun as
+  they traverse the solar matter}
+
+  \dword{nsi}{NSI}{nonstandard interaction}{A general class of
+  theory of elementary particles other than the Standard Model}
+
+
+
+  \dword{pfive}{P5}{Particle Physics Project Prioritization
+Panel}{The Particle Physics Project Prioritization Panel (P5) was a
+subpanel of the High Energy Physics Advisory Panel (HEPAP). It completed
+its Report, a ten-year strategic plan for high energy physics in the
+U.S., in 2014. This report included a recommendation that ``host a world-leading neutrino
+program that will have an optimized set of short- and long-baseline neutrino oscillation experiments, and its long-term focus
+is a reformulated venture referred to here as the Long Baseline
+Neutrino Facility (LBNF)''}
+
+  \dword{sme}{SME}{standard-model extension}{an effective field theory that contains the   \dword{sm}, general relativity, and all possible operators that break Lorentz symmetry (Wikipedia)}
+
+  \dword{susy}{SUSY}{supersymmetry}{Theoretical symmetry between a fermion and a boson}
+
+  \dword{wimp}{WIMP}{weakly-interacting massive particle}{A
+  hypothesized particle that may be a component of dark matter}
+
+%%%%%%%%%%%%%%%%%%%%%%%%% DETECTORS VOLUME list for acronyms below %%%%%%%%%%%%%%%
+
+  \dword{ce}{CE}{cold electronics}{Analog and digital readout electronics that operate at cryogenic temperatures}
+
+  \dword{crp}{CRP}{charge-readout plane}{In the   \dword{dp} technology, a  collection of
+  electrodes in a planar arrangement placed at a particular voltage
+  relative to some applied \efield such that drifting electrons
+  may be collected and their number and time may be measured}
+
+  \dword{dram}{DRAM}{dynamic random access memory}{A computer memory technology}
+
+
+  \dword{fnal}{Fermilab}
+{Fermi National Accelerator Laboratory}{U.S. national laboratory in Batavia, IL. It is the laboratory that hosts   \dword{dune} and serves as its near site}
+
+  \dword{bnl}{BNL}{Brookhaven National Laboratory}{US national laboratory in Upton, NY}
+
+  \dword{slac}{SLAC}{SLAC National Accelerator Laboratory}{US national laboratory in Menlo Park, CA}
+
+  \dword{lbnl}{LBNL}{Lawrence Berkeley National Laboratory}{US national laboratory in Berkeley, CA}
+
+  \dword{anl}{ANL}{Argonne National Laboratory}{US national laboratory in Lemont, IL}
+
+  \dword{lanl}{LANL}{Los Alamos National Laboratory}{US national laboratory in Los Alamos, NM}
+
+  \dword{fs}{FS}{full stream}{Relates to a data stream that has not undergone selection, compression or other form of reduction}
+
+  \dword{lem}{LEM}{large electron multiplier}{A micro-pattern detector suitable for use in ultra-pure argon vapor; LEMs consist of copper-clad PCB boards with sub-millimeter-size holes through which electrons undergo amplification}
+
+
+  \dword{lng}{LNG}{liquefied natural gas}{Pertaining to natural gas in its liquid phase}
+
+
+
+  \dword{mip}{MIP}{minimum ionizing particle}{Refers to a
+  particle traversing some medium such that the particle's mean energy loss is  
+  near the minimum}
+%{Refers to a  momentum traversing some medium such that the particle is losing  near the minimum amount of energy per distance traversed} % some \mip and some   \dword{mip}. If time, rectify. ??
+
+
+  \dword{pd}{PD}{photon detector}{The detector
+  elements involved in measurement of the number and arrival times of
+  optical photons produced in a detector module} 
+
+  \dword{pmt}{PMT}{photomultiplier tube}{A device that makes use
+  of the photoelectric effect to produce an electrical signal from the
+  arrival of optical photons}
+
+  \dword{ppm}{ppm}{parts per million}{A concentration equal to one part in $10^{-6}$}
+  \dword{ppb}{ppb}{parts per billion}{A concentration equal to one part in $10^{-9}$}
+  \dword{ppt}{ppt}{parts per trillion}{A concentration equal to one part in $10^{-12}$}
+
+% these should be abbrev
+  \dword{rio}{RIO}{reconfigurable input output}
+
+%signal over noise ratio -- merge these two (tpcelec sp uses 2nd)
+
+  \dword{s/n}{S/N}{signal-to-noise}{signal-to-noise ratio}
+  \dword{snr}{\mbox{S/N}}{signal-to-noise ratio}
+
+
+  \dword{ssp}{SSP}{  \dword{sipm} signal processor}
+
+  \dword{sbn}{SBN}{Short-Baseline Neutrino}{A   \dword{fnal} program consisting of three collaborations,   \dword{microboone},   \dword{sbnd}, and   \dword{icarus}, to perform sensitive searches for $\nue$ appearance and $\numu$ disappearance in the Booster Neutrino Beam}
+
+  \dword{stt}{STT}{straw tube tracker}
+
+
+  \dword{wire board}{wire board}{At the head end of the APA in the   \dword{sp}   \dword{tpc}, stacks of electronics boards referred to as ``wire boards'' are arrayed to anchor the wires.  They also provide the connection between the wires and the cold electronics} %?? long for a word. ??
+
+  \dword{wls}{WLS}{wavelength-shifting}{A material or process by
+  which incident photons are absorbed by a material and photons are
+  emitted at a different, typically longer, wavelength}
+  
+  \dword{tpb}{TPB}{tetra-phenyl butadiene}{A   \dword{wls} material}
+
+  \dword{ptp}{PTP}{p-terphenyl}{A   \dword{wls} material}
+
+  \dword{sft}{SFT}{signal feedthrough}{A cryostat penetration allowing for the passage of cables or other extended parts}
+  \dword{sftchimney}{SFT chimney}{signal feedthrough chimney}{In the   \dword{dp} technology, a volume above the cryostat penetration used for a signal feedthrough}
+
+
+  \dword{catiroc}{CATIROC}{charge and time integrated readout chip}{A complete read-out chip manufactured in AustriaMicroSystem designed to read arrays of 16 photomultipliers}
+
+  \dword{wr}{WR}{White Rabbit}{A component of the timing system that forwards clock signal and time-of-day reference data to the master timing unit}
+
+  \dword{mch}{MCH}{MicroTCA Carrier Hub}{An network switching device}
+
+  \dword{wrmch}{WR-MCH}{White Rabbit   \dword{utca} Carrier Hub}{A card mounted in   \dword{utca} crate that recieves time syncronization information and trigger data packets over   \dword{wr} network and disributes them to the   \dword{amc} over   \dword{utca} backplane} 
+
+  \dword{wrtsn}{WR-TSN}{White Rabbit TimeStamping Node}{A unit on the   \dword{wr} network that timestamps the trigger signals and sends out trigger data packets to   \dword{wrmch}}
+
+% these should be abbrevs
+  \dword{cmp}{CMP}{configuration management plan}
+  \dword{qap}{QAP}{quality assurance plan} %{A project management device for planning   \dword{qa}}
+  \dword{ieshp}{IESHP}{integrated environmental, safety and health plan}%{Refers to the LBNF/DUNE project planning instrument}
+  \dword{dmp}{DMP}{data management plan} %{A project management device to state how the experimental data will be managed}
+  \dword{qam}{QAM}{quality assurance manager} %{The manager of   \dword{qa} for the LBNF/DUNE project}
+
+  \dword{dss}{DSS}{detector support system}{The system used to support a   \dword{sp}   \dword{detmodule} within its cryostat}
+
+  \dword{ddss}{DDSS}{DUNE detector safety system}{The system used to manage key aspects of detector safety}
+
+%  \dword{itf}{ITF}{integration and test facility}{A facility where various detector components will be tested prior to installation}  IS NO MORE - I WANT THIS TO CAUSE AN ERROR IF IT'S CALLED!
+
+  \dword{lc}{LC}{logistics center}{A facility where   \dword{lbnf} and   \dword{dune} components will be received and transhipped to   \dword{surf}}
+
+  \dword{tco}{TCO}{temporary construction opening}{An opening in the side of a cryostat through which detector elements are brought into the cryostat; utilized during construction and installation}
+
+  \dword{surf}{SURF}{Sanford Underground Research Facility}{The laboratory in South Dakota where the   \dword{lbnf}   \dword{fscf} will be constructed and the   \dword{dune}   \dword{fd} will be installed and operated}
+
+  \dword{sit}{SIT}{surface installation team}{An organizational unit responsible for logistics and integration in South Dakota}
+
+  \dword{uit}{UIT}{underground installation team}{An organizational unit responsible for installation in the underground area at the   \dword{surf} site}
+
+  \dword{cmgc}{CMGC}{construction manager/general contractor}{The organizational unit responsible for management of the construction of conventional facilities at the underground area at the   \dword{surf} site}
+
+%  \dword{cdrev}{CDR}{conceptual design review}{A project management device by which a conceptual design is reviewed} 
+  \dword{cdrev}{conceptual design review}{A project management device by which a conceptual design is reviewed} 
+%  \dword{pdr}{PDR}{preliminary design review}{A project management device by which an early design is reviewed} % do we want this for `review' not `report'?
+%  \dword{fdr}{FDR}{final design review}{A project management device by which a final design is reviewed}
+  \dword{pdr}{preliminary design review}{A project management device by which an early design is reviewed} % do we want this for `review' not `report'?
+  \dword{fdr}{final design review}{A project management device by which a final design is reviewed}
+%  \dword{prr}{PRR}{production readiness review}{A project management device by which the production readiness is reviewed}
+  \dword{prr}{production readiness review}{A project management device by which the production readiness is reviewed}
+%  \dword{irr}{IRR}{installation readiness review}{A project management device by which the plan for installation is reviewed}
+  \dword{irr}{installation readiness review}{A project management device by which the plan for installation is reviewed}
+%  \dword{orr}{ORR}{operational readiness review}{A project management device by which the operational readiness is reviewed}
+  \dword{orr}{operational readiness review}{A project management device by which the operational readiness is reviewed}
+  \dword{ppr}{production progress review}{A project management device by which the progress of production is reviewed} %changed to dune word 1/13 
+  \dword{edms}{EDMS}{engineering document management system}{A computerized document management system developed and supported at   \dword{cern} in which some DUNE documents, drawings and engineering models are managed}
+  \dword{ecr}{ECR}{engineering change request}{The first step in the change control process in which a proposed change is described}
+  \dword{docdb}{DocDB}{Document DataBase}{A computerized document management system developed and supported at   \dword{fnal} in which virtually all LBNF and most DUNE documents are managed (docs.dunescience.org)}
+
+  \dword{wrgm}{WR grandmaster}{White Rabbit grandmaster}
+
+
+%%%%% Software and computing %%%%
+
+  \dword{larsoft}{LArSoft}{Liquid Argon Software}{A shared base of physics software across   \dword{lartpc} experiments}
+% these should be abbrevs
+  \dword{nova}{NOvA}{The   \dword{nova} off-axis neutrino oscillation experiment at   \dword{fnal}}
+  \dword{minerva}{MINERvA}{Neutrino cross sections experiment at   \dword{fnal}}
+  \dword{microboone}{MicroBooNE}{A   \dword{lartpc} neutrino oscillation experiment at   \dword{fnal}}
+  \dword{sbnd}{SBND}{The Short-Baseline Near Detector experiment at    \dword{fnal}}
+  \dword{nexo}{nEXO}{Enriched Xenon Observatory}{Experiment at Lawrence Livermore National Laboratory (U.S. national lab in Livermore, CA) searching for new physics with neutrinoless double-beta decay}
+  \dword{argoneut}{ArgoNeuT}{The ArgoNeuT test-beam experiment and   \dword{lartpc} prototype at    \dword{fnal}}
+  \dword{icarus}{ICARUS}{A neutrino experiment that was located at the Laboratori Nazionali del Gran Sasso (LNGS) in Italy, then refurbished at   \dword{cern} for re-use in the same neutrino beam from   \dword{fnal} used by the MiniBooNE,   \dword{microboone} and   \dword{sbnd} experiments. The ICARUS detector is being reassembled at   \dword{fnal}}
+  \dword{atlas}{ATLAS}{One of two general-purpose detectors at the   \dword{lhc}. It investigates a wide range of physics, from the measurements of the Higgs boson properties to searches for extra dimensions and particles that could make up   \dword{dm}}
+
+  \dword{lbne}{LBNE}{Long Baseline Neutrino Experiment (a terminated US project that was reformulated in 2014 under the auspices of the new   \dword{dune} collaboration, an internationally coordinated and internationally funded program, with   \dword{fnal} as host)}
+
+
+  \dword{lbno}{LBNO}{Long Baseline Neutrino Observatory} {A terminated European project that, during its six-year duration, assessed the feasibility of a next-generation deep underground neutrino observatory in Europe)}
+%  \dword{lbno}{LBNO}{Long Baseline Neutrino Observatory}{During its six-year duration, its members assessed the feasibility of a next-generation deep underground neutrino observatory in Europe}
+
+
+  \dword{wirecell}{Wire-Cell}{A tomographic automated \threed neutrino event reconstruction method for     \dwords{lartpc}}
+  \dword{wct}{WCT}{Wire-Cell Toolkit}{A software toolkit with data flow processing components for   \dword{lartpc} noise and signal simulation, noise filtering, signal processing, and tomographic \threed ionization activity imaging}
+  \dword{ftslite}{F-FTS-lite}{Light-weight version of the   \dword{fnal} File Transfer system used for rapid data transfers out of the online systems}
+  \dword{fts}{FTS}{File Transfer System}{A file transfer system developed at   \dword{fnal} to catalog and move data to permanent storage}
+
+%%% new ones that I haven't categorized (Anne)
+  \dword{35t}{35 ton prototype}{A prototype cryostat and   \dword{sp} detector built at   \dword{fnal} before the   \dword{protodune} detectors}
+
+  \dword{mcr}{MCR}{main communications room}{Space at the   \dword{fd} site for cyber infrastructure}
+
+  \dword{cuc}{CUC}{central utility cavern}{The utility cavern at the 4850L of   \dword{surf} located between the two detector caverns. It contains utilities such as central cryogenics and other systems, and the underground data center and control room}
+
+  \dword{cfd}{CFD}{computational fluid dynamics}{High performance computer-assisted modeling of fluid dynamical systems}
+  \dword{vuv}{VUV}{vacuum ultra-violet}
+  \dword{tallbo}{TallBo}{A cylindrical cryostat at   \dword{fnal} primarily used for developing scintillation light collection technologies for   \dword{lartpc} detectors}
+
+  \dword{root}{ROOT}{A modular scientific software toolkit. It provides all the functionalities needed to deal with big data processing, statistical analysis, visualisation and storage. It is mainly written in C++ but integrated with other languages such as Python and R}
+
+  \dword{eos}{EOS}{EOS}{The XRootD-based distributed file system developed by CERN}
+  \dword{ehn1}{EHN1}{Experiment Hall North One}{Location at CERN of the ProtoDUNE experiments}
+  \dword{led}{LED}{Light-emitting diode}
+  \dword{rtd}{RTD}{resistance temperature detector}{A temperature sensor consisting of a material with an accurate and reproducible resistance/temperature relationship}
+  \dword{swc}{SWC}{Software \& Computing}
+  \dword{las}{LAS}{LEM-anode Sandwich}{In the   \dword{dp} technology, a   \dword{lem} and its corresponding anode are mounted together in a module called a LEM-anode sandwich}
+
+  \dword{roi}{ROI}{region of interest}
+  \dword{hpc}{HPC}{high-performance computing}{high-performance computing facilities; generally computing facilities emphasizing parallel computing with aggregate power of more than a teraflop}
+
+
+  \dword{comfund}{common fund}{The shared resources of the collaboration}
+  \dword{ims}{IMS}{integrated master schedule}{A project management device consisting of linked tasks and milestones}
+
+  \dword{hvdb}{HVDB}{HV divider board}
+  \dword{sas}{SAS}{Another term for the materials airlock; a pass-through chamber used to ensure safe transfer of materials into a clean room, avoiding contamination in both directions}
+
+  \dword{fea}{FEA}{finite element analysis}{Simulation of a physical phenomenon using the numerical technique called Finite Element Method (FEM), a numerical method for solving problems of engineering and mathematical physics}
+
+  \dword{fss}{FSS}{field shaping strips}
+  \dword{lvds}{LVDS}{low-voltage differential signaling}
+
+
+
+%electrostatic discharge  
+  \dword{esd}{ESD}{electrostatic discharge}%{ESD is the sudden flow of electricity between two electrically charged objects caused by contact, an electrical short, or dielectric breakdown. ESD can cause failure of electronic components such as integrated circuits}
+
+  \dword{rp}{RP}{resistive panel}{Resistive panels form the constant potential surfaces for a   \dword{spmod}   \dword{cpa}; they are composed of a thin layer of carbon-impregnated Kapton and laminated to both sides of a \frfour sheet}
+
+  \dword{uhmwpe}{UHMWPE}{ultra-high molecular weight polyethylene}
+
+  \dword{cts}{CTS}{Cryogenic Test System}
+  \dword{plc}{PLC}{programmable logic controller}
+
+  \dword{mppc}{MPPC}{\SI{6}{mm}$\times$\SI{6}{mm} Multi-Pixel Photon Counters produced by Hamamatsu\texttrademark{} Photonics K.K}
+
+  \dword{sfp}{SFP}{small form-factor pluggable}{a particular standard for optical transceivers}
+
+  \dword{minipod}{MiniPOD}{miniature parallel optical device}{a family of types of multi-channel optical transceivers}
+
+  \dword{ccc}{CCC}{configuration change command}
+  \dword{act}{ACT}{activation time stamp}
+  \dword{lcm}{LCM}{light calibration module}
+  \dword{lpm}{LPM}{light pulser module}
+  \dword{dac}{DAC}{digital-to-analog converter}
+  \dword{arapuca}{ARAPUCA}{A   \dword{pds} design that consists of a light trap that captures wavelength-shifted photons inside boxes with highly reflective internal surfaces until they are eventually detected by   \dword{sipm} detectors or are lost}
+  \dword{sarapu}{S-ARAPUCA}{Standard   \dword{arapuca} design with different   \dword{wls} coatings on both faces of the dichroic filter window(s) of the cell}
+  \dword{xarapu}{X-ARAPUCA}{Extended   \dword{arapuca} design with   \dword{wls} coating on only the external face of the dichroic filter window(s) but with a   \dword{wls} doped plate inside the cell}
+  \dword{feb}{FEB}{front-end board}
+
+  \dword{lsnd}{LSND}{Liquid Scintilator Neutrino Detector}{A scintillation detector and associated experiment located at Los Alamos National Laboratory}
+
+  \dword{cvn}{CVN}{convolutional visual network}{An algorithm for identifying neutrino interactions based on their topology and without the need for detailed reconstruction algorithms}
+
+  \dword{pandora}{Pandora}{The Pandora multi-algorithm approach to pattern recognition} 
+
+%Lisa added
+  \dword{pma}{PMA}{Projection Matching Algorithm}{A reconstruction algorithm that combines \twod reconstructed objects to form a \threed representation}
+  \dword{bdt}{BDT}{boosted decision tree}{A method of multivariate analysis}
+  \dword{cnn}{CNN}{convolutional neural network}{A deep learning technique most commonly applied to analyzing visual imagery}
+  \dword{pdg}{PDG}{Particle Data Group}
+
+% from CISC
+  \dword{pci}{PCI}{Peripheral Component Interconnect}
+
+  \dword{labview}{LabVIEW}{Laboratory Virtual Instrument Engineering Workbench is a system-design platform and development environment for a visual programming language from National Instruments}
+
+  \dword{pcb}{PCB}{printed circuit board}
+
+  \dword{crio}{cRIO}{Compact Reconfigurable Input Output}
+
+  \dword{dcs}{DCS}{Distributed Communications System}
+
+  \dword{opc-ua}{OPC-UA}{OPC  Unified Architecture is a machine to machine communication protocol for industrial automation developed by the OPC Foundation. OPC stands for Object Linking and Embedding for Process Control}
+
+  \dword{cabangle}{Cabibbo angle}{A quark mixing parameter that governs the coupling of up quarks to strange quarks}
+  \dword{valor}{VALOR}{A neutrino oscillation fitting framework that is used by   \dword{t2k}; the name stands for VALencia-Oxford-Rutherford, the original three institutions that developed it}
+  \dword{cafana}{CAFAna}{Common Analysis File Analysis}
+  \dword{pca}{PCA}{principal component analysis}{A statistical procedure that uses an orthogonal transformation to convert a set of observations of possibly correlated variables into a set of values of linearly uncorrelated variables called principal components (Wikipedia)}
+  \dword{numi}{NuMI}{a set of facilities at   \dword{fnal}, collectively called ``Neutrinos at the Main Injector.''  The NuMI neutrino beamline target system converts an intense proton beam into a focused neutrino beam}
+  \dword{gibuu}{GiBUU}{Giessen Boltzmann-Uehling-Uhlenback Project; a unified theory and transport framework in the MeV and GeV energy regimes for elementary reactions on nuclei }
+  \dword{rpa}{RPA}{random phase approximation} {an approximation method commonly used for describing the dynamic linear electronic response of electron systems (Wikipedia)}%(from nu-osc 05)}
+  \dword{t2k}{T2K}{T2K (Tokai to Kamioka) is a long-baseline neutrino experiment in Japan studying neutrino oscillations}
+  \dword{mptdet}{MPT detector}{multipurpose tracking detector}
+
+  \dword{lariat}{LArIAT}{The repurposed ArgoNeuT   \dword{lartpc}, modified for use in a charged particle beam, dedicated to the calibration and precise characterization of the output response of these detectors}
+
+  \dword{captain}{CAPTAIN}{Experimental program sited at   \dword{lanl} that is designed to make measurements of scientific importance to   \dword{lbl} neutrino physics and physics topics that will be explored by large underground detectors}
+
+  \dword{dayabay}{Daya Bay}{a neutrino-oscillation experiment in Daya Bay, China, designed to measure the mixing angle $\Theta_{13}$  using antineutrinos produced by the reactors of the Daya Bay and Ling Ao nuclear power plants}
+
+  \dword{nuwro}{NuWro}{neutrino interaction generator}
+
+  \dword{neut}{NEUT}{neutrino interaction generator}{A neutrino interaction simulation program library for the studies of atmospheric accelerator neutrinos}
+
+  \dword{minos}{MINOS}{A long-baseline neutrino experiment, with a near detector at   \dword{fnal} and a far detector in the Soudan mine in Minnesota, designed to observe the phenomena of neutrino oscillations (ended data runs in 2012)}
+
+
+  \dword{efig}{EFIG}{Experimental Facilities Interface Group}{The body responsible for the required high-level coordination between the   \dword{lbnf} and   \dword{dune} projects}
+  \dword{ashriver}{Ash River}{The Ash River, Minnesota, USA   \dword{nova} experiment far site, used as an assembly test site for   \dword{dune}} 
+
+%  \dword{ipd}{PI-DIR}{project integration director}{Responsible for integration and installation of   \dword{lbnf} and   \dword{dune} deliverables in South Dakota. Manages the   \dword{integoff}}
+  \dword{ipd}{project integration director}{Responsible for integration and installation of   \dword{lbnf} and   \dword{dune} deliverables in South Dakota. Manages the   \dword{integoff}}
+
+  \dword{jpo}{JPO}{Joint Project Office}{The framework through which team members from the LBNF project office,   \dword{integoff}, and DUNE   \dword{tc} work together to provide coherence in project support functions across the global enterprise. 
+Its functions include global project configuration and integration, installation planning and coordination, scheduling, safety assurance, technical review planning and oversight, development of partner agreements, and financial reporting}
+
+  \dword{ifbeam}{IFbeam}{Database that stores beamline information indexed by timestamp}
+
+  \dword{marley}{MARLEY}{Model of Argon Reaction Low Energy Yields}{Developed at UC Davis, MARLEY is the first realistic model of neutrino electron interactions on argon for enegies less than \SI{50}{MeV}. This includes the energy range important for   \dword{snb} neutrinos and also solar 8--boron neutrinos}
+
+  \dword{es}{ES}{elastic scattering}{Events in which a neutrino
+elastically scatters off of another particle}
+
+
+  \dword{cno}{CNO}{carbon nitrogen oxygen}{The CNO cycle (for carbon-nitrogen-oxygen) is one of the two known sets of fusion reactions by which stars convert hydrogen to helium, the other being the proton-proton chain reaction (pp-chain reaction). In the CNO cycle, four protons fuse, using carbon, nitrogen, and oxygen isotopes as catalysts, to produce one alpha particle, two positrons and two electron neutrinos}
+
+  \dword{sdwf}{SDWF}{South Dakota Warehouse Facility}{Warehousing operations in South Dakota responsible for receiving LBNF and DUNE goods and coordinating shipments to the Ross shaft at   \dword{surf}}
+
+  \dword{wms}{WMS}{warehouse management system}{Commercial software package used to track shipments and interface to freight forwarders. This includes a database for shipping}
+
+  \dword{dcdb}{DCDB}{DUNE construction database}{Database used by DUNE to track the history and testing of all parts of each   \dword{detmodule}}
+
+  \dword{aup}{AUP}{acceptance for use and possession}{Required for beneficial occupancy of the underground areas at   \dword{surf} for   \dword{lbnf} and   \dword{dune}}
+
+  \dword{bms}{BMS}{building management system}{Part of the safety system at   \dword{surf} that includes the fire and life safety system}
+  \dword{fls}{FLS}{fire and life safety system}{Part of the safety system at   \dword{surf}}
+
+
+
+  \dword{sno}{SNO}{Sudbury Neutrino Observatory}{The Sudbury Neutrino Observatory was a detector built 6800 feet under ground, in INCO's Creighton mine near Sudbury, Ontario, Canada. SNO was a heavy-water Cherenkov detector designed to detect neutrinos produced by fusion reactions in the sun}
+
+  \dword{sk}{Super-Kamiokande}{Experiment sited in the Kamioka-mine, Hida-city, Gifu, Japan that uses a large water Cherenkov detector to study neutrino properties through the observation of solar neutrinos, atmospheric neutrinos and man-made neutrinos}
+% (too long and not in line with defs of other experiments) From the official website~\cite{skwebsite}: Super-Kamiokande is a large water Cherenkov detector.  The Super-Kamiokande detector consists of a stainless-steel tank,39.3 m diameter and 41.4 m tall, filled with 50,000 tons of ultra pure water. About 13,000 photo-multipliers are installed on the tank wall. The detector is located at 1,000 meter underground in the Kamioka-mine, Hida-city, Gifu, Japan}
+
+  \dword{id}{ID}{inner diameter}{Inner diameter of a tube}
+
+  \dword{od}{OD}{outer diameter}{Outer diameter of a tube}
+
+
+  \dword{rms}{RMS}{root mean square}{The square root of the arithmetic mean of the squares of a set of values, used as a measure of the typical magnitude of a set of numbers, regardless of their sign}
+
+  \dword{orc}{ORC}{operational readiness clearance}{Final safety approval prior to the start of operation}
+
+  \dword{gsc}{GSC group}{global safety coordination group}{DUNE group that evaluates applicable codes and standards, including international code equivalency, for the design, assembly, and installation of the   \dword{fd}}
+
+  \dword{ha}{HA}{hazard analysis}{A first step in a process to assess risk; the result of hazard analysis is the identification of the hazards present for a task or process}%different types of hazards}(anne)
+  \dword{har}{HAR}{hazard analysis report}
+
+  \dword{tap}{TAP}{trip action plan}{A document required for any trip by a worker to the underground area at   \dword{surf}, per that site's access control program; it describes the work to be accomplished during the trip} % ask Jim Stewart to check
+
+  \dword{em}{EM}{emergency management}
+  \dword{ert}{ERT}{emergency response team}
+
+% from DP-PDS --begin
+  \dword{ndk}{NDK}{nucleon decay}{The hypothetical, baryon number violating decay of a proton or a bound neutron into lighter particles}
+
+  \dword{emi}{EMI}{electromagnetic interference}{Disturbance generated by an external source that affects an electrical circuit by electromagnetic induction, electrostatic coupling, or conduction}
+
+  \dword{pe}{PE}{photoelectron}{An electron ejected from the surface of a material by the photoelectric effect}
+
+  \dword{spe}{SPE}{single photoelectron}{A single photoelectron}
+
+  \dword{fwhm}{FWHM}{full width at half maximum}{Width of a distribution measured between those points at which the distribution is equal to half of its maximum amplitude}
+
+  \dword{gdml}{GDML}{geometry description markup language}{An application-indepedent, geometry-description format based on XML}
+
+  \dword{xml}{XML}{extensible markup language}{A markup language that defines a set of rules for encoding documents in a format that is both human-readable and machine-readable}
+
+  \dword{crt}{CRT}{cosmic-ray tagger}{Detector external to the TPC designed to tag TPC-traversing cosmic ray particles}
+
+  \dword{sn}{SN}{supernova}{Event that occurs upon the death of certain types of stars}
+
+  \dword{wg}{WG}{working group}{A group of persons working together to achieve specified goals}
+
+  \dword{ctsf}{CTSF}{coating, testing and storage facility}{A facility where the the   \dword{dp} photon detectors will be coated, tested, and stored}
+
+% from DP-PDS --end
+
+
+% from Schellman
+
+  \dword{rucio}{Rucio}{Data management system originally developed
+by   \dword{atlas} but now open-source and shared across HEP}
+  \dword{doma}{DOMA}{data organization, management, and
+access}{data organization, management, and access efforts through the
+HEP Software Foundation}
+
+  \dword{hsf}{HSC}{HEP Software Foundation Collaboration}{A foundation that facilitates cooperation and common efforts in high energy physics software and computing internationally}
+
+  \dword{wlcg}{WLCG}{Worldwide LHC Computing Grid}{Worldwide LHC
+Computing Grid}
+  \dword{osg}{OSG}{Open Science Grid}{Open Science Grid}
+  \dword{sci}{SCI}{Scientific Computing Infrastructure}{Proposed
+extension of the infrastructure component of   \dword{wlcg} to other
+experiments}
+  \dword{csc}{CSC}{computing and software consortium}{DUNE
+computing and software consortium}
+
+  \dword{dirac}{DIRAC}{Computing workflow management designed for LHCb and now used by many HEP experiments}
+
+% from DP-HV --start
+  \dword{frp}{FRP}{fiber-reinforced plastic}
+  \dword{hdpe}{HDPE}{high-density polyethylene}{A thermoplastic polymer made from petroleum commonly used to make plastic bottles}
+  \dword{hvps}{HVPS}{  \dword{hv} power supply}
+  \dword{aisi}{AISI}{American Iron and Steel Institute}
+  \dword{ific}{IFIC}{Instituto de Fisica Corpuscular (in Valencia, Spain)}
+  \dword{rsds}{RSDS}{radioactive source deployment system}{Proposed calibration system based on the deployment of
+radioactive sources inside the   \dword{dune} cryostat}
+  \dword{2p2h}{2p2h}{two particle, two hole}
+  \dword{duneprism}{DUNE-PRISM}{  \dword{dune} Precision Reaction-Independent Spectrum Measurement}{a mobile near detector that can perform measurements over a range of angles off-axis from the neutrino beam direction in order to sample many different neutrino energy distributions}
+  \dword{arcube}{ArgonCube}{The name of the core part of the   \dword{dune}   \dword{nd}, a   \dword{lartpc}}
+
+  \dword{citf}{CITF}{cryogenic instrumentation test facility}{A facility at   \dword{fnal} with small ($<$\SI{1}{ton}) to intermediate ($\sim$\SI{1}{ton}) volumes of instrumented, purified TPC-grade   \dword{lar}, used for testing devices intended for use in   \dword{dune}}
+
+  \dword{3dst}{3DST}{3D scintillator tracker}{The core part of the \threed projection scintillator tracker spectrometer in the near detector conceptual design}
+  \dword{3dsts}{3DST-S}{3D scintillator tracker spectrometer}{The \threed projection scintillator tracker spectrometer  in the near detector conceptual design}
+  \dword{mpd}{MPD}{multi-purpose detector}{A component of the near detector conceptual design; it is a magnetized system consisting of a   \dword{hpgtpc} and a surrounding   \dword{ecal}}
+  \dword{hpg}{HPG}{high-pressure gas}{gas at high pressure to be used in a   \dword{hpgtpc}} 
+  \dword{hpgtpc}{HPgTPC}{high-pressure gaseous argon TPC}{A   \dword{tpc} filled with gaseous argon; a possible component of the   \dword{dune}   \dword{nd}}
+
+  \dword{src}{SRC}{short-range correlated nucleon-nucleon interactions}
+  \dword{larpix}{LArPix}{   \dword{asic} pixelated charge readout for a   \dword{tpc} }
+  \dword{arclt}{ArCLight}{a light detector   \dword{arcube} effort}
+  \dword{fhc}{FHC}{forward horn current ($\numu$ mode)}
+  \dword{rhc}{RHC}{reverse horn current (\numubartonumubar mode)}
+  \dword{mwpc}{MWPC}{multi-wire proportional chamber}
+  \dword{na61}{NA61}{CERN hadron production experiment}
+  \dword{pdnd}{ProtoDUNE-ND}{a prototype   \dword{dune}   \dword{nd}}
+  \dword{ccqe}{CCQE}{charged current quasielastic interaction} 
+  \dword{roc}{ROC}{readout chamber}{readout chamber for gaseous argon   \dword{tpc}}
+  \dword{iroc}{IROC}{inner readout chamber}{inner (radial) readout chamber for gaseous argon   \dword{tpc}}
+  \dword{oroc}{OROC}{outer readout chamber}{outer (radial) readout chamber for gaseous argon   \dword{tpc}}
+
+  \dword{lux}{LUX}{Large Underground Xenon (LUX) dark matter detector at   \dword{surf} }
+
+  \dword{mjdemo}{Majorana Demonstrator}{Experiment sited at   \dword{surf} that  seeks to determine whether neutrinos are their own antiparticles}
+
+  \dword{lz}{LZ}{Experiment sited at   \dword{surf} that  seeks to detect faint interactions between galactic dark matter and regular matter}
+
+  \dword{mu2e}{Mu2e}{An experiment sited at   \dword{fnal} that searches for charged-lepton flavor violation and seeks to discover physics beyond the   \dword{sm}}
+
+  \dword{pdsp2}{ProtoDUNE-SP-2}{A second test run in the singe-phase
+ProtoDUNE test stand at CERN, acting as a validation of the final
+single-phase detector design}
+
+
+  \dword{osha}{OSHA}{Occupational Safety and Health Administration (USA Department of Labor) formed by the Occupational Safety and Health Act of 1970}
+  \dword{pns}{PNS}{pulsed neutron source}{Calibration system based
+on neutron capture gamma showers spread out in the whole detector}
+
+  \dword{fv}{FV}{fiducial volume}{The detector volume within the   \dword{tpc} that is selected for physics analysis through cuts on reconstructed event position}
+
+  \dword{p6}{P6}{framework used to plan and status the resource-loaded schedule of activities associated with the USA contributions to   \dword{lbnf} and   \dword{dune} }
+  \dword{evms}{EVMS}{earned value management system}{Earned Value Management is a systematic approach to the integration and measurement of cost, schedule, and technical (scope) accomplishments on a project or task. It provides both the government and contractors the ability to examine detailed schedule information, critical program and technical milestones, and cost data (text from the US DOE); the EVMS is a system that implements this approach}
+
+
+  \dword{core}{CORE}{CORE contributions are in either monetary units or labor hours. They can be technical components for the facility or experiment and the effort of the staff needed to produce, install, and test them;  major facilities for the experiment; or other products and services relevant for the completion of the facility or experiment} % 15 May - gina needs to `bless' this
+
+
+  \dword{ahj}{AHJ}{Authority Having Jurisdiction}{An organization, office, or individual responsible for enforcing the requirements of a code or standard, or for approving equipment, materials, an installation, or a procedure (  \dword{osha})}
+  \dword{cte}{CTE}{coefficient of thermal expansion}
+
+  \dword{opc}{OPC}{open platform communications}{Open platform communications is a series of standards and specifications for industrial telecommunication} 
+  \dword{scada}{SCADA}{supervisory control and data acquisition}
+  \dword{ln}{LN$_2$}{liquid nitrogen}
+  \dword{lapd}{LAPD}{Liquid Argon Purity Demonstrator}{Cryostat at Fermilab for long-term studies requiring a large volume of argon}
+
+  \dword{pab}{PAB}{Proton Assembly Building}{Home of several   \dword{lar} facilities at Fermilab}
+  \dword{hep}{HEP}{high energy physics}
+  \dword{sc}{SC}{scientific computing}  % check, this may be wrong (ask Heidi)
+  \dword{cms}{CMS}{Compact Muon Solenoid experiment at CERN}
+  \dword{alice}{ALICE}{A Large Ion Collider Experiment, at CERN}
+  \dword{gpib}{GPIB}{general purpose interface bus}
+
+
+  \dword{pfparticle}{PFParticle}{particle flow particle}{Each of the individual reconstructed particles in the hierarchy (or particle flow) describing the reconstructed event interaction}
+
+  \dword{mcparticle}{MCParticle}{Monte Carlo Particle}{Individual true simulated particle}
+  \dword{au}{AU}{astronomical unit}
+  \dword{nufit}{NuFIT 4.0}{The NuFIT 4.0 global fit to neutrino oscillation data}
+
+  \dword{sgft}{SGFT}{term}{add def (DP install)}
+  \dword{uhv}{UHV}{ultra high vacuum}
+  \dword{lps}{LPS}{laser positioning system}
+
+  \dword{unicamp}{UNICAMP}{University of Campinas, Sao Paulo, Brazil}
+ 
+  \dword{fbk}{FBK}{Fondazione Bruno Kessler}{FBK is a research non-profit entity in Trento, Italy that partners in the development of technology with applications in various fields including High Energy Physics}
+
+% the below not used 
+%15may anne
+
+%  \dword{fgt}{FGT}{fine-grained tracker}{A near detector module Add def??}
+
+%  \dword{consortium}{consortium}{A unit of organization in the  DUNE project focused on one major component of the far detector}
+  \dword{fft}{FFT}{fast Fourier transform}
+  \dword{enob}{ENOB}{effective number of bits}{The effective number of bits is a measure of the dynamic range of an   \dword{adc} and its associated circuitry. The resolution of an   \dword{adc} is specified by the number of bits used to represent the analog value, in principle giving 2N signal levels for an N-bit signal. However, all real   \dword{adc} circuits introduce noise and distortion. ENOB specifies the resolution of an ideal   \dword{adc} circuit that would have the same resolution as the circuit under consideration}
+  \dword{sndr}{SNDR}{signal to noise and distortion ratio}{Also known as SINAD. Ratio of the   \dword{rms} signal amplitude to the mean value of the root-sum-square of all other spectral components, including harmonics, but excluding   \dword{dc} levels. It is a good indication of the overall dynamic performance of an   \dword{adc} because it includes all components which make up noise and distortion}
+  \dword{sfdr}{SFDR}{spurious free dynamic range}{Spurious free dynamic range is the ratio of the   \dword{rms} value of the signal to the   \dword{rms} value of the worst spurious signal regardless of where it falls in the frequency spectrum. The worst spur may or may not be a harmonic of the original signal}
+  \dword{thd}{THD}{total harmonic distortion}{Total harmonic distortion is the ratio of the   \dword{rms} value of the fundamental signal to the mean value of the root-sum-square of its harmonics} 
+  \dword{tvs}{TVS}{transient voltage suppression}
+
+  \dword{riskprob}{risk probabilities}{The risk probability, after taking into account the planned mitigation activities, is ranked as 
+ L (low $<\,$\SI{10}{\%}), 
+M (medium \SIrange{10}{25}{\%}), or 
+H (high $>\,$\SI{25}{\%}). 
+The cost and schedule impacts are ranked as 
+L (cost increase $<\,$\SI{5}{\%}, schedule delay $<\,$2 months), 
+M (\SIrange{5}{25}{\%} and 2--6 months, respectively) and 
+H ($>\,$\SI{20}{\%} and $>\,$2 months, respectively)}
+
+  \dword{lbls}{LBLS}{laser beam location system}
+{Auxiliary calibration system providing an independent location measurement of the ionization laser beams direction}
+
+
+  \dword{lsst}{LSST}{Large Synoptic Survey Telescope}{8.4 m telescope with 3.2G-pixel camera that will start taking data in 2023}
+  \dword{ska}{SKA}{Square Kilometer Array}{International radio telescope array planned to start data-taking in 2027}
+  \dword{hyperk}{HyperK}{Hyper Kamiokande}{260 kt water Cerenkov neutrino detector to begin construction at Kamiokande in 2020}
+  \dword{lhcb}{LHCb}{LHC experiment dedicated to forward physics}
+  \dword{belleii}{Belle II}{B-factory experiment now running at KEK}
+
+  \dword{ldm}{LDM}{light-mass dark matter}{Refers to dark matter particles with mass values much lower than the electroweak scale, specifically below the 1~GeV level}
+ 
+  \dword{bnv}{BNV}{baryon-number violating}{Describing an interaction where   \dword{baryonnumber} is not conserved}
+
+  \dword{bugey}{Bugey}{Neutrino experiment that operated at the Bugey nuclear power plant in France}
+
+  \dword{minosplus}{MINOS$+$}{The successor to the   \dword{minos} experiment, utilizing the same detectors and beam line, but operating at higher beam energy tune than   \dword{minos}, parasitic with   \dword{nova}}
+
+  \dword{baryonnumber}{baryon number}{A quantity expressing the total number of baryons in a system minus the number of antibaryons}
+
+  \dword{np04}{NP04}{CERN North Area hadron beamline used for the   \dword{sp} test beam run}
+
+  \dword{ua1}{UA1}{UA1 (Underground Area 1) was a particle detector at   \dword{cern}'s  Super Proton Synchrotron (SPS). It ran from 1981 until 1990, when the SPS was used as a proton-antiproton collider, searching for traces of W and Z particles in collisions. (CERN) The UA1 dipole magnet was reused in the NOMAD experiment and currently provides the magnetic field for the   \dword{t2k} ND280 detector}
+
+  \dword{ssc}{SSC}{The Superconducting Super Collider was to be a huge underground ring complex beneath the area near Waxahachie, Texas, USA, that would have been the world’s most energetic particle accelerator. It was begun in 1990, but canceled by the U.S. Congress in 1993 (scientificamerican.com Oct 2013)}
+
+  \dword{daphne}{DAPHNE}{Detector electronics for Acquiring PHotons from NEutrinos is a custom-developed warm front-end waveform digitizing electronics module derived from the readout system developed at Fermilab for the Mu2e experiment}
+ 
+  \dword{nersc}{NERSC}{National Energy Research Computing Facility at   \dword{lbnl}}
+
+%   \dword{integoff}{IO}{integration office}{The office that incorporates the onsite team responsible for coordinating integration and installation activities at SURF}
+  \dword{integoff}{integration office}{The office that incorporates the onsite team responsible for coordinating integration and installation activities at SURF}
+
+  \dword{sma}{SMA}{SubMiniature version A}{Connector interface for coaxial cables
+with a screw-type coupling mechanism}
+
+  \dword{kloe}{KLOE}{KLOE is a $e^+ e^-$ collider detector spectrometer operated at DAFNE, the $\phi$-meson factory at Frascati, Rome. In DUNE it will consist of a \SI{26}{cm} Pb+scintillating fiber ECAL surrounding a cylindrical open detector region that is  \SI{4.00}{m} in diameter and \SI{4.30}{m} long. The ECAL and detector region are embedded in a \SI{0.6}{T} magnetic field created by a \SI{4.86}{m} diameter superconducting coil and a \SI{475}{tonne} iron yoke}
+
+%  \dword{ro}{RO}{review office}{An office within the   \dword{integoff} that organizes reviews }
+  \dword{ro}{review office}{An office within the   \dword{integoff} that organizes reviews }
+
+  \dword{doecd}{CD}{critical decision}{The U.S. DOE's Order 413.3B outlines a series of staged project approvals, each of which is referred to as a critical decision (CD)}
+
+  \dword{lbnfspac}{LBNF SPAC}{LBNF Strategic Project Advisory Committee}{A committee charged by the host laboratory director to provide expert, independent advice on significant issues and strategies related to LBNF project organization, management, and risks}
+
+  \dword{sand}{SAND}{System for on-Axis Neutrino Detection}{The beam monitor component of the near detector that remains on-axis at all times and serves as a dedicated neutrino spectrum monitor}
+
+  \dword{4850l}{4850L}{The depth in feet (1480 m) of the top of the cryostats underground at SURF; used more generally to refer to the DUNE underground area. Called the ``4850 level'' or ``4850L''}
+
+  \dword{apb}{APB}{authorship and publications board}
+  \dword{crb}{CRB}{collaboration resources board}
+  \dword{cube}{CuBe}{beryllium copper, used to make   \dword{sp}   \dword{apa} readout planes}
+  \dword{drift}{drift}{(1) refers to electron drift under the influence of an electric field in a   \dword{tpc}; (2) an excavated horizontal corridors (tunnels) in the underground areas at   \dword{surf}}
+  \dword{exposure}{exposure}{The integrated detector fiducial mass times beam intensity; it is proportional to the number of interactions and is used to normalize cross sections in a data sample}
+  \dword{fr4}{FR-4}{Flame-retardant fiberglass-reinforced epoxy resin laminate used in making PCBs and other detector components}
+  \dword{g10}{G-10}{Non-flame-retardant fiberglass-reinforced epoxy resin laminate used in making PCBs}
+  \dword{kapton}{Kapton}{A polyimide plastic film that is stable over a broad range of temperatures and is resistant to radiation damage}
+  \dword{shaft}{shaft}{A vertical excavation at   \dword{surf} connecting with the surface}
+  \dword{winze}{winze}{A vertical excavation at   \dword{surf} connecting two drifts, not connecting to the surface}
+  \dword{ib}{IB}{institutional board}
+  \dword{irb}{IBR}{institutional board representative}
+  \dword{scomm}{SC}{speakers committee}
+  \dword{sac}{SAC}{spokespersons advisory committee}
+  \dword{ccondc}{CCC}{code of conduct committee}
+  \dword{eoc}{EOC}{education and outreach committee}
+  \dword{indico}{Indico}{Web-based meeting organization tool}
+  \dword{mec}{meson exchange current}{See   \dword{2p2h}}
+  \dword{htc}{HTC}{High Throughput Computing}{Computing facilities typically consisting of large numbers of commodity servers as opposed to a single large machine. Best suited for running large numbers of independent jobs in parallel, these facilities are what is usually meant by ``grid computing''}
+  \dword{dcache}{dCache}{A distributed, highly scalable (multi-PB) storage system, usable as both a standalone system and as a high-speed frontend to a tape storage system (such as /pnfs at Fermilab)}
+  \dword{ifdhc}{IFDHC}{Intensity Frontier Data Handling Client}{A multi-protocol tool for data transfer and file delivery in jobs. It is able to automatically select transfer protocols based on source and destination characteristics}
+  \dword{ifdh}{ifdh}{Intensity Frontier Data Handling}{The actual command invoked when using   \dword{ifdhc}, on the command line, e.g. ifdh cp source\_file dest\_file}
+  \dword{pnfs}{PNFS}{Pseudo Network File System}{A file system often used in large storage systems. Typically interaction is very similar to a regular NFS volume, but there can be some subtle and important differences}
